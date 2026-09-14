@@ -1,0 +1,254 @@
+{
+  "schema": 1,
+  "date": "2026-09-11",
+  "status": "BUILD11_UNSIGNED_KIT_UPLOADED_PHYSICAL_RETEST_PENDING",
+  "build_id": "graphics-canary-20260911-11",
+  "version": "0.4.1",
+  "build_number": "11",
+  "bundle_id": "io.github.hmcneill46.celeste.everest.jit.graphics",
+  "ipa": "artifacts/ios-jit/graphics-canary-20260911-11/CelesteJITGraphics-unsigned.ipa",
+  "ipa_sha256": "e43de74fc9e09d6bd22b3255f2c6cbd0d09e5bd04886d09b253daf42986e380f",
+  "executable_uuid": "UUID: B911C775-CB28-3A99-A569-A9851A4B6723",
+  "fixture_sha256": "4ef16eb0793ca8109f0c1fb2763fd68e7491139784d5e002b71b161074cb2f89",
+  "fna_sha256": "802b6dd2fe0a6c386d1b29b48dfea358ce85fe4f2530332410bcfaa015bfcbf0",
+  "script_template_sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413",
+  "build10_crash": {
+    "raw_sha256": "7bde6d5594e04802af0ceb67f98509383c6ab00fa102e29d13b4abb0dc047bca",
+    "raw_bytes": 6339247,
+    "raw_export_preserved": true,
+    "exact_packaged_buildinfo_matches": true,
+    "exact_ipa_and_symbols_match": true,
+    "snapshot_inputs_verified": 94,
+    "fixture_and_script_match": true,
+    "native_checks": 26,
+    "owned_jit_completions": 3400,
+    "code_reserved_bytes": 4161536,
+    "code_budget_bytes": 33554432,
+    "graphics_passed_checks": [
+      "render_hook_original",
+      "render_hook_installed",
+      "metal_render_target_clear_and_gpu_readback"
+    ],
+    "graphics_first_frame_completed": false,
+    "inferred_load_address": "0x109eb8000",
+    "callsite_operation": "mtlMakeRenderCommandEncoder(renderer->commandBuffer, passDesc)",
+    "conclusion": "Correct build/DLL/preparation; native Metal command-buffer lifetime failure after the startup callback, reached through initial orientation reset. Host callback-pool negative reproduces a deallocated Metal command-buffer message."
+  },
+  "negative_reproduction": "Exact old FNA/fixture, per-callback autorelease pools; NSZombieEnabled identifies released GFX10_MtlCmdBuffer receiving renderCommandEncoderWithDescriptor:",
+  "native_patch": {
+    "revision": "dba98a71514cc30f3c19dc19fc0a479be7c90d52",
+    "patch_sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7",
+    "ios_archive_sha256": "8959a955fc856f9870b36b9cd99287875399119de4fe33329780eeded2152832",
+    "host_library_sha256": "af72b4cfd0bc6f50ab411b63ca07ba0d9ac76ea5bba8aee58fc8d1c3dff8babb",
+    "patched_metal_sha256": "1965517735f2018effd8a81952048d3ffc5302c9c563a7a27e5359d6d8a4cb62"
+  },
+  "source_snapshot": ".build/ios-jit/device-evidence/2026-09-11/build-11-ready/source-snapshot",
+  "source_counts": {
+    "build_source_count": 97,
+    "fna_source_count": 321,
+    "native_source_count": 322,
+    "unique_files": 739
+  },
+  "package_validation": {
+    "status": "PASS_UNSIGNED_GRAPHICS_PACKAGE_AND_INPUTS",
+    "ipa_bytes": 11900708,
+    "ipa_sha256": "e43de74fc9e09d6bd22b3255f2c6cbd0d09e5bd04886d09b253daf42986e380f",
+    "fixture_sha256": "4ef16eb0793ca8109f0c1fb2763fd68e7491139784d5e002b71b161074cb2f89",
+    "fna_sha256": "802b6dd2fe0a6c386d1b29b48dfea358ce85fe4f2530332410bcfaa015bfcbf0",
+    "native_internal_imports": 806,
+    "all_declared_internal_imports_resolve": true,
+    "remaining_non_internal_imports": "Two unused Emscripten declarations; not an iOS capability",
+    "framework_dlls": 168,
+    "monomod_dlls": 10,
+    "untrimmed_fna": true,
+    "apple_managed_bindings": false,
+    "debug_symbols_outside_ipa": true,
+    "signature": false,
+    "provisioning_profile": false,
+    "g1_g2_sources_and_runtime_unchanged": true,
+    "script_matches_physical_build9": true,
+    "host_fixture_bytes_match": true,
+    "host_and_ios_patched_metal_source_match": true,
+    "callback_cleanup_reset_and_suppressed_draw_tested": true,
+    "physical_graphics_tested": false
+  },
+  "host_validation": {
+    "status": "PASS_HOST_FNA_METAL_539_FRAMES_CALLBACK_POOLS_RESET_SKIP_RESUME_HOOK_AND_MAIN_THREAD_DETACH",
+    "fixture_sha256": "4ef16eb0793ca8109f0c1fb2763fd68e7491139784d5e002b71b161074cb2f89",
+    "fna_sha256": "802b6dd2fe0a6c386d1b29b48dfea358ce85fe4f2530332410bcfaa015bfcbf0",
+    "runtime": "pinned Mono 8.0.28 macOS x64 with cooperative GC; AOT/interpreter disabled",
+    "desktop_native_sha256": {
+      "libSDL2-2.0.0.dylib": "8fca5fdbdef48c8168888702f8d1efb41a4d844d97fade628dc0391536ea1abd",
+      "libFNA3D.0.dylib": "af72b4cfd0bc6f50ab411b63ca07ba0d9ac76ea5bba8aee58fc8d1c3dff8babb"
+    },
+    "main_thread_attachment_and_detachment": true,
+    "gpu_readback": true,
+    "render_hook_retained_and_removed": true,
+    "real_frames": 539,
+    "callback_autorelease_pools": true,
+    "pending_clear_reset": true,
+    "suppressed_draw_recovered": true,
+    "native_patch_sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7",
+    "native_metal_source_sha256": "1965517735f2018effd8a81952048d3ffc5302c9c563a7a27e5359d6d8a4cb62",
+    "physical_touch_or_ios_background_tested": false,
+    "ios_jit_aliases_tested": false,
+    "code_memory": "host Mono pages, no device alias ownership claim",
+    "log_sha256": "a75c07fca93393cd235cd4233f92dead732656bc08993d3cac7506f5374becca"
+  },
+  "zombies_validation": {
+    "status": "PASS_CALLBACK_POOLS_WITH_ZOMBIES_AND_METAL_VALIDATION_REQUESTED",
+    "returncode": 0,
+    "fixture_sha256": "4ef16eb0793ca8109f0c1fb2763fd68e7491139784d5e002b71b161074cb2f89",
+    "fna_sha256": "802b6dd2fe0a6c386d1b29b48dfea358ce85fe4f2530332410bcfaa015bfcbf0",
+    "native_metal_source_sha256": "1965517735f2018effd8a81952048d3ffc5302c9c563a7a27e5359d6d8a4cb62",
+    "log_sha256": "c5f92b142cbbec94618e275fdb665badba48ba15bee55ec1d604ee81943d84fb",
+    "metal_validation_requested": true
+  },
+  "metal_validation_enable_message_observed": true,
+  "simulator_validation": {
+    "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY",
+    "dll_import_handler": "PASS",
+    "run_disabled_without_jit": true,
+    "native_console_recovered": true,
+    "build_id": "graphics-canary-20260911-11-simulator",
+    "background_event_burst_persisted_and_rendered": 800,
+    "os": "26.5",
+    "architecture": "x86_64",
+    "previous_session_recovered": true,
+    "current_session_not_duplicated": true,
+    "export_schema": 1,
+    "device_jit_execution": "NOT TESTED",
+    "share_sheet_interaction": "NOT AUTOMATED",
+    "notes": "Host terminated only the simulator probe between launches. Generated-code paths are disabled."
+  },
+  "protocol_validation": {
+    "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT",
+    "bytes_per_arena": 16777216,
+    "mailbox_bytes": 96,
+    "regions": 2,
+    "acknowledged_page_writes": 2048,
+    "request_response_and_detach": true,
+    "historical_build7_geometry_reproduced_and_rejected": true,
+    "previous_build8_budget_rejected": true,
+    "stale_nonce_and_wrong_pid_rejected": true,
+    "real_debugger_commands_sent": 0,
+    "device_execution": false,
+    "build_id": "graphics-canary-20260911-11",
+    "ipa_sha256": "e43de74fc9e09d6bd22b3255f2c6cbd0d09e5bd04886d09b253daf42986e380f",
+    "packaged_script_sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413",
+    "native_request_sample_sha256": "2b38ed6d627ddcbecf21aca7622357dd71c443eb00281b0c756da4a75bbb7426",
+    "preserved_build7_source_sha256": "672f7ab50fc2e22bbdc85ad3f7d2c9a03c06caca75b664dc07341e9b27d426ef",
+    "build7_resolved_length": 65536,
+    "compiled_protocol": {
+      "protocol": 1,
+      "bytes_per_arena": 16777216,
+      "arena_count": 2,
+      "mailbox_bytes": 96,
+      "response_offset": 48,
+      "error_offset": 88
+    }
+  },
+  "delivery": {
+    "build_id": "graphics-canary-20260911-11",
+    "local_icloud_folder": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.4.1-build-11",
+    "files": [
+      {
+        "name": "CelesteJITGraphics-v0.4.1-build-11-unsigned.ipa",
+        "bytes": 11900708,
+        "sha256": "e43de74fc9e09d6bd22b3255f2c6cbd0d09e5bd04886d09b253daf42986e380f"
+      },
+      {
+        "name": "GraphicsCanary-v0.4.1.dll",
+        "bytes": 14336,
+        "sha256": "4ef16eb0793ca8109f0c1fb2763fd68e7491139784d5e002b71b161074cb2f89"
+      },
+      {
+        "name": "README-FIRST.txt",
+        "bytes": 2452,
+        "sha256": "829f7ddf78b1dc615ee089431e6a9193b98068d44e920a239550737b127d81fb"
+      },
+      {
+        "name": "INSTALL.md",
+        "bytes": 3373,
+        "sha256": "31949dc0c4f82d6ac56aa12bc4cbfec440d6e4e522e8f14b6d06b09728d3ff50"
+      },
+      {
+        "name": "celeste-jit-probe-TEMPLATE.js",
+        "bytes": 5761,
+        "sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "bytes": 462,
+        "sha256": "b14abdf066f64a3060700d82452b028420dcd67673c1229fa304f522514c7a38"
+      }
+    ],
+    "total_bytes": 11927092,
+    "copied_bytes_verified": true,
+    "upload_status": "CONFIRMED_UPLOADED",
+    "phone_download_or_install_observed": false,
+    "results_folder": "Results",
+    "placed_utc": "2026-09-11T16:52:33.570060+00:00",
+    "uploaded_utc": "2026-09-11T16:55:31Z"
+  },
+  "cloud_upload": {
+    "files": [
+      {
+        "file": "CelesteJITGraphics-v0.4.1-build-11-unsigned.ipa",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "GraphicsCanary-v0.4.1.dll",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "README-FIRST.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "INSTALL.md",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "celeste-jit-probe-TEMPLATE.js",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "Results",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      }
+    ],
+    "observed_utc": "2026-09-11T16:55:31Z"
+  },
+  "physical_g2_accepted": true,
+  "physical_graphics_accepted": false,
+  "celeste_gameplay_accepted": false,
+  "everest_mods_accepted": false,
+  "boundaries": "No commits/pushes/GitHub writes. Active AOT checkout untouched. Accepted native foundation, G1/G2 runtime and source hashes unchanged.",
+  "next": "Owner tests build 11 graphics, touch, same-process background/resume and clean Finish; after acceptance continue Celeste lifetime/content/FMOD/saves integration."
+}

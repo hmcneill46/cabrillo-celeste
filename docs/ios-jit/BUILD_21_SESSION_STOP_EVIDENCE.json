@@ -1,0 +1,64 @@
+{
+  "status": "CONFIRMED_BUILD21_MONOMOD_LITERAL_FIELD_FAILURE_LOADING_PAINT",
+  "phone_session_pass": false,
+  "raw_path": ".build/ios-jit/device-evidence/2026-09-12/build-21-results/CelesteJIT-67429546-9b5d-4560-a8ad-71a7e232b597.diagnostics.json",
+  "raw_bytes": 1728531,
+  "raw_sha256": "6aae3e3e444709d3cfb2a4abbad3fd3cc2e9737238541c65289ffd0ea587fa34",
+  "session": "67429546-9b5d-4560-a8ad-71a7e232b597",
+  "build_id": "launcher-compat-20260912-21",
+  "ipa_sha256": "412ed592d21d0752802ce49bb3407b22b5e0732792541f5d8d12d8c38f2c7ba0",
+  "exact_build_identity_matches": true,
+  "phone_setup_error": false,
+  "intended_timeout": false,
+  "normal_play": true,
+  "failed_map": "StrawberryJam2021/1-Beginner/mosscairn [paint]",
+  "failed_room": "intro",
+  "exception": "Field not found: Celeste.Decal.Root Due to: Using static instructions with literal field",
+  "origin": "MonoMod FastReflectionHelper emits ldsfld/stsfld for a literal; EeveeHelper DynamicData enumeration triggers JIT rejection.",
+  "previous_fna_error_absent": true,
+  "native_checks_pass": 26,
+  "graphics_checks_pass": 6,
+  "selected_zip_count": 54,
+  "registered_metadata_identities_verified": 56,
+  "frame_callbacks": 6702,
+  "seconds_from_game_start": 124.336,
+  "code_reserved_bytes": 188743680,
+  "code_budget_bytes": 536870912,
+  "remaining_code_bytes": 348127232,
+  "physical_footprint_at_stop": 3796717608,
+  "exception_caught_by_everest": true,
+  "native_stops_on_cumulative_jit_failures": true,
+  "error_summary_empty_in_build21": true,
+  "clean_finish_or_save_readback_not_established": true,
+  "fresh_process_sj_save_reload_not_established": true,
+  "visited_rooms": [
+    "area=21; room=sj2021beginnerlobby"
+  ],
+  "failure_events": [
+    {
+      "sequence": 103527,
+      "event": "mono_jit_failed",
+      "time_unix": 1789236779.848295
+    },
+    {
+      "sequence": 103537,
+      "event": "mono_jit_failed",
+      "time_unix": 1789236779.850872
+    },
+    {
+      "sequence": 103552,
+      "event": "graphics_frame_failed",
+      "time_unix": 1789236779.9853868
+    },
+    {
+      "sequence": 103553,
+      "event": "graphics_stop_start",
+      "time_unix": 1789236779.985945
+    },
+    {
+      "sequence": 103557,
+      "event": "graphics_bridge_incomplete",
+      "time_unix": 1789236779.9877129
+    }
+  ]
+}

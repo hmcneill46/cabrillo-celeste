@@ -1,0 +1,181 @@
+{
+  "schema": 1,
+  "status": "PASS_BUILD23_PHYSICAL_TITLE_AND_MODDED_QUIT",
+  "updated_utc": "2026-09-12T20:46:05.783622+00:00",
+  "build_id": "launcher-session-20260912-23",
+  "version": "0.12.0 (23)",
+  "physical_build23_tested": true,
+  "source_lane": "experiments/ios-jit/launcher-session",
+  "support_module": {
+    "id": "CelesteIOS",
+    "version": "1.0.0",
+    "abi": 1,
+    "required": true,
+    "sha256": "b330772f8e4b592ab5a02c44317a8cff54e8cc576763372ecfa4f4455d0c0959"
+  },
+  "host_cases": {
+    "host-title-quit": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "support_module_sha256": "b330772f8e4b592ab5a02c44317a8cff54e8cc576763372ecfa4f4455d0c0959",
+      "session_contract_checks": 37,
+      "fixture_sha256": "1e85211e6c8dec95f1bfa809457f7f064debbf4883383fa11802d48e11b1a85f",
+      "profile": "QuitTitle",
+      "log_sha256": "3941d2ba4702338ba169d411ab0dfa6231b468a586a71f5bae0b5fed8b69140a"
+    },
+    "host-busy-quit": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "support_module_sha256": "b330772f8e4b592ab5a02c44317a8cff54e8cc576763372ecfa4f4455d0c0959",
+      "session_contract_checks": 37,
+      "fixture_sha256": "1e85211e6c8dec95f1bfa809457f7f064debbf4883383fa11802d48e11b1a85f",
+      "profile": "QuitBusy",
+      "log_sha256": "fa4b7f4cf07f5226a3145a2e600317e15aff2d50136cf7c7b67f294122e4e797"
+    },
+    "host-normal-reload": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "support_module_sha256": "b330772f8e4b592ab5a02c44317a8cff54e8cc576763372ecfa4f4455d0c0959",
+      "session_contract_checks": 37,
+      "fixture_sha256": "1e85211e6c8dec95f1bfa809457f7f064debbf4883383fa11802d48e11b1a85f",
+      "profile": "QuitBusy",
+      "log_sha256": "0ea8fa59d01928d9b7e76895da2bc0790c4c7fce280a66c2f453a059c06acc06"
+    },
+    "host-full-sj": {
+      "status": "PASS_HOST_REAL_SJ_LOBBY_BING_SAVES_AND_RESUME",
+      "support_module_sha256": "b330772f8e4b592ab5a02c44317a8cff54e8cc576763372ecfa4f4455d0c0959",
+      "session_contract_checks": 37,
+      "fixture_sha256": "1e85211e6c8dec95f1bfa809457f7f064debbf4883383fa11802d48e11b1a85f",
+      "profile": "FullSJ",
+      "log_sha256": "69ac371090ff36a1e8f686f58f2bead73baef04293434bb66716b3c7099aa27b"
+    },
+    "host-full-quit": {
+      "status": "PASS_FULL_SJ_MOD_SET_NORMAL_QUIT_QUEUED_SAVE_AND_RELOAD",
+      "fixture_sha256": "1e85211e6c8dec95f1bfa809457f7f064debbf4883383fa11802d48e11b1a85f",
+      "support_module_sha256": "b330772f8e4b592ab5a02c44317a8cff54e8cc576763372ecfa4f4455d0c0959",
+      "log_sha256": "755fcc67fe7bb3bca3a60cc521cae85dbc0db26b0781e8680ab2639e658ad6db",
+      "normal_mode": true,
+      "original_archives": 53
+    }
+  },
+  "shutdown_timing_seconds": {
+    "full_sj_lobby_bing_game_dispose": 12.500129915,
+    "full_mods_vanilla_game_dispose": 4.596379142
+  },
+  "physical_checkpoint_resume_verified": false,
+  "known_limits": [
+    "One game per process",
+    "Game.Dispose detour cleanup is still synchronous on the game thread",
+    "Separate native Metal backbuffer-read bug",
+    "Private prepared game IL and linked FMOD",
+    "Latest counter 403 fresh-process reload not recorded; keyboard/disconnect transitions not recorded"
+  ],
+  "next": "Isolated Metal backbuffer fix in build24; latest counter 403 reload and background/resume carry forward",
+  "ipa": {
+    "path": "artifacts/ios-jit/launcher-session-20260912-23/CelesteJITEverest-unsigned.ipa",
+    "bytes": 23141139,
+    "sha256": "32c62731d6c3cec14abbad7449dd1ae6f86615341a00df883d55a2f2b00eee28"
+  },
+  "executable_uuid": "UUID: 36701DB8-1857-3705-936C-444828114F26",
+  "adapter_sha256": "1e85211e6c8dec95f1bfa809457f7f064debbf4883383fa11802d48e11b1a85f",
+  "fna_sha256": "e89f3b998229e04a6e596e548498e57214d23d97f753b633ea0d59c0bdfab79b",
+  "monomod_utils_sha256": "990cbde37b3edc9ac74195ea58a64b0cf503c1a78225384a377ae13f0be43092",
+  "source_input_count": 184,
+  "package_validation_sha256": "f2d046828268a9228967a2d627fa0d3a384e7ebf578c9711f1bb24b42d879105",
+  "protocol_validation_sha256": "bce78d248e8569ef142664f0a7abee8d21acb41b92a9c5bcbeb017bfae0470b5",
+  "simulator_smoke_sha256": "99a13715741855d03a16874e048759f1dc15e077dbb7f7ac128b3876d215272d",
+  "visual_review": {
+    "status": "PASS_SETTLED_NATIVE_CLOSING_FULL_SCREEN_VISUAL_REVIEW",
+    "scope": "Simulator closing-screen fixture, original application binary; no device game claim",
+    "source_sha256": "6855fbc34485d1244681128ff95e7b4871b6a4b04d5e7fe7890f4eb841836f3b",
+    "log_sha256": "d4760d1dec76b307362afcdf32b328af1a2b5dea27fdd8cb1dd2f3569496288b",
+    "screenshots": {
+      "31315DE5-E29E-4EBC-8F1B-725302BA72BF.png": "12fbe9348e83bf8a3d2c6493e776b07dd09125d0d30a70057a5c45fe2d22e313",
+      "9D4F38F9-6CA2-41D2-A159-3D5A7BE0A2F9.png": "96bd5c5fad0ae5a5685cb197b327fcbb1e2be7dc0f0a60750cd8b3d85334f3cb"
+    },
+    "app_frame_points": [
+      0,
+      0,
+      874,
+      402
+    ],
+    "stage_frame_points": [
+      307.5,
+      238.66666666666666,
+      259,
+      24
+    ],
+    "portrait_and_full_screen_landscape_visually_inspected": true,
+    "initial_app_crop_screenshot_unreliable": true
+  },
+  "source_snapshot": {
+    "path": ".build/ios-jit/device-evidence/2026-09-12/build-23-ready",
+    "receipt_sha256": "b6a232e9c0595c32d1ab935029d1444890a9d771c7b98757a0649b127904ad6d",
+    "parent": "build-22-ready",
+    "verified_parent_receipt_sha256": "41ed25c226d8deb6e92007483c6ff798460db364185877a6a4a74d209b2a54fb"
+  },
+  "delivery": {
+    "build_id": "launcher-session-20260912-23",
+    "created_utc": "2026-09-12T20:43:38.763368+00:00",
+    "method": "Versioned local iCloud Drive placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.12.0-build-23",
+    "local_icloud_copy_verified": true,
+    "cloud_upload_confirmed": true,
+    "phone_download_confirmed": false,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 23141139,
+        "sha256": "32c62731d6c3cec14abbad7449dd1ae6f86615341a00df883d55a2f2b00eee28"
+      },
+      "README-FIRST.txt": {
+        "bytes": 3647,
+        "sha256": "1b810711fa77829c39b30334f60efec7e43d0c6d5076e9b2aedbcb373361eac9"
+      },
+      "INSTALL.md": {
+        "bytes": 1191,
+        "sha256": "0e21c3524e9e874108039b8cc6e1fa23137d4aaa7e5ca6269293146d4d67869d"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5763,
+        "sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 3976,
+        "sha256": "8b54253938d2c948e6cbb2463c43f140c21196e66e238c36adae6ba0da8acbac"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1700,
+        "sha256": "db0cba994fc0fbda09faf41899a7fcd0f026b81a18f4f418ba4da00c94f199a1"
+      },
+      "CJITLauncherExample-v1.0.0.zip": {
+        "bytes": 1512,
+        "sha256": "f5847b5796c92e382814f328cf370d697414130606f95b86771f8cb64f5e2be6"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 624,
+        "sha256": "ebe8141c50d6092fd7355eba4394599f2a0bc6046514a28e4086ebae4bd0a9c4"
+      }
+    },
+    "total_bytes": 23159552,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-12/build-23-ready",
+      "receipt_sha256": "b6a232e9c0595c32d1ab935029d1444890a9d771c7b98757a0649b127904ad6d",
+      "parent": "build-22-ready",
+      "verified_parent_receipt_sha256": "41ed25c226d8deb6e92007483c6ff798460db364185877a6a4a74d209b2a54fb"
+    },
+    "physical_execution": false,
+    "retention": "Keep physically accepted build19 as fallback; preserve every Results folder and exact local historical builds.",
+    "cloud_upload_confirmed_utc": "2026-09-12T20:46:05.783622+00:00",
+    "cloud_upload_evidence": ".build/ios-jit/device-evidence/2026-09-12/build-23-ready/handoff/icloud-upload-status-current.json"
+  },
+  "cloud_cleanup": {
+    "retained_fallback": "0.10.0-build-19",
+    "all_results_preserved": true,
+    "removed": [
+      {
+        "path": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.11.2-build-22/CelesteJITEverest-unsigned.ipa",
+        "local_copy": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/artifacts/ios-jit/launcher-reflection-20260912-22/CelesteJITEverest-unsigned.ipa",
+        "sha256": "b9a89008136a1dbf0e409c5fd22095df876a1430992a5110348a6cf5f88dd17e",
+        "bytes": 23116505
+      }
+    ]
+  },
+  "physical_acceptance": "BUILD_23_SESSION_ACCEPTANCE_EVIDENCE.json"
+}

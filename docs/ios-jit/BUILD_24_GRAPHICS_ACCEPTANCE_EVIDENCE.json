@@ -1,0 +1,172 @@
+{
+  "schema": 1,
+  "status": "PASS_BUILD24_PHYSICAL_GRAPHICS_RESUME_QUIT_AND_FRESH_PROCESS_SAVE",
+  "reviewed_utc": "2026-09-12T22:07:03.903178+00:00",
+  "raw_evidence": [
+    {
+      "path": ".build/ios-jit/device-evidence/2026-09-12/build-24-results/CelesteJIT-77218f98-9a9b-4dd2-89e5-86be063f2e9e.diagnostics.json",
+      "bytes": 2888204,
+      "sha256": "9ec8e3f0fc4ec3cfc8e23771d3ffee727c3cecec2f1c0b1b4c742516b49c6d7f"
+    },
+    {
+      "path": ".build/ios-jit/device-evidence/2026-09-12/build-24-results/CelesteJIT-951f30f1-259b-4baa-aee3-404d01d00a2e.diagnostics.json",
+      "bytes": 2994182,
+      "sha256": "2a52cb1895ae2ee19192dc2d68a0801aa46fb45bc8441186f59eea60aa6f9140"
+    }
+  ],
+  "build_info_exact_payload_match": true,
+  "device": {
+    "guest_bundle_id": "io.github.hmcneill46.celeste.everest.jit.everest",
+    "hardware": "iPhone16,2",
+    "os_build_description": "Version 26.5 (Build 23F77)",
+    "os_version": "26.5",
+    "page_size": 16384,
+    "physical_memory_bytes": 8025686016,
+    "simulator": 0
+  },
+  "sessions": [
+    {
+      "session": "951f30f1-259b-4baa-aee3-404d01d00a2e",
+      "started": 1789249788.4464211,
+      "pid": 4331,
+      "native_checks": 26,
+      "graphics_checks": 19,
+      "pattern": [
+        "width=2796; height=1290; format=Color; msaa=0; checks=7"
+      ],
+      "frame_reads": [
+        "phase=after_present; width=2796; height=1290; sample=32x18; fnv=9ee0d2c5",
+        "phase=level_after_present; width=2796; height=1290; sample=32x18; fnv=fd7b16bc",
+        "phase=after_resume; width=2796; height=1290; sample=32x18; fnv=c397f1d0"
+      ],
+      "rooms": [
+        "area=27; sid=StrawberryJam2021/1-Beginner/Ceph; mode=Normal; room=3"
+      ],
+      "map_name": "Cassette Cliffs",
+      "enabled_zips": 54,
+      "installed_zips": 56,
+      "selected_identities": 57,
+      "disabled_zips": [
+        "skinmodhelper_7027b.zip",
+        "theoskinmodv3.zip"
+      ],
+      "normal_quit": true,
+      "native_return": true,
+      "post_run_alive": true,
+      "frames": 10091,
+      "runtime": {
+        "code_allocations": 9889,
+        "code_budget_bytes": 536870912,
+        "code_reserved_bytes": 165445632,
+        "jit_done_count": 33693,
+        "jit_failed": 0,
+        "jit_unowned": 0,
+        "managed_errors": 0,
+        "patch_rejections": 0,
+        "patches": 12408
+      },
+      "stage_seconds": {
+        "1": 0.189498125,
+        "2": 0.061355417,
+        "3": 0.054455583,
+        "4": 0.208655,
+        "5": 5.718770917,
+        "6": 0.375001583,
+        "7": 0.053250542
+      },
+      "save_messages": [
+        "settings; bytes=4883",
+        "settings; bytes=4883",
+        "SaveData slot=1; bytes=160771; deaths=133"
+      ],
+      "mod_save": {
+        "prior": 760,
+        "written": 820,
+        "readback": 820
+      },
+      "input_sources": [
+        "source=Controller; controller_connected=True",
+        "source=Touch; controller_connected=True",
+        "source=Controller; controller_connected=True"
+      ],
+      "background_seconds": 31.936013541668217,
+      "max_sampled_footprint_bytes": 3710898048,
+      "console_counter_loaded_before_final_save": false
+    },
+    {
+      "session": "77218f98-9a9b-4dd2-89e5-86be063f2e9e",
+      "started": 1789250110.664664,
+      "pid": 4401,
+      "native_checks": 26,
+      "graphics_checks": 18,
+      "pattern": [
+        "width=2796; height=1290; format=Color; msaa=0; checks=7"
+      ],
+      "frame_reads": [
+        "phase=after_present; width=2796; height=1290; sample=32x18; fnv=9ee0d2c5",
+        "phase=level_after_present; width=2796; height=1290; sample=32x18; fnv=0ecd8d6c"
+      ],
+      "rooms": [
+        "area=27; sid=StrawberryJam2021/1-Beginner/Ceph; mode=Normal; room=3"
+      ],
+      "map_name": "Cassette Cliffs",
+      "enabled_zips": 54,
+      "installed_zips": 56,
+      "selected_identities": 57,
+      "disabled_zips": [
+        "skinmodhelper_7027b.zip",
+        "theoskinmodv3.zip"
+      ],
+      "normal_quit": true,
+      "native_return": true,
+      "post_run_alive": true,
+      "frames": 1713,
+      "runtime": {
+        "code_allocations": 9582,
+        "code_budget_bytes": 536870912,
+        "code_reserved_bytes": 160514048,
+        "jit_done_count": 33025,
+        "jit_failed": 0,
+        "jit_unowned": 0,
+        "managed_errors": 0,
+        "patch_rejections": 0,
+        "patches": 12408
+      },
+      "stage_seconds": {
+        "1": 0.187098,
+        "2": 0.06275225,
+        "3": 0.051473333,
+        "4": 0.211049667,
+        "5": 6.288548125,
+        "6": 0.369791583,
+        "7": 0.057193
+      },
+      "save_messages": [
+        "settings; bytes=4883",
+        "settings; bytes=4883",
+        "SaveData slot=1; bytes=160771; deaths=134"
+      ],
+      "mod_save": {
+        "prior": 820,
+        "written": 820,
+        "readback": 820
+      },
+      "input_sources": [
+        "source=Controller; controller_connected=True"
+      ],
+      "background_seconds": 0,
+      "max_sampled_footprint_bytes": 3725987688,
+      "console_counter_loaded_before_final_save": true
+    }
+  ],
+  "fresh_process_sidecar_reload": true,
+  "owner_confirms_progress_survived": true,
+  "earlier_build_histories_kept_separate": true,
+  "accepted_fallback": "launcher-backbuffer-20260912-24",
+  "limits": [
+    "Phone exercises Color at 2796x1290, MSAA0; other formats/MSAA remain host evidence.",
+    "Map identity and room are in diagnostics; visual quality and perceived stalls still need owner observations.",
+    "First supplied build24 session loads prior counter760; do not infer direct 403-to760 history from these two exports."
+  ],
+  "decision": "Proceed with general native dependency planning/downloads/recoverable installs in build25."
+}

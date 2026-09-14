@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-11",
+  "status": "BUILD_1_VALIDATION_BUG_FIXED_BUILD_2_UPLOADED_FOR_RETEST",
+  "report": "DEVICE_TEST_2026-09-11.md",
+  "physicalG0Accepted": false,
+  "primaryDevice": {
+    "model": "iPhone 15 Pro Max",
+    "hardware": "iPhone16,2",
+    "os": "iOS 26.5",
+    "osBuild": "23F77",
+    "pageBytes": 16384,
+    "probeHost": "LiveContainer 1",
+    "stikDebugHost": "LiveContainer 2",
+    "ownerEnteredLiveContainerVersion": "3.8.9",
+    "ownerEnteredStikDebugVersion": "3.1.9"
+  },
+  "receivedEvidence": {
+    "attachmentSha256": "cd7198ddb02773dc8fb2a0b3c01f80c855b270eaa05606bed6f615435e1297fb",
+    "buildId": "native-probe-20260910-01",
+    "exportedSourceHashesMatchDeliveredBuild": true,
+    "distinctSessions": 5,
+    "duplicateCurrentSessionExcludedFromCount": true,
+    "attemptsWithSameFirstEntryFailure": 2,
+    "firstEntryBytes": 16384,
+    "requiredRangeBytes": 65536,
+    "firstEntryCurrentProtection": 5,
+    "firstEntryMaximumProtection": 7,
+    "firstEntryQueryResult": 0,
+    "mailboxStatus": 2,
+    "mailboxScriptVersion": 1,
+    "mailboxError": 0,
+    "debuggerDetached": true,
+    "csDebugged": true,
+    "checksPassed": [
+      "debugger_detached_before_execution",
+      "mailbox_response_valid"
+    ],
+    "failedCheck": "prepared_region_is_rx",
+    "failureReason": "Old checker required one entry to cover the full range",
+    "aliasesCreated": false,
+    "generatedCodeExecutionReached": false,
+    "crashEstablished": false
+  },
+  "correctedBuild": {
+    "buildId": "native-probe-20260911-02",
+    "appVersion": "0.1.1 (2)",
+    "xcode": "Xcode 26.6\nBuild version 17F113",
+    "sdk": "26.5",
+    "target": "arm64-apple-ios26.0",
+    "sourceSha256": {
+      "experiments/ios-jit/native-probe/INSTALL.md": "ea41fb62de4d7ae0cea36b1b231f31b3b7cf121446b7538243c050adaecc20eb",
+      "experiments/ios-jit/native-probe/PHONE_README.txt": "1c47f1cea7c369fa3211387de728e8ad765b7cf771935698b06be281a8aebcf4",
+      "experiments/ios-jit/native-probe/README.md": "d3f683717c4e30f0aded1dac512c8cf3477cb2c4b27851c80dcd8aea012de646",
+      "experiments/ios-jit/native-probe/THIRD_PARTY_NOTICES.md": "fa2b6c8c14b70843d589205513d8606f74fbd2b3874dc599cdbcea2f5599bd2c",
+      "experiments/ios-jit/native-probe/build.py": "a686b3a1346dfd906ed0fa1d93af277f04477c7f23178fc9180cba3d785f76b3",
+      "experiments/ios-jit/native-probe/scripts/celeste-jit-probe.js": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333",
+      "experiments/ios-jit/native-probe/scripts/make_icon.swift": "1c61416c90b9dcf49a334ebd18fdae9fd6c739525f66a689216a95e8a03e67d6",
+      "experiments/ios-jit/native-probe/scripts/summarize_diagnostics.py": "2e4e522a2b258f49f7e4ab5d375bbee2e433c947bb75b77debf25ddb44b0e333",
+      "experiments/ios-jit/native-probe/src/ProbeProtocol.h": "4b06a2867af44f82a5c1f2eb82c1fd42446e0e413b4c68daefed05cd1e55c6c4",
+      "experiments/ios-jit/native-probe/src/VMRange.c": "f5817b715d01758c23fdac29dab95ce69a024bd761c0ad7adc6a034c721b83b6",
+      "experiments/ios-jit/native-probe/src/VMRange.h": "6ea947aeddf0d9b3a8f3cd79717bca3fa39b2639ddc866f518b5b8f070cdb28d",
+      "experiments/ios-jit/native-probe/src/VMRangeDarwin.c": "cd467ba42a821643b18ed2846237b51993d9353543e7237a8e8d4c1d01d57546",
+      "experiments/ios-jit/native-probe/src/main.m": "42881aa5bf9ced764ddef37f9f9f68f4af3304abb4055265a9dcb1a3b45f229b",
+      "experiments/ios-jit/native-probe/tests/check_arm64.py": "92bbb4dde939fd28a5f2f98ebf948f9f3ad84ea7bde45feaaea10599095f3303",
+      "experiments/ios-jit/native-probe/tests/check_vm_range.py": "68e38be8a700b7144e4c2efff8c2d6e39950efc4f4ff9f79693ea43d7d88f3ba",
+      "experiments/ios-jit/native-probe/tests/script.test.cjs": "f1091e8c1e840e6532d1bbc1f569091454253f4aaef5f1538b89ff3f97c1675c",
+      "experiments/ios-jit/native-probe/tests/simulator_smoke.py": "896511f84257c00a75cf2ea1cc6f52341a0dc6b6117ba69ddf3cb3f8f1eeee23",
+      "experiments/ios-jit/native-probe/tests/vm_range_test.c": "d8730d363691c5993f5ac736a5f380765f511102236b476e6fed32340b235b4f"
+    },
+    "ipa": {
+      "path": "artifacts/ios-jit/native-probe-20260911-02/CelesteJITProbe-unsigned.ipa",
+      "sha256": "3ced8145abe1ed754c1e5186ab37f6ce3692fb6d85529539ee18e3a6c65a823b",
+      "bytes": 146205,
+      "unsigned": true
+    },
+    "scriptTemplateSha256": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333",
+    "scriptUnchangedFromBuild1": true,
+    "deviceResult": "PENDING_OWNER_RETEST"
+  },
+  "hostValidation": {
+    "schema": 1,
+    "recorded_utc": "2026-09-11T00:15:59.335978+00:00",
+    "build_id": "native-probe-20260911-02",
+    "vm_range": {
+      "vm_range_tests_passed": 12,
+      "device_jit_execution": "NOT_TESTED",
+      "status": "PASS_HOST_VM_RANGE_REGRESSION",
+      "sanitizers": [
+        "address",
+        "undefined"
+      ],
+      "includes_real_darwin_fragmented_map": true
+    },
+    "simulator": {
+      "status": "PASS_SIMULATOR_STARTUP_EXPORT_PREVIOUS_SESSION_RECOVERY",
+      "build_id": "native-probe-20260911-02-simulator",
+      "os": "26.5",
+      "architecture": "x86_64",
+      "previous_session_recovered": true,
+      "current_session_not_duplicated": true,
+      "export_schema": 1,
+      "device_jit_execution": "NOT TESTED",
+      "share_sheet_interaction": "NOT AUTOMATED",
+      "notes": "Host terminated only the simulator probe between launches. Generated-code paths are disabled."
+    },
+    "package": {
+      "zip_integrity": "PASS",
+      "source_hashes_match_current_files": "PASS",
+      "no_lc_code_signature": "PASS",
+      "codesign_reports_not_signed_at_all": "PASS",
+      "no_mobileprovision": "PASS",
+      "executable_permission_in_zip": "PASS",
+      "version": "0.1.1 (2)",
+      "simulator_test_argument_absent_in_device_binary": "PASS",
+      "ipa_sha256": "3ced8145abe1ed754c1e5186ab37f6ce3692fb6d85529539ee18e3a6c65a823b",
+      "ipa_bytes": 146205,
+      "script_unchanged_from_build_1": true
+    },
+    "protocol_mocks": {
+      "status": "PASS",
+      "cases": 15,
+      "runtime": "Node.js 24.19.0",
+      "script_sha256": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333",
+      "tests_sha256": "f1091e8c1e840e6532d1bbc1f569091454253f4aaef5f1538b89ff3f97c1675c",
+      "command": "node experiments/ios-jit/native-probe/tests/script.test.cjs",
+      "evidence_reused_from": "native-probe-20260910-01; script and test hashes unchanged"
+    },
+    "arm64_instruction_encoding": {
+      "status": "PASS_CROSS_ASSEMBLER_BYTES",
+      "bytes": "20078652c0035fd6001c0011c0035fd65000005800021fd60000012001000000",
+      "instructions": [
+        "movz w0,#12345",
+        "ret",
+        "add w0,w0,#7",
+        "ret",
+        "ldr x16,PC+8",
+        "br x16"
+      ],
+      "device_execution": "NOT TESTED",
+      "evidence_reused_from": "native-probe-20260910-01; instruction templates unchanged"
+    },
+    "physical_jit_execution": "PENDING_RETEST",
+    "managed_jit": "NOT_IMPLEMENTED",
+    "celeste_gameplay": "NOT_IMPLEMENTED"
+  },
+  "handoff": {
+    "recorded_utc": "2026-09-11T00:15:59.340803+00:00",
+    "local_source": "artifacts/ios-jit/native-probe-20260911-02/phone-files/0.1.1-build-2",
+    "files_app_folder": "iCloud Drive/Celeste JIT Tests/0.1.1-build-2",
+    "copied_and_readback_verified": true,
+    "cloud_upload": "CONFIRMED_BY_FOUNDATION_RESOURCE_METADATA",
+    "phone_download": "NOT_OBSERVED",
+    "total_bytes": 160333,
+    "files": {
+      "CelesteJITProbe-0.1.1-build-2-unsigned.ipa": {
+        "sha256": "3ced8145abe1ed754c1e5186ab37f6ce3692fb6d85529539ee18e3a6c65a823b",
+        "bytes": 146205
+      },
+      "INSTALL.md": {
+        "sha256": "ea41fb62de4d7ae0cea36b1b231f31b3b7cf121446b7538243c050adaecc20eb",
+        "bytes": 12105
+      },
+      "README-FIRST.txt": {
+        "sha256": "1c47f1cea7c369fa3211387de728e8ad765b7cf771935698b06be281a8aebcf4",
+        "bytes": 1754
+      },
+      "SHA256SUMS.txt": {
+        "sha256": "5c6eff6edefabe69276e9d0518fa26ab0daa83f1d1f014e31dc64675b9031d24",
+        "bytes": 269
+      }
+    },
+    "cloud_upload_observed_utc": "2026-09-11T00:16:10Z",
+    "cloud_resource_status": [
+      {
+        "file": "CelesteJITProbe-0.1.1-build-2-unsigned.ipa",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "README-FIRST.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "INSTALL.md",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      }
+    ]
+  },
+  "connectionObservations": {
+    "correctPairedPhoneVisible": true,
+    "wirelessTunnelConnected": true,
+    "appListingsEmpty": true,
+    "localSendDocumentsQuery": "FAILED",
+    "finderAppleEventQuery": "TIMED_OUT",
+    "directPhoneCopyCompleted": false,
+    "debuggerAttachedByThisTask": false
+  },
+  "nextTest": [
+    "Import 0.1.1 build 2 into LiveContainer 1; preserve existing data",
+    "Fresh probe process with Launch with JIT OFF and JIT Launch Script empty",
+    "StikDebug ready in LiveContainer 2; enable from probe and return to same process",
+    "Export diagnostic JSON for either result",
+    "After PASS, background about 15 seconds, return, repeat checks and export"
+  ],
+  "notEstablished": [
+    "native generated-code execution on phone",
+    "managed JIT",
+    "MonoMod hooks",
+    "Celeste gameplay",
+    "mod compatibility",
+    "Strawberry Jam",
+    "performance"
+  ],
+  "gitActions": {
+    "commits": 0,
+    "pushes": 0,
+    "remoteWrites": 0,
+    "aotCheckoutWrites": 0
+  }
+}

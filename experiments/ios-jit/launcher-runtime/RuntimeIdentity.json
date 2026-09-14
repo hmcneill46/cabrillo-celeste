@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "everestSourceCommit": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+  "compatibilityPolicy": 1,
+  "builtins": {
+    "Celeste": "1.4.0.0",
+    "CelesteIOS": "1.0.0",
+    "Everest": "1.6531.0",
+    "EverestCore": "1.6531.0"
+  }
+}

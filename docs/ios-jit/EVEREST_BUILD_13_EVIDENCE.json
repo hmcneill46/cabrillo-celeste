@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-11T20:50:11.152017+00:00",
+  "status": "UNSIGNED_BUILD13_READY_HOST_VERIFIED_PHYSICAL_EVEREST_PENDING",
+  "version": "0.6.0",
+  "build": 13,
+  "bundle": "io.github.hmcneill46.celeste.everest.jit.everest",
+  "receipts": {
+    "build": {
+      "path": "artifacts/ios-jit/everest-canary-20260911-13/build-receipt.json",
+      "sha256": "5d23990ce733fbd59a6fcc2c0bd4f2c3fa7044a087667ae715bb64feb2efb004"
+    },
+    "package": {
+      "path": "artifacts/ios-jit/everest-canary-20260911-13/package-validation.json",
+      "sha256": "3d58d4b468d9b758e0afc3d86d70ab5b32b034ef03ba2cbfb229180d9f38a138"
+    },
+    "protocol": {
+      "path": "artifacts/ios-jit/everest-canary-20260911-13/request-protocol-validation.json",
+      "sha256": "88f055631976c67fbae92346b2a58d9bbdd2fa4bd833102fd3f2e14701f93542"
+    },
+    "symbols": {
+      "path": "artifacts/ios-jit/everest-canary-20260911-13/symbols-validation.json",
+      "sha256": "9913a5f74714e7f09c0b8a2652a0330c45490cca1a1f353dd51985a74bbe8353"
+    },
+    "host": {
+      "path": ".build/ios-jit/everest-host-test/receipt.json",
+      "sha256": "ec00aeccaee5b1dd222dd182a10f2cd1b9b384383b8cc5ed0a70ad2f78538bb1"
+    },
+    "simulator": {
+      "path": ".build/ios-jit/everest-canary/everest-canary-20260911-13-simulator/smoke/receipt.json",
+      "sha256": "833050c5e448ea4e1a267e56427bb447b556c81d49056c5489938e99c90e6a25"
+    },
+    "preparation": {
+      "path": ".build/ios-jit/everest-game/preparation-receipt.json",
+      "sha256": "d07c089af538bf7e554ea0475b5f0e14c519a60706f0ab4cb7b750420fa8db51"
+    },
+    "platform": {
+      "path": ".build/ios-jit/everest-managed/platform-patch.json",
+      "sha256": "afaf61d93c3969272e51ba77796fc5e5cba5b1e2379c0a3d6538f37d4811b543"
+    },
+    "dependencies": {
+      "path": ".build/ios-jit/everest-dependencies/receipt.json",
+      "sha256": "1e4d6bf95018b6163cd4a34033277776f10f05f8b7dfdfbac99a3580a1b0076f"
+    },
+    "embedded_patch": {
+      "path": ".build/ios-jit/everest-source/embedded-source-patch.json",
+      "sha256": "983b139547f4d61812348706a4bc8eeee0b6aae99e921108367addf30c0be999"
+    },
+    "lua": {
+      "path": ".build/ios-jit/everest-lua/receipt.json",
+      "sha256": "7bebe53285cdde74a74e42e0c6a050dc64a40b9b2b0aa44ad4db4553873e8a3c"
+    },
+    "mods": {
+      "path": ".build/ios-jit/everest-mods/receipt.json",
+      "sha256": "7c6999b2065815e83eadf4a677711ac06775c7604eb57445cca6ada53d811ba0"
+    }
+  },
+  "artifact": {
+    "ipa_sha256": "33f75af49dfbf64e2e3a948b25fb94acf4de4ada56a38b236a8c05abaed13942",
+    "executable_uuid": "UUID: D4A8C72A-0615-3971-B447-EFAAF0A5E4A8",
+    "script_template_sha256": "952cc7dc55ab7eff2a8395990aaf7e20a06474deb592d932a4671834d5609717",
+    "game_fixture_sha256": "375cfce7f57e4433e778f1e4044f51987ecbdf078cccf28f99311a38c31d68c6",
+    "fna_assembly_sha256": "dfd000f1a1eff08d41451099c63a9de9363047a6c0025812fb9ff19d8d53ed6d",
+    "mod_zip_files": {
+      "CJITCodeCanary-v1.0.0.zip": {
+        "bytes": 3560,
+        "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b"
+      },
+      "CJITTestMap-v1.0.0.zip": {
+        "bytes": 1167,
+        "sha256": "d373b83f85603bee3e5e73cf5742d5ba2d68746376e7ef391d23c949402eba02"
+      }
+    }
+  },
+  "original_il": true,
+  "reconstructed_game_source": false,
+  "everest": "1.6458.0",
+  "host_real_everest_mod_gameplay_pass": true,
+  "physical_everest_tested": false,
+  "strawberry_jam_tested": false,
+  "jit_budget_bytes": 67108864,
+  "host_code": {
+    "chunks": 223,
+    "bytes": 9662143,
+    "jit_completions": 14849
+  },
+  "host_mod_save": {
+    "cold_prior": 0,
+    "cold_written": 3,
+    "cold_readback": 3,
+    "warm_prior": 5,
+    "warm_written": 8
+  },
+  "private_snapshot": ".build/ios-jit/device-evidence/2026-09-11/build-13-ready",
+  "delivery_receipt": "artifacts/ios-jit/everest-canary-20260911-13/delivery-receipt.json",
+  "delivery_note": "Consult handoff-status.json, phone-wifi-handoff-resumed.json and the latest iCloud resource observation; local placement and an empty metadata query do not prove cloud upload.",
+  "aot_workspace_mutated": false,
+  "committed": false,
+  "pushed": false,
+  "snapshot_receipt": {
+    "path": ".build/ios-jit/device-evidence/2026-09-11/build-13-ready/source-snapshot-receipt.json",
+    "sha256": "80fcc0298a0c699ddb096f004e01892ca2497fef61f20fef26676111a639e3c5",
+    "unique_files": 4900
+  },
+  "cloud_retention": {
+    "default_handoff": "iCloud Drive",
+    "cleanup_receipt": "artifacts/ios-jit/everest-canary-20260911-13/icloud-cleanup-receipt.json",
+    "cleanup_receipt_sha256": "daa398a79ddc0d068c4e9287b4cf182e4256d692be9c02f75fd617449bf424b2",
+    "superseded_ipa_files_removed": 9,
+    "bytes_removed": 967202714,
+    "local_copies_verified": true,
+    "results_preserved": true,
+    "cloud_server_deletion_confirmed": false
+  },
+  "handoff_status": {
+    "path": "artifacts/ios-jit/everest-canary-20260911-13/handoff-status.json",
+    "sha256": "99dd5c6f181496fa1d586a2eb19937537917a02b07b0897d0b9301225f951727"
+  },
+  "ipa_phone_download_confirmed_by_owner": true,
+  "ipa_available_and_download_in_progress_by_owner": false,
+  "next_size_reduction_plan": "CONTENT_IMPORT_NEXT.md",
+  "size_breakdown": {
+    "path": "artifacts/ios-jit/everest-canary-20260911-13/size-breakdown.json",
+    "sha256": "848c090b5333f65eeab8510049db61b5b241454ccb777851cfb7a415f1d3566a",
+    "non_content_compressed_member_bytes": 22707700,
+    "future_ipa_built": false
+  }
+}

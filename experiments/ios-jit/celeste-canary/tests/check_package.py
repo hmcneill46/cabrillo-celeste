@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+"""Validate the exact private Celeste kit, content, imports and recorded inputs."""
+import argparse,hashlib,importlib.util,json,plistlib,re,subprocess,zipfile
+from pathlib import Path
+SOURCE=Path(__file__).resolve().parents[1];ROOT=SOURCE.parents[2]
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('--build-id',default='celeste-canary-20260911-12');a=p.parse_args()
+out=ROOT/'artifacts/ios-jit'/a.build_id;stage=ROOT/'.build/ios-jit/celeste-canary'/a.build_id
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+r=json.loads((out/'build-receipt.json').read_text());fixture=json.loads((out/'fixture-receipt.json').read_text())
+spec=importlib.util.spec_from_file_location('builder',SOURCE/'build.py');builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
+ipa=out/'CelesteJITGame-unsigned.ipa';dll=out/'CelesteJITGame-v0.5.0.dll'
+with zipfile.ZipFile(ipa) as z:
+    assert z.testzip() is None
+    names=z.namelist();prefix='Payload/CelesteJITGame.app/'
+    builder.validate_payload_members((n,z.read(n)) for n in names)
+    assert all(n.startswith(prefix) for n in names)
+    assert not any('_CodeSignature' in n or n.endswith('.mobileprovision') or 'CelesteJITGame-v' in n or 'Microsoft.iOS' in n for n in names)
+    assert prefix+'Managed/Celeste.dll' not in names
+    info=plistlib.loads(z.read(prefix+'Info.plist'))
+    assert info['CFBundleIdentifier']=='io.github.hmcneill46.celeste.everest.jit.game'
+    assert info['CFBundleVersion']=='12' and info['CFBundleShortVersionString']=='0.5.0'
+    binary=z.read(prefix+'CelesteJITGame');build=json.loads(z.read(prefix+'BuildInfo.json'))
+    assert builder.read_compiled_protocol(binary)==build['compiled_protocol']
+    assert build['bytes_per_arena']==16777216 and build['aot_disabled'] and build['interpreter_disabled']
+    assert all(r[k]==v for k,v in build.items())
+    assert hashlib.sha256(binary).hexdigest()==r['executable_sha256']
+    assert hashlib.sha256(z.read(prefix+'celeste-jit-probe.js')).hexdigest()==r['script_template_sha256']
+    assert hashlib.sha256(z.read(prefix+'Managed/FNA.dll')).hexdigest()==r['fna_assembly_sha256']==fixture['fna_sha256']
+    assert hashlib.sha256(z.read(prefix+'FMOD-LICENSE.txt')).hexdigest()==r['fmod_license_sha256']
+    for key in ('framework_assembly_sha256','hook_assembly_sha256'):
+        for name,digest in r[key].items():assert hashlib.sha256(z.read(prefix+'Managed/'+name)).hexdigest()==digest
+    assert len(r['framework_assembly_sha256'])==168 and len(r['hook_assembly_sha256'])==10
+    raw=z.read(prefix+'GameContentManifest.json');assert hashlib.sha256(raw).hexdigest()==r['game_content_manifest_sha256']
+    content=json.loads(raw);aggregate=hashlib.sha256()
+    assert len(content['files'])==1216
+    for item in content['files']:
+        data=z.read(prefix+'Content/'+item['path']);assert len(data)==item['bytes'] and hashlib.sha256(data).hexdigest()==item['sha256'],item['path']
+        aggregate.update(item['path'].encode()+b'\0'+str(item['bytes']).encode()+b'\0'+item['sha256'].encode()+b'\n')
+    assert aggregate.hexdigest()==content['aggregate_sha256']==r['game_content_aggregate_sha256']=='30a1c147d1a3ab0aa45762094e393ed7fd69951dd66e5af063447641e0699c46'
+assert sha(ipa)==r['ipa_sha256']
+assert sha(dll)==fixture['fixture_sha256']==r['game_fixture_sha256']
+assert dll.stat().st_size==r['game_fixture_bytes']<8388608
+assert fixture['decompiled_logical_sha256']=='db7b722159fbdef8625c81608165aea162957dce956fcd5b16eeceaa1089a273'
+for mapping in [r['source_sha256'],r['native_library_sha256'],fixture['build_source_sha256']]:
+    assert all(sha(ROOT/name)==digest for name,digest in mapping.items())
+assert not any('CJ_HOOK_HOST_TEST' in word or 'CJ_GRAPHICS_HOST_TEST' in word for cmd in r['build_commands'] for word in cmd)
+assert 'LC_CODE_SIGNATURE' not in (out/'macho-load-commands.txt').read_text()
+exports=set(json.loads((stage/'native-export-table.json').read_text()))
+internal=set()
+for path in [ROOT/'.build/ios-jit/celeste-managed/FNA.dll',dll]:
+    imports=subprocess.check_output(['monodis','--implmap',str(path)],text=True)
+    internal.update(re.findall(r'\((\w+) __Internal\)$',imports,re.M))
+assert len(internal)==1294 and internal<=exports,sorted(internal-exports)
+assert 'FMOD_SDL_Register' not in internal and 'FMOD_DSP_GetCPUUsage' not in internal
+references=subprocess.check_output(['monodis','--assemblyref',str(dll)],text=True)
+assert 'Microsoft.iOS' not in references and 'Version=10.' not in references and 'mscorlib' not in references
+baseline=json.loads((ROOT/'artifacts/ios-jit/hook-canary-20260911-09/build-receipt.json').read_text())
+assert all(sha(ROOT/name)==digest for name,digest in baseline['source_sha256'].items())
+assert baseline['script_template_sha256']==r['script_template_sha256']
+assert all(r['native_library_sha256'][name]==digest for name,digest in baseline['native_library_sha256'].items())
+graphics=json.loads((ROOT/'artifacts/ios-jit/graphics-canary-20260911-11/build-receipt.json').read_text())
+assert all(sha(ROOT/name)==digest for name,digest in graphics['source_sha256'].items())
+assert graphics['fna_assembly_sha256']==r['fna_assembly_sha256']
+host=json.loads((ROOT/'.build/ios-jit/celeste-host-test/receipt.json').read_text())
+assert host['fixture_sha256']==fixture['fixture_sha256'] and host['fna_sha256']==r['fna_assembly_sha256']
+assert all(sha(ROOT/name)==digest for name,digest in host['source_sha256'].items())
+native=json.loads((out/'graphics-native-receipt.json').read_text())
+assert sha(out/'graphics-native-receipt.json')==r['graphics_native_receipt_sha256']
+assert native['patch_sha256']==r['graphics_native_patch_sha256']==host['native_patch_sha256']
+assert native['ios_archive_sha256']==r['native_library_sha256'][native['ios_archive']]
+assert native['host_library_sha256']==host['desktop_native_sha256']['libFNA3D.0.dylib']
+assert all(sha(ROOT/name)==digest for name,digest in native['source_sha256'].items())
+assert host['callback_autorelease_pools']
+assert 'FNA3D_CJIT_EndCallback' in internal
+result=dict(status='PASS_PRIVATE_CELESTE_PACKAGE_AND_INPUTS',ipa_bytes=ipa.stat().st_size,ipa_sha256=sha(ipa),
+    fixture_sha256=fixture['fixture_sha256'],fna_sha256=r['fna_assembly_sha256'],native_internal_imports=len(internal),
+    all_declared_internal_imports_resolve=True,content_files=1216,content_bytes=r['game_content_bytes'],
+    content_aggregate_sha256=aggregate.hexdigest(),framework_dlls=168,monomod_dlls=10,
+    canonical_aot_raw_source_matched=True,untrimmed_game_and_fna=True,apple_managed_bindings=False,
+    debug_symbols_outside_ipa=True,signature=False,provisioning_profile=False,
+    accepted_sources_and_runtime_unchanged=True,script_matches_physical_build9=True,
+    host_fixture_bytes_match=True,private_owner_kit=True,physical_game_tested=False)
+(out/'package-validation.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))

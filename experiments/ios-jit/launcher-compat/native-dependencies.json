@@ -1,0 +1,12 @@
+{
+  "ZIPFoundation": {
+    "url": "https://github.com/weichsel/ZIPFoundation.git",
+    "tag": "0.9.20",
+    "commit": "22787ffb59de99e5dc1fbfe80b19c97a904ad48d"
+  },
+  "Yams": {
+    "url": "https://github.com/jpsim/Yams.git",
+    "tag": "6.2.2",
+    "commit": "a27b21e0c81c5bf42049b897a62aaf387e80f279"
+  }
+}

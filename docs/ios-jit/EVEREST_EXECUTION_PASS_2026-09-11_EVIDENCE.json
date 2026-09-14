@@ -1,0 +1,36 @@
+{
+  "status": "PASS_PHYSICAL_BUILD13_BOUNDED_EVEREST_MOD_ZIPS_LUA_HOOKS_SAVES_AND_RESUME",
+  "raw_export_sha256": "58c932839fc7ea41ca17c6c80ab2e7df51a9e8797656af1b57131fd7046a0f29",
+  "private_validation": ".build/ios-jit/device-evidence/2026-09-11/build-13-pass/validation.json",
+  "private_validation_sha256": "8eb7f65e4fd64dd9591c42caef86a69dd07313d8e0f31b7efa4b5afcbd6f0553",
+  "build_id": "everest-canary-20260911-13",
+  "exact_inputs_match": true,
+  "frames": 11176,
+  "level_frames": 7004,
+  "mod_hooks": 50,
+  "mod_il_hooks": 50,
+  "hooks_after_resume": 11,
+  "background_seconds": 34.62797783332644,
+  "runtime": {
+    "code_allocations": 179,
+    "code_budget_bytes": 67108864,
+    "code_reserved_bytes": 22102016,
+    "jit_done_count": 15891,
+    "jit_failed": 0,
+    "jit_unowned": 0,
+    "managed_errors": 0,
+    "patch_rejections": 0,
+    "patches": 43
+  },
+  "peak_sampled_physical_footprint_bytes": 1469171736,
+  "mod_save": {
+    "prior": 0,
+    "written": 50,
+    "readback": 50
+  },
+  "fresh_process_mod_save_reload_verified": false,
+  "lua_managed_callback_pass": true,
+  "owner_reports_all_pass": true,
+  "strawberry_jam_accepted": false,
+  "next": "Persistent content import and small IPA, preserving current guest/save data; then real LuaCutscenes/SJ helpers."
+}

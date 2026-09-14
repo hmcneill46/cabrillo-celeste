@@ -1,0 +1,302 @@
+{
+  "status": "BUILD15_HOST_PACKAGE_SIMULATOR_PASS_PHYSICAL_PENDING",
+  "date": "2026-09-12",
+  "build_id": "sj-helpers-20260911-15",
+  "version": "0.8.0 (15)",
+  "ipa_bytes": 22777253,
+  "ipa_sha256": "f04f2ff49aeb6dfd3da071f676cc3373644d37bf37b3d2cf925a0aa5cd32ac97",
+  "executable_sha256": "d1152649bc6055fdb17afb44702462dbace1c7cfb2be646a30ced6ff4bc63ba2",
+  "executable_uuid": "UUID: DC33EC80-FF01-3824-8531-60C1365045B9",
+  "adapter_sha256": "d9531eacf4138fd115dc78effb3ae1ba093da5db85d5a3fc7e5cfedee7045974",
+  "script_template_sha256": "edc2fbad525cd9793b684b7755c5548c572924b6a28e84cf58ed1bb927b53424",
+  "native_code_budget_bytes": 134217728,
+  "mod_files": {
+    "CJITCodeCanary-v1.0.0.zip": {
+      "bytes": 3560,
+      "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b"
+    },
+    "CJITSJHelpers-v1.0.0.zip": {
+      "bytes": 5994,
+      "sha256": "60584b24f781b18a9f2c289f858c8ffc8775656bf96b738405249099d9b555d2"
+    },
+    "CJITTestMap-v1.0.0.zip": {
+      "bytes": 1167,
+      "sha256": "d373b83f85603bee3e5e73cf5742d5ba2d68746376e7ef391d23c949402eba02"
+    },
+    "LuaCutscenes-v0.2.13.zip": {
+      "bytes": 43788,
+      "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8"
+    },
+    "MaxHelpingHand-v1.40.9.zip": {
+      "bytes": 963880,
+      "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee"
+    }
+  },
+  "original_helpers": {
+    "LuaCutscenes-v0.2.13.zip": {
+      "name": "LuaCutscenes",
+      "resolvedVersion": "0.2.13",
+      "publicUrl": "https://gamebanana.com/mmdl/1305773",
+      "gameBananaFileId": "1305773",
+      "zipBytes": 43788,
+      "zipSha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8",
+      "distributedDlls": [
+        {
+          "bytes": 25600,
+          "path": "LuaCutscenes.dll",
+          "sha256": "dc697f1adfaa18bdb219df0a3ee569e1a785a452f17c46cd7626a8730440eb57"
+        }
+      ],
+      "actual_dll_paths": {
+        "LuaCutscenes.dll": "LuaCutscenes.dll"
+      }
+    },
+    "MaxHelpingHand-v1.40.9.zip": {
+      "name": "MaxHelpingHand",
+      "resolvedVersion": "1.40.9",
+      "publicUrl": "https://gamebanana.com/mmdl/1778093",
+      "gameBananaFileId": "1778093",
+      "zipBytes": 963880,
+      "zipSha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee",
+      "distributedDlls": [
+        {
+          "bytes": 470528,
+          "path": "MaxHelpingHand.dll",
+          "sha256": "6f463f2c014eb60c4abb61e395eb5065455d4bf469f4c83fce9814fb7bfcdfa6"
+        }
+      ],
+      "actual_dll_paths": {
+        "MaxHelpingHand.dll": "bin/MaxHelpingHand.dll"
+      }
+    }
+  },
+  "deferred_helper": "GravityHelper 1.2.28: optional CelesteNet type loading failure on Mono host",
+  "helper_counters": {
+    "luaBegin": 1,
+    "luaWait": 1,
+    "luaResume": 1,
+    "luaEnd": 1,
+    "luaSkipped": 0,
+    "walkDelta": 33,
+    "coroutineFrames": 4884,
+    "platformContact": 3739,
+    "platformTravel": 200,
+    "carriedDistance": 2705,
+    "helperFrames": 7295,
+    "afterResume": 2384,
+    "rendered": 952,
+    "resumes": 1
+  },
+  "host_native_code": {
+    "chunks": 892,
+    "bytes": 51870816,
+    "jit_methods": 16104
+  },
+  "host_final_mod_save": {
+    "prior": 6,
+    "written": 9,
+    "readback": 9
+  },
+  "host_prior_process_saves": [
+    [
+      0,
+      3
+    ],
+    [
+      3,
+      6
+    ]
+  ],
+  "host_content_reused": true,
+  "host_framework": "Mono 8.0.28 x64 coop; AOT/interpreter disabled",
+  "host_validation": {
+    "metal_api_validation": true,
+    "ns_zombie_enabled": true
+  },
+  "member_visibility_cases_per_runtime": 15,
+  "member_visibility_runtimes": 2,
+  "mono_visibility_receipt_sha256": "e022d8cc49640e21054af604def653b77fbfbbdafc413b058ba81b81f3101203",
+  "mono_utils": {
+    "input_sha256": "3fc0b9c537032738ee445023a15c738b5fab4726e60a17f769b46d9afa2f9dda",
+    "output_sha256": "5a8e1fe645a28d284e25c379443ec76df3be2a375443a1c05e832f0d58986ac1",
+    "legacy_native_struct_write_removed": true
+  },
+  "source_files": 148,
+  "accepted_build13_sources_unchanged": 140,
+  "accepted_build14_sources_unchanged": 137,
+  "content_store_native_copy_renderer_inherited_unchanged": true,
+  "static_game_fna_imports": 1294,
+  "static_lua_imports": 126,
+  "original_helpers_native_imports": 0,
+  "compiled_protocol": {
+    "protocol": 1,
+    "bytes_per_arena": 67108864,
+    "arena_count": 2,
+    "mailbox_bytes": 96,
+    "response_offset": 48,
+    "error_offset": 88
+  },
+  "mocked_script_page_acknowledgements": 8192,
+  "bundled_content_files": 0,
+  "private_prepared_game_il": true,
+  "public_game_free_launcher": false,
+  "physical_helper_execution": false,
+  "physical_cached_update_retention": false,
+  "physical_sj": false,
+  "required_phone_report": "retained original game/ZIPs/current save; Lua walk/wait/Home/resume/end; moving platform carry; On/IL hooks after resume; XML/YAML saves; audio/touch; Finish/detach/delayed liveness",
+  "validation_receipts": {
+    "artifacts/ios-jit/sj-helpers-20260911-15/package-validation.json": "8ade0f1c5075851c4d76a81abd575c31c59eb751c367dd63489f92dda51d72f2",
+    "artifacts/ios-jit/sj-helpers-20260911-15/request-protocol-validation.json": "32804f95275bf9ff295325be646dc9d54d7baa82c2ef7581740a275a3dae4848",
+    ".build/ios-jit/sj-helper-visibility-tests/receipt.json": "f325235f1be90ad0969965c222b2ff5e4c122bcf3772372b948fe2d2622f56e7",
+    ".build/ios-jit/sj-helpers-host-test/receipt.json": "a12cf96f459b3d59522fadad6bd2657af57efbcab5678e97fa1153150196234b",
+    ".build/ios-jit/sj-helpers/sj-helpers-20260911-15-simulator/smoke/receipt.json": "a1fc1cd679fe4e783466b694e33adea524d7bc35aa724e4d75da728f5e883d2e"
+  },
+  "source_snapshot": {
+    "path": ".build/ios-jit/device-evidence/2026-09-12/build-15-ready",
+    "receipt_sha256": "7115ae60c230980bd815410e5f816c7f5f189ba73c06157c89319c9efaadf10d",
+    "new_files": 1501,
+    "inherited_inputs": 79,
+    "verified_parent_tree_files": 5571
+  },
+  "delivery": {
+    "build_id": "sj-helpers-20260911-15",
+    "created_utc": "2026-09-11T23:24:46.517002+00:00",
+    "method": "Versioned local iCloud Drive placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.8.0-build-15",
+    "local_icloud_copy_verified": true,
+    "phone_download_confirmed": false,
+    "cloud_upload_confirmed": true,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 22777253,
+        "sha256": "f04f2ff49aeb6dfd3da071f676cc3373644d37bf37b3d2cf925a0aa5cd32ac97"
+      },
+      "CJITCodeCanary-v1.0.0.zip": {
+        "bytes": 3560,
+        "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b"
+      },
+      "CJITSJHelpers-v1.0.0.zip": {
+        "bytes": 5994,
+        "sha256": "60584b24f781b18a9f2c289f858c8ffc8775656bf96b738405249099d9b555d2"
+      },
+      "CJITTestMap-v1.0.0.zip": {
+        "bytes": 1167,
+        "sha256": "d373b83f85603bee3e5e73cf5742d5ba2d68746376e7ef391d23c949402eba02"
+      },
+      "LuaCutscenes-v0.2.13.zip": {
+        "bytes": 43788,
+        "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8"
+      },
+      "MaxHelpingHand-v1.40.9.zip": {
+        "bytes": 963880,
+        "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee"
+      },
+      "README-FIRST.txt": {
+        "bytes": 3836,
+        "sha256": "3e1a27b7acb077952da9c7be2e982d4dd56f1d96e7c73b76aa50e4dddf5cffa7"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5761,
+        "sha256": "edc2fbad525cd9793b684b7755c5548c572924b6a28e84cf58ed1bb927b53424"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 2524,
+        "sha256": "82fbaca9c4046860aa77cfc1f01dfe66f633ed42976516c48507932c33ff36c4"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1296,
+        "sha256": "b997b6fd6c508851d8d7901690931051890c4455e9c3e3892c26621d80c62d7c"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 906,
+        "sha256": "c3e5d7a167c6e7727b892d6e90dc966242fd60a787c3f179d878a903152c1984"
+      }
+    },
+    "total_bytes": 23809965,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-12/build-15-ready",
+      "receipt_sha256": "7115ae60c230980bd815410e5f816c7f5f189ba73c06157c89319c9efaadf10d",
+      "new_files": 1501,
+      "inherited_inputs": 79,
+      "verified_parent_tree_files": 5571
+    },
+    "physical_execution": false,
+    "retention": "No superseded large installers remain in the known test folder. Keep the small build 14 fallback pending build 15 acceptance; preserve all Results.",
+    "icloud_metadata": [
+      {
+        "file": "CJITCodeCanary-v1.0.0.zip",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "celeste-jit-probe-TEMPLATE.js",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "CJITTestMap-v1.0.0.zip",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "THIRD_PARTY_NOTICES.md",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "TEST-IDENTITY.json",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "LuaCutscenes-v0.2.13.zip",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "CelesteJITEverest-unsigned.ipa",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "README-FIRST.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "MaxHelpingHand-v1.40.9.zip",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "CJITSJHelpers-v1.0.0.zip",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      }
+    ]
+  },
+  "physical_followup": {
+    "date": "2026-09-12",
+    "status": "CONFIRMED_BUILD15_JIT_CODE_BUDGET_EXHAUSTION",
+    "report": "BUILD_15_CAPACITY_AND_BUILD_16.md",
+    "raw_export_sha256": "e1b46597ef62119dfe3ff54ab5959a904a526f8d3e9035732f6f2d2f6619acd6",
+    "content_and_existing_mod_retention_passed": true,
+    "helper_gameplay_passed": false
+  }
+}

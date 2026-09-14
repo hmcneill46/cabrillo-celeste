@@ -1,0 +1,316 @@
+{
+  "schema": 1,
+  "status": "PASS_BUILD25_READY_AND_ICLOUD_UPLOADED_PHYSICAL_TEST_PENDING",
+  "updated_utc": "2026-09-12T23:39:30.821968+00:00",
+  "build_id": "launcher-dependencies-20260912-25",
+  "version": "0.13.0 (25)",
+  "source": "experiments/ios-jit/launcher-dependencies",
+  "artifact": "artifacts/ios-jit/launcher-dependencies-20260912-25",
+  "ipa_sha256": "27885f04db1dd6926f78106cca5e8e4e7c4e3059c3ccd3fb10cffdc1b8e07ba4",
+  "ipa_bytes": 23409096,
+  "executable_uuid": "UUID: 9160ACFD-56F9-360A-A765-92A4A68065CD",
+  "source_count": 198,
+  "physical_build24_accepted": true,
+  "physical_build25_accepted": false,
+  "accepted_fallback": "0.12.1-build-24",
+  "profile": "Profiles/sj-first-play",
+  "existing_content_and_mods_retained": true,
+  "unchanged_from_build24": [
+    "all 168 BCL/runtime assemblies",
+    "all managed Everest/game/support assemblies",
+    "native game/runtime/renderer archives",
+    "runtime config and JIT request script"
+  ],
+  "adapter_sha256": "97d6484545e464a1e6953a9a162ca11d3395a37a1cb797b26e6ae49d3dffea9f",
+  "fna_sha256": "7a7c416101b17c2f5c2c6602bcaf5b8daad7395ee63ca9fc74f9034fb9f239ff",
+  "ios_support": {
+    "id": "CelesteIOS",
+    "version": "1.0.0",
+    "abi": 1,
+    "required": true,
+    "sha256": "b330772f8e4b592ab5a02c44317a8cff54e8cc576763372ecfa4f4455d0c0959"
+  },
+  "script_sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b",
+  "validation_receipts": {
+    "artifacts/ios-jit/launcher-dependencies-20260912-25/package-validation.json": {
+      "status": "PASS_BUILD25_UNSIGNED_PACKAGE_AND_NATIVE_INSTALL_GATES",
+      "sha256": "f0a39be8a704d6a9f69d5c638594ae5897bd9a88ebd60166d2e643d430fa98df"
+    },
+    "artifacts/ios-jit/launcher-dependencies-20260912-25/request-protocol-validation.json": {
+      "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT",
+      "sha256": "f88784bca7dda19f8467324574caa5773fb805cb4d1dba1d3cbab30c71d78c97"
+    },
+    ".build/ios-jit/launcher-dependencies-install-tests/receipt.json": {
+      "status": "PASS_NATIVE_INSTALLS_AND_UPDATES",
+      "sha256": "74c208cbe382430dbfe55520807de70f748ace1034a2225137f9c1d1dcb70035"
+    },
+    ".build/ios-jit/launcher-dependencies-real-updates/receipt.json": {
+      "status": "PASS_REAL_TWO_MOD_UPDATE_TRANSACTION",
+      "sha256": "a0bf3c17db495927f2c3641c58fbebb0cc7ba545090fb0807bacb214b315eae7"
+    },
+    ".build/ios-jit/launcher-dependencies-mod-library-tests/result.json": {
+      "status": "PASS_NATIVE_MOD_LIBRARY",
+      "sha256": "b564d1610de943f389e385375c66126f57a6e5941dccfcc844cff9d5e616571b"
+    },
+    ".build/ios-jit/launcher-dependencies-ui-tests/receipt.json": {
+      "status": "PASS_NATIVE_LAUNCHER_XCUITEST",
+      "sha256": "49bcc591778b157c3352f7c4c02e56ea89faebbdc9cf2e7df080c4f543fc8fcc"
+    },
+    ".build/ios-jit/launcher-dependencies/launcher-dependencies-20260912-25-simulator/smoke/receipt.json": {
+      "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY",
+      "sha256": "e23cec82c57e9de75a3463e4b52672e7e53a88411ca3753ccdbc09c6e1eab869"
+    },
+    ".build/ios-jit/launcher-dependencies-validation/host-updated-paint/receipt.json": {
+      "status": "PASS_HOST_PAINT_INTRO_SAVES_AND_RESUME",
+      "sha256": "74814827c483203818ad2b12a5ce58ce50c2029b334213a82c97f9d366c35a93"
+    },
+    ".build/ios-jit/launcher-dependencies-stable-layout/receipt.json": {
+      "status": "PASS_STABLE_LANDSCAPE_VISUAL_CHECK",
+      "sha256": "584322d7ddfe813fe875af466767676c4430f3b9b8fa970eeba8070c18bc1500"
+    }
+  },
+  "update_policy": {
+    "manual_check": true,
+    "individual_and_batch": true,
+    "automatic_trigger": "Visit Updates while idle",
+    "successful_interval_seconds": 86400,
+    "automatic_failure_backoff_seconds": 3600,
+    "opt_out": true,
+    "automatic_mod_downloads": false,
+    "availability_cache_by_library_revision": true,
+    "xxhash_cache_by_sha256": true,
+    "transaction_rehash": true
+  },
+  "index_snapshot": {
+    "identity_count": 6166,
+    "usable": 6151,
+    "invalid_versions": 15,
+    "fetches": [
+      {
+        "file": "modupdater-pointer.txt",
+        "url": "https://everestapi.github.io/modupdater.txt",
+        "bytes": 50,
+        "sha256": "d2579ef3f58926870af5655170d9d398d4216c6ffaa872b2f0acf494d2a85da7",
+        "utc": "2026-09-12T22:07:04.390493+00:00"
+      },
+      {
+        "file": "updates.yaml",
+        "url": "https://maddie480.ovh/celeste/everest_update.yaml",
+        "bytes": 1235725,
+        "sha256": "c2c1c5a0ca6efdf2bc2cc430d1c29b3a8097fa874ef40bf2816af67e2b4a81fe",
+        "utc": "2026-09-12T22:07:05.150095+00:00"
+      },
+      {
+        "file": "modgraph-pointer.txt",
+        "url": "https://everestapi.github.io/modgraph.txt",
+        "bytes": 55,
+        "sha256": "f73224344da7a93243c435f76f4aff8e357196b3e6052095ad791e4f3c86320b",
+        "utc": "2026-09-12T22:07:05.425584+00:00"
+      },
+      {
+        "file": "graph.yaml",
+        "url": "https://maddie480.ovh/celeste/mod_dependency_graph.yaml",
+        "bytes": 3190791,
+        "sha256": "c757622cc77546a861d108a09450910adbad0a2e019fbf0ade4fa49de851c8b5",
+        "utc": "2026-09-12T22:07:06.868467+00:00"
+      }
+    ],
+    "contract_sources": [
+      {
+        "file": "xxhash_spec.md",
+        "url": "https://raw.githubusercontent.com/Cyan4973/xxHash/v0.8.3/doc/xxhash_spec.md",
+        "bytes": 35240,
+        "sha256": "61c47af338b2feefcc7621700ef6b941bcf9b1dd33899c503f68cb797e7ef333",
+        "utc": "2026-09-12T23:25:12.165950+00:00"
+      },
+      {
+        "file": "EverestModuleMetadata.cs",
+        "url": "https://raw.githubusercontent.com/EverestAPI/Everest/4bbde91b8dbaaddef2ceec75ca0cd6d59b3b8d00/Celeste.Mod.mm/Mod/Module/EverestModuleMetadata.cs",
+        "bytes": 5405,
+        "sha256": "c010b3fea13efba4874a94173e9ef6daa30254b2e2c18cd497a7e0624fb237ac",
+        "utc": "2026-09-12T23:25:12.477882+00:00"
+      },
+      {
+        "file": "EverestYamlProcessor.java",
+        "url": "https://raw.githubusercontent.com/maddie480/RandomBackendStuff/904284430da1e72218696cac6e4d0aebea663d1a/src/main/java/ovh/maddie480/randomstuff/backend/celeste/moddatabase/EverestYamlProcessor.java",
+        "bytes": 4511,
+        "sha256": "7441768a9e7dee60d76cbf32859f1df846764ac62eae18975570fd8021283433",
+        "utc": "2026-09-12T23:25:12.858174+00:00"
+      }
+    ]
+  },
+  "real_updates": [
+    {
+      "bytes": 220091,
+      "canUpdate": true,
+      "current": "1.12.5",
+      "enabled": true,
+      "filename": "EeveeHelper-v1.12.5.zip",
+      "latest": "1.12.6",
+      "name": "EeveeHelper",
+      "reason": ""
+    },
+    {
+      "bytes": 1204725,
+      "canUpdate": true,
+      "current": "1.80.1",
+      "enabled": true,
+      "filename": "FrostHelper-v1.80.1.zip",
+      "latest": "1.80.2",
+      "name": "FrostHelper",
+      "reason": ""
+    }
+  ],
+  "runtime_blocked_updates": [
+    {
+      "name": "ExtendedVariantMode",
+      "version": "0.51.0",
+      "requiredEverest": "1.6531.0"
+    },
+    {
+      "name": "MaxHelpingHand",
+      "version": "1.40.10",
+      "requiredEverest": "1.6531.0"
+    }
+  ],
+  "host_updated_paint": {
+    "status": "PASS_HOST_PAINT_INTRO_SAVES_AND_RESUME",
+    "graphics_contract_checks": 4,
+    "session_contract_checks": 37,
+    "metal_api_validation": true,
+    "saved_counter_prior": 8,
+    "saved_counter_written": 16,
+    "saved_counter_readback": 16
+  },
+  "visual_review": {
+    "final_portrait_updates": true,
+    "final_review_and_complete": true,
+    "final_settings": true,
+    "stable_landscape_after_settling": true,
+    "transition_captures_excluded": true
+  },
+  "next": "Phone25 dependency/update/play/Quit/reload acceptance; then assess isolated Everest runtime currency before broader fresh-profile mod installs.",
+  "git_remote_writes": false,
+  "aot_checkout_mutated": false,
+  "source_snapshot": {
+    "path": ".build/ios-jit/device-evidence/2026-09-13/build-25-ready",
+    "receipt_sha256": "b965e4bc55ea3c4d103d31dd56b1046b7269c67682e65112bf3a4347f04c70fe",
+    "new_files": 1621,
+    "inherited_matching_inputs": 154,
+    "parent": ".build/ios-jit/device-evidence/2026-09-12/build-24-ready",
+    "verified_parent_receipt_sha256": "bf2a73f5e9d2efa9ba31b5e1245f1e1c5256268fc1728aeb717b5aa51f4053b4"
+  },
+  "delivery": {
+    "build_id": "launcher-dependencies-20260912-25",
+    "created_utc": "2026-09-12T23:37:34.902374+00:00",
+    "method": "Versioned local iCloud Drive placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.13.0-build-25",
+    "local_icloud_copy_verified": true,
+    "cloud_upload_confirmed": true,
+    "phone_download_confirmed": false,
+    "physical_execution": false,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 23409096,
+        "sha256": "27885f04db1dd6926f78106cca5e8e4e7c4e3059c3ccd3fb10cffdc1b8e07ba4"
+      },
+      "README-FIRST.txt": {
+        "bytes": 3916,
+        "sha256": "0ea95d386f48359b328a174b2a06d1575b3f0eee3911cf66ddc3de05c086572c"
+      },
+      "INSTALL.md": {
+        "bytes": 1170,
+        "sha256": "c97f4c05ce2846b4a7ebe15327b9209b905b6491313deadbd09e8ccf11052ca4"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5763,
+        "sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 4770,
+        "sha256": "f8a489475b91384ca9b4eb5093b2d876182164429c32c071e0eef42d20b67e62"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 3159,
+        "sha256": "e587c1c0d156e4b5e569cf398d47dc3b19a80d547991d1627890a8b958cea3ad"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 527,
+        "sha256": "39fae181d724fda114ea1f3bd926edd82599cadab19e6fa5d9f59e41e3e211d0"
+      }
+    },
+    "total_bytes": 23428401,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-13/build-25-ready",
+      "receipt_sha256": "b965e4bc55ea3c4d103d31dd56b1046b7269c67682e65112bf3a4347f04c70fe",
+      "new_files": 1621,
+      "inherited_matching_inputs": 154,
+      "parent": ".build/ios-jit/device-evidence/2026-09-12/build-24-ready",
+      "verified_parent_receipt_sha256": "bf2a73f5e9d2efa9ba31b5e1245f1e1c5256268fc1728aeb717b5aa51f4053b4"
+    },
+    "artifact_checksum_scope": "Original build-time manifest retained unchanged; supplementary delivery records are hashed in handoff",
+    "retention": "Keep physically accepted build24 in iCloud; preserve every Results folder and exact local historical builds.",
+    "cloud_upload_confirmed_utc": "2026-09-12T23:39:30.821968+00:00",
+    "cloud_status_sha256": "f4a81a5423c781f6f14a01c7e2666e18f48710067bffef2a2d14580807fc8dc8",
+    "cloud_status": [
+      {
+        "file": "celeste-jit-probe-TEMPLATE.js",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "INSTALL.md",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "THIRD_PARTY_NOTICES.md",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "TEST-IDENTITY.json",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "CelesteJITEverest-unsigned.ipa",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "README-FIRST.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      }
+    ]
+  },
+  "cloud_cleanup": {
+    "created_utc": "2026-09-12T23:39:30.821968+00:00",
+    "retained_fallback": "0.12.1-build-24",
+    "fallback_sha256": "f7ed94140ee4b181f667a9901b9d769662e196eb51139b7f593c1d2933da6a58",
+    "fallback_cloud_and_local_verified": true,
+    "all_results_preserved": true,
+    "preserved_results_paths": 47,
+    "removed": [
+      {
+        "path": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.12.0-build-23/CelesteJITEverest-unsigned.ipa",
+        "local_copy": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/artifacts/ios-jit/launcher-session-20260912-23/CelesteJITEverest-unsigned.ipa",
+        "sha256": "32c62731d6c3cec14abbad7449dd1ae6f86615341a00df883d55a2f2b00eee28",
+        "bytes": 23141139
+      }
+    ]
+  }
+}

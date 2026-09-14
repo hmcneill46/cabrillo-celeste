@@ -1,0 +1,72 @@
+{
+  "status": "CONFIRMED_BUILD20_FROSTHELPER_MISSING_FNA_GRAPHICS_METHOD",
+  "phone_session_pass": false,
+  "raw_path": ".build/ios-jit/device-evidence/2026-09-12/build-20-results/CelesteJIT-0be9af09-a8d8-41ca-a6bd-aa6d8c856b84.diagnostics.json",
+  "raw_bytes": 2342871,
+  "raw_sha256": "0e73de44254a715def9d886fded99ad06c5471ad2a74ed4b25708e0220cba13b",
+  "session": "0be9af09-a8d8-41ca-a6bd-aa6d8c856b84",
+  "build_id": "launcher-20260912-20",
+  "ipa_sha256": "59a9de33f16f834a76769ff2740cc60bf463b308972e1c8d4aea7f4f70633515",
+  "build_identity_matches_delivered_package": true,
+  "diagnosis": "Frame-time managed MissingMethodException in original FrostHelper lava rendering; native host caught the error and returned to the launcher. No intended session timer.",
+  "missing_method": "Microsoft.Xna.Framework.Graphics.GraphicsDevice.GetRenderTargetsNoAllocEXT(RenderTargetBinding[])",
+  "failure_utc": "2026-09-12T17:24:15.214481+00:00",
+  "seconds_from_game_start": 438.381,
+  "seconds_in_beginner_lobby_before_failure": 18.865,
+  "native_jit_checks_pass": 26,
+  "selected_zip_count": 54,
+  "registered_metadata_identities_verified": 56,
+  "normal_play": true,
+  "managed_resumes_passed": 3,
+  "background_30_seconds_not_established": true,
+  "frame_callbacks": 25073,
+  "visited_rooms": [
+    "area=20; room=prologue-00",
+    "area=20; room=prologue-01",
+    "area=20; room=prologue-00",
+    "area=20; room=prologue-01",
+    "area=25; room=GM-main",
+    "area=21; room=sj2021beginnerlobby"
+  ],
+  "code_reserved_bytes": 205930496,
+  "code_budget_bytes": 536870912,
+  "remaining_code_bytes": 330940416,
+  "physical_footprint_at_stop_bytes": 4103524440,
+  "native_gpu_readback_passed": true,
+  "save_settings_existed": true,
+  "clean_finish_or_save_readback_not_established": true,
+  "fresh_process_sj_save_reload_not_established": true,
+  "diagnostic_total_events": 107586,
+  "diagnostic_retained_events": 830,
+  "diagnostic_fsync_checkpoints": 908,
+  "meaningful_failure_preserved": true,
+  "phone_setup_error": false,
+  "full_build20_acceptance": false,
+  "failure_event_sequence": [
+    {
+      "event": "mono_jit_failed",
+      "sequence": 107544,
+      "time_unix": 1789233855.213328
+    },
+    {
+      "event": "managed_exception_detail",
+      "sequence": 107552,
+      "time_unix": 1789233855.2144809
+    },
+    {
+      "event": "graphics_frame_failed",
+      "sequence": 107553,
+      "time_unix": 1789233855.214618
+    },
+    {
+      "event": "graphics_stop_start",
+      "sequence": 107554,
+      "time_unix": 1789233855.214765
+    },
+    {
+      "event": "graphics_bridge_incomplete",
+      "sequence": 107558,
+      "time_unix": 1789233855.21637
+    }
+  ]
+}

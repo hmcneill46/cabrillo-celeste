@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "date": "2026-09-14",
+  "status": "PASS_INDEPENDENT_CABRILLO_MIGRATION",
+  "product": "Cabrillo — Celeste Mod Loader for Apple Platforms",
+  "sibling": "Morro — Native Celeste for Apple Platforms",
+  "suggested_remote_slug": "cabrillo-celeste",
+  "local_root": "/Users/harrymcneill/Projects/Cabrillo",
+  "git": {
+    "branch": "codex/cabrillo-migration",
+    "commits": 0,
+    "remotes": [],
+    "staged_files": 0
+  },
+  "legacy": {
+    "head": "b65bedd20016dc3482d7702d7f0a9707bc2b1479",
+    "branch": "codex/ios-jit-feasibility-audit",
+    "read_only": true,
+    "aot_read_only": true,
+    "original_owner_inputs_read_only": true
+  },
+  "imported_public_files": 2227,
+  "imported_public_bytes": 12306969,
+  "private_build_input_files": 455,
+  "private_build_input_bytes": 98059597,
+  "private_native_test_input_files": 11,
+  "private_native_test_input_bytes": 308734,
+  "current_identity": {
+    "build_id": "launcher-catalogue-20260913-28",
+    "version": "0.15.0",
+    "build_number": 28,
+    "everest": "1.6531.0",
+    "phone_acceptance": "pending",
+    "physical_fallback": 27
+  },
+  "reproduction": {
+    "status": "PASS_EXACT_BUILD28_REPRODUCTION",
+    "actual_created_utc": "2026-09-14T21:07:58.387798+00:00",
+    "ipa_sha256": "87db3cf1936fc3a0253cbddbe6cb40466f024a1bbe98dcda93d7efd5c2bbcea2",
+    "reference_ipa_sha256": "87db3cf1936fc3a0253cbddbe6cb40466f024a1bbe98dcda93d7efd5c2bbcea2",
+    "bytes": 23812187,
+    "file_differences": {},
+    "compiled_source_count": 58,
+    "pinned_dependencies_reused": true,
+    "original_executable_copied": false,
+    "linker_uuid": "0ab88bfcfc21352b8e5f845cb814917a",
+    "link_attempts": [
+      {
+        "attempt": 1,
+        "without_uuid_sha256": "e5c64425fb9e2d7e5cca16a5eb7dbff9e673855f3ba8395ecfff8d6355a9d1fd"
+      },
+      {
+        "attempt": 2,
+        "without_uuid_sha256": "4d45818bc3644db45210ee782b35727e21b1a1586dc1921b97e80dc663ebce30"
+      }
+    ],
+    "historical_uuid_normalized_only_after_all_other_bytes_matched": true
+  },
+  "verification": {
+    "status": "PASS_EXACT_PACKAGE_AND_UUID_CONTROLS",
+    "ipa_sha256": "87db3cf1936fc3a0253cbddbe6cb40466f024a1bbe98dcda93d7efd5c2bbcea2",
+    "bytes": 23812187,
+    "entries": 262,
+    "executable_uuid": "98537ca109ce344bb3705c27d8f83dc2",
+    "unsigned": true,
+    "symbols_outside_ipa": true,
+    "altered_code_rejected": true
+  },
+  "native_test": {
+    "status": "PASS_NATIVE_CATALOGUE_CONTRACT_CACHE_INSTALLS",
+    "check_count": 48,
+    "actual_created_utc": "2026-09-14T21:09:17.858567+00:00",
+    "live_network": false,
+    "physical_test": false,
+    "freshly_compiled_production_sources": true
+  },
+  "isolation": {
+    "status": "PASS_LEGACY_DIRECTORIES_DENIED_NEW_ROOT_READABLE",
+    "controls": [
+      {
+        "path": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms",
+        "access_denied": true
+      },
+      {
+        "path": "/Users/harrymcneill/Projects/celeste-ios",
+        "access_denied": true
+      },
+      {
+        "path": "/Users/harrymcneill/Projects/Celeste Required Files",
+        "access_denied": true
+      }
+    ],
+    "build_and_native_check_ran_under_same_policy": true
+  },
+  "receipts_sha256": {
+    "artifacts/cabrillo-build28/build-receipt.json": "cfce42bd6d0141be9df39f249f19301d96157f9bd7c0441bfcf32f397f09b25a",
+    "artifacts/cabrillo-build28/verification.json": "867bf447ddcb44bca8fcee4dea61663948aaec57351c63efe730edddc9e4c8cc",
+    ".build/catalogue-check/receipt.json": "31acf07277a12a6ff9cc105caf9e443ff6d1d1d4d656b830e150fe12daf308fe",
+    ".build/catalogue-check/results/results.json": "356b40203e716ec60d182fbce3ce2e3f2f2c591a05c1a7ad2882863ef0454571",
+    ".private/migration/isolation-controls.json": "8e8f1d9c7059b3e0a74e40b3cde9045335b19eef692d931bede4d2de4b99af43",
+    ".private/migration/exact-ipa-comparison.json": "ae828e43d19755fe59a47c30ce5698f907016e208929a2f3fbd9f2d25f503ffc",
+    ".private/migration/first-executable-comparison.json": "7c661acdc7e294869e68850b08927d66770dddc5fb55b0bd7e522fc3cef2e80b",
+    ".private/migration/relink-controls/results.json": "2d782272abd253d592bb41a936eff10e1e460a42d35ae8651b7f047da913f3a5"
+  },
+  "repository_audit": ".private/migration/repository-check.json",
+  "input_manifests": [
+    ".private/migration/inputs.json",
+    ".private/test-inputs/inputs.json"
+  ],
+  "limitations": [
+    "Recompiled launcher against accepted pinned managed/native dependencies; not a full upstream runtime/SDK rebuild.",
+    "Historical ZIP/resource metadata and strict UUID restoration preserve the original bytes; new build provenance is recorded separately.",
+    "Linker ordering may require bounded relinking; no instruction/data difference is accepted.",
+    "No new device, simulator UI or managed gameplay acceptance is inferred from migration.",
+    "Root build command is locked build28 reproduction, not a generic new-release builder.",
+    "Public original-IL preparation and FMOD redistribution remain release gates."
+  ],
+  "platforms": {
+    "iPhone": "physically accepted27; browser28 pending",
+    "iPadOS": "intended next family, not physically accepted",
+    "macOS": "host runtime tests historically present; native product pending",
+    "tvOS": "independent JIT/install investigation",
+    "visionOS": "independent JIT/install investigation"
+  },
+  "references": [
+    "https://developer.apple.com/documentation/technotes/tn3178-checking-for-and-resolving-build-uuid-problems",
+    "https://developer.apple.com/design/human-interface-guidelines/designing-for-games",
+    "https://developer.apple.com/videos/play/wwdc2020/10617/",
+    "https://developer.apple.com/videos/play/wwdc2024/10093/"
+  ]
+}

@@ -1,0 +1,807 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-09-10",
+  "verdict": "CONDITIONAL_GO_FOR_RUNTIME_AND_HOOK_PROTOTYPE",
+  "productStatus": "NO_IOS_MANAGED_JIT_OR_EVEREST_GAMEPLAY_PROOF",
+  "baseRevision": "b65bedd20016dc3482d7702d7f0a9707bc2b1479",
+  "localBranch": "codex/ios-jit-feasibility-audit",
+  "origin": "https://github.com/hmcneill46/celeste-ios.git",
+  "aotCheckoutObservedRevision": "be8546d4ae411cb491a0c3bbc4e5343ebf9c9651",
+  "host": {
+    "architecture": "x86_64",
+    "xcode": [
+      "Xcode 26.6",
+      "Build version 17F113"
+    ],
+    "iPhoneOsSdk": "26.5",
+    "dotnetSdkOnPath": false,
+    "monoDesktopVersion": "6.14.1"
+  },
+  "primaryDevice": {
+    "model": "iPhone 15 Pro Max",
+    "os": "iOS 26.5",
+    "source": "owner-supplied",
+    "liveContainerVersion": "not supplied",
+    "stikDebugVersion": "not supplied",
+    "physicallyTestedDuringAudit": false,
+    "probeHost": "LiveContainer 1",
+    "stikDebugHost": "LiveContainer 2"
+  },
+  "inputValidation": {
+    "result": "PASS_EXISTING_VALIDATOR",
+    "profileId": "itch-macos-fna-1.4.0.0",
+    "gameVersion": "1.4.0.0",
+    "canonicalClass": "celeste-1.4.0.0-a",
+    "files": {
+      "Celeste.Content.dll": {
+        "assemblyIdentity": {
+          "name": "Celeste.Content",
+          "version": "0.0.0.0"
+        },
+        "managedArchitectureEvidence": "PE32 Mono/.Net assembly (legacy AnyCPU-compatible input)",
+        "sha256": "0b8d6195992c8970e8602bf48a7bf89104b83a98e34a07dc0c18d01581711d15",
+        "size": 3072
+      },
+      "Celeste.exe": {
+        "assemblyIdentity": {
+          "name": "Celeste",
+          "version": "1.0.0.0"
+        },
+        "managedArchitectureEvidence": "PE32 Mono/.Net assembly (legacy AnyCPU-compatible input)",
+        "sha256": "fd73f8a2311fa5737ded550cbad4b75c85b7686b36432f59185e940fcb65fcfe",
+        "size": 2572800
+      },
+      "FNA.dll": {
+        "assemblyIdentity": {
+          "name": "FNA",
+          "version": "21.3.5.0"
+        },
+        "managedArchitectureEvidence": "PE32 Mono/.Net assembly (legacy AnyCPU-compatible input)",
+        "sha256": "00349b572636c0ed4c97d4e4f74344b3450160c42d4a6b52bcf5e0f2d5193a31",
+        "size": 773632
+      }
+    },
+    "content": {
+      "aggregateAlgorithm": "sha256(relative-path NUL size NUL file-sha256 newline)",
+      "aggregateSha256": "30a1c147d1a3ab0aa45762094e393ed7fd69951dd66e5af063447641e0699c46",
+      "fileCount": 1216,
+      "totalBytes": 1158665183
+    },
+    "everestMarkerCount": 0,
+    "windowsZip": {
+      "entries": 1276,
+      "expandedBytes": 1171352192,
+      "bankCount": 7,
+      "celesteAndFnaHashesMatchValidatedMac": true,
+      "validationScope": "ZIP directory and two assembly hashes only; not full input-validator acceptance"
+    },
+    "fmodDmg": "present; not mounted or SDK-validated during this audit"
+  },
+  "compileProbe": {
+    "schemaVersion": 1,
+    "result": "PASS_COMPILE_AND_DISASSEMBLY_ONLY",
+    "xcode": [
+      "Xcode 26.6",
+      "Build version 17F113"
+    ],
+    "sdk": "26.5",
+    "target": "arm64-apple-ios26.0",
+    "source": "experiments/ios-jit/protocol-abi/jit26_protocol_abi.c",
+    "sourceSha256": "a0e8803f1b37bcad15142167bdb29aa15792cf5dbd3a1c3905693c8394f464b4",
+    "objectSha256": "611817c6106d831489789e18d4ac82c58cee51c82a2c8bfb95819381de876164",
+    "verified": [
+      "x16 command selector",
+      "brk immediate 0xf00d",
+      "no prologue or argument-register clobber",
+      "ret instruction"
+    ],
+    "deviceExecution": false,
+    "jitAllocatorImplemented": false,
+    "managedRuntimeBuilt": false,
+    "ipaProduced": false
+  },
+  "claims": [
+    {
+      "id": "JIT-001",
+      "evidence": "source",
+      "finding": "Pinned MonoMod implements Arm64 architecture but throws for OSKind.IOS."
+    },
+    {
+      "id": "JIT-002",
+      "evidence": "source",
+      "finding": "Pinned MonoMod CoreCLR version dispatch supports major versions 2 through 9, not 10 or 11."
+    },
+    {
+      "id": "JIT-003",
+      "evidence": "source",
+      "finding": "MeloNX managed library uses NativeAOT; its emulator JIT is separate from managed C# JIT."
+    },
+    {
+      "id": "JIT-004",
+      "evidence": "source",
+      "finding": "StikJIT universal protocol requires target-side region preparation before detach; attaching alone does not implement a runtime allocator."
+    },
+    {
+      "id": "JIT-005",
+      "evidence": "source",
+      "finding": "Pinned Everest targets net8.0 and relinks/loads mods via AssemblyLoadContext."
+    },
+    {
+      "id": "JIT-006",
+      "evidence": "upstream-reported and source",
+      "finding": "Webleste presents Strawberry Jam running with a custom Mono/IL detour implementation; no iOS native-JIT proof is inferred."
+    },
+    {
+      "id": "JIT-007",
+      "evidence": "source",
+      "finding": "Amethyst prepares iOS 26 JIT state before starting its JVM and enables a mirror-mapped code cache; not a .NET runtime."
+    }
+  ],
+  "notPerformed": [
+    "Managed iOS JIT runtime build",
+    "Executable-memory or breakpoint execution on an iPhone",
+    "Everest or Strawberry Jam gameplay in this lane",
+    "LiveContainer or StikDebug device validation",
+    "IPA packaging",
+    "Product script release",
+    "Changes to the AOT checkout",
+    "Commits or pushes"
+  ],
+  "sources": [
+    {
+      "name": "Everest",
+      "repository": "https://github.com/EverestAPI/Everest.git",
+      "revision": "4bbde91b8dbaaddef2ceec75ca0cd6d59b3b8d00",
+      "commitDate": "2026-07-25T20:42:58+02:00",
+      "inspectedFiles": [
+        {
+          "path": "MiniInstaller/Program.cs",
+          "sha256": "0c0c57fe55e06adf95e27df380affcd0edd08bb11ae783e046e05f1b94566192"
+        },
+        {
+          "path": "Celeste.Mod.mm/Celeste.Mod.mm.csproj",
+          "sha256": "1e2014002039188000de9a5c525b2802ffd3b7cc8528b9a340ee435ab38c3fa6"
+        },
+        {
+          "path": "Celeste.Mod.mm/Mod/Everest/Everest.Loader.cs",
+          "sha256": "9be11ff16f56fd667856085c082ac695cfe4b918c913acb2c7c6ff7429ba2035"
+        },
+        {
+          "path": "Celeste.Mod.mm/Mod/Everest/Everest.Relinker.cs",
+          "sha256": "f19c27bd12cd46f84c2ee03b7fbd44955a9918bb2dd5ec3570c4f2bc0c5f91a1"
+        },
+        {
+          "path": "Celeste.Mod.mm/Mod/Module/EverestModuleAssemblyContext.cs",
+          "sha256": "8a94780237e151b2d6ef53c7a9ea6ed1f84d4571c228513b4a577cda35c4be3d"
+        }
+      ]
+    },
+    {
+      "name": "MonoMod",
+      "repository": "https://github.com/MonoMod/MonoMod.git",
+      "revision": "dfc30a1506d37fb88a2c2be004f525205f46a24c",
+      "commitDate": "2025-08-18T04:48:57-05:00",
+      "inspectedFiles": [
+        {
+          "path": "src/MonoMod.Core/Platforms/PlatformTriple.cs",
+          "sha256": "60425d8ca5e1df3dd98ac7bc7de6f7479432fb5f8aee7255ea7239960c5283fb"
+        },
+        {
+          "path": "src/MonoMod.Core/Platforms/Runtimes/CoreBaseRuntime.cs",
+          "sha256": "46d74044d9765dfca367175a21416a02e9e1b4bc8dcd09542d5e36466e3a3777"
+        },
+        {
+          "path": "src/MonoMod.Core/Platforms/Runtimes/MonoRuntime.cs",
+          "sha256": "34880adf608f476c850d2e1dc90ad1512c7b0ca0079a3a6240b56daa34b661f0"
+        },
+        {
+          "path": "src/MonoMod.Core/Platforms/Architectures/arm64/BuildHelper.props",
+          "sha256": "909cc92bdf5d8716d8f61b49f3ddef8baf6c837edd0af832534427bce468c70a"
+        }
+      ]
+    },
+    {
+      "name": "MeloNX",
+      "repository": "https://git.ryujinx.app/projects/MeloNX.git",
+      "revision": "6a1c15962e61f681feedd5cb5fa02d37d53679cd",
+      "commitDate": "2026-08-27T00:47:29+10:00",
+      "inspectedFiles": [
+        {
+          "path": "src/Ryujinx.Library/Ryujinx.Library.csproj",
+          "sha256": "06d8105fd0fb2ae1671e3702425d0f2a41d120d233bef5d0a9209d1c46ab69f2"
+        },
+        {
+          "path": "src/Ryujinx.Memory/DualMappedJitAllocator.cs",
+          "sha256": "8f3beb586d7c0fdc5aee27d62f2458dec21a3a13bbf408d58c6d3bf39f7ae73c"
+        },
+        {
+          "path": "src/MeloNX/MeloNX/Common/JIT26Breakpoint.swift",
+          "sha256": "b88786e855c6965c6461ea839e08988ac60aca42c613f311d7963647de81db6a"
+        },
+        {
+          "path": "LICENSE.txt",
+          "sha256": "781bbdf040b7d0286c47cca6bffdb9148dfe751c0c9cabdf1a1752412a2e56b4"
+        }
+      ]
+    },
+    {
+      "name": "StikJIT",
+      "repository": "https://github.com/StikDebug/StikJIT.git",
+      "revision": "3623e725876f76aecb0520582ad6194bacb15d39",
+      "commitDate": "2026-08-25T16:12:50-06:00",
+      "inspectedFiles": [
+        {
+          "path": "INTEGRATION.md",
+          "sha256": "9af91563b813ececc7b6c2efea023a2b1c92bb89b314226d5903293a91c94fad"
+        },
+        {
+          "path": "Resources/universal.js",
+          "sha256": "753e7bba37913cd6c4e68b399735a8c9a7b8d475ba04d8b36ce1afd6678c9fbc"
+        },
+        {
+          "path": "Sources/ProcessInfo+TXM.swift",
+          "sha256": "8f7d7b752a3d5608e6e9198c734b3f6cdc36aa69b64737436c160341e00d8fa2"
+        }
+      ]
+    },
+    {
+      "name": "LiveContainer",
+      "repository": "https://github.com/LiveContainer/LiveContainer.git",
+      "revision": "3afa9eb9a53625e9b8bd8b932e5785fd716ad5ae",
+      "commitDate": "2026-09-09T10:42:19+08:00",
+      "inspectedFiles": [
+        {
+          "path": "LiveContainerSwiftUI/Models/LCAppModel.swift",
+          "sha256": "d7bc2284f14e92c45235640304f7e3fbcbc6ccb757ac60c9561b0f6d518f9b4b"
+        },
+        {
+          "path": "README.md",
+          "sha256": "fd23479a4a222944681119adbc9ab378ac62ef3e19b4c4e974c9a970904568a8"
+        }
+      ]
+    },
+    {
+      "name": "dotnet-runtime",
+      "repository": "https://github.com/dotnet/runtime.git",
+      "revision": "798449390515fa02f4b20160bedc5e34f8fbdfb9",
+      "commitDate": "2026-09-10T09:07:17-07:00",
+      "inspectedFiles": [
+        {
+          "path": "src/mono/cmake/options.cmake",
+          "sha256": "d63c56416afe4e1103adbccfc8fcd7162bf4c1f14e675676cd95dec7660d3351"
+        },
+        {
+          "path": "src/mono/mono/utils/mono-codeman.c",
+          "sha256": "4825bf8ad2ebcf32a6fb8724e31cf20197ad6176a231b4f2e5e40ff71ebaa5f0"
+        },
+        {
+          "path": "src/mono/mono/utils/mono-mmap.c",
+          "sha256": "d69ec698292be843e1ed1deda75b3ddebd2f454231ee1f14b95e1b4f5df456d0"
+        }
+      ]
+    },
+    {
+      "name": "celeste-wasm",
+      "repository": "https://github.com/MercuryWorkshop/celeste-wasm.git",
+      "revision": "b4b19eb24a8499e4de96aee79f1272ffdb57281f",
+      "commitDate": "2026-08-25T23:02:17-07:00",
+      "inspectedFiles": [
+        {
+          "path": "README.md",
+          "sha256": "aa3de93400342880e2c7b4104f90f11d8a19569763402f4233964509b1478e7b"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "dd581f3ad21b01e4abef3d56478859895dc50d90ac436bb095b7cbbfbe7c0ac8"
+        },
+        {
+          "path": "loader/Patcher.cs",
+          "sha256": "35099223f5a7e21add36c22d60506b11fef3e6cb00416da0128e351b6dc745a3"
+        },
+        {
+          "path": "loader/Celeste.cs",
+          "sha256": "b0f523ce994e85494e4c40c749e21789e2f10deee9fc85ffffffe2c858ef682c"
+        }
+      ]
+    },
+    {
+      "name": "MonoMod-WASM",
+      "repository": "https://github.com/r58Playz/MonoMod.git",
+      "revision": "8e904f7979c9423982c1f786ba57fdb22a5556d2",
+      "commitDate": "2026-03-29T21:21:11-07:00",
+      "inspectedFiles": [
+        {
+          "path": "src/MonoMod.Core/Platforms/WasmDetourFactory.cs",
+          "sha256": "0f7aea8af4a576987d4e3930806eb72de4afb4366d58fc805be7f4b49e7f7511"
+        }
+      ]
+    },
+    {
+      "name": "Amethyst-iOS",
+      "repository": "https://github.com/AngelAuraMC/Amethyst-iOS.git",
+      "revision": "9212a1894865e7ac0466029e25ddb0d895544c76",
+      "commitDate": "2026-08-10T20:18:06+07:00",
+      "inspectedFiles": [
+        {
+          "path": "Natives/JavaLauncher.m",
+          "sha256": "5efe05e088359e7759fc555d9c745624341ae405687f8471e00405ce791b4acd"
+        },
+        {
+          "path": "Natives/resources/UniversalJIT26Extension.js",
+          "sha256": "650d66c8e185e9608ecb5aa4b9686613ccee5f4d0dbc58438f06ed4595f1905e"
+        },
+        {
+          "path": "README.md",
+          "sha256": "c147252e45ca562b28ec8c8204e6e03d855d9b6de923efd079c51d43f3355d14"
+        }
+      ]
+    }
+  ],
+  "followups": [
+    {
+      "date": "2026-09-10",
+      "stage": "native_memory_probe",
+      "report": "NATIVE_PROBE.md",
+      "evidence": "NATIVE_PROBE_EVIDENCE.json",
+      "status": "UNSIGNED_NATIVE_PROBE_READY_FOR_OWNER_DEVICE_TEST",
+      "physicalG0Accepted": false
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "first_native_device_result_and_corrected_probe",
+      "report": "DEVICE_TEST_2026-09-11.md",
+      "evidence": "DEVICE_TEST_2026-09-11_EVIDENCE.json",
+      "status": "BUILD_1_VALIDATION_BUG_FIXED_BUILD_2_UPLOADED_FOR_RETEST",
+      "physicalG0Accepted": false,
+      "buildId": "native-probe-20260911-02",
+      "ownerEnteredLiveContainerVersion": "3.8.9",
+      "ownerEnteredStikDebugVersion": "3.1.9"
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "native_execution_pass_and_signing_package_fix",
+      "report": "NATIVE_EXECUTION_PASS_2026-09-11.md",
+      "evidence": "NATIVE_EXECUTION_PASS_2026-09-11_EVIDENCE.json",
+      "status": "NATIVE_EXECUTION_CONFIRMED_PACKAGING_CORRECTED",
+      "physicalNativeExecutionAccepted": true,
+      "fullG0MatrixComplete": false,
+      "testedBuildId": "native-probe-20260911-02",
+      "correctedPackageBuildId": "native-probe-20260911-03"
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "managed_runtime_canary",
+      "report": "MANAGED_CANARY.md",
+      "evidence": "MANAGED_CANARY_EVIDENCE.json",
+      "status": "UNSIGNED_MANAGED_CANARY_UPLOADED_AWAITING_PHYSICAL_TEST",
+      "physicalManagedJitAccepted": false,
+      "buildId": "managed-canary-20260911-04"
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "managed_framework_jit_crash_and_retest",
+      "report": "BUILD_4_CRASH_AND_BUILD_5.md",
+      "evidence": "BUILD_4_CRASH_AND_BUILD_5_EVIDENCE.json",
+      "status": "BUILD_4_FRAMEWORK_JIT_OBSERVED_BUILD_5_UPLOADED_FOR_PHYSICAL_RETEST",
+      "physicalManagedFrameworkExecutionObserved": true,
+      "physicalFullG1Accepted": false,
+      "testedBuildId": "managed-canary-20260911-04",
+      "retestBuildId": "managed-canary-20260911-05"
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "eight_managed_stages_pass_host_detach_abort_and_fix",
+      "report": "BUILD_5_EXECUTION_AND_BUILD_6.md",
+      "evidence": "BUILD_5_EXECUTION_AND_BUILD_6_EVIDENCE.json",
+      "status": "ALL_EIGHT_STAGES_PHYSICALLY_PASS_BUILD_6_CLEANUP_FIX_COPIED_TO_PHONE",
+      "physicalManagedExecutionAccepted": true,
+      "crashFreeFullG1HandoffAccepted": false,
+      "testedBuildId": "managed-canary-20260911-05",
+      "retestBuildId": "managed-canary-20260911-06",
+      "copiedToPhoneAndReadBackVerified": true
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "managed_canary_clean_pass_and_direct_usb_diagnostics",
+      "report": "MANAGED_EXECUTION_PASS_2026-09-11.md",
+      "evidence": "MANAGED_EXECUTION_PASS_2026-09-11_EVIDENCE.json",
+      "status": "PASS_PHYSICAL_G1_CLEAN_RETURN_AND_BACKGROUND_RESUME",
+      "physicalManagedExecutionAccepted": true,
+      "crashFreeFullG1HandoffAccepted": true,
+      "testedBuildId": "managed-canary-20260911-06",
+      "directUsbDiagnosticsWithoutExportVerified": true,
+      "exportFallbackPreserved": true,
+      "next": "Implement actual pinned MonoMod Hook/ILHook: original calls, ordering, removal/re-addition, RX/RW alias patching and execution after background/return; then game integration."
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "actual_monomod_hooks_and_resume_canary",
+      "report": "HOOK_CANARY.md",
+      "evidence": "HOOK_CANARY_EVIDENCE.json",
+      "status": "LOCAL_CHECKS_PASS_UNSIGNED_IPA_UPLOADED_PHYSICAL_TEST_PENDING",
+      "buildId": "hook-canary-20260911-07",
+      "physicalG2Accepted": false,
+      "actualHostMonoHookTestsPassed": true,
+      "unsignedIpaUploadedToICloud": true,
+      "exportFallbackPreserved": true
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "build7_protocol_mismatch_and_build8_retest",
+      "report": "BUILD_7_PROTOCOL_AND_BUILD_8.md",
+      "evidence": "BUILD_7_PROTOCOL_AND_BUILD_8_EVIDENCE.json",
+      "status": "BUILD7_NATIVE_HEADER_MISMATCH_REPRODUCED_BUILD8_CORRECTED_AND_UPLOADED_PHYSICAL_G2_PENDING",
+      "failedBuildId": "hook-canary-20260911-07",
+      "retestBuildId": "hook-canary-20260911-08",
+      "userSetupCorrect": true,
+      "physicalG2Accepted": false,
+      "unsignedIpaUploadedToICloud": true
+    },
+    {
+      "date": "2026-09-11",
+      "report": "BUILD_8_CAPACITY_AND_BUILD_9.md",
+      "evidence": "BUILD_8_CAPACITY_AND_BUILD_9_EVIDENCE.json",
+      "status": "BUILD8_PARTIAL_PHYSICAL_HOOKS_CAPACITY_FAILURE_BUILD9_UPLOADED_RETEST_PENDING",
+      "failedBuildId": "hook-canary-20260911-08",
+      "retestBuildId": "hook-canary-20260911-09",
+      "physicalG2Accepted": false,
+      "userSetupCorrect": true
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "physical_hooks_and_resume_pass",
+      "report": "HOOK_EXECUTION_PASS_2026-09-11.md",
+      "evidence": "HOOK_EXECUTION_PASS_2026-09-11_EVIDENCE.json",
+      "status": "PASS_PHYSICAL_G2_HOOKS_AND_RESUME",
+      "buildId": "hook-canary-20260911-09",
+      "physicalG2Accepted": true,
+      "hookAssertions": 42,
+      "backgroundSeconds": 65.29891008333652,
+      "codeReservedBytes": 13959168,
+      "gameplayAccepted": false
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "native_launcher_jit_fna_metal_bridge",
+      "report": "GRAPHICS_BRIDGE_BUILD_10.md",
+      "evidence": "GRAPHICS_BRIDGE_BUILD_10_EVIDENCE.json",
+      "status": "UNSIGNED_FNA_METAL_BRIDGE_UPLOADED_PHYSICAL_GRAPHICS_PENDING",
+      "buildId": "graphics-canary-20260911-10",
+      "physicalG2Accepted": true,
+      "hostFnaMetalFrames": 540,
+      "physicalGraphicsAccepted": false,
+      "unsignedIpaUploadedToICloud": true
+    },
+    {
+      "date": "2026-09-11",
+      "report": "BUILD_10_GRAPHICS_CRASH_AND_BUILD_11.md",
+      "evidence": "BUILD_10_GRAPHICS_CRASH_AND_BUILD_11_EVIDENCE.json",
+      "status": "BUILD11_UNSIGNED_KIT_UPLOADED_PHYSICAL_RETEST_PENDING",
+      "physicalGraphicsAccepted": false
+    },
+    {
+      "date": "2026-09-11",
+      "report": "GRAPHICS_EXECUTION_PASS_2026-09-11.md",
+      "evidence": "GRAPHICS_EXECUTION_PASS_2026-09-11_EVIDENCE.json",
+      "status": "PASS_PHYSICAL_BOUNDED_FNA_METAL_TOUCH_AND_RESUME"
+    },
+    {
+      "date": "2026-09-11",
+      "report": "CELESTE_BASELINE_BUILD_12.md",
+      "evidence": "CELESTE_BASELINE_BUILD_12_EVIDENCE.json",
+      "status": "BUILD12_IMPLEMENTATION_AND_DELIVERY_HISTORY"
+    },
+    {
+      "date": "2026-09-11",
+      "report": "CELESTE_EXECUTION_PASS_2026-09-11.md",
+      "evidence": "CELESTE_EXECUTION_PASS_2026-09-11_EVIDENCE.json",
+      "status": "PASS_PHYSICAL_BOUNDED_CELESTE_JIT_GAMEPLAY_AUDIO_SAVES_AND_RESUME"
+    },
+    {
+      "date": "2026-09-11",
+      "stage": "build14_physical_original_zip_import_and_everest_pass",
+      "report": "CONTENT_IMPORT_PASS_2026-09-11.md",
+      "evidence": "CONTENT_IMPORT_PASS_2026-09-11_EVIDENCE.json",
+      "status": "PASS_PHYSICAL_BUILD14_ORIGINAL_ZIP_IMPORT_AND_EVEREST_GAMEPLAY",
+      "physicalContentImportAccepted": true,
+      "physicalFreshCachedContentReuse": false,
+      "ownerReportsSaveSurvivedThenDeleted": true
+    },
+    {
+      "date": "2026-09-12",
+      "stage": "real_luacutscenes_maxhelpinghand_phone_candidate",
+      "report": "SJ_HELPERS_BUILD_15.md",
+      "evidence": "SJ_HELPERS_BUILD_15_EVIDENCE.json",
+      "status": "BUILD15_HOST_PACKAGE_SIMULATOR_PASS_PHYSICAL_PENDING",
+      "buildId": "sj-helpers-20260911-15"
+    },
+    {
+      "date": "2026-09-12",
+      "stage": "build15_code_exhaustion_and_build16_fix",
+      "report": "BUILD_15_CAPACITY_AND_BUILD_16.md",
+      "evidence": "BUILD_15_CAPACITY_AND_BUILD_16_EVIDENCE.json",
+      "status": "BUILD16_CAPACITY_FIX_HOST_PACKAGE_SIMULATOR_PASS_PHYSICAL_PENDING",
+      "buildId": "sj-code-budget-20260912-16"
+    },
+    {
+      "date": "2026-09-12",
+      "stage": "build16_physical_helpers_accepted",
+      "report": "SJ_HELPERS_PASS_BUILD_16.md",
+      "evidence": "SJ_HELPERS_PASS_BUILD_16_EVIDENCE.json",
+      "status": "PASS_PHYSICAL_LUA_PLATFORM_SAVES_RESUME_AND_CODE_BUDGET",
+      "buildId": "sj-code-budget-20260912-16"
+    },
+    {
+      "date": "2026-09-12",
+      "stage": "build17_gravity_optional_integration",
+      "report": "GRAVITY_HELPER_BUILD_17.md",
+      "evidence": "GRAVITY_HELPER_BUILD_17_EVIDENCE.json",
+      "status": "HOST_PACKAGE_SIMULATOR_PASS_ICLOUD_UPLOADED_PHYSICAL_PENDING",
+      "buildId": "sj-gravity-20260912-17"
+    },
+    {
+      "date": "2026-09-12",
+      "stage": "build17_vm_limit_and_build18_fix",
+      "report": "BUILD_17_VM_LIMIT_AND_BUILD_18.md",
+      "evidence": "BUILD_17_VM_LIMIT_AND_BUILD_18_EVIDENCE.json",
+      "status": "BUILD18_HOST_PACKAGE_SIMULATOR_PASS_ICLOUD_UPLOADED_PHYSICAL_PENDING",
+      "buildId": "sj-memory-check-20260912-18"
+    },
+    {
+      "date": "2026-09-12",
+      "report": "STRAWBERRY_JAM_PASS_BUILD_19.md",
+      "evidence": "STRAWBERRY_JAM_PASS_BUILD_19_EVIDENCE.json",
+      "buildId": "sj-lobby-20260912-19"
+    },
+    {
+      "date": "2026-09-12",
+      "report": "LAUNCHER_BUILD_20.md",
+      "evidence": "LAUNCHER_BUILD_20_EVIDENCE.json",
+      "buildId": "launcher-20260912-20"
+    },
+    {
+      "date": "2026-09-12",
+      "report": "LITERAL_FIELDS_BUILD_22.md",
+      "evidence": "LITERAL_FIELDS_BUILD_22_EVIDENCE.json",
+      "buildId": "launcher-reflection-20260912-22"
+    },
+    {
+      "date": "2026-09-12",
+      "report": "BUILD_22_GAMEPLAY_ACCEPTANCE.md",
+      "evidence": "BUILD_22_GAMEPLAY_EVIDENCE.json",
+      "result": "PASS_BUILD22_RECORDED_GAMEPLAY_AND_SAVE_READBACK_SHUTDOWN_UNVERIFIED",
+      "productReport": "NATIVE_LAUNCHER_ROADMAP_2026-09-12.md",
+      "scope": "Preserved iCloud evidence; verified played/old/export sessions separately; researched and exercised current public Olympus/GameBanana/update/graph contracts; planned native services and bundled iOS module. No new IPA or accepted-source changes."
+    },
+    {
+      "date": "2026-09-13",
+      "report": "BUILD_26_INSTALLS_ACCEPTANCE.md",
+      "evidence": "BUILD_26_INSTALLS_ACCEPTANCE_EVIDENCE.json",
+      "result": "PASS_BUILD26_PHYSICAL_FRESH_SPRING_DEPENDENCIES_REPORTS_GAMEPLAY_RESUME_QUIT_AND_RELOAD",
+      "runtimeAssessment": "EVEREST_RUNTIME_UPGRADE_ASSESSMENT_2026-09-13.md",
+      "scope": "Read/copy exact cloud diagnostics, separate three processes, bind complete BuildInfo/source/payload, verify actual installation reports and Spring saved-room reload; assess pinned stable6531 and runtime-aware update-cache work. No accepted-source edits or new IPA."
+    }
+  ],
+  "snapshotScope": "Original 2026-09-10 audit; notPerformed and original tool/device fields describe that snapshot. Dated followups record later work.",
+  "currentMilestones": {
+    "updated": "2026-09-12",
+    "nativeExecutionInTargetLiveContainer": "PASS",
+    "fullG0MatrixComplete": false,
+    "managedJit": "PASS_PHYSICAL_G1_CLEAN_RETURN_AND_BACKGROUND_RESUME",
+    "monoModHooks": "PASS_PHYSICAL_G2_HOOKS_AND_RESUME",
+    "gameplay": "PASS_PHYSICAL_BUILD12_BOUNDED_CELESTE_JIT_GAMEPLAY_AUDIO_SAVES_AND_RESUME",
+    "next": "Phone28: native browse/sort/categories/search/details, exact reuse and small Cateline install/report, optional offline test; fresh JIT, gameplay and normal Quit; export browsing/install and game sessions. After acceptance: responsive real loading, whole-profile backup/restore, native touch editor.",
+    "managedFrameworkExecutionObserved": true,
+    "fullG1Accepted": true,
+    "managedExecutionAccepted": true,
+    "directUsbDiagnosticsWithoutExport": "VERIFIED",
+    "exportFallbackPreserved": true,
+    "physicalHookAssertionsPassed": 42,
+    "fullG2Accepted": true,
+    "graphicsBridge": "PASS_PHYSICAL_BUILD11_FNA_METAL_TOUCH_RESUME",
+    "physicalGraphicsAccepted": true,
+    "gameBaselineReport": "CELESTE_EXECUTION_PASS_2026-09-11.md",
+    "physicalGameAccepted": true,
+    "everestGameAccepted": true,
+    "ownerOriginalGameImporterImplemented": false,
+    "directWifiFileHandoff": "VERIFIED_APPLE_NATIVE_RSD_HOUSE_ARREST_LOCALSEND_DOCUMENTS",
+    "nextStageReport": "NATIVE_CATALOGUE_BUILD_28.md",
+    "strawberryJamGameAccepted": true,
+    "everestHost": "PASS_REAL_EVEREST_MOD_ZIPS_HOOKS_LUA_AUDIO_SAVES_AND_RESUME",
+    "everestPhoneBuild": "0.10.0 (19) PASS_PHYSICAL_FULL_ORIGINAL_SJ_LOBBY_BING_MUSIC_SAVES_RESUME",
+    "defaultPhysicalHandoff": "iCloud Drive; accepted build19 retained as fallback",
+    "cloudRetention": "Remove superseded large installers after verifying local copies; retain Results and small files",
+    "everestPhoneReport": "STRAWBERRY_JAM_PASS_BUILD_19.md",
+    "physicalEverestHookCount": 139,
+    "physicalEverestIlHookCount": 139,
+    "physicalEverestFreshProcessModSaveReload": true,
+    "ownerAssetImporterImplemented": true,
+    "contentImportPhoneBuild": "Build14 original ZIP import PASS; build15/16 cached content and update retention PASS.",
+    "contentImportPrivateIpaBytes": 22774779,
+    "contentImportPhoneAccepted": true,
+    "contentPickerIssue": "RESOLVED_OWNER_CONFIRMED_LIVECONTAINER_FIX_FILE_PICKER",
+    "contentPickerResolutionReport": "BUILD_14_FILE_PICKER_RESOLUTION.md",
+    "contentImportPhoneReport": "CONTENT_IMPORT_PASS_2026-09-11.md",
+    "physicalCachedContentReuse": true,
+    "physicalPostImportSameGuestUpdateRetention": true,
+    "physicalExistingModsAndSettingsRetained": true,
+    "ownerReportsSaveSurvivedThenDeleted": true,
+    "helperPhoneCandidate": "0.13.1 (26) accepted: fresh Spring dependency installation/reports, ARM64 reflection, Spring gameplay, resume, Quit and saved-room reload. Next isolated Everest1.6531.0 implementation; no build27 IPA yet.",
+    "helperHost": "PASS_REAL_FULL_52_NODE_SJ_BEGINNER_LOBBY_BING_MUSIC_SAVES_RESUME",
+    "helperICloudHandoff": {
+      "folder": "Celeste JIT Tests/0.10.0-build-19",
+      "localCopyVerified": true,
+      "cloudUploadConfirmed": false,
+      "phoneDownloadConfirmed": true,
+      "bytes": 22827446,
+      "fallback": "0.10.0-build-19",
+      "syncStatus": "Build19 actual phone download/execution confirmed by exact diagnostic bytes; Mac metadata was previously delayed",
+      "historicalInstallerSuperseded": true,
+      "installerRetainedLocally": true,
+      "cloudInstallerRemovedAfterLocalHashVerification": true
+    },
+    "physicalPostImportSameGuestUpdateRetentionScope": "Build18 retains all seven ZIPs, original game content, settings and slot plus mod counter 23 -> 36.",
+    "physicalLuaCutscenesMaxHelpingHandAccepted": true,
+    "physicalGravityHelperAccepted": true,
+    "physicalHelperCodeReservedBytes": 211156992,
+    "physicalHelperBackgroundSeconds": 33.49237604166683,
+    "build17PhysicalStop": "APP_VM_CHECKER_4096_ENTRY_LIMIT_BEFORE_EXECUTION",
+    "build17SetupCorrect": true,
+    "physicalHelperReport": "STRAWBERRY_JAM_PASS_BUILD_19.md",
+    "strawberryJamHostAccepted": true,
+    "physicalStrawberryJamFreshProcessReload": false,
+    "strawberryJamNormalDoorProgressionAccepted": false,
+    "launcherPhoneCandidate": "0.15.0 (28): native catalogue, categories/sorts/search/details, exact-file reviewed installs; all local gates and iCloud upload pass; phone acceptance pending",
+    "launcherICloudHandoff": {
+      "folder": "Celeste JIT Tests/0.15.0-build-28",
+      "localCopyVerified": true,
+      "cloudUploadConfirmed": true,
+      "phoneDownloadConfirmed": false,
+      "bytes": 23833385,
+      "files": 7,
+      "fallback": "0.14.0-build-27",
+      "deliveryReceipt": "artifacts/ios-jit/launcher-catalogue-20260913-28/delivery-receipt.json"
+    },
+    "launcherBuild20PhoneResult": "FAIL_MISSING_FNA_RENDER_TARGET_EXTENSION_IN_FROSTHELPER",
+    "launcherBuild20PhoneReport": "BUILD_20_SESSION_STOP_EVIDENCE.json",
+    "deferredOwnerProductRequests": {
+      "after": "Current backend compatibility fixes and physical retest",
+      "generalCelesteLauncher": true,
+      "avoidSpecificModBranding": true,
+      "automaticDependencyResolutionWithProgress": true,
+      "browseAndDownloadMods": true,
+      "realEverestStartupProgressInSwiftUI": true,
+      "reference": "Official Olympus and Everest implementations",
+      "build21ChangedForTheseRequests": false,
+      "build22ChangedForTheseRequests": false,
+      "status": "Superseded by activeOwnerProductDirection after owner reactivated and expanded the request on 12 September."
+    },
+    "launcherBuild21PhoneResult": "FAIL_MONOMOD_LITERAL_FIELD_ACCESS_IN_PAINT_EEVEEHELPER",
+    "launcherBuild21PhoneReport": "BUILD_21_SESSION_STOP_EVIDENCE.json",
+    "launcherBuild22HostReport": "LITERAL_FIELDS_BUILD_22.md",
+    "launcherBuild22HostPaintSaveReadback": {
+      "host-paint-fixed": {
+        "prior": 3,
+        "written": 11,
+        "readback": 11,
+        "existing_slot_loaded": true,
+        "intro_completed": true,
+        "jumped_after_resume": true
+      },
+      "host-paint-reload": {
+        "prior": 11,
+        "written": 19,
+        "readback": 19,
+        "existing_slot_loaded": true,
+        "intro_completed": true,
+        "jumped_after_resume": true
+      }
+    },
+    "nativeBackbufferReadbackFollowup": "Build24 physical graphics/resume/save reload accepted; build26 Spring also passes all backbuffer patterns, in-level and after-resume reads.",
+    "launcherBuild22PhoneResult": "PASS_BUILD22_RECORDED_GAMEPLAY_AND_SAVE_READBACK_SHUTDOWN_UNVERIFIED",
+    "launcherBuild22PhoneReport": "BUILD_22_GAMEPLAY_ACCEPTANCE.md",
+    "launcherBuild22NormalRoomProgressionObserved": true,
+    "launcherBuild22FinalShutdownConfirmed": false,
+    "launcherBuild22PostTestSaveReloadConfirmed": false,
+    "activeOwnerProductDirection": {
+      "report": "NATIVE_LAUNCHER_ROADMAP_2026-09-12.md",
+      "evidence": "NATIVE_LAUNCHER_ROADMAP_EVIDENCE.json",
+      "generalLauncher": true,
+      "dependencyPlansAndDownloads": true,
+      "nativeCatalogue": true,
+      "realStartupProgress": true,
+      "nativeSaveAndSettingsManagement": true,
+      "nativeD3ParityTouchEditor": true,
+      "requiredBundledIOSSupportModule": true,
+      "inGameQuitAndInputPrompts": true,
+      "newIpaProducedDuringReview": false
+    },
+    "launcherBuild23Implementation": "PASS_BUILD23_PHYSICAL_TITLE_AND_MODDED_QUIT",
+    "launcherBuild23Evidence": "SESSION_FOUNDATION_BUILD_23_EVIDENCE.json",
+    "launcherBuild23Handoff": {
+      "folder": "0.12.0-build-23",
+      "files": 8,
+      "bytes": 23159552,
+      "cloudUploadConfirmed": true,
+      "phoneExecutionConfirmed": true
+    },
+    "launcherBuild23PhoneEvidence": "BUILD_23_SESSION_ACCEPTANCE_EVIDENCE.json",
+    "launcherBuild23Latest403ReloadObserved": false,
+    "launcherBuild24Implementation": "PASS_BUILD24_READY_AND_ICLOUD_UPLOADED_PHYSICAL_TEST_PENDING",
+    "launcherBuild24Evidence": "METAL_BACKBUFFER_BUILD_24_EVIDENCE.json",
+    "launcherBuild24Handoff": {
+      "folder": "0.12.1-build-24",
+      "files": 8,
+      "bytes": 23164143,
+      "cloudUploadConfirmed": true,
+      "phoneDownloadConfirmed": true,
+      "physicalExecutionConfirmed": true,
+      "phoneAcceptanceEvidence": "BUILD_24_GRAPHICS_ACCEPTANCE_EVIDENCE.json"
+    },
+    "acceptedSessionFallback": "0.14.0 (27): actual Everest1.6531.0, real helper updates/reports, SJ gameplay/resume/Quit/saved-room reload accepted",
+    "currentProductStatus": "PRIVATE_JIT_RUNTIME_INSTALLS_UPDATES_GAMEPLAY_QUIT_RELOAD_ACCEPTED_BUILD27; BUILD28_NATIVE_CATALOGUE_LOCAL_GATES_AND_ICLOUD_PASS; PUBLIC_RELEASE_GATES_OPEN",
+    "launcherBuild24PhoneResult": "PASS_BUILD24_PHYSICAL_GRAPHICS_RESUME_QUIT_AND_FRESH_PROCESS_SAVE",
+    "launcherBuild24PhoneEvidence": "BUILD_24_GRAPHICS_ACCEPTANCE_EVIDENCE.json",
+    "launcherBuild24Phone": "PASS_BUILD24_PHYSICAL_GRAPHICS_RESUME_QUIT_AND_FRESH_PROCESS_SAVE",
+    "launcherBuild25Implementation": "PASS_BUILD25_READY_AND_ICLOUD_UPLOADED_PHYSICAL_TEST_PENDING",
+    "launcherBuild25Evidence": "MOD_INSTALLS_BUILD_25_EVIDENCE.json",
+    "launcherBuild25Handoff": {
+      "folder": "0.13.0-build-25",
+      "files": 7,
+      "bytes": 23428401,
+      "cloudUploadConfirmed": true,
+      "phoneDownloadConfirmed": false,
+      "physicalExecutionConfirmed": false
+    },
+    "launcherBuild23CloudInstaller": {
+      "superseded": true,
+      "exactLocalCopyRetained": true,
+      "removedAfterLocalHashVerification": true,
+      "removalEvidence": ".build/ios-jit/device-evidence/2026-09-13/build-25-ready/handoff/cloud-cleanup.json"
+    },
+    "launcherBuild26Implementation": "PASS_BUILD26_PHYSICAL_FRESH_SPRING_DEPENDENCIES_REPORTS_GAMEPLAY_RESUME_QUIT_AND_RELOAD",
+    "launcherBuild26Evidence": "MOD_RESOLUTION_BUILD_26_EVIDENCE.json",
+    "launcherBuild26Handoff": {
+      "folder": "0.13.1-build-26",
+      "files": 10,
+      "bytes": 24954962,
+      "cloudUploadConfirmed": true,
+      "phoneDownloadConfirmed": true,
+      "physicalExecutionConfirmed": true,
+      "phoneAcceptanceEvidence": "BUILD_26_INSTALLS_ACCEPTANCE_EVIDENCE.json"
+    },
+    "launcherBuild25CloudInstaller": {
+      "superseded": true,
+      "exactLocalCopyRetained": true,
+      "removedAfterLocalHashVerification": true,
+      "removalEvidence": ".build/ios-jit/device-evidence/2026-09-13/build-26-ready/handoff/cloud-cleanup.json"
+    },
+    "launcherBuild26PhoneResult": "PASS_BUILD26_PHYSICAL_FRESH_SPRING_DEPENDENCIES_REPORTS_GAMEPLAY_RESUME_QUIT_AND_RELOAD",
+    "launcherBuild26PhoneEvidence": "BUILD_26_INSTALLS_ACCEPTANCE_EVIDENCE.json",
+    "everestRuntimeAssessment": "EVEREST_RUNTIME_UPGRADE_ASSESSMENT_EVIDENCE.json",
+    "launcherBuild27Implementation": "PASS_BUILD27_PHYSICAL_EVEREST_UPDATES_REPORTS_SJ_RESUME_QUIT_AND_RELOAD",
+    "launcherBuild27Evidence": "EVEREST_RUNTIME_BUILD_27_EVIDENCE.json",
+    "launcherBuild27Handoff": {
+      "folder": "0.14.0-build-27",
+      "files": 7,
+      "bytes": 23496679,
+      "cloudUploadConfirmed": true,
+      "phoneDownloadConfirmed": true,
+      "physicalExecutionConfirmed": true,
+      "phoneAcceptanceEvidence": "BUILD_27_RUNTIME_ACCEPTANCE_EVIDENCE.json"
+    },
+    "launcherBuild27PhoneResult": "PASS_BUILD27_PHYSICAL_EVEREST_UPDATES_REPORTS_SJ_RESUME_QUIT_AND_RELOAD",
+    "launcherBuild27PhoneEvidence": "BUILD_27_RUNTIME_ACCEPTANCE_EVIDENCE.json",
+    "previousAcceptedFallback": "0.13.1 (26): fresh Spring dependencies and gameplay accepted",
+    "launcherBuild28Implementation": "PASS_BUILD28_READY_AND_ICLOUD_UPLOADED_PHYSICAL_TEST_PENDING",
+    "launcherBuild28Evidence": "NATIVE_CATALOGUE_BUILD_28_EVIDENCE.json",
+    "launcherBuild28Handoff": {
+      "folder": "0.15.0-build-28",
+      "files": 7,
+      "bytes": 23833385,
+      "cloudUploadConfirmed": true,
+      "phoneDownloadConfirmed": false,
+      "physicalExecutionConfirmed": false
+    }
+  }
+}

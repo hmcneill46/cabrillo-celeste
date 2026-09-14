@@ -1,0 +1,9 @@
+{
+  "role": "macOS x64 Mono lifecycle regression only; never package in an iOS IPA",
+  "package": "Microsoft.NETCore.App.Runtime.Mono.osx-x64/8.0.28",
+  "url": "https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.runtime.mono.osx-x64/8.0.28/microsoft.netcore.app.runtime.mono.osx-x64.8.0.28.nupkg",
+  "catalog_url": "https://api.nuget.org/v3/catalog0/data/2026.06.09.17.07.16/microsoft.netcore.app.runtime.mono.osx-x64.8.0.28.json",
+  "repository_commit": "46295af5828b062bbbf93a9cef50fd8cb9fbcb09",
+  "sha512_base64": "uNbnG5gMwoCNPcsZQzcLcEBVh38PES7qlnEcqCbd/LbKZE7SB9sFYxOtBOWi6SXxJUYvhfh6vGt5Kim1/bMrcQ==",
+  "sha256": "977b017b2acc71682f9caca268d997129e76f90d669beaba64a35547eebb4c4a"
+}

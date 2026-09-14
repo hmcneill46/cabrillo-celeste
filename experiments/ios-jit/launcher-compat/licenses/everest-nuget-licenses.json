@@ -1,0 +1,135 @@
+[
+  {
+    "id": {
+      "value": "KeraLua"
+    },
+    "version": {
+      "value": "1.4.7"
+    },
+    "licenseUrl": {
+      "value": "https://github.com/nlua/KeraLua/blob/main/LICENSE"
+    },
+    "repository": {
+      "value": null,
+      "type": "git",
+      "url": "https://github.com/nlua/KeraLua",
+      "commit": "20113b5267f18fdf9f153ba4acaed2c6c8d1d3e1"
+    }
+  },
+  {
+    "id": {
+      "value": "YamlDotNet"
+    },
+    "version": {
+      "value": "16.1.3"
+    },
+    "license": {
+      "value": "MIT",
+      "type": "expression"
+    },
+    "licenseUrl": {
+      "value": "https://licenses.nuget.org/MIT"
+    },
+    "repository": {
+      "value": null,
+      "type": "git",
+      "url": "https://github.com/aaubry/YamlDotNet",
+      "commit": "7923dd8e600f7fea7710f3b45f3fadcfa1aa589c"
+    }
+  },
+  {
+    "id": {
+      "value": "Newtonsoft.Json"
+    },
+    "version": {
+      "value": "13.0.3"
+    },
+    "license": {
+      "value": "MIT",
+      "type": "expression"
+    },
+    "licenseUrl": {
+      "value": "https://licenses.nuget.org/MIT"
+    },
+    "repository": {
+      "value": null,
+      "type": "git",
+      "url": "https://github.com/JamesNK/Newtonsoft.Json",
+      "commit": "0a2e291c0d9c0c7675d445703e51750363a549ef"
+    }
+  },
+  {
+    "id": {
+      "value": "DotNetZip"
+    },
+    "version": {
+      "value": "1.16.0"
+    },
+    "licenseUrl": {
+      "value": "https://raw.githubusercontent.com/haf/DotNetZip.Semverd/master/LICENSE"
+    }
+  },
+  {
+    "id": {
+      "value": "Jdenticon-net"
+    },
+    "version": {
+      "value": "3.1.2"
+    },
+    "license": {
+      "value": "MIT",
+      "type": "expression"
+    },
+    "licenseUrl": {
+      "value": "https://licenses.nuget.org/MIT"
+    },
+    "repository": {
+      "value": null,
+      "type": "git",
+      "url": "https://github.com/dmester/jdenticon-net.git",
+      "commit": "b70b8324fa42f72d5d900cb56ea53ec912e154ea"
+    }
+  },
+  {
+    "id": {
+      "value": "MAB.DotIgnore"
+    },
+    "version": {
+      "value": "3.0.2"
+    },
+    "license": {
+      "value": "licenses\\LICENSE.md",
+      "type": "file"
+    },
+    "licenseUrl": {
+      "value": "https://aka.ms/deprecateLicenseUrl"
+    },
+    "repository": {
+      "value": null,
+      "type": "git",
+      "url": "https://github.com/markashleybell/MAB.DotIgnore.git"
+    },
+    "copied_license": "mab.dotignore-LICENSE.md"
+  },
+  {
+    "id": {
+      "value": "System.Drawing.Common"
+    },
+    "version": {
+      "value": "8.0.0"
+    },
+    "license": {
+      "value": "MIT",
+      "type": "expression"
+    },
+    "licenseUrl": {
+      "value": "https://licenses.nuget.org/MIT"
+    },
+    "repository": {
+      "value": null,
+      "type": "git",
+      "url": "https://github.com/dotnet/winforms",
+      "commit": "e4ede9b8979b9d2b1b1d4383f30a791414f0625b"
+    }
+  }
+]

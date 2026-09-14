@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/MonoMod/MonoMod.git",
+  "commit": "dfc30a1506d37fb88a2c2be004f525205f46a24c",
+  "iced_commit": "c50f29b7bc305696895c075f3fc7719751426b12",
+  "sdk": {
+    "version": "9.0.300",
+    "metadata_url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/9.0/releases.json",
+    "name": "dotnet-sdk-osx-x64.tar.gz",
+    "rid": "osx-x64",
+    "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.300/dotnet-sdk-9.0.300-osx-x64.tar.gz",
+    "hash": "36ff37eec764c9b509fecea7ea47e4ad3d723b40eb463158de85a4f70dab6583989c4cb7324a8e00fde727dfa77b7ff63f489c255dbce87c1ee725ae445eef62"
+  }
+}

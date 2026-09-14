@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-11",
+  "status": "NATIVE_EXECUTION_CONFIRMED_PACKAGING_CORRECTED",
+  "report": "NATIVE_EXECUTION_PASS_2026-09-11.md",
+  "physicalNativeExecutionAccepted": true,
+  "fullG0MatrixComplete": false,
+  "physicalResult": {
+    "status": "PASS_PHYSICAL_NATIVE_EXECUTION_IN_LIVECONTAINER",
+    "buildId": "native-probe-20260911-02",
+    "physicalNativeExecutionAccepted": true,
+    "fullG0MatrixComplete": false,
+    "target": {
+      "model": "iPhone 15 Pro Max",
+      "hardware": "iPhone16,2",
+      "os": "26.5",
+      "probeHost": "LiveContainer 1",
+      "stikDebugHost": "LiveContainer 2",
+      "liveContainerVersion": "3.8.9",
+      "stikDebugVersion": "3.1.9"
+    },
+    "attachments": {
+      "first-pass.diagnostics.json": {
+        "sha256": "c0f9b838d75a4cfb5090dff6eea7beada71c4a8cb45dd5b6a6eb846c96eccc92",
+        "bytes": 118183
+      },
+      "after-background.diagnostics.json": {
+        "sha256": "1134b0e63f7d2564d24139bf9151e4c481f934eb8a1f5d9a5b65c29f3f232479",
+        "bytes": 157721
+      }
+    },
+    "buildAndScriptHashesMatchDelivery": true,
+    "exportsAreSameSessionPrefix": true,
+    "distinctRuns": 3,
+    "checksPassed": 80,
+    "checkFailures": 0,
+    "jitRequests": 1,
+    "preparedRegions": 2,
+    "bytesPerRegion": 65536,
+    "entriesPerRegion": 4,
+    "pageBytes": 16384,
+    "rxProtection": 5,
+    "rwProtection": 3,
+    "backgroundSeconds": 29.776,
+    "runs": [
+      {
+        "run": 1,
+        "passedChecks": 32,
+        "completionSecondsFromLaunch": 7.69,
+        "rewrites": 128,
+        "stressCalls": 16384,
+        "detachedBeforeAndAfter": true
+      },
+      {
+        "run": 2,
+        "passedChecks": 24,
+        "completionSecondsFromLaunch": 80.97,
+        "rewrites": 128,
+        "stressCalls": 16384,
+        "detachedBeforeAndAfter": true
+      },
+      {
+        "run": 3,
+        "passedChecks": 24,
+        "completionSecondsFromLaunch": 82.304,
+        "rewrites": 128,
+        "stressCalls": 16384,
+        "detachedBeforeAndAfter": true
+      }
+    ],
+    "totalStressCalls": 49152,
+    "currentSessionNotDuplicatedInHistory": true,
+    "remainingG0Coverage": [
+      "standalone signed installation",
+      "fresh JIT setup after process termination or device reboot",
+      "device cancellation/wrong-script/failure recovery matrix",
+      "long-run and memory-pressure behavior"
+    ],
+    "notEstablished": [
+      "managed JIT",
+      "runtime GC and exception/unwind behavior",
+      "MonoMod hooks",
+      "Celeste gameplay",
+      "mods",
+      "Strawberry Jam",
+      "performance comparison"
+    ]
+  },
+  "testedBuild": {
+    "buildId": "native-probe-20260911-02",
+    "appVersion": "0.1.1 (2)",
+    "ipaSha256": "3ced8145abe1ed754c1e5186ab37f6ce3692fb6d85529539ee18e3a6c65a823b",
+    "sourceSha256": {
+      "experiments/ios-jit/native-probe/INSTALL.md": "ea41fb62de4d7ae0cea36b1b231f31b3b7cf121446b7538243c050adaecc20eb",
+      "experiments/ios-jit/native-probe/PHONE_README.txt": "1c47f1cea7c369fa3211387de728e8ad765b7cf771935698b06be281a8aebcf4",
+      "experiments/ios-jit/native-probe/README.md": "d3f683717c4e30f0aded1dac512c8cf3477cb2c4b27851c80dcd8aea012de646",
+      "experiments/ios-jit/native-probe/THIRD_PARTY_NOTICES.md": "fa2b6c8c14b70843d589205513d8606f74fbd2b3874dc599cdbcea2f5599bd2c",
+      "experiments/ios-jit/native-probe/build.py": "a686b3a1346dfd906ed0fa1d93af277f04477c7f23178fc9180cba3d785f76b3",
+      "experiments/ios-jit/native-probe/scripts/celeste-jit-probe.js": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333",
+      "experiments/ios-jit/native-probe/scripts/make_icon.swift": "1c61416c90b9dcf49a334ebd18fdae9fd6c739525f66a689216a95e8a03e67d6",
+      "experiments/ios-jit/native-probe/scripts/summarize_diagnostics.py": "2e4e522a2b258f49f7e4ab5d375bbee2e433c947bb75b77debf25ddb44b0e333",
+      "experiments/ios-jit/native-probe/src/ProbeProtocol.h": "4b06a2867af44f82a5c1f2eb82c1fd42446e0e413b4c68daefed05cd1e55c6c4",
+      "experiments/ios-jit/native-probe/src/VMRange.c": "f5817b715d01758c23fdac29dab95ce69a024bd761c0ad7adc6a034c721b83b6",
+      "experiments/ios-jit/native-probe/src/VMRange.h": "6ea947aeddf0d9b3a8f3cd79717bca3fa39b2639ddc866f518b5b8f070cdb28d",
+      "experiments/ios-jit/native-probe/src/VMRangeDarwin.c": "cd467ba42a821643b18ed2846237b51993d9353543e7237a8e8d4c1d01d57546",
+      "experiments/ios-jit/native-probe/src/main.m": "42881aa5bf9ced764ddef37f9f9f68f4af3304abb4055265a9dcb1a3b45f229b",
+      "experiments/ios-jit/native-probe/tests/check_arm64.py": "92bbb4dde939fd28a5f2f98ebf948f9f3ad84ea7bde45feaaea10599095f3303",
+      "experiments/ios-jit/native-probe/tests/check_vm_range.py": "68e38be8a700b7144e4c2efff8c2d6e39950efc4f4ff9f79693ea43d7d88f3ba",
+      "experiments/ios-jit/native-probe/tests/script.test.cjs": "f1091e8c1e840e6532d1bbc1f569091454253f4aaef5f1538b89ff3f97c1675c",
+      "experiments/ios-jit/native-probe/tests/simulator_smoke.py": "896511f84257c00a75cf2ea1cc6f52341a0dc6b6117ba69ddf3cb3f8f1eeee23",
+      "experiments/ios-jit/native-probe/tests/vm_range_test.c": "d8730d363691c5993f5ac736a5f380765f511102236b476e6fed32340b235b4f"
+    },
+    "scriptTemplateSha256": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333"
+  },
+  "packagingError": {
+    "ownerReported": "Failed to Sign .../CelesteJITProbe.dSYM/Contents/Resources/DWARF/CelesteJITProbe",
+    "presentInBuilds": [
+      "native-probe-20260910-01",
+      "native-probe-20260911-02"
+    ],
+    "archiveMember": "Payload/CelesteJITProbe.app/CelesteJITProbe.dSYM/Contents/Resources/DWARF/CelesteJITProbe",
+    "machoFiletype": 10,
+    "clangImplicitDsymJobConfirmed": true,
+    "cause": "Single source compilation/link with -g creates implicit symbols inside app; explicit external dsymutil does not remove that bundle",
+    "fix": "Compile objects before linking, retain external symbols and reject debug symbols in payload"
+  },
+  "correctedBuild": {
+    "buildId": "native-probe-20260911-03",
+    "appVersion": "0.1.2 (3)",
+    "ipaPath": "artifacts/ios-jit/native-probe-20260911-03/CelesteJITProbe-unsigned.ipa",
+    "ipaSha256": "f3663787b13b892f46af7322ce146500b8e8d7a63bee025ff795249c96f0a254",
+    "ipaBytes": 72009,
+    "sourceSha256": {
+      "experiments/ios-jit/native-probe/INSTALL.md": "f1a91af6d64f2ff3430ed2ca3fd4c7e01ce502e3fdcef2f46b80c7b018408b37",
+      "experiments/ios-jit/native-probe/PHONE_README.txt": "5163ac3f892404b76b1d3a7c1aab2fc25cdec34871bc8466624cc7cda9565bff",
+      "experiments/ios-jit/native-probe/README.md": "e62b3fec498a47f515e0fda786af192b81e002bcd25f666871ffae15105a620b",
+      "experiments/ios-jit/native-probe/THIRD_PARTY_NOTICES.md": "fa2b6c8c14b70843d589205513d8606f74fbd2b3874dc599cdbcea2f5599bd2c",
+      "experiments/ios-jit/native-probe/build.py": "a5ea3c94a0baa8e45b98719b7070d163d6dcc8d37bdd904a44b60951bc7b0c99",
+      "experiments/ios-jit/native-probe/scripts/celeste-jit-probe.js": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333",
+      "experiments/ios-jit/native-probe/scripts/make_icon.swift": "1c61416c90b9dcf49a334ebd18fdae9fd6c739525f66a689216a95e8a03e67d6",
+      "experiments/ios-jit/native-probe/scripts/summarize_diagnostics.py": "2e4e522a2b258f49f7e4ab5d375bbee2e433c947bb75b77debf25ddb44b0e333",
+      "experiments/ios-jit/native-probe/src/ProbeProtocol.h": "4b06a2867af44f82a5c1f2eb82c1fd42446e0e413b4c68daefed05cd1e55c6c4",
+      "experiments/ios-jit/native-probe/src/VMRange.c": "f5817b715d01758c23fdac29dab95ce69a024bd761c0ad7adc6a034c721b83b6",
+      "experiments/ios-jit/native-probe/src/VMRange.h": "6ea947aeddf0d9b3a8f3cd79717bca3fa39b2639ddc866f518b5b8f070cdb28d",
+      "experiments/ios-jit/native-probe/src/VMRangeDarwin.c": "cd467ba42a821643b18ed2846237b51993d9353543e7237a8e8d4c1d01d57546",
+      "experiments/ios-jit/native-probe/src/main.m": "42881aa5bf9ced764ddef37f9f9f68f4af3304abb4055265a9dcb1a3b45f229b",
+      "experiments/ios-jit/native-probe/tests/check_arm64.py": "92bbb4dde939fd28a5f2f98ebf948f9f3ad84ea7bde45feaaea10599095f3303",
+      "experiments/ios-jit/native-probe/tests/check_package.py": "89ada1f7115b8e287fe1d00f1e79195bd75ca294a530052f6e64cefa299b0ba6",
+      "experiments/ios-jit/native-probe/tests/check_vm_range.py": "68e38be8a700b7144e4c2efff8c2d6e39950efc4f4ff9f79693ea43d7d88f3ba",
+      "experiments/ios-jit/native-probe/tests/script.test.cjs": "f1091e8c1e840e6532d1bbc1f569091454253f4aaef5f1538b89ff3f97c1675c",
+      "experiments/ios-jit/native-probe/tests/simulator_smoke.py": "556c97f5e00c928db1314c862864ee1bbf8ce71bfb37d0531778b219fc331020",
+      "experiments/ios-jit/native-probe/tests/vm_range_test.c": "d8730d363691c5993f5ac736a5f380765f511102236b476e6fed32340b235b4f"
+    },
+    "scriptTemplateSha256": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333",
+    "physicalInstallation": "PASS_OWNER_REPORTED",
+    "installationEvidence": "Owner: downloads and installs without issue; no separate build-3 runtime JSON supplied"
+  },
+  "validation": {
+    "package": {
+      "status": "PASS_UNSIGNED_PACKAGE_AND_EXTERNAL_SYMBOLS",
+      "source_hashes_match": true,
+      "native_sources_and_script_match_build_2": true,
+      "external_dsym_uuid_matches_executable": true,
+      "unsigned": true,
+      "version": "0.1.2 (3)",
+      "ipa_sha256": "f3663787b13b892f46af7322ce146500b8e8d7a63bee025ff795249c96f0a254",
+      "ipa_bytes": 72009,
+      "physical_installation": "NOT_TESTED"
+    },
+    "regression": {
+      "status": "PASS_PACKAGING_REGRESSION",
+      "known_bad_ipa_rejected": true,
+      "renamed_mh_dsym_rejected": true,
+      "corrected_ipa_accepted": true,
+      "payload_macho_files": [
+        {
+          "path": "Payload/CelesteJITProbe.app/CelesteJITProbe",
+          "filetype": 2
+        }
+      ],
+      "native_text_matches_previous_build": true,
+      "native_text_sha256": "eae2b3edd9d81c498a0f337184b5ce07b59496cc5f40905e958c027595fd5b47",
+      "previous_ipa_sha256": "3ced8145abe1ed754c1e5186ab37f6ce3692fb6d85529539ee18e3a6c65a823b",
+      "corrected_ipa_sha256": "f3663787b13b892f46af7322ce146500b8e8d7a63bee025ff795249c96f0a254",
+      "physical_installation_of_corrected_ipa": "NOT_TESTED"
+    },
+    "validationScope": "Packaging correction; native source, script and __TEXT,__text match physically tested build 2. No additional physical build 3 run or simulator run claimed."
+  },
+  "handoff": {
+    "recordedUtc": "2026-09-11T00:29:29.992364+00:00",
+    "filesAppFolder": "iCloud Drive/Celeste JIT Tests/0.1.2-build-3",
+    "localSource": "artifacts/ios-jit/native-probe-20260911-03/phone-files/0.1.2-build-3",
+    "copiedAndHashVerified": true,
+    "totalBytes": 86420,
+    "files": {
+      "CelesteJITProbe-0.1.2-build-3-unsigned.ipa": {
+        "sha256": "f3663787b13b892f46af7322ce146500b8e8d7a63bee025ff795249c96f0a254",
+        "bytes": 72009
+      },
+      "INSTALL.md": {
+        "sha256": "f1a91af6d64f2ff3430ed2ca3fd4c7e01ce502e3fdcef2f46b80c7b018408b37",
+        "bytes": 12480
+      },
+      "README-FIRST.txt": {
+        "sha256": "5163ac3f892404b76b1d3a7c1aab2fc25cdec34871bc8466624cc7cda9565bff",
+        "bytes": 1662
+      },
+      "SHA256SUMS.txt": {
+        "sha256": "5b83dbeeaee26b14bc45117c13fe35136e3f3d564287bd1be29f77267a106d9a",
+        "bytes": 269
+      }
+    },
+    "cloudUpload": "CONFIRMED_BY_FOUNDATION_RESOURCE_METADATA",
+    "phoneDownload": "NOT_OBSERVED",
+    "physicalInstallationCheck": "PASS_OWNER_REPORTED",
+    "cloudUploadObservedUtc": "2026-09-11T00:31:37Z",
+    "initialTransientUploadError": true,
+    "cloudResourceStatus": [
+      {
+        "file": "CelesteJITProbe-0.1.2-build-3-unsigned.ipa",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "README-FIRST.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "INSTALL.md",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      }
+    ]
+  },
+  "nextMilestone": "G1 embedded managed runtime: imported assembly plus dynamic-method native JIT, followed by runtime ABI/GC/unwind coverage before MonoMod hooks",
+  "gitActions": {
+    "commits": 0,
+    "pushes": 0,
+    "remoteWrites": 0,
+    "aotCheckoutWrites": 0
+  }
+}

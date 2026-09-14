@@ -1,0 +1,18 @@
+{
+  "Mono.Cecil-LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/jbevain/cecil/0.11.6/LICENSE.txt",
+    "sha256": "13d58ecbed676511c0c4c4009bff107025e50007ff5e7901dc562700ec62509e"
+  },
+  "MonoMod-Backports-ILHelpers-LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/MonoMod/MonoMod/a1b82852b2574742776af08818487b90b0bfab93/LICENSE",
+    "sha256": "c4757c0192d84147fa6c12392f7d484ab81474183152404311d9cfa0b1331ca8"
+  },
+  "MonoMod-LICENSE.txt": {
+    "pinned_source": ".build/ios-jit/hook-runtime/MonoMod/LICENSE",
+    "sha256": "0b64833222e3c6a426ad29362d26334619fe02eaf2b89ea9c37805521896c920"
+  },
+  "Iced-LICENSE.txt": {
+    "pinned_source": ".build/ios-jit/hook-runtime/MonoMod/external/iced/LICENSE.txt",
+    "sha256": "93a47598376fd3f276b631e75149340087153c6ff1635a53c5790249e9124e2d"
+  }
+}

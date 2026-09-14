@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "status": "GO_FOR_ISOLATED_EVEREST_6531_IMPLEMENTATION_SOURCE_ASSESSMENT_ONLY",
+  "reviewed_utc": "2026-09-13T08:17:09.710946+00:00",
+  "accepted_build": "launcher-resolution-20260913-26",
+  "phone_acceptance": "BUILD_26_INSTALLS_ACCEPTANCE_EVIDENCE.json",
+  "current_everest": "1.6458.0",
+  "current_source_commit": "4bbde91b8dbaaddef2ceec75ca0cd6d59b3b8d00",
+  "target_everest": "1.6531.0",
+  "target_source_commit": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+  "upstream_release": {
+    "tag_name": "stable-1.6531.0",
+    "published_at": "2026-09-05T20:24:03Z",
+    "prerelease": false,
+    "html_url": "https://github.com/EverestAPI/Everest/releases/tag/stable-1.6531.0"
+  },
+  "source_fetches": [
+    {
+      "file": "latest-release.json",
+      "url": "https://api.github.com/repos/EverestAPI/Everest/releases/latest",
+      "bytes": 7878,
+      "sha256": "d6ead5bd9600a7a7a76273c8659509b804cd1eb2689d924c3d2243ab8072578b",
+      "fetched_utc": "2026-09-13T08:10:28.921697+00:00",
+      "etag": "W/\"670f05408517f2493ae085ec9afa21cbd9ab08997cca2cba61189d31df617db1\""
+    },
+    {
+      "file": "stable-compare.json",
+      "url": "https://api.github.com/repos/EverestAPI/Everest/compare/4bbde91b8dbaaddef2ceec75ca0cd6d59b3b8d00...stable-1.6531.0",
+      "bytes": 55465,
+      "sha256": "1b532bac98276f0d79a42067e2809c0d3a9532babab251ccf45b0c118c843683",
+      "fetched_utc": "2026-09-13T08:10:29.259654+00:00",
+      "etag": "W/\"f6a7c769f241adf6509bd04eeff8d1f9c12f4bb2de1802a2f045c0b6fdb4bb28\""
+    }
+  ],
+  "private_source_snapshots": ".build/ios-jit/everest-runtime-assessment-20260913",
+  "comparison": {
+    "commits": 9,
+    "changed_files": [
+      {
+        "filename": ".github/tas-check/run-locally.sh",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 5
+      },
+      {
+        "filename": ".github/workflows/tas-sync-check.yml",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 5
+      },
+      {
+        "filename": "Celeste.Mod.mm/Mod/Everest/Everest.Content.cs",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 1
+      },
+      {
+        "filename": "Celeste.Mod.mm/Mod/Helpers/ModUpdaterHelper.cs",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 8
+      },
+      {
+        "filename": "Celeste.Mod.mm/Patches/Dust.cs",
+        "status": "modified",
+        "additions": 47,
+        "deletions": 1
+      }
+    ],
+    "project_package_submodule_changes": false,
+    "all_file_patches_present": true,
+    "merge_base_matches_current": true,
+    "upstream_url": "https://github.com/EverestAPI/Everest/compare/4bbde91b8dbaaddef2ceec75ca0cd6d59b3b8d00...stable-1.6531.0"
+  },
+  "embedded_adaptation_files": [
+    "Celeste.Mod.mm/Mod/Everest/Everest.cs",
+    "Celeste.Mod.mm/Mod/Everest/Everest.DiscordSDK.cs",
+    "Celeste.Mod.mm/Mod/Everest/Everest.Loader.cs",
+    "NETCoreifier/Coreifier.cs",
+    "Celeste.Mod.mm/Mod/Helpers/WorkerThreadTaskScheduler.cs"
+  ],
+  "embedded_adaptation_file_overlap": [],
+  "runtime_versions_to_align": [
+    "managed Everest.VersionString / regenerated game and hook assemblies",
+    "DependencyPlanner.builtins",
+    "ModLibrary.preflight built-ins",
+    "diagnostic build and selected runtime identities"
+  ],
+  "cache_followup": {
+    "issue": "Availability cache does not bind runtime or pin policy; direct replay may retain old canUpdate/reason after IPA runtime changes.",
+    "scope": "Source inspection; no changed runtime built or executed.",
+    "evidence": [
+      {
+        "path": "experiments/ios-jit/launcher-resolution/native/ModUpdates.swift",
+        "sha256": "529e2016ccedb9019516fc616fe9924532f71169554ba00a602631f3278c7979"
+      },
+      {
+        "path": "experiments/ios-jit/launcher-resolution/native/DependencyInstaller.swift",
+        "sha256": "4fee487088800e557962ded9807fedb512fe3acefcd2b2fb361c744f1ad633ba"
+      },
+      {
+        "path": "experiments/ios-jit/launcher-resolution/native/DependencyPlan.swift",
+        "sha256": "ff39e43d76537f7c5c0c2356e1be44dcce24945065549ca7988720a13f79bba0"
+      }
+    ],
+    "required": "Re-evaluate or invalidate derived availability on runtime/policy change, including offline/disabled-auto/backoff/downgrade; retain verified index/archive hashes."
+  },
+  "currently_blocked_targets": [
+    {
+      "name": "ExtendedVariantMode",
+      "installed": "0.50.5",
+      "candidate": "0.51.0",
+      "requires_everest": "1.6531.0"
+    },
+    {
+      "name": "MaxHelpingHand",
+      "installed": "1.40.9",
+      "candidate": "1.40.10",
+      "requires_everest": "1.6531.0"
+    }
+  ],
+  "new_source_lane_created": false,
+  "new_runtime_compiled": false,
+  "new_ipa_created": false,
+  "accepted_lanes_mutated": false,
+  "aot_checkout_mutated": false,
+  "git_remote_writes": false,
+  "next": "Isolated implementation, original-game patching and version identity; runtime-aware cache; actual current-helper transaction and Spring/Paint/SJ host gates; versioned phone handoff."
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "SDL2",
+    "revision": "257cacab183b312bbe60bd7967eee44a3ad7be85",
+    "source": ".build/ios-jit/game-native/sources/SDL2/LICENSE.txt",
+    "license": "SDL2-LICENSE.txt",
+    "sha256": "fcb07e07ac6bc8b2fcf047b50431ef4ebe5b619d7ca7c82212018309a9067426"
+  },
+  {
+    "name": "SDL2",
+    "revision": "257cacab183b312bbe60bd7967eee44a3ad7be85",
+    "source": ".build/ios-jit/game-native/sources/SDL2/src/hidapi/LICENSE.txt",
+    "license": "SDL2-src-hidapi-LICENSE.txt",
+    "sha256": "7d3b087c34f35d4d538e3bcddd1ff8f66e92f9ef336881999482800ddf840913"
+  },
+  {
+    "name": "SDL2",
+    "revision": "257cacab183b312bbe60bd7967eee44a3ad7be85",
+    "source": ".build/ios-jit/game-native/sources/SDL2/src/video/yuv2rgb/LICENSE",
+    "license": "SDL2-src-video-yuv2rgb-LICENSE",
+    "sha256": "f7d74004cc75778cae46c5f0139f244d67c07ef64cf51937e8272352197dcb18"
+  },
+  {
+    "name": "FNA3D",
+    "revision": "dba98a71514cc30f3c19dc19fc0a479be7c90d52",
+    "source": ".build/ios-jit/game-native/sources/FNA3D/LICENSE",
+    "license": "FNA3D-LICENSE",
+    "sha256": "d32be8125e925e3166c1f241c5828f75723fa8434ec2d13b41096bb6e2fbadae"
+  },
+  {
+    "name": "FNA3D-MojoShader",
+    "revision": "c9037d90fa2f59b6be65d1391ca11d345356bad1",
+    "source": ".build/ios-jit/game-native/sources/FNA3D/MojoShader/LICENSE.txt",
+    "license": "FNA3D-MojoShader-LICENSE.txt",
+    "sha256": "c2f27bd0d14f831f83a1869e8ae515b2e952a791d96fca774551345529734358"
+  },
+  {
+    "name": "FNA3D-Vulkan-Headers",
+    "revision": "85470b32ad5d0d7d67fdf411b6e7b502c09c9c52",
+    "source": ".build/ios-jit/game-native/sources/FNA3D/Vulkan-Headers/LICENSE.txt",
+    "license": "FNA3D-Vulkan-Headers-LICENSE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "name": "FAudio",
+    "revision": "0e39055a3fb3c27de8dc02d650fe6a3da6c4de2c",
+    "source": ".build/ios-jit/game-native/sources/FAudio/LICENSE",
+    "license": "FAudio-LICENSE",
+    "sha256": "14bfaff38c193b95895505415bab2aab725337fadb11297d9fb0b1a3c5238ddd"
+  },
+  {
+    "name": "Theorafile",
+    "revision": "0c5504658a3108919e53b625287786a87529de42",
+    "source": ".build/ios-jit/game-native/sources/Theorafile/licenses/LICENSE",
+    "license": "Theorafile-licenses-LICENSE",
+    "sha256": "93ff5e42529763226f505056a79d5f9961b0f4afda55f4c9ca2ae5d773a801bb"
+  },
+  {
+    "name": "SDL2-CS-bindings",
+    "revision": "2b8d237fd4585d14ea837764ac247d4cd200158f",
+    "source": ".build/ios-jit/game-native/sources/SDL2-CS-bindings/LICENSE",
+    "license": "SDL2-CS-bindings-LICENSE",
+    "sha256": "786debc78de13d980d969bf3daca8b5b662fefdfa12dcc7c6159eba5c57d9cac"
+  }
+]

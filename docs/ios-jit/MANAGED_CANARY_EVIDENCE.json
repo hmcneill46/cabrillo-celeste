@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "date": "2026-09-11",
+  "stage": "G1",
+  "status": "UNSIGNED_MANAGED_CANARY_UPLOADED_AWAITING_PHYSICAL_TEST",
+  "buildId": "managed-canary-20260911-04",
+  "version": "0.2.0",
+  "buildNumber": "4",
+  "ownerAuthorization": "Proceed to the next step after build 3 installs without issue; no further packaging-only retest needed.",
+  "runtime": {
+    "schema": 1,
+    "runtime_repository": "https://github.com/dotnet/runtime.git",
+    "runtime_tag": "v8.0.28",
+    "runtime_commit": "46295af5828b062bbbf93a9cef50fd8cb9fbcb09",
+    "matching_ios_pack": "Microsoft.NETCore.App.Runtime.Mono.ios-arm64/8.0.28",
+    "pack_sha256": "09aeb41f3759c83c970120957995cbdabe097b6a6981091e588cd65b738408e2",
+    "pack_sha512": "3b7b4593292926a7457d55e67f9095c6b70a0f809f4002967ad636ba2ae271484080615cb5883fbef2a6271c86da9e372bccdf8313914bc1616c81c50dbc5e1a",
+    "native_runtime": "custom build; stock AOT runtime is not used",
+    "bcl_and_system_native": "matching official iOS runtime pack",
+    "sdk": {
+      "sdk_version": "8.0.422",
+      "name": "dotnet-sdk-osx-x64.tar.gz",
+      "rid": "osx-x64",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.422/dotnet-sdk-8.0.422-osx-x64.tar.gz",
+      "hash": "fb06d2755b407cece4f2a0ad0c3869f28220bf5be7ae69541a3c22855cef01cb463dde0af76000c447541345a261ed68847ef590e4ba7a27109447aed6e79560"
+    }
+  },
+  "runtimeAliasPatchSha256": "fbdd8146f12e80d696f6ef0bfdfeed5972e88d8c21ac9908895a3ea095e30efb",
+  "scriptTemplateSha256": "79d53b7c77fd2cfdb6045e1b699c2b8e0eca3822d9cfb98a03556b35d674b72b",
+  "aotDisabled": true,
+  "interpreterDisabled": true,
+  "arenaCount": 2,
+  "bytesPerArena": 4194304,
+  "allocatorPolicy": "Bounded process-lifetime RX/RW aliases; no growth/RWX fallback",
+  "target": {
+    "hardware": "iPhone 15 Pro Max",
+    "os": "iOS 26.5",
+    "layout": "Canary in LiveContainer 1, StikDebug in LiveContainer 2",
+    "livecontainerVersion": "3.8.9 (previous owner-entered test)",
+    "stikdebugVersion": "3.1.9 (previous owner-entered test)"
+  },
+  "toolchain": {
+    "xcode": "Xcode 26.6\nBuild version 17F113",
+    "sdkVersion": "26.5",
+    "target": "arm64-apple-ios26.0",
+    "host": "Intel x86_64 macOS"
+  },
+  "package": {
+    "status": "PASS_UNSIGNED_MANAGED_IPA_AND_EXTERNAL_FIXTURE",
+    "ipa_bytes": 10150598,
+    "ipa_sha256": "b291feac465aa3b55b9a9faab15cf33018bb262c9a32a469b9421b16db59238d",
+    "dll_sha256": "586c01611cafcb39962ae2fc7f35720b5e0d12fbed9f496cb5f1380ea8c4ddbb",
+    "framework_assembly_count": 168,
+    "dsym_inside_ipa": false,
+    "code_signature": false,
+    "runtime_and_sources_match_receipt": true,
+    "external_fixture_not_in_ipa": true,
+    "device_execution": false
+  },
+  "fixture": {
+    "schema": 1,
+    "compile_started_utc": "2026-09-11T01:13:53.875025+00:00",
+    "compiled_after_ipa_packaging": true,
+    "ipa_sha256": "b291feac465aa3b55b9a9faab15cf33018bb262c9a32a469b9421b16db59238d",
+    "dll_sha256": "586c01611cafcb39962ae2fc7f35720b5e0d12fbed9f496cb5f1380ea8c4ddbb",
+    "dll_bytes": 7168,
+    "fixture_source_sha256": "b3f61dad2c0fb2d48e1cdae53c7d9921981f1c45028cef66f1f7f0999de239b8",
+    "sdk": "8.0.422",
+    "target": "net8.0 IL",
+    "host_logic_checks": 25,
+    "host_runtime": "CoreCLR 8.0.28 macOS x64",
+    "device_mono_jit_tested": false,
+    "result": "PASS: 25 fixture logic checks on host CoreCLR. This is not iOS Mono JIT acceptance."
+  },
+  "hostArena": {
+    "result": "PASS_HOST_ALIAS_ALLOCATOR_AND_ACTUAL_ARM64_EMITTER",
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "checks": [
+      "read-only RX emission",
+      "branch uses RX PC",
+      "instruction patch",
+      "ordinary heap emission",
+      "allocation bounds",
+      "exhaustion",
+      "concurrent allocation",
+      "invalid code write aborts"
+    ],
+    "device_execution": false,
+    "command": [
+      "xcrun",
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-DCJ_MONO_IOS_JIT=1",
+      "-I/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/experiments/ios-jit/managed-canary/src",
+      "-I/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/.build/ios-jit/managed-runtime/runtime-v8.0.28/src/mono",
+      "-I/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/.build/ios-jit/managed-runtime/runtime-v8.0.28/src/mono/mono/eglib",
+      "-I/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/.build/ios-jit/managed-runtime/mono-build-ios/mono/eglib",
+      "-I/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/.build/ios-jit/managed-runtime/runtime-v8.0.28/src/native",
+      "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/experiments/ios-jit/managed-canary/tests/arena_test.c",
+      "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/experiments/ios-jit/managed-canary/src/CJCodeArena.c",
+      "-o",
+      "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/.build/ios-jit/managed-canary/host-tests/arena-test"
+    ]
+  },
+  "hostScript": {
+    "host_mock_tests_passed": 16,
+    "device_execution": "NOT TESTED"
+  },
+  "simulator": {
+    "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY",
+    "dll_import_handler": "PASS",
+    "run_disabled_without_jit": true,
+    "native_console_recovered": true,
+    "build_id": "managed-canary-20260911-04-simulator",
+    "os": "26.5",
+    "architecture": "x86_64",
+    "previous_session_recovered": true,
+    "current_session_not_duplicated": true,
+    "export_schema": 1,
+    "device_jit_execution": "NOT TESTED",
+    "share_sheet_interaction": "NOT AUTOMATED",
+    "notes": "Host terminated only the simulator probe between launches. Generated-code paths are disabled."
+  },
+  "handoff": {
+    "created_utc": "2026-09-11T01:14:54.236520+00:00",
+    "cloud_folder": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.2.0-build-4",
+    "phone_files_location": "iCloud Drive/Celeste JIT Tests/0.2.0-build-4",
+    "total_bytes": 10169637,
+    "verified_local_copies": true,
+    "cloud_upload_status": "CONFIRMED_UPLOADED",
+    "phone_download_observed": false,
+    "files": [
+      {
+        "file": "CelesteJITCanary-v0.2.0-build-4-unsigned.ipa",
+        "bytes": 10150598,
+        "sha256": "b291feac465aa3b55b9a9faab15cf33018bb262c9a32a469b9421b16db59238d"
+      },
+      {
+        "file": "Canary-v0.2.0.dll",
+        "bytes": 7168,
+        "sha256": "586c01611cafcb39962ae2fc7f35720b5e0d12fbed9f496cb5f1380ea8c4ddbb"
+      },
+      {
+        "file": "README-FIRST.txt",
+        "bytes": 1316,
+        "sha256": "2c2ab22b9e78c988df5258e3f5ca9db171041c24138bae3db4525d6c911332b7"
+      },
+      {
+        "file": "INSTALL.md",
+        "bytes": 4345,
+        "sha256": "e148e983b2d58cefaeb6f8d2e677b83b017468cf419d6ca629fea7b7457363c1"
+      },
+      {
+        "file": "celeste-jit-probe-TEMPLATE.js",
+        "bytes": 5759,
+        "sha256": "79d53b7c77fd2cfdb6045e1b699c2b8e0eca3822d9cfb98a03556b35d674b72b"
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "bytes": 451,
+        "sha256": "9d655b0ca33d91fd9f2b643d977d30ee5453732d0f74f0ae5985bd4d35a10666"
+      }
+    ],
+    "cloud_upload_observed_utc": "2026-09-11T01:16:36Z"
+  },
+  "physicalManagedJitAccepted": false,
+  "monoModHooksAccepted": false,
+  "gameplayAccepted": false,
+  "priorNativeExecutionInTargetLiveContainer": "PASS build 2",
+  "fullG0MatrixComplete": false,
+  "knownLimits": [
+    "First iOS Mono execution pending",
+    "Unproven complete code-write coverage",
+    "Invariant globalization only",
+    "No game/MonoMod/FNA/SDL/FMOD",
+    "No unload/restart or late code-space growth",
+    "No performance acceptance"
+  ],
+  "next": "Owner runs build 4 and exports diagnostics; inspect startup/JIT stage before proceeding to real hooks.",
+  "aotCheckoutMutated": false,
+  "commitsMade": false,
+  "pushesOrGithubWrites": false,
+  "report": "MANAGED_CANARY.md",
+  "physicalGuide": "../../experiments/ios-jit/managed-canary/INSTALL.md",
+  "localIpa": "artifacts/ios-jit/managed-canary-20260911-04/CelesteJITCanary-unsigned.ipa",
+  "snapshotScope": "Original build 4 implementation/handoff snapshot. Later physical observations and fixes are recorded in latestFollowup; earlier pending flags describe that snapshot.",
+  "latestFollowup": {
+    "report": "MANAGED_EXECUTION_PASS_2026-09-11.md",
+    "evidence": "MANAGED_EXECUTION_PASS_2026-09-11_EVIDENCE.json",
+    "status": "PASS_PHYSICAL_G1_CLEAN_RETURN_AND_BACKGROUND_RESUME",
+    "physicalManagedExecutionAccepted": true,
+    "crashFreeFullG1HandoffAccepted": true,
+    "testedBuildId": "managed-canary-20260911-06",
+    "directUsbDiagnosticsWithoutExportVerified": true,
+    "exportFallbackPreserved": true,
+    "next": "Implement actual pinned MonoMod Hook/ILHook: original calls, ordering, removal/re-addition, RX/RW alias patching and execution after background/return; then game integration."
+  }
+}

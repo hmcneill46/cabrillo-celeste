@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-11",
+  "status": "BUILD7_NATIVE_HEADER_MISMATCH_REPRODUCED_BUILD8_CORRECTED_AND_UPLOADED_PHYSICAL_G2_PENDING",
+  "physicalG2Accepted": false,
+  "userSetupCorrect": true,
+  "failedBuildId": "hook-canary-20260911-07",
+  "retestBuildId": "hook-canary-20260911-08",
+  "version": "0.3.1",
+  "buildNumber": "8",
+  "observedFailure": {
+    "session": "78db45e2-dd00-4af6-a8ad-ca601817c37e",
+    "eventCount": 23,
+    "device": "iPhone16,2",
+    "os": "26.5",
+    "pageSize": 16384,
+    "requestBytesPerArena": 65536,
+    "declaredBuildInfoBytesPerArena": 4194304,
+    "expectedScriptBytesPerArena": 4194304,
+    "screenshotError": "[CJIT-M1] FAIL phase 1: Unsupported request geometry/version",
+    "inlineRoute": "livecontainer2://open-url",
+    "pid": 27856,
+    "buildMetadataMatchesDeliveredArtifact": true,
+    "dllHashMatchesDeliveredFixture": true,
+    "scriptHashMatchesDeliveredTemplate": true,
+    "managedOrHookTestsStarted": false,
+    "scriptRejectedBeforeAttach": true
+  },
+  "rootCause": {
+    "sourceImport": "unqualified ProbeProtocol.h in forked launcher",
+    "selectedHeader": "experiments/ios-jit/native-probe/src/ProbeProtocol.h",
+    "requiredHeader": "experiments/ios-jit/managed-canary/src/ProbeProtocol.h",
+    "includeOrder": "native-probe before managed-canary; no local hook-canary header",
+    "coverageGap": "prior script tests used a handwritten correct request; BuildInfo geometry was a separate literal; simulator skipped request construction"
+  },
+  "rawEvidence": {
+    "2-CelesteJIT-78db45e2-dd00-4af6-a8ad-ca601817c37e.diagnostics.json": {
+      "path": ".build/ios-jit/device-evidence/2026-09-11/build-7-protocol-failure/2-CelesteJIT-78db45e2-dd00-4af6-a8ad-ca601817c37e.diagnostics.json",
+      "sha256": "5f43d25150489c23c7961102d12de4b4be85385ce8c002cc42ad3cdf8934a650"
+    },
+    "1-Photo-1.jpg": {
+      "path": ".build/ios-jit/device-evidence/2026-09-11/build-7-protocol-failure/1-Photo-1.jpg",
+      "sha256": "feb378c3d345da45c5a1187ff9d680ecd63e72aac1d5448bcfe0c1fb8f5e4d02"
+    }
+  },
+  "correction": [
+    "explicit shared protocol header path and compile-time geometry/version assertions",
+    "shared native mailbox/request creation and script binder",
+    "compiled descriptor used by the request builder and read from final Mach-O",
+    "compiler dependency check rejects old native header",
+    "runtime logs compiled protocol and rejects metadata mismatch before URL handoff",
+    "simulator-generated request run against exact packaged script with old-source negative control"
+  ],
+  "localTests": {
+    "protocol": {
+      "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT",
+      "bytes_per_arena": 4194304,
+      "mailbox_bytes": 96,
+      "regions": 2,
+      "acknowledged_page_writes": 512,
+      "request_response_and_detach": true,
+      "historical_build7_geometry_reproduced_and_rejected": true,
+      "stale_nonce_and_wrong_pid_rejected": true,
+      "real_debugger_commands_sent": 0,
+      "device_execution": false,
+      "build_id": "hook-canary-20260911-08",
+      "ipa_sha256": "f6675a9419549ed012f07a1f791c2471227b322de3afc7021e5fb52ea0ffcbf5",
+      "packaged_script_sha256": "79d53b7c77fd2cfdb6045e1b699c2b8e0eca3822d9cfb98a03556b35d674b72b",
+      "native_request_sample_sha256": "7383d2bb04542dfb0b4dd3af7709d41a692571de1e7390a27b92fa4170e3fb38",
+      "preserved_build7_source_sha256": "672f7ab50fc2e22bbdc85ad3f7d2c9a03c06caca75b664dc07341e9b27d426ef",
+      "build7_resolved_length": 65536,
+      "compiled_protocol": {
+        "protocol": 1,
+        "bytes_per_arena": 4194304,
+        "arena_count": 2,
+        "mailbox_bytes": 96,
+        "response_offset": 48,
+        "error_offset": 88
+      },
+      "old_preprocessor_command": [
+        "xcrun",
+        "--sdk",
+        "iphoneos",
+        "clang",
+        "-target",
+        "arm64-apple-ios26.0",
+        "-isysroot",
+        "/Applications/Xcode-26.6.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk",
+        "-I/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/experiments/ios-jit/native-probe/src",
+        "-I/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/experiments/ios-jit/managed-canary/src",
+        "-fobjc-arc",
+        "-O2",
+        "-g",
+        "-fno-omit-frame-pointer",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-deprecated-declarations",
+        "-E",
+        "-dM",
+        "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/.build/ios-jit/device-evidence/2026-09-11/build-7-ready/source-snapshot/experiments/ios-jit/hook-canary/src/main.m"
+      ],
+      "source_sha256": {
+        "experiments/ios-jit/hook-canary/src/main.m": "91fd583a13f6fcd7da3c2fa53986f5611f010aa77f0d54ef7bbcab282ed0e18b",
+        "experiments/ios-jit/hook-canary/src/CJHookProtocol.h": "7a65fbcac1c13ebb2f78f5d6c7d836ce052c24d1df8c4ef63f01b4efda1b44ce",
+        "experiments/ios-jit/hook-canary/tests/request_protocol.test.cjs": "6d710dab7a82732065631f5e0ea6dd7fdb8c266d4e76035f806ee409e1571e40",
+        "experiments/ios-jit/hook-canary/tests/check_request_protocol.py": "8c9a93531a3942147cdd2f398bcc71f107cbd71485f0dbce73f49fd886936e78"
+      }
+    },
+    "simulator": {
+      "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY",
+      "dll_import_handler": "PASS",
+      "run_disabled_without_jit": true,
+      "resume_disabled_without_initial_phase": true,
+      "native_console_recovered": true,
+      "build_id": "hook-canary-20260911-08-simulator",
+      "background_event_burst_persisted_and_rendered": 800,
+      "os": "26.5",
+      "architecture": "x86_64",
+      "previous_session_recovered": true,
+      "current_session_not_duplicated": true,
+      "export_schema": 1,
+      "device_jit_execution": "NOT TESTED",
+      "share_sheet_interaction": "NOT AUTOMATED",
+      "notes": "Host terminated only the simulator probe between launches. Generated-code paths are disabled."
+    },
+    "legacyScriptFailureCases": {
+      "status": "PASS",
+      "host_mock_tests_passed": 16,
+      "device_execution": false,
+      "test_source_sha256": "2fd7e3b91b2d643dbab363362f28dcc40a7133af2c4571abf63cc8b04d1495af",
+      "script_sha256": "79d53b7c77fd2cfdb6045e1b699c2b8e0eca3822d9cfb98a03556b35d674b72b"
+    },
+    "package": {
+      "status": "PASS_UNSIGNED_HOOK_IPA_AND_EXTERNAL_FIXTURE",
+      "ipa_bytes": 10869334,
+      "ipa_sha256": "f6675a9419549ed012f07a1f791c2471227b322de3afc7021e5fb52ea0ffcbf5",
+      "dll_sha256": "c4256d9f5f6400fe5b23a7b1590c4b343c280a90d882fbce3efb37999dc28157",
+      "framework_assembly_count": 168,
+      "hook_assembly_count": 10,
+      "compiled_protocol": {
+        "protocol": 1,
+        "bytes_per_arena": 4194304,
+        "arena_count": 2,
+        "mailbox_bytes": 96,
+        "response_offset": 48,
+        "error_offset": 88
+      },
+      "correct_protocol_header_verified": true,
+      "dsym_inside_ipa": false,
+      "code_signature": false,
+      "runtime_and_sources_match_receipt": true,
+      "external_fixture_not_in_ipa": true,
+      "device_execution": false
+    },
+    "priorActualMonoAndAliasTests": {
+      "result": "MATCH_UNCHANGED_HOST_AND_ALIAS_TEST_INPUTS",
+      "source_build": "hook-canary-20260911-07",
+      "rerun": false,
+      "reason": "Runtime, MonoMod, fixture and all host/alias regression source hashes are unchanged",
+      "fixture_sha256": "c4256d9f5f6400fe5b23a7b1590c4b343c280a90d882fbce3efb37999dc28157"
+    }
+  },
+  "unchangedInputs": [
+    "Mono runtime and component archives",
+    "168 framework DLLs",
+    "10 MonoMod/Cecil DLLs",
+    "native hook bridge and managed host",
+    "managed hook fixture",
+    "StikDebug script",
+    "G1/AOT sources"
+  ],
+  "compiledProtocol": {
+    "protocol": 1,
+    "bytes_per_arena": 4194304,
+    "arena_count": 2,
+    "mailbox_bytes": 96,
+    "response_offset": 48,
+    "error_offset": 88
+  },
+  "resolvedHeader": "experiments/ios-jit/managed-canary/src/ProbeProtocol.h",
+  "resolvedHeaderSha256": "81329bc1eaf0f8496b37a36efc768c75420c3206a22777f2d2f45d81905c8244",
+  "artifacts": {
+    "ipa": "artifacts/ios-jit/hook-canary-20260911-08/CelesteJITHooks-unsigned.ipa",
+    "ipaSha256": "f6675a9419549ed012f07a1f791c2471227b322de3afc7021e5fb52ea0ffcbf5",
+    "ipaBytes": 10869334,
+    "dll": "HookCanary-v0.3.0.dll",
+    "dllSha256": "c4256d9f5f6400fe5b23a7b1590c4b343c280a90d882fbce3efb37999dc28157",
+    "compiledAfterIpaPackaging": true,
+    "executableUuid": "3BF43DBB-7899-33A5-8CE0-F37F2212EE5B",
+    "scriptTemplateSha256": "79d53b7c77fd2cfdb6045e1b699c2b8e0eca3822d9cfb98a03556b35d674b72b",
+    "sourceSnapshot": ".build/ios-jit/device-evidence/2026-09-11/build-8-ready/source-snapshot",
+    "sourceFileCount": 73
+  },
+  "delivery": {
+    "route": "iCloud Drive",
+    "folder": "Celeste JIT Tests/0.3.1-build-8",
+    "totalBytes": 10905670,
+    "copiedBytesVerified": true,
+    "cloudUploadConfirmed": true,
+    "phoneDownloadObserved": false,
+    "cloudUploadObservedUtc": "2026-09-11T10:17:18Z",
+    "filesSha256": {
+      "CelesteJITHooks-v0.3.1-build-8-unsigned.ipa": "f6675a9419549ed012f07a1f791c2471227b322de3afc7021e5fb52ea0ffcbf5",
+      "HookCanary-v0.3.0.dll": "c4256d9f5f6400fe5b23a7b1590c4b343c280a90d882fbce3efb37999dc28157",
+      "INSTALL.md": "56102dbd94739c34b2048be128e9bfc7633d6e858efd4188d2ea05d8b8d40019",
+      "README-FIRST.txt": "625fc79d7cad4ecd5fe87ef5e2e28f458081752750d9f4a16ad4c848e5d1b73c",
+      "SHA256SUMS.txt": "d8d6c3bb25da40aaa30bc12cb56d7ad972fc3a69727dc21c1fa0d955814d3c77",
+      "celeste-jit-probe-TEMPLATE.js": "79d53b7c77fd2cfdb6045e1b699c2b8e0eca3822d9cfb98a03556b35d674b72b"
+    }
+  },
+  "committedOrPushed": false,
+  "aotCheckoutModified": false,
+  "oldKitsPreserved": true,
+  "physicalNext": "Repeat the same G2 test with build 8, then review current-session diagnostics before game integration.",
+  "receipts": {
+    "build-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/build-receipt.json",
+      "sha256": "c8b78f0da0e8f8dcc4e56c02803470ff50d10b72a00aa0fe13395b3d5bf8bd52"
+    },
+    "fixture-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/fixture-receipt.json",
+      "sha256": "aaaf8389312a0ebb37fde680b7ab80b98704370101a16d301c5227b19570a402"
+    },
+    "main-compiler-dependencies.d": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/main-compiler-dependencies.d",
+      "sha256": "b96b85c655d46ef36bdd02be8633e4484529f276127b2f5d81795a3eda4bc65b"
+    },
+    "request-protocol-validation.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/request-protocol-validation.json",
+      "sha256": "545a0900ee7537f04e3270cdcb5a3e373a8c2d9a2a4d65117e80d76a6e738c9f"
+    },
+    "package-validation.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/package-validation.json",
+      "sha256": "db2626621cd3c1168f89d56e16be3ed3d44fe59404b8db8c7744c52ce5b954b4"
+    },
+    "simulator-ui-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/simulator-ui-receipt.json",
+      "sha256": "b7c64403eaa7ec1fb62f363a586e05835d26778856beaa62ab40d1e294d737bb"
+    },
+    "retained-host-validation.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/retained-host-validation.json",
+      "sha256": "3a98611cd09ac1e18fbbf9af4faa38615f9532178310a3eea28b3084c4ab4a36"
+    },
+    "legacy-script-test-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/legacy-script-test-receipt.json",
+      "sha256": "02c64247fc3e5778d7a4e553f52abb4311b8bb01b3a1b48202571147643fe211"
+    },
+    "delivery-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/delivery-receipt.json",
+      "sha256": "dbdc0e01ab5af73c17ebb95db29854c511a120e00376f6a83c919ba9c41883f4"
+    },
+    "icloud-upload-status.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-08/icloud-upload-status.json",
+      "sha256": "5f3a43835db01af7f10c9ca7419bb5283d1c23144c4fc3adf0276d1648b00b6b"
+    }
+  },
+  "physicalFollowup": {
+    "report": "BUILD_8_CAPACITY_AND_BUILD_9.md",
+    "protocolCorrectionPhysicallyVerified": true,
+    "result": "BUILD8_PASSED_21_HOOK_ASSERTIONS_THEN_CODE_ARENA_EXHAUSTED",
+    "physicalG2Accepted": false,
+    "retestBuildId": "hook-canary-20260911-09"
+  }
+}

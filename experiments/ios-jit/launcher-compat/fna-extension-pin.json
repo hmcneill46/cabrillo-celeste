@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/FNA-XNA/FNA",
+  "commit": "76b1aef1fd0fa913ac53726fab9d230291c15327",
+  "path": "src/Graphics/GraphicsDevice.cs",
+  "url": "https://raw.githubusercontent.com/FNA-XNA/FNA/76b1aef1fd0fa913ac53726fab9d230291c15327/src/Graphics/GraphicsDevice.cs",
+  "sha256": "210380e049bc10c958d0eadb543aa3287f7c36ecce1ec0be79f91043b48f2963",
+  "semantics": "Accept an output buffer at least as large as the number of bound targets."
+}

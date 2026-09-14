@@ -1,0 +1,6 @@
+- Name: CJITLauncherExample
+  Version: 1.0.0
+  DLL: LauncherExample.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.6458.0

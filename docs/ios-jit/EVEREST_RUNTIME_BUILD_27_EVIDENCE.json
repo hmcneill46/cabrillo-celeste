@@ -1,0 +1,802 @@
+{
+  "schema": 1,
+  "status": "PASS_BUILD27_PHYSICAL_EVEREST_UPDATES_REPORTS_SJ_RESUME_QUIT_AND_RELOAD",
+  "updated_utc": "2026-09-13T09:44:14.032837+00:00",
+  "build_id": "launcher-runtime-20260913-27",
+  "version": "0.14.0 (27)",
+  "source": "experiments/ios-jit/launcher-runtime",
+  "artifact": "artifacts/ios-jit/launcher-runtime-20260913-27",
+  "ipa_sha256": "d251a33ee8b08dae94d08d7fe31ac9c3385b919d996fac7843644081a9d2dc45",
+  "ipa_bytes": 23476359,
+  "executable_uuid": "UUID: 39E4D88A-33C1-3D2A-A927-A74C1D024EB4",
+  "source_count": 224,
+  "runtime_identity": {
+    "schema": 1,
+    "everestSourceCommit": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+    "compatibilityPolicy": 1,
+    "builtins": {
+      "Celeste": "1.4.0.0",
+      "CelesteIOS": "1.0.0",
+      "Everest": "1.6531.0",
+      "EverestCore": "1.6531.0"
+    }
+  },
+  "runtime_identity_sha256": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62",
+  "replaced_assemblies": [
+    "Celeste.Mod.mm.dll",
+    "Celeste.dll",
+    "MMHOOK_Celeste.dll",
+    "CelesteJITEverest.dll"
+  ],
+  "unchanged": [
+    "accepted24 FNA/MonoMod/CelesteIOS and native renderer",
+    "accepted19 Mono native runtime/geometry",
+    "accepted26 CoreLib correction",
+    "167 other BCL assemblies",
+    "StikDebug protocol/template",
+    "original game import/catalogue and user ZIP/save paths"
+  ],
+  "generated_fna_audit": {
+    "unchanged_methods": 5242,
+    "unchanged_fields": 4469,
+    "unchanged_resources": 64,
+    "added_patch_marker": "MonoMod.PatchDustBurstAttribute",
+    "before_sha256": "3e1df4955fc2b2bacb01006f305c9b4bb008d09435c8670b80290a951ff46f46",
+    "after_sha256": "fcc6b640a7df39c0d57733acdb65743a495293acf58fbb434480b7fa52a97943",
+    "shipped_accepted_fna": true
+  },
+  "adapter_sha256": "65b8dca51055627ad8a7da5fb59add7166cf9a39e435b7ac211d9c2df7a4f378",
+  "fna_sha256": "7a7c416101b17c2f5c2c6602bcaf5b8daad7395ee63ca9fc74f9034fb9f239ff",
+  "ios_support": {
+    "id": "CelesteIOS",
+    "version": "1.0.0",
+    "abi": 1,
+    "required": true,
+    "sha256": "b330772f8e4b592ab5a02c44317a8cff54e8cc576763372ecfa4f4455d0c0959"
+  },
+  "script_sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b",
+  "validation_receipts": {
+    "artifacts/ios-jit/launcher-runtime-20260913-27/package-validation.json": {
+      "status": "PASS_BUILD27_UNSIGNED_PACKAGE_AND_EVEREST_UPGRADE_GATES",
+      "sha256": "cf15d8e7f12e61909c2735a057ce6d8203a234dd75c741944ad32ea57bbd6b9b"
+    },
+    "artifacts/ios-jit/launcher-runtime-20260913-27/request-protocol-validation.json": {
+      "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT",
+      "sha256": "655a54e0ecb2315bfe388c94f750c53d940ad2128b2457a13e5b042974e99b50"
+    },
+    ".build/ios-jit/device-evidence/2026-09-13/build-27-ready/handoff/accepted26-preservation.json": {
+      "status": "PASS_ACCEPTED_BUILD26_SOURCE_AND_ALL_PACKAGED_ASSEMBLIES_PRESERVED",
+      "sha256": "43485da012823a33d3bb578cd5f24a25fd314fc3118d4d4f2a7f417c4ff0391d"
+    },
+    ".build/ios-jit/device-evidence/2026-09-13/build-27-ready/handoff/visual-review.json": {
+      "status": "PASS_VISUAL_REVIEW_FINAL_SIMULATOR",
+      "sha256": "4fcb9602e300302ccf5c5a190d902808c397e669c10f8ffeb02bc428f2df6a9b"
+    },
+    ".build/ios-jit/launcher-runtime-mod-library-tests/result.json": {
+      "status": "PASS_NATIVE_MOD_LIBRARY",
+      "sha256": "b564d1610de943f389e385375c66126f57a6e5941dccfcc844cff9d5e616571b"
+    },
+    ".build/ios-jit/launcher-runtime-install-tests/receipt.json": {
+      "status": "PASS_NATIVE_INSTALLS_AND_UPDATES",
+      "sha256": "0bac9d4345432f90deb87370fa89d4b980b389785433411b92cfe112b878f85a"
+    },
+    ".build/ios-jit/launcher-runtime-real-updates/receipt.json": {
+      "status": "PASS_REAL_FOUR_MOD_UPDATE_TRANSACTION",
+      "sha256": "d8fffdae53995164b061ac89b1d25088b951546f25bfd3b6ea503b3866922333"
+    },
+    ".build/ios-jit/launcher-runtime-ui-tests/receipt.json": {
+      "status": "PASS_NATIVE_LAUNCHER_XCUITEST",
+      "sha256": "b61fa709ce4a8720e66c0c72b561a0ad89365494da09a5610760b48e8ea736e4"
+    },
+    ".build/ios-jit/launcher-runtime-blocked-ui/receipt.json": {
+      "status": "PASS_NATIVE_BLOCKED_AND_FRESH_SPRING_CACHED_UI",
+      "sha256": "75287fff39b336d5e87804d0a1951bfe657429cecc3819b424d833304c6fa998"
+    },
+    ".build/ios-jit/launcher-runtime-spring-install/receipt.json": {
+      "status": "PASS_REAL_FRESH_SPRING_DEPENDENCY_INSTALL",
+      "sha256": "f3eb4caba11f1cacb9c1805e58083d1c5d053a08a07f76d91e1997a4ff2b67b4"
+    },
+    ".build/ios-jit/launcher-resolution-reflection-controls/receipt.json": {
+      "status": "PASS_CORECLR_MISSING_SIGNATURE_ATTRIBUTE_CONTRACT",
+      "sha256": "e077a667dfc03ba093e055056581b2da7232591701117d103acb9e246bff35ce"
+    },
+    ".build/ios-jit/launcher-runtime-validation/host-fresh-spring/receipt.json": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "sha256": "880cf750eea92c0135b4fc86acb4c28cab084268ccc5c17ba9189eabee3be13f"
+    },
+    ".build/ios-jit/launcher-runtime-validation/host-updated-paint/receipt.json": {
+      "status": "PASS_HOST_PAINT_INTRO_SAVES_AND_RESUME",
+      "sha256": "a2df525656a648c146297905fb43cbcef1d2b142be0554fe421e87961d0187ce"
+    },
+    ".build/ios-jit/launcher-runtime/launcher-runtime-20260913-27-simulator/smoke/receipt.json": {
+      "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY",
+      "sha256": "97b91d409d103267b1435c5d4cb3c969a9e5b53bfc250883ed0caf3dc5c897f2"
+    },
+    ".build/ios-jit/launcher-runtime-validation/host-spring-reload/receipt.json": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "sha256": "ed175a00568571aca1c2e3258268777317132cf37445d6154552bd21636e3d8c"
+    },
+    ".build/ios-jit/launcher-runtime-validation/host-full-sj-frost/receipt.json": {
+      "status": "PASS_HOST_REAL_SJ_LOBBY_BING_SAVES_AND_RESUME",
+      "sha256": "d4e23792bee1d0917921c43a7e19439a48be999a6a3017179e6378cb6de1d0dd"
+    },
+    ".build/ios-jit/launcher-runtime-validation/host-quit-title/receipt.json": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "sha256": "8724803a7be7da6e76646c6422ab8a5f5225f9f4437a07c9883c294b1c7839f2"
+    },
+    ".build/ios-jit/launcher-runtime-validation/host-quit-busy/receipt.json": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "sha256": "addb5ce04b9e9d007afd10b3ef75e92827ca931bf1b93125708e639122e84cf1"
+    }
+  },
+  "host_sessions": {
+    "host-fresh-spring": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "graphicsChecks": 0,
+      "reflectionChecks": 30,
+      "supportChecks": 37,
+      "jitFailureCounts": [
+        "0"
+      ],
+      "capacity": [
+        "HOST_CODE_CAPACITY chunks=3642 total_bytes=59102234 jit_methods=22012"
+      ],
+      "modSaves": [
+        "GAME everest_mod_save_pass prior=0; written=3; readback=3; bytes=9"
+      ],
+      "slotReload": [
+        "SPRING_SESSION_LOAD existing=False; resumed=False; sid=SpringCollab2020/1-Beginner/Lichtbaulb; room="
+      ],
+      "gpuValidation": false
+    },
+    "host-spring-reload": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "graphicsChecks": 0,
+      "reflectionChecks": 30,
+      "supportChecks": 37,
+      "jitFailureCounts": [
+        "0"
+      ],
+      "capacity": [
+        "HOST_CODE_CAPACITY chunks=3576 total_bytes=57972591 jit_methods=20964"
+      ],
+      "modSaves": [
+        "GAME everest_mod_save_pass prior=3; written=6; readback=6; bytes=9"
+      ],
+      "slotReload": [
+        "SPRING_SESSION_LOAD existing=True; resumed=True; sid=SpringCollab2020/1-Beginner/Lichtbaulb; room=pre pre 1"
+      ],
+      "gpuValidation": false
+    },
+    "host-updated-paint": {
+      "status": "PASS_HOST_PAINT_INTRO_SAVES_AND_RESUME",
+      "graphicsChecks": 4,
+      "reflectionChecks": 30,
+      "supportChecks": 37,
+      "jitFailureCounts": [
+        "0"
+      ],
+      "capacity": [
+        "HOST_CODE_CAPACITY chunks=10498 total_bytes=170872020 jit_methods=35284"
+      ],
+      "modSaves": [
+        "GAME everest_mod_save_pass prior=0; written=8; readback=8; bytes=9"
+      ],
+      "slotReload": [
+        "GAME game_slot_loaded slot=0; existing=False; deaths=0"
+      ],
+      "gpuValidation": true
+    },
+    "host-full-sj-frost": {
+      "status": "PASS_HOST_REAL_SJ_LOBBY_BING_SAVES_AND_RESUME",
+      "graphicsChecks": 33,
+      "reflectionChecks": 30,
+      "supportChecks": 37,
+      "jitFailureCounts": [
+        "0"
+      ],
+      "capacity": [
+        "HOST_CODE_CAPACITY chunks=10984 total_bytes=178496634 jit_methods=35673"
+      ],
+      "modSaves": [
+        "GAME everest_mod_save_pass prior=0; written=3; readback=3; bytes=9"
+      ],
+      "slotReload": [
+        "GAME game_slot_loaded slot=0; existing=False; deaths=0"
+      ],
+      "gpuValidation": true
+    },
+    "host-quit-title": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "graphicsChecks": 0,
+      "reflectionChecks": 30,
+      "supportChecks": 37,
+      "jitFailureCounts": [
+        "0"
+      ],
+      "capacity": [
+        "HOST_CODE_CAPACITY chunks=648 total_bytes=10408679 jit_methods=14432"
+      ],
+      "modSaves": [],
+      "slotReload": [],
+      "gpuValidation": true
+    },
+    "host-quit-busy": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "graphicsChecks": 0,
+      "reflectionChecks": 30,
+      "supportChecks": 37,
+      "jitFailureCounts": [
+        "0"
+      ],
+      "capacity": [
+        "HOST_CODE_CAPACITY chunks=723 total_bytes=11688368 jit_methods=15544"
+      ],
+      "modSaves": [
+        "GAME everest_mod_save_pass prior=0; written=3; readback=3; bytes=9"
+      ],
+      "slotReload": [
+        "GAME game_slot_loaded slot=0; existing=False; deaths=0"
+      ],
+      "gpuValidation": true
+    }
+  },
+  "updates": {
+    "applicationState": "applied",
+    "changes": [
+      {
+        "action": "updated",
+        "afterVersion": "1.12.6",
+        "beforeVersion": "1.12.5",
+        "enabled": true,
+        "name": "EeveeHelper"
+      },
+      {
+        "action": "updated",
+        "afterVersion": "0.51.0",
+        "beforeVersion": "0.50.5",
+        "enabled": true,
+        "name": "ExtendedVariantMode"
+      },
+      {
+        "action": "updated",
+        "afterVersion": "1.80.2",
+        "beforeVersion": "1.80.1",
+        "enabled": true,
+        "name": "FrostHelper"
+      },
+      {
+        "action": "updated",
+        "afterVersion": "1.40.10",
+        "beforeVersion": "1.40.9",
+        "enabled": true,
+        "name": "MaxHelpingHand"
+      }
+    ],
+    "commitStarted": true,
+    "downloads": [
+      {
+        "key": "87fe3488faf18b5153e358b95424da6110d6786307ff9efbac764452e1ac8a7d",
+        "name": "ExtendedVariantMode 0.51.0",
+        "status": "installed"
+      },
+      {
+        "key": "b44d01546200c12074708d3273ca5c6f66e279330daa75337a1cb6ed86c40415",
+        "name": "EeveeHelper 1.12.6",
+        "status": "installed"
+      },
+      {
+        "key": "beb3f544b0863313f09b3cceff88b90a733d30c8b795b3b99667cb3803dcaaef",
+        "name": "FrostHelper 1.80.2",
+        "status": "installed"
+      },
+      {
+        "key": "da9d0526d6514cabe99b67396ce316ac9596891c7e1cc7dd8921e0a939e031cc",
+        "name": "MaxHelpingHand 1.40.10",
+        "status": "installed"
+      }
+    ],
+    "finished": 810982056.684345,
+    "id": "3F169992-8252-4786-B4AE-56032F037B9A",
+    "message": "All reviewed mod changes were applied successfully.",
+    "outcome": "completed",
+    "schema": 1,
+    "started": 810982040.389942
+  },
+  "fresh_spring": {
+    "archiveCount": 19,
+    "index": {
+      "graphSHA256": "593ee62f582c4219bfc211a3ae83d34f7fae4c549961b8272e961d95c50851b0",
+      "source": "13 September captured official index pointers",
+      "updatesSHA256": "5e210dbc654e590275de1dadafc4965a94bd380e11743f5a37b118bd43b3b0cc"
+    },
+    "originalSHA256": "4dc42ae67b4be0f79132c94cea0d671ae8784109fcd22d5d0e4d8ca19b433237",
+    "report": {
+      "applicationState": "applied",
+      "changes": [
+        {
+          "action": "installed",
+          "afterVersion": "1.6.0",
+          "enabled": true,
+          "name": "AdventureHelper"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.1.6",
+          "enabled": true,
+          "name": "CanyonHelper"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.3.7",
+          "enabled": true,
+          "name": "CavernHelper"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.2.1",
+          "enabled": true,
+          "name": "ClutterHelper"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.13.4",
+          "enabled": true,
+          "name": "CollabUtils2"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.13.4",
+          "enabled": true,
+          "name": "DJMapHelper"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "0.51.0",
+          "enabled": true,
+          "name": "ExtendedVariantMode"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.4.1",
+          "enabled": true,
+          "name": "FactoryHelper"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.80.2",
+          "enabled": true,
+          "name": "FrostHelper"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.7.3",
+          "enabled": true,
+          "name": "IsaGrabBag"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "0.2.13",
+          "enabled": true,
+          "name": "LuaCutscenes"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.1.1",
+          "enabled": true,
+          "name": "LunaticHelper"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.40.10",
+          "enabled": true,
+          "name": "MaxHelpingHand"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.7.1",
+          "enabled": true,
+          "name": "MoreDasheline"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.7.3",
+          "enabled": true,
+          "name": "OutbackHelper"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.0.49",
+          "enabled": true,
+          "name": "PandorasBox"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.0.0",
+          "enabled": true,
+          "name": "SpringCollab2020Audio"
+        },
+        {
+          "action": "installed",
+          "afterVersion": "1.0.4",
+          "enabled": true,
+          "name": "memorialHelper"
+        }
+      ],
+      "commitStarted": true,
+      "downloads": [
+        {
+          "key": "01f1c625e0fa0cc8b12aae2ffce7814615788d681f9173f341b5faa808073432",
+          "name": "IsaGrabBag 1.7.3",
+          "status": "installed"
+        },
+        {
+          "key": "05d133e746e98369e33cfaf54394ba8b374b192829ce4b79830ace599f356809",
+          "name": "CollabUtils2 1.13.4",
+          "status": "installed"
+        },
+        {
+          "key": "1d8a23aefe99634e690d1dcc49198ca68b0c7fc3393540fc66be522af1d263fc",
+          "name": "LuaCutscenes 0.2.13",
+          "status": "installed"
+        },
+        {
+          "key": "200d228a79dcdb8117e9bb0ec7641ab87c52d5a0cb959b1583fd96db4d81c9a8",
+          "name": "AdventureHelper 1.6.0",
+          "status": "installed"
+        },
+        {
+          "key": "269fdd8e6ac43c8404aa7b96a22bc16dc7a617fd8ebefa7e579ff79a2ec10f80",
+          "name": "OutbackHelper 1.7.3",
+          "status": "installed"
+        },
+        {
+          "key": "3a7c96246d27bd7abd10610cc55493e8bee8c72ac6785ac15922661fc45a4510",
+          "name": "DJMapHelper 1.13.4",
+          "status": "installed"
+        },
+        {
+          "key": "4dc5f5eb61d90d46767882ec22a145423ebd88a57fcba0f3ce7f8dfe6ad1d259",
+          "name": "LunaticHelper 1.1.1",
+          "status": "installed"
+        },
+        {
+          "key": "53cb738a86b52eee558f196a715994e655a9590be6887395b9a1eb17093527d6",
+          "name": "PandorasBox 1.0.49",
+          "status": "installed"
+        },
+        {
+          "key": "5f6b57be3dd6666f8fb288463953a834deae37f2b96be986168fe947d1097809",
+          "name": "CavernHelper 1.3.7",
+          "status": "installed"
+        },
+        {
+          "key": "758b2fcce3bf65a8bca99efbed6cb4f49a8f9ff1c8a99593b56e6c3dace492e2",
+          "name": "MoreDasheline 1.7.1",
+          "status": "installed"
+        },
+        {
+          "key": "7b604ee411a72f77cdcac95330c4e1881eed4e58b05f93c7806fab303d90d123",
+          "name": "SpringCollab2020Audio 1.0.0",
+          "status": "installed"
+        },
+        {
+          "key": "8656fe9a62bea7f11f439bf755d005e8f4fd5905b2c9082d8a4f0cf3cdf62e88",
+          "name": "memorialHelper 1.0.4",
+          "status": "installed"
+        },
+        {
+          "key": "87fe3488faf18b5153e358b95424da6110d6786307ff9efbac764452e1ac8a7d",
+          "name": "ExtendedVariantMode 0.51.0",
+          "status": "installed"
+        },
+        {
+          "key": "8c2accceff423cd95095a62ff2c9d352d53bfe345151843e0349c3784750c958",
+          "name": "CanyonHelper 1.1.6",
+          "status": "installed"
+        },
+        {
+          "key": "ae0b17b757c9ea2d836c98ce5ed70035f48e6fb9c517123356c227718b405714",
+          "name": "ClutterHelper 1.2.1",
+          "status": "installed"
+        },
+        {
+          "key": "beb3f544b0863313f09b3cceff88b90a733d30c8b795b3b99667cb3803dcaaef",
+          "name": "FrostHelper 1.80.2",
+          "status": "installed"
+        },
+        {
+          "key": "da9d0526d6514cabe99b67396ce316ac9596891c7e1cc7dd8921e0a939e031cc",
+          "name": "MaxHelpingHand 1.40.10",
+          "status": "installed"
+        },
+        {
+          "key": "f350d1bc486118c313a5fb880f533fd5065df07bb8510bfa0dae3456893f224b",
+          "name": "FactoryHelper 1.4.1",
+          "status": "installed"
+        }
+      ],
+      "finished": 810982050.581016,
+      "id": "AB8A853D-ED78-459D-B313-149DE2736FF5",
+      "message": "All reviewed mod changes were applied successfully.",
+      "outcome": "completed",
+      "schema": 1,
+      "started": 810982039.375245
+    },
+    "originalAndUnknownSavePreserved": true
+  },
+  "runtime_cache": {
+    "cases": [
+      {
+        "archiveDownloads": 0,
+        "case": "legacy-upgrade",
+        "networkFetches": 0,
+        "policy": "89c9f23458d76d8855dfc6ec15b2097332c6384a023544591f43716991d3d9e7",
+        "updates": [
+          {
+            "bytes": 204,
+            "canUpdate": true,
+            "current": "1.0",
+            "enabled": true,
+            "filename": "helper-old.zip",
+            "latest": "1.3",
+            "name": "Helper",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "archiveDownloads": 0,
+        "case": "upgrade",
+        "networkFetches": 0,
+        "policy": "89c9f23458d76d8855dfc6ec15b2097332c6384a023544591f43716991d3d9e7",
+        "updates": [
+          {
+            "bytes": 204,
+            "canUpdate": true,
+            "current": "1.0",
+            "enabled": true,
+            "filename": "helper-old.zip",
+            "latest": "1.3",
+            "name": "Helper",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "archiveDownloads": 0,
+        "case": "opt-out",
+        "networkFetches": 0,
+        "policy": "89c9f23458d76d8855dfc6ec15b2097332c6384a023544591f43716991d3d9e7",
+        "updates": [
+          {
+            "bytes": 204,
+            "canUpdate": true,
+            "current": "1.0",
+            "enabled": true,
+            "filename": "helper-old.zip",
+            "latest": "1.3",
+            "name": "Helper",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "archiveDownloads": 0,
+        "case": "backoff",
+        "networkFetches": 0,
+        "policy": "89c9f23458d76d8855dfc6ec15b2097332c6384a023544591f43716991d3d9e7",
+        "updates": [
+          {
+            "bytes": 204,
+            "canUpdate": true,
+            "current": "1.0",
+            "enabled": true,
+            "filename": "helper-old.zip",
+            "latest": "1.3",
+            "name": "Helper",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "archiveDownloads": 0,
+        "case": "downgrade",
+        "networkFetches": 0,
+        "policy": "89c9f23458d76d8855dfc6ec15b2097332c6384a023544591f43716991d3d9e7",
+        "updates": [
+          {
+            "bytes": 204,
+            "canUpdate": false,
+            "current": "1.0",
+            "enabled": true,
+            "filename": "helper-old.zip",
+            "latest": "1.3",
+            "name": "Helper",
+            "reason": "Helper 1.3 requires Everest 1.9999.0; the app runtime includes 1.6531.0. Available after an app runtime update."
+          }
+        ]
+      },
+      {
+        "archiveDownloads": 0,
+        "case": "pins",
+        "networkFetches": 0,
+        "policy": "8824d19f5027458f7b354de21b03560cb43761e2546ca31fc0859aceb8a6f217",
+        "updates": [
+          {
+            "bytes": 204,
+            "canUpdate": false,
+            "current": "1.0",
+            "enabled": true,
+            "filename": "helper-old.zip",
+            "latest": "1.3",
+            "name": "Helper",
+            "reason": "App-managed compatibility release. A future app update must approve this version."
+          }
+        ]
+      }
+    ],
+    "checks": [
+      "runtime fingerprints distinguish upgrade and downgrade",
+      "compatibility policy revision invalidates results",
+      "legacy-upgrade re-evaluates stale availability without network",
+      "legacy-upgrade binds schema2 policy without pretending a new index fetch",
+      "legacy-upgrade preserves archives, choice state, index and verified download bytes",
+      "legacy-upgrade subsequent visit reuses the matching policy",
+      "upgrade re-evaluates stale availability without network",
+      "upgrade binds schema2 policy without pretending a new index fetch",
+      "upgrade preserves archives, choice state, index and verified download bytes",
+      "upgrade subsequent visit reuses the matching policy",
+      "opt-out re-evaluates stale availability without network",
+      "opt-out binds schema2 policy without pretending a new index fetch",
+      "opt-out preserves archives, choice state, index and verified download bytes",
+      "opt-out subsequent visit reuses the matching policy",
+      "backoff re-evaluates stale availability without network",
+      "backoff binds schema2 policy without pretending a new index fetch",
+      "backoff preserves archives, choice state, index and verified download bytes",
+      "backoff subsequent visit reuses the matching policy",
+      "downgrade re-evaluates stale availability without network",
+      "downgrade binds schema2 policy without pretending a new index fetch",
+      "downgrade preserves archives, choice state, index and verified download bytes",
+      "downgrade subsequent visit reuses the matching policy",
+      "pins re-evaluates stale availability without network",
+      "pins binds schema2 policy without pretending a new index fetch",
+      "pins preserves archives, choice state, index and verified download bytes",
+      "pins subsequent visit reuses the matching policy"
+    ],
+    "status": "PASS_RUNTIME_CACHE_UPGRADE_DOWNGRADE_OFFLINE_POLICY"
+  },
+  "native_check_counts": {
+    "pure.json": 555,
+    "engine.json": 20,
+    "automatic.json": 7,
+    "runtime-cache.json": 26,
+    "blocked.json": 5,
+    "network.json": 5
+  },
+  "update_policy": {
+    "automaticTrigger": "idle Updates-page visit",
+    "successfulIntervalSeconds": 86400,
+    "failureBackoffSeconds": 3600,
+    "automaticChecksOptional": true,
+    "automaticModInstallation": false,
+    "schema": 2,
+    "offlinePolicyReevaluation": true
+  },
+  "limitations": [
+    "Final fresh-review live fetch timed out twice; host curl also timed out contacting maddie480.ovh. Final UI acceptance uses the production verified-cache fallback with the official index captured earlier, not a new successful live fetch. Retry online checks when the server is reachable.",
+    "Host Spring fixture starts Starjump directly and reloads its saved pre pre 1 room; no new lobby-door acceptance claim",
+    "Host x64 code usage is not ARM64 headroom or a performance benchmark",
+    "Original-IL public preparation and FMOD permission remain release gates",
+    "Physical27 acceptance is limited to the recorded SJ routes and two helper updates; Spring/Paint host coverage stays distinct.",
+    "Final sidecar980 has same-process readback; a subsequent-process reload is not observed."
+  ],
+  "profile": "Profiles/sj-first-play",
+  "existing_content_mods_saves_reused": true,
+  "accepted_fallback": "0.14.0-build-27",
+  "additional_graphics_sj_fallback": "0.12.1-build-24",
+  "physical_build26_accepted": true,
+  "physical_build27_accepted": true,
+  "cloud_upload_confirmed": true,
+  "phone_download_confirmed": true,
+  "next": "Native general catalogue/search/details/file selection using the accepted dependency review, install and report machinery; bounded/offline caches. Then responsive real loading, complete-profile saves/settings and SwiftUI touch editor.",
+  "git_remote_writes": false,
+  "aot_checkout_mutated": false,
+  "delivery": {
+    "build_id": "launcher-runtime-20260913-27",
+    "created_utc": "2026-09-13T09:21:11.090652+00:00",
+    "method": "Versioned iCloud Drive local placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.14.0-build-27",
+    "local_icloud_copy_verified": true,
+    "cloud_upload_confirmed": true,
+    "phone_download_confirmed": false,
+    "physical_execution": false,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 23476359,
+        "sha256": "d251a33ee8b08dae94d08d7fe31ac9c3385b919d996fac7843644081a9d2dc45"
+      },
+      "README-FIRST.txt": {
+        "bytes": 2813,
+        "sha256": "4bdf422634198192b708b9b40a2ab71580c3d727e4b59cc57486c64b8de54f52"
+      },
+      "INSTALL.md": {
+        "bytes": 1167,
+        "sha256": "c0dab9ec60c51cd78fc93267fe4cace076b30da3e4f035c5d69d4e47572c5a6f"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5763,
+        "sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 5559,
+        "sha256": "3b00525bf42c4a868731aa3c269a88c2c0548046100f3b01cade8e0b28033948"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 4491,
+        "sha256": "87fd1bd54a2ba86f57ce297838854e11ccfb27dde4475229e11f150359062605"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 527,
+        "sha256": "b668e93b3edff54d8d96f11f03c394dc6acbe26545abbb08f6824b3a70981063"
+      }
+    },
+    "total_bytes": 23496679,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-13/build-27-ready",
+      "receipt_sha256": "102fc2a8a3949600e44e2b6b5878b5a5b973ae2f07bd0e9cf0e8bf6c13ff437e",
+      "files": 5067
+    },
+    "retention": "Retain accepted26 and graphics/SJ24 cloud fallbacks, every Results folder and exact local historical artifacts.",
+    "cloud_upload_confirmed_utc": "2026-09-13T09:22:03.175569+00:00",
+    "cloud_status_sha256": "f4a81a5423c781f6f14a01c7e2666e18f48710067bffef2a2d14580807fc8dc8",
+    "cloud_status": [
+      {
+        "file": "celeste-jit-probe-TEMPLATE.js",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "INSTALL.md",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "THIRD_PARTY_NOTICES.md",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "TEST-IDENTITY.json",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "CelesteJITEverest-unsigned.ipa",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "README-FIRST.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      }
+    ]
+  },
+  "physical_acceptance_evidence": "BUILD_27_RUNTIME_ACCEPTANCE_EVIDENCE.json",
+  "physical_acceptance_report": "BUILD_27_RUNTIME_ACCEPTANCE.md",
+  "previous_accepted_fallback": "0.13.1-build-26",
+  "delivery_snapshot_scope": "Original upload-time receipt retained unchanged; current phone execution/acceptance is recorded in the top-level fields and linked phone evidence."
+}

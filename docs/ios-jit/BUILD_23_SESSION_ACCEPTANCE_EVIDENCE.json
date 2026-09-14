@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "status": "PASS_BUILD23_PHYSICAL_TITLE_AND_MODDED_QUIT",
+  "reviewed_utc": "2026-09-12T21:06:19.009437+00:00",
+  "raw_evidence": {
+    "path": ".build/ios-jit/device-evidence/2026-09-12/build-23-results/CelesteJIT-fe1b878b-f3ac-414f-97af-5c6d246e98a4.diagnostics.json",
+    "bytes": 4540103,
+    "sha256": "f13d5ca1e33ddfc76adea9b3029286285f17232cac6a95c48ffb46df6b984f28"
+  },
+  "build_info_exact_payload_match": true,
+  "device": {
+    "guest_bundle_id": "io.github.hmcneill46.celeste.everest.jit.everest",
+    "hardware": "iPhone16,2",
+    "os_build_description": "Version 26.5 (Build 23F77)",
+    "os_version": "26.5",
+    "page_size": 16384,
+    "physical_memory_bytes": 8025686016,
+    "simulator": 0
+  },
+  "sessions": [
+    {
+      "session": "fe1b878b-f3ac-414f-97af-5c6d246e98a4",
+      "pid": 3585,
+      "build_id": "launcher-session-20260912-23",
+      "native_checks": 26,
+      "graphics_checks": 11,
+      "enabled_zips": 56,
+      "registered_metadata_identities": 59,
+      "normal_quit": true,
+      "native_return": true,
+      "post_run_alive": true,
+      "frames": 14726,
+      "runtime": {
+        "code_allocations": 12323,
+        "code_budget_bytes": 536870912,
+        "code_reserved_bytes": 205651968,
+        "jit_done_count": 36001,
+        "jit_failed": 0,
+        "jit_unowned": 0,
+        "managed_errors": 0,
+        "patch_rejections": 0,
+        "patches": 12586
+      },
+      "stage_seconds": {
+        "1": 0.172037917,
+        "2": 0.064675625,
+        "3": 0.053659125,
+        "4": 0.219361916,
+        "5": 7.989182625,
+        "6": 0.370526042,
+        "7": 0.055320625
+      },
+      "save_messages": [
+        "settings; bytes=4883",
+        "settings; bytes=4883",
+        "SaveData slot=1; bytes=160790; deaths=56"
+      ],
+      "mod_save_messages": [
+        "prior=320; written=403; readback=403; bytes=11"
+      ],
+      "rooms": [
+        "area=15; sid=StrawberryJam2021/0-Gyms/1-Beginner; mode=Normal; room=5-theobasics",
+        "area=15; sid=StrawberryJam2021/0-Gyms/1-Beginner; mode=Normal; room=1-hub",
+        "area=21; sid=StrawberryJam2021/0-Lobbies/1-Beginner; mode=Normal; room=sj2021beginnerlobby",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-01",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-02",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-03",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-04",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-05",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-06",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-07",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-08",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-09",
+        "area=38; sid=StrawberryJam2021/1-Beginner/asteriskblue; mode=Normal; room=a-10"
+      ],
+      "input_sources": [
+        "source=Controller; controller_connected=True"
+      ],
+      "shutdown_heartbeat_count": 4,
+      "max_sampled_footprint_bytes": 4011282424,
+      "quit_to_result_seconds": 9.103961944580078,
+      "result_to_alive_seconds": 5.232797145843506
+    },
+    {
+      "session": "a6f44280-90d9-4c15-9fb6-8047ddc78205",
+      "pid": 3545,
+      "build_id": "launcher-session-20260912-23",
+      "native_checks": 26,
+      "graphics_checks": 9,
+      "enabled_zips": 56,
+      "registered_metadata_identities": 59,
+      "normal_quit": true,
+      "native_return": true,
+      "post_run_alive": true,
+      "frames": 1987,
+      "runtime": {
+        "code_allocations": 7969,
+        "code_budget_bytes": 536870912,
+        "code_reserved_bytes": 133726208,
+        "jit_done_count": 28818,
+        "jit_failed": 0,
+        "jit_unowned": 0,
+        "managed_errors": 0,
+        "patch_rejections": 0,
+        "patches": 12475
+      },
+      "stage_seconds": {
+        "1": 0.160876917,
+        "2": 0.056115708,
+        "3": 0.053890833,
+        "4": 0.207569584,
+        "5": 4.79343975,
+        "6": 0.378545083,
+        "7": 0.05601725
+      },
+      "save_messages": [
+        "settings; bytes=4883",
+        "settings; bytes=4883"
+      ],
+      "mod_save_messages": [],
+      "rooms": [],
+      "input_sources": [],
+      "shutdown_heartbeat_count": 2,
+      "max_sampled_footprint_bytes": 3653291832,
+      "quit_to_result_seconds": 5.882258892059326,
+      "result_to_alive_seconds": 5.239399194717407
+    }
+  ],
+  "earlier_builds_separate": true,
+  "retained_existing_game_and_mods": true,
+  "mod_counter_prior_build22": 320,
+  "mod_counter_build23": 403,
+  "latest_403_fresh_process_reload_observed": false,
+  "limits": [
+    "Export contains title Quit followed by modded play/Quit, not a third process reloading the latest counter 403.",
+    "Existing prior counter 320 and a saved gym room loaded in a fresh process; exact checkpoint UI was not independently captured.",
+    "Touch-to-controller activity observed; keyboard and controller-disconnect transitions not recorded.",
+    "No gameplay background/resume in the new build23 sessions."
+  ],
+  "decision": "Proceed with isolated Metal backbuffer fix; preserve build23 as complete-shutdown fallback; carry latest-save reload into build24 phone test."
+}

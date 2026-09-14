@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-11",
+  "stage": "G2_REAL_MONOMOD_HOOK_CANARY",
+  "status": "LOCAL_CHECKS_PASS_UNSIGNED_IPA_UPLOADED_PHYSICAL_TEST_PENDING",
+  "buildId": "hook-canary-20260911-07",
+  "version": "0.3.0",
+  "buildNumber": "7",
+  "guestBundleId": "io.github.hmcneill46.celeste.everest.jit.canary",
+  "target": {
+    "model": "iPhone 15 Pro Max",
+    "os": "iOS 26.5",
+    "probeHost": "LiveContainer 1",
+    "stikDebugHost": "LiveContainer 2"
+  },
+  "physicalG1AcceptedInBuild6": true,
+  "physicalG2Accepted": false,
+  "gameplayImplemented": false,
+  "baseCommit": "b65bedd20016dc3482d7702d7f0a9707bc2b1479",
+  "committedOrPushed": false,
+  "aotCheckoutModified": false,
+  "g1SourcesModified": false,
+  "runtimeCommit": "46295af5828b062bbbf93a9cef50fd8cb9fbcb09",
+  "runtimeVersion": "8.0.28",
+  "runtimePatchSha256": "8851379ad30dc56ecbf4cbb8516afda53968a4cee8268a59c7d9e538e5be588b",
+  "aotDisabled": true,
+  "interpreterDisabled": true,
+  "codeBudgetBytes": 8388608,
+  "unchangedFromBuild6": [
+    "native runtime and component archive hashes",
+    "168 framework assembly hashes",
+    "runtime config",
+    "7-file runtime patch",
+    "script template",
+    "allocator and worker detach helpers"
+  ],
+  "monoModPin": {
+    "repository": "https://github.com/MonoMod/MonoMod.git",
+    "commit": "dfc30a1506d37fb88a2c2be004f525205f46a24c",
+    "iced_commit": "c50f29b7bc305696895c075f3fc7719751426b12",
+    "sdk": {
+      "version": "9.0.300",
+      "metadata_url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/9.0/releases.json",
+      "name": "dotnet-sdk-osx-x64.tar.gz",
+      "rid": "osx-x64",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.300/dotnet-sdk-9.0.300-osx-x64.tar.gz",
+      "hash": "36ff37eec764c9b509fecea7ea47e4ad3d723b40eb463158de85a4f70dab6583989c4cb7324a8e00fde727dfa77b7ff63f489c255dbce87c1ee725ae445eef62"
+    }
+  },
+  "monoModHostingPatchSha256": "822d7337c909538c8942b77f7c39192b85ea67b1359ac7a547a1590ed17cbfce",
+  "hookAssembliesSha256": {
+    "Mono.Cecil.Mdb.dll": "28cb367972bdc1cd43e4006306af2fd96d37f4ed4b239ee90e1dc7237a93af7f",
+    "Mono.Cecil.Pdb.dll": "a332332633fbcb20e8d50e49b4db7bd1557721417122cf0c5f4c42f2332391d0",
+    "Mono.Cecil.Rocks.dll": "bf992f3dce364ebcc3200fa7832ef07e20b4e2dbc3a8a6213ce44e3d239db984",
+    "Mono.Cecil.dll": "831dca77470d85cb6ffbea3072daa7a3df5b7c9fcfd9c3f43674a9be99d4bfcf",
+    "MonoMod.Backports.dll": "ac3f32bfd44aab83abf71abdff6dde548d57b7c0f8a1fe6d8964e348b4eeafb1",
+    "MonoMod.Core.dll": "86de611e4490d4c8ee720b484c68267efa2f8481e2f869e8d7b2de60b632f3c2",
+    "MonoMod.ILHelpers.dll": "fdd0e3538340fd78b8f521e62b8cac1ebb7683ac1f27f6aaedfc1044b14bf4bb",
+    "MonoMod.Iced.dll": "aaa9516a394e98c654c5cdc86ae818cf06cb2bb3d91232fe605cf2a72899e988",
+    "MonoMod.RuntimeDetour.dll": "98e2c26d4fd4c8c634d9298a9536072b4028efb550a90308de7942059370a6bb",
+    "MonoMod.Utils.dll": "79becdd4423ad144ed01b9482329bdf62f9849894708da7fd640b1e1e84d4872"
+  },
+  "localTests": {
+    "actualMonoHost": {
+      "status": "PASS",
+      "runtime": "Mono 8.0.28 macOS x64, cooperative GC, AOT/interpreter disabled",
+      "baselineStages": 8,
+      "hookAssertions": 42,
+      "completionMarkers": 2,
+      "codePatches": 108,
+      "jitEvents": 2986,
+      "jitBytes": 1302301,
+      "workerDetachments": 2,
+      "jitFailures": 0,
+      "patchRejections": 0,
+      "physicalBackgroundTest": false
+    },
+    "deviceBridgeOnHostAliases": {
+      "status": "PASS",
+      "actualDeviceBranchCompiled": true,
+      "successfulPatches": 5,
+      "rejectedPatches": 11,
+      "sanitizers": [
+        "address",
+        "undefined"
+      ],
+      "monoMetadata": "narrow mocks",
+      "executedArm64": false
+    },
+    "simulator": {
+      "status": "PASS",
+      "os": "iOS 26.5",
+      "architecture": "x86_64",
+      "checked": [
+        "import",
+        "initial and resume disabled without JIT",
+        "export",
+        "800 persisted and rendered log events",
+        "prior-session and console recovery"
+      ],
+      "shareSheetAutomated": false,
+      "jitExecution": false
+    },
+    "ipa": {
+      "status": "PASS_UNSIGNED_HOOK_IPA_AND_EXTERNAL_FIXTURE",
+      "ipa_bytes": 10868752,
+      "ipa_sha256": "59edb0bd96ab6f870e16c5657c87298e5cbdb25916307bfc40663f9095512fe0",
+      "dll_sha256": "c4256d9f5f6400fe5b23a7b1590c4b343c280a90d882fbce3efb37999dc28157",
+      "framework_assembly_count": 168,
+      "hook_assembly_count": 10,
+      "dsym_inside_ipa": false,
+      "code_signature": false,
+      "runtime_and_sources_match_receipt": true,
+      "external_fixture_not_in_ipa": true,
+      "device_execution": false
+    }
+  },
+  "artifacts": {
+    "unsignedIpa": "artifacts/ios-jit/hook-canary-20260911-07/CelesteJITHooks-unsigned.ipa",
+    "ipaSha256": "59edb0bd96ab6f870e16c5657c87298e5cbdb25916307bfc40663f9095512fe0",
+    "ipaBytes": 10868752,
+    "externalDll": "HookCanary-v0.3.0.dll",
+    "dllSha256": "c4256d9f5f6400fe5b23a7b1590c4b343c280a90d882fbce3efb37999dc28157",
+    "dllBytes": 22016,
+    "compiledAfterIpaPackaging": true,
+    "scriptTemplateSha256": "79d53b7c77fd2cfdb6045e1b699c2b8e0eca3822d9cfb98a03556b35d674b72b",
+    "executableUuid": "06BA762E-0B3F-3797-9040-9A8DCBE7247A",
+    "externalDsym": "artifacts/ios-jit/hook-canary-20260911-07/CelesteJITHooks.app.dSYM"
+  },
+  "delivery": {
+    "route": "iCloud Drive",
+    "folder": "Celeste JIT Tests/0.3.0-build-7",
+    "totalBytes": 10904418,
+    "filesSha256": {
+      "CelesteJITHooks-v0.3.0-build-7-unsigned.ipa": "59edb0bd96ab6f870e16c5657c87298e5cbdb25916307bfc40663f9095512fe0",
+      "HookCanary-v0.3.0.dll": "c4256d9f5f6400fe5b23a7b1590c4b343c280a90d882fbce3efb37999dc28157",
+      "INSTALL.md": "a5971c7277a7b2466e81371616e1fc50a61207a86a9766add462cb374a4aa2a8",
+      "README-FIRST.txt": "819b11df04a3e2ecb37f75814177dd6ecd71d9ba2b6106f03233329b332f1163",
+      "SHA256SUMS.txt": "56287fb526b6959392c0046567e0de6bb8ab55ed8f3f8a327f578fbcdf444890",
+      "celeste-jit-probe-TEMPLATE.js": "79d53b7c77fd2cfdb6045e1b699c2b8e0eca3822d9cfb98a03556b35d674b72b"
+    },
+    "copiedBytesVerified": true,
+    "cloudUploadConfirmed": true,
+    "cloudUploadObservedUtc": "2026-09-11T09:44:02Z",
+    "phoneDownloadObserved": false,
+    "ipaInstalledOrLaunchedByHost": false,
+    "exportRetained": true,
+    "initialTransientAccountErrorCleared": true
+  },
+  "sourceSnapshot": ".build/ios-jit/device-evidence/2026-09-11/build-7-ready/source-snapshot",
+  "sourceFileCount": 70,
+  "receipts": {
+    "build-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/build-receipt.json",
+      "sha256": "1f65d1d34be757f13635ccb52ca7eca126e728abb5528d3c8b0f9968b900a743"
+    },
+    "fixture-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/fixture-receipt.json",
+      "sha256": "12b2ec9b87089aa476cdb96d8a98da4660fc199c41935d3aebc57d52669a7b3c"
+    },
+    "host-mono-hooks-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/host-mono-hooks-receipt.json",
+      "sha256": "a73107a910a9c654b6ed43f99ed1a040dfed29473353684ba5119396042900dc"
+    },
+    "host-mono-hooks.log": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/host-mono-hooks.log",
+      "sha256": "012a8627c2f835bfb3d09f2f78a2da6b7cc8470e951140ef351222a29ae1d58b"
+    },
+    "alias-patch-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/alias-patch-receipt.json",
+      "sha256": "04f88bf4523ed0bae1cd464670d630ebff182bc6042e87144db19e9cf7342e04"
+    },
+    "dependencies-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/dependencies-receipt.json",
+      "sha256": "dd980b76bfee7edce1f5a90db0faef43e7e44a64f7121d03b08bb55e8c508a6a"
+    },
+    "simulator-ui-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/simulator-ui-receipt.json",
+      "sha256": "a3b822ca34c7f68a7ed326d423259b7a037492061246aa3cf85075466386f848"
+    },
+    "package-validation.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/package-validation.json",
+      "sha256": "e52f6a9777845cda58059139f966baf9217995edf5d480b8f1ed3f05002ae5dd"
+    },
+    "delivery-receipt.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/delivery-receipt.json",
+      "sha256": "ff4789ee749a8b0046bea52d388c434eab4035d5248668970038069339575467"
+    },
+    "icloud-upload-status.json": {
+      "path": "artifacts/ios-jit/hook-canary-20260911-07/icloud-upload-status.json",
+      "sha256": "f7e519625453c01f336269ce867ec460e7c76afa0ae2b7299353e8d5995ee6ae"
+    }
+  },
+  "knownLimits": [
+    "public Hook rejects generic source methods and generic declaring types",
+    "upstream ARM64 absolute detour requires 16 owned method bytes",
+    "hook mutations serialized; concurrent initial patching not tested",
+    "targets non-inlined; recompilation notifications not implemented in pinned Mono adapter",
+    "8 MiB process-lifetime budget; no growth, unload or restart",
+    "invariant globalization and bounded native imports",
+    "not an Everest/game/mod compatibility result"
+  ],
+  "physicalPassNeeds": [
+    "exact IPA, DLL and script identity",
+    "fresh PID/nonce prep and verified debugger detach",
+    "all 8 baseline stages and 32 initial hook assertions",
+    "owned JIT addresses and distinct valid RX/RW patch aliases with no rejection",
+    "clean initial worker detach",
+    "same process background interval >=20 seconds",
+    "10 resumed hook assertions including retained and freshly installed hooks",
+    "new DynamicMethod JIT in resume phase",
+    "clean second worker detach",
+    "g2_hooks_pass, hook_resume_result_presented and foreground hook_resume_post_run_alive"
+  ],
+  "nextOnPass": "G3: integrate a playable Celeste baseline into the JIT host with native graphics/audio/input, then Everest and a small real mod; preserve separate AOT products.",
+  "physicalFollowup": {
+    "report": "BUILD_7_PROTOCOL_AND_BUILD_8.md",
+    "result": "BUILD7_FAILED_BEFORE_DEBUGGER_ATTACH_WRONG_NATIVE_HEADER",
+    "declaredBytesPerArena": 4194304,
+    "actualRequestedBytesPerArena": 65536,
+    "userSetupCorrect": true,
+    "retestBuildId": "hook-canary-20260911-08"
+  }
+}

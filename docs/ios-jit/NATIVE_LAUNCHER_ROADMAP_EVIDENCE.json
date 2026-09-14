@@ -1,0 +1,627 @@
+{
+  "schema": 1,
+  "status": "PASS_CAPTURED_PUBLIC_SERVICE_CONTRACTS_AND_SPRING_PLAN_EXAMPLE",
+  "audit_date": "2026-09-12",
+  "production_solver_implemented": false,
+  "mods_downloaded_or_installed": false,
+  "updates_count": 6166,
+  "graph_count": 6166,
+  "versions": {
+    "Olympus": "568cc5fc846836d480e41f928a3db7c06e87798d",
+    "SearchService": "c9a933911eceac9022930bcdcdc7cf53552c62df",
+    "CurrentUpdaterBackend": "904284430da1e72218696cac6e4d0aebea663d1a"
+  },
+  "validated_services": [
+    "latest",
+    "downloads",
+    "name search",
+    "Maps filter",
+    "Helpers filter",
+    "categories",
+    "subcategories response",
+    "GameBanana profile details",
+    "GameBanana featured response",
+    "update database",
+    "dependency graph"
+  ],
+  "memorial_helper": {
+    "id": "memorialHelper",
+    "available_version": "1.0.4",
+    "required_by_spring": "1.0.0",
+    "bytes": 13965,
+    "page": "https://gamebanana.com/tools/6850",
+    "already_enabled_in_phone_export": true
+  },
+  "important_contracts": [
+    "Internal YAML identity is different from a search title.",
+    "Current Olympus response GameBananaType is Obsolete; use provided PageURL and opaque IDs.",
+    "Upstream integrity hash is xxHash64 seed zero, not a signature.",
+    "A current dependency graph cannot describe every historical installed release.",
+    "Multi-file pages include optional files; do not install every attachment.",
+    "Studio field exists in direct profiles but was empty in all three samples; nonempty studio rendering remains untested."
+  ],
+  "categories": [
+    "All",
+    "Assets",
+    "Dialog",
+    "Effects",
+    "Helpers",
+    "Maps",
+    "Mechanics",
+    "Other/Misc",
+    "Skins",
+    "Tools",
+    "UI",
+    "WiPs"
+  ],
+  "illustrative_spring_plan": {
+    "basis": "Latest indexed Spring 1.7.10 added to build22's enabled 56-ZIP set; not a plan for an unobserved older owner ZIP.",
+    "additions": {
+      "SpringCollab2020": {
+        "Version": "1.7.10",
+        "LastUpdate": 1777722265,
+        "GameBananaFileId": "1691049",
+        "MirrorName": "1691049",
+        "URL": "https://gamebanana.com/mmdl/1691049",
+        "xxHash": [
+          "42206a9107ba1e16"
+        ],
+        "Size": 56313473
+      },
+      "SpringCollab2020Audio": {
+        "Version": "1.0.0",
+        "LastUpdate": 1599575103,
+        "GameBananaFileId": "484937",
+        "MirrorName": "484937",
+        "URL": "https://gamebanana.com/mmdl/484937",
+        "xxHash": [
+          "312e55329aea1c7a"
+        ],
+        "Size": 513411848
+      },
+      "ClutterHelper": {
+        "Version": "1.2.1",
+        "LastUpdate": 1726539541,
+        "GameBananaFileId": "1282032",
+        "MirrorName": "1282032",
+        "URL": "https://gamebanana.com/mmdl/1282032",
+        "xxHash": [
+          "e37e52a14d33fc8a"
+        ],
+        "Size": 64941
+      }
+    },
+    "download_bytes": 569790262,
+    "existing_compatible_helpers_left_unchanged": true,
+    "optional_dependencies_not_auto_installed": true,
+    "ios_execution_compatibility_proven": false
+  },
+  "fetches": [
+    {
+      "file": "olympus-gamebanana.lua",
+      "url": "https://raw.githubusercontent.com/EverestAPI/Olympus/568cc5fc846836d480e41f928a3db7c06e87798d/src/scenes/gamebanana.lua",
+      "status": 200,
+      "bytes": 32106,
+      "sha256": "04a66ea5a1e19dccd5e462fc741df8cf8ad275dcb3c7cc15ed9a8d68856ceb4d"
+    },
+    {
+      "file": "olympus-modupdater.lua",
+      "url": "https://raw.githubusercontent.com/EverestAPI/Olympus/568cc5fc846836d480e41f928a3db7c06e87798d/src/modupdater.lua",
+      "status": 200,
+      "bytes": 4130,
+      "sha256": "835261f9c399eb372d50b5cfa5d2acad41f49afe2fcef5416549e8e5770118be"
+    },
+    {
+      "file": "olympus-api-emulator.cs",
+      "url": "https://raw.githubusercontent.com/EverestAPI/Olympus/568cc5fc846836d480e41f928a3db7c06e87798d/sharp/GameBananaAPIEmulator.cs",
+      "status": 200,
+      "bytes": 8708,
+      "sha256": "30fbb73572527767c7d5b9940683e060f40ade901038eb02cd64725868860e80"
+    },
+    {
+      "file": "updater-README.md",
+      "url": "https://raw.githubusercontent.com/maddie480/EverestUpdateCheckerServer/45c5d0976bc8401dac503c177e28e32d33949a11/README.md",
+      "status": 200,
+      "bytes": 13752,
+      "sha256": "3891e11ffeb56055d10a87f41414f1638bc95b4c7696e562ed9ac53cc26b6c36"
+    },
+    {
+      "file": "updater-search.java",
+      "url": "https://raw.githubusercontent.com/maddie480/EverestUpdateCheckerServer/45c5d0976bc8401dac503c177e28e32d33949a11/src/main/java/ovh/maddie480/everest/updatechecker/ModSearchDatabaseBuilder.java",
+      "status": 200,
+      "bytes": 17852,
+      "sha256": "985df8a4fd9bb262341874df98ab111d86ad0af11d77f5672c448c6a818fa7d7"
+    },
+    {
+      "file": "website-tree.json",
+      "url": "https://api.github.com/repos/maddie480/RandomStuffWebsite/git/trees/main?recursive=1",
+      "status": 200,
+      "bytes": 130608,
+      "sha256": "660f4a9ae1f3c9a025967f40e801f90bd236ffa02e637b2f4248742fbb206448"
+    },
+    {
+      "file": "gamebanana-api.html",
+      "url": "https://gamebanana.com/apiv11",
+      "status": 200,
+      "bytes": 313,
+      "sha256": "f04db016a1786d4940090763219bb5a42b6b805c1fdd8a5a8cc33a99611dcb03"
+    },
+    {
+      "file": "modupdater-pointer.txt",
+      "url": "https://everestapi.github.io/modupdater.txt",
+      "final_url": "https://everestapi.github.io/modupdater.txt",
+      "status": 200,
+      "bytes": 50,
+      "sha256": "d2579ef3f58926870af5655170d9d398d4216c6ffaa872b2f0acf494d2a85da7",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"6aa59708-32\"",
+        "Last-Modified": "Sat, 12 Sep 2026 18:16:40 GMT",
+        "Cache-Control": "max-age=600",
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:56.966558+00:00"
+    },
+    {
+      "file": "modgraph-pointer.txt",
+      "url": "https://everestapi.github.io/modgraph.txt",
+      "final_url": "https://everestapi.github.io/modgraph.txt",
+      "status": 200,
+      "bytes": 55,
+      "sha256": "f73224344da7a93243c435f76f4aff8e357196b3e6052095ad791e4f3c86320b",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"6aa59708-37\"",
+        "Last-Modified": "Sat, 12 Sep 2026 18:16:40 GMT",
+        "Cache-Control": "max-age=600",
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:56.963722+00:00"
+    },
+    {
+      "file": "website-search.java",
+      "url": "https://raw.githubusercontent.com/maddie480/RandomStuffWebsite/c9a933911eceac9022930bcdcdc7cf53552c62df/src/main/java/ovh/maddie480/randomstuff/frontend/CelesteModSearchService.java",
+      "final_url": "https://raw.githubusercontent.com/maddie480/RandomStuffWebsite/c9a933911eceac9022930bcdcdc7cf53552c62df/src/main/java/ovh/maddie480/randomstuff/frontend/CelesteModSearchService.java",
+      "status": 200,
+      "bytes": 32645,
+      "sha256": "502fc5482864127f26c0bfed63eed6b449646f2315d8f9559be9cd306b8a8895",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"8b14d45e3f4ef580e303afb8d26915988209eea3f23ceed3b47ac8c9b016ba41\"",
+        "Last-Modified": null,
+        "Cache-Control": "max-age=300",
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:56.930394+00:00"
+    },
+    {
+      "file": "website-README.md",
+      "url": "https://raw.githubusercontent.com/maddie480/RandomStuffWebsite/c9a933911eceac9022930bcdcdc7cf53552c62df/README.md",
+      "final_url": "https://raw.githubusercontent.com/maddie480/RandomStuffWebsite/c9a933911eceac9022930bcdcdc7cf53552c62df/README.md",
+      "status": 200,
+      "bytes": 21503,
+      "sha256": "da6f422fb24ff94d951fe3fc022f1b4f77704bba400d1c75407dc5a9f44f99a2",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"15c19353ec92f7088d8eae988a46b8bdf06199112e52ad1154a071a123088073\"",
+        "Last-Modified": null,
+        "Cache-Control": "max-age=300",
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:56.932336+00:00"
+    },
+    {
+      "file": "backend-tree.json",
+      "url": "https://api.github.com/repos/maddie480/RandomBackendStuff/git/trees/main?recursive=1",
+      "final_url": "https://api.github.com/repos/maddie480/RandomBackendStuff/git/trees/main?recursive=1",
+      "status": 200,
+      "bytes": 97469,
+      "sha256": "847244fce4dc0a5f8190f2db474781eb5245a559a3d317aae665bb983d039782",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"847244fce4dc0a5f8190f2db474781eb5245a559a3d317aae665bb983d039782\"",
+        "Last-Modified": "Fri, 11 Sep 2026 20:07:25 GMT",
+        "Cache-Control": "public, max-age=60, s-maxage=60",
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:57.514096+00:00"
+    },
+    {
+      "file": "gamebanana-sj-profile.json",
+      "url": "https://gamebanana.com/apiv11/Mod/424541/ProfilePage",
+      "final_url": "https://gamebanana.com/apiv11/Mod/424541/ProfilePage",
+      "status": 200,
+      "bytes": 85670,
+      "sha256": "45e2f146b3e340bc7d03d2ec2a816956039edaf9d6b2c212a579f2aadb18c814",
+      "headers": {
+        "Content-Type": "application/json; charset=UTF-8",
+        "ETag": null,
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:57.446246+00:00"
+    },
+    {
+      "file": "gamebanana-celeste-top.json",
+      "url": "https://gamebanana.com/apiv11/Game/6460/TopSubs",
+      "final_url": "https://gamebanana.com/apiv11/Game/6460/TopSubs",
+      "status": 200,
+      "bytes": 23787,
+      "sha256": "a97d380e0edf2f1eb204e7059d2aa92299e4e3974c387eb6e1a584e714b2b091",
+      "headers": {
+        "Content-Type": "application/json; charset=UTF-8",
+        "ETag": null,
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:57.439731+00:00"
+    },
+    {
+      "file": "olympus-memorial-search.json",
+      "url": "https://maddie480.ovh/celeste/gamebanana-search?q=memorialHelper",
+      "final_url": "https://maddie480.ovh/celeste/gamebanana-search?q=memorialHelper",
+      "status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "headers": {
+        "Content-Type": "application/json",
+        "ETag": "b25b294cb4deb69ea00a4c3cf3113904801b6015e5956bd019a8570b1fe1d6040e944ef3cdee16d0a46503ca6e659a25f21cf9ceddc13f352a3c98138c15d6af",
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:57.182666+00:00"
+    },
+    {
+      "file": "olympus-categories.json",
+      "url": "https://maddie480.ovh/celeste/gamebanana-categories",
+      "final_url": "https://maddie480.ovh/celeste/gamebanana-categories",
+      "status": 200,
+      "bytes": 997,
+      "sha256": "74cc7b95f4d9db6f50dfb2c0a622402a470595cf6fd82f48f2f9ec4a37775cc3",
+      "headers": {
+        "Content-Type": "text/yaml",
+        "ETag": "7b4fe3374083d6a514680145f83b57461345a5b793dd0926aa29ed21d6d126de9a5bc193b01ec3972dc028d4e76e4a364309d9d214edb405cacd9cba1dcefa87",
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:57.472882+00:00"
+    },
+    {
+      "file": "olympus-new.json",
+      "url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=latest",
+      "final_url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=latest",
+      "status": 200,
+      "bytes": 50828,
+      "sha256": "2fc8120e83ece0f0fb25f7e371e9e08ca082b1fc7a5d2fd40edd0eabb89587ea",
+      "headers": {
+        "Content-Type": "application/json",
+        "ETag": "15b83e41d70b7cde90f1ba47d5ca54d0d39c5325bb9303befa4d79ba4d52c7f43b38acec7967c20cc31d62506c5ad7989b672d39d3b91ae4b7af2441e7cb7683",
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "Retry-After": null
+      },
+      "fetched_utc": "2026-09-12T19:40:57.716357+00:00"
+    },
+    {
+      "file": "backend-ModUpdater.java",
+      "url": "https://raw.githubusercontent.com/maddie480/RandomBackendStuff/904284430da1e72218696cac6e4d0aebea663d1a/src/main/java/ovh/maddie480/randomstuff/backend/celeste/moddatabase/ModUpdater.java",
+      "status": 200,
+      "bytes": 18165,
+      "sha256": "5efc190c781f000ca34ba735b9aebcab7b47d32296d4eb947f7d014654fd7eaa",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"a2b7a0146e34049137afad7e7f8ea1f8e77aeec0a7d5f289366fdc3a77219cd4\"",
+        "Last-Modified": null,
+        "Cache-Control": "max-age=300",
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:42:16.450697+00:00"
+    },
+    {
+      "file": "backend-GameBananaModProvider.java",
+      "url": "https://raw.githubusercontent.com/maddie480/RandomBackendStuff/904284430da1e72218696cac6e4d0aebea663d1a/src/main/java/ovh/maddie480/randomstuff/backend/celeste/moddatabase/providers/GameBananaModProvider.java",
+      "status": 200,
+      "bytes": 15772,
+      "sha256": "5691aae80964cfe01593f68b6478c65ec0d94cdb106cd7ae765a18fae2d9b309",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"856aa7c7b419370b70a8451c05e9984339f956aff2af4fbc6a169e047712b0a6\"",
+        "Last-Modified": null,
+        "Cache-Control": "max-age=300",
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:42:16.445557+00:00"
+    },
+    {
+      "file": "backend-ModRecord.java",
+      "url": "https://raw.githubusercontent.com/maddie480/RandomBackendStuff/904284430da1e72218696cac6e4d0aebea663d1a/src/main/java/ovh/maddie480/randomstuff/backend/celeste/moddatabase/model/ModRecord.java",
+      "status": 200,
+      "bytes": 890,
+      "sha256": "676291d3183bcbdb17ef5a847fa4da9b00cb9abb341e3e1dadd2d33d972721f9",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"6768390a3f3554741983ff222eb61dfbb2019ba6240be92220b5868488fc0b0b\"",
+        "Last-Modified": null,
+        "Cache-Control": "max-age=300",
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:42:16.455797+00:00"
+    },
+    {
+      "file": "backend-FileRecord.java",
+      "url": "https://raw.githubusercontent.com/maddie480/RandomBackendStuff/904284430da1e72218696cac6e4d0aebea663d1a/src/main/java/ovh/maddie480/randomstuff/backend/celeste/moddatabase/model/FileRecord.java",
+      "status": 200,
+      "bytes": 1214,
+      "sha256": "2b0eea9d0bc25fb07068edbd9800933a8422378e5cbfc741d0e0a987591705f5",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"9b9bcb4b08c32b9623c12ee863f741b1c8618acc4d18f730b2b5a339ecbb5e9f\"",
+        "Last-Modified": null,
+        "Cache-Control": "max-age=300",
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:42:16.443323+00:00"
+    },
+    {
+      "file": "backend-EverestYamlProcessor.java",
+      "url": "https://raw.githubusercontent.com/maddie480/RandomBackendStuff/904284430da1e72218696cac6e4d0aebea663d1a/src/main/java/ovh/maddie480/randomstuff/backend/celeste/moddatabase/EverestYamlProcessor.java",
+      "status": 200,
+      "bytes": 4511,
+      "sha256": "7441768a9e7dee60d76cbf32859f1df846764ac62eae18975570fd8021283433",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"cff02589a44cfac82597aa6bcc80702a1c5b9a6ab365d135e7ae3ca2ca2a2e1a\"",
+        "Last-Modified": null,
+        "Cache-Control": "max-age=300",
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:42:17.048545+00:00"
+    },
+    {
+      "file": "current-updates.yaml",
+      "url": "https://maddie480.ovh/celeste/everest_update.yaml",
+      "status": 200,
+      "bytes": 1235725,
+      "sha256": "5f7b4bb8869229d0f6926a650e67c6cafa3c0d031104e0c0da75e95c7d8dfde1",
+      "headers": {
+        "Content-Type": "text/yaml",
+        "ETag": "79a716fa1e2dcf99c6ccc4a0320397aacf3750c8aba0c0d30bed747172698acd1851faaa4854554bb73506e8c175a805e31d6064202bef352ba220d8d3b5bef9",
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:42:17.052479+00:00"
+    },
+    {
+      "file": "current-graph.yaml",
+      "url": "https://maddie480.ovh/celeste/mod_dependency_graph.yaml",
+      "status": 200,
+      "bytes": 3190791,
+      "sha256": "03f78f097d1f496c4e9ed3de58fe6ec8eab1217d2c0594bbde3d24642d3954a9",
+      "headers": {
+        "Content-Type": "text/yaml",
+        "ETag": "8214337b1681ce04b11ea8fe0d27762a1af3ff16568303d88dcdf26965195ffcb03410c1e1bffb626406bdf1f0877d2fdbfe60510c51dd969fa1993a945fe766",
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:42:17.850030+00:00"
+    },
+    {
+      "file": "olympus-spring-search.json",
+      "url": "https://maddie480.ovh/celeste/gamebanana-search?q=spring%20collab",
+      "status": 200,
+      "bytes": 57564,
+      "sha256": "7219e63658725faf37ae67fab598a2ce2a50b27d6c44a7f3cf17031ef77ec579",
+      "headers": {
+        "Content-Type": "application/json",
+        "ETag": "2effc061de861ceeae1eef3ebd1824f8f77cfad9d941354426366379d0684b861a5c410ee5c25e3587bf8e4597a04a62e7353cbbf9e10239f8bea8eb31ad7351",
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:42:16.835532+00:00"
+    },
+    {
+      "file": "olympus-memorial-spaced-search.json",
+      "url": "https://maddie480.ovh/celeste/gamebanana-search?q=memorial%20helper",
+      "status": 200,
+      "bytes": 88287,
+      "sha256": "99f41422827a9be7a7fc2458f26cf0547c7ce5661e2bcdbe52bcd2ee2113bf9f",
+      "headers": {
+        "Content-Type": "application/json",
+        "ETag": "39174cc85f1bea1dafa0ea7bf0859bee908c305531ecac150e3d71a0ab9d6282a6b5f76d32ccbab56438b8d0ee07b00d507ecc6155a7e58f67412a99970c33bb",
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:42:17.753681+00:00"
+    },
+    {
+      "file": "olympus-popular.json",
+      "url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=downloads",
+      "status": 200,
+      "bytes": 212380,
+      "sha256": "76dec608bdb10955f67bf92590cb5709920f971f38c7e1d5a6ad6722b0da5a3d",
+      "headers": {
+        "Content-Type": "application/json",
+        "ETag": "4f4052fc8a0cc84f3838e3e58f51381f4efd458185be0c2b8acf088084c6e8c754877199b368bbb8ee110545207f4f430caf07b26d0b75b7933f39e67320a6e8",
+        "Last-Modified": null,
+        "Cache-Control": null,
+        "X-Total-Count": "6156"
+      },
+      "fetched_utc": "2026-09-12T19:42:17.993623+00:00"
+    },
+    {
+      "file": "gamebanana-spring-profile.json",
+      "url": "https://gamebanana.com/apiv11/Mod/150813/ProfilePage",
+      "status": 200,
+      "bytes": 33703,
+      "sha256": "bc1f12dcff1ee66628c7dcddb3eaa0989fd9f08544b602de03914ad654489211",
+      "headers": {
+        "Content-Type": "application/json; charset=UTF-8",
+        "ETag": null,
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:44:21.127370+00:00"
+    },
+    {
+      "file": "gamebanana-memorial-profile.json",
+      "url": "https://gamebanana.com/apiv11/Tool/6850/ProfilePage",
+      "status": 200,
+      "bytes": 13896,
+      "sha256": "7d2c843ba3f2216aaa054f80373d39319371224636cc7e0611148cc13e9d159c",
+      "headers": {
+        "Content-Type": "application/json; charset=UTF-8",
+        "ETag": null,
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:44:21.837975+00:00"
+    },
+    {
+      "file": "olympus-maps.json",
+      "url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=downloads&category=GameBanana_Mod_6800",
+      "status": 200,
+      "bytes": 108898,
+      "sha256": "623f6c5e655fbc28c6cb459661fdab78ec7607a7aea6b6c5ff8aed84e06f5542",
+      "headers": {
+        "Content-Type": "application/json",
+        "ETag": "735e03247028238aa58965b8e350233961a83bd6f27fa61647888ba79d369431c37d4c506f40c4739f6b5c7485776f45e4e3ea75e4a27c974fc3229b225bd810",
+        "X-Total-Count": "4891"
+      },
+      "fetched_utc": "2026-09-12T19:44:21.015433+00:00"
+    },
+    {
+      "file": "olympus-helpers.json",
+      "url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=latest&category=GameBanana_Mod_5081",
+      "status": 200,
+      "bytes": 45700,
+      "sha256": "b0b9962d55cf4b7a3c88274134efcb310643cfb127c26fcf31f66a96d23698b8",
+      "headers": {
+        "Content-Type": "application/json",
+        "ETag": "a0aee2cb9f6f0e66be5113da4f03286e6bd807ee4abee746415b5da3d43844f1f2607901fa30c0b645c1168ddf6755f74f8a1b1a50cb3537374dac1d8ef4e443",
+        "X-Total-Count": "239"
+      },
+      "fetched_utc": "2026-09-12T19:44:21.382347+00:00"
+    },
+    {
+      "file": "olympus-subcategories.yaml",
+      "url": "https://maddie480.ovh/celeste/gamebanana-subcategories",
+      "status": 200,
+      "bytes": 1736,
+      "sha256": "d8add92689d42d6a09b7525d84bc25017742e44d78bd56a5ad887fb45960d9cc",
+      "headers": {
+        "Content-Type": "text/yaml",
+        "ETag": "5a1c9ff6da9c22dd0a7adce9996ec57d2429d0c67b8ebced1c5f9d72d815ec68d7bdf5122497a747234074e4c6ff9cb360b58632676ad9b716ca90fd61f75b35",
+        "X-Total-Count": null
+      },
+      "fetched_utc": "2026-09-12T19:44:21.704133+00:00"
+    }
+  ],
+  "report": "NATIVE_LAUNCHER_ROADMAP_2026-09-12.md",
+  "phone_evidence": "BUILD_22_GAMEPLAY_EVIDENCE.json",
+  "owner_direction": {
+    "general_celeste_launcher": true,
+    "required_bundled_ios_support_module": true,
+    "native_save_manager": true,
+    "native_touch_layout_editor": true,
+    "quit_and_input_prompts_in_game_module": true,
+    "runtime_native_services_remain_separate": true
+  },
+  "build26_followup": {
+    "date": "2026-09-13",
+    "implementation": "MOD_RESOLUTION_BUILD_26.md",
+    "status": "PASS_BUILD26_PHYSICAL_FRESH_SPRING_DEPENDENCIES_REPORTS_GAMEPLAY_RESUME_QUIT_AND_RELOAD",
+    "dependency_reports": true,
+    "compatible_earlier_candidates": 2,
+    "minimum_requirements_enforced": true,
+    "scoped_corelib_reflection_correction": true,
+    "native_archives_and_accepted_lanes_unchanged": true,
+    "physical_acceptance": true,
+    "next": "Implement isolated stable Everest1.6531.0 at d72e94f4b9e62b91cbdea674587ed39d53de9550 with aligned runtime identity, runtime-aware update cache, actual new-helper transactions and Spring/Paint/SJ regressions before the next phone handoff.",
+    "kit": "0.13.1-build-26",
+    "cloud_files": 10,
+    "cloud_bytes": 24954962,
+    "cloud_upload_confirmed": true,
+    "phone_download_confirmed": true,
+    "evidence": "MOD_RESOLUTION_BUILD_26_EVIDENCE.json",
+    "phone_evidence": "BUILD_26_INSTALLS_ACCEPTANCE_EVIDENCE.json",
+    "runtime_assessment": "EVEREST_RUNTIME_UPGRADE_ASSESSMENT_EVIDENCE.json"
+  },
+  "original_snapshot_scope": "Original 12 September service audit; root production_solver_implemented/mods_downloaded_or_installed describe that audit. Dated build followups record implementation and phone acceptance.",
+  "build27_followup": {
+    "ownerApproved": true,
+    "report": "EVEREST_RUNTIME_BUILD_27.md",
+    "runtime": "1.6531.0",
+    "commit": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+    "source": "experiments/ios-jit/launcher-runtime",
+    "physicalAcceptance": true,
+    "nextAfterAcceptance": "General native catalogue discovery/install, responsive startup, complete-profile backup/restore, SwiftUI touch editor.",
+    "phoneEvidence": "BUILD_27_RUNTIME_ACCEPTANCE_EVIDENCE.json",
+    "phoneReport": "BUILD_27_RUNTIME_ACCEPTANCE.md",
+    "actualUpdates": [
+      {
+        "action": "updated",
+        "afterVersion": "0.51.0",
+        "beforeVersion": "0.50.5",
+        "enabled": true,
+        "name": "ExtendedVariantMode"
+      },
+      {
+        "action": "updated",
+        "afterVersion": "1.40.10",
+        "beforeVersion": "1.40.9",
+        "enabled": true,
+        "name": "MaxHelpingHand"
+      }
+    ],
+    "cachedIndexUsedOnPhone": true,
+    "observedStartupSeconds": [
+      {
+        "everest_boot_pass": 69.293,
+        "game_begin_load": 69.319,
+        "game_start_returned": 74.444,
+        "graphics_first_frame_returned": 74.713
+      },
+      {
+        "everest_boot_pass": 21.781,
+        "game_begin_load": 21.807,
+        "game_start_returned": 26.318,
+        "graphics_first_frame_returned": 26.522
+      }
+    ],
+    "next": "Native general catalogue/search/details/file selection using the accepted dependency review, install and report machinery; bounded/offline caches. Then responsive real loading, complete-profile saves/settings and SwiftUI touch editor."
+  },
+  "current_status": "BUILD27_PHYSICALLY_ACCEPTED_BUILD28_NATIVE_CATALOGUE_UPLOADED_PHONE_PENDING",
+  "current_phone_evidence": "BUILD_27_RUNTIME_ACCEPTANCE_EVIDENCE.json",
+  "current_acceptance_report": "BUILD_27_RUNTIME_ACCEPTANCE.md",
+  "current_implementation_order": [
+    "Phone28 native browser/install/game acceptance",
+    "Responsive real startup progress",
+    "Whole-profile saves/settings backup and restore",
+    "SwiftUI touch editor with full existing behavior"
+  ],
+  "ongoing_work": [
+    "Broader mod/map compatibility with reproducible diagnostics",
+    "Memory/code headroom and accurately labelled performance metrics"
+  ],
+  "public_release_gates": [
+    "On-device preparation of owner-imported original game IL",
+    "FMOD redistribution permission decision"
+  ],
+  "build28": {
+    "ownerApproved": true,
+    "report": "NATIVE_CATALOGUE_BUILD_28.md",
+    "evidence": "NATIVE_CATALOGUE_BUILD_28_EVIDENCE.json",
+    "source": "experiments/ios-jit/launcher-catalogue",
+    "status": "PASS_BUILD28_READY_AND_ICLOUD_UPLOADED_PHYSICAL_TEST_PENDING",
+    "managedAndNativeRuntimeUnchanged": true,
+    "physicalAcceptance": false,
+    "cloudUploadConfirmed": true,
+    "phoneTest": "Phone28: native browse/sort/categories/search/details, exact reuse and small Cateline install/report, optional offline test; fresh JIT, gameplay and normal Quit; export browsing/install and game sessions. After acceptance: responsive real loading, whole-profile backup/restore, native touch editor."
+  }
+}

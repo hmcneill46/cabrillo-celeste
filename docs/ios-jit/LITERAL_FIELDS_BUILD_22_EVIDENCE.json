@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "build_id": "launcher-reflection-20260912-22",
+  "version": "0.11.2 (22)",
+  "updated_utc": "2026-09-12T19:55:27.938977+00:00",
+  "report": "LITERAL_FIELDS_BUILD_22.md",
+  "artifact": "artifacts/ios-jit/launcher-reflection-20260912-22",
+  "status": "PASS_HOST_SIMULATOR_PACKAGE_AND_PHONE_GAMEPLAY_SAVE_READBACK_SHUTDOWN_UNVERIFIED",
+  "ipa_bytes": 23116505,
+  "ipa_sha256": "b9a89008136a1dbf0e409c5fd22095df876a1430992a5110348a6cf5f88dd17e",
+  "executable_uuid": "UUID: EB66D6A0-13F1-3231-885C-02A5AC681617",
+  "executable_sha256": "604e4cc92d65acfe89b36bf666ecc05a6ebc8fe63d6a08870e23968da0072fee",
+  "adapter_sha256": "b56c3cfe286202445a7565a7129aea39473cf03bbb09423430e0cea2be41bb98",
+  "fna_sha256": "e89f3b998229e04a6e596e548498e57214d23d97f753b633ea0d59c0bdfab79b",
+  "monomod_utils_sha256": "990cbde37b3edc9ac74195ea58a64b0cf503c1a78225384a377ae13f0be43092",
+  "script_template_sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b",
+  "source_inputs": 177,
+  "framework_dlls": 168,
+  "everest_dlls": 32,
+  "checks": {
+    "package": {
+      "path": "artifacts/ios-jit/launcher-reflection-20260912-22/package-validation.json",
+      "receipt_sha256": "41236c064f3c0e07b4e26cb59fdb36ddf009a6bb7fc248ab9adc7dd7516c858e",
+      "status": "PASS_BUILD22_MONOMOD_LITERAL_FIELDS_AND_LAUNCHER_GATES"
+    },
+    "request_protocol": {
+      "path": "artifacts/ios-jit/launcher-reflection-20260912-22/request-protocol-validation.json",
+      "receipt_sha256": "c3f8d6aae9e9275bc3e262cfceacccc2330a07b108054d815b0028c11a4143a4",
+      "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT"
+    },
+    "literal_fields": {
+      "path": ".build/ios-jit/launcher-reflection-literal-tests/result.json",
+      "receipt_sha256": "c4ff75ec83b69b7cacb66e5f2845007512eaa4dbd8f55a325f0452b46eb9c6f0",
+      "status": "PASS_ACTUAL_MONO_LITERAL_FIELDS_AND_ORIGINAL_FAILURE"
+    },
+    "fna_graphics": {
+      "path": ".build/ios-jit/launcher-reflection-fna/result.json",
+      "receipt_sha256": "ff6ec4e814d396f8d755e41edf377a9092ab1db989ad3540acde2d541ae384c3",
+      "status": "PASS_FNA_EXTENSION_AND_ORIGINAL_FROST_RENDERING"
+    },
+    "native_mod_library": {
+      "path": ".build/ios-jit/launcher-reflection-mod-library-tests/result.json",
+      "receipt_sha256": "80b8dc659fe2e00ab3d8d80693b8f1a9b6bc9c6514c88d059cecd03605daaf27",
+      "status": "PASS_NATIVE_MOD_LIBRARY"
+    },
+    "native_services": {
+      "path": ".build/ios-jit/launcher-reflection-native-services-tests/result.json",
+      "receipt_sha256": "dbec69c3927149b6610af0aa32ae0c3c352b006aba6708c66bad036e4b620c02",
+      "status": "PASS_NATIVE_LOG_REPLAY_AND_METRICS"
+    },
+    "native_ui": {
+      "path": ".build/ios-jit/launcher-reflection-ui-tests/receipt.json",
+      "receipt_sha256": "f04b6cb165e4fe927b07fc5dc08cfdcbc060371755c1fe578e80b196c1e309c1",
+      "status": "PASS_NATIVE_LAUNCHER_XCUITEST"
+    },
+    "simulator": {
+      "path": ".build/ios-jit/launcher-reflection/launcher-reflection-20260912-22-simulator/smoke/receipt.json",
+      "receipt_sha256": "2163f842d17809a41eb45c0e4b4b44b237fd9998d6d90288f1efed54d6abf5e8",
+      "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY"
+    },
+    "host-paint-original": {
+      "path": ".build/ios-jit/launcher-reflection-validation/host-paint-original/receipt.json",
+      "receipt_sha256": "620fd9f3688de56cc6d06cea77b6dcd0a5b4a2b1bd1084d969bbef16dea0bb1c",
+      "status": "PASS_ORIGINAL_PAINT_LITERAL_FAILURE_AND_NATIVE_SUMMARY"
+    },
+    "host-paint-fixed": {
+      "path": ".build/ios-jit/launcher-reflection-validation/host-paint-fixed/receipt.json",
+      "receipt_sha256": "e53ba0455e6899b1b8d6260223e67c0cc7b893b4c773b1d105ea890696cce532",
+      "status": "PASS_HOST_PAINT_INTRO_SAVES_AND_RESUME"
+    },
+    "host-paint-reload": {
+      "path": ".build/ios-jit/launcher-reflection-validation/host-paint-reload/receipt.json",
+      "receipt_sha256": "acf8ba6b8e29db2851ca8557461a95cde1583987ea3a5bf081b816fa07698372",
+      "status": "PASS_HOST_PAINT_INTRO_SAVES_AND_RESUME"
+    },
+    "host-full-sj": {
+      "path": ".build/ios-jit/launcher-reflection-validation/host-full-sj/receipt.json",
+      "receipt_sha256": "9ee1ed37befbd1a81fd58707668f0ac225f3b76fa83d36820be3888bffa1fd8e",
+      "status": "PASS_HOST_REAL_SJ_LOBBY_BING_SAVES_AND_RESUME"
+    },
+    "host-normal-example": {
+      "path": ".build/ios-jit/launcher-reflection-validation/host-normal-example/receipt.json",
+      "receipt_sha256": "22cafea5496569a16b32f87e3e3565bf631e455a352c69505879f9d168e7856f",
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME"
+    },
+    "host-normal-disabled": {
+      "path": ".build/ios-jit/launcher-reflection-validation/host-normal-disabled/receipt.json",
+      "receipt_sha256": "4acfd55a06002ebde1206592f700348501f917ca0e9c1eb24176fa393e6e3b6e",
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME"
+    }
+  },
+  "paint_save_readback": {
+    "host-paint-fixed": {
+      "prior": 3,
+      "written": 11,
+      "readback": 11,
+      "existing_slot_loaded": true,
+      "intro_completed": true,
+      "jumped_after_resume": true
+    },
+    "host-paint-reload": {
+      "prior": 11,
+      "written": 19,
+      "readback": 19,
+      "existing_slot_loaded": true,
+      "intro_completed": true,
+      "jumped_after_resume": true
+    }
+  },
+  "mono_mod_patch": {
+    "status": "PASS_MONOMOD_LITERAL_FIELDS_AND_MONO8_PATCH",
+    "input_sha256": "3fc0b9c537032738ee445023a15c738b5fab4726e60a17f769b46d9afa2f9dda",
+    "output_sha256": "990cbde37b3edc9ac74195ea58a64b0cf503c1a78225384a377ae13f0be43092",
+    "emitter_fixture_sha256": "a9f43d27c6d03d706e7f43cd5cf8ce66022769dfffe46f527956316aed482baf",
+    "changed_methods": [
+      "System.Void MonoMod.Utils.Extensions::SetMonoCorlibInternal(System.Reflection.Assembly,System.Boolean)#27",
+      "System.Void MonoMod.Utils.FastReflectionHelper/<>c__DisplayClass45_0::<CreateFieldInvoker>b__0(MonoMod.Cil.ILContext)#1"
+    ],
+    "added_method": "MonoMod.Cil.ILCursor MonoMod.Utils.LiteralFieldEmitter::Emit(MonoMod.Cil.ILCursor,Mono.Cecil.Cil.OpCode,System.Reflection.FieldInfo)",
+    "unchanged_methods": 2384,
+    "unchanged_fields": 578,
+    "unchanged_assembly_identity_and_references": true,
+    "legacy_native_struct_write_removed": true,
+    "literal_getters": "Emit metadata constant with declared result type; no ldsfld",
+    "literal_setters": "FieldAccessException; no stsfld",
+    "nonliteral_fields_unchanged": true,
+    "original_game_and_mods_unchanged": true
+  },
+  "physical_build19_accepted": true,
+  "physical_build21_accepted": false,
+  "physical_build21_diagnosis": "BUILD_21_SESSION_STOP_EVIDENCE.json",
+  "physical_build22_accepted": false,
+  "physical_build22_tested": false,
+  "original_mod_zips_preserved": true,
+  "prepared_game_il_unchanged": true,
+  "fna_and_native_renderer_unchanged": true,
+  "mono_runtime_archives_unchanged": true,
+  "profile_and_game_library_paths_unchanged": true,
+  "public_original_il_preparation": false,
+  "fmod_redistribution_permission": false,
+  "private_owner_kit": true,
+  "delivery_pending": false,
+  "source_snapshot_pending": false,
+  "deferred_owner_product_requests_implemented": false,
+  "additional_backend_followup": {
+    "api": "GraphicsDevice.GetBackBufferData / METAL_ReadBackbuffer",
+    "observed": "Desktop-only regression fixture SIGSEGV in FNA3D_ReadBackbuffer",
+    "source_finding": "Uninitialised native texture handle in local MetalTexture descriptor passed to GetTextureData2D",
+    "source": ".build/ios-jit/graphics-native-build11/sources/FNA3D/src/FNA3D_Driver_Metal.c",
+    "source_sha256": "1965517735f2018effd8a81952048d3ffc5302c9c563a7a27e5359d6d8a4cb62",
+    "current_test": "Retained Gameplay texture readback passes",
+    "caused_phone_failure": false,
+    "general_backbuffer_api_accepted": false,
+    "priority": "Separate renderer follow-up before broader product work",
+    "preliminary_frame_lifetime_inference_corrected": true
+  },
+  "source_snapshot": {
+    "path": ".build/ios-jit/device-evidence/2026-09-12/build-22-ready",
+    "receipt_sha256": "41ed25c226d8deb6e92007483c6ff798460db364185877a6a4a74d209b2a54fb",
+    "parent": "build-21-ready",
+    "verified_parent_receipt_sha256": "1c28088311c4ac5543b3b2801cd5f561c4ef5480ba4ac97ac90a420785503820"
+  },
+  "delivery": {
+    "build_id": "launcher-reflection-20260912-22",
+    "created_utc": "2026-09-12T18:57:34.437689+00:00",
+    "method": "Versioned local iCloud Drive placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.11.2-build-22",
+    "local_icloud_copy_verified": true,
+    "cloud_upload_confirmed": true,
+    "phone_download_confirmed": true,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 23116505,
+        "sha256": "b9a89008136a1dbf0e409c5fd22095df876a1430992a5110348a6cf5f88dd17e"
+      },
+      "README-FIRST.txt": {
+        "bytes": 2718,
+        "sha256": "4b7d022dc15ee2966008077d93454e60e38704d2def9304880fe2b0ea8268273"
+      },
+      "INSTALL.md": {
+        "bytes": 1043,
+        "sha256": "dc2b48280a05a52338c9e837fb391082bb8272e7e5a59b0b80e3a729e27c9282"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5763,
+        "sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 3976,
+        "sha256": "a9eed1448c65e801c1fb1c24131488bade1fd33ae6bd3ecf37f3e2f61c5b96b9"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1437,
+        "sha256": "4bcda992130c463291643ed5d39a0b0868ea1a67f966fdc5524c0d2306b5ff27"
+      },
+      "CJITLauncherExample-v1.0.0.zip": {
+        "bytes": 1512,
+        "sha256": "f5847b5796c92e382814f328cf370d697414130606f95b86771f8cb64f5e2be6"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 624,
+        "sha256": "97fff1b111de6d37c849ea718cc046afd44f076b1e886ed53d173e1e523af0fb"
+      }
+    },
+    "total_bytes": 23133578,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-12/build-22-ready",
+      "receipt_sha256": "41ed25c226d8deb6e92007483c6ff798460db364185877a6a4a74d209b2a54fb",
+      "parent": "build-21-ready",
+      "verified_parent_receipt_sha256": "1c28088311c4ac5543b3b2801cd5f561c4ef5480ba4ac97ac90a420785503820"
+    },
+    "physical_execution": false,
+    "retention": "Keep physically accepted build19 as fallback; preserve all Results and exact local historical builds.",
+    "cloud_upload_confirmed_utc": "2026-09-12T19:00:22.589345+00:00",
+    "cloud_upload_status_path": ".build/ios-jit/device-evidence/2026-09-12/build-22-ready/handoff/icloud-upload-status-current.json",
+    "cloud_upload_status_sha256": "a55d2a8d680669c4cc68436403e95a43578e2a056ea49e5a5e51a7aa7c666838",
+    "phone_download_confirmation": "Matching build22 diagnostics from owner-installed IPA; separate from frozen handoff receipt."
+  },
+  "physical_result": {
+    "report": "BUILD_22_GAMEPLAY_ACCEPTANCE.md",
+    "evidence": "BUILD_22_GAMEPLAY_EVIDENCE.json",
+    "status": "PASS_BUILD22_RECORDED_GAMEPLAY_AND_SAVE_READBACK_SHUTDOWN_UNVERIFIED",
+    "clean_shutdown_confirmed": false,
+    "fresh_process_post_test_save_reload_confirmed": false
+  }
+}

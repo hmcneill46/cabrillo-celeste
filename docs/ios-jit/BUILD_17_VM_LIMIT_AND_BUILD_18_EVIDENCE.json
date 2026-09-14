@@ -1,0 +1,253 @@
+{
+  "status": "PASS_PHYSICAL_BUILD18_GRAVITY_LUA_MAX_VM_RANGE",
+  "date": "2026-09-12",
+  "build_id": "sj-memory-check-20260912-18",
+  "version": "0.9.1 (18)",
+  "ipa_bytes": 22780024,
+  "ipa_sha256": "8ae85ea014c6f301ed7a065eb8a506e3b726301fc14ed5c0e0a1209548dd1272",
+  "executable_sha256": "782ca7cb0ccb4e776b1fd6000c2d5bb35030372c0231531446071ce785bd22e1",
+  "executable_uuid": "UUID: E1A7F78F-0879-3C6A-8E3E-B223641BF855",
+  "script_template_sha256": "6b8ab9a65b976441c5d96991f3e26ad1f0c8b5b41d7be1b8db29416486c1f191",
+  "adapter_sha256": "3d7c7e088ba4804e8c7c4445395d6b01fb62c97996059b38c922a20385ad9042",
+  "native_code_budget_bytes": 268435456,
+  "bytes_per_arena": 134217728,
+  "source_input_count": 135,
+  "vm_range_source_sha256": "d3f79c1e4e631e38514be0a9c5bb7fac8f701e511ac1ef4fc6273d8aca4b444a",
+  "vm_range_policy": "intersected_os_pages_v1",
+  "physical_build17": {
+    "status": "BUILD17_APP_VM_RANGE_LIMIT_AFTER_SUCCESSFUL_STIKDEBUG_REPLY",
+    "raw_sha256": "a699f36af72a86f6ac0af24a9846d264021660c1f38f384201b2aaa2a52f96da",
+    "raw_bytes": 54074829,
+    "session": "36d9afb8-1675-4276-b1d0-fdd444a9230e",
+    "build_id": "sj-gravity-20260912-17",
+    "exact_build_and_200_packaged_assemblies_match": true,
+    "frozen_source_inputs_verified": 155,
+    "native_libraries_verified": 16,
+    "native_passes": 2,
+    "failure": "prepared_region_is_rx / too_many_entries",
+    "checked_entries": 4096,
+    "checked_bytes": 67108864,
+    "requested_bytes": 134217728,
+    "all_observed_entries_rx": true,
+    "uninspected_bytes": 67108864,
+    "script_template_matches": true,
+    "script_reply_status": 2,
+    "script_error": 0,
+    "debugger_detached": true,
+    "stikdebug_route": "livecontainer2://open-url",
+    "native_code_execution_attempted": false,
+    "managed_runtime_started": false,
+    "retained_old_mods": 5,
+    "new_imports": 2,
+    "ready_mods": 7,
+    "installed_content_pointer_found": true,
+    "content_hash_verification_this_session": false,
+    "save_reload_tested": false,
+    "gravity_helper_execution_tested": false,
+    "export_succeeded": true,
+    "scope": "User setup correct. The app stopped cleanly at its fixed 4096-entry VM walker limit. The remainder of the first arena and the second arena were not independently checked; script success is not full native execution acceptance."
+  },
+  "checks": {
+    "vm_ranges": {
+      "path": ".build/ios-jit/sj-memory-check-vm-tests/receipt.json",
+      "sha256": "d474321c164adb2ce474b93f1d941adb2e322993955dd888d3eb572f461d93d5",
+      "status": "PASS_PHYSICAL_BUILD17_LIMIT_CONTROL_AND_PAGE_SIZED_VM_CHECKER"
+    },
+    "host": {
+      "path": ".build/ios-jit/sj-memory-check-host-test/receipt.json",
+      "sha256": "ac38100c0be513ac16ed08c61e0412ee49669a6be5089553e323167ac466cd28",
+      "status": "PASS_HOST_REAL_GRAVITY_LUACUTSCENES_MAXHELPINGHAND_SAVES_AND_RESUME"
+    },
+    "capacity": {
+      "path": ".build/ios-jit/sj-memory-check-capacity-tests/receipt.json",
+      "sha256": "36dd9ab5ecc593b80d252b6b7380c9a0ba56004a1537187716abeac173ac0b84",
+      "status": "PASS_BUILD15_EXACT_FAILURE_AND_BUILD18_DEVICE_SIZED_ALIAS_REPLAY"
+    },
+    "package": {
+      "path": "artifacts/ios-jit/sj-memory-check-20260912-18/package-validation.json",
+      "sha256": "60079d9be56c564f99ca7ed93371f0b30f46703e649b7d453f1bad499e9605a0",
+      "status": "PASS_BUILD18_VM_CHECKER_AND_UNCHANGED_GRAVITY_PAYLOAD"
+    },
+    "protocol": {
+      "path": "artifacts/ios-jit/sj-memory-check-20260912-18/request-protocol-validation.json",
+      "sha256": "16b023b94473c6a6901a6d3570c8a3884aedf0177e148dd5c325c0812559ee6a",
+      "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT"
+    },
+    "simulator": {
+      "path": ".build/ios-jit/sj-memory-check/sj-memory-check-20260912-18-simulator/smoke/receipt.json",
+      "sha256": "1bde8c86efcbc5040d7d865963bc4cdaf76f9a765b3af6b3f1c198b923aa359c",
+      "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY"
+    }
+  },
+  "vm_range_regression": {
+    "original_physical_prefix_control": true,
+    "corrected_cases": 18,
+    "real_darwin_entries": 8192,
+    "range_sizes": [
+      67108864,
+      134217728,
+      536870912
+    ],
+    "page_sizes": [
+      4096,
+      16384,
+      65536
+    ],
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "uninspected_prefix_only_never_accepted": true,
+    "late_invalid_mapping_controls": true,
+    "physical_execution": false
+  },
+  "host": {
+    "receipt_sha256": "ac38100c0be513ac16ed08c61e0412ee49669a6be5089553e323167ac466cd28",
+    "log_sha256": "78cbb8cf905c4a3dd7c385f0d865dd4a1d706efd6756c0bd0f98687849a3c795",
+    "adapter_matches_build17": true,
+    "gravity_lua_platform_saves_resume": true,
+    "mod_save_prior": 6,
+    "mod_save_written_and_readback": 9,
+    "chunk_count": 2321,
+    "chunk_raw_bytes": 145487856,
+    "chunk_rounded_bytes": 147144704,
+    "jit_methods": 18618,
+    "physical_touch_or_ios_background_tested": false
+  },
+  "capacity_reserved_bytes": 235569152,
+  "all_managed_assemblies_unchanged": true,
+  "all_runtime_archives_unchanged": true,
+  "script_bytes_unchanged": true,
+  "mod_files": {
+    "CJITCodeCanary-v1.0.0.zip": {
+      "bytes": 3560,
+      "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b"
+    },
+    "CJITGravityProbe-v1.0.0.zip": {
+      "bytes": 6114,
+      "sha256": "f37ef0ddff0f12b7869da66151f9e89d69c1f8cd0b33f741e149c9e3dd49fbfc"
+    },
+    "CJITSJHelpers-v1.0.0.zip": {
+      "bytes": 5994,
+      "sha256": "60584b24f781b18a9f2c289f858c8ffc8775656bf96b738405249099d9b555d2"
+    },
+    "CJITTestMap-v1.0.0.zip": {
+      "bytes": 1167,
+      "sha256": "d373b83f85603bee3e5e73cf5742d5ba2d68746376e7ef391d23c949402eba02"
+    },
+    "GravityHelper-v1.2.28.zip": {
+      "bytes": 747044,
+      "sha256": "d4a40744f4c155d655973754422643980321b6660027bc01b660a71b0d00649b"
+    },
+    "LuaCutscenes-v0.2.13.zip": {
+      "bytes": 43788,
+      "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8"
+    },
+    "MaxHelpingHand-v1.40.9.zip": {
+      "bytes": 963880,
+      "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee"
+    }
+  },
+  "all_seven_mods_unchanged": true,
+  "game_or_mod_import_required": false,
+  "bundled_content_files": 0,
+  "private_prepared_game_il": true,
+  "physical_gravity_helper_tested": true,
+  "full_strawberry_jam_accepted": false,
+  "delivery": {
+    "build_id": "sj-memory-check-20260912-18",
+    "created_utc": "2026-09-12T07:55:41.043572+00:00",
+    "method": "Versioned local iCloud Drive placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.9.1-build-18",
+    "local_icloud_copy_verified": true,
+    "phone_download_confirmed": false,
+    "cloud_upload_confirmed": true,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 22780024,
+        "sha256": "8ae85ea014c6f301ed7a065eb8a506e3b726301fc14ed5c0e0a1209548dd1272"
+      },
+      "CJITCodeCanary-v1.0.0.zip": {
+        "bytes": 3560,
+        "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b"
+      },
+      "CJITGravityProbe-v1.0.0.zip": {
+        "bytes": 6114,
+        "sha256": "f37ef0ddff0f12b7869da66151f9e89d69c1f8cd0b33f741e149c9e3dd49fbfc"
+      },
+      "CJITSJHelpers-v1.0.0.zip": {
+        "bytes": 5994,
+        "sha256": "60584b24f781b18a9f2c289f858c8ffc8775656bf96b738405249099d9b555d2"
+      },
+      "CJITTestMap-v1.0.0.zip": {
+        "bytes": 1167,
+        "sha256": "d373b83f85603bee3e5e73cf5742d5ba2d68746376e7ef391d23c949402eba02"
+      },
+      "GravityHelper-v1.2.28.zip": {
+        "bytes": 747044,
+        "sha256": "d4a40744f4c155d655973754422643980321b6660027bc01b660a71b0d00649b"
+      },
+      "LuaCutscenes-v0.2.13.zip": {
+        "bytes": 43788,
+        "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8"
+      },
+      "MaxHelpingHand-v1.40.9.zip": {
+        "bytes": 963880,
+        "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee"
+      },
+      "README-FIRST.txt": {
+        "bytes": 3128,
+        "sha256": "3ddc3bdd47b4f17e466bbf8d1fc1540529daa5e73fb981e4691a3a52dd37cf2f"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5763,
+        "sha256": "6b8ab9a65b976441c5d96991f3e26ad1f0c8b5b41d7be1b8db29416486c1f191"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 2880,
+        "sha256": "8a050eb31559faf6c600d1d3d8360e3d23d2fed937c7644be760297a9f380003"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1650,
+        "sha256": "956ac56a985df83435624ce68f010ea48eb348084e9ff1cd71ccbe07bf8eaefc"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 1092,
+        "sha256": "acec51afe83d6ea3bdffd3d0cc1047257c28bf3d64d9c9f323f36ad3f2cb338b"
+      }
+    },
+    "total_bytes": 24566084,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-12/build-18-ready",
+      "receipt_sha256": "a289573596cc4fcee266a5cea301f7d677392c014f1b2fb477d207e03007e227",
+      "unique_new_files": 698,
+      "inherited_matching_inputs": 185,
+      "verified_parent_tree_files": 9788,
+      "parent_snapshot": ".build/ios-jit/device-evidence/2026-09-12/build-17-ready",
+      "parent_receipt_sha256": "7b807d8c184a90d8104178b577703e7dc871899b17655a118b03f51fc710c773"
+    },
+    "physical_execution": false,
+    "retention": "Keep accepted build 16 as the phone fallback pending build 18 acceptance; preserve all Results and exact local historical builds.",
+    "cloud_upload_checked_utc": "2026-09-12T07:56:31.021822+00:00",
+    "cloud_upload_status_sha256": "0b9c31abc0dc51e22c8a33cfb079c1e1a83b57a65e53af0ed61a513e264fe675",
+    "cloud_upload_status_path": ".build/ios-jit/device-evidence/2026-09-12/build-18-ready/handoff/icloud-upload-status.json",
+    "cloud_cleanup": {
+      "preserved_local": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/artifacts/ios-jit/sj-gravity-20260912-17/CelesteJITEverest-unsigned.ipa",
+      "sha256": "d53c7399946ef11150cbcfdcf2d797865f9175d28e4894dc1ac9f950b8223b40",
+      "removed_cloud_path": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.9.0-build-17/CelesteJITEverest-unsigned.ipa",
+      "all_results_preserved": true,
+      "accepted_build16_ipa_retained": true,
+      "removed_bytes": 22780995
+    }
+  },
+  "source_snapshot": {
+    "path": ".build/ios-jit/device-evidence/2026-09-12/build-18-ready",
+    "receipt_sha256": "a289573596cc4fcee266a5cea301f7d677392c014f1b2fb477d207e03007e227",
+    "unique_new_files": 698,
+    "inherited_matching_inputs": 185,
+    "verified_parent_tree_files": 9788,
+    "parent_snapshot": ".build/ios-jit/device-evidence/2026-09-12/build-17-ready",
+    "parent_receipt_sha256": "7b807d8c184a90d8104178b577703e7dc871899b17655a118b03f51fc710c773"
+  },
+  "physical_build18": "docs/ios-jit/GRAVITY_PASS_BUILD_18_EVIDENCE.json"
+}

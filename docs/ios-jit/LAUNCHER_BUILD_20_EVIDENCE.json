@@ -1,0 +1,188 @@
+{
+  "schema": 1,
+  "build_id": "launcher-20260912-20",
+  "version": "0.11.0 (20)",
+  "updated_utc": "2026-09-12T14:06:35.126042+00:00",
+  "physical_build19_accepted": true,
+  "physical_build20_accepted": false,
+  "report": "LAUNCHER_BUILD_20.md",
+  "artifact": "artifacts/ios-jit/launcher-20260912-20",
+  "ipa_bytes": 23112487,
+  "ipa_sha256": "59a9de33f16f834a76769ff2740cc60bf463b308972e1c8d4aea7f4f70633515",
+  "executable_uuid": "UUID: ED0E08E7-629A-3858-9A39-E29947B79208",
+  "executable_sha256": "704e5c9bcb464d643f30418e0d9621ceed5b306fc2d66f2df0e781a6174e1993",
+  "adapter_sha256": "7ee714d232eb86b7978431b5404d950526dc52ffc77ea88400aa2e2efffdf43c",
+  "script_template_sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b",
+  "source_inputs": 169,
+  "framework_dlls": 168,
+  "everest_dlls": 32,
+  "accepted_native_archives": 16,
+  "new_native_libraries": {
+    ".build/ios-jit/launcher-native/ios/libCJLauncher.a": "3cd2b897b6cea2f29bc1d1cd3afd01fd2a2096290c95ef201f83ed6d6ab2a556",
+    ".build/ios-jit/launcher-native/ios/libZIPFoundation.a": "a92f0e38bd1d300d8bc55ee2b1366a6526ce0ceffd4b40aa3333fcbb9bd4dccc",
+    ".build/ios-jit/launcher-native/ios/libCYaml.a": "c988a712f2fb4996ba17e5bbda49157ce529b77735a2687f1d75b3120f50165f"
+  },
+  "native_dependencies": {
+    "Yams": "a27b21e0c81c5bf42049b897a62aaf387e80f279",
+    "ZIPFoundation": "22787ffb59de99e5dc1fbfe80b19c97a904ad48d"
+  },
+  "profile": "Profiles/sj-first-play",
+  "original_52_sj_zips_preserved": true,
+  "required_game_reimport": false,
+  "required_sj_reimport": false,
+  "code_budget_bytes": 536870912,
+  "checks": {
+    "package": {
+      "path": "artifacts/ios-jit/launcher-20260912-20/package-validation.json",
+      "sha256": "8bf91990feb00cf78840111be822ba1a3f385a28b1e5f39f4b16c28c2137142b",
+      "status": "PASS_BUILD20_NATIVE_LAUNCHER_SMALL_IPA_AND_RUNTIME_GATES"
+    },
+    "protocol": {
+      "path": "artifacts/ios-jit/launcher-20260912-20/request-protocol-validation.json",
+      "sha256": "53b970f315423f531f95ec67b0b4ad6a4c35dc9568b408c6bc9f31195c391a18",
+      "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT"
+    },
+    "mod_library": {
+      "path": ".build/ios-jit/launcher-mod-library-tests/result.json",
+      "sha256": "80b8dc659fe2e00ab3d8d80693b8f1a9b6bc9c6514c88d059cecd03605daaf27",
+      "status": "PASS_NATIVE_MOD_LIBRARY"
+    },
+    "native_services": {
+      "path": ".build/ios-jit/launcher-native-services-tests/result.json",
+      "sha256": "dbec69c3927149b6610af0aa32ae0c3c352b006aba6708c66bad036e4b620c02",
+      "status": "PASS_NATIVE_LOG_REPLAY_AND_METRICS"
+    },
+    "full_sj_host": {
+      "path": ".build/ios-jit/launcher-validation/host-full-sj/receipt.json",
+      "sha256": "bd186c8f9e9bc30dcc19cddb95323d7b37f3c428485cc7e5d9bbe00e2ac8e512",
+      "status": "PASS_HOST_REAL_SJ_LOBBY_BING_SAVES_AND_RESUME"
+    },
+    "normal_enabled_host": {
+      "path": ".build/ios-jit/launcher-validation/host-normal-example/receipt.json",
+      "sha256": "e4f4f2f28c72a86720a9d8aa751cab94637b8b0c525c8629d98448aada20b7c4",
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME"
+    },
+    "normal_disabled_host": {
+      "path": ".build/ios-jit/launcher-validation/host-normal-disabled/receipt.json",
+      "sha256": "6c8cfd44129c0bccb56229d3c66c1d71fb25f0562f73dc8a86b30743cf920341",
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME"
+    },
+    "simulator_smoke": {
+      "path": ".build/ios-jit/launcher/launcher-20260912-20-simulator/smoke/receipt.json",
+      "sha256": "57aacf84daf2246b42755b476b27650be721e5b138498485361cf420968bd479",
+      "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY"
+    },
+    "native_ui_tests": {
+      "path": ".build/ios-jit/launcher-ui-tests/receipt.json",
+      "sha256": "bbfdce91c74ca603ca90b26de307ace7b3f7b42655b8f13a01ca68fe4904dda7",
+      "status": "PASS_NATIVE_LAUNCHER_XCUITEST"
+    }
+  },
+  "phone_fixture": {
+    "name": "CJITLauncherExample-v1.0.0.zip",
+    "bytes": 1512,
+    "sha256": "f5847b5796c92e382814f328cf370d697414130606f95b86771f8cb64f5e2be6"
+  },
+  "host_save_sequence": [
+    0,
+    3,
+    6,
+    9
+  ],
+  "diagnostics_schema": 2,
+  "logger_replay_events": 120096,
+  "allocation_records": 12642,
+  "sync_checkpoints": 802,
+  "phone_performance_improvement_measured": false,
+  "frame_metrics": "Callback FPS, wall time inside Frame, slowest-1%-mean reciprocal after 120 samples; 600-interval window reset on pause; no GPU timestamps",
+  "public_owner_original_il_preparation_complete": false,
+  "private_prepared_game_il": true,
+  "fmod_distribution_permission_resolved": false,
+  "no_aot_checkout_mutations": true,
+  "no_commits_or_remote_writes": true,
+  "next_device_questions": [
+    "Portrait launcher / landscape game scene in LC1",
+    "Real import and persisted enable/disable choices",
+    "Dependency blocking",
+    "Normal SJ menus and lobby-door progression",
+    "Existing save and fresh-process progress retention",
+    "Metrics, music, controls and Home/resume"
+  ],
+  "delivery_pending": false,
+  "source_snapshot": {
+    "path": ".build/ios-jit/device-evidence/2026-09-12/build-20-ready",
+    "receipt_sha256": "668d5a18a4659b84987cab67ab037b438144f32fa46b1f5baca999cbb76ffc45",
+    "parent": "build-19-ready",
+    "verified_parent_receipt_sha256": "abda84027a11103af0db531f7530f682be331f2f044c8ff23cbff58f27d3a5c3"
+  },
+  "delivery": {
+    "build_id": "launcher-20260912-20",
+    "created_utc": "2026-09-12T14:10:52.491192+00:00",
+    "method": "Versioned local iCloud Drive placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.11.0-build-20",
+    "local_icloud_copy_verified": true,
+    "cloud_upload_confirmed": true,
+    "phone_download_confirmed": false,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 23112487,
+        "sha256": "59a9de33f16f834a76769ff2740cc60bf463b308972e1c8d4aea7f4f70633515"
+      },
+      "README-FIRST.txt": {
+        "bytes": 3929,
+        "sha256": "dcf93f494e17be37a7c12c41e5b7feee55296845e71362b68790f9a2a06c9e94"
+      },
+      "INSTALL.md": {
+        "bytes": 1198,
+        "sha256": "00d1b0d115c5941dbbd9f7687664a691c96c4014fa360758c20ce33a8e45e474"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5763,
+        "sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 3560,
+        "sha256": "37f7da6338438f842bdc5a45b51e799abc83235687609d23a7aa24448d6360d3"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1154,
+        "sha256": "8c7e04cd9c682d9b758af7b733128b857a71099dc7f03fd86d9fb5c118a5273c"
+      },
+      "CJITLauncherExample-v1.0.0.zip": {
+        "bytes": 1512,
+        "sha256": "f5847b5796c92e382814f328cf370d697414130606f95b86771f8cb64f5e2be6"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 624,
+        "sha256": "3b639f39b5fb7e94c8f00b855543202784ea4eb362d2882c66777d0db59e26ce"
+      }
+    },
+    "total_bytes": 23130227,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-12/build-20-ready",
+      "receipt_sha256": "668d5a18a4659b84987cab67ab037b438144f32fa46b1f5baca999cbb76ffc45",
+      "parent": "build-19-ready",
+      "verified_parent_receipt_sha256": "abda84027a11103af0db531f7530f682be331f2f044c8ff23cbff58f27d3a5c3"
+    },
+    "physical_execution": false,
+    "retention": "Keep physically accepted build19 as fallback; preserve all Results and exact local historical builds.",
+    "cloud_status_checked_utc": "2026-09-12T14:13:26.435037+00:00",
+    "cloud_status_report_sha256": "a55d2a8d680669c4cc68436403e95a43578e2a056ea49e5a5e51a7aa7c666838",
+    "cloud_uploaded_files": [
+      "CJITLauncherExample-v1.0.0.zip",
+      "celeste-jit-probe-TEMPLATE.js",
+      "INSTALL.md",
+      "THIRD_PARTY_NOTICES.md",
+      "TEST-IDENTITY.json",
+      "CelesteJITEverest-unsigned.ipa",
+      "README-FIRST.txt",
+      "SHA256SUMS.txt"
+    ],
+    "cloud_upload_errors": {}
+  },
+  "delivery_note": "All eight files copied and read back locally; Apple now confirms all eight uploaded. Actual phone download and build20 execution remain pending.",
+  "phone_execution_observed": true,
+  "phone_result": "CONFIRMED_FROSTHELPER_MISSING_FNA_GRAPHICS_METHOD",
+  "phone_evidence": "BUILD_20_SESSION_STOP_EVIDENCE.json",
+  "superseding_candidate": "0.11.1 (21)"
+}

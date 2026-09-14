@@ -1,0 +1,211 @@
+{
+  "schema": 1,
+  "date": "2026-09-11",
+  "status": "UNSIGNED_FNA_METAL_BRIDGE_UPLOADED_PHYSICAL_GRAPHICS_PENDING",
+  "build_id": "graphics-canary-20260911-10",
+  "version": "0.4.0",
+  "build_number": "10",
+  "bundle_id": "io.github.hmcneill46.celeste.everest.jit.graphics",
+  "ipa": "artifacts/ios-jit/graphics-canary-20260911-10/CelesteJITGraphics-unsigned.ipa",
+  "ipa_sha256": "d14c965322f6905640137e0203b12dc0381a6d5a2547c06282109afabf0d5475",
+  "executable_uuid": "UUID: 9433EBE2-00A1-3FA8-A39C-35DD8175A936",
+  "fixture_sha256": "4f4443f764c1ebc10d32e723d6d086936412e6bbbe361dd26d9af5dcd72a6936",
+  "fna_sha256": "f5ca966cfcc9e230158a3d76845645fc28ddcae58d7f0f72efa66df274b1692b",
+  "script_template_sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413",
+  "runtime_commit": "46295af5828b062bbbf93a9cef50fd8cb9fbcb09",
+  "runtime_version": "8.0.28",
+  "aot_disabled": true,
+  "interpreter_disabled": true,
+  "native_foundation_logical_sha256": "9fb302d221180e39f270ea5ebf48e18433b67bd0a40943c042a227fe0f8ad6a2",
+  "native_fetched_pins": "native/ios-dependencies.lock.json",
+  "native_verification_log": ".build/ios-jit/game-native-verification.log",
+  "source_snapshot": ".build/ios-jit/device-evidence/2026-09-11/build-10-ready/source-snapshot",
+  "source_input_count": 94,
+  "fna_source_input_count": 321,
+  "package_validation": {
+    "status": "PASS_UNSIGNED_GRAPHICS_PACKAGE_AND_INPUTS",
+    "ipa_bytes": 11899416,
+    "ipa_sha256": "d14c965322f6905640137e0203b12dc0381a6d5a2547c06282109afabf0d5475",
+    "fixture_sha256": "4f4443f764c1ebc10d32e723d6d086936412e6bbbe361dd26d9af5dcd72a6936",
+    "fna_sha256": "f5ca966cfcc9e230158a3d76845645fc28ddcae58d7f0f72efa66df274b1692b",
+    "native_internal_imports": 805,
+    "all_declared_internal_imports_resolve": true,
+    "remaining_non_internal_imports": "Two unused Emscripten declarations; not an iOS capability",
+    "framework_dlls": 168,
+    "monomod_dlls": 10,
+    "untrimmed_fna": true,
+    "apple_managed_bindings": false,
+    "debug_symbols_outside_ipa": true,
+    "signature": false,
+    "provisioning_profile": false,
+    "g1_g2_sources_and_runtime_unchanged": true,
+    "script_matches_physical_build9": true,
+    "host_fixture_bytes_match": true,
+    "physical_graphics_tested": false
+  },
+  "host_validation": {
+    "status": "PASS_HOST_FNA_METAL_540_FRAMES_RESUME_HOOK_AND_MAIN_THREAD_DETACH",
+    "fixture_sha256": "4f4443f764c1ebc10d32e723d6d086936412e6bbbe361dd26d9af5dcd72a6936",
+    "fna_sha256": "f5ca966cfcc9e230158a3d76845645fc28ddcae58d7f0f72efa66df274b1692b",
+    "runtime": "pinned Mono 8.0.28 macOS x64 with cooperative GC; AOT/interpreter disabled",
+    "desktop_native_sha256": {
+      "libSDL2-2.0.0.dylib": "8fca5fdbdef48c8168888702f8d1efb41a4d844d97fade628dc0391536ea1abd",
+      "libFNA3D.0.dylib": "76b08518fc9872e1104be0b30b1970c0bd066a46b85c6555ddd07ec8cb03acae"
+    },
+    "main_thread_attachment_and_detachment": true,
+    "gpu_readback": true,
+    "render_hook_retained_and_removed": true,
+    "real_frames": 540,
+    "physical_touch_or_ios_background_tested": false,
+    "ios_jit_aliases_tested": false,
+    "code_memory": "host Mono pages, no device alias ownership claim",
+    "log_sha256": "180adee2bfde746780b3f3e8dfc565b26bcabc755be836b44a7da7209b37face"
+  },
+  "simulator_validation": {
+    "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY",
+    "dll_import_handler": "PASS",
+    "run_disabled_without_jit": true,
+    "native_console_recovered": true,
+    "build_id": "graphics-canary-20260911-10-simulator",
+    "background_event_burst_persisted_and_rendered": 800,
+    "os": "26.5",
+    "architecture": "x86_64",
+    "previous_session_recovered": true,
+    "current_session_not_duplicated": true,
+    "export_schema": 1,
+    "device_jit_execution": "NOT TESTED",
+    "share_sheet_interaction": "NOT AUTOMATED",
+    "notes": "Host terminated only the simulator probe between launches. Generated-code paths are disabled."
+  },
+  "protocol_validation": {
+    "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT",
+    "bytes_per_arena": 16777216,
+    "mailbox_bytes": 96,
+    "regions": 2,
+    "acknowledged_page_writes": 2048,
+    "request_response_and_detach": true,
+    "historical_build7_geometry_reproduced_and_rejected": true,
+    "previous_build8_budget_rejected": true,
+    "stale_nonce_and_wrong_pid_rejected": true,
+    "real_debugger_commands_sent": 0,
+    "device_execution": false,
+    "build_id": "graphics-canary-20260911-10",
+    "ipa_sha256": "d14c965322f6905640137e0203b12dc0381a6d5a2547c06282109afabf0d5475",
+    "packaged_script_sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413",
+    "native_request_sample_sha256": "fd825aafe46c8392a1fbf148bc9cff42580bf42e1919276c03faae13067a3711",
+    "preserved_build7_source_sha256": "672f7ab50fc2e22bbdc85ad3f7d2c9a03c06caca75b664dc07341e9b27d426ef",
+    "build7_resolved_length": 65536,
+    "compiled_protocol": {
+      "protocol": 1,
+      "bytes_per_arena": 16777216,
+      "arena_count": 2,
+      "mailbox_bytes": 96,
+      "response_offset": 48,
+      "error_offset": 88
+    }
+  },
+  "physical_g2_accepted": true,
+  "physical_graphics_accepted": false,
+  "celeste_gameplay_accepted": false,
+  "everest_mods_accepted": false,
+  "user_icloud_limit_bytes": 1000000000,
+  "delivery": {
+    "build_id": "graphics-canary-20260911-10",
+    "local_icloud_folder": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.4.0-build-10",
+    "files": [
+      {
+        "name": "CelesteJITGraphics-v0.4.0-build-10-unsigned.ipa",
+        "bytes": 11899416,
+        "sha256": "d14c965322f6905640137e0203b12dc0381a6d5a2547c06282109afabf0d5475"
+      },
+      {
+        "name": "GraphicsCanary-v0.4.0.dll",
+        "bytes": 12800,
+        "sha256": "4f4443f764c1ebc10d32e723d6d086936412e6bbbe361dd26d9af5dcd72a6936"
+      },
+      {
+        "name": "README-FIRST.txt",
+        "bytes": 2354,
+        "sha256": "451ec797e94a26ea28427422431d5f7fa9402a3d19f0203868cfb5b32b338e67"
+      },
+      {
+        "name": "INSTALL.md",
+        "bytes": 3161,
+        "sha256": "a486c7b0e8e1fdc788be891062a981001daf2b4dcfdcd908c6f60339fb10e772"
+      },
+      {
+        "name": "celeste-jit-probe-TEMPLATE.js",
+        "bytes": 5761,
+        "sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "bytes": 462,
+        "sha256": "f3e3677242a3d70043f87be17b5ce8fadb9bd098c4e20973cc14bbe902b8d5ac"
+      }
+    ],
+    "total_bytes": 11923954,
+    "copied_bytes_verified": true,
+    "upload_status": "CONFIRMED_UPLOADED",
+    "phone_download_or_install_observed": false,
+    "results_folder": "Results",
+    "placed_utc": "2026-09-11T11:54:20.613750+00:00",
+    "uploaded_utc": "2026-09-11T11:55:23Z"
+  },
+  "cloud_upload": {
+    "files": [
+      {
+        "file": "CelesteJITGraphics-v0.4.0-build-10-unsigned.ipa",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "GraphicsCanary-v0.4.0.dll",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "README-FIRST.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "INSTALL.md",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "celeste-jit-probe-TEMPLATE.js",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "Results",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      }
+    ],
+    "observed_utc": "2026-09-11T11:55:23Z"
+  },
+  "source_and_aot_boundaries": "Shared G1/G2 source hashes and runtime archives unchanged. Active AOT checkout not modified. No commit/push/GitHub writes.",
+  "next": "Owner tests visible FNA/Metal scene, touch and same-process background/resume, then exports diagnostics; after acceptance adapt Celeste startup/lifetime, content, FMOD and saves before Everest."
+}

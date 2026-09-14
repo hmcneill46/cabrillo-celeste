@@ -1,0 +1,16 @@
+# Local dependencies include owner-owned game IL and licensed FMOD binaries.
+/.private/
+/.build/
+/artifacts/
+/dist/
+**/bin/
+**/obj/
+**/__pycache__/
+.DS_Store
+*.ipa
+*.dSYM/
+*.mobileprovision
+*.p12
+*.p8
+*.key
+*.diagnostics.json

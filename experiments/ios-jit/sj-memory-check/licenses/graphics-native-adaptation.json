@@ -1,0 +1,9 @@
+{
+  "base_fna3d_revision": "dba98a71514cc30f3c19dc19fc0a479be7c90d52",
+  "altered_source": "FNA3D_Driver_Metal.c",
+  "patch": "native/fna3d-callback.patch",
+  "patch_sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7",
+  "changes": "Callback-scoped completion of unfinished GPU work, reset clear ordering, final command buffer cleanup",
+  "source_origin": "https://github.com/FNA-XNA/FNA3D",
+  "license": "FNA3D-LICENSE"
+}

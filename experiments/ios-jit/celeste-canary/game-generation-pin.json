@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "scope": "Private JIT baseline fixture; starts from the identical canonical AOT raw source. Everest will patch the original IL separately.",
+  "decompiledSource": {
+    "fileCount": 920,
+    "logicalSha256": "db7b722159fbdef8625c81608165aea162957dce956fcd5b16eeceaa1089a273"
+  },
+  "decompilerRuntime": {
+    "name": "dotnet-runtime-osx-x64.tar.gz",
+    "rid": "osx-x64",
+    "url": "https://builds.dotnet.microsoft.com/dotnet/Runtime/6.0.36/dotnet-runtime-6.0.36-osx-x64.tar.gz",
+    "hash": "8121a98ac7bc936074c2eb82aa45dae1ba8745c8808870ffb400302a267df71bfaf394e5c6273ad6c7a2ec408740ab369a03ac80aff2d49621ae131f7490ad50"
+  },
+  "decompilerRuntimeVersion": "6.0.36",
+  "decompilerReferences": [
+    "Celeste.exe",
+    "FNA.dll",
+    "Celeste.Content.dll"
+  ],
+  "referenceResolution": "Pinned .NET 6 runtime supplies framework metadata; no owner legacy BCL added",
+  "canonicalAotRawSha256": "db7b722159fbdef8625c81608165aea162957dce956fcd5b16eeceaa1089a273",
+  "canonicalAotRawMatch": true
+}

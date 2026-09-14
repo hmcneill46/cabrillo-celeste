@@ -1,0 +1,54 @@
+{
+  "graph": "apple-everest/strawberry-jam-dependency-graph-stage25kc.json",
+  "graph_sha256": "6afeb30bed9e916a2600c09f6916df97a36131acc4bf9ead6e4222e27823c633",
+  "helpers": [
+    {
+      "name": "LuaCutscenes",
+      "resolvedVersion": "0.2.13",
+      "publicUrl": "https://gamebanana.com/mmdl/1305773",
+      "gameBananaFileId": "1305773",
+      "zipBytes": 43788,
+      "zipSha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8",
+      "distributedDlls": [
+        {
+          "bytes": 25600,
+          "path": "LuaCutscenes.dll",
+          "sha256": "dc697f1adfaa18bdb219df0a3ee569e1a785a452f17c46cd7626a8730440eb57"
+        }
+      ]
+    },
+    {
+      "name": "MaxHelpingHand",
+      "resolvedVersion": "1.40.9",
+      "publicUrl": "https://gamebanana.com/mmdl/1778093",
+      "gameBananaFileId": "1778093",
+      "zipBytes": 963880,
+      "zipSha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee",
+      "distributedDlls": [
+        {
+          "bytes": 470528,
+          "path": "MaxHelpingHand.dll",
+          "sha256": "6f463f2c014eb60c4abb61e395eb5065455d4bf469f4c83fce9814fb7bfcdfa6"
+        }
+      ]
+    }
+  ],
+  "deferred_helpers": [
+    {
+      "name": "GravityHelper",
+      "resolvedVersion": "1.2.28",
+      "publicUrl": "https://gamebanana.com/mmdl/1715006",
+      "gameBananaFileId": "1715006",
+      "zipBytes": 747044,
+      "zipSha256": "d4a40744f4c155d655973754422643980321b6660027bc01b660a71b0d00649b",
+      "distributedDlls": [
+        {
+          "bytes": 381952,
+          "path": "GravityHelper.dll",
+          "sha256": "6cc0d6cad8ab95dfcd022f80be58695d689a919cbcf6a4a7de4d7b5718dfae80"
+        }
+      ]
+    }
+  ],
+  "deferred_reason": "GravityHelper 1.2.28 fails Mono loading its optional CelesteNet integration; preserved host reproduction, excluded from build 16."
+}

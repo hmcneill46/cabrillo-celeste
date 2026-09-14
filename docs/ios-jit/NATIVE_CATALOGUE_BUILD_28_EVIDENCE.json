@@ -1,0 +1,518 @@
+{
+  "schema": 1,
+  "status": "PASS_BUILD28_READY_AND_ICLOUD_UPLOADED_PHYSICAL_TEST_PENDING",
+  "updated_utc": "2026-09-13T12:02:07.088417+00:00",
+  "build_id": "launcher-catalogue-20260913-28",
+  "version": "0.15.0 (28)",
+  "source": "experiments/ios-jit/launcher-catalogue",
+  "artifact": "artifacts/ios-jit/launcher-catalogue-20260913-28",
+  "ipa_sha256": "87db3cf1936fc3a0253cbddbe6cb40466f024a1bbe98dcda93d7efd5c2bbcea2",
+  "ipa_bytes": 23812187,
+  "executable_uuid": "UUID: 98537CA1-09CE-344B-B370-5C27D8F83DC2",
+  "source_count": 228,
+  "runtime_identity": {
+    "schema": 1,
+    "everestSourceCommit": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+    "compatibilityPolicy": 1,
+    "builtins": {
+      "Celeste": "1.4.0.0",
+      "CelesteIOS": "1.0.0",
+      "Everest": "1.6531.0",
+      "EverestCore": "1.6531.0"
+    }
+  },
+  "runtime_identity_sha256": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62",
+  "managed_assemblies_unchanged": 201,
+  "unchanged": [
+    "all accepted27 managed game/Everest/support/BCL assemblies and original IL",
+    "accepted24 native Metal renderer",
+    "accepted19 Mono native runtime and 512 MiB geometry",
+    "accepted26 reflection correction",
+    "StikDebug protocol/template",
+    "game import and user ZIP/save paths"
+  ],
+  "adapter_sha256": "65b8dca51055627ad8a7da5fb59add7166cf9a39e435b7ac211d9c2df7a4f378",
+  "fna_sha256": "7a7c416101b17c2f5c2c6602bcaf5b8daad7395ee63ca9fc74f9034fb9f239ff",
+  "ios_support": {
+    "id": "CelesteIOS",
+    "version": "1.0.0",
+    "abi": 1,
+    "required": true,
+    "sha256": "b330772f8e4b592ab5a02c44317a8cff54e8cc576763372ecfa4f4455d0c0959"
+  },
+  "script_sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b",
+  "validation_receipts": {
+    "artifacts/ios-jit/launcher-catalogue-20260913-28/package-validation.json": {
+      "status": "PASS_BUILD28_UNSIGNED_PACKAGE_CATALOGUE_AND_RUNTIME_GATES",
+      "sha256": "cd51abff506528152fe606714c3266f51b0129f12ffe2d0bd924ee9e991ade9b"
+    },
+    "artifacts/ios-jit/launcher-catalogue-20260913-28/request-protocol-validation.json": {
+      "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT",
+      "sha256": "b9ee43ca4aa10e953bb1f3755e2af2fb9cbfbacae7a6683c7dc6d711604ba2be"
+    },
+    ".build/ios-jit/device-evidence/2026-09-13/build-28-ready/handoff/accepted27-preservation.json": {
+      "status": "PASS_ACCEPTED27_SOURCE_IPA_AND_RUNTIME_PRESERVED",
+      "sha256": "bfd2021b8798a5c81d8184d4876e9a6482b6bf5f275ddf2ff11eb4c5a9d2194d"
+    },
+    ".build/ios-jit/device-evidence/2026-09-13/build-28-ready/handoff/visual-review.json": {
+      "status": "PASS_BUILD28_NATIVE_BROWSER_AND_LAUNCHER_VISUAL_REVIEW",
+      "sha256": "a97d0789a14df86f93de110ed38e1c736a6dac43f94299c3a553ccf265fdc59b"
+    },
+    ".build/ios-jit/launcher-catalogue-install-tests/receipt.json": {
+      "status": "PASS_NATIVE_INSTALLS_AND_UPDATES",
+      "sha256": "a625cba3221557b9c92241bcb4c3634fb0dec3ab3ce3d78b860ffb688dcf1d33"
+    },
+    ".build/ios-jit/launcher-catalogue-tests/receipt.json": {
+      "status": "PASS_NATIVE_CATALOGUE_CONTRACT_CACHE_INSTALLS",
+      "sha256": "65be36ebfd5531c8be582667e9958e6c5e6567d15c0889707acf9b477779b5c9"
+    },
+    ".build/ios-jit/launcher-catalogue-ui-tests/receipt.json": {
+      "status": "PASS_NATIVE_LAUNCHER_XCUITEST",
+      "sha256": "7f0a78e44638d51298099785f0315446a5314d6d9acccda49420ae792e28834c"
+    },
+    ".build/ios-jit/launcher-catalogue-browser-ui/receipt.json": {
+      "status": "PASS_NATIVE_CATALOGUE_XCUITEST",
+      "sha256": "39f34cc672da7b6c45c65f15ef8df427269ced16b619572dd8bc818f50a638d3"
+    },
+    ".build/ios-jit/launcher-catalogue-host-test/receipt.json": {
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "sha256": "d25a900a9e3c7de366f9128b048cc8879496e40d2a57dcfefcc7c0bae5145ea7"
+    },
+    ".build/ios-jit/launcher-catalogue/launcher-catalogue-20260913-28-simulator/smoke/receipt.json": {
+      "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY",
+      "sha256": "71742e6caa26bd1225c21d1953c5fac8534ffac9607c231463f882e89811baf4"
+    },
+    ".build/ios-jit/device-evidence/2026-09-13/build-28-ready/handoff/host-native-reconciliation.json": {
+      "status": "PASS_HOST_ARCHIVE_RECONCILIATION",
+      "sha256": "45615cf8960554f16b5e6b37d702fb0c8da6688505abc95bbdae60927c8ca786"
+    }
+  },
+  "catalogue_checks": [
+    "20 real entries parsed, stable PageURL despite Obsolete type",
+    "separate Spring files remain three independent choices",
+    "previous version visible but never default download",
+    "native category hierarchy includes map subcategories and tools",
+    "official profile joins exact game and page with individual files",
+    "search query correctly encoded and not falsely filtered",
+    "server sorting, paging and nested category use exact IDs",
+    "five clearly defined sort modes",
+    "bad category rejected",
+    "unbounded paging rejected",
+    "unsafe page rejected http://gamebanana.com/mods/42",
+    "unsafe page rejected https://gamebanana.com.evil.test/mods/42",
+    "unsafe page rejected https://gamebanana.com/mods/42?key=x",
+    "unsafe page rejected file:///mods/42",
+    "unsafe page rejected https://user:pass@gamebanana.com/mods/42",
+    "external media and executable media rejected",
+    "description script removed and encoded text remains inert",
+    "description bounded",
+    "malformed response rejected",
+    "oversized response rejected",
+    "unrelated game profile rejected",
+    "selected catalogue root plus complete recursive dependencies",
+    "unindexed file never replaced by guessed title match",
+    "noncanonical file ID rejected",
+    "valid indexed helper can be on a Tools page",
+    "unindexed desktop tool cannot be downloaded by the mod installer",
+    "overlapping selected files block before changes",
+    "browser cannot bypass actual runtime minimum",
+    "browser cannot bypass app-managed release pins",
+    "exact disabled root is enabled without downloading twice",
+    "simultaneous requests coalesce to one transfer",
+    "fresh revisit uses disk cache without network",
+    "offline refresh retains explicit dated stale copy",
+    "failed endpoint has one-minute request backoff",
+    "cancelled search cancels underlying transfer",
+    "cancelled request leaves no active flight",
+    "game startup awaits cancelled browsing transfers",
+    "game session rejects new browsing transfers",
+    "game startup records zero active requests",
+    "invalid response rejected before cache write",
+    "invalid response not persisted",
+    "offline guidance is readable without implementation codes",
+    "technical network failure retained in diagnostics",
+    "real coordinator returns review without installing",
+    "reviewed browser install commits all three real ZIPs",
+    "browser uses complete persisted installed/enabled report",
+    "unknown save sidecar preserved",
+    "repeat browser install is a no-op after exact hash reuse",
+    "live server sort downloads",
+    "live server sort latest",
+    "live server sort updated",
+    "live server sort likes",
+    "live server sort views",
+    "live Tools-category helper remains installable",
+    "live root maps to exact module name and small verified archive",
+    "real catalogue HTTP ZIP verified committed enabled",
+    "real online browser installation reports actual result",
+    "live Cateline downloaded and enabled alongside prior helper"
+  ],
+  "catalogue_check_count": 58,
+  "live_catalogue": {
+    "fileID": "870370",
+    "helperReport": {
+      "applicationState": "applied",
+      "changes": [
+        {
+          "action": "installed",
+          "afterVersion": "1.0.4",
+          "enabled": true,
+          "name": "memorialHelper"
+        }
+      ],
+      "commitStarted": true,
+      "downloads": [
+        {
+          "key": "8656fe9a62bea7f11f439bf755d005e8f4fd5905b2c9082d8a4f0cf3cdf62e88",
+          "name": "memorialHelper 1.0.4",
+          "status": "installed"
+        }
+      ],
+      "finished": 810992644.050572,
+      "id": "CBF7155F-A3C0-48B0-9C7C-30F3E0DD51E2",
+      "message": "All reviewed mod changes were applied successfully.",
+      "outcome": "completed",
+      "schema": 1,
+      "started": 810992642.516647
+    },
+    "index": {
+      "fetched": "2026-09-13T11:43:59Z",
+      "generation": "03E54D33-34CA-4B44-A1B2-9C6FD504D9A3",
+      "graphSHA256": "ae35132148817d9535fdc4b09f9f80e03f19f435305ad2c3527f758a3c94654e",
+      "graphURL": "https://maddie480.ovh/celeste/mod_dependency_graph.yaml",
+      "updatesSHA256": "544ba646f3a21f5c47edb7150ca4e1a566d77ca7156e580319dd6d1b358245bb",
+      "updatesURL": "https://maddie480.ovh/celeste/everest_update.yaml"
+    },
+    "inventory": {
+      "archives": [
+        {
+          "bytes": 16792,
+          "digest": "089c66c696c622c64f84be5f02a5b0682805e6d39bfc4a3bce06159fb1b98f7c",
+          "filename": "Cateline-089c66c696c6.zip",
+          "modules": [
+            {
+              "dependencies": [
+                {
+                  "name": "EverestCore",
+                  "version": "1.4673.0"
+                }
+              ],
+              "dll": "Cateline.dll",
+              "name": "Cateline",
+              "optionalDependencies": [],
+              "version": "0.1.0"
+            }
+          ]
+        },
+        {
+          "bytes": 13965,
+          "digest": "ea66a574e5e1639c580974828b201633aadbd25b6699529c89fbd86db501fda4",
+          "filename": "memorialHelper-ea66a574e5e1.zip",
+          "modules": [
+            {
+              "dependencies": [
+                {
+                  "name": "Everest",
+                  "version": "1.0.0"
+                }
+              ],
+              "dll": "Code/bin/MemorialHelper.dll",
+              "name": "memorialHelper",
+              "optionalDependencies": [],
+              "version": "1.0.4"
+            }
+          ]
+        }
+      ],
+      "disabled": []
+    },
+    "listResponses": [
+      {
+        "bytes": 108898,
+        "cached": false,
+        "fetched": 1789299837.8574429,
+        "sha256": "0d2371552744a8513cc637ba0d34e47f86cb98edb3cdde55a0c221555a4c5f81",
+        "url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=downloads&category=GameBanana_Mod_6800"
+      },
+      {
+        "bytes": 48165,
+        "cached": false,
+        "fetched": 1789299838.085196,
+        "sha256": "1eac57727a6cc874c61138753cd57186e793a7672f1f86daaca3cbf147735a14",
+        "url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=latest&category=GameBanana_Mod_6800"
+      },
+      {
+        "bytes": 44055,
+        "cached": false,
+        "fetched": 1789299838.266168,
+        "sha256": "41ac241c643fb3ddb4c4fc290a4c1778c4279aa571bbc1d45e37a273755a696f",
+        "url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=updated&category=GameBanana_Mod_6800"
+      },
+      {
+        "bytes": 106698,
+        "cached": false,
+        "fetched": 1789299838.5884871,
+        "sha256": "3930ab18258d5c33fd227d72df3ed73d13fba5759a804d472b9e072569e49a54",
+        "url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=likes&category=GameBanana_Mod_6800"
+      },
+      {
+        "bytes": 115107,
+        "cached": false,
+        "fetched": 1789299839.0059,
+        "sha256": "ce2e133fce233f1d6281ac5af02979e594829c79645304bb26d4dd700c6506ef",
+        "url": "https://maddie480.ovh/celeste/gamebanana-list?page=1&sort=views&category=GameBanana_Mod_6800"
+      }
+    ],
+    "pageURL": "https://gamebanana.com/tools/6850",
+    "skinFileID": "1324068",
+    "skinPageURL": "https://gamebanana.com/mods/251793",
+    "skinReport": {
+      "applicationState": "applied",
+      "changes": [
+        {
+          "action": "installed",
+          "afterVersion": "0.1.0",
+          "enabled": true,
+          "name": "Cateline"
+        }
+      ],
+      "commitStarted": true,
+      "downloads": [
+        {
+          "key": "bb4fe81bd277cd361af2b41bf3e887047409f1972769be43d33e513c99fed398",
+          "name": "Cateline 0.1.0",
+          "status": "installed"
+        }
+      ],
+      "finished": 810992649.657923,
+      "id": "DAFF03EE-02AF-4B92-9586-2362B402180B",
+      "message": "All reviewed mod changes were applied successfully.",
+      "outcome": "completed",
+      "schema": 1,
+      "started": 810992648.129923
+    },
+    "status": "PASS_LIVE_CATALOGUE_TO_VERIFIED_INSTALL"
+  },
+  "host_game": {
+    "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+    "profile": "BrowserCateline",
+    "modules": [
+      "Cateline 0.1.0",
+      "memorialHelper 1.0.4",
+      "CJITCodeCanary 1.0.0"
+    ],
+    "session_contract_checks": 37,
+    "reflection_checks": 30,
+    "log_sha256": "f104fc37198f20ab62d8c015a92c7a0b19cfc2b23d2a38114a6b556370b91bdd",
+    "saves": "0 -> 3 -> readback 3; one host process",
+    "resume": true,
+    "clean_shutdown": true,
+    "architecture": "macOS x64 Mono/FNA/Metal",
+    "phone_acceptance": false
+  },
+  "native_install_counts": {
+    "pure.json": 555,
+    "engine.json": 20,
+    "automatic.json": 7,
+    "runtime-cache.json": 26,
+    "blocked.json": 5,
+    "network.json": 5
+  },
+  "catalogue_policy": {
+    "sort_modes": [
+      "downloads",
+      "latest",
+      "updated",
+      "likes",
+      "views"
+    ],
+    "page_size": 20,
+    "retained_rows": 200,
+    "max_page": 500,
+    "search_match_limit": 20,
+    "search_scope": "relevance; all categories; no list filters",
+    "search_debounce_ms": 350,
+    "concurrent_transfers": 4,
+    "concurrent_image_decodes": 2,
+    "response_byte_limit": 4194304,
+    "metadata_disk_bytes": 25165824,
+    "image_disk_bytes": 33554432,
+    "decoded_cache_bytes": 16777216,
+    "decoded_cache_count": 32,
+    "image_pixel_limit": 16777216,
+    "thumbnail_pixels": 800,
+    "failed_request_backoff_seconds": 60,
+    "ttl_seconds": {
+      "list": 900,
+      "categories": 86400,
+      "details": 600,
+      "images": 604800
+    },
+    "game_start_suspends_and_awaits_browsing": true,
+    "automatic_mod_installation": false
+  },
+  "service_references": {
+    ".build/ios-jit/launcher-catalogue-service/Cateline-original.zip": "089c66c696c622c64f84be5f02a5b0682805e6d39bfc4a3bce06159fb1b98f7c",
+    ".build/ios-jit/launcher-catalogue-service/cateline-fetch.json": "e00e57999051a6259e69caa006ef6290d3ed9a93a13b660dcc4bf9d3e1e79411",
+    ".build/ios-jit/launcher-catalogue-service/ui-app-sample.txt": "67b54dce3ba76b018a05b2039d30c4edbc2e52829c6617951c4965258539dfb7",
+    ".build/ios-jit/launcher-catalogue-service/catalogue-gates.log": "0dea1c2fb3b30d66d9a85cd8366472de6abec9f18ea83277d48ae414784ef2b6",
+    ".build/ios-jit/launcher-catalogue-service/install-gates.log": "0687ab4b24b8d37c5ee10762e86a0918ed98cb78fc54ffe3b6577d36b35c1c56",
+    ".build/ios-jit/launcher-catalogue-service/community-skins.json": "2dcd1cdc2b07796a45c5e29286208497f4bf58d239a0f7b04bd687c38aa0eca8",
+    ".build/ios-jit/launcher-catalogue-service/community-downloads.json": "86c636c3bead99caad01cb258af4a17ead185c169d9769dc1855b1e12caaa2c7",
+    ".build/ios-jit/launcher-catalogue-service/olympus-current.json": "e11abc6041b431e9286545faccb144c8fc2e7627050a0ddd2ed6caa4a56d2d3f",
+    ".build/ios-jit/launcher-catalogue-service/olympus-repo.json": "5dee6545f0af8dbc2e4a147395f004f69dcf5e1618f62682c0c5473a75bf4d7e",
+    ".build/ios-jit/launcher-catalogue-service/community-featured.json": "47e42ad773507d7330aeca570509eeb4b04798c1811c7b2f827d3204d256105f",
+    ".build/ios-jit/launcher-catalogue-service/launcher-captures-final-export.log": "e24c14946ed2a1470675dcec53a07ecc53ec17838abc741ce9aae39586c2a6e0",
+    ".build/ios-jit/launcher-catalogue-service/olympus.lua": "04a66ea5a1e19dccd5e462fc741df8cf8ad275dcb3c7cc15ed9a8d68856ceb4d",
+    ".build/ios-jit/launcher-catalogue-service/community-categories.json": "d653b930ff53b58a2ba3ab539ac491a7145b39fda40708305fcbc8f33673958c",
+    ".build/ios-jit/launcher-catalogue-service/captures-2-export.log": "dc999434a4f2a778278716f18849cdd4900a37d8a8a74c741385b79223f6c1b5",
+    ".build/ios-jit/launcher-catalogue-service/initial-fetches.json": "0956c8509df151d4eb4affa5552b4816774dbeac5db620988f4b3bfa000a2401",
+    ".build/ios-jit/launcher-catalogue-service/ui-runner-sample-command.log": "9fe27b13b74493cf7defea4c3c2d54b25797cc2d9f2789ce24de7087063a01bd",
+    ".build/ios-jit/launcher-catalogue-service/fetches-2.json": "8c2cd8ad52db21507e9a76bd461a9d2c5fa9f85a8a06417ba59631ae2e7d09e4",
+    ".build/ios-jit/launcher-catalogue-service/community-page2.json": "1d45f998309f99e9b82d4763057af2b82a510f3188b883792463bc8329182925",
+    ".build/ios-jit/launcher-catalogue-service/skins-fetch.json": "fd143cf34cd9ee43335428c4b390bb836f93d61a3574a5e21589e59ce0321647",
+    ".build/ios-jit/launcher-catalogue-service/community-spring.json": "addc8449819f09638e1b903ef2722c248007d1bd69c6fd06215a23c4ae666081",
+    ".build/ios-jit/launcher-catalogue-service/simulator-current.png": "68b582a189256fb4b1ee3686c826914d756e4e22daff2d1b0cdc9f579cfb52c2",
+    ".build/ios-jit/launcher-catalogue-service/community-new.json": "f5d19f41464a664f52472ec54f9fd003723f655487ffb328c0d5fc375e09e9e1",
+    ".build/ios-jit/launcher-catalogue-service/host-compile.log": "5adeaef03217bdec42cc5df08f7a20036b8e6afe488e5eccff538d4093257cdb",
+    ".build/ios-jit/launcher-catalogue-service/everest-updater.cs": "8cafff5dcef36b427f86ea8f0d8e97792bb6081ab39c1794efcf229578fd3b52",
+    ".build/ios-jit/launcher-catalogue-service/spring-profile.json": "68741dc8695035e82503c3285d6e0f8466db356c92bfc01aa5a3ae9d25a0fdb5",
+    ".build/ios-jit/launcher-catalogue-service/ui-runner-sample.txt": "68dbd8c2152f1a5b9042ffcb03544f766e49475e614a736ad968b29c3ab64748",
+    ".build/ios-jit/launcher-catalogue-service/ui-runner-current.log": "d0b53e2a719d60b6dbcd54eba0b8286a2b494eb7b3f8de8de5b6cdc8b8ecba38",
+    ".build/ios-jit/launcher-catalogue-service/community-subcategories.yaml": "26d9b34be36909b552837b1fc51068863e8115647d8094c75893f6f35139d9dc",
+    ".build/ios-jit/launcher-catalogue-service/browser-ui-gates.log": "600052d2129755af0663560a42fff2583811524e051d42464f82bc225fe11768",
+    ".build/ios-jit/launcher-catalogue-service/fetches-3.json": "4c579570d577715d4e684f3bee9b4e7eaaaf86339cc62f08065fa86b21dcec22",
+    ".build/ios-jit/launcher-catalogue-service/ui-app-sample-command.log": "caddb8f0ff15a9a83bc1a082f0a21b279342db31ffa4fce96614bb119c86c516",
+    ".build/ios-jit/launcher-catalogue-service/navigation-check-current.png": "cc5b9ba373375c4212dfab79d3b08730d1ddca8e5afe1cdb1bb9b5e7b1b0e482",
+    ".build/ios-jit/launcher-catalogue-service/simulator-build.log": "2968f6a32b85253bdc8c13cda5f427d3721ab965e1ca0021bc8e58c77ff66793",
+    ".build/ios-jit/launcher-catalogue-service/captures-final-export.log": "99522b25bab66173add846a236103cbe1723e0b9f8462d3423c2070cf4cdc14b",
+    ".build/ios-jit/launcher-catalogue-service/community-filtered-search.json": "f82caf0d136f33d5b4c9096bd51a7a0bf35214f38f7e17959f407775354c19f1"
+  },
+  "primary_sources": [
+    {
+      "name": "Olympus browser",
+      "url": "https://github.com/EverestAPI/Olympus/blob/568cc5fc846836d480e41f928a3db7c06e87798d/src/scenes/gamebanana.lua",
+      "commit": "568cc5fc846836d480e41f928a3db7c06e87798d"
+    },
+    {
+      "name": "Everest updater",
+      "url": "https://github.com/EverestAPI/Everest/blob/d72e94f4b9e62b91cbdea674587ed39d53de9550/Celeste.Mod.mm/Mod/Helpers/ModUpdaterHelper.cs"
+    },
+    {
+      "name": "GameBanana profile API",
+      "url": "https://gamebanana.com/apiv11/Mod/150813/ProfilePage"
+    }
+  ],
+  "limitations": [
+    "Physical build28 browser/install/game acceptance pending",
+    "Direct installation requires exact indexed file identity; previous/unindexed archives remain manual imports",
+    "Tools classification alone does not exclude real Everest helpers",
+    "Search is limited to 20 relevance matches and does not share browse sorting/filtering",
+    "Cache limits are not a total app memory bound",
+    "No broad all-mod/all-map compatibility claim",
+    "Public original-IL preparation and FMOD permission remain release gates"
+  ],
+  "profile": "Profiles/sj-first-play",
+  "existing_content_mods_saves_reused": true,
+  "accepted_fallback": "0.14.0-build-27",
+  "physical_build27_accepted": true,
+  "physical_build28_accepted": false,
+  "cloud_upload_confirmed": true,
+  "phone_download_confirmed": false,
+  "next": "Phone28: native browse/sort/categories/search/details, exact reuse and small Cateline install/report, optional offline test; fresh JIT, gameplay and normal Quit; export browsing/install and game sessions. After acceptance: responsive real loading, whole-profile backup/restore, native touch editor.",
+  "git_remote_writes": false,
+  "aot_checkout_mutated": false,
+  "delivery": {
+    "build_id": "launcher-catalogue-20260913-28",
+    "created_utc": "2026-09-13T12:00:46.313882+00:00",
+    "method": "Versioned iCloud Drive local placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.15.0-build-28",
+    "local_icloud_copy_verified": true,
+    "cloud_upload_confirmed": true,
+    "phone_download_confirmed": false,
+    "physical_execution": false,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 23812187,
+        "sha256": "87db3cf1936fc3a0253cbddbe6cb40466f024a1bbe98dcda93d7efd5c2bbcea2"
+      },
+      "README-FIRST.txt": {
+        "bytes": 3832,
+        "sha256": "c5f99d96c5f5aff02f16f1491dfdaa7b1e9ee869b3a6d47f360c26843d4d9d78"
+      },
+      "INSTALL.md": {
+        "bytes": 626,
+        "sha256": "ab16b8b09a707e9d0b475b2a273e775a63009789c0f7d7772302e51c057b12f5"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5763,
+        "sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 6022,
+        "sha256": "9c7849f7174367974abb31c34a37327b45a06f9300889ed605974d3859d08bce"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 4428,
+        "sha256": "546ccf22139a8f6f2fd77c28d913f6617f96c98dbe1cdda33d2b5cbfa54d9d51"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 527,
+        "sha256": "a7049812f88ad930dd8e3d48315c3726de8076c103ee2473e8fd540f15612986"
+      }
+    },
+    "total_bytes": 23833385,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-13/build-28-ready",
+      "receipt_sha256": "fab464c37eb3716b2afe70d5c71bc3ec88e93b32dd26e9aec363a774caccc485",
+      "files": 1286
+    },
+    "retention": "Retain accepted27 cloud fallback, earlier26/24 fallbacks, every Results folder and exact local historical artifacts. No new large mod/game files are handed off.",
+    "cloud_upload_confirmed_utc": "2026-09-13T12:02:07.088417+00:00",
+    "cloud_status_sha256": "f4a81a5423c781f6f14a01c7e2666e18f48710067bffef2a2d14580807fc8dc8",
+    "cloud_status": [
+      {
+        "file": "celeste-jit-probe-TEMPLATE.js",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "INSTALL.md",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "THIRD_PARTY_NOTICES.md",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "TEST-IDENTITY.json",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "CelesteJITEverest-unsigned.ipa",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "README-FIRST.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      }
+    ]
+  }
+}

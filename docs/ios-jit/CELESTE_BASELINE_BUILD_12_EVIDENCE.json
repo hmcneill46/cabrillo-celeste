@@ -1,0 +1,575 @@
+{
+  "schema": 1,
+  "date": "2026-09-11",
+  "status": "BUILD12_PHYSICAL_BOUNDED_CELESTE_JIT_GAMEPLAY_AUDIO_SAVES_AND_RESUME_PASS",
+  "build_id": "celeste-canary-20260911-12",
+  "version": "0.5.0",
+  "build_number": "12",
+  "bundle_id": "io.github.hmcneill46.celeste.everest.jit.game",
+  "latest_physical_acceptance": "CELESTE_BUILD12_PASS",
+  "physical_game_accepted": true,
+  "everest_or_mod_loader_implemented": false,
+  "ipa": "artifacts/ios-jit/celeste-canary-20260911-12/CelesteJITGame-unsigned.ipa",
+  "ipa_bytes": 880339074,
+  "ipa_sha256": "6b72dfb799bceeb31a9978e5d948ba37aa902c87c831fbad13591cbcfe578d76",
+  "executable_sha256": "dee3bf54b00c24fa0fa19c46a5f54c2af4639a26c054fb6bb41479db1999835a",
+  "executable_uuid": "UUID: 4995D4CF-76A3-3619-955C-A62CFC6C09E7",
+  "fixture_name": "CelesteJITGame-v0.5.0.dll",
+  "fixture_bytes": 2685440,
+  "fixture_sha256": "6fcb34e8a9799d6b94e4caba8b37dc6aaae50da6863c03c35dd851427c47ad5b",
+  "fna_sha256": "802b6dd2fe0a6c386d1b29b48dfea358ce85fe4f2530332410bcfaa015bfcbf0",
+  "script_sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413",
+  "compiled_protocol": {
+    "protocol": 1,
+    "bytes_per_arena": 16777216,
+    "arena_count": 2,
+    "mailbox_bytes": 96,
+    "response_offset": 48,
+    "error_offset": 88
+  },
+  "runtime": {
+    "schema": 1,
+    "runtime_repository": "https://github.com/dotnet/runtime.git",
+    "runtime_tag": "v8.0.28",
+    "runtime_commit": "46295af5828b062bbbf93a9cef50fd8cb9fbcb09",
+    "matching_ios_pack": "Microsoft.NETCore.App.Runtime.Mono.ios-arm64/8.0.28",
+    "pack_sha256": "09aeb41f3759c83c970120957995cbdabe097b6a6981091e588cd65b738408e2",
+    "pack_sha512": "3b7b4593292926a7457d55e67f9095c6b70a0f809f4002967ad636ba2ae271484080615cb5883fbef2a6271c86da9e372bccdf8313914bc1616c81c50dbc5e1a",
+    "native_runtime": "custom build; stock AOT runtime is not used",
+    "bcl_and_system_native": "matching official iOS runtime pack",
+    "sdk": {
+      "sdk_version": "8.0.422",
+      "name": "dotnet-sdk-osx-x64.tar.gz",
+      "rid": "osx-x64",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.422/dotnet-sdk-8.0.422-osx-x64.tar.gz",
+      "hash": "fb06d2755b407cece4f2a0ad0c3869f28220bf5be7ae69541a3c22855cef01cb463dde0af76000c447541345a261ed68847ef590e4ba7a27109447aed6e79560"
+    }
+  },
+  "aot_disabled": true,
+  "interpreter_disabled": true,
+  "runtime_patch_sha256": "8851379ad30dc56ecbf4cbb8516afda53968a4cee8268a59c7d9e538e5be588b",
+  "monomod_pin": {
+    "repository": "https://github.com/MonoMod/MonoMod.git",
+    "commit": "dfc30a1506d37fb88a2c2be004f525205f46a24c",
+    "iced_commit": "c50f29b7bc305696895c075f3fc7719751426b12",
+    "sdk": {
+      "version": "9.0.300",
+      "metadata_url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/9.0/releases.json",
+      "name": "dotnet-sdk-osx-x64.tar.gz",
+      "rid": "osx-x64",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.300/dotnet-sdk-9.0.300-osx-x64.tar.gz",
+      "hash": "36ff37eec764c9b509fecea7ea47e4ad3d723b40eb463158de85a4f70dab6583989c4cb7324a8e00fde727dfa77b7ff63f489c255dbce87c1ee725ae445eef62"
+    }
+  },
+  "monomod_patch_sha256": "822d7337c909538c8942b77f7c39192b85ea67b1359ac7a547a1590ed17cbfce",
+  "toolchain": {
+    "xcode": "Xcode 26.6\nBuild version 17F113",
+    "sdk": "26.5",
+    "target": "arm64-apple-ios26.0",
+    "global_configuration_changed": false
+  },
+  "original_input": {
+    "canonicalClass": "celeste-1.4.0.0-a",
+    "celesteAssemblyReferences": [
+      {
+        "name": "FNA",
+        "version": "21.3.5.0"
+      },
+      {
+        "name": "mscorlib",
+        "version": "4.0.0.0"
+      },
+      {
+        "name": "System",
+        "version": "4.0.0.0"
+      },
+      {
+        "name": "System.Core",
+        "version": "4.0.0.0"
+      },
+      {
+        "name": "System.Xml",
+        "version": "4.0.0.0"
+      }
+    ],
+    "celesteContentAssembly": {
+      "definedTypeCount": 0,
+      "embeddedResourceCount": 0,
+      "handling": "reconstruct identity-only modern library; no proprietary content is embedded",
+      "sourcePresent": true
+    },
+    "content": {
+      "aggregateAlgorithm": "sha256(relative-path NUL size NUL file-sha256 newline)",
+      "aggregateSha256": "30a1c147d1a3ab0aa45762094e393ed7fd69951dd66e5af063447641e0699c46",
+      "fileCount": 1216,
+      "totalBytes": 1158665183
+    },
+    "decompilerReferences": [],
+    "everestMarkerCount": 0,
+    "files": {
+      "Celeste.Content.dll": {
+        "assemblyIdentity": {
+          "name": "Celeste.Content",
+          "version": "0.0.0.0"
+        },
+        "managedArchitectureEvidence": "PE32 Mono/.Net assembly (legacy AnyCPU-compatible input)",
+        "sha256": "0b8d6195992c8970e8602bf48a7bf89104b83a98e34a07dc0c18d01581711d15",
+        "size": 3072
+      },
+      "Celeste.exe": {
+        "assemblyIdentity": {
+          "name": "Celeste",
+          "version": "1.0.0.0"
+        },
+        "managedArchitectureEvidence": "PE32 Mono/.Net assembly (legacy AnyCPU-compatible input)",
+        "sha256": "fd73f8a2311fa5737ded550cbad4b75c85b7686b36432f59185e940fcb65fcfe",
+        "size": 2572800
+      },
+      "FNA.dll": {
+        "assemblyIdentity": {
+          "name": "FNA",
+          "version": "21.3.5.0"
+        },
+        "managedArchitectureEvidence": "PE32 Mono/.Net assembly (legacy AnyCPU-compatible input)",
+        "sha256": "00349b572636c0ed4c97d4e4f74344b3450160c42d4a6b52bcf5e0f2d5193a31",
+        "size": 773632
+      }
+    },
+    "gameVersion": "1.4.0.0",
+    "gameVersionEvidence": {
+      "kind": "explicit-profile-fingerprints-and-decompiled-constructor",
+      "note": "Generation independently verifies that the canonical source constructs Version(1, 4, 0, 0)."
+    },
+    "normalizationAdapter": "none",
+    "packageLayout": "macos-app-resources",
+    "profileId": "itch-macos-fna-1.4.0.0",
+    "resolvedRootRelative": "Contents/Resources",
+    "runtimeFamily": "FNA",
+    "schemaVersion": 2,
+    "sourcePlatform": "macOS",
+    "sourceRoot": "$CELESTE_GAME_ROOT/Contents/Resources",
+    "store": "itch.io",
+    "validation": "supported-explicit-fna-input-profile"
+  },
+  "decompiler_package_sha256": "9f2fe20986177e444b4bd9126a37514b073d49646a2df71b750d4a839cb97424",
+  "canonical_raw_game_logical_sha256": "db7b722159fbdef8625c81608165aea162957dce956fcd5b16eeceaa1089a273",
+  "canonical_raw_game_matches_aot": true,
+  "fmod": {
+    "ios": {
+      "architectures": [
+        "arm64"
+      ],
+      "build": 97915,
+      "headerVersion": "0x00011009",
+      "platform": "iOS device",
+      "release": "1.10.09",
+      "schemaVersion": 1,
+      "simulatorPolicy": "explicit-no-fmod-because-sdk-has-no-arm64-simulator-slice",
+      "source": "$FMOD_IOS_SDK_ROOT",
+      "xcframeworks": {
+        "FMOD": {
+          "binarySha256": "f8d9d2224e94fece780cb203afdeb477c2b0340f6d57bf80d7124792f245d6e0",
+          "libraryIdentifier": "ios-arm64"
+        },
+        "FMODStudio": {
+          "binarySha256": "f972062c8148665587fac3f3abac9d64416e4044d54ecbf2efb64b2722fcd9dc",
+          "libraryIdentifier": "ios-arm64"
+        }
+      }
+    },
+    "host_runtime": "1.10.14",
+    "managed_wrapper": "1.10.14",
+    "unavailable_dsp_cpu_query_returns": "ERR_UNSUPPORTED",
+    "remaining_static_imports": 488,
+    "physical_audio_verified": false,
+    "redistribution_permission_unresolved": true,
+    "header_compatibility_inspection": {
+      "status": "STATIC_HEADER_CHECK_COMPATIBLE_PHYSICAL_AUDIO_PENDING",
+      "managed_header_value": "0x00011014",
+      "host_reported_value": "0x00011014",
+      "managed_and_host_display_version": "1.10.14",
+      "ios_sdk_display_version": "1.10.09",
+      "ios_core_required_version": "0x00011009",
+      "ios_studio_header_mask": "0xffffff00",
+      "ios_studio_required_masked_header": "0x00011000",
+      "header_condition_holds": true,
+      "physical_audio_tested": false,
+      "disassembly_sha256": {
+        "studio-internal-create-disassembly.txt": "44f9e161601554217b5e729dd5eae10ee3ef25aeacb76389ac4c7656de9b6e3b",
+        "studio-create-disassembly.txt": "8b96a63f5e156081c866a3529d426c39c274bc10248e8deb7453025541ed70a2"
+      },
+      "object_sha256": "6d228fc5e2903eecbdfd27a832396f1d05562d056f13ea92940333aa368abe7c",
+      "source_archive_sha256": "f972062c8148665587fac3f3abac9d64416e4044d54ecbf2efb64b2722fcd9dc",
+      "bcd_reference": "https://qa.fmod.com/t/getversion-gives-2-2-21-for-fmod-2-02-15/20432",
+      "documentation_erratum": "Inherited/frozen 1.10.20 labels interpreted the final byte as decimal; actual raw header/host value is 0x00011014. No IPA/DLL changes."
+    }
+  },
+  "package_validation": {
+    "status": "PASS_PRIVATE_CELESTE_PACKAGE_AND_INPUTS",
+    "ipa_bytes": 880339074,
+    "ipa_sha256": "6b72dfb799bceeb31a9978e5d948ba37aa902c87c831fbad13591cbcfe578d76",
+    "fixture_sha256": "6fcb34e8a9799d6b94e4caba8b37dc6aaae50da6863c03c35dd851427c47ad5b",
+    "fna_sha256": "802b6dd2fe0a6c386d1b29b48dfea358ce85fe4f2530332410bcfaa015bfcbf0",
+    "native_internal_imports": 1294,
+    "all_declared_internal_imports_resolve": true,
+    "content_files": 1216,
+    "content_bytes": 1158665183,
+    "content_aggregate_sha256": "30a1c147d1a3ab0aa45762094e393ed7fd69951dd66e5af063447641e0699c46",
+    "framework_dlls": 168,
+    "monomod_dlls": 10,
+    "canonical_aot_raw_source_matched": true,
+    "untrimmed_game_and_fna": true,
+    "apple_managed_bindings": false,
+    "debug_symbols_outside_ipa": true,
+    "signature": false,
+    "provisioning_profile": false,
+    "accepted_sources_and_runtime_unchanged": true,
+    "script_matches_physical_build9": true,
+    "host_fixture_bytes_match": true,
+    "private_owner_kit": true,
+    "physical_game_tested": false
+  },
+  "host_validation": {
+    "status": "PASS_HOST_CELESTE_TITLE_PROLOGUE_MOVEMENT_HOOK_FMOD_XML_RESUME_AND_DETACH",
+    "fixture_sha256": "6fcb34e8a9799d6b94e4caba8b37dc6aaae50da6863c03c35dd851427c47ad5b",
+    "fna_sha256": "802b6dd2fe0a6c386d1b29b48dfea358ce85fe4f2530332410bcfaa015bfcbf0",
+    "runtime": "pinned Mono 8.0.28 macOS x64 cooperative GC; AOT/interpreter disabled",
+    "desktop_native_sha256": {
+      "libSDL2-2.0.0.dylib": "8fca5fdbdef48c8168888702f8d1efb41a4d844d97fade628dc0391536ea1abd",
+      "libFNA3D.0.dylib": "af72b4cfd0bc6f50ab411b63ca07ba0d9ac76ea5bba8aee58fc8d1c3dff8babb",
+      "libfmod.dylib": "fa80b486510ced0a80b5297cff055bf61a07d396520d7d6de9852feeeb1b3286",
+      "libfmodstudio.dylib": "293f24b9005b51d2ef7c3fb5cc2a5938d7ff4a80ad331b71147a06f0f7980b03"
+    },
+    "callback_autorelease_pools": true,
+    "physical_touch_or_ios_background_tested": false,
+    "ios_jit_aliases_tested": false,
+    "native_patch_sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7",
+    "log_sha256": "7ddaad4f818fc70d190f809045cf90fc6763b6685daa91673a7e36ef9680500a"
+  },
+  "host_game_observations": {
+    "title": true,
+    "prologue_level_frames": 760,
+    "player_position_changes": 213,
+    "jump_hook_calls": 2,
+    "jump_hook_calls_after_resume": 1,
+    "post_resume_frames": 280,
+    "settings_save_readback": true,
+    "save_data_readback": true,
+    "main_thread_detached": true,
+    "touch_source": "host-injected stable SDL_Finger snapshots through real FNA polling and reused iOS touch policy",
+    "physical_ios_lifecycle": false
+  },
+  "host_capacity": {
+    "chunks": 113,
+    "requested_bytes": 5062192,
+    "jit_completions": 8806,
+    "fourfold_16k_rounded_estimate_bytes": 20824064,
+    "physical_code_budget_bytes": 33554432,
+    "physical_capacity_proven": false,
+    "benchmark": false
+  },
+  "zombies_and_metal_validation": {
+    "status": "PASS_GAME_NSZOMBIE_AND_METAL_API_VALIDATION",
+    "exit_code": 0,
+    "fixture_sha256": "6fcb34e8a9799d6b94e4caba8b37dc6aaae50da6863c03c35dd851427c47ad5b",
+    "log_sha256": "c2e672cd8e5e27009798c14dd65091a0534b2638e13e1e101fe44f097ce6d809",
+    "environment": {
+      "NSZombieEnabled": "YES",
+      "MTL_DEBUG_LAYER": "1"
+    },
+    "metal_api_validation_confirmed": true
+  },
+  "simulator_validation": {
+    "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY",
+    "dll_import_handler": "PASS",
+    "run_disabled_without_jit": true,
+    "native_console_recovered": true,
+    "build_id": "celeste-canary-20260911-12-simulator",
+    "background_event_burst_persisted_and_rendered": 800,
+    "os": "26.5",
+    "architecture": "x86_64",
+    "previous_session_recovered": true,
+    "current_session_not_duplicated": true,
+    "export_schema": 1,
+    "device_jit_execution": "NOT TESTED",
+    "share_sheet_interaction": "NOT AUTOMATED",
+    "notes": "Host terminated only the simulator probe between launches. Generated-code paths are disabled."
+  },
+  "simulator_launcher_screenshot_inspected": true,
+  "protocol_validation": {
+    "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT",
+    "bytes_per_arena": 16777216,
+    "mailbox_bytes": 96,
+    "regions": 2,
+    "acknowledged_page_writes": 2048,
+    "request_response_and_detach": true,
+    "historical_build7_geometry_reproduced_and_rejected": true,
+    "previous_build8_budget_rejected": true,
+    "stale_nonce_and_wrong_pid_rejected": true,
+    "real_debugger_commands_sent": 0,
+    "device_execution": false,
+    "build_id": "celeste-canary-20260911-12",
+    "ipa_sha256": "6b72dfb799bceeb31a9978e5d948ba37aa902c87c831fbad13591cbcfe578d76",
+    "packaged_script_sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413",
+    "native_request_sample_sha256": "41138e181ff5edf6e90b240d210ab4f5a00905b6de876c4f3764ecd5f943ebff",
+    "preserved_build7_source_sha256": "672f7ab50fc2e22bbdc85ad3f7d2c9a03c06caca75b664dc07341e9b27d426ef",
+    "build7_resolved_length": 65536,
+    "compiled_protocol": {
+      "protocol": 1,
+      "bytes_per_arena": 16777216,
+      "arena_count": 2,
+      "mailbox_bytes": 96,
+      "response_offset": 48,
+      "error_offset": 88
+    }
+  },
+  "source_snapshot": ".build/ios-jit/device-evidence/2026-09-11/build-12-ready/source-snapshot",
+  "source_snapshot_groups": {
+    "build_sources": 114,
+    "game_sources": 925,
+    "fna_sources": 321,
+    "native_renderer_sources": 322,
+    "game_patches": 2,
+    "resources_and_compiler_responses": 18,
+    "canonical_raw_game": 920,
+    "device_native_archives": 13,
+    "original_managed_inputs": 3
+  },
+  "source_snapshot_unique_files": 2631,
+  "source_snapshot_receipt_sha256": "afd993383679befef6b1fac486ea4ef2f341592dd597468b79a3d9216612b5b8",
+  "all_source_snapshot_hashes_verified": true,
+  "raw_source_manifest_normalizes_csproj_hint_paths": true,
+  "save_root": "Documents/Profiles/vanilla-jit-canary/ in separate guest container",
+  "aot_checkout_mutated": false,
+  "git_commit_or_remote_write": false,
+  "delivery": {
+    "build_id": "celeste-canary-20260911-12",
+    "copied_utc": "2026-09-11T18:11:21.638075+00:00",
+    "local_icloud_folder": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.5.0-build-12",
+    "files": [
+      {
+        "name": "CelesteJITGame-v0.5.0-build-12-unsigned.ipa",
+        "bytes": 880339074,
+        "sha256": "6b72dfb799bceeb31a9978e5d948ba37aa902c87c831fbad13591cbcfe578d76",
+        "source": "artifacts/ios-jit/celeste-canary-20260911-12/CelesteJITGame-unsigned.ipa"
+      },
+      {
+        "name": "CelesteJITGame-v0.5.0.dll",
+        "bytes": 2685440,
+        "sha256": "6fcb34e8a9799d6b94e4caba8b37dc6aaae50da6863c03c35dd851427c47ad5b",
+        "source": "artifacts/ios-jit/celeste-canary-20260911-12/CelesteJITGame-v0.5.0.dll"
+      },
+      {
+        "name": "celeste-jit-probe-TEMPLATE.js",
+        "bytes": 5761,
+        "sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413",
+        "source": "artifacts/ios-jit/celeste-canary-20260911-12/celeste-jit-probe-TEMPLATE.js"
+      },
+      {
+        "name": "README-FIRST.txt",
+        "bytes": 2936,
+        "sha256": "e2ad5e15542b3b2baea96fc4fb59107614d6938c40f4a185cf6aea2fe0b5e5cb",
+        "source": "artifacts/ios-jit/celeste-canary-20260911-12/README-FIRST.txt"
+      },
+      {
+        "name": "INSTALL.md",
+        "bytes": 2695,
+        "sha256": "6a34aac3351d45d3758d953e998e6a30a25c12cbc3647d0f7d38f50cdba408bf",
+        "source": "artifacts/ios-jit/celeste-canary-20260911-12/INSTALL.md"
+      },
+      {
+        "name": "build-receipt.json",
+        "bytes": 72203,
+        "sha256": "5c3eb3313f2b4dc4a3f48d7b9cbce0136cbd2eebc24c3cca3a955c0dea0e06be",
+        "source": "artifacts/ios-jit/celeste-canary-20260911-12/build-receipt.json"
+      },
+      {
+        "name": "THIRD_PARTY_NOTICES.md",
+        "bytes": 4944,
+        "sha256": "1b500eed16c029b22174fb94a60a2a947d9469721e816feec4affc2e4728d136",
+        "source": "artifacts/ios-jit/celeste-canary-20260911-12/THIRD_PARTY_NOTICES.md"
+      },
+      {
+        "name": "REPOSITORY_LICENSE.txt",
+        "bytes": 1062,
+        "sha256": "acf5d461ffa95ebf30463e77ed4b26834ba011d430a3ef716a65ac4cb2fd05da",
+        "source": "artifacts/ios-jit/celeste-canary-20260911-12/REPOSITORY_LICENSE.txt"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "bytes": 721,
+        "sha256": "0046bb02ac04dddb3215a43fd6dee69555669291d6c56df28013207f1a0ae057",
+        "source": "generated for these handoff filenames"
+      }
+    ],
+    "total_bytes": 883114836,
+    "copied_bytes_verified": true,
+    "cloud_upload_confirmed": true,
+    "phone_download_observed": false,
+    "private_owner_content": true,
+    "results_folder": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.5.0-build-12/Results",
+    "cloud_observed_utc": "2026-09-11T18:42:57Z",
+    "cloud_upload_status_file": "icloud-upload-status.json",
+    "primary_handoff": "Verified LocalSend Documents on the physical iPhone over Wi-Fi",
+    "direct_phone_files_readback_verified": true,
+    "phone_files_location": "On My iPhone/LocalSend/Celeste JIT Tests/0.5.0-build-12",
+    "phone_transfer_receipt": "phone-wifi-handoff.json",
+    "phone_installation_observed": false,
+    "icloud_phone_download_observed": false
+  },
+  "icloud_upload_observation": {
+    "files": [
+      {
+        "file": "CelesteJITGame-v0.5.0-build-12-unsigned.ipa",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "CelesteJITGame-v0.5.0.dll",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "celeste-jit-probe-TEMPLATE.js",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "README-FIRST.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "INSTALL.md",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "build-receipt.json",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "THIRD_PARTY_NOTICES.md",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "REPOSITORY_LICENSE.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "file": "Results",
+        "ubiquitous": true,
+        "upload_error": null,
+        "uploaded": true,
+        "uploading": false
+      }
+    ],
+    "observed_utc": "2026-09-11T18:42:57Z"
+  },
+  "next_gate": "Real Everest preparation and boot with a normal small map/code ZIP; native Lua/cutscene coverage and actual SJ closure before Beginner lobby/Bing acceptance.",
+  "public_importer": "Planned; current private reconstructed game fixture and bundled owner assets are not the public distribution architecture.",
+  "phone_wifi_handoff": {
+    "build_id": "celeste-canary-20260911-12",
+    "status": "COPIED_TO_IPHONE_OVER_WIFI_AND_READ_BACK_VERIFIED",
+    "started_utc": "2026-09-11T18:29:29.011188+00:00",
+    "target": "iPhone 15 Pro Max / iPhone16,2",
+    "connection": "Wi-Fi; existing Apple native CoreDevice/RemoteXPC tunnel",
+    "service": "com.apple.mobile.house_arrest.shim.remote / VendDocuments / AFC",
+    "app_bundle": "org.localsend.localsendApp",
+    "tool_version": "11.12.4",
+    "files_location": "On My iPhone/LocalSend/Celeste JIT Tests/0.5.0-build-12",
+    "remote_folder": "/Documents/Celeste JIT Tests/0.5.0-build-12",
+    "files": [
+      {
+        "file": "SHA256SUMS.txt",
+        "bytes": 721,
+        "sha256": "0046bb02ac04dddb3215a43fd6dee69555669291d6c56df28013207f1a0ae057",
+        "read_back_from_phone_verified": true
+      },
+      {
+        "file": "REPOSITORY_LICENSE.txt",
+        "bytes": 1062,
+        "sha256": "acf5d461ffa95ebf30463e77ed4b26834ba011d430a3ef716a65ac4cb2fd05da",
+        "read_back_from_phone_verified": true
+      },
+      {
+        "file": "INSTALL.md",
+        "bytes": 2695,
+        "sha256": "6a34aac3351d45d3758d953e998e6a30a25c12cbc3647d0f7d38f50cdba408bf",
+        "read_back_from_phone_verified": true
+      },
+      {
+        "file": "README-FIRST.txt",
+        "bytes": 2936,
+        "sha256": "e2ad5e15542b3b2baea96fc4fb59107614d6938c40f4a185cf6aea2fe0b5e5cb",
+        "read_back_from_phone_verified": true
+      },
+      {
+        "file": "THIRD_PARTY_NOTICES.md",
+        "bytes": 4944,
+        "sha256": "1b500eed16c029b22174fb94a60a2a947d9469721e816feec4affc2e4728d136",
+        "read_back_from_phone_verified": true
+      },
+      {
+        "file": "celeste-jit-probe-TEMPLATE.js",
+        "bytes": 5761,
+        "sha256": "bfd36579c919cd060bb28fa201fa3056b4a7e19793d9d835539bb62abe24b413",
+        "read_back_from_phone_verified": true
+      },
+      {
+        "file": "build-receipt.json",
+        "bytes": 72203,
+        "sha256": "5c3eb3313f2b4dc4a3f48d7b9cbce0136cbd2eebc24c3cca3a955c0dea0e06be",
+        "read_back_from_phone_verified": true
+      },
+      {
+        "file": "CelesteJITGame-v0.5.0.dll",
+        "bytes": 2685440,
+        "sha256": "6fcb34e8a9799d6b94e4caba8b37dc6aaae50da6863c03c35dd851427c47ad5b",
+        "read_back_from_phone_verified": true
+      },
+      {
+        "file": "CelesteJITGame-v0.5.0-build-12-unsigned.ipa",
+        "bytes": 880339074,
+        "sha256": "6b72dfb799bceeb31a9978e5d948ba37aa902c87c831fbad13591cbcfe578d76",
+        "read_back_from_phone_verified": true
+      }
+    ],
+    "prior_versions_preserved": true,
+    "other_app_files_read": false,
+    "ipa_installed_or_launched_by_host": false,
+    "debugger_attached": false,
+    "finished_utc": "2026-09-11T18:43:26.716025+00:00",
+    "total_bytes": 883114836
+  },
+  "status_at_delivery": "BUILD12_UNSIGNED_KIT_VERIFIED_ON_PHONE_OVER_WIFI_AND_ICLOUD_UPLOADED_PHYSICAL_GAME_PENDING",
+  "physical_execution_report": "CELESTE_EXECUTION_PASS_2026-09-11.md",
+  "physical_execution_evidence": "CELESTE_EXECUTION_PASS_2026-09-11_EVIDENCE.json",
+  "delivery_snapshot_note": "Original build/fixture receipts and build-12-ready snapshots remain unchanged; this dated report links later physical acceptance."
+}

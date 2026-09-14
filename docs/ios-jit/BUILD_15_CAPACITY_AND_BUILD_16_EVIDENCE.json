@@ -1,0 +1,294 @@
+{
+  "status": "PASS_PHYSICAL_BUILD16_LUACUTSCENES_MAXHELPINGHAND_AND_CODE_BUDGET",
+  "date": "2026-09-12",
+  "build_id": "sj-code-budget-20260912-16",
+  "version": "0.8.1 (16)",
+  "ipa_bytes": 22777560,
+  "ipa_sha256": "3fe02d4b0e56681c4b6aa21dbbf18c2b5644b272353392e3889a931744d1cbe6",
+  "executable_sha256": "d974f617e1124f1d25c5145ae31d2a65042ce3fe261a9a0088cdb852808b1586",
+  "executable_uuid": "UUID: 3E088E90-C3AC-3EDF-A402-6DB882CBD91D",
+  "dsym_uuid_matches": true,
+  "adapter_sha256": "4f42cda3bff202ec5eb3e0545c4851b9b321f4912e1039c973bb9d0f245d9175",
+  "fna_sha256": "dfd000f1a1eff08d41451099c63a9de9363047a6c0025812fb9ff19d8d53ed6d",
+  "script_template_sha256": "edc2fbad525cd9793b684b7755c5548c572924b6a28e84cf58ed1bb927b53424",
+  "script_geometry_unchanged_from_build15": true,
+  "native_code_budget_bytes": 134217728,
+  "mono_minimum_ordinary_chunk_bytes": 65536,
+  "runtime_patch_sha256": "086d0b0ae7a125a4c4fea64bea6ef241ffaea1d38d743261aa04715acc4af630",
+  "runtime_receipt_sha256": "191a5919c9c642ac03345daffed86a7e84aae3295f2e2c1d4b57cc958f55cfb6",
+  "inherited_visibility_receipt_sha256": "e022d8cc49640e21054af604def653b77fbfbbdafc413b058ba81b81f3101203",
+  "runtime_archives": {
+    "host": {
+      "sha256": "d9c68e9daab0ac6e5ac37f7e099e4b4c4ab75af370f80e4718211f1ec98ae134",
+      "input_sha256": "0b43b73273707f263b08f6e6ea1e3ff61880e7d1a8bc9ac34931041475e6fc89",
+      "replaced_member": "mono-codeman.c.o",
+      "unchanged_members": 259
+    },
+    "ios": {
+      "sha256": "99222d841dc198b253a0dfe739639d64e77f5a0a54b8adce812a27f4738f770c",
+      "input_sha256": "66198a908aa547ea6033b0c42385fb0f208f7752186750a110eed90566bc9143",
+      "replaced_member": "mono-codeman.c.o",
+      "unchanged_members": 259
+    }
+  },
+  "host_page_overrides_absent_from_ios": true,
+  "build15_physical_failure": {
+    "status": "CONFIRMED_BUILD15_JIT_CODE_BUDGET_EXHAUSTION",
+    "raw_sha256": "e1b46597ef62119dfe3ff54ab5959a904a526f8d3e9035732f6f2d2f6619acd6",
+    "raw_bytes": 62850474,
+    "build_id": "sj-helpers-20260911-15",
+    "session": "1b28d3c8-072c-47c9-8169-07774a47e16e",
+    "exact_build_and_200_assemblies_match": true,
+    "frozen_source_inputs_verified": 148,
+    "native_libraries_verified": 16,
+    "native_passes": 26,
+    "jit_detached": true,
+    "retained_old_mods": 2,
+    "verified_mods_before_run": 5,
+    "content_reused": true,
+    "content_verified_bytes": 1158665183,
+    "content_verification_seconds": 2.107,
+    "successful_allocations": 561,
+    "reserved_bytes": 134037504,
+    "budget_bytes": 134217728,
+    "failed_request_bytes": 262144,
+    "remaining_bytes": 180224,
+    "allocation_sizes": {
+      "262144": 508,
+      "204": 3,
+      "324": 31,
+      "164": 2,
+      "192": 1,
+      "208": 2,
+      "276": 4,
+      "264": 4,
+      "260": 3,
+      "256": 3
+    },
+    "compiled_method_events": 11388,
+    "compiled_code_bytes": 4741008,
+    "terminal": "CJHookArenaEvent -> mono_valloc -> new_codechunk; MaxHelpingHand CustomSeekerBarrier.Load / BloomRenderer.Apply generated hook",
+    "save_reload_proven": false,
+    "physical_helper_gameplay_passed": false,
+    "allocation_trace_sha256": "0c646f6e4cd7d0d4e47bb763ebcc1ed8b4b0efb5d482c87c4d673436ea6558f2"
+  },
+  "checks": {
+    "package": {
+      "path": "artifacts/ios-jit/sj-code-budget-20260912-16/package-validation.json",
+      "sha256": "b600bdba7ca979a88b189438413f8b7524db93654034a5a5bf270af7cc16e03b",
+      "status": "PASS_SMALL_PRIVATE_SJ_HELPER_PACKAGE_AND_INPUTS"
+    },
+    "protocol": {
+      "path": "artifacts/ios-jit/sj-code-budget-20260912-16/request-protocol-validation.json",
+      "sha256": "2428bf1c023fc44dddd5b0b7b955dc29fe39cbc7b435a0e93d8199db4046b032",
+      "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT"
+    },
+    "simulator": {
+      "path": ".build/ios-jit/sj-budget/sj-code-budget-20260912-16-simulator/smoke/receipt.json",
+      "sha256": "928570e510853747a55c51c5f6344c543ee5e366558a98caf7b8ce014dd78715",
+      "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY"
+    },
+    "mono_chunk_properties": {
+      "path": ".build/ios-jit/sj-budget-chunk-tests/receipt.json",
+      "sha256": "6240f3f322065ed8d55ab223fa62dbedbdb25b3fca920e089cb1c4e414eafd9f",
+      "status": "PASS_EXACT_MONO_CODE_CHUNK_BODY_4K_16K_64K_AND_THUNK_SPACE"
+    },
+    "member_access": {
+      "path": ".build/ios-jit/sj-budget-visibility-tests/receipt.json",
+      "sha256": "05cf6a42e261ec74d5ec00257eba777c4149f23946795408e348bc4b7b96de5a",
+      "status": "PASS_MONO_VISIBILITY_POSITIVE_NEGATIVE_ORIGINAL_CONTROLS"
+    },
+    "alias_capacity": {
+      "path": ".build/ios-jit/sj-budget-capacity-tests/receipt.json",
+      "sha256": "034f287c3070937b89c01c819ed79995e79fa33b334e788aead3df43fe413470",
+      "status": "PASS_BUILD15_EXACT_FAILURE_AND_BUILD16_DEVICE_SIZED_ALIAS_REPLAY"
+    }
+  },
+  "host_runs": {
+    "cold": {
+      "receipt": {
+        "path": ".build/ios-jit/sj-budget-host-test/cold-run/receipt.json",
+        "sha256": "a4746ffe51c32e6aa49f8f72a5c653c3599394a35defcaf54ae1b310cd56cdd4",
+        "status": "PASS_HOST_REAL_LUACUTSCENES_MAXHELPINGHAND_SAVES_AND_RESUME"
+      },
+      "log_sha256": "d777930866cd9044c0cfcd061db063403d28f5ee9e57953c719566b3e58c74b1",
+      "fixture_sha256": "4f42cda3bff202ec5eb3e0545c4851b9b321f4912e1039c973bb9d0f245d9175",
+      "content_reused": false,
+      "code_manager_model": {
+        "page_bytes": 16384,
+        "granule_bytes": 16384,
+        "bind_room_divisor": 4,
+        "minimum_chunk_bytes": 65536
+      },
+      "chunks": 965,
+      "chunk_bytes": 56033542,
+      "rounded_16k_bytes": 57835520,
+      "native_error_counters": [
+        0
+      ],
+      "save": "prior=0; written=3; readback=3; bytes=9",
+      "helpers": "luaBegin=1; luaWait=1; luaResume=1; luaEnd=1; luaSkipped=0; walkDelta=33; coroutineFrames=4884; platformContact=3739; platformTravel=200; carriedDistance=2703; helperFrames=7294; afterResume=2384; rendered=952; resumes=1",
+      "content": "reused=False; verifiedBytes=1158665183; seconds=5.200"
+    },
+    "cached": {
+      "receipt": {
+        "path": ".build/ios-jit/sj-budget-host-test/receipt.json",
+        "sha256": "41a492104e73f1a64d8b7c58f8518182f4b3312176b44ad775d0f9bca47ee79a",
+        "status": "PASS_HOST_REAL_LUACUTSCENES_MAXHELPINGHAND_SAVES_AND_RESUME"
+      },
+      "log_sha256": "2f67b170df20c90f5918fc550d8ed9f90cb955b190a568225e458e3a994c7bbf",
+      "fixture_sha256": "4f42cda3bff202ec5eb3e0545c4851b9b321f4912e1039c973bb9d0f245d9175",
+      "content_reused": true,
+      "code_manager_model": {
+        "page_bytes": 16384,
+        "granule_bytes": 16384,
+        "bind_room_divisor": 4,
+        "minimum_chunk_bytes": 65536
+      },
+      "chunks": 932,
+      "chunk_bytes": 54589024,
+      "rounded_16k_bytes": 56213504,
+      "native_error_counters": [
+        0
+      ],
+      "save": "prior=3; written=6; readback=6; bytes=9",
+      "helpers": "luaBegin=1; luaWait=1; luaResume=1; luaEnd=1; luaSkipped=0; walkDelta=33; coroutineFrames=4884; platformContact=3739; platformTravel=200; carriedDistance=2703; helperFrames=7294; afterResume=2383; rendered=952; resumes=1",
+      "content": "reused=True; verifiedBytes=1158665183; seconds=2.523"
+    }
+  },
+  "capacity_replay": {
+    "host_chunks": 932,
+    "host_rounded_bytes": 56213504,
+    "extra_native_reserve_bytes": 16777216,
+    "repetitions": 2,
+    "reserved_bytes": 129204224,
+    "budget_bytes": 134217728,
+    "physical_failure_reproduced": true,
+    "sanitizers": [
+      "address",
+      "undefined"
+    ]
+  },
+  "mod_files": {
+    "CJITCodeCanary-v1.0.0.zip": {
+      "bytes": 3560,
+      "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b"
+    },
+    "CJITSJHelpers-v1.0.0.zip": {
+      "bytes": 5994,
+      "sha256": "60584b24f781b18a9f2c289f858c8ffc8775656bf96b738405249099d9b555d2"
+    },
+    "CJITTestMap-v1.0.0.zip": {
+      "bytes": 1167,
+      "sha256": "d373b83f85603bee3e5e73cf5742d5ba2d68746376e7ef391d23c949402eba02"
+    },
+    "LuaCutscenes-v0.2.13.zip": {
+      "bytes": 43788,
+      "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8"
+    },
+    "MaxHelpingHand-v1.40.9.zip": {
+      "bytes": 963880,
+      "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee"
+    }
+  },
+  "mod_bytes_identical_to_build15": true,
+  "content_identity": "30a1c147d1a3ab0aa45762094e393ed7fd69951dd66e5af063447641e0699c46",
+  "bundled_content_files": 0,
+  "private_prepared_game_il": true,
+  "same_guest_profile_and_content_identity": true,
+  "phone_import_required": false,
+  "physical_helpers_tested": true,
+  "gravity_helper_deferred": true,
+  "full_strawberry_jam_accepted": false,
+  "source_snapshot": {
+    "path": ".build/ios-jit/device-evidence/2026-09-12/build-16-ready",
+    "receipt_sha256": "908a47cf14e71d71051b2effe66deafdf45f767d103f00b8a60fbe4e01ce82f5",
+    "unique_new_files": 1317,
+    "inherited_matching_inputs": 128,
+    "verified_parent_tree_files": 7072,
+    "parent_snapshot": ".build/ios-jit/device-evidence/2026-09-12/build-15-ready",
+    "parent_receipt_sha256": "7115ae60c230980bd815410e5f816c7f5f189ba73c06157c89319c9efaadf10d"
+  },
+  "delivery": {
+    "build_id": "sj-code-budget-20260912-16",
+    "created_utc": "2026-09-12T06:38:06.518007+00:00",
+    "method": "Versioned local iCloud Drive placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.8.1-build-16",
+    "local_icloud_copy_verified": true,
+    "phone_download_confirmed": true,
+    "cloud_upload_confirmed": true,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 22777560,
+        "sha256": "3fe02d4b0e56681c4b6aa21dbbf18c2b5644b272353392e3889a931744d1cbe6"
+      },
+      "CJITCodeCanary-v1.0.0.zip": {
+        "bytes": 3560,
+        "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b"
+      },
+      "CJITSJHelpers-v1.0.0.zip": {
+        "bytes": 5994,
+        "sha256": "60584b24f781b18a9f2c289f858c8ffc8775656bf96b738405249099d9b555d2"
+      },
+      "CJITTestMap-v1.0.0.zip": {
+        "bytes": 1167,
+        "sha256": "d373b83f85603bee3e5e73cf5742d5ba2d68746376e7ef391d23c949402eba02"
+      },
+      "LuaCutscenes-v0.2.13.zip": {
+        "bytes": 43788,
+        "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8"
+      },
+      "MaxHelpingHand-v1.40.9.zip": {
+        "bytes": 963880,
+        "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee"
+      },
+      "README-FIRST.txt": {
+        "bytes": 3078,
+        "sha256": "ef63c45dae4f9867a8d1814d7388f33a0e461e36ef74c6766ef68328f5ea4969"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5761,
+        "sha256": "edc2fbad525cd9793b684b7755c5548c572924b6a28e84cf58ed1bb927b53424"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 2524,
+        "sha256": "f1fadd34aa34a6395827914837a58ecd5f9247266a3060f99fd2a5c28c50c768"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1346,
+        "sha256": "e13c8bbcc940cc373b8eef7f679011c68a38c86ca477cb508acb038e8159c04b"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 906,
+        "sha256": "c7e4a738ac98529e3533185ea0ab4badd8e8cb348f8df7c69a3cd0337f1321a1"
+      }
+    },
+    "total_bytes": 23809564,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-12/build-16-ready",
+      "receipt_sha256": "908a47cf14e71d71051b2effe66deafdf45f767d103f00b8a60fbe4e01ce82f5",
+      "unique_new_files": 1317,
+      "inherited_matching_inputs": 128,
+      "verified_parent_tree_files": 7072,
+      "parent_snapshot": ".build/ios-jit/device-evidence/2026-09-12/build-15-ready",
+      "parent_receipt_sha256": "7115ae60c230980bd815410e5f816c7f5f189ba73c06157c89319c9efaadf10d"
+    },
+    "physical_execution": true,
+    "retention": "Keep the small build 14 fallback pending build 16 acceptance; preserve all Results and exact local historical builds.",
+    "cloud_upload_checked_utc": "2026-09-12T06:39:34.271234+00:00",
+    "cloud_upload_status_sha256": "784bcda632128575d6165549c8d8d8f357df065daf7f22089505ea2dd27e8558",
+    "cloud_upload_status_path": ".build/ios-jit/device-evidence/2026-09-12/build-16-ready/handoff/icloud-upload-status.json",
+    "cloud_cleanup": {
+      "removed_cloud_file": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.8.0-build-15/CelesteJITEverest-unsigned.ipa",
+      "bytes": 22777253,
+      "sha256": "f04f2ff49aeb6dfd3da071f676cc3373644d37bf37b3d2cf925a0aa5cd32ac97",
+      "retained_local_file": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/artifacts/ios-jit/sj-helpers-20260911-15/CelesteJITEverest-unsigned.ipa",
+      "reason": "Superseded failed build 15 installer; owner authorized cloud cleanup. Build 16 fully uploaded first.",
+      "results_preserved": true
+    },
+    "acceptance_observed_utc": "2026-09-12"
+  },
+  "physical_acceptance_report": "SJ_HELPERS_PASS_BUILD_16.md",
+  "physical_acceptance_evidence": "SJ_HELPERS_PASS_BUILD_16_EVIDENCE.json",
+  "superseding_candidate_report": "GRAVITY_HELPER_BUILD_17.md"
+}

@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "runtime_repository": "https://github.com/dotnet/runtime.git",
+  "runtime_tag": "v8.0.28",
+  "runtime_commit": "46295af5828b062bbbf93a9cef50fd8cb9fbcb09",
+  "matching_ios_pack": "Microsoft.NETCore.App.Runtime.Mono.ios-arm64/8.0.28",
+  "pack_sha256": "09aeb41f3759c83c970120957995cbdabe097b6a6981091e588cd65b738408e2",
+  "pack_sha512": "3b7b4593292926a7457d55e67f9095c6b70a0f809f4002967ad636ba2ae271484080615cb5883fbef2a6271c86da9e372bccdf8313914bc1616c81c50dbc5e1a",
+  "native_runtime": "custom build; stock AOT runtime is not used",
+  "bcl_and_system_native": "matching official iOS runtime pack",
+  "sdk": {
+    "sdk_version": "8.0.422",
+    "name": "dotnet-sdk-osx-x64.tar.gz",
+    "rid": "osx-x64",
+    "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.422/dotnet-sdk-8.0.422-osx-x64.tar.gz",
+    "hash": "fb06d2755b407cece4f2a0ad0c3869f28220bf5be7ae69541a3c22855cef01cb463dde0af76000c447541345a261ed68847ef590e4ba7a27109447aed6e79560"
+  }
+}

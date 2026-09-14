@@ -1,0 +1,23 @@
+{
+  "status": "PICKER_RESOLVED_BY_LIVECONTAINER_FIX_FILE_PICKER_OWNER_CONFIRMED",
+  "date": "2026-09-11",
+  "raw_export_sha256": "f0c147794b6700c5b7e587962582ae84cc6a2aed7507303e7fb7eb4d05d46fd9",
+  "raw_export_bytes": 37448836,
+  "build_id": "content-import-20260911-14",
+  "session": "25cf5b1a-6e85-4abc-916c-12a98ac7784f",
+  "build_info_matches_delivered_ipa": true,
+  "current_session_events": 10,
+  "mod_zips_retained": true,
+  "content_staging_observed_in_export": false,
+  "jit_execution_observed_in_export": false,
+  "owner_symptom": "Selecting the local Celeste ZIP and tapping Open left the picker open with no visible result.",
+  "owner_confirmed_resolution": "Enabling LiveContainer Fix File Picker resolved selection.",
+  "fix_setting": "LiveContainer 1 > long-press Celeste JIT Everest > Settings > Fixes > Fix File Picker",
+  "current_physical_test_build": "0.7.0 (14)",
+  "replacement_ipa_needed_for_picker": false,
+  "content_import_and_gameplay_acceptance": "PASS_PHYSICAL_BUILD14_ORIGINAL_ZIP_IMPORT_AND_EVEREST_GAMEPLAY",
+  "draft_build15": "Local exploratory source only; not a delivered replacement",
+  "reference": "https://livecontainer.github.io/docs/guides/app-settings",
+  "subsequent_acceptance_report": "CONTENT_IMPORT_PASS_2026-09-11.md",
+  "subsequent_acceptance_evidence": "CONTENT_IMPORT_PASS_2026-09-11_EVIDENCE.json"
+}

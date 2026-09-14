@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "date": "2026-09-11",
+  "status": "PASS_PHYSICAL_G1_CLEAN_RETURN_AND_BACKGROUND_RESUME",
+  "physicalBuild6": {
+    "status": "PASS_PHYSICAL_G1_CLEAN_RETURN_AND_BACKGROUND_RESUME",
+    "build_id": "managed-canary-20260911-06",
+    "version": "0.2.2",
+    "build_number": "6",
+    "device": {
+      "guest_bundle_id": "io.github.hmcneill46.celeste.everest.jit.canary",
+      "hardware": "iPhone16,2",
+      "os_build_description": "Version 26.5 (Build 23F77)",
+      "os_version": "26.5",
+      "page_size": 16384,
+      "physical_memory_bytes": 8025686016,
+      "simulator": 0
+    },
+    "session": "6c09147e-560a-4015-831f-d415c4b55160",
+    "execution_utc": "2026-09-11T08:34:02.835786+00:00",
+    "ipa_sha256": "5618c57a3d1189d091c577774ddec43e86e36dbd911cf7be14667e7bd64a8cb5",
+    "dll_sha256": "4e29d1b7d7b301e1addd6a99c22002122d1b1ed3933de5afb656e73bc49e6094",
+    "script_template_sha256": "79d53b7c77fd2cfdb6045e1b699c2b8e0eca3822d9cfb98a03556b35d674b72b",
+    "diagnostics_sha256": "4e4ff3f0a211918cbc9a8817c31419ddd0f172b3f28c2ab14184458ae6d2262e",
+    "raw_session_sha256": "57b99896ca4263da151a213c46dbc206ae996a97ad9224f810020e655bca01b8",
+    "raw_console_sha256": "7dd248fba3d11dd8638ef8151f74b116ec6ef2b6c049a574d5fb2f4ffc5f1ca9",
+    "exported_events": 1273,
+    "raw_events": 1274,
+    "original_build_metadata_and_source_snapshot_match": true,
+    "correct_dll_and_lc2_route": true,
+    "fresh_process_observed": true,
+    "debugger_detached_before_execution": true,
+    "native_checks_passed": 26,
+    "prepared_pages_executed": 512,
+    "managed_stage_passes": [
+      {
+        "actual": 353,
+        "expected": 353,
+        "stage": "NativeImports"
+      },
+      {
+        "actual": 324514299,
+        "expected": 324514299,
+        "stage": "Arithmetic"
+      },
+      {
+        "actual": 1109,
+        "expected": 1109,
+        "stage": "SwitchTable"
+      },
+      {
+        "actual": 1081,
+        "expected": 1081,
+        "stage": "Dynamic"
+      },
+      {
+        "actual": 516,
+        "expected": 516,
+        "stage": "DynamicSwitch"
+      },
+      {
+        "actual": 4885,
+        "expected": 4885,
+        "stage": "GenericAbi"
+      },
+      {
+        "actual": 367,
+        "expected": 367,
+        "stage": "ExceptionsAndGC"
+      },
+      {
+        "actual": 372,
+        "expected": 372,
+        "stage": "ThreadAndCallback"
+      }
+    ],
+    "jit_evidence_at_end_of_stages": {
+      "arithmetic_jit_count": 1,
+      "code_allocations": 7,
+      "code_reserved_bytes": 851968,
+      "dynamic_method_jit_count": 1,
+      "dynamic_switch_jit_count": 1,
+      "jit_done_count": 612,
+      "jit_failures": 0,
+      "jit_outside_prepared_arena": 0,
+      "stages_passed": true
+    },
+    "jit_done_events_total": 628,
+    "distinct_jit_method_names": 570,
+    "distinct_jit_entry_addresses": 518,
+    "all_observed_jit_ranges_inside_recorded_allocations": true,
+    "resolved_native_import_events": 21,
+    "unresolved_native_import_events": 0,
+    "managed_thread_cleared": true,
+    "pass_ui_presented": true,
+    "post_run_foreground_alive": true,
+    "foreground_seconds_before_background": 20.153372499975376,
+    "background_seconds_before_return": 21.728614916675724,
+    "same_process_returned_with_debugger_detached": true,
+    "new_managed_invocation_after_resume_tested": false,
+    "error_or_failure_events": 0,
+    "persistent_storage_error": null,
+    "physical_managed_execution_accepted": true,
+    "crash_free_g1_handoff_accepted": true,
+    "full_device_failure_reboot_stress_matrix_complete": false,
+    "monoModHooksAccepted": false,
+    "gameplayAccepted": false,
+    "raw_evidence_private_root": ".build/ios-jit/device-evidence/2026-09-11/build-6-pass"
+  },
+  "liveContainerVersions": {
+    "source": "USB installation-proxy metadata",
+    "slot1": "3.8.9",
+    "slot2": "3.8.9"
+  },
+  "stikDebugVersion": {
+    "value": "3.1.9",
+    "source": "previous reported value, not independently remeasured"
+  },
+  "directUsbCollection": {
+    "status": "PASS_DIRECT_RAW_LOG_RETRIEVAL_WITHOUT_EXPORT_ACTION",
+    "observedUtc": "2026-09-11T08:39:47.070966+00:00",
+    "target": "iPhone16,2",
+    "connection": "USB",
+    "service": "House Arrest VendDocuments / AFC",
+    "toolVersion": "11.12.4",
+    "guestPathPattern": "LiveContainer/Data/Application/<verified-guest-data-UUID>/Documents/Diagnostics",
+    "exactIdsPrivateReceipt": ".build/ios-jit/device-evidence/2026-09-11/build-6-pass/direct-usb-retrieval.json",
+    "files": [
+      {
+        "file": "session-6c09147e-560a-4015-831f-d415c4b55160.jsonl",
+        "bytes": 734119,
+        "sha256": "57b99896ca4263da151a213c46dbc206ae996a97ad9224f810020e655bca01b8",
+        "two_reads_identical": true,
+        "size_unchanged_during_read": true
+      },
+      {
+        "file": "console-6c09147e-560a-4015-831f-d415c4b55160.txt",
+        "bytes": 1103693,
+        "sha256": "7dd248fba3d11dd8638ef8151f74b116ec6ef2b6c049a574d5fb2f4ffc5f1ca9",
+        "two_reads_identical": true,
+        "size_unchanged_during_read": true
+      }
+    ],
+    "rawEvents": 1274,
+    "exportedEvents": 1273,
+    "rawMatchesExportedEventsPrefix": true,
+    "rawLogsWrittenBeforeExport": true,
+    "exportActionTriggeredByHost": false,
+    "phoneFilesModified": false,
+    "debuggerAttached": false,
+    "crossFileAtomicSnapshot": false,
+    "reusableCollector": {
+      "source": "experiments/ios-jit/device-tools/pull_diagnostics.py",
+      "sha256": "d71d2a145f294b1056dac34f6ea77908031014346d376599b16f12a1cee14139",
+      "physicalStatus": "PASS_DIRECT_USB_RAW_LOG_COLLECTION",
+      "completeEvents": 1274,
+      "partialTrailingEventBytes": 0,
+      "sameRawFileHashesAsIndependentCollection": true,
+      "dependsOnExportedBundle": false
+    },
+    "exportFallbackPreserved": true,
+    "appCodeChanged": false,
+    "ownerEnteredEnvironmentPreferencesCollectedByRawTool": false
+  },
+  "physicalManagedExecutionAccepted": true,
+  "crashFreeFullG1HandoffAccepted": true,
+  "monoModHooksAccepted": false,
+  "gameplayAccepted": false,
+  "fullFailureRebootStressMatrixAccepted": false,
+  "newManagedInvocationAfterResumeTested": false,
+  "noNewPhoneTestNeededForThisFollowup": true,
+  "next": "Implement actual pinned MonoMod Hook/ILHook: original calls, ordering, removal/re-addition, RX/RW alias patching and execution after background/return; then game integration.",
+  "report": "MANAGED_EXECUTION_PASS_2026-09-11.md",
+  "aotCheckoutMutated": false,
+  "userGameInputsMutated": false,
+  "deliveredIpaOrDllChanged": false,
+  "commitsMade": false,
+  "pushesOrGithubWrites": false
+}

@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "build_id": "launcher-compat-20260912-21",
+  "version": "0.11.1 (21)",
+  "updated_utc": "2026-09-12T17:56:36.560159+00:00",
+  "report": "FNA_GRAPHICS_BUILD_21.md",
+  "artifact": "artifacts/ios-jit/launcher-compat-20260912-21",
+  "ipa_bytes": 23115371,
+  "ipa_sha256": "412ed592d21d0752802ce49bb3407b22b5e0732792541f5d8d12d8c38f2c7ba0",
+  "executable_uuid": "UUID: BA5C4346-ABF6-3E2F-ABAA-8AF8C6DD5B55",
+  "executable_sha256": "a5aeff328d9fd0034c9bdfe45d7ea474de1c8382e52b10d3b3c216362d06e7cf",
+  "adapter_sha256": "aa7916aeab31cac8e04f752ef7e94efa48e34e379589c617a501eb3fabc6fb36",
+  "fna_sha256": "e89f3b998229e04a6e596e548498e57214d23d97f753b633ea0d59c0bdfab79b",
+  "script_template_sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b",
+  "source_inputs": 173,
+  "framework_dlls": 168,
+  "everest_dlls": 32,
+  "accepted_native_archives": 16,
+  "new_native_libraries": {
+    ".build/ios-jit/launcher-compat-native/ios/libCJLauncher.a": "858d38771565553f568c8fd4ec095dec1900166ba769c577dafad5b94c1e07cd",
+    ".build/ios-jit/launcher-compat-native/ios/libZIPFoundation.a": "6f8764b1cf8b08e0568023a9d69fbe169304b80dff4f34f9e648d4d02261ad4a",
+    ".build/ios-jit/launcher-compat-native/ios/libCYaml.a": "4cf11454cf3ed58650626c0a8c360344f57428555040596a3039f9d3d471383c"
+  },
+  "physical_build19_accepted": true,
+  "physical_build20_accepted": false,
+  "physical_build20_diagnosis": "BUILD_20_SESSION_STOP_EVIDENCE.json",
+  "physical_build21_accepted": false,
+  "backend_fix": "One standard managed FNA render-target query API; original FrostHelper and native renderer unchanged",
+  "fna_patch": {
+    "status": "PASS_FNA_RENDER_TARGET_EXTENSION_PATCH",
+    "input_sha256": "dfd000f1a1eff08d41451099c63a9de9363047a6c0025812fb9ff19d8d53ed6d",
+    "output_sha256": "e89f3b998229e04a6e596e548498e57214d23d97f753b633ea0d59c0bdfab79b",
+    "added_method": "System.Int32 Microsoft.Xna.Framework.Graphics.GraphicsDevice::GetRenderTargetsNoAllocEXT(Microsoft.Xna.Framework.Graphics.RenderTargetBinding[])",
+    "unchanged_existing_methods": 5243,
+    "unchanged_fields": 4469,
+    "existing_resources_preserved": true,
+    "native_renderer_changed": false,
+    "mod_zip_changes": false,
+    "semantics": "null count query; reject undersized buffer; copy active bindings only; preserve unused tail; no allocation"
+  },
+  "upstream": {
+    "repository": "https://github.com/FNA-XNA/FNA",
+    "commit": "76b1aef1fd0fa913ac53726fab9d230291c15327",
+    "path": "src/Graphics/GraphicsDevice.cs",
+    "url": "https://raw.githubusercontent.com/FNA-XNA/FNA/76b1aef1fd0fa913ac53726fab9d230291c15327/src/Graphics/GraphicsDevice.cs",
+    "sha256": "210380e049bc10c958d0eadb543aa3287f7c36ecce1ec0be79f91043b48f2963",
+    "semantics": "Accept an output buffer at least as large as the number of bound targets."
+  },
+  "checks": {
+    "package": {
+      "path": "artifacts/ios-jit/launcher-compat-20260912-21/package-validation.json",
+      "status": "PASS_BUILD21_FNA_GRAPHICS_COMPAT_AND_LAUNCHER_GATES",
+      "sha256": "bda9d3df3270c2c6d7ddc1cf3aa64b271fb491cbfd9c22399a82a525f80bfd63"
+    },
+    "native_request_protocol": {
+      "path": "artifacts/ios-jit/launcher-compat-20260912-21/request-protocol-validation.json",
+      "status": "PASS_NATIVE_GENERATED_REQUEST_WITH_PACKAGED_SCRIPT",
+      "sha256": "ac13863b13c7e302741f8fcb81d680139e37515a56e6d01e5620ad58e78be4cb"
+    },
+    "fna_graphics": {
+      "path": ".build/ios-jit/launcher-compat-fna/result.json",
+      "status": "PASS_FNA_EXTENSION_AND_ORIGINAL_FROST_RENDERING",
+      "sha256": "815a6cfc01078e4fd170a6d5007e7c8a51a2d7eb015d7e14331008e202732be8"
+    },
+    "mod_library": {
+      "path": ".build/ios-jit/launcher-compat-mod-library-tests/result.json",
+      "status": "PASS_NATIVE_MOD_LIBRARY",
+      "sha256": "80b8dc659fe2e00ab3d8d80693b8f1a9b6bc9c6514c88d059cecd03605daaf27"
+    },
+    "native_services": {
+      "path": ".build/ios-jit/launcher-compat-native-services-tests/result.json",
+      "status": "PASS_NATIVE_LOG_REPLAY_AND_METRICS",
+      "sha256": "dbec69c3927149b6610af0aa32ae0c3c352b006aba6708c66bad036e4b620c02"
+    },
+    "host_full_sj_frost": {
+      "path": ".build/ios-jit/launcher-compat-validation/host-full-sj/receipt.json",
+      "status": "PASS_HOST_REAL_SJ_LOBBY_BING_SAVES_AND_RESUME",
+      "sha256": "28e9b456e8a635a35a3c060284051cf272397aa4bf7107d83776d768f3803631"
+    },
+    "host_normal_example": {
+      "path": ".build/ios-jit/launcher-compat-validation/host-normal-example/receipt.json",
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "sha256": "40e8285f2c61da39ff349c044f6935ce85c4f080b542d638e2c440350999c961"
+    },
+    "host_normal_disabled": {
+      "path": ".build/ios-jit/launcher-compat-validation/host-normal-disabled/receipt.json",
+      "status": "PASS_HOST_NORMAL_SELECTION_SAVES_AND_RESUME",
+      "sha256": "20e90f2b5cea4ec1484722bba2d0ac9008d710c2faafbdbac9c2e4506f06da4a"
+    },
+    "simulator": {
+      "path": ".build/ios-jit/launcher-compat/launcher-compat-20260912-21-simulator/smoke/receipt.json",
+      "status": "PASS_SIMULATOR_IMPORT_STARTUP_EXPORT_AND_CONSOLE_RECOVERY",
+      "sha256": "4eb0aac57f0f5c28d680b4dec617bdbb7658019654fbf9afd6c896f4556a70a9"
+    },
+    "native_ui": {
+      "path": ".build/ios-jit/launcher-compat-ui-tests/receipt.json",
+      "status": "PASS_NATIVE_LAUNCHER_XCUITEST",
+      "sha256": "c55b61f431044906278a2a6c198257d12472eb2432a0cc0fe3e35bbd3a4d623a"
+    }
+  },
+  "source_snapshot_pending": false,
+  "delivery_pending": false,
+  "phone_game_reimport_required": false,
+  "phone_sj_reimport_required": false,
+  "profile": "Profiles/sj-first-play",
+  "original_52_sj_zips_preserved": true,
+  "one_runtime_per_process": true,
+  "automatic_session_timeout": false,
+  "code_budget_bytes": 536870912,
+  "normal_play_default": true,
+  "first_managed_error_displayed": true,
+  "explicit_stop_origin_logged": true,
+  "failed_session_save_not_claimed": true,
+  "fna_member_references_resolved": 3222,
+  "original_mod_dlls_scanned": 49,
+  "runtime_array_intrinsics_separate": 3,
+  "original_frost_graphics_checks": 33,
+  "original_lava_gpu_pixels_verified_on_host": true,
+  "no_aot_checkout_mutations": true,
+  "no_commits_or_remote_writes": true,
+  "private_prepared_game_il": true,
+  "public_owner_original_il_preparation_complete": false,
+  "fmod_distribution_permission_resolved": false,
+  "next_device_questions": [
+    "Repeat normal Beginner lobby route where lava rendering previously stopped",
+    "Enter an ordinary lobby doorway/map and note its name",
+    "Music/movement/dash, 30-second Home/resume, clean Finish/save/readback",
+    "Fresh-process saved progress reload"
+  ],
+  "source_snapshot": {
+    "path": ".build/ios-jit/device-evidence/2026-09-12/build-21-ready",
+    "receipt_sha256": "1c28088311c4ac5543b3b2801cd5f561c4ef5480ba4ac97ac90a420785503820",
+    "parent": "build-20-ready",
+    "verified_parent_receipt_sha256": "668d5a18a4659b84987cab67ab037b438144f32fa46b1f5baca999cbb76ffc45"
+  },
+  "delivery": {
+    "build_id": "launcher-compat-20260912-21",
+    "created_utc": "2026-09-12T17:58:30.976529+00:00",
+    "method": "Versioned local iCloud Drive placement with byte-for-byte readback",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.11.1-build-21",
+    "local_icloud_copy_verified": true,
+    "cloud_upload_confirmed": true,
+    "phone_download_confirmed": false,
+    "files": {
+      "CelesteJITEverest-unsigned.ipa": {
+        "bytes": 23115371,
+        "sha256": "412ed592d21d0752802ce49bb3407b22b5e0732792541f5d8d12d8c38f2c7ba0"
+      },
+      "README-FIRST.txt": {
+        "bytes": 2413,
+        "sha256": "4d898f0a77e5ea565b9dc2b7f5d61535062d02a1f83d1c5f670a0a8e7b025a60"
+      },
+      "INSTALL.md": {
+        "bytes": 1198,
+        "sha256": "7599e26ccb854f5c977394a5559dd0cc283bc9fa54f3bc20fc07e99e0f8aa607"
+      },
+      "celeste-jit-probe-TEMPLATE.js": {
+        "bytes": 5763,
+        "sha256": "6dbabbba5db4e8871ad13e426e1079da8a07ac1fb8871538e3fdaaad12de409b"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 3976,
+        "sha256": "a6b1dcc59333d09bc7ecdde07d186090b45615ed09dd98702dff221e5f9fe999"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1303,
+        "sha256": "6bb3fb4b89cd3ec71016eb49300b08800d6f1f0179f15c391ef77d6b66da2b4f"
+      },
+      "CJITLauncherExample-v1.0.0.zip": {
+        "bytes": 1512,
+        "sha256": "f5847b5796c92e382814f328cf370d697414130606f95b86771f8cb64f5e2be6"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 624,
+        "sha256": "dc2078c91388ab3fe53f7bd7bf1b80af1e8fbb6223a98f89afd68afde4d983b9"
+      }
+    },
+    "total_bytes": 23132160,
+    "source_snapshot": {
+      "path": ".build/ios-jit/device-evidence/2026-09-12/build-21-ready",
+      "receipt_sha256": "1c28088311c4ac5543b3b2801cd5f561c4ef5480ba4ac97ac90a420785503820",
+      "parent": "build-20-ready",
+      "verified_parent_receipt_sha256": "668d5a18a4659b84987cab67ab037b438144f32fa46b1f5baca999cbb76ffc45"
+    },
+    "physical_execution": false,
+    "retention": "Keep physically accepted build19 as fallback; preserve all Results and exact local historical builds.",
+    "cloud_upload_observed_utc": "2026-09-12T18:01:39.847159+00:00",
+    "cloud_upload_status_sha256": "a55d2a8d680669c4cc68436403e95a43578e2a056ea49e5a5e51a7aa7c666838"
+  },
+  "delivery_note": "All eight files confirmed uploaded by Apple after verified local copy; phone download and build21 execution remain unobserved.",
+  "final_local_audit": {
+    "path": ".build/ios-jit/device-evidence/2026-09-12/build-21-ready/handoff/final-local-audit.json",
+    "sha256": "d34f059e94d54b0bb3f78d47c574e834178723fe060d873c38159adc3239333a"
+  },
+  "physical_build21_tested": true,
+  "physical_build21_diagnosis": "BUILD_21_SESSION_STOP_EVIDENCE.json",
+  "next_candidate_report": "LITERAL_FIELDS_BUILD_22.md"
+}

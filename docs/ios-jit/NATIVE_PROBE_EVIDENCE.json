@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-10",
+  "status": "UNSIGNED_NATIVE_PROBE_READY_FOR_OWNER_DEVICE_TEST",
+  "buildId": "native-probe-20260910-01",
+  "appVersion": "0.1.0 (1)",
+  "primaryDevice": {
+    "model": "iPhone 15 Pro Max",
+    "os": "iOS 26.5",
+    "probeHost": "LiveContainer 1",
+    "stikDebugHost": "LiveContainer 2",
+    "versions": "not supplied",
+    "physicalRun": "pending"
+  },
+  "sourceRoot": "experiments/ios-jit/native-probe",
+  "sourceSha256": {
+    "experiments/ios-jit/native-probe/INSTALL.md": "dd1a02b3f304f86f5a0c6528339f441721a5e240e7a5aac6a12dbfe1991b0834",
+    "experiments/ios-jit/native-probe/README.md": "53d86c5ff9ba17cfd63eea156aacd347cba6371ad5d2ace09982a1b42f2bfc17",
+    "experiments/ios-jit/native-probe/THIRD_PARTY_NOTICES.md": "fa2b6c8c14b70843d589205513d8606f74fbd2b3874dc599cdbcea2f5599bd2c",
+    "experiments/ios-jit/native-probe/build.py": "1f1beffc63abf77c2a090f39b16b0621c58cb7d1fd3e2c4b74a73406b12fe7b9",
+    "experiments/ios-jit/native-probe/scripts/celeste-jit-probe.js": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333",
+    "experiments/ios-jit/native-probe/scripts/make_icon.swift": "1c61416c90b9dcf49a334ebd18fdae9fd6c739525f66a689216a95e8a03e67d6",
+    "experiments/ios-jit/native-probe/scripts/summarize_diagnostics.py": "2e4e522a2b258f49f7e4ab5d375bbee2e433c947bb75b77debf25ddb44b0e333",
+    "experiments/ios-jit/native-probe/src/ProbeProtocol.h": "4b06a2867af44f82a5c1f2eb82c1fd42446e0e413b4c68daefed05cd1e55c6c4",
+    "experiments/ios-jit/native-probe/src/main.m": "da414b413d448e17fdee0e7f4b3da4e10a40e229aaea0695bc98d693fae865b9",
+    "experiments/ios-jit/native-probe/tests/check_arm64.py": "92bbb4dde939fd28a5f2f98ebf948f9f3ad84ea7bde45feaaea10599095f3303",
+    "experiments/ios-jit/native-probe/tests/script.test.cjs": "f1091e8c1e840e6532d1bbc1f569091454253f4aaef5f1538b89ff3f97c1675c",
+    "experiments/ios-jit/native-probe/tests/simulator_smoke.py": "1866f7aaafa2934cd18b531a0336f9c2064cff39db35a8da0952135fa2c1dce0"
+  },
+  "ipa": {
+    "path": "artifacts/ios-jit/native-probe-20260910-01/CelesteJITProbe-unsigned.ipa",
+    "sha256": "a3723552672f79fe72a7869e8947ef06708f7b53e9e002c876986ac38beca481",
+    "bytes": 141880,
+    "unsigned": true
+  },
+  "script": {
+    "protocol": "CJIT mailbox M1",
+    "templatePath": "experiments/ios-jit/native-probe/scripts/celeste-jit-probe.js",
+    "sha256": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333",
+    "requiresPerLaunchBinding": true,
+    "usesBreakpointABI": false
+  },
+  "hostValidation": {
+    "schema": 1,
+    "recorded_utc": "2026-09-10T17:23:32.798366+00:00",
+    "build_id": "native-probe-20260910-01",
+    "protocol_mocks": {
+      "status": "PASS",
+      "cases": 15,
+      "runtime": "Node.js 24.19.0",
+      "script_sha256": "81c561fd09fcf730676ac497c145b6abd3ac071076a4b341c7a0714d31836333",
+      "tests_sha256": "f1091e8c1e840e6532d1bbc1f569091454253f4aaef5f1538b89ff3f97c1675c",
+      "command": "node experiments/ios-jit/native-probe/tests/script.test.cjs"
+    },
+    "arm64_instruction_encoding": {
+      "status": "PASS_CROSS_ASSEMBLER_BYTES",
+      "bytes": "20078652c0035fd6001c0011c0035fd65000005800021fd60000012001000000",
+      "instructions": [
+        "movz w0,#12345",
+        "ret",
+        "add w0,w0,#7",
+        "ret",
+        "ldr x16,PC+8",
+        "br x16"
+      ],
+      "device_execution": "NOT TESTED"
+    },
+    "simulator": {
+      "status": "PASS_SIMULATOR_STARTUP_EXPORT_PREVIOUS_SESSION_RECOVERY",
+      "build_id": "native-probe-20260910-01-simulator",
+      "os": "26.5",
+      "architecture": "x86_64",
+      "previous_session_recovered": true,
+      "export_schema": 1,
+      "device_jit_execution": "NOT TESTED",
+      "share_sheet_interaction": "NOT AUTOMATED",
+      "notes": "Host terminated only the simulator probe between launches. Generated-code paths are disabled."
+    },
+    "package": {
+      "zip_integrity": "PASS",
+      "source_hashes_match_current_files": "PASS",
+      "no_lc_code_signature": "PASS",
+      "codesign_reports_not_signed_at_all": "PASS",
+      "no_mobileprovision": "PASS",
+      "executable_permission_in_zip": "PASS"
+    },
+    "physical_jit_execution": "NOT_TESTED",
+    "managed_jit": "NOT_IMPLEMENTED",
+    "monomod_hooks": "NOT_IMPLEMENTED",
+    "celeste_gameplay": "NOT_IMPLEMENTED"
+  },
+  "sources": [
+    {
+      "name": "StikDebug",
+      "repository": "https://github.com/StikDebug/StikDebug",
+      "revision": "94bc9e8cf3b41f32f125f046abf33d913f4e1b2d",
+      "license": "AGPL-3.0",
+      "use": "reference_only"
+    },
+    {
+      "name": "LiveContainer",
+      "repository": "https://github.com/LiveContainer/LiveContainer",
+      "revision": "3afa9eb9a53625e9b8bd8b932e5785fd716ad5ae",
+      "license": "AGPL-3.0",
+      "use": "reference_only"
+    },
+    {
+      "name": "StikJIT",
+      "repository": "https://github.com/stikdebug/StikJIT",
+      "revision": "3623e725876f76aecb0520582ad6194bacb15d39",
+      "license": "MPL-2.0",
+      "use": "protocol_reference_only"
+    }
+  ],
+  "notEstablished": [
+    "physical LiveContainer URL routing",
+    "iOS device page preparation and alias execution",
+    "breakpoint JIT26 protocol execution",
+    "managed JIT",
+    "MonoMod hooks",
+    "Celeste",
+    "mods",
+    "Strawberry Jam",
+    "performance advantage",
+    "standalone signed device execution"
+  ],
+  "gitActions": {
+    "commits": 0,
+    "pushes": 0,
+    "remoteWrites": 0,
+    "aotCheckoutWrites": 0
+  }
+}

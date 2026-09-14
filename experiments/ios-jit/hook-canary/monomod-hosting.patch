@@ -1,0 +1,93 @@
+diff --git a/src/MonoMod.Core/Directory.Build.props b/src/MonoMod.Core/Directory.Build.props
+index 5888ee4..0e18d96 100644
+--- a/src/MonoMod.Core/Directory.Build.props
++++ b/src/MonoMod.Core/Directory.Build.props
+@@ -2,6 +2,6 @@
+   
+   <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+ 
+-  <Import Project="$(MSBuildThisFileDirectory)/Platforms/Architectures/NativeHelpers.props" />
++  <Import Project="$(MSBuildThisFileDirectory)/Platforms/Architectures/NativeHelpers.props" Condition="'$(CJAppleJitCanary)' != 'true'" />
+ 
+ </Project>
+diff --git a/src/MonoMod.Core/Directory.Build.targets b/src/MonoMod.Core/Directory.Build.targets
+index 5bc3fa2..23b07d1 100644
+--- a/src/MonoMod.Core/Directory.Build.targets
++++ b/src/MonoMod.Core/Directory.Build.targets
+@@ -2,6 +2,6 @@
+   
+   <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
+   
+-  <Import Project="$(MSBuildThisFileDirectory)/Platforms/Architectures/NativeHelpers.targets" />
++  <Import Project="$(MSBuildThisFileDirectory)/Platforms/Architectures/NativeHelpers.targets" Condition="'$(CJAppleJitCanary)' != 'true'" />
+ 
+ </Project>
+diff --git a/src/MonoMod.Core/Platforms/PlatformTriple.cs b/src/MonoMod.Core/Platforms/PlatformTriple.cs
+index 001110b..c271338 100644
+--- a/src/MonoMod.Core/Platforms/PlatformTriple.cs
++++ b/src/MonoMod.Core/Platforms/PlatformTriple.cs
+@@ -144,12 +144,12 @@ namespace MonoMod.Core.Platforms
+         public static void SetPlatformTriple(PlatformTriple triple)
+         {
+             Helpers.ThrowIfArgumentNull(triple);
+-            if (lazyCurrent is null)
++            if (lazyCurrent is not null)
+                 ThrowTripleAlreadyExists();
+ 
+             lock (lazyCurrentLock)
+             {
+-                if (lazyCurrent is null)
++                if (lazyCurrent is not null)
+                     ThrowTripleAlreadyExists();
+ 
+                 lazyCurrent = triple;
+diff --git a/src/MonoMod.Core/Platforms/Runtimes/MonoRuntime.cs b/src/MonoMod.Core/Platforms/Runtimes/MonoRuntime.cs
+index f72c399..c2b3673 100644
+--- a/src/MonoMod.Core/Platforms/Runtimes/MonoRuntime.cs
++++ b/src/MonoMod.Core/Platforms/Runtimes/MonoRuntime.cs
+@@ -211,6 +211,7 @@ namespace MonoMod.Core.Platforms.Runtimes
+             typeof(DynamicMethod).GetMethod("CreateDynMethod", BindingFlags.NonPublic | BindingFlags.Instance)!;
+ 
+         private static readonly FieldInfo _DynamicMethod_mhandle =
++            typeof(DynamicMethod).GetField("_mhandle", BindingFlags.NonPublic | BindingFlags.Instance) ??
+             typeof(DynamicMethod).GetField("mhandle", BindingFlags.NonPublic | BindingFlags.Instance)!;
+ 
+         public RuntimeMethodHandle GetMethodHandle(MethodBase method)
+diff --git a/src/MonoMod.Utils/PlatformDetection.cs b/src/MonoMod.Utils/PlatformDetection.cs
+index ffa1c53..2dec2d7 100644
+--- a/src/MonoMod.Utils/PlatformDetection.cs
++++ b/src/MonoMod.Utils/PlatformDetection.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.ComponentModel;
+ using System.Diagnostics.CodeAnalysis;
+ using System.IO;
+@@ -84,6 +84,15 @@ namespace MonoMod.Utils
+ 
+         private static (OSKind OS, ArchitectureKind Arch) DetectPlatformInfo()
+         {
++#if NET5_0_OR_GREATER
++            // Modern Apple runtime packs expose the actual process OS/arch.
++            // uname reports Darwin for both products and an iPhone model as
++            // its machine name; neither identifies an ARM64 iOS process.
++            if (OperatingSystem.IsIOS())
++                return (OSKind.IOS, RuntimeInformation.ProcessArchitecture == System.Runtime.InteropServices.Architecture.Arm64 ? ArchitectureKind.Arm64 : ArchitectureKind.Unknown);
++            if (OperatingSystem.IsMacOS())
++                return (OSKind.OSX, RuntimeInformation.ProcessArchitecture == System.Runtime.InteropServices.Architecture.X64 ? ArchitectureKind.x86_64 : ArchitectureKind.Arm64);
++#endif
+             var os = OSKind.Unknown;
+             var arch = ArchitectureKind.Unknown;
+ 
+diff --git a/tools/Common.props b/tools/Common.props
+index 30b3c6c..cf28e5c 100644
+--- a/tools/Common.props
++++ b/tools/Common.props
+@@ -18,6 +18,7 @@
+     <!-- All MonoMod projects (by default) target these frameworks -->
+     <!-- Put .NET 6.0 as the first framework so that OmniSharp uses it for VS Code Intelisense -->
+     <TargetFrameworks>net6.0;net5.0;net7.0;net8.0;net9.0;netstandard2.0;net35;net452</TargetFrameworks>
++    <TargetFrameworks Condition="'$(CJAppleJitCanary)' == 'true'">net8.0</TargetFrameworks>
+     <BackportsTargetFrameworks>$(TargetFrameworks);netstandard2.1;netcoreapp2.1;netcoreapp3.0;netcoreapp3.1</BackportsTargetFrameworks>
+     <!-- If a project wants to target some subset or other set, then they can just reassign TargetFrameworks in their project file -->
+ 

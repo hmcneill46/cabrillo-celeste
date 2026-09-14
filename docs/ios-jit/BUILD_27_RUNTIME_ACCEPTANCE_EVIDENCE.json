@@ -1,0 +1,2732 @@
+{
+  "schema": 1,
+  "status": "PASS_BUILD27_PHYSICAL_EVEREST_UPDATES_REPORTS_SJ_RESUME_QUIT_AND_RELOAD",
+  "reviewed_utc": "2026-09-13T09:44:14.032837+00:00",
+  "raw_evidence": [
+    {
+      "file": ".build/ios-jit/device-evidence/2026-09-13/build-27-acceptance/exports/CelesteJIT-98a9ec1c-5b18-4572-b3ef-a77987d18f73.diagnostics.json",
+      "bytes": 3658235,
+      "sha256": "7b1b607044b3a4d91b4d0bd8fbc8e090ec21a257f91c5afdca3a4cf5c3afdcec"
+    },
+    {
+      "file": ".build/ios-jit/device-evidence/2026-09-13/build-27-acceptance/exports/CelesteJIT-a12f542d-197d-4e20-8695-b23458933b46.diagnostics.json",
+      "bytes": 3006056,
+      "sha256": "e4e67b2749a648cdc7e77b5c3e2bed86d34d1455b5969474f199238ba78e304a"
+    }
+  ],
+  "ipa_sha256": "d251a33ee8b08dae94d08d7fe31ac9c3385b919d996fac7843644081a9d2dc45",
+  "ipa_bytes": 23476359,
+  "build_info_sha256": "f0c4b6dbedc6632382437a4962a1a2c3ffb1e715042f8bde465df2fafbe14af8",
+  "build_info_exact_payload_match": true,
+  "source_inputs_reverified": 224,
+  "packaged_assemblies_reverified": 201,
+  "recorded_executable_uuid": "UUID: 39E4D88A-33C1-3D2A-A927-A74C1D024EB4",
+  "device": {
+    "guest_bundle_id": "io.github.hmcneill46.celeste.everest.jit.everest",
+    "hardware": "iPhone16,2",
+    "os_build_description": "Version 26.5 (Build 23F77)",
+    "os_version": "26.5",
+    "page_size": 16384,
+    "physical_memory_bytes": 8025686016,
+    "simulator": 0
+  },
+  "reported_versions": {
+    "reported_livecontainer_version": "3.8.9 (previous test; update if changed)",
+    "reported_stikdebug_install": "LiveContainer 2 (owner supplied)",
+    "reported_stikdebug_version": "3.1.9 (previous test; update if changed)"
+  },
+  "sessions": [
+    {
+      "session": "e9955b17-4b89-4747-9267-7ed62ce5a20c",
+      "sources": [
+        {
+          "export": "CelesteJIT-98a9ec1c-5b18-4572-b3ef-a77987d18f73.diagnostics.json",
+          "journal": "session-e9955b17-4b89-4747-9267-7ed62ce5a20c.jsonl",
+          "events": 99
+        },
+        {
+          "export": "CelesteJIT-a12f542d-197d-4e20-8695-b23458933b46.diagnostics.json",
+          "journal": "session-e9955b17-4b89-4747-9267-7ed62ce5a20c.jsonl",
+          "events": 99
+        }
+      ],
+      "launch_utc": "2026-09-13T09:24:42.652306+00:00",
+      "retained_events": 99,
+      "counter_snapshots": 0,
+      "native_checks": 26,
+      "rx_regions": [
+        {
+          "range_status": "complete",
+          "result": 0,
+          "covers_requested_bytes": 1,
+          "mapped_bytes": 268435456,
+          "requested_bytes": 268435456,
+          "entry_count": 16384,
+          "entry_limit": 16384,
+          "entry_trace_count": 16384,
+          "protection": 5,
+          "union_protection": 5,
+          "page_bytes": 16384
+        },
+        {
+          "range_status": "complete",
+          "result": 0,
+          "covers_requested_bytes": 1,
+          "mapped_bytes": 268435456,
+          "requested_bytes": 268435456,
+          "entry_count": 16384,
+          "entry_limit": 16384,
+          "entry_trace_count": 16384,
+          "protection": 5,
+          "union_protection": 5,
+          "page_bytes": 16384
+        }
+      ],
+      "kind": "installation_and_native_checks_only",
+      "gameplay": false
+    },
+    {
+      "session": "a12f542d-197d-4e20-8695-b23458933b46",
+      "sources": [
+        {
+          "export": "CelesteJIT-98a9ec1c-5b18-4572-b3ef-a77987d18f73.diagnostics.json",
+          "journal": "session-a12f542d-197d-4e20-8695-b23458933b46.jsonl",
+          "events": 618
+        },
+        {
+          "export": "CelesteJIT-a12f542d-197d-4e20-8695-b23458933b46.diagnostics.json",
+          "journal": "CelesteJIT-a12f542d-197d-4e20-8695-b23458933b46.diagnostics.json",
+          "events": 549
+        }
+      ],
+      "launch_utc": "2026-09-13T09:28:32.715525+00:00",
+      "retained_events": 550,
+      "counter_snapshots": 68,
+      "native_checks": 26,
+      "rx_regions": [
+        {
+          "range_status": "complete",
+          "result": 0,
+          "covers_requested_bytes": 1,
+          "mapped_bytes": 268435456,
+          "requested_bytes": 268435456,
+          "entry_count": 16384,
+          "entry_limit": 16384,
+          "entry_trace_count": 16384,
+          "protection": 5,
+          "union_protection": 5,
+          "page_bytes": 16384
+        },
+        {
+          "range_status": "complete",
+          "result": 0,
+          "covers_requested_bytes": 1,
+          "mapped_bytes": 268435456,
+          "requested_bytes": 268435456,
+          "entry_count": 16384,
+          "entry_limit": 16384,
+          "entry_trace_count": 16384,
+          "protection": 5,
+          "union_protection": 5,
+          "page_bytes": 16384
+        }
+      ],
+      "kind": "gameplay",
+      "gameplay": true,
+      "pid": 10818,
+      "runtime_identity": {
+        "version": "1.6531.0-cjit-d72e94f",
+        "source": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+        "manifest": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62"
+      },
+      "registered_unique": [
+        "AdventureHelper 1.6.0",
+        "Anonhelper 1.1.1",
+        "BGswitch 1.2.2",
+        "Batteries 1.1.4",
+        "BounceHelper 1.14.1",
+        "BrokemiaHelper 1.8.5",
+        "CJITCodeCanary 1.0.0",
+        "CanyonHelper 1.1.6",
+        "CavernHelper 1.3.7",
+        "Celeste 1.4.0.0",
+        "CelesteIOS 1.0.0",
+        "CherryHelper 1.8.2",
+        "CollabUtils2 1.13.4",
+        "ColoredLights 1.2.0",
+        "CommunalHelper 1.25.5",
+        "ContortHelper 1.5.5",
+        "CrystallineHelper 1.17.2",
+        "DJMapHelper 1.13.4",
+        "DisposableTheo 1.0.6",
+        "EeveeHelper 1.12.6",
+        "EmHelper 1.3.0",
+        "Everest 1.6531.0",
+        "ExtendedVariantMode 0.51.0",
+        "FactoryHelper 1.4.1",
+        "FancyTileEntities 1.6.2",
+        "FemtoHelper 1.15.22",
+        "FlaglinesAndSuch 1.6.80",
+        "FrostHelper 1.80.2",
+        "FurryHelper 1.0.6",
+        "GravityHelper 1.2.28",
+        "HonlyHelper 1.7.5",
+        "IsaGrabBag 1.7.3",
+        "JackalHelper 1.7.7.1",
+        "JungleHelper 1.4.10",
+        "LuaCutscenes 0.2.13",
+        "LunaticHelper 1.1.1",
+        "MaxHelpingHand 1.40.10",
+        "MoreDasheline 1.7.1",
+        "OutbackHelper 1.7.3",
+        "PandorasBox 1.0.49",
+        "SafeRespawnCrumble 1.2.1",
+        "Sardine7 1.2.0",
+        "ShroomHelper 1.2.10",
+        "SorbetHelper 1.9.2",
+        "SpirialisHelper 1.0.8",
+        "StrawberryJam2021 1.0.12",
+        "StrawberryJam2021Assets 1.0.1",
+        "StrawberryJam2021AudioA 1.0.4",
+        "StrawberryJam2021AudioB 1.0.0",
+        "StrawberryJam2021AudioC 1.0.1",
+        "TwigHelper 1.6.0",
+        "VivHelper 1.14.10",
+        "VortexHelper 1.2.19",
+        "XaphanHelper 1.0.79",
+        "YetAnotherHelper 1.2.5",
+        "memorialHelper 1.0.4"
+      ],
+      "registration_events": 58,
+      "selected_archives": [
+        {
+          "bytes": 88955,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "AdventureHelper-v1.6.0.zip",
+          "id": "AdventureHelper-v1.6.0.zip",
+          "internal": false,
+          "name": "AdventureHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "cf0facab708f25958c560ddf58831e02f7d2b0c9f81571e090e034ce9dc927e7",
+          "version": "1.6.0"
+        },
+        {
+          "bytes": 322423,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "Anonhelper-v1.1.1.zip",
+          "id": "Anonhelper-v1.1.1.zip",
+          "internal": false,
+          "name": "Anonhelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "6417a5591a7039218c68f61869a20100ce67287d4024645e8b97cac5486e74ae",
+          "version": "1.1.1"
+        },
+        {
+          "bytes": 29096,
+          "dependencies": [
+            "Everest 1.0.0"
+          ],
+          "enabled": true,
+          "filename": "BGswitch-v1.2.2.zip",
+          "id": "BGswitch-v1.2.2.zip",
+          "internal": false,
+          "name": "BGswitch",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "c85b83155269d7b5fce6ab10b0aed6b7ffd30d62d0b09345df8e67040076fadb",
+          "version": "1.2.2"
+        },
+        {
+          "bytes": 94600,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "Batteries-v1.1.4.zip",
+          "id": "Batteries-v1.1.4.zip",
+          "internal": false,
+          "name": "Batteries",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "088d46393db29a72cabddef670d84183bcb4696f3d9e0e91321e67fe2837d047",
+          "version": "1.1.4"
+        },
+        {
+          "bytes": 430162,
+          "dependencies": [
+            "EverestCore 1.4673.0"
+          ],
+          "enabled": true,
+          "filename": "BounceHelper-v1.14.1.zip",
+          "id": "BounceHelper-v1.14.1.zip",
+          "internal": false,
+          "name": "BounceHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "91eca27c7453031fcce4234fe4051801f908d8f71f4a01a7f5e988c6ada470b2",
+          "version": "1.14.1"
+        },
+        {
+          "bytes": 386366,
+          "dependencies": [
+            "Everest 1.5901.0"
+          ],
+          "enabled": true,
+          "filename": "BrokemiaHelper-v1.8.5.zip",
+          "id": "BrokemiaHelper-v1.8.5.zip",
+          "internal": false,
+          "name": "BrokemiaHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "c80d7d71cdccef7c9b418e05d53debd197b59717d3cdeade72910ace33d4fbeb",
+          "version": "1.8.5"
+        },
+        {
+          "bytes": 3560,
+          "dependencies": [
+            "Everest 1.6458.0"
+          ],
+          "enabled": true,
+          "filename": "CJITCodeCanary-v1.0.0.zip",
+          "id": "CJITCodeCanary-v1.0.0.zip",
+          "internal": true,
+          "name": "CJITCodeCanary",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b",
+          "version": "1.0.0"
+        },
+        {
+          "bytes": 1512,
+          "dependencies": [
+            "Everest 1.6458.0"
+          ],
+          "enabled": false,
+          "filename": "CJITLauncherExample-v1_0_0.zip",
+          "id": "CJITLauncherExample-v1_0_0.zip",
+          "internal": false,
+          "name": "CJITLauncherExample",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "f5847b5796c92e382814f328cf370d697414130606f95b86771f8cb64f5e2be6",
+          "version": "1.0.0"
+        },
+        {
+          "bytes": 4454892,
+          "dependencies": [
+            "EverestCore 1.5577.0"
+          ],
+          "enabled": true,
+          "filename": "CanyonHelper-v1.1.6.zip",
+          "id": "CanyonHelper-v1.1.6.zip",
+          "internal": false,
+          "name": "CanyonHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "20f3affc4005d8177099776fbb350c258344d08c10bf4601c74763e4c26e4851",
+          "version": "1.1.6"
+        },
+        {
+          "bytes": 133823,
+          "dependencies": [
+            "Everest 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "CavernHelper-v1.3.7.zip",
+          "id": "CavernHelper-v1.3.7.zip",
+          "internal": false,
+          "name": "CavernHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "9e699b141e1f2336a6aab795161498c09f986f6ff7b8fa426a3b9d53f2490041",
+          "version": "1.3.7"
+        },
+        {
+          "bytes": 1344762,
+          "dependencies": [
+            "EverestCore 1.5617.0"
+          ],
+          "enabled": true,
+          "filename": "CherryHelper-v1.8.2.zip",
+          "id": "CherryHelper-v1.8.2.zip",
+          "internal": false,
+          "name": "CherryHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "8ca640f9e14f844507e0bbedc2afcb99ef61bec6957a7558cee90e9fabd2fba7",
+          "version": "1.8.2"
+        },
+        {
+          "bytes": 5406848,
+          "dependencies": [
+            "Everest 1.6314.0"
+          ],
+          "enabled": true,
+          "filename": "CollabUtils2-v1.13.4.zip",
+          "id": "CollabUtils2-v1.13.4.zip",
+          "internal": false,
+          "name": "CollabUtils2",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "4bcea8a9011edb8b7d27b433c47f1f4a871b8f7a4dd7f2bffac67bb99c7f6ad5",
+          "version": "1.13.4"
+        },
+        {
+          "bytes": 200,
+          "dependencies": [
+            "Everest 1.808.0"
+          ],
+          "enabled": true,
+          "filename": "ColoredLights-v1.2.0.zip",
+          "id": "ColoredLights-v1.2.0.zip",
+          "internal": false,
+          "name": "ColoredLights",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "042dce422374bb2c5d7a9355ac814daa13f582bc4b123a8b239a4e33bfcdad2f",
+          "version": "1.2.0"
+        },
+        {
+          "bytes": 20214604,
+          "dependencies": [
+            "EverestCore 1.6249.0"
+          ],
+          "enabled": true,
+          "filename": "CommunalHelper-v1.25.5.zip",
+          "id": "CommunalHelper-v1.25.5.zip",
+          "internal": false,
+          "name": "CommunalHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "44f4fb0b277a4900fd2a555e1a73e661140aa7b2455d3c7776cf420193349e3c",
+          "version": "1.25.5"
+        },
+        {
+          "bytes": 140727,
+          "dependencies": [
+            "Everest 1.2674.0"
+          ],
+          "enabled": true,
+          "filename": "ContortHelper-v1.5.5.zip",
+          "id": "ContortHelper-v1.5.5.zip",
+          "internal": false,
+          "name": "ContortHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "d8b42128a808e68d30329baa9299fdb41bf7d24743635dec3137c36bcc87956a",
+          "version": "1.5.5"
+        },
+        {
+          "bytes": 659877,
+          "dependencies": [
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "CrystallineHelper-v1.17.2.zip",
+          "id": "CrystallineHelper-v1.17.2.zip",
+          "internal": false,
+          "name": "CrystallineHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "4573f5e45dce0905142cd2b119f4a9a744bdce8ef3199319d1e46b6d1d342747",
+          "version": "1.17.2"
+        },
+        {
+          "bytes": 433079,
+          "dependencies": [
+            "Everest 1.1963.0"
+          ],
+          "enabled": true,
+          "filename": "DJMapHelper-v1.13.4.zip",
+          "id": "DJMapHelper-v1.13.4.zip",
+          "internal": false,
+          "name": "DJMapHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "95ab02d657213031b70c3079738b21be399e567ca8a32b1fe8e8effc0778eedb",
+          "version": "1.13.4"
+        },
+        {
+          "bytes": 12901,
+          "dependencies": [
+            "Everest 1.0.0"
+          ],
+          "enabled": true,
+          "filename": "DisposableTheo-v1.0.6.zip",
+          "id": "DisposableTheo-v1.0.6.zip",
+          "internal": false,
+          "name": "DisposableTheo",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "df291c0175df46682791fb6373c47eb557c47483eca3db96895eba9b5bbe85b5",
+          "version": "1.0.6"
+        },
+        {
+          "bytes": 220091,
+          "dependencies": [
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "EeveeHelper-ce48b4490175.zip",
+          "id": "EeveeHelper-ce48b4490175.zip",
+          "internal": false,
+          "name": "EeveeHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "ce48b44901754d8e072d9bc966d45d4fa0ac27fb47fe2af0fbbd22214417fd36",
+          "version": "1.12.6"
+        },
+        {
+          "bytes": 218619,
+          "dependencies": [
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": false,
+          "filename": "EeveeHelper-v1.12.5.zip",
+          "id": "EeveeHelper-v1.12.5.zip",
+          "internal": false,
+          "name": "EeveeHelper",
+          "problem": "",
+          "retainedPrevious": true,
+          "sha256": "de8eb463083e7298827d6c1ba4f5a4b69cc6cdd9b4be31fec78e272fce3a3839",
+          "version": "1.12.5"
+        },
+        {
+          "bytes": 186110,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "EmHelper-v1.3.0.zip",
+          "id": "EmHelper-v1.3.0.zip",
+          "internal": false,
+          "name": "EmHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "bdd31089c9163d2111aaaff6bfaf7c828674566d5ab8c23e08d3f4806bee31b3",
+          "version": "1.3.0"
+        },
+        {
+          "bytes": 499117,
+          "dependencies": [
+            "Everest 1.6531.0"
+          ],
+          "enabled": true,
+          "filename": "ExtendedVariantMode-468077af4655.zip",
+          "id": "ExtendedVariantMode-468077af4655.zip",
+          "internal": false,
+          "name": "ExtendedVariantMode",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "468077af4655349ded0821e3dd283d7dc366d9e3a781a15dc67698f8fb3c9fcc",
+          "version": "0.51.0"
+        },
+        {
+          "bytes": 498461,
+          "dependencies": [
+            "Everest 1.6458.0"
+          ],
+          "enabled": false,
+          "filename": "ExtendedVariantMode-v0.50.5.zip",
+          "id": "ExtendedVariantMode-v0.50.5.zip",
+          "internal": false,
+          "name": "ExtendedVariantMode",
+          "problem": "",
+          "retainedPrevious": true,
+          "sha256": "4019b362d9ad1b2d3a6a670f833ef6324d735d5791a0bf21b62cf5cfbc0d639d",
+          "version": "0.50.5"
+        },
+        {
+          "bytes": 8175682,
+          "dependencies": [
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "FactoryHelper-v1.4.1.zip",
+          "id": "FactoryHelper-v1.4.1.zip",
+          "internal": false,
+          "name": "FactoryHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "7db9a9d063884beb4f714b9c3fafa7bf06084572e97a4da36d5926050ab7d18e",
+          "version": "1.4.1"
+        },
+        {
+          "bytes": 64653,
+          "dependencies": [
+            "Everest 1.2824.0"
+          ],
+          "enabled": true,
+          "filename": "FancyTileEntities-v1.6.2.zip",
+          "id": "FancyTileEntities-v1.6.2.zip",
+          "internal": false,
+          "name": "FancyTileEntities",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "c37806dc7e7db4a392c8ab79030701f4cf2046109cc19435b607fca7fe41c8d8",
+          "version": "1.6.2"
+        },
+        {
+          "bytes": 11103153,
+          "dependencies": [
+            "Everest 1.5935.0"
+          ],
+          "enabled": true,
+          "filename": "FemtoHelper-v1.15.22.zip",
+          "id": "FemtoHelper-v1.15.22.zip",
+          "internal": false,
+          "name": "FemtoHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419",
+          "version": "1.15.22"
+        },
+        {
+          "bytes": 700428,
+          "dependencies": [
+            "EverestCore 1.5577.0"
+          ],
+          "enabled": true,
+          "filename": "FlaglinesAndSuch-v1.6.80.zip",
+          "id": "FlaglinesAndSuch-v1.6.80.zip",
+          "internal": false,
+          "name": "FlaglinesAndSuch",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "fb0fd300f95d77539eb9079aed445c81f263557c1a1715187bd509d39c1eb794",
+          "version": "1.6.80"
+        },
+        {
+          "bytes": 1204725,
+          "dependencies": [
+            "Everest 1.5986.0",
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "FrostHelper-83830c30a3de.zip",
+          "id": "FrostHelper-83830c30a3de.zip",
+          "internal": false,
+          "name": "FrostHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "83830c30a3de603f6bcd3d9d5c9d1c764bfffa817431421428fde1106a2d87b6",
+          "version": "1.80.2"
+        },
+        {
+          "bytes": 1204743,
+          "dependencies": [
+            "Everest 1.5986.0",
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": false,
+          "filename": "FrostHelper-v1.80.1.zip",
+          "id": "FrostHelper-v1.80.1.zip",
+          "internal": false,
+          "name": "FrostHelper",
+          "problem": "",
+          "retainedPrevious": true,
+          "sha256": "ba6aee8f596eff0f595fd90cb7f136ea13b1e9c2d664fc38f389608b0f9e2c81",
+          "version": "1.80.1"
+        },
+        {
+          "bytes": 15131,
+          "dependencies": [
+            "Everest 1.3471.0"
+          ],
+          "enabled": true,
+          "filename": "FurryHelper-v1.0.6.zip",
+          "id": "FurryHelper-v1.0.6.zip",
+          "internal": false,
+          "name": "FurryHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "5f60b2d9c18f6234405137ddc282fd34c6002315fb005412e0d3ab5a58d3afb1",
+          "version": "1.0.6"
+        },
+        {
+          "bytes": 747044,
+          "dependencies": [
+            "EverestCore 1.5935.0"
+          ],
+          "enabled": true,
+          "filename": "GravityHelper-v1.2.28.zip",
+          "id": "GravityHelper-v1.2.28.zip",
+          "internal": false,
+          "name": "GravityHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "d4a40744f4c155d655973754422643980321b6660027bc01b660a71b0d00649b",
+          "version": "1.2.28"
+        },
+        {
+          "bytes": 1042358,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "HonlyHelper-v1.7.5.zip",
+          "id": "HonlyHelper-v1.7.5.zip",
+          "internal": false,
+          "name": "HonlyHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "6a2d0f04a5be3a9c9c3bf66ec7e93701398a64d5a0e72add5df682e860e7d08d",
+          "version": "1.7.5"
+        },
+        {
+          "bytes": 165166,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "IsaGrabBag-v1.7.3.zip",
+          "id": "IsaGrabBag-v1.7.3.zip",
+          "internal": false,
+          "name": "IsaGrabBag",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "557af62a5c932439d906b4a1838ad19dfabc28c97ee57de6490c2b905549f007",
+          "version": "1.7.3"
+        },
+        {
+          "bytes": 9984914,
+          "dependencies": [
+            "Everest 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "JackalHelper-v1.7.7.1.zip",
+          "id": "JackalHelper-v1.7.7.1.zip",
+          "internal": false,
+          "name": "JackalHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "ee1d9b01accfc06e4d42357c99b3d0fb4163fa160acc6f06401106d36643c2f5",
+          "version": "1.7.7.1"
+        },
+        {
+          "bytes": 7584200,
+          "dependencies": [
+            "Everest 1.6314.0",
+            "Celeste 1.4.0.0"
+          ],
+          "enabled": true,
+          "filename": "JungleHelper-v1.4.10.zip",
+          "id": "JungleHelper-v1.4.10.zip",
+          "internal": false,
+          "name": "JungleHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "a140e21cbb5fd2dcaac70d4d5e36d49476e414861455ae25dedc0678164406cc",
+          "version": "1.4.10"
+        },
+        {
+          "bytes": 43788,
+          "dependencies": [
+            "Everest 1.1888.0"
+          ],
+          "enabled": true,
+          "filename": "LuaCutscenes-v0.2.13.zip",
+          "id": "LuaCutscenes-v0.2.13.zip",
+          "internal": false,
+          "name": "LuaCutscenes",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8",
+          "version": "0.2.13"
+        },
+        {
+          "bytes": 931124,
+          "dependencies": [
+            "Everest 1.1703.0"
+          ],
+          "enabled": true,
+          "filename": "LunaticHelper-v1.1.1.zip",
+          "id": "LunaticHelper-v1.1.1.zip",
+          "internal": false,
+          "name": "LunaticHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "b10e044b1dfa412605bee3ba6bfdd4263591099d331d6c1aab1e9ba65bf6a3e5",
+          "version": "1.1.1"
+        },
+        {
+          "bytes": 964295,
+          "dependencies": [
+            "Everest 1.6531.0"
+          ],
+          "enabled": true,
+          "filename": "MaxHelpingHand-d5257cb3da74.zip",
+          "id": "MaxHelpingHand-d5257cb3da74.zip",
+          "internal": false,
+          "name": "MaxHelpingHand",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "d5257cb3da742165c6b051805220d72cd0c52f6b35c5de747513a543c17b4bf1",
+          "version": "1.40.10"
+        },
+        {
+          "bytes": 963880,
+          "dependencies": [
+            "Everest 1.6418.0"
+          ],
+          "enabled": false,
+          "filename": "MaxHelpingHand-v1.40.9.zip",
+          "id": "MaxHelpingHand-v1.40.9.zip",
+          "internal": false,
+          "name": "MaxHelpingHand",
+          "problem": "",
+          "retainedPrevious": true,
+          "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee",
+          "version": "1.40.9"
+        },
+        {
+          "bytes": 21459,
+          "dependencies": [
+            "Everest 1.808.0"
+          ],
+          "enabled": true,
+          "filename": "MoreDasheline-v1.7.1.zip",
+          "id": "MoreDasheline-v1.7.1.zip",
+          "internal": false,
+          "name": "MoreDasheline",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "f29173e525f9c660503aaf36d6c509d07e8ed048d4b060fb4da70f7e2d735a01",
+          "version": "1.7.1"
+        },
+        {
+          "bytes": 46206,
+          "dependencies": [
+            "Everest 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "OutbackHelper-v1.7.3.zip",
+          "id": "OutbackHelper-v1.7.3.zip",
+          "internal": false,
+          "name": "OutbackHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "0005f588824ccfc1c593551c8b166c306d7161e1d04cd4ec6524ce51403680dd",
+          "version": "1.7.3"
+        },
+        {
+          "bytes": 245309,
+          "dependencies": [
+            "Everest 1.1888.0"
+          ],
+          "enabled": true,
+          "filename": "PandorasBox-v1.0.49.zip",
+          "id": "PandorasBox-v1.0.49.zip",
+          "internal": false,
+          "name": "PandorasBox",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "25f9c7d6792983ac697e3780667fb0963233c0c08f6e528f5c6d9fe732cded05",
+          "version": "1.0.49"
+        },
+        {
+          "bytes": 19664,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "SafeRespawnCrumble-v1.2.1.zip",
+          "id": "SafeRespawnCrumble-v1.2.1.zip",
+          "internal": false,
+          "name": "SafeRespawnCrumble",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "33d24b09e08647fb72dd238f197b7b2caaa92073f8b29c15ddbf07b0b5fe5e29",
+          "version": "1.2.1"
+        },
+        {
+          "bytes": 228761,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "Sardine7-v1.2.0.zip",
+          "id": "Sardine7-v1.2.0.zip",
+          "internal": false,
+          "name": "Sardine7",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "af9b613ef7c3eecf19502aa5256eee47c148e05b15e490dd2f34bc6c85329562",
+          "version": "1.2.0"
+        },
+        {
+          "bytes": 1824703,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "ShroomHelper-v1.2.10.zip",
+          "id": "ShroomHelper-v1.2.10.zip",
+          "internal": false,
+          "name": "ShroomHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "6a2c3eacc68353c0f8bb69bb9b59ca62128e6d3f54ff38a8ff1f282f0cdd97d7",
+          "version": "1.2.10"
+        },
+        {
+          "bytes": 387824,
+          "dependencies": [
+            "EverestCore 1.6249.0"
+          ],
+          "enabled": true,
+          "filename": "SorbetHelper-v1.9.2.zip",
+          "id": "SorbetHelper-v1.9.2.zip",
+          "internal": false,
+          "name": "SorbetHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "992ddebc35b86d584c73d45a7e81424927740f0d1ae3980cd618be1782c274d6",
+          "version": "1.9.2"
+        },
+        {
+          "bytes": 116013,
+          "dependencies": [
+            "Everest 1.2781.0"
+          ],
+          "enabled": true,
+          "filename": "SpirialisHelper-v1.0.8.zip",
+          "id": "SpirialisHelper-v1.0.8.zip",
+          "internal": false,
+          "name": "SpirialisHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "207daf679c760d99202323c5c4bcc6a67b0578873c2cb230d94c245ee55c4cc2",
+          "version": "1.0.8"
+        },
+        {
+          "bytes": 95650820,
+          "dependencies": [
+            "Everest 1.3847.0",
+            "StrawberryJam2021Assets 1.0.1",
+            "StrawberryJam2021AudioA 1.0.4",
+            "StrawberryJam2021AudioB 1.0.0",
+            "StrawberryJam2021AudioC 1.0.1",
+            "AdventureHelper 1.5.8",
+            "Anonhelper 1.0.9",
+            "Batteries 1.1.3",
+            "BGswitch 1.2.2",
+            "BounceHelper 1.6.2",
+            "BrokemiaHelper 1.7.2",
+            "CanyonHelper 1.1.4",
+            "CavernHelper 1.3.6",
+            "CherryHelper 1.7.1",
+            "CollabUtils2 1.10.11",
+            "ColoredLights 1.1.2",
+            "CommunalHelper 1.14.5",
+            "ContortHelper 1.5.5",
+            "CrystallineHelper 1.14.0",
+            "DisposableTheo 1.0.6",
+            "DJMapHelper 1.13.2",
+            "EeveeHelper 1.5.3",
+            "EmHelper 1.2.1",
+            "ExtendedVariantMode 0.26.9",
+            "FactoryHelper 1.3.6",
+            "FancyTileEntities 1.6.2",
+            "FemtoHelper 1.9.4",
+            "FlaglinesAndSuch 1.6.2",
+            "FrostHelper 1.40.3",
+            "FurryHelper 1.0.6",
+            "GravityHelper 1.1.36",
+            "HonlyHelper 1.7.4",
+            "IsaGrabBag 1.6.12",
+            "JackalHelper 1.6.8",
+            "JungleHelper 1.1.4",
+            "LuaCutscenes 0.2.7",
+            "LunaticHelper 1.1.1",
+            "MaxHelpingHand 1.24.10",
+            "memorialHelper 1.0.4",
+            "MoreDasheline 1.7.0",
+            "OutbackHelper 1.7.2",
+            "PandorasBox 1.0.46",
+            "SafeRespawnCrumble 1.2.0",
+            "Sardine7 1.1.4",
+            "ShroomHelper 1.2.4",
+            "SorbetHelper 1.1.1",
+            "SpirialisHelper 1.0.8",
+            "TwigHelper 1.5.2",
+            "VivHelper 1.11.1",
+            "VortexHelper 1.2.11",
+            "XaphanHelper 1.0.54",
+            "YetAnotherHelper 1.2.4"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021-v1.0.12.zip",
+          "id": "StrawberryJam2021-v1.0.12.zip",
+          "internal": false,
+          "name": "StrawberryJam2021",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "4e1a2fc12baa3db27da433b93bf26b59f34b3e6b7f760c41d8d127636d020655",
+          "version": "1.0.12"
+        },
+        {
+          "bytes": 91062907,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021Assets-v1.0.1.zip",
+          "id": "StrawberryJam2021Assets-v1.0.1.zip",
+          "internal": false,
+          "name": "StrawberryJam2021Assets",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "26fab85f20fff89d1adcba2ef926c3447d9996057c7dfc78e5d97f9d96ed7e45",
+          "version": "1.0.1"
+        },
+        {
+          "bytes": 318011755,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021AudioA-v1.0.4.zip",
+          "id": "StrawberryJam2021AudioA-v1.0.4.zip",
+          "internal": false,
+          "name": "StrawberryJam2021AudioA",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "81e9cbc39b3a5525c93dfc5b24b675a833a8fb616e8a01cfc0838296f5e37e1d",
+          "version": "1.0.4"
+        },
+        {
+          "bytes": 318382262,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021AudioB-v1.0.0.zip",
+          "id": "StrawberryJam2021AudioB-v1.0.0.zip",
+          "internal": false,
+          "name": "StrawberryJam2021AudioB",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "70b90f45709956a4d18bfbb5941836c534344a1cf0ab859a50430daa3b76ef42",
+          "version": "1.0.0"
+        },
+        {
+          "bytes": 317738998,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021AudioC-v1.0.1.zip",
+          "id": "StrawberryJam2021AudioC-v1.0.1.zip",
+          "internal": false,
+          "name": "StrawberryJam2021AudioC",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "298e20ba83fd086c6a747c786475f1753e008016bfa18551e49ffb56dd271c79",
+          "version": "1.0.1"
+        },
+        {
+          "bytes": 293,
+          "dependencies": [
+            "Everest 1.1870.0",
+            "JackalHelper 1.7.0"
+          ],
+          "enabled": true,
+          "filename": "TwigHelper-v1.6.0.zip",
+          "id": "TwigHelper-v1.6.0.zip",
+          "internal": false,
+          "name": "TwigHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "cc23c5b5c85769e2fe5dbe047091028c3affa3145fadee47c51ec569e3e721e3",
+          "version": "1.6.0"
+        },
+        {
+          "bytes": 6543567,
+          "dependencies": [
+            "Everest 1.3324.0"
+          ],
+          "enabled": true,
+          "filename": "VivHelper-v1.14.10.zip",
+          "id": "VivHelper-v1.14.10.zip",
+          "internal": false,
+          "name": "VivHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "9a95f51659ccfcb78404f9610307918d6114fc824298fbb8493651ec7c80215a",
+          "version": "1.14.10"
+        },
+        {
+          "bytes": 2195976,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "VortexHelper-v1.2.19.zip",
+          "id": "VortexHelper-v1.2.19.zip",
+          "internal": false,
+          "name": "VortexHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "b6280fe2e3c05d355c32a51049854137c41be72d24ec4aec9d997cc7c4394db2",
+          "version": "1.2.19"
+        },
+        {
+          "bytes": 6957784,
+          "dependencies": [
+            "Everest 1.5184.0"
+          ],
+          "enabled": true,
+          "filename": "XaphanHelper-v1.0.79.zip",
+          "id": "XaphanHelper-v1.0.79.zip",
+          "internal": false,
+          "name": "XaphanHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "ca868d06eb05f0c5de55126090e5019210e9d83c3dae9394cbcd155acf8eb16f",
+          "version": "1.0.79"
+        },
+        {
+          "bytes": 53525,
+          "dependencies": [
+            "Everest 1.3471.0"
+          ],
+          "enabled": true,
+          "filename": "YetAnotherHelper-v1.2.5.zip",
+          "id": "YetAnotherHelper-v1.2.5.zip",
+          "internal": false,
+          "name": "YetAnotherHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "73d64e1b3457e2461d3368a01de9f5f31a58bf24e130f3e35ec7280b24814c2d",
+          "version": "1.2.5"
+        },
+        {
+          "bytes": 13965,
+          "dependencies": [
+            "Everest 1.0.0"
+          ],
+          "enabled": true,
+          "filename": "memorialHelper-v1.0.4.zip",
+          "id": "memorialHelper-v1.0.4.zip",
+          "internal": false,
+          "name": "memorialHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "ea66a574e5e1639c580974828b201633aadbd25b6699529c89fbd86db501fda4",
+          "version": "1.0.4"
+        },
+        {
+          "bytes": 19474,
+          "dependencies": [
+            "Everest 1.2742.0"
+          ],
+          "enabled": false,
+          "filename": "skinmodhelper_7027b.zip",
+          "id": "skinmodhelper_7027b.zip",
+          "internal": false,
+          "name": "SkinModHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "9b5f1a8c33601f7ee641d9f0743b54a42b2ceaff1ab2b0a8fdb742ea954ca34c",
+          "version": "0.6.1"
+        },
+        {
+          "bytes": 1352390,
+          "dependencies": [
+            "Everest 1.3070.0",
+            "SkinModHelper 0.5.5"
+          ],
+          "enabled": false,
+          "filename": "theoskinmodv3.zip",
+          "id": "theoskinmodv3.zip",
+          "internal": false,
+          "name": "TheoSkinMod",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "1be2ad82a2a6596bd297900578eb1968de965d4287128ffd20f240c8c1442396",
+          "version": "2.2"
+        }
+      ],
+      "selected_archive_count": 53,
+      "installed_archive_count": 60,
+      "verified_identities": 56,
+      "save": {
+        "prior": 928,
+        "written": 969,
+        "readback": 969,
+        "bytes": 11
+      },
+      "slot_saves": [
+        "SaveData slot=1; bytes=160861; deaths=182"
+      ],
+      "rooms": [
+        {
+          "area": "27",
+          "sid": "StrawberryJam2021/1-Beginner/Ceph",
+          "mode": "Normal",
+          "room": "4"
+        },
+        {
+          "area": "27",
+          "sid": "StrawberryJam2021/1-Beginner/Ceph",
+          "mode": "Normal",
+          "room": "5"
+        }
+      ],
+      "background_seconds": 33.122339041670784,
+      "gameplay_progress": {
+        "title": "True",
+        "levelFrames": "4444",
+        "moves": "1983",
+        "jumps": "41",
+        "jumpsAfterResume": "4",
+        "afterResume": "664",
+        "workers": "0"
+      },
+      "graphics_checks": [
+        "celeste_player_jump_hook_installed",
+        "fna_render_target_extension_active_binding",
+        "fna_render_target_extension_backbuffer",
+        "metal_render_target_clear_and_gpu_readback",
+        "backbuffer_deferred_clear_visible",
+        "backbuffer_full_rgba_orientation_and_rows",
+        "backbuffer_rectangle_offset_and_guards",
+        "backbuffer_byte_stride_rgba_and_guards",
+        "backbuffer_continued_draw_preserves_other_pixels",
+        "backbuffer_reads_backbuffer_while_other_target_bound",
+        "backbuffer_pending_offscreen_clear_survives_read",
+        "jit_xml_settings_write",
+        "jit_xml_settings_readback",
+        "celeste_jump_hook_retained_after_resume_gc",
+        "everest_final_save_queue_completed",
+        "jit_xml_settings_write",
+        "jit_xml_settings_readback",
+        "jit_xml_savedata_write",
+        "jit_xml_savedata_readback"
+      ],
+      "final_runtime": {
+        "code_allocations": 10371,
+        "code_budget_bytes": 536870912,
+        "code_reserved_bytes": 173391872,
+        "jit_done_count": 36593,
+        "jit_failed": 0,
+        "jit_unowned": 0,
+        "managed_errors": 0,
+        "patch_rejections": 0,
+        "patches": 12414
+      },
+      "shutdown_started": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "shutdown_completed": [
+        {
+          "stage": "1",
+          "seconds": "0.171485584"
+        },
+        {
+          "stage": "2",
+          "seconds": "0.074608375"
+        },
+        {
+          "stage": "3",
+          "seconds": "0.052013333"
+        },
+        {
+          "stage": "4",
+          "seconds": "0.21498525"
+        },
+        {
+          "stage": "5",
+          "seconds": "7.209345042"
+        },
+        {
+          "stage": "6",
+          "seconds": "0.373249583"
+        },
+        {
+          "stage": "7",
+          "seconds": "0.05671125"
+        }
+      ],
+      "native_return": true,
+      "post_return_heartbeat": true,
+      "quit_utc": "2026-09-13T09:34:03.594143+00:00",
+      "sampled_peak_footprint_bytes": 4050833520,
+      "allocation_trace": {
+        "bytes": 248904,
+        "encoding": "base64 of packed little-endian uint64 (address, requested_bytes, total_reserved_bytes)",
+        "overflow_records": 0,
+        "records": 10371,
+        "sha256": "da6187e5e67c600757d551223cfcc1a63e3a3105d5b352c796181c7bda24baf6"
+      },
+      "startup_seconds": {
+        "everest_boot_pass": 69.293,
+        "game_begin_load": 69.319,
+        "game_start_returned": 74.444,
+        "graphics_first_frame_returned": 74.713
+      }
+    },
+    {
+      "session": "98a9ec1c-5b18-4572-b3ef-a77987d18f73",
+      "sources": [
+        {
+          "export": "CelesteJIT-98a9ec1c-5b18-4572-b3ef-a77987d18f73.diagnostics.json",
+          "journal": "CelesteJIT-98a9ec1c-5b18-4572-b3ef-a77987d18f73.diagnostics.json",
+          "events": 430
+        }
+      ],
+      "launch_utc": "2026-09-13T09:34:46.542155+00:00",
+      "retained_events": 430,
+      "counter_snapshots": 0,
+      "native_checks": 26,
+      "rx_regions": [
+        {
+          "range_status": "complete",
+          "result": 0,
+          "covers_requested_bytes": 1,
+          "mapped_bytes": 268435456,
+          "requested_bytes": 268435456,
+          "entry_count": 16384,
+          "entry_limit": 16384,
+          "entry_trace_count": 16384,
+          "protection": 5,
+          "union_protection": 5,
+          "page_bytes": 16384
+        },
+        {
+          "range_status": "complete",
+          "result": 0,
+          "covers_requested_bytes": 1,
+          "mapped_bytes": 268435456,
+          "requested_bytes": 268435456,
+          "entry_count": 16384,
+          "entry_limit": 16384,
+          "entry_trace_count": 16384,
+          "protection": 5,
+          "union_protection": 5,
+          "page_bytes": 16384
+        }
+      ],
+      "kind": "gameplay",
+      "gameplay": true,
+      "pid": 10925,
+      "runtime_identity": {
+        "version": "1.6531.0-cjit-d72e94f",
+        "source": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+        "manifest": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62"
+      },
+      "registered_unique": [
+        "AdventureHelper 1.6.0",
+        "Anonhelper 1.1.1",
+        "BGswitch 1.2.2",
+        "Batteries 1.1.4",
+        "BounceHelper 1.14.1",
+        "BrokemiaHelper 1.8.5",
+        "CJITCodeCanary 1.0.0",
+        "CanyonHelper 1.1.6",
+        "CavernHelper 1.3.7",
+        "Celeste 1.4.0.0",
+        "CelesteIOS 1.0.0",
+        "CherryHelper 1.8.2",
+        "CollabUtils2 1.13.4",
+        "ColoredLights 1.2.0",
+        "CommunalHelper 1.25.5",
+        "ContortHelper 1.5.5",
+        "CrystallineHelper 1.17.2",
+        "DJMapHelper 1.13.4",
+        "DisposableTheo 1.0.6",
+        "EeveeHelper 1.12.6",
+        "EmHelper 1.3.0",
+        "Everest 1.6531.0",
+        "ExtendedVariantMode 0.51.0",
+        "FactoryHelper 1.4.1",
+        "FancyTileEntities 1.6.2",
+        "FemtoHelper 1.15.22",
+        "FlaglinesAndSuch 1.6.80",
+        "FrostHelper 1.80.2",
+        "FurryHelper 1.0.6",
+        "GravityHelper 1.2.28",
+        "HonlyHelper 1.7.5",
+        "IsaGrabBag 1.7.3",
+        "JackalHelper 1.7.7.1",
+        "JungleHelper 1.4.10",
+        "LuaCutscenes 0.2.13",
+        "LunaticHelper 1.1.1",
+        "MaxHelpingHand 1.40.10",
+        "MoreDasheline 1.7.1",
+        "OutbackHelper 1.7.3",
+        "PandorasBox 1.0.49",
+        "SafeRespawnCrumble 1.2.1",
+        "Sardine7 1.2.0",
+        "ShroomHelper 1.2.10",
+        "SorbetHelper 1.9.2",
+        "SpirialisHelper 1.0.8",
+        "StrawberryJam2021 1.0.12",
+        "StrawberryJam2021Assets 1.0.1",
+        "StrawberryJam2021AudioA 1.0.4",
+        "StrawberryJam2021AudioB 1.0.0",
+        "StrawberryJam2021AudioC 1.0.1",
+        "TwigHelper 1.6.0",
+        "VivHelper 1.14.10",
+        "VortexHelper 1.2.19",
+        "XaphanHelper 1.0.79",
+        "YetAnotherHelper 1.2.5",
+        "memorialHelper 1.0.4"
+      ],
+      "registration_events": 58,
+      "selected_archives": [
+        {
+          "bytes": 88955,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "AdventureHelper-v1.6.0.zip",
+          "id": "AdventureHelper-v1.6.0.zip",
+          "internal": false,
+          "name": "AdventureHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "cf0facab708f25958c560ddf58831e02f7d2b0c9f81571e090e034ce9dc927e7",
+          "version": "1.6.0"
+        },
+        {
+          "bytes": 322423,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "Anonhelper-v1.1.1.zip",
+          "id": "Anonhelper-v1.1.1.zip",
+          "internal": false,
+          "name": "Anonhelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "6417a5591a7039218c68f61869a20100ce67287d4024645e8b97cac5486e74ae",
+          "version": "1.1.1"
+        },
+        {
+          "bytes": 29096,
+          "dependencies": [
+            "Everest 1.0.0"
+          ],
+          "enabled": true,
+          "filename": "BGswitch-v1.2.2.zip",
+          "id": "BGswitch-v1.2.2.zip",
+          "internal": false,
+          "name": "BGswitch",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "c85b83155269d7b5fce6ab10b0aed6b7ffd30d62d0b09345df8e67040076fadb",
+          "version": "1.2.2"
+        },
+        {
+          "bytes": 94600,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "Batteries-v1.1.4.zip",
+          "id": "Batteries-v1.1.4.zip",
+          "internal": false,
+          "name": "Batteries",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "088d46393db29a72cabddef670d84183bcb4696f3d9e0e91321e67fe2837d047",
+          "version": "1.1.4"
+        },
+        {
+          "bytes": 430162,
+          "dependencies": [
+            "EverestCore 1.4673.0"
+          ],
+          "enabled": true,
+          "filename": "BounceHelper-v1.14.1.zip",
+          "id": "BounceHelper-v1.14.1.zip",
+          "internal": false,
+          "name": "BounceHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "91eca27c7453031fcce4234fe4051801f908d8f71f4a01a7f5e988c6ada470b2",
+          "version": "1.14.1"
+        },
+        {
+          "bytes": 386366,
+          "dependencies": [
+            "Everest 1.5901.0"
+          ],
+          "enabled": true,
+          "filename": "BrokemiaHelper-v1.8.5.zip",
+          "id": "BrokemiaHelper-v1.8.5.zip",
+          "internal": false,
+          "name": "BrokemiaHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "c80d7d71cdccef7c9b418e05d53debd197b59717d3cdeade72910ace33d4fbeb",
+          "version": "1.8.5"
+        },
+        {
+          "bytes": 3560,
+          "dependencies": [
+            "Everest 1.6458.0"
+          ],
+          "enabled": true,
+          "filename": "CJITCodeCanary-v1.0.0.zip",
+          "id": "CJITCodeCanary-v1.0.0.zip",
+          "internal": true,
+          "name": "CJITCodeCanary",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b",
+          "version": "1.0.0"
+        },
+        {
+          "bytes": 1512,
+          "dependencies": [
+            "Everest 1.6458.0"
+          ],
+          "enabled": false,
+          "filename": "CJITLauncherExample-v1_0_0.zip",
+          "id": "CJITLauncherExample-v1_0_0.zip",
+          "internal": false,
+          "name": "CJITLauncherExample",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "f5847b5796c92e382814f328cf370d697414130606f95b86771f8cb64f5e2be6",
+          "version": "1.0.0"
+        },
+        {
+          "bytes": 4454892,
+          "dependencies": [
+            "EverestCore 1.5577.0"
+          ],
+          "enabled": true,
+          "filename": "CanyonHelper-v1.1.6.zip",
+          "id": "CanyonHelper-v1.1.6.zip",
+          "internal": false,
+          "name": "CanyonHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "20f3affc4005d8177099776fbb350c258344d08c10bf4601c74763e4c26e4851",
+          "version": "1.1.6"
+        },
+        {
+          "bytes": 133823,
+          "dependencies": [
+            "Everest 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "CavernHelper-v1.3.7.zip",
+          "id": "CavernHelper-v1.3.7.zip",
+          "internal": false,
+          "name": "CavernHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "9e699b141e1f2336a6aab795161498c09f986f6ff7b8fa426a3b9d53f2490041",
+          "version": "1.3.7"
+        },
+        {
+          "bytes": 1344762,
+          "dependencies": [
+            "EverestCore 1.5617.0"
+          ],
+          "enabled": true,
+          "filename": "CherryHelper-v1.8.2.zip",
+          "id": "CherryHelper-v1.8.2.zip",
+          "internal": false,
+          "name": "CherryHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "8ca640f9e14f844507e0bbedc2afcb99ef61bec6957a7558cee90e9fabd2fba7",
+          "version": "1.8.2"
+        },
+        {
+          "bytes": 5406848,
+          "dependencies": [
+            "Everest 1.6314.0"
+          ],
+          "enabled": true,
+          "filename": "CollabUtils2-v1.13.4.zip",
+          "id": "CollabUtils2-v1.13.4.zip",
+          "internal": false,
+          "name": "CollabUtils2",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "4bcea8a9011edb8b7d27b433c47f1f4a871b8f7a4dd7f2bffac67bb99c7f6ad5",
+          "version": "1.13.4"
+        },
+        {
+          "bytes": 200,
+          "dependencies": [
+            "Everest 1.808.0"
+          ],
+          "enabled": true,
+          "filename": "ColoredLights-v1.2.0.zip",
+          "id": "ColoredLights-v1.2.0.zip",
+          "internal": false,
+          "name": "ColoredLights",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "042dce422374bb2c5d7a9355ac814daa13f582bc4b123a8b239a4e33bfcdad2f",
+          "version": "1.2.0"
+        },
+        {
+          "bytes": 20214604,
+          "dependencies": [
+            "EverestCore 1.6249.0"
+          ],
+          "enabled": true,
+          "filename": "CommunalHelper-v1.25.5.zip",
+          "id": "CommunalHelper-v1.25.5.zip",
+          "internal": false,
+          "name": "CommunalHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "44f4fb0b277a4900fd2a555e1a73e661140aa7b2455d3c7776cf420193349e3c",
+          "version": "1.25.5"
+        },
+        {
+          "bytes": 140727,
+          "dependencies": [
+            "Everest 1.2674.0"
+          ],
+          "enabled": true,
+          "filename": "ContortHelper-v1.5.5.zip",
+          "id": "ContortHelper-v1.5.5.zip",
+          "internal": false,
+          "name": "ContortHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "d8b42128a808e68d30329baa9299fdb41bf7d24743635dec3137c36bcc87956a",
+          "version": "1.5.5"
+        },
+        {
+          "bytes": 659877,
+          "dependencies": [
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "CrystallineHelper-v1.17.2.zip",
+          "id": "CrystallineHelper-v1.17.2.zip",
+          "internal": false,
+          "name": "CrystallineHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "4573f5e45dce0905142cd2b119f4a9a744bdce8ef3199319d1e46b6d1d342747",
+          "version": "1.17.2"
+        },
+        {
+          "bytes": 433079,
+          "dependencies": [
+            "Everest 1.1963.0"
+          ],
+          "enabled": true,
+          "filename": "DJMapHelper-v1.13.4.zip",
+          "id": "DJMapHelper-v1.13.4.zip",
+          "internal": false,
+          "name": "DJMapHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "95ab02d657213031b70c3079738b21be399e567ca8a32b1fe8e8effc0778eedb",
+          "version": "1.13.4"
+        },
+        {
+          "bytes": 12901,
+          "dependencies": [
+            "Everest 1.0.0"
+          ],
+          "enabled": true,
+          "filename": "DisposableTheo-v1.0.6.zip",
+          "id": "DisposableTheo-v1.0.6.zip",
+          "internal": false,
+          "name": "DisposableTheo",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "df291c0175df46682791fb6373c47eb557c47483eca3db96895eba9b5bbe85b5",
+          "version": "1.0.6"
+        },
+        {
+          "bytes": 220091,
+          "dependencies": [
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "EeveeHelper-ce48b4490175.zip",
+          "id": "EeveeHelper-ce48b4490175.zip",
+          "internal": false,
+          "name": "EeveeHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "ce48b44901754d8e072d9bc966d45d4fa0ac27fb47fe2af0fbbd22214417fd36",
+          "version": "1.12.6"
+        },
+        {
+          "bytes": 218619,
+          "dependencies": [
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": false,
+          "filename": "EeveeHelper-v1.12.5.zip",
+          "id": "EeveeHelper-v1.12.5.zip",
+          "internal": false,
+          "name": "EeveeHelper",
+          "problem": "",
+          "retainedPrevious": true,
+          "sha256": "de8eb463083e7298827d6c1ba4f5a4b69cc6cdd9b4be31fec78e272fce3a3839",
+          "version": "1.12.5"
+        },
+        {
+          "bytes": 186110,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "EmHelper-v1.3.0.zip",
+          "id": "EmHelper-v1.3.0.zip",
+          "internal": false,
+          "name": "EmHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "bdd31089c9163d2111aaaff6bfaf7c828674566d5ab8c23e08d3f4806bee31b3",
+          "version": "1.3.0"
+        },
+        {
+          "bytes": 499117,
+          "dependencies": [
+            "Everest 1.6531.0"
+          ],
+          "enabled": true,
+          "filename": "ExtendedVariantMode-468077af4655.zip",
+          "id": "ExtendedVariantMode-468077af4655.zip",
+          "internal": false,
+          "name": "ExtendedVariantMode",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "468077af4655349ded0821e3dd283d7dc366d9e3a781a15dc67698f8fb3c9fcc",
+          "version": "0.51.0"
+        },
+        {
+          "bytes": 498461,
+          "dependencies": [
+            "Everest 1.6458.0"
+          ],
+          "enabled": false,
+          "filename": "ExtendedVariantMode-v0.50.5.zip",
+          "id": "ExtendedVariantMode-v0.50.5.zip",
+          "internal": false,
+          "name": "ExtendedVariantMode",
+          "problem": "",
+          "retainedPrevious": true,
+          "sha256": "4019b362d9ad1b2d3a6a670f833ef6324d735d5791a0bf21b62cf5cfbc0d639d",
+          "version": "0.50.5"
+        },
+        {
+          "bytes": 8175682,
+          "dependencies": [
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "FactoryHelper-v1.4.1.zip",
+          "id": "FactoryHelper-v1.4.1.zip",
+          "internal": false,
+          "name": "FactoryHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "7db9a9d063884beb4f714b9c3fafa7bf06084572e97a4da36d5926050ab7d18e",
+          "version": "1.4.1"
+        },
+        {
+          "bytes": 64653,
+          "dependencies": [
+            "Everest 1.2824.0"
+          ],
+          "enabled": true,
+          "filename": "FancyTileEntities-v1.6.2.zip",
+          "id": "FancyTileEntities-v1.6.2.zip",
+          "internal": false,
+          "name": "FancyTileEntities",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "c37806dc7e7db4a392c8ab79030701f4cf2046109cc19435b607fca7fe41c8d8",
+          "version": "1.6.2"
+        },
+        {
+          "bytes": 11103153,
+          "dependencies": [
+            "Everest 1.5935.0"
+          ],
+          "enabled": true,
+          "filename": "FemtoHelper-v1.15.22.zip",
+          "id": "FemtoHelper-v1.15.22.zip",
+          "internal": false,
+          "name": "FemtoHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419",
+          "version": "1.15.22"
+        },
+        {
+          "bytes": 700428,
+          "dependencies": [
+            "EverestCore 1.5577.0"
+          ],
+          "enabled": true,
+          "filename": "FlaglinesAndSuch-v1.6.80.zip",
+          "id": "FlaglinesAndSuch-v1.6.80.zip",
+          "internal": false,
+          "name": "FlaglinesAndSuch",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "fb0fd300f95d77539eb9079aed445c81f263557c1a1715187bd509d39c1eb794",
+          "version": "1.6.80"
+        },
+        {
+          "bytes": 1204725,
+          "dependencies": [
+            "Everest 1.5986.0",
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "FrostHelper-83830c30a3de.zip",
+          "id": "FrostHelper-83830c30a3de.zip",
+          "internal": false,
+          "name": "FrostHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "83830c30a3de603f6bcd3d9d5c9d1c764bfffa817431421428fde1106a2d87b6",
+          "version": "1.80.2"
+        },
+        {
+          "bytes": 1204743,
+          "dependencies": [
+            "Everest 1.5986.0",
+            "EverestCore 1.5986.0"
+          ],
+          "enabled": false,
+          "filename": "FrostHelper-v1.80.1.zip",
+          "id": "FrostHelper-v1.80.1.zip",
+          "internal": false,
+          "name": "FrostHelper",
+          "problem": "",
+          "retainedPrevious": true,
+          "sha256": "ba6aee8f596eff0f595fd90cb7f136ea13b1e9c2d664fc38f389608b0f9e2c81",
+          "version": "1.80.1"
+        },
+        {
+          "bytes": 15131,
+          "dependencies": [
+            "Everest 1.3471.0"
+          ],
+          "enabled": true,
+          "filename": "FurryHelper-v1.0.6.zip",
+          "id": "FurryHelper-v1.0.6.zip",
+          "internal": false,
+          "name": "FurryHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "5f60b2d9c18f6234405137ddc282fd34c6002315fb005412e0d3ab5a58d3afb1",
+          "version": "1.0.6"
+        },
+        {
+          "bytes": 747044,
+          "dependencies": [
+            "EverestCore 1.5935.0"
+          ],
+          "enabled": true,
+          "filename": "GravityHelper-v1.2.28.zip",
+          "id": "GravityHelper-v1.2.28.zip",
+          "internal": false,
+          "name": "GravityHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "d4a40744f4c155d655973754422643980321b6660027bc01b660a71b0d00649b",
+          "version": "1.2.28"
+        },
+        {
+          "bytes": 1042358,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "HonlyHelper-v1.7.5.zip",
+          "id": "HonlyHelper-v1.7.5.zip",
+          "internal": false,
+          "name": "HonlyHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "6a2d0f04a5be3a9c9c3bf66ec7e93701398a64d5a0e72add5df682e860e7d08d",
+          "version": "1.7.5"
+        },
+        {
+          "bytes": 165166,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "IsaGrabBag-v1.7.3.zip",
+          "id": "IsaGrabBag-v1.7.3.zip",
+          "internal": false,
+          "name": "IsaGrabBag",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "557af62a5c932439d906b4a1838ad19dfabc28c97ee57de6490c2b905549f007",
+          "version": "1.7.3"
+        },
+        {
+          "bytes": 9984914,
+          "dependencies": [
+            "Everest 1.5986.0"
+          ],
+          "enabled": true,
+          "filename": "JackalHelper-v1.7.7.1.zip",
+          "id": "JackalHelper-v1.7.7.1.zip",
+          "internal": false,
+          "name": "JackalHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "ee1d9b01accfc06e4d42357c99b3d0fb4163fa160acc6f06401106d36643c2f5",
+          "version": "1.7.7.1"
+        },
+        {
+          "bytes": 7584200,
+          "dependencies": [
+            "Everest 1.6314.0",
+            "Celeste 1.4.0.0"
+          ],
+          "enabled": true,
+          "filename": "JungleHelper-v1.4.10.zip",
+          "id": "JungleHelper-v1.4.10.zip",
+          "internal": false,
+          "name": "JungleHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "a140e21cbb5fd2dcaac70d4d5e36d49476e414861455ae25dedc0678164406cc",
+          "version": "1.4.10"
+        },
+        {
+          "bytes": 43788,
+          "dependencies": [
+            "Everest 1.1888.0"
+          ],
+          "enabled": true,
+          "filename": "LuaCutscenes-v0.2.13.zip",
+          "id": "LuaCutscenes-v0.2.13.zip",
+          "internal": false,
+          "name": "LuaCutscenes",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8",
+          "version": "0.2.13"
+        },
+        {
+          "bytes": 931124,
+          "dependencies": [
+            "Everest 1.1703.0"
+          ],
+          "enabled": true,
+          "filename": "LunaticHelper-v1.1.1.zip",
+          "id": "LunaticHelper-v1.1.1.zip",
+          "internal": false,
+          "name": "LunaticHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "b10e044b1dfa412605bee3ba6bfdd4263591099d331d6c1aab1e9ba65bf6a3e5",
+          "version": "1.1.1"
+        },
+        {
+          "bytes": 964295,
+          "dependencies": [
+            "Everest 1.6531.0"
+          ],
+          "enabled": true,
+          "filename": "MaxHelpingHand-d5257cb3da74.zip",
+          "id": "MaxHelpingHand-d5257cb3da74.zip",
+          "internal": false,
+          "name": "MaxHelpingHand",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "d5257cb3da742165c6b051805220d72cd0c52f6b35c5de747513a543c17b4bf1",
+          "version": "1.40.10"
+        },
+        {
+          "bytes": 963880,
+          "dependencies": [
+            "Everest 1.6418.0"
+          ],
+          "enabled": false,
+          "filename": "MaxHelpingHand-v1.40.9.zip",
+          "id": "MaxHelpingHand-v1.40.9.zip",
+          "internal": false,
+          "name": "MaxHelpingHand",
+          "problem": "",
+          "retainedPrevious": true,
+          "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee",
+          "version": "1.40.9"
+        },
+        {
+          "bytes": 21459,
+          "dependencies": [
+            "Everest 1.808.0"
+          ],
+          "enabled": true,
+          "filename": "MoreDasheline-v1.7.1.zip",
+          "id": "MoreDasheline-v1.7.1.zip",
+          "internal": false,
+          "name": "MoreDasheline",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "f29173e525f9c660503aaf36d6c509d07e8ed048d4b060fb4da70f7e2d735a01",
+          "version": "1.7.1"
+        },
+        {
+          "bytes": 46206,
+          "dependencies": [
+            "Everest 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "OutbackHelper-v1.7.3.zip",
+          "id": "OutbackHelper-v1.7.3.zip",
+          "internal": false,
+          "name": "OutbackHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "0005f588824ccfc1c593551c8b166c306d7161e1d04cd4ec6524ce51403680dd",
+          "version": "1.7.3"
+        },
+        {
+          "bytes": 245309,
+          "dependencies": [
+            "Everest 1.1888.0"
+          ],
+          "enabled": true,
+          "filename": "PandorasBox-v1.0.49.zip",
+          "id": "PandorasBox-v1.0.49.zip",
+          "internal": false,
+          "name": "PandorasBox",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "25f9c7d6792983ac697e3780667fb0963233c0c08f6e528f5c6d9fe732cded05",
+          "version": "1.0.49"
+        },
+        {
+          "bytes": 19664,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "SafeRespawnCrumble-v1.2.1.zip",
+          "id": "SafeRespawnCrumble-v1.2.1.zip",
+          "internal": false,
+          "name": "SafeRespawnCrumble",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "33d24b09e08647fb72dd238f197b7b2caaa92073f8b29c15ddbf07b0b5fe5e29",
+          "version": "1.2.1"
+        },
+        {
+          "bytes": 228761,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "Sardine7-v1.2.0.zip",
+          "id": "Sardine7-v1.2.0.zip",
+          "internal": false,
+          "name": "Sardine7",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "af9b613ef7c3eecf19502aa5256eee47c148e05b15e490dd2f34bc6c85329562",
+          "version": "1.2.0"
+        },
+        {
+          "bytes": 1824703,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "ShroomHelper-v1.2.10.zip",
+          "id": "ShroomHelper-v1.2.10.zip",
+          "internal": false,
+          "name": "ShroomHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "6a2c3eacc68353c0f8bb69bb9b59ca62128e6d3f54ff38a8ff1f282f0cdd97d7",
+          "version": "1.2.10"
+        },
+        {
+          "bytes": 387824,
+          "dependencies": [
+            "EverestCore 1.6249.0"
+          ],
+          "enabled": true,
+          "filename": "SorbetHelper-v1.9.2.zip",
+          "id": "SorbetHelper-v1.9.2.zip",
+          "internal": false,
+          "name": "SorbetHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "992ddebc35b86d584c73d45a7e81424927740f0d1ae3980cd618be1782c274d6",
+          "version": "1.9.2"
+        },
+        {
+          "bytes": 116013,
+          "dependencies": [
+            "Everest 1.2781.0"
+          ],
+          "enabled": true,
+          "filename": "SpirialisHelper-v1.0.8.zip",
+          "id": "SpirialisHelper-v1.0.8.zip",
+          "internal": false,
+          "name": "SpirialisHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "207daf679c760d99202323c5c4bcc6a67b0578873c2cb230d94c245ee55c4cc2",
+          "version": "1.0.8"
+        },
+        {
+          "bytes": 95650820,
+          "dependencies": [
+            "Everest 1.3847.0",
+            "StrawberryJam2021Assets 1.0.1",
+            "StrawberryJam2021AudioA 1.0.4",
+            "StrawberryJam2021AudioB 1.0.0",
+            "StrawberryJam2021AudioC 1.0.1",
+            "AdventureHelper 1.5.8",
+            "Anonhelper 1.0.9",
+            "Batteries 1.1.3",
+            "BGswitch 1.2.2",
+            "BounceHelper 1.6.2",
+            "BrokemiaHelper 1.7.2",
+            "CanyonHelper 1.1.4",
+            "CavernHelper 1.3.6",
+            "CherryHelper 1.7.1",
+            "CollabUtils2 1.10.11",
+            "ColoredLights 1.1.2",
+            "CommunalHelper 1.14.5",
+            "ContortHelper 1.5.5",
+            "CrystallineHelper 1.14.0",
+            "DisposableTheo 1.0.6",
+            "DJMapHelper 1.13.2",
+            "EeveeHelper 1.5.3",
+            "EmHelper 1.2.1",
+            "ExtendedVariantMode 0.26.9",
+            "FactoryHelper 1.3.6",
+            "FancyTileEntities 1.6.2",
+            "FemtoHelper 1.9.4",
+            "FlaglinesAndSuch 1.6.2",
+            "FrostHelper 1.40.3",
+            "FurryHelper 1.0.6",
+            "GravityHelper 1.1.36",
+            "HonlyHelper 1.7.4",
+            "IsaGrabBag 1.6.12",
+            "JackalHelper 1.6.8",
+            "JungleHelper 1.1.4",
+            "LuaCutscenes 0.2.7",
+            "LunaticHelper 1.1.1",
+            "MaxHelpingHand 1.24.10",
+            "memorialHelper 1.0.4",
+            "MoreDasheline 1.7.0",
+            "OutbackHelper 1.7.2",
+            "PandorasBox 1.0.46",
+            "SafeRespawnCrumble 1.2.0",
+            "Sardine7 1.1.4",
+            "ShroomHelper 1.2.4",
+            "SorbetHelper 1.1.1",
+            "SpirialisHelper 1.0.8",
+            "TwigHelper 1.5.2",
+            "VivHelper 1.11.1",
+            "VortexHelper 1.2.11",
+            "XaphanHelper 1.0.54",
+            "YetAnotherHelper 1.2.4"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021-v1.0.12.zip",
+          "id": "StrawberryJam2021-v1.0.12.zip",
+          "internal": false,
+          "name": "StrawberryJam2021",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "4e1a2fc12baa3db27da433b93bf26b59f34b3e6b7f760c41d8d127636d020655",
+          "version": "1.0.12"
+        },
+        {
+          "bytes": 91062907,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021Assets-v1.0.1.zip",
+          "id": "StrawberryJam2021Assets-v1.0.1.zip",
+          "internal": false,
+          "name": "StrawberryJam2021Assets",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "26fab85f20fff89d1adcba2ef926c3447d9996057c7dfc78e5d97f9d96ed7e45",
+          "version": "1.0.1"
+        },
+        {
+          "bytes": 318011755,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021AudioA-v1.0.4.zip",
+          "id": "StrawberryJam2021AudioA-v1.0.4.zip",
+          "internal": false,
+          "name": "StrawberryJam2021AudioA",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "81e9cbc39b3a5525c93dfc5b24b675a833a8fb616e8a01cfc0838296f5e37e1d",
+          "version": "1.0.4"
+        },
+        {
+          "bytes": 318382262,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021AudioB-v1.0.0.zip",
+          "id": "StrawberryJam2021AudioB-v1.0.0.zip",
+          "internal": false,
+          "name": "StrawberryJam2021AudioB",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "70b90f45709956a4d18bfbb5941836c534344a1cf0ab859a50430daa3b76ef42",
+          "version": "1.0.0"
+        },
+        {
+          "bytes": 317738998,
+          "dependencies": [
+            "Everest 1.3761.0"
+          ],
+          "enabled": true,
+          "filename": "StrawberryJam2021AudioC-v1.0.1.zip",
+          "id": "StrawberryJam2021AudioC-v1.0.1.zip",
+          "internal": false,
+          "name": "StrawberryJam2021AudioC",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "298e20ba83fd086c6a747c786475f1753e008016bfa18551e49ffb56dd271c79",
+          "version": "1.0.1"
+        },
+        {
+          "bytes": 293,
+          "dependencies": [
+            "Everest 1.1870.0",
+            "JackalHelper 1.7.0"
+          ],
+          "enabled": true,
+          "filename": "TwigHelper-v1.6.0.zip",
+          "id": "TwigHelper-v1.6.0.zip",
+          "internal": false,
+          "name": "TwigHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "cc23c5b5c85769e2fe5dbe047091028c3affa3145fadee47c51ec569e3e721e3",
+          "version": "1.6.0"
+        },
+        {
+          "bytes": 6543567,
+          "dependencies": [
+            "Everest 1.3324.0"
+          ],
+          "enabled": true,
+          "filename": "VivHelper-v1.14.10.zip",
+          "id": "VivHelper-v1.14.10.zip",
+          "internal": false,
+          "name": "VivHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "9a95f51659ccfcb78404f9610307918d6114fc824298fbb8493651ec7c80215a",
+          "version": "1.14.10"
+        },
+        {
+          "bytes": 2195976,
+          "dependencies": [
+            "EverestCore 1.4465.0"
+          ],
+          "enabled": true,
+          "filename": "VortexHelper-v1.2.19.zip",
+          "id": "VortexHelper-v1.2.19.zip",
+          "internal": false,
+          "name": "VortexHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "b6280fe2e3c05d355c32a51049854137c41be72d24ec4aec9d997cc7c4394db2",
+          "version": "1.2.19"
+        },
+        {
+          "bytes": 6957784,
+          "dependencies": [
+            "Everest 1.5184.0"
+          ],
+          "enabled": true,
+          "filename": "XaphanHelper-v1.0.79.zip",
+          "id": "XaphanHelper-v1.0.79.zip",
+          "internal": false,
+          "name": "XaphanHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "ca868d06eb05f0c5de55126090e5019210e9d83c3dae9394cbcd155acf8eb16f",
+          "version": "1.0.79"
+        },
+        {
+          "bytes": 53525,
+          "dependencies": [
+            "Everest 1.3471.0"
+          ],
+          "enabled": true,
+          "filename": "YetAnotherHelper-v1.2.5.zip",
+          "id": "YetAnotherHelper-v1.2.5.zip",
+          "internal": false,
+          "name": "YetAnotherHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "73d64e1b3457e2461d3368a01de9f5f31a58bf24e130f3e35ec7280b24814c2d",
+          "version": "1.2.5"
+        },
+        {
+          "bytes": 13965,
+          "dependencies": [
+            "Everest 1.0.0"
+          ],
+          "enabled": true,
+          "filename": "memorialHelper-v1.0.4.zip",
+          "id": "memorialHelper-v1.0.4.zip",
+          "internal": false,
+          "name": "memorialHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "ea66a574e5e1639c580974828b201633aadbd25b6699529c89fbd86db501fda4",
+          "version": "1.0.4"
+        },
+        {
+          "bytes": 19474,
+          "dependencies": [
+            "Everest 1.2742.0"
+          ],
+          "enabled": false,
+          "filename": "skinmodhelper_7027b.zip",
+          "id": "skinmodhelper_7027b.zip",
+          "internal": false,
+          "name": "SkinModHelper",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "9b5f1a8c33601f7ee641d9f0743b54a42b2ceaff1ab2b0a8fdb742ea954ca34c",
+          "version": "0.6.1"
+        },
+        {
+          "bytes": 1352390,
+          "dependencies": [
+            "Everest 1.3070.0",
+            "SkinModHelper 0.5.5"
+          ],
+          "enabled": false,
+          "filename": "theoskinmodv3.zip",
+          "id": "theoskinmodv3.zip",
+          "internal": false,
+          "name": "TheoSkinMod",
+          "problem": "",
+          "retainedPrevious": false,
+          "sha256": "1be2ad82a2a6596bd297900578eb1968de965d4287128ffd20f240c8c1442396",
+          "version": "2.2"
+        }
+      ],
+      "selected_archive_count": 53,
+      "installed_archive_count": 60,
+      "verified_identities": 56,
+      "save": {
+        "prior": 969,
+        "written": 980,
+        "readback": 980,
+        "bytes": 11
+      },
+      "slot_saves": [
+        "SaveData slot=1; bytes=160862; deaths=186"
+      ],
+      "rooms": [
+        {
+          "area": "1",
+          "sid": "Celeste/1-ForsakenCity",
+          "mode": "Normal",
+          "room": "1"
+        },
+        {
+          "area": "27",
+          "sid": "StrawberryJam2021/1-Beginner/Ceph",
+          "mode": "Normal",
+          "room": "5"
+        }
+      ],
+      "background_seconds": 0,
+      "gameplay_progress": {
+        "title": "True",
+        "levelFrames": "1290",
+        "moves": "554",
+        "jumps": "11",
+        "jumpsAfterResume": "11",
+        "afterResume": "2670",
+        "workers": "0"
+      },
+      "graphics_checks": [
+        "celeste_player_jump_hook_installed",
+        "fna_render_target_extension_active_binding",
+        "fna_render_target_extension_backbuffer",
+        "metal_render_target_clear_and_gpu_readback",
+        "backbuffer_deferred_clear_visible",
+        "backbuffer_full_rgba_orientation_and_rows",
+        "backbuffer_rectangle_offset_and_guards",
+        "backbuffer_byte_stride_rgba_and_guards",
+        "backbuffer_continued_draw_preserves_other_pixels",
+        "backbuffer_reads_backbuffer_while_other_target_bound",
+        "backbuffer_pending_offscreen_clear_survives_read",
+        "jit_xml_settings_write",
+        "jit_xml_settings_readback",
+        "celeste_jump_hook_retained_after_resume_gc",
+        "everest_final_save_queue_completed",
+        "jit_xml_settings_write",
+        "jit_xml_settings_readback",
+        "jit_xml_savedata_write",
+        "jit_xml_savedata_readback"
+      ],
+      "final_runtime": {
+        "code_allocations": 10172,
+        "code_budget_bytes": 536870912,
+        "code_reserved_bytes": 170016768,
+        "jit_done_count": 33758,
+        "jit_failed": 0,
+        "jit_unowned": 0,
+        "managed_errors": 0,
+        "patch_rejections": 0,
+        "patches": 12426
+      },
+      "shutdown_started": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "shutdown_completed": [
+        {
+          "stage": "1",
+          "seconds": "0.175846125"
+        },
+        {
+          "stage": "2",
+          "seconds": "0.06574075"
+        },
+        {
+          "stage": "3",
+          "seconds": "0.051686125"
+        },
+        {
+          "stage": "4",
+          "seconds": "0.209961417"
+        },
+        {
+          "stage": "5",
+          "seconds": "5.613845625"
+        },
+        {
+          "stage": "6",
+          "seconds": "0.367905208"
+        },
+        {
+          "stage": "7",
+          "seconds": "0.056082875"
+        }
+      ],
+      "native_return": true,
+      "post_return_heartbeat": true,
+      "quit_utc": "2026-09-13T09:37:50.660752+00:00",
+      "sampled_peak_footprint_bytes": 3717304144,
+      "allocation_trace": {
+        "bytes": 244128,
+        "encoding": "base64 of packed little-endian uint64 (address, requested_bytes, total_reserved_bytes)",
+        "overflow_records": 0,
+        "records": 10172,
+        "sha256": "ceb54a0ccd0a5e9e3555a0cfb8bdad9c4181a68218e4a5cb6d1549626ac62d5f"
+      },
+      "startup_seconds": {
+        "everest_boot_pass": 21.781,
+        "game_begin_load": 21.807,
+        "game_start_returned": 26.318,
+        "graphics_first_frame_returned": 26.522
+      }
+    }
+  ],
+  "older_history": [
+    {
+      "session": "b1dc0fec-0261-4d5c-8728-8401dce5e547",
+      "build_id": "launcher-resolution-20260913-26",
+      "gameplay": false
+    },
+    {
+      "session": "96799db5-f269-4803-bda7-801df55b78f5",
+      "build_id": "launcher-resolution-20260913-26",
+      "gameplay": true
+    }
+  ],
+  "prior26_counter_readback": 928,
+  "same_room_after_runtime_upgrade": true,
+  "same_room_fresh_process_reload": true,
+  "installation": {
+    "download_bytes": 1463412,
+    "report": {
+      "applicationState": "applied",
+      "changes": [
+        {
+          "action": "updated",
+          "afterVersion": "0.51.0",
+          "beforeVersion": "0.50.5",
+          "enabled": true,
+          "name": "ExtendedVariantMode"
+        },
+        {
+          "action": "updated",
+          "afterVersion": "1.40.10",
+          "beforeVersion": "1.40.9",
+          "enabled": true,
+          "name": "MaxHelpingHand"
+        }
+      ],
+      "commitStarted": true,
+      "downloads": [
+        {
+          "key": "87fe3488faf18b5153e358b95424da6110d6786307ff9efbac764452e1ac8a7d",
+          "name": "ExtendedVariantMode 0.51.0",
+          "status": "installed"
+        },
+        {
+          "key": "da9d0526d6514cabe99b67396ce316ac9596891c7e1cc7dd8921e0a939e031cc",
+          "name": "MaxHelpingHand 1.40.10",
+          "status": "installed"
+        }
+      ],
+      "finished": 810984431.566458,
+      "id": "E9EF816D-9F99-4461-A2FD-DB7A06421E42",
+      "message": "All reviewed mod changes were applied successfully.",
+      "outcome": "completed",
+      "schema": 1,
+      "started": 810984424.77125
+    },
+    "transaction_receipt": {
+      "changeCount": 2,
+      "changes": [
+        {
+          "action": "updated",
+          "afterVersion": "0.51.0",
+          "beforeVersion": "0.50.5",
+          "enabled": true,
+          "name": "ExtendedVariantMode"
+        },
+        {
+          "action": "updated",
+          "afterVersion": "1.40.10",
+          "beforeVersion": "1.40.9",
+          "enabled": true,
+          "name": "MaxHelpingHand"
+        }
+      ],
+      "changesRecorded": true,
+      "created": "2026-09-13T09:27:11Z",
+      "fileCount": 2,
+      "files": [
+        {
+          "bytes": 499117,
+          "cacheKey": "87fe3488faf18b5153e358b95424da6110d6786307ff9efbac764452e1ac8a7d",
+          "filename": "ExtendedVariantMode-468077af4655.zip",
+          "sha256": "468077af4655349ded0821e3dd283d7dc366d9e3a781a15dc67698f8fb3c9fcc"
+        },
+        {
+          "bytes": 964295,
+          "cacheKey": "da9d0526d6514cabe99b67396ce316ac9596891c7e1cc7dd8921e0a939e031cc",
+          "filename": "MaxHelpingHand-d5257cb3da74.zip",
+          "sha256": "d5257cb3da742165c6b051805220d72cd0c52f6b35c5de747513a543c17b4bf1"
+        }
+      ],
+      "id": "C69EA3AB-A616-444F-94B9-9A037F1FA419",
+      "outcome": "Applied verified mod changes. Prior archives retained; disabled update choices preserved.",
+      "phase": "committed",
+      "receiptSHA256": "a80b7bac20f7e8483e463baeec9364ee89ef7b8cc1a3ebaa69119a53b0b72bac",
+      "retainedArchives": [
+        "ExtendedVariantMode-v0.50.5.zip",
+        "MaxHelpingHand-v1.40.9.zip"
+      ],
+      "revision": "01c51bec374abefc3d6be7f6bf1436374e5652b7092255c7133d70e21e5c17fb",
+      "selectionSHA256": "e76c2ac2584b808d77400045e61eedf0622eb8d4e5fd0bde596effc47ab2c653",
+      "sources": [
+        {
+          "bytes": 499117,
+          "hashes": [
+            "f4e65d3b64dc7a27"
+          ],
+          "modules": [
+            {
+              "dependencies": [
+                {
+                  "name": "Everest",
+                  "version": "1.6531.0"
+                }
+              ],
+              "name": "ExtendedVariantMode",
+              "optionalDependencies": [
+                {
+                  "name": "BetterRefillGems",
+                  "version": "1.0.1"
+                },
+                {
+                  "name": "DJMapHelper",
+                  "version": "1.13.2"
+                },
+                {
+                  "name": "IsaGrabBag",
+                  "version": "1.6.12"
+                },
+                {
+                  "name": "JungleHelper",
+                  "version": "1.1.5"
+                }
+              ],
+              "version": "0.51.0"
+            }
+          ],
+          "url": "https://gamebanana.com/mmdl/1811743"
+        },
+        {
+          "bytes": 964295,
+          "hashes": [
+            "1c8b128b198a1089"
+          ],
+          "modules": [
+            {
+              "dependencies": [
+                {
+                  "name": "Everest",
+                  "version": "1.6531.0"
+                }
+              ],
+              "name": "MaxHelpingHand",
+              "optionalDependencies": [
+                {
+                  "name": "BounceHelper",
+                  "version": "1.12.0"
+                },
+                {
+                  "name": "CommunalHelper",
+                  "version": "1.24.0"
+                },
+                {
+                  "name": "EeveeHelper",
+                  "version": "1.12.2"
+                },
+                {
+                  "name": "ExtendedCameraDynamics",
+                  "version": "1.0.3"
+                },
+                {
+                  "name": "ExtendedVariantMode",
+                  "version": "0.47.1"
+                },
+                {
+                  "name": "FlaglinesAndSuch",
+                  "version": "1.6.8"
+                },
+                {
+                  "name": "FrostHelper",
+                  "version": "1.46.0"
+                },
+                {
+                  "name": "LuaCutscenes",
+                  "version": "0.2.8"
+                },
+                {
+                  "name": "LunaticHelper",
+                  "version": "1.1.1"
+                },
+                {
+                  "name": "OutbackHelper",
+                  "version": "1.7.2"
+                }
+              ],
+              "version": "1.40.10"
+            }
+          ],
+          "url": "https://gamebanana.com/mmdl/1810305"
+        }
+      ]
+    },
+    "verified_downloads": [
+      {
+        "active": true,
+        "completedFiles": 1,
+        "message": "ExtendedVariantMode 0.51.0",
+        "phase": "verified",
+        "receivedBytes": 499117,
+        "sourceURL": "https://gamebanana.com/mmdl/1811743",
+        "totalBytes": 1463412,
+        "totalFiles": 2,
+        "verifiedSHA256": "468077af4655349ded0821e3dd283d7dc366d9e3a781a15dc67698f8fb3c9fcc",
+        "verifiedXXHash": "f4e65d3b64dc7a27"
+      },
+      {
+        "active": true,
+        "completedFiles": 2,
+        "message": "MaxHelpingHand 1.40.10",
+        "phase": "verified",
+        "receivedBytes": 1463412,
+        "sourceURL": "https://gamebanana.com/mmdl/1810305",
+        "totalBytes": 1463412,
+        "totalFiles": 2,
+        "verifiedSHA256": "d5257cb3da742165c6b051805220d72cd0c52f6b35c5de747513a543c17b4bf1",
+        "verifiedXXHash": "1c8b128b198a1089"
+      }
+    ],
+    "cached_index": {
+      "cached": "true",
+      "fetched": "2026-09-13T08:50:29Z",
+      "generation": "A37C8BEA-560B-444A-AFCA-88E90CA24430",
+      "graphSHA256": "14f0fa3f635d614dba13ff757cef019eaf6ca5c19bc0e0c643c450415d5d4101",
+      "graphURL": "https://maddie480.ovh/celeste/mod_dependency_graph.yaml",
+      "updatesSHA256": "d9b6bc1132eeb0c4eb8655624f99cbefd5060ae4809464b3f44ba6d58b74e2d6",
+      "updatesURL": "https://maddie480.ovh/celeste/everest_update.yaml"
+    },
+    "previous_archives_disabled_retained": true,
+    "report_survives_both_fresh_process_exports": true
+  },
+  "owner_reports_all_pass": true,
+  "limits": [
+    "Build27 phone routes are SJ Cassette Cliffs and a brief vanilla-room visit, not a new Spring or Paint physical retest. Their new-runtime host gates and earlier phone gates remain separate.",
+    "Second export proves counter969 and room5 reload; final980 has same-process readback but no subsequent-process reload is claimed.",
+    "Current phone update check uses a verified cached index. It does not establish a successful live metadata refresh or all automatic-cache-policy cases.",
+    "58 registration callbacks represent56 unique identities: JackalHelper has three callbacks, matching prior26. Do not count callbacks as independent archive identities.",
+    "No new physical cancelled/failed/interrupted-install coverage; retained older transaction receipts must not be attributed to build27.",
+    "Startup gaps and sampled footprints are observations, not evidence of a leak, cold/warm benchmark or all-map/older-device compatibility.",
+    "LiveContainer/StikDebug version strings are inherited reported fields; the embedded BuildInfo is matched, not an independent phone executable UUID measurement."
+  ],
+  "decision": "Accept build27 as current fallback for its observed physical gates. Next: a focused native catalogue/detail/install increment with cached/offline states and bounded memory, followed by responsive real loading, profile backups and the touch editor.",
+  "accepted_fallback": "launcher-runtime-20260913-27",
+  "previous_fallback": "launcher-resolution-20260913-26",
+  "graphics_sj_fallback": "launcher-backbuffer-20260912-24",
+  "review_script_sha256": "d53ac1eb35811a6802b3d3cdd9f8f455c8d5da28c416bc4dbbe20f989e7dba81"
+}
