@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.16.1",
+  "build_number": "31",
+  "build_id": "launcher-loading-20260915-31",
+  "scope": "Cooperative Everest startup and native loading presentation; physical acceptance pending",
+  "device_jit_tested": false
+}

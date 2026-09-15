@@ -1,0 +1,188 @@
+{
+  "schema": 1,
+  "status": "PASS_LOCAL_STARTUP_PREPARATION_PHONE28_PENDING",
+  "date": "2026-09-15",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.15.1",
+    "build_number": "29",
+    "build_id": "launcher-startup-20260915-29",
+    "scope": "Independent startup preparation: native phase timing and Cabrillo branding; responsive loading is not implemented",
+    "device_jit_tested": false
+  },
+  "build28_phone_evidence": {
+    "status": "NOT_OBSERVED",
+    "checked_utc": "2026-09-14T23:17:24.393213+00:00",
+    "expected_results_folder_exists": true,
+    "result_files": 0,
+    "accepted_fallback": 27
+  },
+  "package": {
+    "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS",
+    "build_id": "launcher-startup-20260915-29",
+    "ipa_sha256": "12b678058ac4f0622ad6e7782012c05053a06495919e43704c0ba40a7801ae08",
+    "bytes": 23802457,
+    "executable_uuid": "59da3ed775c132f8b74d1a4783095d3d",
+    "compiled_source_count": 58,
+    "preserved_managed_assemblies": 201,
+    "unsigned": true,
+    "symbols_outside_ipa": true,
+    "device_tested": false,
+    "responsive_loading_implemented": false
+  },
+  "artifacts": {
+    "artifacts/cabrillo-build29-preparation/build-receipt.json": {
+      "sha256": "1920bca4d431c11feec875cd4152f55497a3eae69fb8355cfc263afc4b9520d7",
+      "bytes": 77211
+    },
+    "artifacts/cabrillo-build29-preparation/native-receipt.json": {
+      "sha256": "c81fc306bff606960d541a0033fd8144329bcc7c4559880bd90abde2bcc7fe1f",
+      "bytes": 45051
+    },
+    "artifacts/cabrillo-build29-preparation/verification.json": {
+      "sha256": "cc3598af38df928ee06f1c5a23b422957caf5b82c66a33b14b28aff4f9bb62ec",
+      "bytes": 451
+    },
+    "artifacts/cabrillo-build29-preparation/build.log": {
+      "sha256": "8e6556b078b4d91d91d965469a9b3d977a702731a30df20d391b76e5c4dfccd7",
+      "bytes": 32288
+    },
+    ".build/build29-package-controls/results.json": {
+      "sha256": "910200bd586831acefc84bc409a765daf8f4e2620fa16be66a0e0133c26a373c",
+      "bytes": 1190
+    },
+    ".private/startup-preparation/retention-result/result.json": {
+      "sha256": "3c3fb0215ca23515606dec0b9c58b82e0a0ed26993eee11a5c8e8c3366dcdafa",
+      "bytes": 1001
+    },
+    ".private/startup-preparation/isolation-controls.json": {
+      "sha256": "2a95e4cf35f7ee5c7dd956d7f21f13141153de4a4930758e8ba1656e8ebf6be3",
+      "bytes": 145
+    },
+    ".private/startup-preparation/build-isolation.sb": {
+      "sha256": "278af9c2d4eef61ae4d7e2b331cc60977e10bbe07fdd9e8cf5a42c3a3488dd62",
+      "bytes": 312
+    },
+    ".private/startup-preparation/frozen-build28-before.json": {
+      "sha256": "0fd1f016dbc9689bead589db6eb5ebaf4a864f7b0f11f4ca95a4ee364ab8dd14",
+      "bytes": 145
+    }
+  },
+  "checks": {
+    "python_output_and_macho_controls": {
+      "status": "PASS",
+      "tests": 6,
+      "command": "python3 -m unittest discover -s tools/tests -v"
+    },
+    "startup_retention": {
+      "status": "PASS",
+      "phase_edges_retained_after_ring_eviction": 8
+    },
+    "package_negative_controls": {
+      "status": "PASS_DEVELOPMENT_PACKAGE_NEGATIVE_CONTROLS",
+      "checks": {
+        "historical_build_info": {
+          "status": "PASS_REJECTED",
+          "reason": "Stale BuildInfo: build_number",
+          "mutated_ipa_sha256": "738ee7c67ab69c989b3e998abe0f5e29c252da5580be9a951af94d1d93bb2fa3"
+        },
+        "changed_managed_assembly": {
+          "status": "PASS_REJECTED",
+          "reason": "Accepted managed payload changed",
+          "mutated_ipa_sha256": "40f67f4dd584ed7ab8ae6aedc028f6bfe1da754f33888a01c1e59839278ce9ac"
+        },
+        "changed_compiled_protocol": {
+          "status": "PASS_REJECTED",
+          "reason": "Compiled protocol differs from BuildInfo",
+          "mutated_ipa_sha256": "770cc507b698861d40be9b804f855a01eb948ed29d964232aa1c4e6f00b4b8e9"
+        },
+        "mismatched_symbols": {
+          "status": "PASS_REJECTED",
+          "reason": "dSYM does not match the executable",
+          "mutated_ipa_sha256": "eb7917bf670f35a46b235f0ab5bcb5e95bce3642099194828386e5efbcb088b1"
+        }
+      },
+      "original_ipa_sha256": "12b678058ac4f0622ad6e7782012c05053a06495919e43704c0ba40a7801ae08",
+      "source_sha256": {
+        "tools/check_development_package.py": "856b4fb4cf5d56556b1e04409187aeec1794a4aebe922e2a90a8afec2d3d177a"
+      }
+    },
+    "native_compilation_and_package": {
+      "status": "PASS",
+      "source_inputs": 58
+    },
+    "legacy_read_write_denial": {
+      "Celeste-Everest-JIT-Apple-Platforms": "DENIED",
+      "celeste-ios": "DENIED",
+      "Celeste Required Files": "DENIED",
+      "Cabrillo": "READABLE"
+    },
+    "build28_frozen_source_and_ipa": {
+      "status": "PASS_FROZEN_BUILD28_SOURCE",
+      "files": 228,
+      "ipa_sha256": "87db3cf1936fc3a0253cbddbe6cb40466f024a1bbe98dcda93d7efd5c2bbcea2"
+    },
+    "catalogue_transaction_regression": {
+      "status": "UNCHANGED_SOURCE_PRIOR_EVIDENCE_RETAINED",
+      "note": "Installer/provider/model sources and policy resources match build28; no repeated live-service or 48-check catalogue run."
+    },
+    "phone28_acceptance": "NOT_OBSERVED",
+    "build29_phone_execution": "NOT_OBSERVED",
+    "build29_simulator_ui": "NOT_OBSERVED",
+    "managed_gameplay": "NOT_OBSERVED",
+    "responsive_loading": "NOT_IMPLEMENTED"
+  },
+  "reviewed_everest": {
+    "upstream_commit": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+    "tree": "Existing build27 embedded source patches; read-only reference copy, not pristine upstream or a new build dependency.",
+    "files": [
+      {
+        "path": "Celeste.Mod.mm/Patches/Celeste.cs",
+        "bytes": 21844,
+        "sha256": "88b08e7725fcf27982b863daa7566cedb7fdeeddca327043fb5a3d0a87f7b616"
+      },
+      {
+        "path": "Celeste.Mod.mm/Mod/Everest/Everest.cs",
+        "bytes": 41877,
+        "sha256": "8568bdac3ee4591cacb61ac401299d0e1786a8ae142735f4d36beea030b200cc"
+      },
+      {
+        "path": "Celeste.Mod.mm/Mod/Everest/Everest.Loader.cs",
+        "bytes": 54284,
+        "sha256": "6c197289462ecf9694baf09caf3ac18e2c3c74eecd90349f8fcbc93a12eeff60"
+      },
+      {
+        "path": "Celeste.Mod.mm/Mod/Everest/EverestSplashHandler.cs",
+        "bytes": 10101,
+        "sha256": "840cdb5662a2d9c84cab697ee0187c31004cbf6bb8dbf3265a3a84cb68e23eee"
+      },
+      {
+        "path": "Celeste.Mod.mm/Patches/GameLoader.cs",
+        "bytes": 9972,
+        "sha256": "5dfec7d2b7962c6f5b2a518dd073f0e017d95bde28af707463e087a36e2cead3"
+      }
+    ]
+  },
+  "preserved_protocol": {
+    "version": 1,
+    "arenas": 2,
+    "bytes_per_arena": 268435456,
+    "mailbox_bytes": 96,
+    "response_offset": 48,
+    "error_offset": 88,
+    "reflection_flags_abi": 1
+  },
+  "release": {
+    "icloud_kit_created": false,
+    "phone_download_or_execution_confirmed": false,
+    "commit_or_push": false,
+    "public_ipa_distribution_permitted": false
+  },
+  "remaining": [
+    "Review actual build28 phone exports when supplied.",
+    "Restore pinned managed SDK/upstream/tool inputs into new Cabrillo stages.",
+    "Instrument managed boundaries and prototype resumable startup in a new identity.",
+    "Prove UI responsiveness, thread affinity and gameplay/save/Quit before claiming the loading feature."
+  ]
+}

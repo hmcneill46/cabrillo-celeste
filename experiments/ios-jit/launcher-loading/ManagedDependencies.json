@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "manifest": ".private/loading-inputs/manifest.json",
+  "manifest_sha256": "6c1c1fac32edc52a05fe5759e82a28e11eee899eb505d4f6a11c000a267bebd2",
+  "sdk8": "8.0.422",
+  "sdk9": "9.0.300",
+  "everest_source": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+  "scope": "Managed source build and isolated host validation; unchanged native inputs use Dependencies.json"
+}

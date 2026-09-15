@@ -1,5 +1,9 @@
 # Cabrillo development
 
+Start a fresh development chat with [HANDOFF.md](HANDOFF.md). It records the
+accepted build32 fallback, next profile-backup work, evidence review and independent build
+constraints and the next roadmap work. Recheck its dated state before acting.
+
 ## Scope and ownership
 
 - Cabrillo is the independent Celeste/Everest JIT launcher for Apple platforms.
@@ -14,6 +18,9 @@
 - The owner explicitly authorized the initial commit/push and chose a public
   repository on14 September2026. That first-publication authorization is recorded;
   it does not grant blanket approval for unrelated future GitHub writes.
+- On15 September the owner separately authorized committing/pushing the completed
+  loading work through build32 and its phone acceptance, then continuing local
+  development on the next feature. Verify publication state in HANDOFF.md.
 - Both `/Users/harrymcneill/Projects/celeste-ios` and the legacy
   `/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms` are read-only.
   Never build into, clean, reset or otherwise change those checkouts/caches.
@@ -25,14 +32,37 @@
 
 ## Current state
 
-- Accepted physical fallback: build27, Everest1.6531.0. Build28's native browser
-  passes local tests; phone28 acceptance is still pending. Do not convert a host
-  build or a migration hash comparison into a physical-device PASS.
+- Accepted physical fallback: build32, Everest1.6531.0; preserve28/27/31 too.
+  The15 September review of one export plus retained history closes the native
+  browser/install/gameplay/Quit gate. See `docs/ios-jit/BUILD_28_CATALOGUE_ACCEPTANCE.md`.
+  Do not convert a host build or migration hash comparison into a device PASS.
+- Build31 phone review passes two complete backend/gameplay/save/Quit runs and
+  confirms the owner's loading UI concerns: long main-thread pauses and17.7s of
+  hidden game frames before the title menu. See `docs/ios-jit/BUILD_31_LOADING_REVIEW.md`.
+- Build32 (`launcher-first-frame`,0.16.2) refines the native display and reveals
+  after first draw/post-Present readback in a successful foreground Frame callback.
+  It reuses build31's exact phone-tested managed payload. The verified kit is
+  uploaded to iCloud. Check its report/ledger
+  and Results before requesting testing: `docs/ios-jit/FIRST_FRAME_BUILD_32.md`.
+  Build32 is now physically accepted; see `docs/ios-jit/BUILD_32_ACCEPTANCE.md`.
+  Retain all original artifacts and Results folders.
+- Build29 is local preparation;30/31 sources and artifacts are frozen. Build32 has
+  its own native identity and pins the same managed dependency in `ManagedPayload.json`.
+  New implementation changes after packaging require another identity (next unused33;
+  recheck before allocating). No historical UUID restoration for changed builds.
+- Individual mod/game callbacks can still pause updates; the final pass yields
+  between modules without holding its list monitor. Preserve its reentrancy guard,
+  optional-cycle decisions, exact load order, game-thread ownership and window
+  focus. Do not claim full phone responsiveness from host/simulator checks.
 - Original delivered sources/artifacts remain immutable. Reproduction uses exact
   source/resource hashes and historical packaging metadata. New implementation
   changes require a new version/build identity and fresh evidence.
 - The standalone build entry point is `tools/build.py`. Historical experiment
   builders are retained for their runtime patches and investigation context.
+- `tools/build_development.py` builds the separate native preparation lane with
+  fresh metadata/UUIDs against the pinned capsule. Current presentation uses
+  `tools/build_first_frame.py` with `tools/verify_first_frame.py`; the builder
+  requires the exact validated managed receipt, with a separate new native UUID.
 - UUID restoration is allowed only for build28 reproduction after matching every
   other byte against the locked executable hash. Never use it to conceal changed
   instructions, data, load commands or resources. Record the actual build time
@@ -66,7 +96,7 @@
 
 ## Roadmap and release boundary
 
-- After phone28: responsive real startup progress, whole-profile save/settings
+- Next: whole-profile save/settings
   backup with staged restore/rollback, then full-parity SwiftUI touch editing.
   Do not queue fake progress behind blocking main-thread startup or move graphics
   initialization to an arbitrary worker.

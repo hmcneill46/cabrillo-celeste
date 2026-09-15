@@ -1,5 +1,36 @@
 # Native Celeste launcher: product design after build22
 
+**15 September build32 acceptance:** [the phone export confirms callback1 handoff](BUILD_32_ACCEPTANCE.md),
+approximately1.3ms after its first-return marker, plus SJ saved-room gameplay,
+normal Quit and delayed native heartbeat. The owner requested the next feature.
+Proceed with whole-profile saves/settings backup and staged restore/rollback,
+then the full touch editor. Build32 is the accepted fallback.
+
+**15 September loading review:** [both build31 phone runs pass backend/gameplay](BUILD_31_LOADING_REVIEW.md).
+The owner reports choppy loading controls and audio before game reveal. Logs
+confirm long main-thread callbacks and17.7 seconds of game frames hidden behind
+the title-menu gate. [Build32](FIRST_FRAME_BUILD_32.md) keeps useful loading details
+visible without disclosure/scroll controls and reveals after first draw/readback.
+Its managed loader/runtime is unchanged. The focused physical presentation gate
+comes before whole-profile backup/restore, then the full touch editor. Build28
+remains fallback; all31 sources, artifacts and Results are preserved.
+
+**15 September phone acceptance update:** [build28 is accepted](BUILD_28_CATALOGUE_ACCEPTANCE.md).
+The owner's visual PASS and one export containing four build28 processes close
+the browser gate: reviewed Memorial reuse/enabling, fresh Cateline installation,
+multi-file dismissal, offline use, zero-active catalogue quiescence, real JIT and
+gameplay, saves, normal Quit and native heartbeat. No repeat export is required.
+Build28 is the current fallback; preserve27 and all Results. Independent
+preparation has produced local [build29](STARTUP_PREPARATION_BUILD_29.md): a fresh native
+build recipe, Cabrillo branding and passive startup phase timings/retention.
+The current d72e94f startup/loader call sites and splash-count limitations are
+documented there. Build29 remains local. [Build31](RESPONSIVE_LOADING_BUILD_31.md)
+now implements cooperative boot/archive/delayed-module steps and the native
+loading screen. Local checks/package verification pass; its test kit is in the
+versioned iCloud folder. Phone acceptance remains open.
+Complete loading acceptance before the backup/restore and touch editor sequence.
+Preserve28/29; build31 has its own identity and managed input capsule.
+
 **14 September repository update:** ongoing JIT work now lives in the independent
 **Cabrillo — Celeste Mod Loader for Apple Platforms** repository. The fully AOT
 sibling is Morro. See [the migration report](../CABRILLO_MIGRATION.md) and
@@ -9,14 +40,14 @@ loading → whole-profile backup/restore → touch editor order below. iPadOS is
 next intended device family, with [separate platform gates](../APPLE_PLATFORMS.md).
 Apply the new in-app branding in a new version, preserving installed data paths.
 
-12 September 2026, updated 13 September. Current status: **build27 is physically
+Historical status at13 September2026: **build27 is physically
 accepted for actual Everest1.6531.0, both newly eligible helper updates and reports,
 SJ gameplay, resume, complete Quit and fresh-process saved-room reload.**
 Build28 implements a focused native mod catalogue built on the accepted installer;
 its final handoff and phone gate are tracked in [the browser record](NATIVE_CATALOGUE_BUILD_28.md).
 Responsive loading, whole-profile saves/settings and the touch editor follow.
-The current order below supersedes earlier dated pending states and priorities.
-No commits, pushes, public uploads or AOT-checkout edits were made.
+The15 September update above supersedes the historical pending states below.
+The following implementation history predates repository publication.
 
 ## 13 September build28 implementation
 

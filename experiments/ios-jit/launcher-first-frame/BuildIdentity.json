@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.16.2",
+  "build_number": "32",
+  "build_id": "launcher-first-frame-20260915-32",
+  "scope": "Passive startup details and first-rendered-frame game presentation; physical acceptance pending",
+  "device_jit_tested": false
+}

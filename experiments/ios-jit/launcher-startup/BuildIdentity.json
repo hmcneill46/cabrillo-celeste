@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.15.1",
+  "build_number": "29",
+  "build_id": "launcher-startup-20260915-29",
+  "scope": "Independent startup preparation: native phase timing and Cabrillo branding; responsive loading is not implemented",
+  "device_jit_tested": false
+}

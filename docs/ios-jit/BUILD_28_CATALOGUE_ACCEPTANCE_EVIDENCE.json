@@ -1,0 +1,1812 @@
+{
+  "schema": 1,
+  "review_date": "2026-09-15",
+  "decision": "ACCEPTED",
+  "scope": "Build28 native catalogue and post-browser JIT/gameplay/normal Quit on the owner iPhone15ProMax/iOS26.5; owner visual PASS plus retained diagnostics",
+  "owner_report": "All tests visually passed; one export after all tests.",
+  "collection": {
+    "filename": "CelesteJIT-b0ee56b8-f872-4afa-b5ca-50dd15978475.diagnostics.json",
+    "source_relative_to_icloud_drive": "Celeste JIT Tests/0.15.0-build-28/Results",
+    "bytes": 5370692,
+    "sha256": "a07d20eff0f1a9236f7cf42ae6a876b5856e2bd2ce02e20c449271f7945931e9",
+    "collected_utc": "2026-09-15T07:56:36.947129+00:00",
+    "original_and_private_copy_identical": true,
+    "stable_repeated_full_read": true,
+    "json_parse": "PASS",
+    "private_receipt": ".private/device-evidence/2026-09-15/build28-review-075636/collection.json"
+  },
+  "identity": {
+    "version": "0.15.0",
+    "build_number": "28",
+    "build_id": "launcher-catalogue-20260913-28",
+    "everest_version": "1.6531.0-cjit-d72e94f",
+    "everest_source_commit": "d72e94f4b9e62b91cbdea674587ed39d53de9550",
+    "runtime_identity_sha256": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62",
+    "managed_adapter_sha256": "65b8dca51055627ad8a7da5fb59add7166cf9a39e435b7ac211d9c2df7a4f378",
+    "locked_ipa_sha256": "87db3cf1936fc3a0253cbddbe6cb40466f024a1bbe98dcda93d7efd5c2bbcea2",
+    "locked_ipa_bytes": 23812187,
+    "phone_executable_uuid_measured": false,
+    "compiled_protocol": {
+      "arena_count": 2,
+      "bytes_per_arena": 268435456,
+      "error_offset": 88,
+      "mailbox_bytes": 96,
+      "protocol": 1,
+      "response_offset": 48
+    },
+    "runtime_identity_event_note": "CJGraphicsMark maps runtime_identity_pass to graphics_fixture_message; exact executed version/source/manifest message is retained in every played process."
+  },
+  "deduplication": {
+    "matching_duplicates": 8,
+    "conflicts": 0,
+    "synthetic_records_preserved": 120
+  },
+  "sessions": [
+    {
+      "session": "b0ee56b8-f872-4afa-b5ca-50dd15978475",
+      "pid": 7575,
+      "start_utc": "2026-09-15T07:42:11.790287+00:00",
+      "last_retained_utc": "2026-09-15T07:53:52.824014+00:00",
+      "build_id": "launcher-catalogue-20260913-28",
+      "full_build_info_matches_locked_package": true,
+      "device": "iPhone16,2 / iOS26.5 (23F77)",
+      "scope": "gameplay and complete native return",
+      "native_gate": "PASS",
+      "startup_and_gameplay": "PASS",
+      "normal_quit_native_return": "PASS",
+      "retained_events_with_supplements": 602,
+      "evidence_sequences": {
+        "catalogue_quiesced": [
+          140
+        ],
+        "graphics_test_start": [
+          141
+        ],
+        "graphics_start_result": [
+          79395
+        ],
+        "graphics_first_frame_returned": [
+          80500
+        ],
+        "everest_boot_pass": [
+          70236
+        ],
+        "everest_selection_pass": [
+          70788
+        ],
+        "mono_reflection_flags_registered": [
+          323
+        ],
+        "everest_ios_support_registered": [
+          15650
+        ],
+        "graphics_fixture_message": [
+          70789
+        ],
+        "game_room": [
+          92080,
+          96397,
+          96561,
+          96979,
+          97291
+        ],
+        "game_save_pass": [
+          79393,
+          99298,
+          99301
+        ],
+        "everest_mod_save_pass": [
+          99313
+        ],
+        "game_profile_save_verified": [
+          99314
+        ],
+        "game_quit_requested": [
+          99256
+        ],
+        "graphics_normal_quit_accepted": [
+          99258
+        ],
+        "game_shutdown_stage_started": [
+          99273,
+          99291,
+          99316,
+          99340,
+          99350,
+          110056,
+          110118,
+          110125
+        ],
+        "game_shutdown_stage_completed": [
+          99290,
+          99315,
+          99339,
+          99349,
+          110055,
+          110117,
+          110124
+        ],
+        "graphics_main_thread_detached": [
+          110127
+        ],
+        "graphics_bridge_pass": [
+          110128
+        ],
+        "graphics_result_presented": [
+          110129
+        ],
+        "graphics_post_run_alive": [
+          110130
+        ],
+        "mono_log": [
+          44132,
+          44133,
+          44136,
+          44137,
+          59153,
+          59154,
+          59157,
+          59158
+        ],
+        "mono_type_discovery_recovered": [
+          44148,
+          59159
+        ]
+      },
+      "native_checks": [
+        {
+          "sequence": 96,
+          "check": "debugger_detached_before_execution",
+          "result": "PASS"
+        },
+        {
+          "sequence": 97,
+          "check": "mailbox_response_valid",
+          "result": "PASS"
+        },
+        {
+          "sequence": 98,
+          "check": "prepared_region_is_rx",
+          "result": "PASS"
+        },
+        {
+          "sequence": 100,
+          "check": "create_distinct_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 101,
+          "check": "protect_writable_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 102,
+          "check": "wx_separate_aliases",
+          "result": "PASS"
+        },
+        {
+          "sequence": 103,
+          "check": "mapping_still_valid",
+          "result": "PASS"
+        },
+        {
+          "sequence": 104,
+          "check": "prepared_region_is_rx",
+          "result": "PASS"
+        },
+        {
+          "sequence": 106,
+          "check": "create_distinct_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 107,
+          "check": "protect_writable_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 108,
+          "check": "wx_separate_aliases",
+          "result": "PASS"
+        },
+        {
+          "sequence": 109,
+          "check": "mapping_still_valid",
+          "result": "PASS"
+        },
+        {
+          "sequence": 110,
+          "check": "aliases_share_bytes",
+          "result": "PASS"
+        },
+        {
+          "sequence": 112,
+          "check": "execute_generated_constant",
+          "result": "PASS"
+        },
+        {
+          "sequence": 114,
+          "check": "patched_instruction_cache_visible",
+          "result": "PASS"
+        },
+        {
+          "sequence": 116,
+          "check": "all_prepared_pages_executed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 118,
+          "check": "arena_end_executable",
+          "result": "PASS"
+        },
+        {
+          "sequence": 119,
+          "check": "aliases_share_bytes",
+          "result": "PASS"
+        },
+        {
+          "sequence": 121,
+          "check": "execute_generated_constant",
+          "result": "PASS"
+        },
+        {
+          "sequence": 123,
+          "check": "patched_instruction_cache_visible",
+          "result": "PASS"
+        },
+        {
+          "sequence": 125,
+          "check": "all_prepared_pages_executed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 127,
+          "check": "arena_end_executable",
+          "result": "PASS"
+        },
+        {
+          "sequence": 129,
+          "check": "integer_argument_and_return",
+          "result": "PASS"
+        },
+        {
+          "sequence": 131,
+          "check": "cross_arena_generated_branch",
+          "result": "PASS"
+        },
+        {
+          "sequence": 133,
+          "check": "execute_on_another_thread",
+          "result": "PASS"
+        },
+        {
+          "sequence": 135,
+          "check": "rewrite_stress",
+          "result": "PASS"
+        }
+      ],
+      "graphics_checks": [
+        {
+          "sequence": 10494,
+          "check": "celeste_player_jump_hook_installed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75461,
+          "check": "fna_render_target_extension_active_binding",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75483,
+          "check": "fna_render_target_extension_backbuffer",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75503,
+          "check": "metal_render_target_clear_and_gpu_readback",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75580,
+          "check": "backbuffer_deferred_clear_visible",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75745,
+          "check": "backbuffer_full_rgba_orientation_and_rows",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75792,
+          "check": "backbuffer_rectangle_offset_and_guards",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75843,
+          "check": "backbuffer_byte_stride_rgba_and_guards",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75848,
+          "check": "backbuffer_continued_draw_preserves_other_pixels",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75859,
+          "check": "backbuffer_reads_backbuffer_while_other_target_bound",
+          "result": "PASS"
+        },
+        {
+          "sequence": 75862,
+          "check": "backbuffer_pending_offscreen_clear_survives_read",
+          "result": "PASS"
+        },
+        {
+          "sequence": 79389,
+          "check": "jit_xml_settings_write",
+          "result": "PASS"
+        },
+        {
+          "sequence": 79392,
+          "check": "jit_xml_settings_readback",
+          "result": "PASS"
+        },
+        {
+          "sequence": 79454,
+          "check": "celeste_jump_hook_retained_after_resume_gc",
+          "result": "PASS"
+        },
+        {
+          "sequence": 99289,
+          "check": "everest_final_save_queue_completed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 99296,
+          "check": "jit_xml_settings_write",
+          "result": "PASS"
+        },
+        {
+          "sequence": 99297,
+          "check": "jit_xml_settings_readback",
+          "result": "PASS"
+        },
+        {
+          "sequence": 99299,
+          "check": "jit_xml_savedata_write",
+          "result": "PASS"
+        },
+        {
+          "sequence": 99300,
+          "check": "jit_xml_savedata_readback",
+          "result": "PASS"
+        }
+      ],
+      "registered_module_callback_counts": {
+        "Everest 1.6531.0": 1,
+        "Celeste 1.4.0.0": 1,
+        "CelesteIOS 1.0.0": 1,
+        "AdventureHelper 1.6.0": 1,
+        "Anonhelper 1.1.1": 1,
+        "Batteries 1.1.4": 1,
+        "BounceHelper 1.14.1": 1,
+        "CJITCodeCanary 1.0.0": 1,
+        "CJITLauncherExample 1.0.0": 1,
+        "CanyonHelper 1.1.6": 1,
+        "Cateline 0.1.0": 1,
+        "CavernHelper 1.3.7": 1,
+        "CherryHelper 1.8.2": 1,
+        "CollabUtils2 1.13.4": 1,
+        "ColoredLights 1.2.0": 1,
+        "CommunalHelper 1.25.5": 1,
+        "ContortHelper 1.5.5": 1,
+        "DJMapHelper 1.13.4": 1,
+        "DisposableTheo 1.0.6": 1,
+        "FactoryHelper 1.4.1": 1,
+        "FancyTileEntities 1.6.2": 1,
+        "FlaglinesAndSuch 1.6.80": 1,
+        "FurryHelper 1.0.6": 1,
+        "HonlyHelper 1.7.5": 1,
+        "JungleHelper 1.4.10": 1,
+        "LuaCutscenes 0.2.13": 1,
+        "LunaticHelper 1.1.1": 1,
+        "MoreDasheline 1.7.1": 1,
+        "OutbackHelper 1.7.3": 1,
+        "PandorasBox 1.0.49": 1,
+        "EmHelper 1.3.0": 1,
+        "SafeRespawnCrumble 1.2.1": 1,
+        "Sardine7 1.2.0": 1,
+        "ShroomHelper 1.2.10": 1,
+        "SorbetHelper 1.9.2": 1,
+        "StrawberryJam2021Assets 1.0.1": 1,
+        "StrawberryJam2021AudioA 1.0.4": 1,
+        "StrawberryJam2021AudioB 1.0.0": 1,
+        "StrawberryJam2021AudioC 1.0.1": 1,
+        "VanillaContestAudio 1.0.0": 1,
+        "XaphanHelper 1.0.79": 1,
+        "YetAnotherHelper 1.2.5": 1,
+        "memorialHelper 1.0.4": 1,
+        "SkinModHelper 0.6.1": 1,
+        "TheoSkinMod 2.2": 1,
+        "BGswitch 1.2.2": 1,
+        "BrokemiaHelper 1.8.5": 1,
+        "IsaGrabBag 1.7.3": 1,
+        "ExtendedVariantMode 0.51.0": 1,
+        "FrostHelper 1.80.2": 1,
+        "JackalHelper 1.7.7.1": 3,
+        "TwigHelper 1.6.0": 1,
+        "CrystallineHelper 1.17.2": 1,
+        "EeveeHelper 1.12.6": 1,
+        "FemtoHelper 1.15.22": 1,
+        "GravityHelper 1.2.28": 1,
+        "MaxHelpingHand 1.40.10": 1,
+        "SpirialisHelper 1.0.8": 1,
+        "StyleMaskHelper 1.5.0": 1,
+        "VanillaContest2023 1.0.6": 1,
+        "VivHelper 1.14.10": 1,
+        "VortexHelper 1.2.19": 1,
+        "StrawberryJam2021 1.0.12": 1
+      },
+      "verified_modules": [
+        "Celeste 1.4.0.0; instances=1",
+        "CelesteIOS 1.0.0; instances=1",
+        "Everest 1.6531.0; instances=1",
+        "AdventureHelper 1.6.0; instances=1",
+        "Anonhelper 1.1.1; instances=1",
+        "BGswitch 1.2.2; instances=1",
+        "Batteries 1.1.4; instances=1",
+        "BounceHelper 1.14.1; instances=1",
+        "BrokemiaHelper 1.8.5; instances=1",
+        "CJITCodeCanary 1.0.0; instances=1",
+        "CJITLauncherExample 1.0.0; instances=1",
+        "CanyonHelper 1.1.6; instances=1",
+        "Cateline 0.1.0; instances=1",
+        "CavernHelper 1.3.7; instances=1",
+        "CherryHelper 1.8.2; instances=1",
+        "CollabUtils2 1.13.4; instances=1",
+        "ColoredLights 1.2.0; instances=1",
+        "CommunalHelper 1.25.5; instances=1",
+        "ContortHelper 1.5.5; instances=1",
+        "CrystallineHelper 1.17.2; instances=1",
+        "DJMapHelper 1.13.4; instances=1",
+        "DisposableTheo 1.0.6; instances=1",
+        "EeveeHelper 1.12.6; instances=1",
+        "EmHelper 1.3.0; instances=1",
+        "ExtendedVariantMode 0.51.0; instances=1",
+        "FactoryHelper 1.4.1; instances=1",
+        "FancyTileEntities 1.6.2; instances=1",
+        "FemtoHelper 1.15.22; instances=1",
+        "FlaglinesAndSuch 1.6.80; instances=1",
+        "FrostHelper 1.80.2; instances=1",
+        "FurryHelper 1.0.6; instances=1",
+        "GravityHelper 1.2.28; instances=1",
+        "HonlyHelper 1.7.5; instances=1",
+        "IsaGrabBag 1.7.3; instances=1",
+        "JackalHelper 1.7.7.1; instances=3",
+        "JungleHelper 1.4.10; instances=1",
+        "LuaCutscenes 0.2.13; instances=1",
+        "LunaticHelper 1.1.1; instances=1",
+        "MaxHelpingHand 1.40.10; instances=1",
+        "MoreDasheline 1.7.1; instances=1",
+        "OutbackHelper 1.7.3; instances=1",
+        "PandorasBox 1.0.49; instances=1",
+        "SafeRespawnCrumble 1.2.1; instances=1",
+        "Sardine7 1.2.0; instances=1",
+        "ShroomHelper 1.2.10; instances=1",
+        "SorbetHelper 1.9.2; instances=1",
+        "SpirialisHelper 1.0.8; instances=1",
+        "StrawberryJam2021 1.0.12; instances=1",
+        "StrawberryJam2021Assets 1.0.1; instances=1",
+        "StrawberryJam2021AudioA 1.0.4; instances=1",
+        "StrawberryJam2021AudioB 1.0.0; instances=1",
+        "StrawberryJam2021AudioC 1.0.1; instances=1",
+        "StyleMaskHelper 1.5.0; instances=1",
+        "TwigHelper 1.6.0; instances=1",
+        "VanillaContest2023 1.0.6; instances=1",
+        "VanillaContestAudio 1.0.0; instances=1",
+        "VivHelper 1.14.10; instances=1",
+        "VortexHelper 1.2.19; instances=1",
+        "XaphanHelper 1.0.79; instances=1",
+        "YetAnotherHelper 1.2.5; instances=1",
+        "memorialHelper 1.0.4; instances=1",
+        "SkinModHelper 0.6.1; instances=1",
+        "TheoSkinMod 2.2; instances=1"
+      ],
+      "sampled_counter_ranges": {
+        "code_budget_bytes": {
+          "samples": 54,
+          "min": 536870912,
+          "max": 536870912
+        },
+        "code_allocations": {
+          "samples": 50,
+          "min": 155,
+          "max": 9870
+        },
+        "code_reserved_bytes": {
+          "samples": 50,
+          "min": 2637824,
+          "max": 165249024
+        },
+        "jit_failed": {
+          "samples": 50,
+          "min": 0,
+          "max": 0
+        },
+        "jit_unowned": {
+          "samples": 50,
+          "min": 0,
+          "max": 0
+        },
+        "managed_errors": {
+          "samples": 50,
+          "min": 0,
+          "max": 0
+        },
+        "patch_rejections": {
+          "samples": 50,
+          "min": 0,
+          "max": 0
+        },
+        "failed_checks": {
+          "samples": 45,
+          "min": 0,
+          "max": 0
+        },
+        "physical_footprint_bytes": {
+          "samples": 45,
+          "min": 1750076040,
+          "max": 4010528904
+        },
+        "resident_memory_bytes": {
+          "samples": 45,
+          "min": 1832026112,
+          "max": 3187179520
+        }
+      },
+      "maps": [
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6z",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6a",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6b"
+      ],
+      "saves": [
+        "settings; bytes=4883",
+        "settings; bytes=4883",
+        "SaveData slot=0; bytes=232534; deaths=43",
+        "prior=194; written=209; readback=209; bytes=11"
+      ],
+      "runtime_identity_messages": [
+        "version=1.6531.0-cjit-d72e94f; source=d72e94f4b9e62b91cbdea674587ed39d53de9550; manifest=67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62"
+      ],
+      "explicit_failure_event_count": 0,
+      "completed_run": {
+        "background_seconds": 0,
+        "frame_callbacks": 6851,
+        "gameplay_checks_completed": true,
+        "managed_result": 1,
+        "maximum_frame_gap_seconds": 0.7080368750030175,
+        "reason": "game_quit",
+        "runtime": {
+          "code_allocations": 9870,
+          "code_budget_bytes": 536870912,
+          "code_reserved_bytes": 165249024,
+          "jit_done_count": 34857,
+          "jit_failed": 0,
+          "jit_unowned": 0,
+          "managed_errors": 0,
+          "patch_rejections": 0,
+          "patches": 12605
+        },
+        "shutdown_stage": 8,
+        "stopped": true,
+        "detached": true
+      },
+      "native_heartbeat_after_result_seconds": 5.244587208333542
+    },
+    {
+      "session": "26871f24-d496-408e-bd5e-cffcc2e10034",
+      "pid": 1651,
+      "start_utc": "2026-09-14T19:41:30.057113+00:00",
+      "last_retained_utc": "2026-09-14T20:45:21.594478+00:00",
+      "build_id": "launcher-catalogue-20260913-28",
+      "full_build_info_matches_locked_package": true,
+      "device": "iPhone16,2 / iOS26.5 (23F77)",
+      "scope": "gameplay; termination not observed",
+      "native_gate": "PASS",
+      "startup_and_gameplay": "PASS",
+      "normal_quit_native_return": "NOT OBSERVED",
+      "retained_events_with_supplements": 2033,
+      "evidence_sequences": {
+        "catalogue_quiesced": [
+          76
+        ],
+        "graphics_test_start": [
+          77
+        ],
+        "graphics_start_result": [
+          22480
+        ],
+        "graphics_first_frame_returned": [
+          23572
+        ],
+        "everest_boot_pass": [
+          18172
+        ],
+        "everest_selection_pass": [
+          18606
+        ],
+        "mono_reflection_flags_registered": [
+          259
+        ],
+        "everest_ios_support_registered": [
+          15586
+        ],
+        "graphics_fixture_message": [
+          18607
+        ],
+        "game_room": [
+          29077,
+          29929,
+          30139,
+          30254,
+          30499,
+          30595,
+          30678,
+          30696,
+          30869,
+          31299,
+          31318,
+          31360,
+          31414,
+          31643,
+          31671,
+          31692,
+          31699
+        ],
+        "game_save_pass": [
+          22478
+        ]
+      },
+      "native_checks": [
+        {
+          "sequence": 32,
+          "check": "debugger_detached_before_execution",
+          "result": "PASS"
+        },
+        {
+          "sequence": 33,
+          "check": "mailbox_response_valid",
+          "result": "PASS"
+        },
+        {
+          "sequence": 34,
+          "check": "prepared_region_is_rx",
+          "result": "PASS"
+        },
+        {
+          "sequence": 36,
+          "check": "create_distinct_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 37,
+          "check": "protect_writable_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 38,
+          "check": "wx_separate_aliases",
+          "result": "PASS"
+        },
+        {
+          "sequence": 39,
+          "check": "mapping_still_valid",
+          "result": "PASS"
+        },
+        {
+          "sequence": 40,
+          "check": "prepared_region_is_rx",
+          "result": "PASS"
+        },
+        {
+          "sequence": 42,
+          "check": "create_distinct_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 43,
+          "check": "protect_writable_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 44,
+          "check": "wx_separate_aliases",
+          "result": "PASS"
+        },
+        {
+          "sequence": 45,
+          "check": "mapping_still_valid",
+          "result": "PASS"
+        },
+        {
+          "sequence": 46,
+          "check": "aliases_share_bytes",
+          "result": "PASS"
+        },
+        {
+          "sequence": 48,
+          "check": "execute_generated_constant",
+          "result": "PASS"
+        },
+        {
+          "sequence": 50,
+          "check": "patched_instruction_cache_visible",
+          "result": "PASS"
+        },
+        {
+          "sequence": 52,
+          "check": "all_prepared_pages_executed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 54,
+          "check": "arena_end_executable",
+          "result": "PASS"
+        },
+        {
+          "sequence": 55,
+          "check": "aliases_share_bytes",
+          "result": "PASS"
+        },
+        {
+          "sequence": 57,
+          "check": "execute_generated_constant",
+          "result": "PASS"
+        },
+        {
+          "sequence": 59,
+          "check": "patched_instruction_cache_visible",
+          "result": "PASS"
+        },
+        {
+          "sequence": 61,
+          "check": "all_prepared_pages_executed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 63,
+          "check": "arena_end_executable",
+          "result": "PASS"
+        },
+        {
+          "sequence": 65,
+          "check": "integer_argument_and_return",
+          "result": "PASS"
+        },
+        {
+          "sequence": 67,
+          "check": "cross_arena_generated_branch",
+          "result": "PASS"
+        },
+        {
+          "sequence": 69,
+          "check": "execute_on_another_thread",
+          "result": "PASS"
+        },
+        {
+          "sequence": 71,
+          "check": "rewrite_stress",
+          "result": "PASS"
+        }
+      ],
+      "graphics_checks": [
+        {
+          "sequence": 10440,
+          "check": "celeste_player_jump_hook_installed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 20912,
+          "check": "fna_render_target_extension_active_binding",
+          "result": "PASS"
+        },
+        {
+          "sequence": 20934,
+          "check": "fna_render_target_extension_backbuffer",
+          "result": "PASS"
+        },
+        {
+          "sequence": 20952,
+          "check": "metal_render_target_clear_and_gpu_readback",
+          "result": "PASS"
+        },
+        {
+          "sequence": 21047,
+          "check": "backbuffer_deferred_clear_visible",
+          "result": "PASS"
+        },
+        {
+          "sequence": 21212,
+          "check": "backbuffer_full_rgba_orientation_and_rows",
+          "result": "PASS"
+        },
+        {
+          "sequence": 21297,
+          "check": "backbuffer_rectangle_offset_and_guards",
+          "result": "PASS"
+        },
+        {
+          "sequence": 21348,
+          "check": "backbuffer_byte_stride_rgba_and_guards",
+          "result": "PASS"
+        },
+        {
+          "sequence": 21353,
+          "check": "backbuffer_continued_draw_preserves_other_pixels",
+          "result": "PASS"
+        },
+        {
+          "sequence": 21364,
+          "check": "backbuffer_reads_backbuffer_while_other_target_bound",
+          "result": "PASS"
+        },
+        {
+          "sequence": 21367,
+          "check": "backbuffer_pending_offscreen_clear_survives_read",
+          "result": "PASS"
+        },
+        {
+          "sequence": 22474,
+          "check": "jit_xml_settings_write",
+          "result": "PASS"
+        },
+        {
+          "sequence": 22477,
+          "check": "jit_xml_settings_readback",
+          "result": "PASS"
+        },
+        {
+          "sequence": 30735,
+          "check": "celeste_jump_hook_retained_after_resume_gc",
+          "result": "PASS"
+        },
+        {
+          "sequence": 33037,
+          "check": "celeste_jump_hook_retained_after_resume_gc",
+          "result": "PASS"
+        },
+        {
+          "sequence": 33057,
+          "check": "celeste_jump_hook_retained_after_resume_gc",
+          "result": "PASS"
+        }
+      ],
+      "registered_module_callback_counts": {
+        "Everest 1.6531.0": 1,
+        "Celeste 1.4.0.0": 1,
+        "CelesteIOS 1.0.0": 1,
+        "CJITCodeCanary 1.0.0": 1
+      },
+      "verified_modules": [
+        "Celeste 1.4.0.0; instances=1",
+        "CelesteIOS 1.0.0; instances=1",
+        "Everest 1.6531.0; instances=1",
+        "CJITCodeCanary 1.0.0; instances=1"
+      ],
+      "sampled_counter_ranges": {
+        "code_budget_bytes": {
+          "samples": 475,
+          "min": 536870912,
+          "max": 536870912
+        },
+        "code_allocations": {
+          "samples": 472,
+          "min": 155,
+          "max": 780
+        },
+        "code_reserved_bytes": {
+          "samples": 472,
+          "min": 2637824,
+          "max": 13500416
+        },
+        "jit_failed": {
+          "samples": 472,
+          "min": 0,
+          "max": 0
+        },
+        "jit_unowned": {
+          "samples": 472,
+          "min": 0,
+          "max": 0
+        },
+        "managed_errors": {
+          "samples": 472,
+          "min": 0,
+          "max": 0
+        },
+        "patch_rejections": {
+          "samples": 472,
+          "min": 0,
+          "max": 0
+        },
+        "failed_checks": {
+          "samples": 471,
+          "min": 0,
+          "max": 0
+        },
+        "physical_footprint_bytes": {
+          "samples": 471,
+          "min": 1187629176,
+          "max": 1973766768
+        },
+        "resident_memory_bytes": {
+          "samples": 471,
+          "min": 529039360,
+          "max": 1919041536
+        }
+      },
+      "maps": [
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=1",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=2",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=3",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=4",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=3b",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=5",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=5a",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=5",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6a",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6b",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=s0",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=s1",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=s0",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6b",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6a",
+        "area=1; sid=Celeste/1-ForsakenCity; mode=Normal; room=6b"
+      ],
+      "saves": [
+        "settings; bytes=4883"
+      ],
+      "runtime_identity_messages": [
+        "version=1.6531.0-cjit-d72e94f; source=d72e94f4b9e62b91cbdea674587ed39d53de9550; manifest=67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62"
+      ],
+      "explicit_failure_event_count": 0
+    },
+    {
+      "session": "c71d8c52-6df7-4566-8ade-1a5a173312f9",
+      "pid": 22437,
+      "start_utc": "2026-09-14T08:08:08.835374+00:00",
+      "last_retained_utc": "2026-09-14T08:39:17.548106+00:00",
+      "build_id": "launcher-catalogue-20260913-28",
+      "full_build_info_matches_locked_package": true,
+      "device": "iPhone16,2 / iOS26.5 (23F77)",
+      "scope": "gameplay and complete native return",
+      "native_gate": "PASS",
+      "startup_and_gameplay": "PASS",
+      "normal_quit_native_return": "PASS",
+      "retained_events_with_supplements": 1403,
+      "evidence_sequences": {
+        "catalogue_quiesced": [
+          59
+        ],
+        "graphics_test_start": [
+          60
+        ],
+        "graphics_start_result": [
+          77393
+        ],
+        "graphics_first_frame_returned": [
+          78477
+        ],
+        "everest_boot_pass": [
+          68214
+        ],
+        "everest_selection_pass": [
+          68758
+        ],
+        "mono_reflection_flags_registered": [
+          242
+        ],
+        "everest_ios_support_registered": [
+          15569
+        ],
+        "graphics_fixture_message": [
+          68759
+        ],
+        "game_room": [
+          93593,
+          100732,
+          102158,
+          102612,
+          103892,
+          104398,
+          106055,
+          107914,
+          112360,
+          113945,
+          114301,
+          114380,
+          114399,
+          114437,
+          114795,
+          114823
+        ],
+        "game_save_pass": [
+          77391,
+          115006,
+          115009
+        ],
+        "everest_mod_save_pass": [
+          115012
+        ],
+        "game_profile_save_verified": [
+          115013
+        ],
+        "game_quit_requested": [
+          114974
+        ],
+        "graphics_normal_quit_accepted": [
+          114976
+        ],
+        "game_shutdown_stage_started": [
+          114993,
+          114999,
+          115015,
+          115039,
+          115045,
+          125609,
+          125674,
+          125681
+        ],
+        "game_shutdown_stage_completed": [
+          114998,
+          115014,
+          115038,
+          115044,
+          125608,
+          125673,
+          125680
+        ],
+        "graphics_main_thread_detached": [
+          125683
+        ],
+        "graphics_bridge_pass": [
+          125684
+        ],
+        "graphics_result_presented": [
+          125685
+        ],
+        "graphics_post_run_alive": [
+          125686
+        ],
+        "mono_log": [
+          42014,
+          42015,
+          42018,
+          42019,
+          57081,
+          57082,
+          57085,
+          57086
+        ],
+        "mono_type_discovery_recovered": [
+          42030,
+          57087
+        ]
+      },
+      "native_checks": [
+        {
+          "sequence": 15,
+          "check": "debugger_detached_before_execution",
+          "result": "PASS"
+        },
+        {
+          "sequence": 16,
+          "check": "mailbox_response_valid",
+          "result": "PASS"
+        },
+        {
+          "sequence": 17,
+          "check": "prepared_region_is_rx",
+          "result": "PASS"
+        },
+        {
+          "sequence": 19,
+          "check": "create_distinct_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 20,
+          "check": "protect_writable_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 21,
+          "check": "wx_separate_aliases",
+          "result": "PASS"
+        },
+        {
+          "sequence": 22,
+          "check": "mapping_still_valid",
+          "result": "PASS"
+        },
+        {
+          "sequence": 23,
+          "check": "prepared_region_is_rx",
+          "result": "PASS"
+        },
+        {
+          "sequence": 25,
+          "check": "create_distinct_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 26,
+          "check": "protect_writable_alias",
+          "result": "PASS"
+        },
+        {
+          "sequence": 27,
+          "check": "wx_separate_aliases",
+          "result": "PASS"
+        },
+        {
+          "sequence": 28,
+          "check": "mapping_still_valid",
+          "result": "PASS"
+        },
+        {
+          "sequence": 29,
+          "check": "aliases_share_bytes",
+          "result": "PASS"
+        },
+        {
+          "sequence": 31,
+          "check": "execute_generated_constant",
+          "result": "PASS"
+        },
+        {
+          "sequence": 33,
+          "check": "patched_instruction_cache_visible",
+          "result": "PASS"
+        },
+        {
+          "sequence": 35,
+          "check": "all_prepared_pages_executed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 37,
+          "check": "arena_end_executable",
+          "result": "PASS"
+        },
+        {
+          "sequence": 38,
+          "check": "aliases_share_bytes",
+          "result": "PASS"
+        },
+        {
+          "sequence": 40,
+          "check": "execute_generated_constant",
+          "result": "PASS"
+        },
+        {
+          "sequence": 42,
+          "check": "patched_instruction_cache_visible",
+          "result": "PASS"
+        },
+        {
+          "sequence": 44,
+          "check": "all_prepared_pages_executed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 46,
+          "check": "arena_end_executable",
+          "result": "PASS"
+        },
+        {
+          "sequence": 48,
+          "check": "integer_argument_and_return",
+          "result": "PASS"
+        },
+        {
+          "sequence": 50,
+          "check": "cross_arena_generated_branch",
+          "result": "PASS"
+        },
+        {
+          "sequence": 52,
+          "check": "execute_on_another_thread",
+          "result": "PASS"
+        },
+        {
+          "sequence": 54,
+          "check": "rewrite_stress",
+          "result": "PASS"
+        }
+      ],
+      "graphics_checks": [
+        {
+          "sequence": 10413,
+          "check": "celeste_player_jump_hook_installed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73404,
+          "check": "fna_render_target_extension_active_binding",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73426,
+          "check": "fna_render_target_extension_backbuffer",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73444,
+          "check": "metal_render_target_clear_and_gpu_readback",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73523,
+          "check": "backbuffer_deferred_clear_visible",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73688,
+          "check": "backbuffer_full_rgba_orientation_and_rows",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73735,
+          "check": "backbuffer_rectangle_offset_and_guards",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73784,
+          "check": "backbuffer_byte_stride_rgba_and_guards",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73789,
+          "check": "backbuffer_continued_draw_preserves_other_pixels",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73800,
+          "check": "backbuffer_reads_backbuffer_while_other_target_bound",
+          "result": "PASS"
+        },
+        {
+          "sequence": 73803,
+          "check": "backbuffer_pending_offscreen_clear_survives_read",
+          "result": "PASS"
+        },
+        {
+          "sequence": 77387,
+          "check": "jit_xml_settings_write",
+          "result": "PASS"
+        },
+        {
+          "sequence": 77390,
+          "check": "jit_xml_settings_readback",
+          "result": "PASS"
+        },
+        {
+          "sequence": 114918,
+          "check": "celeste_jump_hook_retained_after_resume_gc",
+          "result": "PASS"
+        },
+        {
+          "sequence": 114997,
+          "check": "everest_final_save_queue_completed",
+          "result": "PASS"
+        },
+        {
+          "sequence": 115004,
+          "check": "jit_xml_settings_write",
+          "result": "PASS"
+        },
+        {
+          "sequence": 115005,
+          "check": "jit_xml_settings_readback",
+          "result": "PASS"
+        },
+        {
+          "sequence": 115007,
+          "check": "jit_xml_savedata_write",
+          "result": "PASS"
+        },
+        {
+          "sequence": 115008,
+          "check": "jit_xml_savedata_readback",
+          "result": "PASS"
+        }
+      ],
+      "registered_module_callback_counts": {
+        "Everest 1.6531.0": 1,
+        "Celeste 1.4.0.0": 1,
+        "CelesteIOS 1.0.0": 1,
+        "AdventureHelper 1.6.0": 1,
+        "Anonhelper 1.1.1": 1,
+        "Batteries 1.1.4": 1,
+        "BounceHelper 1.14.1": 1,
+        "CJITCodeCanary 1.0.0": 1,
+        "CanyonHelper 1.1.6": 1,
+        "CavernHelper 1.3.7": 1,
+        "CherryHelper 1.8.2": 1,
+        "CollabUtils2 1.13.4": 1,
+        "ColoredLights 1.2.0": 1,
+        "CommunalHelper 1.25.5": 1,
+        "ContortHelper 1.5.5": 1,
+        "DJMapHelper 1.13.4": 1,
+        "DisposableTheo 1.0.6": 1,
+        "FactoryHelper 1.4.1": 1,
+        "FancyTileEntities 1.6.2": 1,
+        "FlaglinesAndSuch 1.6.80": 1,
+        "FurryHelper 1.0.6": 1,
+        "HonlyHelper 1.7.5": 1,
+        "JungleHelper 1.4.10": 1,
+        "LuaCutscenes 0.2.13": 1,
+        "LunaticHelper 1.1.1": 1,
+        "MoreDasheline 1.7.1": 1,
+        "OutbackHelper 1.7.3": 1,
+        "PandorasBox 1.0.49": 1,
+        "EmHelper 1.3.0": 1,
+        "SafeRespawnCrumble 1.2.1": 1,
+        "Sardine7 1.2.0": 1,
+        "ShroomHelper 1.2.10": 1,
+        "SorbetHelper 1.9.2": 1,
+        "StrawberryJam2021Assets 1.0.1": 1,
+        "StrawberryJam2021AudioA 1.0.4": 1,
+        "StrawberryJam2021AudioB 1.0.0": 1,
+        "StrawberryJam2021AudioC 1.0.1": 1,
+        "VanillaContestAudio 1.0.0": 1,
+        "XaphanHelper 1.0.79": 1,
+        "YetAnotherHelper 1.2.5": 1,
+        "memorialHelper 1.0.4": 1,
+        "BGswitch 1.2.2": 1,
+        "BrokemiaHelper 1.8.5": 1,
+        "IsaGrabBag 1.7.3": 1,
+        "ExtendedVariantMode 0.51.0": 1,
+        "FrostHelper 1.80.2": 1,
+        "JackalHelper 1.7.7.1": 3,
+        "TwigHelper 1.6.0": 1,
+        "CrystallineHelper 1.17.2": 1,
+        "EeveeHelper 1.12.6": 1,
+        "FemtoHelper 1.15.22": 1,
+        "GravityHelper 1.2.28": 1,
+        "MaxHelpingHand 1.40.10": 1,
+        "SpirialisHelper 1.0.8": 1,
+        "StyleMaskHelper 1.5.0": 1,
+        "VanillaContest2023 1.0.6": 1,
+        "VivHelper 1.14.10": 1,
+        "VortexHelper 1.2.19": 1,
+        "StrawberryJam2021 1.0.12": 1
+      },
+      "verified_modules": [
+        "Celeste 1.4.0.0; instances=1",
+        "CelesteIOS 1.0.0; instances=1",
+        "Everest 1.6531.0; instances=1",
+        "AdventureHelper 1.6.0; instances=1",
+        "Anonhelper 1.1.1; instances=1",
+        "BGswitch 1.2.2; instances=1",
+        "Batteries 1.1.4; instances=1",
+        "BounceHelper 1.14.1; instances=1",
+        "BrokemiaHelper 1.8.5; instances=1",
+        "CJITCodeCanary 1.0.0; instances=1",
+        "CanyonHelper 1.1.6; instances=1",
+        "CavernHelper 1.3.7; instances=1",
+        "CherryHelper 1.8.2; instances=1",
+        "CollabUtils2 1.13.4; instances=1",
+        "ColoredLights 1.2.0; instances=1",
+        "CommunalHelper 1.25.5; instances=1",
+        "ContortHelper 1.5.5; instances=1",
+        "CrystallineHelper 1.17.2; instances=1",
+        "DJMapHelper 1.13.4; instances=1",
+        "DisposableTheo 1.0.6; instances=1",
+        "EeveeHelper 1.12.6; instances=1",
+        "EmHelper 1.3.0; instances=1",
+        "ExtendedVariantMode 0.51.0; instances=1",
+        "FactoryHelper 1.4.1; instances=1",
+        "FancyTileEntities 1.6.2; instances=1",
+        "FemtoHelper 1.15.22; instances=1",
+        "FlaglinesAndSuch 1.6.80; instances=1",
+        "FrostHelper 1.80.2; instances=1",
+        "FurryHelper 1.0.6; instances=1",
+        "GravityHelper 1.2.28; instances=1",
+        "HonlyHelper 1.7.5; instances=1",
+        "IsaGrabBag 1.7.3; instances=1",
+        "JackalHelper 1.7.7.1; instances=3",
+        "JungleHelper 1.4.10; instances=1",
+        "LuaCutscenes 0.2.13; instances=1",
+        "LunaticHelper 1.1.1; instances=1",
+        "MaxHelpingHand 1.40.10; instances=1",
+        "MoreDasheline 1.7.1; instances=1",
+        "OutbackHelper 1.7.3; instances=1",
+        "PandorasBox 1.0.49; instances=1",
+        "SafeRespawnCrumble 1.2.1; instances=1",
+        "Sardine7 1.2.0; instances=1",
+        "ShroomHelper 1.2.10; instances=1",
+        "SorbetHelper 1.9.2; instances=1",
+        "SpirialisHelper 1.0.8; instances=1",
+        "StrawberryJam2021 1.0.12; instances=1",
+        "StrawberryJam2021Assets 1.0.1; instances=1",
+        "StrawberryJam2021AudioA 1.0.4; instances=1",
+        "StrawberryJam2021AudioB 1.0.0; instances=1",
+        "StrawberryJam2021AudioC 1.0.1; instances=1",
+        "StyleMaskHelper 1.5.0; instances=1",
+        "TwigHelper 1.6.0; instances=1",
+        "VanillaContest2023 1.0.6; instances=1",
+        "VanillaContestAudio 1.0.0; instances=1",
+        "VivHelper 1.14.10; instances=1",
+        "VortexHelper 1.2.19; instances=1",
+        "XaphanHelper 1.0.79; instances=1",
+        "YetAnotherHelper 1.2.5; instances=1",
+        "memorialHelper 1.0.4; instances=1"
+      ],
+      "sampled_counter_ranges": {
+        "code_budget_bytes": {
+          "samples": 249,
+          "min": 536870912,
+          "max": 536870912
+        },
+        "code_allocations": {
+          "samples": 246,
+          "min": 155,
+          "max": 14445
+        },
+        "code_reserved_bytes": {
+          "samples": 246,
+          "min": 2637824,
+          "max": 240664576
+        },
+        "jit_failed": {
+          "samples": 246,
+          "min": 0,
+          "max": 0
+        },
+        "jit_unowned": {
+          "samples": 246,
+          "min": 0,
+          "max": 0
+        },
+        "managed_errors": {
+          "samples": 246,
+          "min": 0,
+          "max": 0
+        },
+        "patch_rejections": {
+          "samples": 246,
+          "min": 0,
+          "max": 0
+        },
+        "failed_checks": {
+          "samples": 240,
+          "min": 0,
+          "max": 0
+        },
+        "physical_footprint_bytes": {
+          "samples": 240,
+          "min": 1657293208,
+          "max": 4278702264
+        },
+        "resident_memory_bytes": {
+          "samples": 240,
+          "min": 1598799872,
+          "max": 2863054848
+        }
+      },
+      "maps": [
+        "area=27; sid=StrawberryJam2021/1-Beginner/Ceph; mode=Normal; room=5",
+        "area=143; sid=VanillaContest2023/0-Lobbies/Lobby; mode=Normal; room=Center",
+        "area=157; sid=VanillaContest2023/1-Submissions/Flagpole1up; mode=Normal; room=a",
+        "area=157; sid=VanillaContest2023/1-Submissions/Flagpole1up; mode=Normal; room=b",
+        "area=157; sid=VanillaContest2023/1-Submissions/Flagpole1up; mode=Normal; room=c",
+        "area=157; sid=VanillaContest2023/1-Submissions/Flagpole1up; mode=Normal; room=d",
+        "area=20; sid=StrawberryJam2021/0-Lobbies/0-Prologue; mode=Normal; room=prologue-00",
+        "area=20; sid=StrawberryJam2021/0-Lobbies/0-Prologue; mode=Normal; room=prologue-01",
+        "area=21; sid=StrawberryJam2021/0-Lobbies/1-Beginner; mode=Normal; room=sj2021beginnerlobby",
+        "area=40; sid=StrawberryJam2021/1-Beginner/coffe; mode=Normal; room=c-01",
+        "area=40; sid=StrawberryJam2021/1-Beginner/coffe; mode=Normal; room=c-02",
+        "area=40; sid=StrawberryJam2021/1-Beginner/coffe; mode=Normal; room=c-03",
+        "area=40; sid=StrawberryJam2021/1-Beginner/coffe; mode=Normal; room=c-04",
+        "area=40; sid=StrawberryJam2021/1-Beginner/coffe; mode=Normal; room=c-05",
+        "area=40; sid=StrawberryJam2021/1-Beginner/coffe; mode=Normal; room=c-06",
+        "area=40; sid=StrawberryJam2021/1-Beginner/coffe; mode=Normal; room=c-07"
+      ],
+      "saves": [
+        "settings; bytes=4883",
+        "settings; bytes=4883",
+        "SaveData slot=3; bytes=228431; deaths=16",
+        "prior=0; written=178; readback=178; bytes=11"
+      ],
+      "runtime_identity_messages": [
+        "version=1.6531.0-cjit-d72e94f; source=d72e94f4b9e62b91cbdea674587ed39d53de9550; manifest=67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62"
+      ],
+      "explicit_failure_event_count": 0,
+      "completed_run": {
+        "background_seconds": 6.623141458345344,
+        "frame_callbacks": 42077,
+        "gameplay_checks_completed": true,
+        "managed_result": 1,
+        "maximum_frame_gap_seconds": 2.146271583333146,
+        "reason": "game_quit",
+        "runtime": {
+          "code_allocations": 14445,
+          "code_budget_bytes": 536870912,
+          "code_reserved_bytes": 240664576,
+          "jit_done_count": 37654,
+          "jit_failed": 0,
+          "jit_unowned": 0,
+          "managed_errors": 0,
+          "patch_rejections": 0,
+          "patches": 12634
+        },
+        "shutdown_stage": 8,
+        "stopped": true,
+        "detached": true
+      },
+      "native_heartbeat_after_result_seconds": 5.2442960833141115
+    },
+    {
+      "session": "129a9d93-faf6-4405-b0bd-6cb92939eb07",
+      "pid": 22292,
+      "start_utc": "2026-09-14T07:56:10.396285+00:00",
+      "last_retained_utc": "2026-09-14T08:07:48.114215+00:00",
+      "build_id": "launcher-catalogue-20260913-28",
+      "full_build_info_matches_locked_package": true,
+      "device": "iPhone16,2 / iOS26.5 (23F77)",
+      "scope": "browser and JIT request; no game start",
+      "native_gate": "NOT OBSERVED",
+      "startup_and_gameplay": "NOT OBSERVED",
+      "normal_quit_native_return": "NOT OBSERVED",
+      "retained_events_with_supplements": 52,
+      "evidence_sequences": {},
+      "native_checks": [],
+      "graphics_checks": [],
+      "registered_module_callback_counts": {},
+      "verified_modules": [],
+      "sampled_counter_ranges": {},
+      "maps": [],
+      "saves": [],
+      "runtime_identity_messages": [],
+      "explicit_failure_event_count": 0
+    }
+  ],
+  "catalogue_gate": {
+    "result": "PASS",
+    "session": "b0ee56b8-f872-4afa-b5ca-50dd15978475",
+    "visual_result": "Owner reports all supplied tests visually passed; layout, sort/category choices and appearance are owner observations, not proven by telemetry.",
+    "exact_reuse": {
+      "sequences": [
+        13,
+        16,
+        18,
+        19,
+        20,
+        23,
+        25,
+        26
+      ],
+      "page_type": "Tool",
+      "file_id": "870370",
+      "module": "memorialHelper 1.0.4",
+      "downloads": 0,
+      "can_apply": false
+    },
+    "enable_only": {
+      "owner_disable_sequence": 28,
+      "plan_sequence": 35,
+      "reviewed_apply_sequence": 37,
+      "commit_sequence": 40,
+      "receipt_id": "D6B70BE4-2C76-49FA-9427-A022056FE20C",
+      "application_state": "applied",
+      "changes": [
+        {
+          "action": "enabled",
+          "name": "memorialHelper",
+          "before": "1.0.4",
+          "after": "1.0.4"
+        }
+      ],
+      "downloads": 0,
+      "registered_sequence": 70279,
+      "verified_sequence": 70785
+    },
+    "fresh_install": {
+      "plan_sequence": 50,
+      "apply_sequence": 52,
+      "download_verify_sequences": [
+        54,
+        55,
+        56
+      ],
+      "commit_sequence": 58,
+      "receipt_id": "4F85F8E2-0CE0-4FEE-B199-4FDB88E0970B",
+      "application_state": "applied",
+      "file_id": "1324068",
+      "name": "Cateline",
+      "version": "0.1.0",
+      "bytes": 16792,
+      "sha256": "089c66c696c622c64f84be5f02a5b0682805e6d39bfc4a3bce06159fb1b98f7c",
+      "xxhash64": "038383b0282ff16f",
+      "registered_sequence": 70247,
+      "verified_sequence": 70737,
+      "report_download_status": "installed"
+    },
+    "multifile_review": {
+      "selection_sequence": 65,
+      "plan_sequence": 68,
+      "selected_file_ids": [
+        "1691049",
+        "484937",
+        "539975"
+      ],
+      "plan_id": "FE2AF1A5-CEF4-4F90-9DDD-A43ABFFE7E03",
+      "planned_modules": [
+        "SpringCollab2020 1.7.10",
+        "SpringCollab2020Audio 1.0.0",
+        "ClutterHelper 1.2.1",
+        "SpringCollab2020OldGMHS 1.0.0"
+      ],
+      "planned_bytes": 569949864,
+      "close_sequences": [
+        70,
+        71
+      ],
+      "apply_or_download_for_plan_observed": false
+    },
+    "offline": {
+      "result": "PASS with owner observation",
+      "sequences": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        81
+      ],
+      "last_error_domain": "NSURLErrorDomain",
+      "last_error_code": -1009,
+      "failed_requests": 19,
+      "stale_cache_hits": 19,
+      "game_started_afterwards": true
+    },
+    "quiescence": {
+      "sequence": 140,
+      "next_graphics_test_start_sequence": 141,
+      "activeRequests": 0,
+      "counts": {
+        "cacheHits": 142,
+        "cancelled": 43,
+        "coalesced": 1,
+        "failed": 19,
+        "imageRequests": 152,
+        "metadataRequests": 28,
+        "staleCacheHits": 19
+      },
+      "decodedImageLimit": 16777216,
+      "imageDiskLimit": 33554432,
+      "lastFailure": {
+        "code": -1009,
+        "domain": "NSURLErrorDomain",
+        "endpoint": "gamebanana.com/apiv11/Mod/53761/ProfilePage"
+      },
+      "maximumRetainedRows": 200,
+      "metadataDiskLimit": 25165824,
+      "pageSize": 20,
+      "schema": 1,
+      "suspendedForGame": true,
+      "catalogue_diagnostics_after_quiescence": 0,
+      "source_contract": "CatalogueUI.suspendForGame clears entries/images; CatalogueProvider.suspendForGame cancels/drains flights and rejects new fetches."
+    },
+    "selected_library": {
+      "installed_count": 64,
+      "enabled_count": 60,
+      "verified_metadata_identities": 63,
+      "registration_callbacks": 65,
+      "duplicate_callback_identity": "JackalHelper 1.7.7.1 (3 instances)",
+      "enabled_metadata_matches_registration": true,
+      "disabled_previous_archives": [
+        {
+          "name": "EeveeHelper",
+          "version": "1.12.5",
+          "sha256": "de8eb463083e7298827d6c1ba4f5a4b69cc6cdd9b4be31fec78e272fce3a3839"
+        },
+        {
+          "name": "ExtendedVariantMode",
+          "version": "0.50.5",
+          "sha256": "4019b362d9ad1b2d3a6a670f833ef6324d735d5791a0bf21b62cf5cfbc0d639d"
+        },
+        {
+          "name": "FrostHelper",
+          "version": "1.80.1",
+          "sha256": "ba6aee8f596eff0f595fd90cb7f136ea13b1e9c2d664fc38f389608b0f9e2c81"
+        },
+        {
+          "name": "MaxHelpingHand",
+          "version": "1.40.9",
+          "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee"
+        }
+      ]
+    },
+    "receipt_history": {
+      "total_retained": 7,
+      "current_session_committed": 2,
+      "older_receipts_are_not_new_install_evidence": true
+    }
+  },
+  "current_allocation_trace": {
+    "bytes": 236880,
+    "overflow_records": 0,
+    "records": 9870,
+    "sha256": "c6811e4f11683cad396a5aac4bc71a19f76c1523588bb03675546c90c0249fdf",
+    "valid": true,
+    "all_ranges_within_prepared_rx_arenas": true,
+    "no_overlap": true,
+    "total_reserved_bytes": 165249024,
+    "arena_record_counts": {
+      "0": 9870
+    }
+  },
+  "retention": {
+    "evicted_selected_events": 0,
+    "fsync_checkpoints": 625,
+    "journal_part_limit_bytes": 4194304,
+    "journal_rotations": 0,
+    "milestone_limit_bytes": 4194304,
+    "oversize_events": 0,
+    "policy": "bounded_v1",
+    "retained_events": 594,
+    "retained_milestones": 147,
+    "ring_limit_bytes": 2097152,
+    "storage_error": null,
+    "total_events": 110132,
+    "previous_journals": [
+      {
+        "bounded_excerpt": false,
+        "file": "session-26871f24-d496-408e-bd5e-cffcc2e10034.jsonl",
+        "invalid_or_partial_lines": 0,
+        "source_bytes": 1140487
+      },
+      {
+        "bounded_excerpt": false,
+        "file": "session-c71d8c52-6df7-4566-8ade-1a5a173312f9.jsonl",
+        "invalid_or_partial_lines": 0,
+        "source_bytes": 961700
+      },
+      {
+        "bounded_excerpt": false,
+        "file": "session-129a9d93-faf6-4405-b0bd-6cb92939eb07.jsonl",
+        "invalid_or_partial_lines": 0,
+        "source_bytes": 134762
+      }
+    ],
+    "current_events": 594,
+    "additional_unique_routine_samples": 8,
+    "sequence_gaps_are_sampling": true,
+    "full_older_allocation_traces_present": false,
+    "console_is_bounded_tail": true
+  },
+  "limits": [
+    "Browser visuals and Cateline appearance are owner-reported; no screenshots are in this export.",
+    "A prior vanilla process ends after background/audio deactivation without Quit; no crash is established.",
+    "Fresh-process reload of final counter209 is not observed; older successful slots differ. No second fresh gameplay run was required by the build28 guide.",
+    "The c71 process reports 6.623 seconds background; no new 30-second background gate was requested.",
+    "LiveContainer/StikDebug version strings explicitly say previous test; they are not freshly confirmed.",
+    "Optional CelesteNet discovery warnings in BrokemiaHelper/GravityHelper are recovered; all expected metadata verifies.",
+    "VM-range details contain sampled rows plus complete-range checks/digests; the complete current allocation trace is separately validated.",
+    "Recorded memory samples do not establish an absolute peak or prove absence of a leak.",
+    "Physical acceptance does not implement responsive loading, approve iPad support, or resolve distribution gates."
+  ],
+  "next": {
+    "accepted_fallback": "28; preserve27 and every Results folder",
+    "build29": "Local preparation only; not delivered or physically tested",
+    "feature": "Responsive real startup/loading; managed build stages and cooperative thread-affine startup",
+    "next_unused_build_number": 30,
+    "git_writes_authorized_by_this_review": false
+  }
+}

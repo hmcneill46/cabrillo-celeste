@@ -1,0 +1,280 @@
+{
+  "schema": 1,
+  "status": "PHONE_BACKEND_PASSES_LOADING_UX_REFINEMENT_REQUIRED",
+  "reviewed_utc": "2026-09-15T10:27:36.341562+00:00",
+  "collection": {
+    "collected_at": "2026-09-15T10:04:30.070247+00:00",
+    "source": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.16.1-build-31/Results/CelesteJIT-a3c84d10-0873-4bbf-84f8-a56a3fefcc82.diagnostics.json",
+    "copy": "/Users/harrymcneill/Projects/Cabrillo/.private/device-evidence/2026-09-15/build31-review-100430/CelesteJIT-a3c84d10-0873-4bbf-84f8-a56a3fefcc82.diagnostics.json",
+    "bytes": 5105935,
+    "sha256": "4ac46732645eb7500ecb8ae8152e3e743dad890225766b6d2879d60e5cefe23d",
+    "source_mtime": 1789465992.0,
+    "copy_matches_source": true
+  },
+  "owner_visual_report": "All visual checks passed except choppy opening/closing/scrolling Loading details and audible Celeste audio about ten seconds before game presentation. Owner permits passive UI or equally fast smooth interaction.",
+  "device": {
+    "guest_bundle_id": "io.github.hmcneill46.celeste.everest.jit.everest",
+    "hardware": "iPhone16,2",
+    "os_build_description": "Version 26.5 (Build 23F77)",
+    "os_version": "26.5",
+    "page_size": 16384,
+    "physical_memory_bytes": 8025686016,
+    "simulator": 0
+  },
+  "build_id": "launcher-loading-20260915-31",
+  "runs": [
+    {
+      "run": "second/warm",
+      "session": "a3c84d10-0873-4bbf-84f8-a56a3fefcc82",
+      "build_id": "launcher-loading-20260915-31",
+      "startup_steps": 160,
+      "maximum_step_seconds": 4.411667583328381,
+      "slowest_steps": [
+        {
+          "detail": "Loading game content",
+          "duration_seconds": 4.411667583328381,
+          "index": 159,
+          "main_thread": true,
+          "next_phase": "settings",
+          "phase": "game_content",
+          "result": 3
+        },
+        {
+          "detail": "StrawberryJam2021 1.0.12",
+          "duration_seconds": 4.044778374998714,
+          "index": 154,
+          "main_thread": true,
+          "next_phase": "maps",
+          "phase": "dependencies",
+          "result": 3
+        },
+        {
+          "detail": "ExtendedVariantMode 0.51.0",
+          "duration_seconds": 2.2132833750001737,
+          "index": 140,
+          "main_thread": true,
+          "next_phase": "dependencies",
+          "phase": "dependencies",
+          "result": 3
+        },
+        {
+          "detail": "MaxHelpingHand 1.40.10",
+          "duration_seconds": 1.8622324999960256,
+          "index": 148,
+          "main_thread": true,
+          "next_phase": "dependencies",
+          "phase": "dependencies",
+          "result": 3
+        },
+        {
+          "detail": "XaphanHelper-v1.0.79.zip",
+          "duration_seconds": 1.432835833329591,
+          "index": 126,
+          "main_thread": true,
+          "next_phase": "mods",
+          "phase": "mods",
+          "result": 3
+        },
+        {
+          "detail": "VivHelper 1.14.10",
+          "duration_seconds": 1.107380875000672,
+          "index": 152,
+          "main_thread": true,
+          "next_phase": "dependencies",
+          "phase": "dependencies",
+          "result": 3
+        },
+        {
+          "detail": "CommunalHelper-v1.25.5.zip",
+          "duration_seconds": 1.0592662499984726,
+          "index": 44,
+          "main_thread": true,
+          "next_phase": "mods",
+          "phase": "mods",
+          "result": 3
+        },
+        {
+          "detail": "FrostHelper 1.80.2",
+          "duration_seconds": 0.8867422916664509,
+          "index": 141,
+          "main_thread": true,
+          "next_phase": "dependencies",
+          "phase": "dependencies",
+          "result": 3
+        }
+      ],
+      "run_to_handoff_seconds": 65.56061337499705,
+      "first_frame_to_handoff_seconds": 17.76415458333213,
+      "handoff_frame_callback": 1041,
+      "handoff_phase": "ready",
+      "archives_processed": 60,
+      "archives_total": 60,
+      "modules_loaded": 60,
+      "load_failures": 0,
+      "catalogue_active_requests": 0,
+      "selected_metadata": "All 63 selected/built-in metadata identities match actual Everest registration; no disabled extras.",
+      "rooms": [
+        "area=43; sid=StrawberryJam2021/1-Beginner/joltik; mode=Normal; room=a_05"
+      ],
+      "save": "slot=1; complete=True",
+      "quit": {
+        "background_seconds": 0,
+        "detached": true,
+        "frame_callbacks": 4374,
+        "gameplay_checks_completed": true,
+        "managed_result": 1,
+        "maximum_frame_gap_seconds": 1.7362536666623782,
+        "reason": "game_quit",
+        "runtime": {
+          "code_allocations": 10425,
+          "code_budget_bytes": 536870912,
+          "code_reserved_bytes": 174407680,
+          "jit_done_count": 34715,
+          "jit_failed": 0,
+          "jit_unowned": 0,
+          "managed_errors": 0,
+          "patch_rejections": 0,
+          "patches": 12738
+        },
+        "shutdown_stage": 8,
+        "stopped": true
+      },
+      "post_quit_heartbeat_seconds": 5.250373416660295,
+      "foreground_heartbeat": true,
+      "failed_event_names": []
+    },
+    {
+      "run": "first",
+      "session": "84e3ded7-5068-4699-8e8c-10d2d1abb053",
+      "build_id": "launcher-loading-20260915-31",
+      "startup_steps": 160,
+      "maximum_step_seconds": 17.29125745833153,
+      "slowest_steps": [
+        {
+          "detail": "StrawberryJam2021 1.0.12",
+          "duration_seconds": 17.29125745833153,
+          "index": 154,
+          "main_thread": true,
+          "next_phase": "maps",
+          "phase": "dependencies",
+          "result": 3
+        },
+        {
+          "detail": "XaphanHelper-v1.0.79.zip",
+          "duration_seconds": 4.645390916666656,
+          "index": 126,
+          "main_thread": true,
+          "next_phase": "mods",
+          "phase": "mods",
+          "result": 3
+        },
+        {
+          "detail": "Loading game content",
+          "duration_seconds": 4.537038875001599,
+          "index": 159,
+          "main_thread": true,
+          "next_phase": "settings",
+          "phase": "game_content",
+          "result": 3
+        },
+        {
+          "detail": "ExtendedVariantMode 0.51.0",
+          "duration_seconds": 2.901383916665509,
+          "index": 140,
+          "main_thread": true,
+          "next_phase": "dependencies",
+          "phase": "dependencies",
+          "result": 3
+        },
+        {
+          "detail": "MaxHelpingHand 1.40.10",
+          "duration_seconds": 2.900728083332069,
+          "index": 148,
+          "main_thread": true,
+          "next_phase": "dependencies",
+          "phase": "dependencies",
+          "result": 3
+        },
+        {
+          "detail": "VivHelper 1.14.10",
+          "duration_seconds": 2.7200360000060755,
+          "index": 152,
+          "main_thread": true,
+          "next_phase": "dependencies",
+          "phase": "dependencies",
+          "result": 3
+        },
+        {
+          "detail": "JackalHelper 1.7.7.1",
+          "duration_seconds": 2.4446025416691555,
+          "index": 142,
+          "main_thread": true,
+          "next_phase": "dependencies",
+          "phase": "dependencies",
+          "result": 3
+        },
+        {
+          "detail": "CommunalHelper-v1.25.5.zip",
+          "duration_seconds": 2.336552083332208,
+          "index": 44,
+          "main_thread": true,
+          "next_phase": "mods",
+          "phase": "mods",
+          "result": 3
+        }
+      ],
+      "run_to_handoff_seconds": 93.10727741666051,
+      "first_frame_to_handoff_seconds": 17.733241916670522,
+      "handoff_frame_callback": 1017,
+      "handoff_phase": "ready",
+      "archives_processed": 60,
+      "archives_total": 60,
+      "modules_loaded": 60,
+      "load_failures": 0,
+      "catalogue_active_requests": 0,
+      "selected_metadata": "All 63 selected/built-in metadata identities match actual Everest registration; no disabled extras.",
+      "rooms": [
+        "area=43; sid=StrawberryJam2021/1-Beginner/joltik; mode=Normal; room=a_04",
+        "area=43; sid=StrawberryJam2021/1-Beginner/joltik; mode=Normal; room=a_05"
+      ],
+      "save": "slot=1; complete=True",
+      "quit": {
+        "background_seconds": 12.982089958328288,
+        "detached": true,
+        "frame_callbacks": 8103,
+        "gameplay_checks_completed": true,
+        "managed_result": 1,
+        "maximum_frame_gap_seconds": 1.6570078333388665,
+        "reason": "game_quit",
+        "runtime": {
+          "code_allocations": 10750,
+          "code_budget_bytes": 536870912,
+          "code_reserved_bytes": 179798016,
+          "jit_done_count": 37099,
+          "jit_failed": 0,
+          "jit_unowned": 0,
+          "managed_errors": 0,
+          "patch_rejections": 0,
+          "patches": 12738
+        },
+        "shutdown_stage": 8,
+        "stopped": true
+      },
+      "post_quit_heartbeat_seconds": 5.250542791662156,
+      "foreground_heartbeat": false,
+      "failed_event_names": []
+    }
+  ],
+  "retained_build28_sessions": [
+    "7851988a-8e9b-4dd4-bf0a-61095b866044",
+    "b0ee56b8-f872-4afa-b5ca-50dd15978475"
+  ],
+  "audio_timing_limit": "game_audio_ready establishes FMOD readiness, not the exact instant sound became audible; about ten seconds is the owner observation.",
+  "native_presentation_fix_required": true,
+  "backend_failure_found": false,
+  "accepted_fallback": "build28; preserve build27 and build31",
+  "next_build": "launcher-first-frame-20260915-32",
+  "raw_logs_private": true,
+  "both_embedded_build_info_records_match_delivered_ipa": true,
+  "delivered_build31_ipa_sha256": "369ca8a970dd0eadce1b6ba67d2a0277072731fd625823717e2b46c82246cd4c"
+}

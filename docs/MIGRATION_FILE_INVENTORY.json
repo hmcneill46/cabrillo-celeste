@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 2243,
+  "file_count": 2557,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -15,8 +15,13 @@
     },
     "AGENTS.md": {
       "reason": "Active Cabrillo scope, owner instructions, accepted builds and development boundaries",
-      "sha256": "b4fcf699b9babe2252d94ac68fd9a6a6262f49f586a4eb632e5f2a30909c9897",
-      "bytes": 5128
+      "sha256": "0b066543dafd8d4c0dbc5807a2a56509e1849dd5e66d24144c301468e5c25dfa",
+      "bytes": 7392
+    },
+    "HANDOFF.md": {
+      "reason": "Fresh-chat development handoff: accepted build28 evidence and review method, exact builds, independent build29 preparation, architecture, ownership, roadmap and delivery procedures",
+      "sha256": "983175ab0e0152c06120c99fb9d516ff648eda3707c705a86c069f2d02a76624",
+      "bytes": 40658
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -26,18 +31,18 @@
     },
     "README.md": {
       "reason": "Cabrillo entry point, Morro relationship, local build and platform direction",
-      "sha256": "f6c67e2338e9227aa98b39cc0ec87875c7d691ec6ff964337f577fae322c9b79",
-      "bytes": 4914
+      "sha256": "1c1116a9d0c35ed8ba9b9b6eb87e6f4ece16c513041a72a3f25ed1868d95da15",
+      "bytes": 5911
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
-      "sha256": "7f8968e569ea86218707636c5dc0fffe6df4d58bcf57fef5da36a19c6d9ebefa",
-      "bytes": 2861
+      "sha256": "c621f2e6d79205464b87a518ad913580b04792acbb884e3838c663b4973d8a35",
+      "bytes": 2966
     },
     "docs/BUILDING.md": {
       "reason": "Standalone build inputs, exact reproduction, validation and future development contract",
-      "sha256": "5359e1f41697b10ce755ddb54439b5240ce42eb1f32b31c7a77c46f1d2c9dad4",
-      "bytes": 7569
+      "sha256": "11c62a08ac021625c9308156c0ea00266c9e555d1b0ff8c2c6b53847a5963f73",
+      "bytes": 14569
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -55,8 +60,8 @@
     },
     "docs/README.md": {
       "reason": "Navigation for Cabrillo and all retained JIT documentation",
-      "sha256": "5481e3c99c6162da31ee43282836ee90d164a41214c4917853fb64e1f8c0ca22",
-      "bytes": 1172
+      "sha256": "bb688b67f04bf5fbd5acc8733ee1ef5164a39a18b649c3b219fd2ae5cf579fc0",
+      "bytes": 1774
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -183,6 +188,26 @@
       "sha256": "c8ddca78f6bc57d8fb9e6a541f890736be9e4cfb1b493858d0de000c55dda01b",
       "bytes": 89322,
       "import_sha256": "c8ddca78f6bc57d8fb9e6a541f890736be9e4cfb1b493858d0de000c55dda01b"
+    },
+    "docs/ios-jit/BUILD_28_CATALOGUE_ACCEPTANCE.md": {
+      "reason": "Build28 physical catalogue/install/gameplay/Quit acceptance, exact evidence and observed limits",
+      "sha256": "91287300dc497ad10fd0d3f39ba4872bef49b0589818f363906407ea9f17c1ad",
+      "bytes": 14078
+    },
+    "docs/ios-jit/BUILD_28_CATALOGUE_ACCEPTANCE_EVIDENCE.json": {
+      "reason": "Sanitized machine-readable review of one build28 export and four physical sessions, with checks and evidence hashes",
+      "sha256": "b1fd61c610f7e2c89ba506b59121e4ae1e0351aecec32ddf3f7958057d18b2ad",
+      "bytes": 53962
+    },
+    "docs/ios-jit/BUILD_31_LOADING_REVIEW.md": {
+      "reason": "Derived build31 physical-device review of owner feedback and private evidence; raw logs remain ignored",
+      "sha256": "0c16b48d820d1b6c51e58a1ff0ea5f692d7d67e11ec09e0eea562220e76698ac",
+      "bytes": 2893
+    },
+    "docs/ios-jit/BUILD_31_LOADING_REVIEW_EVIDENCE.json": {
+      "reason": "Derived build31 physical-device review of owner feedback and private evidence; raw logs remain ignored",
+      "sha256": "b1d4789e539217b54315cc6353a5f840dfe879f17f0f8e8c0d8a465c46d06085",
+      "bytes": 9639
     },
     "docs/ios-jit/BUILD_4_CRASH_AND_BUILD_5.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
@@ -363,6 +388,16 @@
       "sha256": "b45408c87e37d169caac976024cd28b435faa4859bf38e6259d25c59b170f692",
       "bytes": 64648,
       "import_sha256": "b45408c87e37d169caac976024cd28b435faa4859bf38e6259d25c59b170f692"
+    },
+    "docs/ios-jit/FIRST_FRAME_BUILD_32.md": {
+      "reason": "Build32 implementation, validation, immutable identity, delivery and focused physical gate record",
+      "sha256": "7c2156cef5ffb8cfeb24bf25a49f96ade841a83e50accba75ac1dcb89cc0c6f0",
+      "bytes": 6325
+    },
+    "docs/ios-jit/FIRST_FRAME_BUILD_32_EVIDENCE.json": {
+      "reason": "Build32 implementation, validation, immutable identity, delivery and focused physical gate record",
+      "sha256": "9b131517eb23bac63c98cf1f0c4f87cf31bcb08d3c462f3523b1e03bbf0fe168",
+      "bytes": 8112
     },
     "docs/ios-jit/FNA_GRAPHICS_BUILD_21.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
@@ -564,8 +599,8 @@
     },
     "docs/ios-jit/NATIVE_LAUNCHER_ROADMAP_2026-09-12.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
-      "sha256": "845a5f0eef48b2284e127e7acbae7bf3bdb2e62094886963dd188cdcb7cb7d48",
-      "bytes": 43362,
+      "sha256": "10f8569330e6b570daca95c77b9496595119e0ea364bfdb62adbeee892b77722",
+      "bytes": 45602,
       "import_sha256": "17f2e775e49ddea8e327f8808f755004dd733dbf63b363638874374fb28f7ee3"
     },
     "docs/ios-jit/NATIVE_LAUNCHER_ROADMAP_EVIDENCE.json": {
@@ -585,6 +620,21 @@
       "sha256": "21c618a6e949436f738c07ef6a80860b112e99806ad40d3c7bd9302237e70619",
       "bytes": 5470,
       "import_sha256": "21c618a6e949436f738c07ef6a80860b112e99806ad40d3c7bd9302237e70619"
+    },
+    "docs/ios-jit/RESPONSIVE_LOADING_BUILD_30.md": {
+      "reason": "Cabrillo cooperative loading implementation, independent verification or current acceptance documentation",
+      "sha256": "4db87850406e262ea1a199692c351218e5edbfb2e6a56245076d4b32584ff79a",
+      "bytes": 840
+    },
+    "docs/ios-jit/RESPONSIVE_LOADING_BUILD_31.md": {
+      "reason": "Cabrillo cooperative loading implementation, independent verification or current acceptance documentation",
+      "sha256": "9e9a538be174561ae286215c90837f8f6cfaeae281a0893e64172068406e56b5",
+      "bytes": 8862
+    },
+    "docs/ios-jit/RESPONSIVE_LOADING_BUILD_31_EVIDENCE.json": {
+      "reason": "Cabrillo cooperative loading implementation, independent verification or current acceptance documentation",
+      "sha256": "64659c3e8eae055dc2489cfd4eb9c90bf180a95bd9c6dc9a277505c797a8dd73",
+      "bytes": 12110
     },
     "docs/ios-jit/SESSION_FOUNDATION_BUILD_23.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
@@ -621,6 +671,16 @@
       "sha256": "fb8dbd57e8c6ea5bd86d916f5ab0651486e9108150a2015410abe5983f7f907d",
       "bytes": 2324,
       "import_sha256": "fb8dbd57e8c6ea5bd86d916f5ab0651486e9108150a2015410abe5983f7f907d"
+    },
+    "docs/ios-jit/STARTUP_PREPARATION_BUILD_29.md": {
+      "reason": "Build29 preparation result, exact current startup thread boundaries and managed milestone/dependency implementation plan",
+      "sha256": "756d6335cdbed283bdc9d9ef6235044b8cb0405f2cbf500b6a8d36bc613acdb9",
+      "bytes": 14949
+    },
+    "docs/ios-jit/STARTUP_PREPARATION_BUILD_29_EVIDENCE.json": {
+      "reason": "Sanitized new-build/negative-control/source-review evidence, exact artifact hashes and explicitly pending phone gates",
+      "sha256": "489938c516c6a472b3f3be9d121041e3ae6c6ac62b864a043deb354f3a8f588e",
+      "bytes": 7212
     },
     "docs/ios-jit/STRAWBERRY_JAM_BUILD_19.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
@@ -6130,6 +6190,1387 @@
       "bytes": 8065,
       "import_sha256": "759bead234844fd4a6506752e6b86e504484b9133d79d91e128d11d4ac0c3f0b"
     },
+    "experiments/ios-jit/launcher-first-frame/BuildIdentity.json": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/BuildIdentity.json",
+      "derived_from_sha256": "fee9f8c9f536b23722aa22314ae78d0e1c6239a02c850e7fa8c7a1fbbf3987bd",
+      "sha256": "d0b89a0f363519f6c04ac17abf45c9b3b9ac680d16fae6c3ca6d38678cd25ee4",
+      "bytes": 280
+    },
+    "experiments/ios-jit/launcher-first-frame/CompatibilityDownloads.json": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/CompatibilityDownloads.json",
+      "derived_from_sha256": "4bfc7e61a78a310b41cb4dcb75f127eb9f5a2cd156018356f4d3ca21357e35d9",
+      "sha256": "4bfc7e61a78a310b41cb4dcb75f127eb9f5a2cd156018356f4d3ca21357e35d9",
+      "bytes": 2938
+    },
+    "experiments/ios-jit/launcher-first-frame/Dependencies.json": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/Dependencies.json",
+      "derived_from_sha256": "6ce2810afc5ff6b79df8de70550d0e80363945fa2106ff18e3c193d10d8de242",
+      "sha256": "6ce2810afc5ff6b79df8de70550d0e80363945fa2106ff18e3c193d10d8de242",
+      "bytes": 9662
+    },
+    "experiments/ios-jit/launcher-first-frame/INSTALL.md": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/INSTALL.md",
+      "derived_from_sha256": "483eb18a047f69d4569f3652a36af59d87da0d635f385b5c123f13c1ee972efd",
+      "sha256": "7826b90ffdbbfa357901507f335a366933e0206e1867a0df95db248d925837ad",
+      "bytes": 797
+    },
+    "experiments/ios-jit/launcher-first-frame/Info.plist": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/Info.plist",
+      "derived_from_sha256": "e1c997f2c72c729c32f24bff1518283a2f63a605e6c1e84590ae2c5c51b0f0c2",
+      "sha256": "4450172aa911f81a814d77228f73abaf7e0f51da7251381f92e7c2f4d03611da",
+      "bytes": 2797
+    },
+    "experiments/ios-jit/launcher-first-frame/ManagedPayload.json": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/ManagedPayload.json",
+      "derived_from_sha256": "0c04380074d47bd610ba84142cabafca61ea0970f2721d83c767b46661b421f3",
+      "sha256": "6b9a6360ddca7b736022f389f44c268b464a16bff15b9bdbdc274a12384c1292",
+      "bytes": 28444
+    },
+    "experiments/ios-jit/launcher-first-frame/PHONE_README.txt": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/PHONE_README.txt",
+      "derived_from_sha256": "5ef0f8fa2a23ddacf69b075dddcf7f5e8dfb50b54958dc596e17fbbf63658dc5",
+      "sha256": "a19bc69e7da87ad6e2feb2739047b1e5b6af73d0dccc2fc74baa7b6cd794406d",
+      "bytes": 2554
+    },
+    "experiments/ios-jit/launcher-first-frame/README.md": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/README.md",
+      "derived_from_sha256": "cb8f9d4e9c9c75fa95807f89c0cd1f92a0ad5ed578767b5276b40da08f957076",
+      "sha256": "2ed535358977bc9ba03ec6e5a8e89487ff06b78bf87f31daa3f5ce04550464c0",
+      "bytes": 1738
+    },
+    "experiments/ios-jit/launcher-first-frame/RuntimeCompatibleReleases.json": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/RuntimeCompatibleReleases.json",
+      "derived_from_sha256": "092e0d4d023a509d63f4bc1bc544ab509d1a0e4814b32a2bffc173085a01e54d",
+      "sha256": "092e0d4d023a509d63f4bc1bc544ab509d1a0e4814b32a2bffc173085a01e54d",
+      "bytes": 2343
+    },
+    "experiments/ios-jit/launcher-first-frame/RuntimeIdentity.json": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/RuntimeIdentity.json",
+      "derived_from_sha256": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62",
+      "sha256": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62",
+      "bytes": 246
+    },
+    "experiments/ios-jit/launcher-first-frame/THIRD_PARTY_NOTICES.md": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/THIRD_PARTY_NOTICES.md",
+      "derived_from_sha256": "1e81917abada3d294e061ffaea381ff91f77bc1a83c3c2f7df872af2fa0f0689",
+      "sha256": "ef4aaa5c311bca564d24d7f4ab7bc311bb81d00aeb1768b93e4a3bb60c5a8019",
+      "bytes": 6396
+    },
+    "experiments/ios-jit/launcher-first-frame/native/CatalogueModels.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/CatalogueModels.swift",
+      "derived_from_sha256": "3ff6cbcc7d14d7085f85817d3eb2016b313600f610705f565dd0e0608bd57ab7",
+      "sha256": "3ff6cbcc7d14d7085f85817d3eb2016b313600f610705f565dd0e0608bd57ab7",
+      "bytes": 13677
+    },
+    "experiments/ios-jit/launcher-first-frame/native/CatalogueProvider.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/CatalogueProvider.swift",
+      "derived_from_sha256": "70557d0d33649dd6645e52de1cce056a02c97586eb40aaef8d432943c26fcd94",
+      "sha256": "70557d0d33649dd6645e52de1cce056a02c97586eb40aaef8d432943c26fcd94",
+      "bytes": 14431
+    },
+    "experiments/ios-jit/launcher-first-frame/native/CatalogueUI.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/CatalogueUI.swift",
+      "derived_from_sha256": "0be4f5f436cfea60df780ffb387127f2f5189c37fe72832fae466ebfb7b1fb38",
+      "sha256": "0be4f5f436cfea60df780ffb387127f2f5189c37fe72832fae466ebfb7b1fb38",
+      "bytes": 30328
+    },
+    "experiments/ios-jit/launcher-first-frame/native/DependencyInstaller.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/DependencyInstaller.swift",
+      "derived_from_sha256": "182e9dbbfa8066c979a1a1ff063af1de0c772562f848cc932a2560006ffd756c",
+      "sha256": "182e9dbbfa8066c979a1a1ff063af1de0c772562f848cc932a2560006ffd756c",
+      "bytes": 39861
+    },
+    "experiments/ios-jit/launcher-first-frame/native/DependencyPlan.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/DependencyPlan.swift",
+      "derived_from_sha256": "1b594faa98375e44751459b6ce541efbeb9ae94c39914322dd2d81c47269b00e",
+      "sha256": "1b594faa98375e44751459b6ce541efbeb9ae94c39914322dd2d81c47269b00e",
+      "bytes": 23555
+    },
+    "experiments/ios-jit/launcher-first-frame/native/InstallJournal.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/InstallJournal.swift",
+      "derived_from_sha256": "03f3cfe8e74ead21c58e7ba043880cdeae171afdcdfec7a4f92a29fbb4226906",
+      "sha256": "03f3cfe8e74ead21c58e7ba043880cdeae171afdcdfec7a4f92a29fbb4226906",
+      "bytes": 15999
+    },
+    "experiments/ios-jit/launcher-first-frame/native/InstallReport.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/InstallReport.swift",
+      "derived_from_sha256": "7356be40959bd2217d610a78de0fd451cda67fb0833670edfed70a4664eadad4",
+      "sha256": "7356be40959bd2217d610a78de0fd451cda67fb0833670edfed70a4664eadad4",
+      "bytes": 3319
+    },
+    "experiments/ios-jit/launcher-first-frame/native/LauncherUI.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/LauncherUI.swift",
+      "derived_from_sha256": "652ee92c83c3f6840f895335306ea6413f5593f6b06dbbcb89a4c2f07a5ec414",
+      "sha256": "f7198e28749734312b6cf9c3324e32f1b8bd8bc97a66f3287822ec3da9fefe06",
+      "bytes": 29095
+    },
+    "experiments/ios-jit/launcher-first-frame/native/LoadingView.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/LoadingView.swift",
+      "derived_from_sha256": "3bf8a93b5d1d836478a7696553d275bf07f7b7cc3023a87f3be1f39eb31c17ef",
+      "sha256": "0293b586171dfe062781879901cac75d0e8429630dd68e5aaf5a6593cd9e292a",
+      "bytes": 10125
+    },
+    "experiments/ios-jit/launcher-first-frame/native/ModLibrary.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/ModLibrary.swift",
+      "derived_from_sha256": "62ef7e1f62ff620280909299d2f69fac44c805510962ae543b8b67d0ef973561",
+      "sha256": "62ef7e1f62ff620280909299d2f69fac44c805510962ae543b8b67d0ef973561",
+      "bytes": 25385
+    },
+    "experiments/ios-jit/launcher-first-frame/native/ModUpdates.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/ModUpdates.swift",
+      "derived_from_sha256": "21cb7b9a6fa43e1afbd55487ea662fcd61da188a98fc7ac88e8980d50217c79c",
+      "sha256": "21cb7b9a6fa43e1afbd55487ea662fcd61da188a98fc7ac88e8980d50217c79c",
+      "bytes": 5139
+    },
+    "experiments/ios-jit/launcher-first-frame/native/RuntimeIdentity.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/RuntimeIdentity.swift",
+      "derived_from_sha256": "68b2485c0f9400aed5c05337443e20040dc3107a806984f25dd8abbe3444aecd",
+      "sha256": "68b2485c0f9400aed5c05337443e20040dc3107a806984f25dd8abbe3444aecd",
+      "bytes": 941
+    },
+    "experiments/ios-jit/launcher-first-frame/native/SimulatorCatalogueFixture.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/SimulatorCatalogueFixture.swift",
+      "derived_from_sha256": "efd6252e5d800e60b82b172cb69fddbe8c5c0b3e95a200a30f93579aa03bb8c9",
+      "sha256": "efd6252e5d800e60b82b172cb69fddbe8c5c0b3e95a200a30f93579aa03bb8c9",
+      "bytes": 1981
+    },
+    "experiments/ios-jit/launcher-first-frame/native/SimulatorInstallFixture.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/SimulatorInstallFixture.swift",
+      "derived_from_sha256": "b58bdaee8d3a706cab7094e3432527f770e506aad721b8fc0dc76fd9380e4bc2",
+      "sha256": "b58bdaee8d3a706cab7094e3432527f770e506aad721b8fc0dc76fd9380e4bc2",
+      "bytes": 2888
+    },
+    "experiments/ios-jit/launcher-first-frame/native/XXHash64.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/XXHash64.swift",
+      "derived_from_sha256": "a6ded61fdfc3338931c5ac5b3e81c7d6dc3873c8f8fa309dc0aaa0f4f27807e9",
+      "sha256": "a6ded61fdfc3338931c5ac5b3e81c7d6dc3873c8f8fa309dc0aaa0f4f27807e9",
+      "bytes": 4343
+    },
+    "experiments/ios-jit/launcher-first-frame/native/fna3d-backbuffer.patch": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/fna3d-backbuffer.patch",
+      "derived_from_sha256": "b62d08b66722ae1465884af993cd4eeec2ec2562401c6ba9514065f7aae53c88",
+      "sha256": "b62d08b66722ae1465884af993cd4eeec2ec2562401c6ba9514065f7aae53c88",
+      "bytes": 2164
+    },
+    "experiments/ios-jit/launcher-first-frame/native/fna3d-callback.patch": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/native/fna3d-callback.patch",
+      "derived_from_sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7",
+      "sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7",
+      "bytes": 3827
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJContentImport.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJContentImport.h",
+      "derived_from_sha256": "3eaf5ddb440d5b72e1e8ff82a5ca06961127fc288eb4c208bf2bf5b514229dac",
+      "sha256": "3eaf5ddb440d5b72e1e8ff82a5ca06961127fc288eb4c208bf2bf5b514229dac",
+      "bytes": 436
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJContentImport.m": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJContentImport.m",
+      "derived_from_sha256": "b2b5f8d76707eaf1d0d07e114bb507dc4b4a9e539322b9bd68e9ae8d79f0cb24",
+      "sha256": "b2b5f8d76707eaf1d0d07e114bb507dc4b4a9e539322b9bd68e9ae8d79f0cb24",
+      "bytes": 6396
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJEventStore.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJEventStore.h",
+      "derived_from_sha256": "efd3cd912d91dfd3bfd7780624cb4b1a12df4d267c9f91aef42a29654d57a28a",
+      "sha256": "efd3cd912d91dfd3bfd7780624cb4b1a12df4d267c9f91aef42a29654d57a28a",
+      "bytes": 603
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJEventStore.m": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJEventStore.m",
+      "derived_from_sha256": "d1a40970243b1b182643a2165e913682ce2b7d7a9b79505d7806b997f0cdce19",
+      "sha256": "d1a40970243b1b182643a2165e913682ce2b7d7a9b79505d7806b997f0cdce19",
+      "bytes": 11326
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJFrameMetrics.c": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJFrameMetrics.c",
+      "derived_from_sha256": "a226aa0714bb344d80d069eb4c53957d1c4f429778a3950edbc1f689363d984e",
+      "sha256": "a226aa0714bb344d80d069eb4c53957d1c4f429778a3950edbc1f689363d984e",
+      "bytes": 1198
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJFrameMetrics.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJFrameMetrics.h",
+      "derived_from_sha256": "af23f5991fbece934b62f1f1696511a9b503ec672c81f35449c6b52ade1de271",
+      "sha256": "af23f5991fbece934b62f1f1696511a9b503ec672c81f35449c6b52ade1de271",
+      "bytes": 464
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJGraphicsManaged.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJGraphicsManaged.h",
+      "derived_from_sha256": "1f8df173c0bd79920b5c7276876806c08b4273b30167fa28dd00603b510c368b",
+      "sha256": "1f8df173c0bd79920b5c7276876806c08b4273b30167fa28dd00603b510c368b",
+      "bytes": 686
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJGraphicsManaged.m": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJGraphicsManaged.m",
+      "derived_from_sha256": "9bbb43dd9c693207754a1889d082ef7e5cb37627f848645658f66ffea0396ba1",
+      "sha256": "9bbb43dd9c693207754a1889d082ef7e5cb37627f848645658f66ffea0396ba1",
+      "bytes": 12554
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJGraphicsPlatform.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJGraphicsPlatform.h",
+      "derived_from_sha256": "7bcd909a2ece6cb89c14acd9073f71589b32f2578b1be8c3056e83e09797806d",
+      "sha256": "7bcd909a2ece6cb89c14acd9073f71589b32f2578b1be8c3056e83e09797806d",
+      "bytes": 352
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJGraphicsPlatform.m": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJGraphicsPlatform.m",
+      "derived_from_sha256": "4793d0bc50da6e664d99aa07020a554884e2051ec165c640a9c8ff43a55004de",
+      "sha256": "1e7432b2e53482cc36404b3947c433fea9da2d72b05576c629ce6aa83f5c91a1",
+      "bytes": 11595
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJHookCodeArena.c": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJHookCodeArena.c",
+      "derived_from_sha256": "b7d4be5dc1b6ea0962a9c82982528334244dd28554551d16c2963235fa564fb6",
+      "sha256": "b7d4be5dc1b6ea0962a9c82982528334244dd28554551d16c2963235fa564fb6",
+      "bytes": 1156
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJHookMemory.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJHookMemory.h",
+      "derived_from_sha256": "156be1fa2219bb948eec17a3bd3e83490bd42bc90abb8a628c2f0a879a4316e1",
+      "sha256": "156be1fa2219bb948eec17a3bd3e83490bd42bc90abb8a628c2f0a879a4316e1",
+      "bytes": 268
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJHookNative.c": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJHookNative.c",
+      "derived_from_sha256": "f7697e464775fab08350f82c8f1cc6a1e1a42093dc45893f10f22e36bcbe6d82",
+      "sha256": "f7697e464775fab08350f82c8f1cc6a1e1a42093dc45893f10f22e36bcbe6d82",
+      "bytes": 9570
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJHookNative.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJHookNative.h",
+      "derived_from_sha256": "a411afe48cda6650953100eccda47760e23979542f0b496fcc1104a4b86683b4",
+      "sha256": "a411afe48cda6650953100eccda47760e23979542f0b496fcc1104a4b86683b4",
+      "bytes": 454
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJHookProtocol.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJHookProtocol.h",
+      "derived_from_sha256": "ead42b011fa619f9138f5f44b82c23e6225db81c41d5fb931f48153982e0a7e7",
+      "sha256": "ead42b011fa619f9138f5f44b82c23e6225db81c41d5fb931f48153982e0a7e7",
+      "bytes": 933
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJLoadingState.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJLoadingState.h",
+      "derived_from_sha256": "c4ba780c11911e3d36b5a3b93c6731346b8ab6ffc80f03d33ba583909c3c4d0e",
+      "sha256": "c4ba780c11911e3d36b5a3b93c6731346b8ab6ffc80f03d33ba583909c3c4d0e",
+      "bytes": 260
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJLoadingState.m": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJLoadingState.m",
+      "derived_from_sha256": "e6cefbb84eef1e35dece6a207fff1c4e5c4fcf6ba34b5ca2409813c60024c607",
+      "sha256": "e6cefbb84eef1e35dece6a207fff1c4e5c4fcf6ba34b5ca2409813c60024c607",
+      "bytes": 4284
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJLoadingWindow.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJLoadingWindow.h",
+      "derived_from_sha256": "92333c0bdd9b87017fce2994e73976e46c629ef07bd3f2819c5156619b3299f2",
+      "sha256": "83eadd16eff4cddda9f59c2abbbe00ae090026389b79aacd75de19a9ae682fe0",
+      "bytes": 637
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJLoadingWindow.m": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJLoadingWindow.m",
+      "derived_from_sha256": "8f3c95f3de5bb113a50cacfb3e83bf93f2ac64375dde2d2b1db505ad564df826",
+      "sha256": "28a59ea8ae0aace985cbf5fba9dfa20dba3b018b12fc61a604acf7de9f0df423",
+      "bytes": 1342
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJModStore.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJModStore.h",
+      "derived_from_sha256": "73372b7eb6b61ca7dce4686682931cdaa6fca5885442c7555ff1fd9e0d12ad91",
+      "sha256": "73372b7eb6b61ca7dce4686682931cdaa6fca5885442c7555ff1fd9e0d12ad91",
+      "bytes": 715
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJModStore.m": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJModStore.m",
+      "derived_from_sha256": "e194d284962fa1bc17bba1f8ee21109a327649e9b5bef46e70132338d58db7e7",
+      "sha256": "e194d284962fa1bc17bba1f8ee21109a327649e9b5bef46e70132338d58db7e7",
+      "bytes": 8948
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJSession.c": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJSession.c",
+      "derived_from_sha256": "e7cbbffee7d203c443827116db6e9662a6c86b5a6d94684bca93829e6145bcf0",
+      "sha256": "e7cbbffee7d203c443827116db6e9662a6c86b5a6d94684bca93829e6145bcf0",
+      "bytes": 1220
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJSession.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/CJSession.h",
+      "derived_from_sha256": "ed5b6af81b2dabec6201c4895308276ae51bae2717e6329c300d361d49df2774",
+      "sha256": "ed5b6af81b2dabec6201c4895308276ae51bae2717e6329c300d361d49df2774",
+      "bytes": 394
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJStartupFrame.c": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "sha256": "c07205788be053cdd49b44b8433cc8c647845cd043a86db2bba3721299f4e9bd",
+      "bytes": 458
+    },
+    "experiments/ios-jit/launcher-first-frame/src/CJStartupFrame.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "sha256": "0c81e769cc3078fe1d034a278bbdc63f2b3341524fb1a39f7a88a41a996bf35c",
+      "bytes": 275
+    },
+    "experiments/ios-jit/launcher-first-frame/src/VMRange.c": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/VMRange.c",
+      "derived_from_sha256": "d3f79c1e4e631e38514be0a9c5bb7fac8f701e511ac1ef4fc6273d8aca4b444a",
+      "sha256": "d3f79c1e4e631e38514be0a9c5bb7fac8f701e511ac1ef4fc6273d8aca4b444a",
+      "bytes": 3427
+    },
+    "experiments/ios-jit/launcher-first-frame/src/VMRange.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/VMRange.h",
+      "derived_from_sha256": "f236c62fa85e2e06f47b5b48da84599495d1df7b9606c98d291269f140b14f3e",
+      "sha256": "f236c62fa85e2e06f47b5b48da84599495d1df7b9606c98d291269f140b14f3e",
+      "bytes": 1896
+    },
+    "experiments/ios-jit/launcher-first-frame/src/VMRangeDarwin.c": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/VMRangeDarwin.c",
+      "derived_from_sha256": "cd467ba42a821643b18ed2846237b51993d9353543e7237a8e8d4c1d01d57546",
+      "sha256": "cd467ba42a821643b18ed2846237b51993d9353543e7237a8e8d4c1d01d57546",
+      "bytes": 868
+    },
+    "experiments/ios-jit/launcher-first-frame/src/cjit-bfi-policy.h": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/cjit-bfi-policy.h",
+      "derived_from_sha256": "b3533b44b37a5ea5c766c88e32832a850af3b34d3abac1cf2d0c709f7b223dee",
+      "sha256": "b3533b44b37a5ea5c766c88e32832a850af3b34d3abac1cf2d0c709f7b223dee",
+      "bytes": 746
+    },
+    "experiments/ios-jit/launcher-first-frame/src/main.m": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/src/main.m",
+      "derived_from_sha256": "a46f9910c138ccd2698a41ed006aac3c9bfb8bda1412fb529989987877a9d7e7",
+      "sha256": "f28f9a987f5b073000a7a57e121aaf503fd5657f9c33df0932c1d9f46ce1fa31",
+      "bytes": 105321
+    },
+    "experiments/ios-jit/launcher-first-frame/tests/FirstFrames.cs": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "sha256": "b52d1c9be6e04ae25fc16a0b538c3dc530a18f4d6892b37e19524e12f52a1fb8",
+      "bytes": 1156
+    },
+    "experiments/ios-jit/launcher-first-frame/tests/LoadingPreview.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/tests/LoadingPreview.swift",
+      "derived_from_sha256": "0cafb9680ca6ab6088ffdd3b28e3a4661bec8b757577ff4253e5fae9a1951d1f",
+      "sha256": "367ecc1e031e3206dab0c0c4fb2a8a75681df1ee148363e638bdbbe39b4458fd",
+      "bytes": 8125
+    },
+    "experiments/ios-jit/launcher-first-frame/tests/LoadingUITests.pbxproj.template": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/tests/LoadingUITests.pbxproj.template",
+      "derived_from_sha256": "4d53f23628c708cb53930a705465b3258263ff09a45998161f404d936999d454",
+      "sha256": "4d53f23628c708cb53930a705465b3258263ff09a45998161f404d936999d454",
+      "bytes": 2395
+    },
+    "experiments/ios-jit/launcher-first-frame/tests/LoadingUITests.swift": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/tests/LoadingUITests.swift",
+      "derived_from_sha256": "8391491ec46e6a8ef030e16d711ae534272abf511b579a0ec553aa8051774183",
+      "sha256": "817a69cd29de8abacc34f395326c2f70cef2461104c28e99fa0cbf94f7567f6a",
+      "bytes": 4819
+    },
+    "experiments/ios-jit/launcher-first-frame/tests/LoadingUITests.xcscheme": {
+      "reason": "Build32 native first-frame presentation, required shared launcher code/resources, provenance or external validation fixture",
+      "derived_from": "experiments/ios-jit/launcher-loading-release/tests/LoadingUITests.xcscheme",
+      "derived_from_sha256": "12eb13a25bebd6dc7e8fbdfdab1911802d97c6fa32b43b2c1571aca4eef72844",
+      "sha256": "12eb13a25bebd6dc7e8fbdfdab1911802d97c6fa32b43b2c1571aca4eef72844",
+      "bytes": 1102
+    },
+    "experiments/ios-jit/launcher-loading-release/BuildIdentity.json": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/BuildIdentity.json",
+      "sha256": "fee9f8c9f536b23722aa22314ae78d0e1c6239a02c850e7fa8c7a1fbbf3987bd",
+      "bytes": 269
+    },
+    "experiments/ios-jit/launcher-loading-release/CompatibilityDownloads.json": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/CompatibilityDownloads.json",
+      "sha256": "4bfc7e61a78a310b41cb4dcb75f127eb9f5a2cd156018356f4d3ca21357e35d9",
+      "bytes": 2938
+    },
+    "experiments/ios-jit/launcher-loading-release/Dependencies.json": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/Dependencies.json",
+      "sha256": "6ce2810afc5ff6b79df8de70550d0e80363945fa2106ff18e3c193d10d8de242",
+      "bytes": 9662
+    },
+    "experiments/ios-jit/launcher-loading-release/INSTALL.md": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/INSTALL.md",
+      "sha256": "483eb18a047f69d4569f3652a36af59d87da0d635f385b5c123f13c1ee972efd",
+      "bytes": 797
+    },
+    "experiments/ios-jit/launcher-loading-release/Info.plist": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/Info.plist",
+      "sha256": "e1c997f2c72c729c32f24bff1518283a2f63a605e6c1e84590ae2c5c51b0f0c2",
+      "bytes": 2797
+    },
+    "experiments/ios-jit/launcher-loading-release/ManagedPayload.json": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "sha256": "0c04380074d47bd610ba84142cabafca61ea0970f2721d83c767b46661b421f3",
+      "bytes": 28451
+    },
+    "experiments/ios-jit/launcher-loading-release/PHONE_README.txt": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/PHONE_README.txt",
+      "sha256": "5ef0f8fa2a23ddacf69b075dddcf7f5e8dfb50b54958dc596e17fbbf63658dc5",
+      "bytes": 2231
+    },
+    "experiments/ios-jit/launcher-loading-release/README.md": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/README.md",
+      "sha256": "cb8f9d4e9c9c75fa95807f89c0cd1f92a0ad5ed578767b5276b40da08f957076",
+      "bytes": 2147
+    },
+    "experiments/ios-jit/launcher-loading-release/RuntimeCompatibleReleases.json": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/RuntimeCompatibleReleases.json",
+      "sha256": "092e0d4d023a509d63f4bc1bc544ab509d1a0e4814b32a2bffc173085a01e54d",
+      "bytes": 2343
+    },
+    "experiments/ios-jit/launcher-loading-release/RuntimeIdentity.json": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/RuntimeIdentity.json",
+      "sha256": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62",
+      "bytes": 246
+    },
+    "experiments/ios-jit/launcher-loading-release/THIRD_PARTY_NOTICES.md": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/THIRD_PARTY_NOTICES.md",
+      "sha256": "1e81917abada3d294e061ffaea381ff91f77bc1a83c3c2f7df872af2fa0f0689",
+      "bytes": 6345
+    },
+    "experiments/ios-jit/launcher-loading-release/native/CatalogueModels.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/CatalogueModels.swift",
+      "sha256": "3ff6cbcc7d14d7085f85817d3eb2016b313600f610705f565dd0e0608bd57ab7",
+      "bytes": 13677
+    },
+    "experiments/ios-jit/launcher-loading-release/native/CatalogueProvider.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/CatalogueProvider.swift",
+      "sha256": "70557d0d33649dd6645e52de1cce056a02c97586eb40aaef8d432943c26fcd94",
+      "bytes": 14431
+    },
+    "experiments/ios-jit/launcher-loading-release/native/CatalogueUI.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/CatalogueUI.swift",
+      "sha256": "0be4f5f436cfea60df780ffb387127f2f5189c37fe72832fae466ebfb7b1fb38",
+      "bytes": 30328
+    },
+    "experiments/ios-jit/launcher-loading-release/native/DependencyInstaller.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/DependencyInstaller.swift",
+      "sha256": "182e9dbbfa8066c979a1a1ff063af1de0c772562f848cc932a2560006ffd756c",
+      "bytes": 39861
+    },
+    "experiments/ios-jit/launcher-loading-release/native/DependencyPlan.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/DependencyPlan.swift",
+      "sha256": "1b594faa98375e44751459b6ce541efbeb9ae94c39914322dd2d81c47269b00e",
+      "bytes": 23555
+    },
+    "experiments/ios-jit/launcher-loading-release/native/InstallJournal.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/InstallJournal.swift",
+      "sha256": "03f3cfe8e74ead21c58e7ba043880cdeae171afdcdfec7a4f92a29fbb4226906",
+      "bytes": 15999
+    },
+    "experiments/ios-jit/launcher-loading-release/native/InstallReport.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/InstallReport.swift",
+      "sha256": "7356be40959bd2217d610a78de0fd451cda67fb0833670edfed70a4664eadad4",
+      "bytes": 3319
+    },
+    "experiments/ios-jit/launcher-loading-release/native/LauncherUI.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/LauncherUI.swift",
+      "sha256": "652ee92c83c3f6840f895335306ea6413f5593f6b06dbbcb89a4c2f07a5ec414",
+      "bytes": 29183
+    },
+    "experiments/ios-jit/launcher-loading-release/native/LoadingView.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/LoadingView.swift",
+      "sha256": "3bf8a93b5d1d836478a7696553d275bf07f7b7cc3023a87f3be1f39eb31c17ef",
+      "bytes": 7784
+    },
+    "experiments/ios-jit/launcher-loading-release/native/ModLibrary.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/ModLibrary.swift",
+      "sha256": "62ef7e1f62ff620280909299d2f69fac44c805510962ae543b8b67d0ef973561",
+      "bytes": 25385
+    },
+    "experiments/ios-jit/launcher-loading-release/native/ModUpdates.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/ModUpdates.swift",
+      "sha256": "21cb7b9a6fa43e1afbd55487ea662fcd61da188a98fc7ac88e8980d50217c79c",
+      "bytes": 5139
+    },
+    "experiments/ios-jit/launcher-loading-release/native/RuntimeIdentity.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/RuntimeIdentity.swift",
+      "sha256": "68b2485c0f9400aed5c05337443e20040dc3107a806984f25dd8abbe3444aecd",
+      "bytes": 941
+    },
+    "experiments/ios-jit/launcher-loading-release/native/SimulatorCatalogueFixture.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/SimulatorCatalogueFixture.swift",
+      "sha256": "efd6252e5d800e60b82b172cb69fddbe8c5c0b3e95a200a30f93579aa03bb8c9",
+      "bytes": 1981
+    },
+    "experiments/ios-jit/launcher-loading-release/native/SimulatorInstallFixture.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/SimulatorInstallFixture.swift",
+      "sha256": "b58bdaee8d3a706cab7094e3432527f770e506aad721b8fc0dc76fd9380e4bc2",
+      "bytes": 2888
+    },
+    "experiments/ios-jit/launcher-loading-release/native/XXHash64.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/XXHash64.swift",
+      "sha256": "a6ded61fdfc3338931c5ac5b3e81c7d6dc3873c8f8fa309dc0aaa0f4f27807e9",
+      "bytes": 4343
+    },
+    "experiments/ios-jit/launcher-loading-release/native/fna3d-backbuffer.patch": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/fna3d-backbuffer.patch",
+      "sha256": "b62d08b66722ae1465884af993cd4eeec2ec2562401c6ba9514065f7aae53c88",
+      "bytes": 2164
+    },
+    "experiments/ios-jit/launcher-loading-release/native/fna3d-callback.patch": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/native/fna3d-callback.patch",
+      "sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7",
+      "bytes": 3827
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJContentImport.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJContentImport.h",
+      "sha256": "3eaf5ddb440d5b72e1e8ff82a5ca06961127fc288eb4c208bf2bf5b514229dac",
+      "bytes": 436
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJContentImport.m": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJContentImport.m",
+      "sha256": "b2b5f8d76707eaf1d0d07e114bb507dc4b4a9e539322b9bd68e9ae8d79f0cb24",
+      "bytes": 6396
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJEventStore.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJEventStore.h",
+      "sha256": "efd3cd912d91dfd3bfd7780624cb4b1a12df4d267c9f91aef42a29654d57a28a",
+      "bytes": 603
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJEventStore.m": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJEventStore.m",
+      "sha256": "d1a40970243b1b182643a2165e913682ce2b7d7a9b79505d7806b997f0cdce19",
+      "bytes": 11326
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJFrameMetrics.c": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJFrameMetrics.c",
+      "sha256": "a226aa0714bb344d80d069eb4c53957d1c4f429778a3950edbc1f689363d984e",
+      "bytes": 1198
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJFrameMetrics.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJFrameMetrics.h",
+      "sha256": "af23f5991fbece934b62f1f1696511a9b503ec672c81f35449c6b52ade1de271",
+      "bytes": 464
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJGraphicsManaged.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJGraphicsManaged.h",
+      "sha256": "1f8df173c0bd79920b5c7276876806c08b4273b30167fa28dd00603b510c368b",
+      "bytes": 686
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJGraphicsManaged.m": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJGraphicsManaged.m",
+      "sha256": "9bbb43dd9c693207754a1889d082ef7e5cb37627f848645658f66ffea0396ba1",
+      "bytes": 12554
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJGraphicsPlatform.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJGraphicsPlatform.h",
+      "sha256": "7bcd909a2ece6cb89c14acd9073f71589b32f2578b1be8c3056e83e09797806d",
+      "bytes": 352
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJGraphicsPlatform.m": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJGraphicsPlatform.m",
+      "sha256": "4793d0bc50da6e664d99aa07020a554884e2051ec165c640a9c8ff43a55004de",
+      "bytes": 11189
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJHookCodeArena.c": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJHookCodeArena.c",
+      "sha256": "b7d4be5dc1b6ea0962a9c82982528334244dd28554551d16c2963235fa564fb6",
+      "bytes": 1156
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJHookMemory.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJHookMemory.h",
+      "sha256": "156be1fa2219bb948eec17a3bd3e83490bd42bc90abb8a628c2f0a879a4316e1",
+      "bytes": 268
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJHookNative.c": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJHookNative.c",
+      "sha256": "f7697e464775fab08350f82c8f1cc6a1e1a42093dc45893f10f22e36bcbe6d82",
+      "bytes": 9570
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJHookNative.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJHookNative.h",
+      "sha256": "a411afe48cda6650953100eccda47760e23979542f0b496fcc1104a4b86683b4",
+      "bytes": 454
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJHookProtocol.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJHookProtocol.h",
+      "sha256": "ead42b011fa619f9138f5f44b82c23e6225db81c41d5fb931f48153982e0a7e7",
+      "bytes": 933
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJLoadingState.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJLoadingState.h",
+      "sha256": "c4ba780c11911e3d36b5a3b93c6731346b8ab6ffc80f03d33ba583909c3c4d0e",
+      "bytes": 260
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJLoadingState.m": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJLoadingState.m",
+      "sha256": "e6cefbb84eef1e35dece6a207fff1c4e5c4fcf6ba34b5ca2409813c60024c607",
+      "bytes": 4284
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJLoadingWindow.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJLoadingWindow.h",
+      "sha256": "92333c0bdd9b87017fce2994e73976e46c629ef07bd3f2819c5156619b3299f2",
+      "bytes": 237
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJLoadingWindow.m": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJLoadingWindow.m",
+      "sha256": "8f3c95f3de5bb113a50cacfb3e83bf93f2ac64375dde2d2b1db505ad564df826",
+      "bytes": 159
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJModStore.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJModStore.h",
+      "sha256": "73372b7eb6b61ca7dce4686682931cdaa6fca5885442c7555ff1fd9e0d12ad91",
+      "bytes": 715
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJModStore.m": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJModStore.m",
+      "sha256": "e194d284962fa1bc17bba1f8ee21109a327649e9b5bef46e70132338d58db7e7",
+      "bytes": 8948
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJSession.c": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJSession.c",
+      "sha256": "e7cbbffee7d203c443827116db6e9662a6c86b5a6d94684bca93829e6145bcf0",
+      "bytes": 1220
+    },
+    "experiments/ios-jit/launcher-loading-release/src/CJSession.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/CJSession.h",
+      "sha256": "ed5b6af81b2dabec6201c4895308276ae51bae2717e6329c300d361d49df2774",
+      "bytes": 394
+    },
+    "experiments/ios-jit/launcher-loading-release/src/VMRange.c": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/VMRange.c",
+      "sha256": "d3f79c1e4e631e38514be0a9c5bb7fac8f701e511ac1ef4fc6273d8aca4b444a",
+      "bytes": 3427
+    },
+    "experiments/ios-jit/launcher-loading-release/src/VMRange.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/VMRange.h",
+      "sha256": "f236c62fa85e2e06f47b5b48da84599495d1df7b9606c98d291269f140b14f3e",
+      "bytes": 1896
+    },
+    "experiments/ios-jit/launcher-loading-release/src/VMRangeDarwin.c": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/VMRangeDarwin.c",
+      "sha256": "cd467ba42a821643b18ed2846237b51993d9353543e7237a8e8d4c1d01d57546",
+      "bytes": 868
+    },
+    "experiments/ios-jit/launcher-loading-release/src/cjit-bfi-policy.h": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/cjit-bfi-policy.h",
+      "sha256": "b3533b44b37a5ea5c766c88e32832a850af3b34d3abac1cf2d0c709f7b223dee",
+      "bytes": 746
+    },
+    "experiments/ios-jit/launcher-loading-release/src/main.m": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/src/main.m",
+      "sha256": "a46f9910c138ccd2698a41ed006aac3c9bfb8bda1412fb529989987877a9d7e7",
+      "bytes": 105180
+    },
+    "experiments/ios-jit/launcher-loading-release/tests/LoadingPreview.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/tests/LoadingPreview.swift",
+      "sha256": "0cafb9680ca6ab6088ffdd3b28e3a4661bec8b757577ff4253e5fae9a1951d1f",
+      "bytes": 4377
+    },
+    "experiments/ios-jit/launcher-loading-release/tests/LoadingUITests.pbxproj.template": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/tests/LoadingUITests.pbxproj.template",
+      "sha256": "4d53f23628c708cb53930a705465b3258263ff09a45998161f404d936999d454",
+      "bytes": 2395
+    },
+    "experiments/ios-jit/launcher-loading-release/tests/LoadingUITests.swift": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/tests/LoadingUITests.swift",
+      "sha256": "8391491ec46e6a8ef030e16d711ae534272abf511b579a0ec553aa8051774183",
+      "bytes": 3283
+    },
+    "experiments/ios-jit/launcher-loading-release/tests/LoadingUITests.xcscheme": {
+      "reason": "Build31 native delivery source, presentation fixture or exact dependency/identity record; independent of frozen build30",
+      "derived_from": "experiments/ios-jit/launcher-loading/tests/LoadingUITests.xcscheme",
+      "sha256": "12eb13a25bebd6dc7e8fbdfdab1911802d97c6fa32b43b2c1571aca4eef72844",
+      "bytes": 1102
+    },
+    "experiments/ios-jit/launcher-loading/BuildIdentity.json": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/BuildIdentity.json",
+      "sha256": "3d366e62cca3aff84b2f0e64acfbc90813c2cff4c67315b533509398dbed829d",
+      "bytes": 269
+    },
+    "experiments/ios-jit/launcher-loading/CompatibilityDownloads.json": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/CompatibilityDownloads.json",
+      "sha256": "4bfc7e61a78a310b41cb4dcb75f127eb9f5a2cd156018356f4d3ca21357e35d9",
+      "bytes": 2938
+    },
+    "experiments/ios-jit/launcher-loading/Dependencies.json": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/Dependencies.json",
+      "sha256": "6ce2810afc5ff6b79df8de70550d0e80363945fa2106ff18e3c193d10d8de242",
+      "bytes": 9662
+    },
+    "experiments/ios-jit/launcher-loading/INSTALL.md": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/INSTALL.md",
+      "sha256": "beed8ef0e912a9640a6278dbfaf9f015b3a0f41c62e25d8d70bc586768e3a0eb",
+      "bytes": 797
+    },
+    "experiments/ios-jit/launcher-loading/Info.plist": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/Info.plist",
+      "sha256": "72e00687d2df3086ddd1d2adf102a87661320ecd737f342523e153b94dbde15b",
+      "bytes": 2797
+    },
+    "experiments/ios-jit/launcher-loading/ManagedDependencies.json": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "c779a46115fe2bb151555e85520c055f0267393214824d61087cc056ed757bd8",
+      "bytes": 379
+    },
+    "experiments/ios-jit/launcher-loading/PHONE_README.txt": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/PHONE_README.txt",
+      "sha256": "bb0dd38ddab7e957516430635ad1d185f89ab30b0880ccc1233edfd992fc11c0",
+      "bytes": 2231
+    },
+    "experiments/ios-jit/launcher-loading/README.md": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/README.md",
+      "sha256": "87522a7cff6a30e45ce64fcba4f53824f131dddd5d9e04a730b6c8ed19ba8ba3",
+      "bytes": 1702
+    },
+    "experiments/ios-jit/launcher-loading/RuntimeCompatibleReleases.json": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/RuntimeCompatibleReleases.json",
+      "sha256": "092e0d4d023a509d63f4bc1bc544ab509d1a0e4814b32a2bffc173085a01e54d",
+      "bytes": 2343
+    },
+    "experiments/ios-jit/launcher-loading/RuntimeIdentity.json": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/RuntimeIdentity.json",
+      "sha256": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62",
+      "bytes": 246
+    },
+    "experiments/ios-jit/launcher-loading/THIRD_PARTY_NOTICES.md": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/THIRD_PARTY_NOTICES.md",
+      "sha256": "7ff7d32a6dcac00fe4571f613280088944908f454ae2fbf1fb352557aecb8337",
+      "bytes": 6345
+    },
+    "experiments/ios-jit/launcher-loading/managed/AssemblyInfo.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/AssemblyInfo.cs",
+      "sha256": "9f36365b393b6e5924f854bf399f09024f87b4f96088ef13ad68a23ec687f8ab",
+      "bytes": 108
+    },
+    "experiments/ios-jit/launcher-loading/managed/BackbufferChecks.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/BackbufferChecks.cs",
+      "sha256": "8da9d7d9b8843d7fd429e6539796b7c6c73ff155c032c585a3c53f4d604787dd",
+      "bytes": 5192
+    },
+    "experiments/ios-jit/launcher-loading/managed/CollabOptionalIntegration.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/CollabOptionalIntegration.cs",
+      "sha256": "22ace75c568f91d0ff70c155c054dfbc5ade7b816846335333e2020ff60c6ed8",
+      "bytes": 4621
+    },
+    "experiments/ios-jit/launcher-loading/managed/ContentLibrary.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/ContentLibrary.cs",
+      "sha256": "cc16e9a6bb5437d96aeab337e2442913e33d71f82738c26529477e6f952f5fde",
+      "bytes": 2734
+    },
+    "experiments/ios-jit/launcher-loading/managed/ContentStore.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/ContentStore.cs",
+      "sha256": "682810c74108a3c2d9febaf94226996e662357f87d174e0dabba3f79fd08c936",
+      "bytes": 14830
+    },
+    "experiments/ios-jit/launcher-loading/managed/GameEntry.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/GameEntry.cs",
+      "sha256": "6996503f3acc28659da798639394bc8a535eb87077858ce0af96c20020f4baf3",
+      "bytes": 20228
+    },
+    "experiments/ios-jit/launcher-loading/managed/GlobalUsings.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/GlobalUsings.cs",
+      "sha256": "80947286869ed1646503352674216e8b953391dc1559944e591ab12427e21dae",
+      "bytes": 168
+    },
+    "experiments/ios-jit/launcher-loading/managed/GravityOptionalIntegration.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/GravityOptionalIntegration.cs",
+      "sha256": "7d883bad05856ef321b5ae4ab57e27b44d6bec82c5a82d7508fc3a34756ac259",
+      "bytes": 8221
+    },
+    "experiments/ios-jit/launcher-loading/managed/ModSelection.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/ModSelection.cs",
+      "sha256": "2603b48165554661ca01221ef523d7dd8702ef5030f99ac26b36c7c9cf8412f2",
+      "bytes": 2295
+    },
+    "experiments/ios-jit/launcher-loading/managed/MonoTypeDiscovery.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/MonoTypeDiscovery.cs",
+      "sha256": "9f02b966bfe220a9d9fda193d317403de64efc41b747062a87821d48719b98ca",
+      "bytes": 3583
+    },
+    "experiments/ios-jit/launcher-loading/managed/Platform.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/Platform.cs",
+      "sha256": "fc2bed647132c96a9fc993a84f25123d14d8a81a2764bfafa8172c3a4b9e2dd3",
+      "bytes": 14140
+    },
+    "experiments/ios-jit/launcher-loading/managed/RuntimeIdentity.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/RuntimeIdentity.cs",
+      "sha256": "df3b3aefbebd80a12e2be76934cebf213fcb8ad3acd070c02818434ce99b28c5",
+      "bytes": 719
+    },
+    "experiments/ios-jit/launcher-loading/managed/Startup.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "21206e228f0bd6a029f93cea677dafc16eb58c824e7763adae859cffaa54a0c3",
+      "bytes": 1544
+    },
+    "experiments/ios-jit/launcher-loading/managed/StrawberryJam.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/StrawberryJam.cs",
+      "sha256": "b8269c751c2d2a8526e21bc9658a04a9e34890f33fd084e02f637cecb9c950d4",
+      "bytes": 5411
+    },
+    "experiments/ios-jit/launcher-loading/managed/TouchPort.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/managed/TouchPort.cs",
+      "sha256": "d8823c7ceec9ae53f5b7996c300fab825dd0cc2770dd91d568904a038e84cba5",
+      "bytes": 12432
+    },
+    "experiments/ios-jit/launcher-loading/native/CatalogueModels.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/CatalogueModels.swift",
+      "sha256": "3ff6cbcc7d14d7085f85817d3eb2016b313600f610705f565dd0e0608bd57ab7",
+      "bytes": 13677
+    },
+    "experiments/ios-jit/launcher-loading/native/CatalogueProvider.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/CatalogueProvider.swift",
+      "sha256": "70557d0d33649dd6645e52de1cce056a02c97586eb40aaef8d432943c26fcd94",
+      "bytes": 14431
+    },
+    "experiments/ios-jit/launcher-loading/native/CatalogueUI.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/CatalogueUI.swift",
+      "sha256": "0be4f5f436cfea60df780ffb387127f2f5189c37fe72832fae466ebfb7b1fb38",
+      "bytes": 30328
+    },
+    "experiments/ios-jit/launcher-loading/native/DependencyInstaller.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/DependencyInstaller.swift",
+      "sha256": "182e9dbbfa8066c979a1a1ff063af1de0c772562f848cc932a2560006ffd756c",
+      "bytes": 39861
+    },
+    "experiments/ios-jit/launcher-loading/native/DependencyPlan.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/DependencyPlan.swift",
+      "sha256": "1b594faa98375e44751459b6ce541efbeb9ae94c39914322dd2d81c47269b00e",
+      "bytes": 23555
+    },
+    "experiments/ios-jit/launcher-loading/native/InstallJournal.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/InstallJournal.swift",
+      "sha256": "03f3cfe8e74ead21c58e7ba043880cdeae171afdcdfec7a4f92a29fbb4226906",
+      "bytes": 15999
+    },
+    "experiments/ios-jit/launcher-loading/native/InstallReport.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/InstallReport.swift",
+      "sha256": "7356be40959bd2217d610a78de0fd451cda67fb0833670edfed70a4664eadad4",
+      "bytes": 3319
+    },
+    "experiments/ios-jit/launcher-loading/native/LauncherUI.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/LauncherUI.swift",
+      "sha256": "652ee92c83c3f6840f895335306ea6413f5593f6b06dbbcb89a4c2f07a5ec414",
+      "bytes": 29183
+    },
+    "experiments/ios-jit/launcher-loading/native/LoadingView.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "57db223d45be5b639c994a642c14cf3b81e34031ec08d6d4c2b5f0935fe31c4c",
+      "bytes": 7774
+    },
+    "experiments/ios-jit/launcher-loading/native/ModLibrary.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/ModLibrary.swift",
+      "sha256": "62ef7e1f62ff620280909299d2f69fac44c805510962ae543b8b67d0ef973561",
+      "bytes": 25385
+    },
+    "experiments/ios-jit/launcher-loading/native/ModUpdates.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/ModUpdates.swift",
+      "sha256": "21cb7b9a6fa43e1afbd55487ea662fcd61da188a98fc7ac88e8980d50217c79c",
+      "bytes": 5139
+    },
+    "experiments/ios-jit/launcher-loading/native/RuntimeIdentity.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/RuntimeIdentity.swift",
+      "sha256": "68b2485c0f9400aed5c05337443e20040dc3107a806984f25dd8abbe3444aecd",
+      "bytes": 941
+    },
+    "experiments/ios-jit/launcher-loading/native/SimulatorCatalogueFixture.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/SimulatorCatalogueFixture.swift",
+      "sha256": "efd6252e5d800e60b82b172cb69fddbe8c5c0b3e95a200a30f93579aa03bb8c9",
+      "bytes": 1981
+    },
+    "experiments/ios-jit/launcher-loading/native/SimulatorInstallFixture.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/SimulatorInstallFixture.swift",
+      "sha256": "b58bdaee8d3a706cab7094e3432527f770e506aad721b8fc0dc76fd9380e4bc2",
+      "bytes": 2888
+    },
+    "experiments/ios-jit/launcher-loading/native/XXHash64.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/XXHash64.swift",
+      "sha256": "a6ded61fdfc3338931c5ac5b3e81c7d6dc3873c8f8fa309dc0aaa0f4f27807e9",
+      "bytes": 4343
+    },
+    "experiments/ios-jit/launcher-loading/native/fna3d-backbuffer.patch": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/fna3d-backbuffer.patch",
+      "sha256": "b62d08b66722ae1465884af993cd4eeec2ec2562401c6ba9514065f7aae53c88",
+      "bytes": 2164
+    },
+    "experiments/ios-jit/launcher-loading/native/fna3d-callback.patch": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/native/fna3d-callback.patch",
+      "sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7",
+      "bytes": 3827
+    },
+    "experiments/ios-jit/launcher-loading/patch_loading.py": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "235b4e6f028bb467f3d5932f62aeac63897164159e3879f314bd908076ad1a93",
+      "bytes": 6328
+    },
+    "experiments/ios-jit/launcher-loading/src/CJContentImport.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJContentImport.h",
+      "sha256": "3eaf5ddb440d5b72e1e8ff82a5ca06961127fc288eb4c208bf2bf5b514229dac",
+      "bytes": 436
+    },
+    "experiments/ios-jit/launcher-loading/src/CJContentImport.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJContentImport.m",
+      "sha256": "b2b5f8d76707eaf1d0d07e114bb507dc4b4a9e539322b9bd68e9ae8d79f0cb24",
+      "bytes": 6396
+    },
+    "experiments/ios-jit/launcher-loading/src/CJEventStore.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJEventStore.h",
+      "sha256": "efd3cd912d91dfd3bfd7780624cb4b1a12df4d267c9f91aef42a29654d57a28a",
+      "bytes": 603
+    },
+    "experiments/ios-jit/launcher-loading/src/CJEventStore.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJEventStore.m",
+      "sha256": "d1a40970243b1b182643a2165e913682ce2b7d7a9b79505d7806b997f0cdce19",
+      "bytes": 11326
+    },
+    "experiments/ios-jit/launcher-loading/src/CJFrameMetrics.c": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJFrameMetrics.c",
+      "sha256": "a226aa0714bb344d80d069eb4c53957d1c4f429778a3950edbc1f689363d984e",
+      "bytes": 1198
+    },
+    "experiments/ios-jit/launcher-loading/src/CJFrameMetrics.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJFrameMetrics.h",
+      "sha256": "af23f5991fbece934b62f1f1696511a9b503ec672c81f35449c6b52ade1de271",
+      "bytes": 464
+    },
+    "experiments/ios-jit/launcher-loading/src/CJGraphicsManaged.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJGraphicsManaged.h",
+      "sha256": "1f8df173c0bd79920b5c7276876806c08b4273b30167fa28dd00603b510c368b",
+      "bytes": 686
+    },
+    "experiments/ios-jit/launcher-loading/src/CJGraphicsManaged.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJGraphicsManaged.m",
+      "sha256": "9bbb43dd9c693207754a1889d082ef7e5cb37627f848645658f66ffea0396ba1",
+      "bytes": 12554
+    },
+    "experiments/ios-jit/launcher-loading/src/CJGraphicsPlatform.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJGraphicsPlatform.h",
+      "sha256": "7bcd909a2ece6cb89c14acd9073f71589b32f2578b1be8c3056e83e09797806d",
+      "bytes": 352
+    },
+    "experiments/ios-jit/launcher-loading/src/CJGraphicsPlatform.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJGraphicsPlatform.m",
+      "sha256": "4793d0bc50da6e664d99aa07020a554884e2051ec165c640a9c8ff43a55004de",
+      "bytes": 11189
+    },
+    "experiments/ios-jit/launcher-loading/src/CJHookCodeArena.c": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJHookCodeArena.c",
+      "sha256": "b7d4be5dc1b6ea0962a9c82982528334244dd28554551d16c2963235fa564fb6",
+      "bytes": 1156
+    },
+    "experiments/ios-jit/launcher-loading/src/CJHookMemory.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJHookMemory.h",
+      "sha256": "156be1fa2219bb948eec17a3bd3e83490bd42bc90abb8a628c2f0a879a4316e1",
+      "bytes": 268
+    },
+    "experiments/ios-jit/launcher-loading/src/CJHookNative.c": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJHookNative.c",
+      "sha256": "f7697e464775fab08350f82c8f1cc6a1e1a42093dc45893f10f22e36bcbe6d82",
+      "bytes": 9570
+    },
+    "experiments/ios-jit/launcher-loading/src/CJHookNative.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJHookNative.h",
+      "sha256": "a411afe48cda6650953100eccda47760e23979542f0b496fcc1104a4b86683b4",
+      "bytes": 454
+    },
+    "experiments/ios-jit/launcher-loading/src/CJHookProtocol.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJHookProtocol.h",
+      "sha256": "ead42b011fa619f9138f5f44b82c23e6225db81c41d5fb931f48153982e0a7e7",
+      "bytes": 933
+    },
+    "experiments/ios-jit/launcher-loading/src/CJLoadingState.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "c4ba780c11911e3d36b5a3b93c6731346b8ab6ffc80f03d33ba583909c3c4d0e",
+      "bytes": 260
+    },
+    "experiments/ios-jit/launcher-loading/src/CJLoadingState.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "e6cefbb84eef1e35dece6a207fff1c4e5c4fcf6ba34b5ca2409813c60024c607",
+      "bytes": 4284
+    },
+    "experiments/ios-jit/launcher-loading/src/CJLoadingWindow.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "92333c0bdd9b87017fce2994e73976e46c629ef07bd3f2819c5156619b3299f2",
+      "bytes": 237
+    },
+    "experiments/ios-jit/launcher-loading/src/CJLoadingWindow.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "8f3c95f3de5bb113a50cacfb3e83bf93f2ac64375dde2d2b1db505ad564df826",
+      "bytes": 159
+    },
+    "experiments/ios-jit/launcher-loading/src/CJModStore.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJModStore.h",
+      "sha256": "73372b7eb6b61ca7dce4686682931cdaa6fca5885442c7555ff1fd9e0d12ad91",
+      "bytes": 715
+    },
+    "experiments/ios-jit/launcher-loading/src/CJModStore.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJModStore.m",
+      "sha256": "e194d284962fa1bc17bba1f8ee21109a327649e9b5bef46e70132338d58db7e7",
+      "bytes": 8948
+    },
+    "experiments/ios-jit/launcher-loading/src/CJSession.c": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJSession.c",
+      "sha256": "e7cbbffee7d203c443827116db6e9662a6c86b5a6d94684bca93829e6145bcf0",
+      "bytes": 1220
+    },
+    "experiments/ios-jit/launcher-loading/src/CJSession.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/CJSession.h",
+      "sha256": "ed5b6af81b2dabec6201c4895308276ae51bae2717e6329c300d361d49df2774",
+      "bytes": 394
+    },
+    "experiments/ios-jit/launcher-loading/src/VMRange.c": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/VMRange.c",
+      "sha256": "d3f79c1e4e631e38514be0a9c5bb7fac8f701e511ac1ef4fc6273d8aca4b444a",
+      "bytes": 3427
+    },
+    "experiments/ios-jit/launcher-loading/src/VMRange.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/VMRange.h",
+      "sha256": "f236c62fa85e2e06f47b5b48da84599495d1df7b9606c98d291269f140b14f3e",
+      "bytes": 1896
+    },
+    "experiments/ios-jit/launcher-loading/src/VMRangeDarwin.c": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/VMRangeDarwin.c",
+      "sha256": "cd467ba42a821643b18ed2846237b51993d9353543e7237a8e8d4c1d01d57546",
+      "bytes": 868
+    },
+    "experiments/ios-jit/launcher-loading/src/cjit-bfi-policy.h": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/cjit-bfi-policy.h",
+      "sha256": "b3533b44b37a5ea5c766c88e32832a850af3b34d3abac1cf2d0c709f7b223dee",
+      "bytes": 746
+    },
+    "experiments/ios-jit/launcher-loading/src/main.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/src/main.m",
+      "sha256": "a46f9910c138ccd2698a41ed006aac3c9bfb8bda1412fb529989987877a9d7e7",
+      "bytes": 105180
+    },
+    "experiments/ios-jit/launcher-loading/tests/AssemblyComparison.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "3adf78e2abb5d2a9ff3213fd4994e208ab616d72990b0f5c18df730a2dd9e48c",
+      "bytes": 2312
+    },
+    "experiments/ios-jit/launcher-loading/tests/CatalogueTool.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tests/CatalogueTool.swift",
+      "sha256": "d085dfe82f9667bdf6f8ecfa65a6273371ab121f6d70001be6167e7b91351529",
+      "bytes": 797
+    },
+    "experiments/ios-jit/launcher-loading/tests/CooperativeLoadingTests.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "dd086ab1e5c8bf245a83c1f1fadba3f3e476a51658c1e415aba311b5c63adf35",
+      "bytes": 3648
+    },
+    "experiments/ios-jit/launcher-loading/tests/DelayedDependencyTests.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "bee53cea4ffbd531022ca5c701cf8174fbf97eb9350f08c8356a95648d2a4823",
+      "bytes": 5074
+    },
+    "experiments/ios-jit/launcher-loading/tests/FailingStartupMod.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "69ba911394f0d0a9b62a718358a0223d382b543829d86f2c0896d9dc9ddc4404",
+      "bytes": 323
+    },
+    "experiments/ios-jit/launcher-loading/tests/LoadingPreview.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "0cafb9680ca6ab6088ffdd3b28e3a4661bec8b757577ff4253e5fae9a1951d1f",
+      "bytes": 4377
+    },
+    "experiments/ios-jit/launcher-loading/tests/LoadingStateTests.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "980520ff9e0c740d8758a7e2fefecf0a31caf0a00496e11dbe085eb4d3c23e37",
+      "bytes": 4520
+    },
+    "experiments/ios-jit/launcher-loading/tests/LoadingUITests.pbxproj.template": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "4d53f23628c708cb53930a705465b3258263ff09a45998161f404d936999d454",
+      "bytes": 2395
+    },
+    "experiments/ios-jit/launcher-loading/tests/LoadingUITests.swift": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "8391491ec46e6a8ef030e16d711ae534272abf511b579a0ec553aa8051774183",
+      "bytes": 3283
+    },
+    "experiments/ios-jit/launcher-loading/tests/LoadingUITests.xcscheme": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "12eb13a25bebd6dc7e8fbdfdab1911802d97c6fa32b43b2c1571aca4eef72844",
+      "bytes": 1102
+    },
+    "experiments/ios-jit/launcher-loading/tests/ReflectionFlagsTests.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tests/ReflectionFlagsTests.cs",
+      "sha256": "fdffff2b0dd04130362eab6b199801f13c9dbdaf2e6cc0b4d7abdbf347e920c8",
+      "bytes": 3317
+    },
+    "experiments/ios-jit/launcher-loading/tests/RuntimeUpgradeTests.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tests/RuntimeUpgradeTests.cs",
+      "sha256": "e353e283450fdb99f2f3d014d8408f50fd8086b20dcb9e5648e7b2cdb1ad8c93",
+      "bytes": 3491
+    },
+    "experiments/ios-jit/launcher-loading/tests/SessionIntegrationTests.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tests/SessionIntegrationTests.cs",
+      "sha256": "e854b3e1c29c8874c744cb0f8b938b3a697e0ce0d9ffb2bc30b72f729cffec10",
+      "bytes": 3543
+    },
+    "experiments/ios-jit/launcher-loading/tests/StartupRetentionTests.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-startup/tests/StartupRetentionTests.m",
+      "sha256": "69b015c2b5c0756647fab91ce72bae7f7f64fa939e66cf709a061807a4e8b11f",
+      "bytes": 2438
+    },
+    "experiments/ios-jit/launcher-loading/tests/host_graphics.m": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tests/host_graphics.m",
+      "sha256": "96e84bd5a987ae960f96b20ef06ec896031dbb7e387dd6090a0a9796b3aacced",
+      "bytes": 16309
+    },
+    "experiments/ios-jit/launcher-loading/tests/host_page_model.c": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tests/host_page_model.c",
+      "sha256": "00592a1fe0ebf8c4e1ad9f6f453f2c03aa7c554db8f5eaae19bf5911eb050f69",
+      "bytes": 178
+    },
+    "experiments/ios-jit/launcher-loading/tools/AssemblyAudit.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/AssemblyAudit.cs",
+      "sha256": "73d10ea2468570d973dc60fc5c958a893368068e26718c65b8471ca930b60b3b",
+      "bytes": 2087
+    },
+    "experiments/ios-jit/launcher-loading/tools/BackbufferReadGuard.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/BackbufferReadGuard.cs",
+      "sha256": "e16bd5a4a478e2b572c9681303690627411c3ff1513afdaa83537675a4edb294",
+      "bytes": 2741
+    },
+    "experiments/ios-jit/launcher-loading/tools/EverestPrepare.csproj": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/EverestPrepare.csproj",
+      "sha256": "c83ab834c917bb5b017cbc0ac8e4bf78056bbff7c3bc51ed41497e97d2814947",
+      "bytes": 637
+    },
+    "experiments/ios-jit/launcher-loading/tools/FnaCompatibility.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/FnaCompatibility.cs",
+      "sha256": "521ae9d438de9b77ce22973cdf7fce519b4c23553a19c1a772dd718090ef18a7",
+      "bytes": 2905
+    },
+    "experiments/ios-jit/launcher-loading/tools/FnaGraphicsCompatibility.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/FnaGraphicsCompatibility.cs",
+      "sha256": "e2230deea249e7071a518d09f8f04fe61665997423e7644c70e541be02ea24c5",
+      "bytes": 9608
+    },
+    "experiments/ios-jit/launcher-loading/tools/LiteralFieldEmitter.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/LiteralFieldEmitter.cs",
+      "sha256": "42368123d631bc4bbe7040c2de20f90c29abc2e39a9498e1ff1ac66765fa0cba",
+      "bytes": 2516
+    },
+    "experiments/ios-jit/launcher-loading/tools/PatchFnaBackbuffer.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/PatchFnaBackbuffer.cs",
+      "sha256": "e2a0dc06712df10a0e167e63d6e9d459141b17f7732ef405304e6bf0d6b93b81",
+      "bytes": 9083
+    },
+    "experiments/ios-jit/launcher-loading/tools/PatchMonoMod.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/PatchMonoMod.cs",
+      "sha256": "759bead234844fd4a6506752e6b86e504484b9133d79d91e128d11d4ac0c3f0b",
+      "bytes": 8065
+    },
+    "experiments/ios-jit/launcher-loading/tools/PatchReflectionFlags.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/PatchReflectionFlags.cs",
+      "sha256": "705bd02e166f42b8625528f667a27b5f0729ca2e5579d030cb8819f6dde3b7f8",
+      "bytes": 7111
+    },
+    "experiments/ios-jit/launcher-loading/tools/PlatformPatch.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/PlatformPatch.cs",
+      "sha256": "be55ff471cfd491cae7ed22a95ea6bf96ae0199b3bb4f49010a68ccd6178677c",
+      "bytes": 10599
+    },
+    "experiments/ios-jit/launcher-loading/tools/Program.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "derived_from": "experiments/ios-jit/launcher-catalogue/tools/Program.cs",
+      "sha256": "21ff877d8530d8b10255c890567403640056f09cd8fb7cb2723d9dbccc80316f",
+      "bytes": 2260
+    },
+    "experiments/ios-jit/launcher-loading/upstream/CabrilloDelayedLoading.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "82a91514404c8bdc61273710b2098bbc59d0108bfce645986889d9bfac82ae5b",
+      "bytes": 3654
+    },
+    "experiments/ios-jit/launcher-loading/upstream/CabrilloLoading.cs": {
+      "reason": "Build30 cooperative startup source, pinned managed build tooling or focused scheduling/progress regression control",
+      "sha256": "3d21ec1379229256215755d40bd76b5ec44e07c30321c559cde1013c39f06562",
+      "bytes": 4344
+    },
     "experiments/ios-jit/launcher-reflection/INSTALL.md": {
       "reason": "JIT implementation/test instructions or attribution for launcher-reflection; preserve current implementation and versioned investigation history",
       "sha256": "dc2b48280a05a52338c9e837fb391082bb8272e7e5a59b0b80e3a729e27c9282",
@@ -9459,6 +10900,431 @@
       "sha256": "759bead234844fd4a6506752e6b86e504484b9133d79d91e128d11d4ac0c3f0b",
       "bytes": 8065,
       "import_sha256": "759bead234844fd4a6506752e6b86e504484b9133d79d91e128d11d4ac0c3f0b"
+    },
+    "experiments/ios-jit/launcher-startup/BuildIdentity.json": {
+      "reason": "Fresh build29 product/version authority preserving the existing guest/data identity",
+      "sha256": "078c4664d88670c51b7d279b2b076b8f48708b71a5eb39efa5db1c3618178189",
+      "bytes": 294
+    },
+    "experiments/ios-jit/launcher-startup/CompatibilityDownloads.json": {
+      "reason": "Build29 exact runtime identity and compatibility policy resources inherited from accepted runtime and browser lane",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/CompatibilityDownloads.json",
+        "sha256": "4bfc7e61a78a310b41cb4dcb75f127eb9f5a2cd156018356f4d3ca21357e35d9"
+      },
+      "sha256": "4bfc7e61a78a310b41cb4dcb75f127eb9f5a2cd156018356f4d3ca21357e35d9",
+      "bytes": 2938
+    },
+    "experiments/ios-jit/launcher-startup/Dependencies.json": {
+      "reason": "Explicit hash lock for build29 reused private capsule, native archives/headers and shared/vendor source; no private payload",
+      "sha256": "6ce2810afc5ff6b79df8de70550d0e80363945fa2106ff18e3c193d10d8de242",
+      "bytes": 9662
+    },
+    "experiments/ios-jit/launcher-startup/Info.plist": {
+      "reason": "Fresh build29 product/version authority preserving the existing guest/data identity",
+      "sha256": "1d225e580e3694124b5436a8983bc369630099dfe56f2248dd811335a90748fa",
+      "bytes": 2797
+    },
+    "experiments/ios-jit/launcher-startup/README.md": {
+      "reason": "Build29 lane scope, reproduction commands, diagnostics semantics and managed rebuild boundary",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/README.md",
+        "sha256": "86a48f9e30d09d6483ff07571567d72606f428ceadce2152c15cb1e861280c47"
+      },
+      "sha256": "8f98b177f9bc13af36ade5221c694cdeeb57b13b7e341457036aacee1a332c4c",
+      "bytes": 4141
+    },
+    "experiments/ios-jit/launcher-startup/RuntimeCompatibleReleases.json": {
+      "reason": "Build29 exact runtime identity and compatibility policy resources inherited from accepted runtime and browser lane",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/RuntimeCompatibleReleases.json",
+        "sha256": "092e0d4d023a509d63f4bc1bc544ab509d1a0e4814b32a2bffc173085a01e54d"
+      },
+      "sha256": "092e0d4d023a509d63f4bc1bc544ab509d1a0e4814b32a2bffc173085a01e54d",
+      "bytes": 2343
+    },
+    "experiments/ios-jit/launcher-startup/RuntimeIdentity.json": {
+      "reason": "Build29 exact runtime identity and compatibility policy resources inherited from accepted runtime and browser lane",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/RuntimeIdentity.json",
+        "sha256": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62"
+      },
+      "sha256": "67b284331a08bd3eefb4e3ec5f09ca3b20b9000a4b40f13a0e2e1aa373e63f62",
+      "bytes": 246
+    },
+    "experiments/ios-jit/launcher-startup/THIRD_PARTY_NOTICES.md": {
+      "reason": "Retained attribution and license provenance for build29 unchanged third-party dependencies",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/THIRD_PARTY_NOTICES.md",
+        "sha256": "9c7849f7174367974abb31c34a37327b45a06f9300889ed605974d3859d08bce"
+      },
+      "sha256": "9c7849f7174367974abb31c34a37327b45a06f9300889ed605974d3859d08bce",
+      "bytes": 6022
+    },
+    "experiments/ios-jit/launcher-startup/native/CatalogueModels.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/CatalogueModels.swift",
+        "sha256": "3ff6cbcc7d14d7085f85817d3eb2016b313600f610705f565dd0e0608bd57ab7"
+      },
+      "sha256": "3ff6cbcc7d14d7085f85817d3eb2016b313600f610705f565dd0e0608bd57ab7",
+      "bytes": 13677
+    },
+    "experiments/ios-jit/launcher-startup/native/CatalogueProvider.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/CatalogueProvider.swift",
+        "sha256": "70557d0d33649dd6645e52de1cce056a02c97586eb40aaef8d432943c26fcd94"
+      },
+      "sha256": "70557d0d33649dd6645e52de1cce056a02c97586eb40aaef8d432943c26fcd94",
+      "bytes": 14431
+    },
+    "experiments/ios-jit/launcher-startup/native/CatalogueUI.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/CatalogueUI.swift",
+        "sha256": "0be4f5f436cfea60df780ffb387127f2f5189c37fe72832fae466ebfb7b1fb38"
+      },
+      "sha256": "0be4f5f436cfea60df780ffb387127f2f5189c37fe72832fae466ebfb7b1fb38",
+      "bytes": 30328
+    },
+    "experiments/ios-jit/launcher-startup/native/DependencyInstaller.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/DependencyInstaller.swift",
+        "sha256": "182e9dbbfa8066c979a1a1ff063af1de0c772562f848cc932a2560006ffd756c"
+      },
+      "sha256": "182e9dbbfa8066c979a1a1ff063af1de0c772562f848cc932a2560006ffd756c",
+      "bytes": 39861
+    },
+    "experiments/ios-jit/launcher-startup/native/DependencyPlan.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/DependencyPlan.swift",
+        "sha256": "1b594faa98375e44751459b6ce541efbeb9ae94c39914322dd2d81c47269b00e"
+      },
+      "sha256": "1b594faa98375e44751459b6ce541efbeb9ae94c39914322dd2d81c47269b00e",
+      "bytes": 23555
+    },
+    "experiments/ios-jit/launcher-startup/native/InstallJournal.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/InstallJournal.swift",
+        "sha256": "03f3cfe8e74ead21c58e7ba043880cdeae171afdcdfec7a4f92a29fbb4226906"
+      },
+      "sha256": "03f3cfe8e74ead21c58e7ba043880cdeae171afdcdfec7a4f92a29fbb4226906",
+      "bytes": 15999
+    },
+    "experiments/ios-jit/launcher-startup/native/InstallReport.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/InstallReport.swift",
+        "sha256": "7356be40959bd2217d610a78de0fd451cda67fb0833670edfed70a4664eadad4"
+      },
+      "sha256": "7356be40959bd2217d610a78de0fd451cda67fb0833670edfed70a4664eadad4",
+      "bytes": 3319
+    },
+    "experiments/ios-jit/launcher-startup/native/LauncherUI.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/LauncherUI.swift",
+        "sha256": "889cdb8fe2076a76a7e1016a09f30c399bef458966cfe643a7bd13b0e5be7307"
+      },
+      "sha256": "e6b0f5bed5c3a060dc3affc7640deac6bdbb455140a64a60eddc705925221d12",
+      "bytes": 28737
+    },
+    "experiments/ios-jit/launcher-startup/native/ModLibrary.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/ModLibrary.swift",
+        "sha256": "62ef7e1f62ff620280909299d2f69fac44c805510962ae543b8b67d0ef973561"
+      },
+      "sha256": "62ef7e1f62ff620280909299d2f69fac44c805510962ae543b8b67d0ef973561",
+      "bytes": 25385
+    },
+    "experiments/ios-jit/launcher-startup/native/ModUpdates.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/ModUpdates.swift",
+        "sha256": "21cb7b9a6fa43e1afbd55487ea662fcd61da188a98fc7ac88e8980d50217c79c"
+      },
+      "sha256": "21cb7b9a6fa43e1afbd55487ea662fcd61da188a98fc7ac88e8980d50217c79c",
+      "bytes": 5139
+    },
+    "experiments/ios-jit/launcher-startup/native/RuntimeIdentity.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/RuntimeIdentity.swift",
+        "sha256": "68b2485c0f9400aed5c05337443e20040dc3107a806984f25dd8abbe3444aecd"
+      },
+      "sha256": "68b2485c0f9400aed5c05337443e20040dc3107a806984f25dd8abbe3444aecd",
+      "bytes": 941
+    },
+    "experiments/ios-jit/launcher-startup/native/SimulatorCatalogueFixture.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/SimulatorCatalogueFixture.swift",
+        "sha256": "efd6252e5d800e60b82b172cb69fddbe8c5c0b3e95a200a30f93579aa03bb8c9"
+      },
+      "sha256": "efd6252e5d800e60b82b172cb69fddbe8c5c0b3e95a200a30f93579aa03bb8c9",
+      "bytes": 1981
+    },
+    "experiments/ios-jit/launcher-startup/native/SimulatorInstallFixture.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/SimulatorInstallFixture.swift",
+        "sha256": "b58bdaee8d3a706cab7094e3432527f770e506aad721b8fc0dc76fd9380e4bc2"
+      },
+      "sha256": "b58bdaee8d3a706cab7094e3432527f770e506aad721b8fc0dc76fd9380e4bc2",
+      "bytes": 2888
+    },
+    "experiments/ios-jit/launcher-startup/native/XXHash64.swift": {
+      "reason": "Build29 isolated SwiftUI launcher and unchanged reviewed catalogue/install services, with Cabrillo display branding",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/XXHash64.swift",
+        "sha256": "a6ded61fdfc3338931c5ac5b3e81c7d6dc3873c8f8fa309dc0aaa0f4f27807e9"
+      },
+      "sha256": "a6ded61fdfc3338931c5ac5b3e81c7d6dc3873c8f8fa309dc0aaa0f4f27807e9",
+      "bytes": 4343
+    },
+    "experiments/ios-jit/launcher-startup/native/fna3d-backbuffer.patch": {
+      "reason": "Retained accepted renderer backbuffer/callback lifetime correction as a reference for future isolated managed/native changes; the preparation build reuses exact accepted archives",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/fna3d-backbuffer.patch",
+        "sha256": "b62d08b66722ae1465884af993cd4eeec2ec2562401c6ba9514065f7aae53c88"
+      },
+      "sha256": "b62d08b66722ae1465884af993cd4eeec2ec2562401c6ba9514065f7aae53c88",
+      "bytes": 2164
+    },
+    "experiments/ios-jit/launcher-startup/native/fna3d-callback.patch": {
+      "reason": "Retained accepted renderer backbuffer/callback lifetime correction as a reference for future isolated managed/native changes; the preparation build reuses exact accepted archives",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/native/fna3d-callback.patch",
+        "sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7"
+      },
+      "sha256": "5b94ea24be6172dd0e2f6d138660ff68c70d3980454bf6dcf946fb54147b51b7",
+      "bytes": 3827
+    },
+    "experiments/ios-jit/launcher-startup/src/CJContentImport.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJContentImport.h",
+        "sha256": "3eaf5ddb440d5b72e1e8ff82a5ca06961127fc288eb4c208bf2bf5b514229dac"
+      },
+      "sha256": "3eaf5ddb440d5b72e1e8ff82a5ca06961127fc288eb4c208bf2bf5b514229dac",
+      "bytes": 436
+    },
+    "experiments/ios-jit/launcher-startup/src/CJContentImport.m": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJContentImport.m",
+        "sha256": "b2b5f8d76707eaf1d0d07e114bb507dc4b4a9e539322b9bd68e9ae8d79f0cb24"
+      },
+      "sha256": "b2b5f8d76707eaf1d0d07e114bb507dc4b4a9e539322b9bd68e9ae8d79f0cb24",
+      "bytes": 6396
+    },
+    "experiments/ios-jit/launcher-startup/src/CJEventStore.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJEventStore.h",
+        "sha256": "efd3cd912d91dfd3bfd7780624cb4b1a12df4d267c9f91aef42a29654d57a28a"
+      },
+      "sha256": "efd3cd912d91dfd3bfd7780624cb4b1a12df4d267c9f91aef42a29654d57a28a",
+      "bytes": 603
+    },
+    "experiments/ios-jit/launcher-startup/src/CJEventStore.m": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJEventStore.m",
+        "sha256": "738e41c4bb27981168ce6b5149e22513bf6526a57c5475ca6bbb5c45c97c1c8b"
+      },
+      "sha256": "c7c66c48f29fdeb1cd88fbf530db9ab656051c1ea1c2860fdd21bca65aba6817",
+      "bytes": 11215
+    },
+    "experiments/ios-jit/launcher-startup/src/CJFrameMetrics.c": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJFrameMetrics.c",
+        "sha256": "a226aa0714bb344d80d069eb4c53957d1c4f429778a3950edbc1f689363d984e"
+      },
+      "sha256": "a226aa0714bb344d80d069eb4c53957d1c4f429778a3950edbc1f689363d984e",
+      "bytes": 1198
+    },
+    "experiments/ios-jit/launcher-startup/src/CJFrameMetrics.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJFrameMetrics.h",
+        "sha256": "af23f5991fbece934b62f1f1696511a9b503ec672c81f35449c6b52ade1de271"
+      },
+      "sha256": "af23f5991fbece934b62f1f1696511a9b503ec672c81f35449c6b52ade1de271",
+      "bytes": 464
+    },
+    "experiments/ios-jit/launcher-startup/src/CJGraphicsManaged.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJGraphicsManaged.h",
+        "sha256": "1f8df173c0bd79920b5c7276876806c08b4273b30167fa28dd00603b510c368b"
+      },
+      "sha256": "1f8df173c0bd79920b5c7276876806c08b4273b30167fa28dd00603b510c368b",
+      "bytes": 686
+    },
+    "experiments/ios-jit/launcher-startup/src/CJGraphicsManaged.m": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJGraphicsManaged.m",
+        "sha256": "9bbb43dd9c693207754a1889d082ef7e5cb37627f848645658f66ffea0396ba1"
+      },
+      "sha256": "9bbb43dd9c693207754a1889d082ef7e5cb37627f848645658f66ffea0396ba1",
+      "bytes": 12554
+    },
+    "experiments/ios-jit/launcher-startup/src/CJGraphicsPlatform.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJGraphicsPlatform.h",
+        "sha256": "7bcd909a2ece6cb89c14acd9073f71589b32f2578b1be8c3056e83e09797806d"
+      },
+      "sha256": "7bcd909a2ece6cb89c14acd9073f71589b32f2578b1be8c3056e83e09797806d",
+      "bytes": 352
+    },
+    "experiments/ios-jit/launcher-startup/src/CJGraphicsPlatform.m": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJGraphicsPlatform.m",
+        "sha256": "794bd8584966a4e511b116a45e8026767d7049999dd3ef5c49e989cf6e49cb95"
+      },
+      "sha256": "794bd8584966a4e511b116a45e8026767d7049999dd3ef5c49e989cf6e49cb95",
+      "bytes": 10776
+    },
+    "experiments/ios-jit/launcher-startup/src/CJHookCodeArena.c": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJHookCodeArena.c",
+        "sha256": "b7d4be5dc1b6ea0962a9c82982528334244dd28554551d16c2963235fa564fb6"
+      },
+      "sha256": "b7d4be5dc1b6ea0962a9c82982528334244dd28554551d16c2963235fa564fb6",
+      "bytes": 1156
+    },
+    "experiments/ios-jit/launcher-startup/src/CJHookMemory.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJHookMemory.h",
+        "sha256": "156be1fa2219bb948eec17a3bd3e83490bd42bc90abb8a628c2f0a879a4316e1"
+      },
+      "sha256": "156be1fa2219bb948eec17a3bd3e83490bd42bc90abb8a628c2f0a879a4316e1",
+      "bytes": 268
+    },
+    "experiments/ios-jit/launcher-startup/src/CJHookNative.c": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJHookNative.c",
+        "sha256": "f7697e464775fab08350f82c8f1cc6a1e1a42093dc45893f10f22e36bcbe6d82"
+      },
+      "sha256": "f7697e464775fab08350f82c8f1cc6a1e1a42093dc45893f10f22e36bcbe6d82",
+      "bytes": 9570
+    },
+    "experiments/ios-jit/launcher-startup/src/CJHookNative.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJHookNative.h",
+        "sha256": "a411afe48cda6650953100eccda47760e23979542f0b496fcc1104a4b86683b4"
+      },
+      "sha256": "a411afe48cda6650953100eccda47760e23979542f0b496fcc1104a4b86683b4",
+      "bytes": 454
+    },
+    "experiments/ios-jit/launcher-startup/src/CJHookProtocol.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJHookProtocol.h",
+        "sha256": "ead42b011fa619f9138f5f44b82c23e6225db81c41d5fb931f48153982e0a7e7"
+      },
+      "sha256": "ead42b011fa619f9138f5f44b82c23e6225db81c41d5fb931f48153982e0a7e7",
+      "bytes": 933
+    },
+    "experiments/ios-jit/launcher-startup/src/CJModStore.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJModStore.h",
+        "sha256": "73372b7eb6b61ca7dce4686682931cdaa6fca5885442c7555ff1fd9e0d12ad91"
+      },
+      "sha256": "73372b7eb6b61ca7dce4686682931cdaa6fca5885442c7555ff1fd9e0d12ad91",
+      "bytes": 715
+    },
+    "experiments/ios-jit/launcher-startup/src/CJModStore.m": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJModStore.m",
+        "sha256": "e194d284962fa1bc17bba1f8ee21109a327649e9b5bef46e70132338d58db7e7"
+      },
+      "sha256": "e194d284962fa1bc17bba1f8ee21109a327649e9b5bef46e70132338d58db7e7",
+      "bytes": 8948
+    },
+    "experiments/ios-jit/launcher-startup/src/CJSession.c": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJSession.c",
+        "sha256": "e7cbbffee7d203c443827116db6e9662a6c86b5a6d94684bca93829e6145bcf0"
+      },
+      "sha256": "e7cbbffee7d203c443827116db6e9662a6c86b5a6d94684bca93829e6145bcf0",
+      "bytes": 1220
+    },
+    "experiments/ios-jit/launcher-startup/src/CJSession.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/CJSession.h",
+        "sha256": "ed5b6af81b2dabec6201c4895308276ae51bae2717e6329c300d361d49df2774"
+      },
+      "sha256": "ed5b6af81b2dabec6201c4895308276ae51bae2717e6329c300d361d49df2774",
+      "bytes": 394
+    },
+    "experiments/ios-jit/launcher-startup/src/VMRange.c": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/VMRange.c",
+        "sha256": "d3f79c1e4e631e38514be0a9c5bb7fac8f701e511ac1ef4fc6273d8aca4b444a"
+      },
+      "sha256": "d3f79c1e4e631e38514be0a9c5bb7fac8f701e511ac1ef4fc6273d8aca4b444a",
+      "bytes": 3427
+    },
+    "experiments/ios-jit/launcher-startup/src/VMRange.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/VMRange.h",
+        "sha256": "f236c62fa85e2e06f47b5b48da84599495d1df7b9606c98d291269f140b14f3e"
+      },
+      "sha256": "f236c62fa85e2e06f47b5b48da84599495d1df7b9606c98d291269f140b14f3e",
+      "bytes": 1896
+    },
+    "experiments/ios-jit/launcher-startup/src/VMRangeDarwin.c": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/VMRangeDarwin.c",
+        "sha256": "cd467ba42a821643b18ed2846237b51993d9353543e7237a8e8d4c1d01d57546"
+      },
+      "sha256": "cd467ba42a821643b18ed2846237b51993d9353543e7237a8e8d4c1d01d57546",
+      "bytes": 868
+    },
+    "experiments/ios-jit/launcher-startup/src/cjit-bfi-policy.h": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/cjit-bfi-policy.h",
+        "sha256": "b3533b44b37a5ea5c766c88e32832a850af3b34d3abac1cf2d0c709f7b223dee"
+      },
+      "sha256": "b3533b44b37a5ea5c766c88e32832a850af3b34d3abac1cf2d0c709f7b223dee",
+      "bytes": 746
+    },
+    "experiments/ios-jit/launcher-startup/src/main.m": {
+      "reason": "Build29 isolated native lifecycle, JIT/platform bridge and bounded startup diagnostics; preserves frozen build28 source",
+      "derived_from": {
+        "path": "experiments/ios-jit/launcher-catalogue/src/main.m",
+        "sha256": "cf3b626df778aef8354feee9e0fa3f465356cb4641650716e8eb693e65878910"
+      },
+      "sha256": "7b25f8611379383580d1b0758877352f4a684ac6db3c96e3ff2d77cf77f5418a",
+      "bytes": 99725
+    },
+    "experiments/ios-jit/launcher-startup/tests/StartupRetentionTests.m": {
+      "reason": "Synthetic native regression proving startup phase evidence survives bounded diagnostic ring eviction",
+      "sha256": "69b015c2b5c0756647fab91ce72bae7f7f64fa939e66cf709a061807a4e8b11f",
+      "bytes": 2438
     },
     "experiments/ios-jit/launcher/INSTALL.md": {
       "reason": "JIT implementation/test instructions or attribution for launcher; preserve current implementation and versioned investigation history",
@@ -13226,20 +15092,163 @@
       "sha256": "b7761201915d4ea3fc403c38012c8b4be23106ff49de5dfe077d20436a23bc04",
       "bytes": 13041
     },
+    "tools/build_development.py": {
+      "reason": "Independent fresh native development build with isolated outputs, pinned inputs, current metadata and ordinary executable/symbol identities",
+      "sha256": "c519fe030540e0ce53d1376f9f836ee26783768e37172293be16cc8e2ef00146",
+      "bytes": 16771
+    },
+    "tools/build_first_frame.py": {
+      "reason": "Independent build32 recipe and package verification against explicitly pinned Cabrillo dependencies",
+      "derived_from": "tools/build_loading_release.py",
+      "derived_from_sha256": "5a20190a852a2ecc194c4954c76a5d10b1a242f60f78c53f260d29db9015e04f",
+      "sha256": "6451724374c5f53bc2e2c698f3944f51dc0996c919a496ffa9fba82141283d4a",
+      "bytes": 17955
+    },
+    "tools/build_loading.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "239c6a2a069db74ad5670b5fce84e07cb66509262889c3cef5fbdfa283ee803c",
+      "bytes": 17620
+    },
+    "tools/build_loading_managed.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "bfd9d04e5cbc034bf3e49788c27989533812fa28f24059b95c7db10bdeed5033",
+      "bytes": 9163
+    },
+    "tools/build_loading_release.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "5a20190a852a2ecc194c4954c76a5d10b1a242f60f78c53f260d29db9015e04f",
+      "bytes": 17918
+    },
     "tools/check_catalogue.py": {
       "reason": "Independent fresh host regression build/run for catalogue and reviewed installs",
       "sha256": "5d5da4394c249cae6b28bf604bc7281cb2e00ea1454b6e3403a29ab03ff067b1",
       "bytes": 3779
+    },
+    "tools/check_development_package.py": {
+      "reason": "Negative controls against the actual new IPA for stale metadata, changed managed code/protocol and mismatched symbols",
+      "sha256": "856b4fb4cf5d56556b1e04409187aeec1794a4aebe922e2a90a8afec2d3d177a",
+      "bytes": 4291
+    },
+    "tools/check_first_frame_host.py": {
+      "reason": "Build32 native frame/window/UI/package validation or isolated real host observation; no fixture enters the IPA",
+      "sha256": "e87e0d42493ac705b3fe57025c9fd8d638eb610c00b7388c21c0e9df3b8aff24",
+      "bytes": 4913
+    },
+    "tools/check_first_frame_observer.py": {
+      "reason": "Build32 native frame/window/UI/package validation or isolated real host observation; no fixture enters the IPA",
+      "sha256": "1eb92f0d5d019adc9f19e7a4a81c06cab8d852a1c3e6541270329a99605ea38e",
+      "bytes": 4409
+    },
+    "tools/check_first_frame_package.py": {
+      "reason": "Build32 native frame/window/UI/package validation or isolated real host observation; no fixture enters the IPA",
+      "derived_from": "tools/check_loading_release_package.py",
+      "derived_from_sha256": "6c6bfc0c4204c1a0691ddd3f9dd6aa30e18d80c48d802b6b6ae1315bf3b29429",
+      "sha256": "dd41d26105944b7399305e79032aaf5c159fba44d32b945d9b9399d1f53204c8",
+      "bytes": 4741
+    },
+    "tools/check_first_frame_ui.py": {
+      "reason": "Build32 native frame/window/UI/package validation or isolated real host observation; no fixture enters the IPA",
+      "derived_from": "tools/check_loading_ui.py",
+      "derived_from_sha256": "501936d2e8f65d260ca79421d5bec22a4842f5b4fba262c35b59d4aeebecd6ee",
+      "sha256": "22315a03ef724befd1705752605a0899bd59f4e5034bea34c9984fb7150b2747",
+      "bytes": 5307
+    },
+    "tools/check_loading_assembly.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "b7b5df82f1d128689ca787112a9c7a885ca671d7c866a283ca0dee35f7e2b332",
+      "bytes": 3696
+    },
+    "tools/check_loading_contracts.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "cf08440025bfc80b4bfd8e3760c263c059e44da0df4410fbf863e37cb32cf729",
+      "bytes": 2861
+    },
+    "tools/check_loading_dependencies.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "ba5fa692ac106164a99cb38ad7191b8631f7f4c799d3b38016d178b99a288b59",
+      "bytes": 2842
+    },
+    "tools/check_loading_host.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "2e7576985a3cc80d2182c0f10024ee9b9d02cc8338bb2c40cb21e1f258f02030",
+      "bytes": 8713
+    },
+    "tools/check_loading_host_edges.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "6d000bb454be81a4943019e119dc8a1bbaf1a2b9025f7cb4bfaea0669ecef6b2",
+      "bytes": 5940
+    },
+    "tools/check_loading_package.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "7480679e9fa197c78963a83bdc252f63c06b1c3447e9fba6b4fe7024bf6d3b74",
+      "bytes": 4381
+    },
+    "tools/check_loading_release_package.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "6c6bfc0c4204c1a0691ddd3f9dd6aa30e18d80c48d802b6b6ae1315bf3b29429",
+      "bytes": 4391
+    },
+    "tools/check_loading_sj_warm.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "1d99d316696cfb33d82d0d8872a31c203bb709dce5c6b89f7f5646f01e1d0621",
+      "bytes": 3240
+    },
+    "tools/check_loading_ui.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "501936d2e8f65d260ca79421d5bec22a4842f5b4fba262c35b59d4aeebecd6ee",
+      "bytes": 4816
     },
     "tools/import_legacy.py": {
       "reason": "One-time read-only extraction procedure for current JIT source, pinned inputs and metadata",
       "sha256": "0da8cbd3890b5d0635de445cc024c109e4dce84d3ad990ac2da0c816d0322efa",
       "bytes": 8894
     },
+    "tools/loading_inputs.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "3bd38a054a989efdd75df6aaef82ef25f96823ff79b67cae35601a1f9620489f",
+      "bytes": 2379
+    },
     "tools/macho_identity.py": {
       "reason": "Validate exact executable identity before historical UUID restoration",
       "sha256": "c0b0a290e5c6e0ac79555a713cb2fd1e823f6a3962c33126e0ee6ccd49cf4f89",
       "bytes": 1568
+    },
+    "tools/prepare_loading_inputs.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "7664bb5ae8511534b5267a29170fc4a24fd2de9604134a5dabff8af5392a5f8b",
+      "bytes": 5176
+    },
+    "tools/tests/test_development_build.py": {
+      "reason": "Build output isolation and malformed/signed/wrong-platform Mach-O controls",
+      "sha256": "c077c50fac6b8c1b24c3e71c81bcfdde2c09209c1660df59ab5d2d33b2f4c3a3",
+      "bytes": 2851
+    },
+    "tools/tests/test_loading_build.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "2501f374e06ffce28c81dc957223c6638c196eaf4497cb641abb1fd878721d9a",
+      "bytes": 2843
+    },
+    "tools/verify_development_build.py": {
+      "reason": "Independent package verification of native platform/protocol, current identity, pinned managed payload and matching unsigned symbols",
+      "sha256": "86da3f72b27a85c02f3031531a02354e8b4728262dbb4a6fc37fb6864c019a16",
+      "bytes": 10023
+    },
+    "tools/verify_first_frame.py": {
+      "reason": "Independent build32 recipe and package verification against explicitly pinned Cabrillo dependencies",
+      "derived_from": "tools/verify_loading_release.py",
+      "derived_from_sha256": "a115f6608ea13db567abced6eddcdb6a7d6f2281c365b30644a0f22f73de32ca",
+      "sha256": "4571ff9464892165b543d45dd1742c79c34eb35d2b9777a6546e694feed9f08c",
+      "bytes": 11004
+    },
+    "tools/verify_loading_build.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "e8ec2e417a7a73044e9fc468191fbd8623abbf3889a45b48f7068f57257d7b74",
+      "bytes": 10515
+    },
+    "tools/verify_loading_release.py": {
+      "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
+      "sha256": "a115f6608ea13db567abced6eddcdb6a7d6f2281c365b30644a0f22f73de32ca",
+      "bytes": 10781
     },
     "tools/verify_reproduction.py": {
       "reason": "Independent whole-IPA, unsigned, dSYM and negative UUID control checks",
@@ -13443,11 +15452,24 @@
       "sha256": "89f4a8cb15a21ac1cb55d0c5f251546d254abe8a7f4aab0645a4470e57052206",
       "bytes": 929,
       "import_sha256": "89f4a8cb15a21ac1cb55d0c5f251546d254abe8a7f4aab0645a4470e57052206"
+    },
+    "docs/ios-jit/BUILD_32_ACCEPTANCE.md": {
+      "reason": "Derived build32 phone acceptance and public development handoff; raw diagnostics remain private",
+      "sha256": "e43b1978cc21ee2c4998b7e0fc118ecc4be2a4eab0bb5693e003d56001de3c60",
+      "bytes": 2139
+    },
+    "docs/ios-jit/BUILD_32_ACCEPTANCE_EVIDENCE.json": {
+      "reason": "Derived build32 phone acceptance and public development handoff; raw diagnostics remain private",
+      "sha256": "84740d91db59970e40b96e7859a8a0a4a9c8debc0cb2846435a8b7dadf088e47",
+      "bytes": 8966
     }
   },
   "private_manifests": [
     ".private/migration/inputs.json",
-    ".private/test-inputs/inputs.json"
+    ".private/test-inputs/inputs.json",
+    ".private/loading-inputs/manifest.json",
+    ".private/loading-host-inputs/manifest.json",
+    ".private/loading-sj-inputs/manifest.json"
   ],
   "private_inputs_ignored_by_git": true
 }

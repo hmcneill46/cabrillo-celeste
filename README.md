@@ -17,13 +17,24 @@ application, Xcode project, generated game source, or AOT build cache.
 
 ## Current state
 
-Build27 is physically accepted on an iPhone 15 Pro Max running iOS26.5.
 Build28 adds native mod browsing, categories, five sort orders, details and
-reviewed installations. Its phone acceptance is still pending. The repository
-separation preserves build28's existing app identity; changing the in-app name
-and icon belongs in a separately versioned release.
+reviewed installations. It is [physically accepted](docs/ios-jit/BUILD_28_CATALOGUE_ACCEPTANCE.md)
+on an iPhone 15 Pro Max running iOS26.5, including post-browser gameplay, saves
+and normal Quit/native return. Accepted27 is also preserved.
 
-Start with [the migration report](docs/CABRILLO_MIGRATION.md),
+[Build29](docs/ios-jit/STARTUP_PREPARATION_BUILD_29.md) is local preparation with
+Cabrillo branding, passive startup timings and a fresh independent native recipe.
+29 has not been delivered or tested on the phone.
+[Build31](docs/ios-jit/BUILD_31_LOADING_REVIEW.md) passes two phone game/backend
+runs. Its loading UI pauses and delayed game reveal are addressed in
+[build32](docs/ios-jit/FIRST_FRAME_BUILD_32.md): always-visible startup details and
+handoff after the first rendered game frame. The verified kit is uploaded to
+iCloud; [its phone gate is accepted](docs/ios-jit/BUILD_32_ACCEPTANCE.md).
+Build32 is the current fallback. Whole-profile backup/restore is next.
+Build32 reuses31's exact managed payload. Original28/29/30/31 artifacts remain frozen.
+
+For development, start with [the current handoff](HANDOFF.md),
+[the migration report](docs/CABRILLO_MIGRATION.md),
 [the roadmap](docs/ios-jit/NATIVE_LAUNCHER_ROADMAP_2026-09-12.md), and
 [the original feasibility audit](docs/ios-jit/FEASIBILITY_AUDIT.md).
 
@@ -54,7 +65,9 @@ local `.private` dependency capsule must be backed up separately.
 
 | Location | Reason it is here |
 | --- | --- |
-| `experiments/ios-jit/launcher-catalogue` | Current native browser, host, tests and build28 source |
+| `experiments/ios-jit/launcher-catalogue` | Accepted build28 native browser and preserved source |
+| `experiments/ios-jit/launcher-first-frame` | Build32 passive startup display and first-frame game handoff |
+| `experiments/ios-jit/launcher-loading-release` | Preserved build31 loading UI and phone-tested managed payload pin |
 | Other `experiments/ios-jit` directories | JIT runtime/graphics/compatibility patches and reproducible investigation history |
 | `docs/ios-jit` | All JIT research, architecture, implementation and acceptance documentation |
 | `modern-ios/CelesteIOSFoundation` | Two shared control/platform policies actually used by JIT |

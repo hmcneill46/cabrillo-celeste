@@ -1,0 +1,275 @@
+{
+  "schema": 1,
+  "status": "PHONE_BACKEND_PASSES_LOADING_UX_REFINEMENT_REQUIRED",
+  "updated_utc": "2026-09-15T10:27:36.341562+00:00",
+  "build": {
+    "version": "0.16.1",
+    "number": "31",
+    "id": "launcher-loading-20260915-31"
+  },
+  "accepted_fallback": "28",
+  "phone_acceptance": false,
+  "receipts": {
+    "managed_build": {
+      "path": ".build/loading-managed30-d/receipt.json",
+      "sha256": "2c7392aa313865137c74cfd13bfb89168eb32d6e9da31421d88ec059581c26e4",
+      "status": "PASS_LOADING_MANAGED_BUILD"
+    },
+    "native_build30": {
+      "path": "artifacts/cabrillo-build30/verification.json",
+      "sha256": "1433b94100583619be3cb890afbcc832a34a103071f9776231ed3df51eea57f1",
+      "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS"
+    },
+    "progress_contracts": {
+      "path": ".build/loading-contracts30-a/receipt.json",
+      "sha256": "092854ba6b7a44a056f1b6c3fe40643e415cd2061e9447384d35792b0a50bf57",
+      "status": "PASS_LOADING_CONTRACTS"
+    },
+    "dependency_order": {
+      "path": ".build/loading-dependencies30-a/receipt.json",
+      "sha256": "8142aa0166d0664c6b4f6e250bedbac969062155b8126439d298aa79de47ce5f",
+      "status": "PASS_DELAYED_DEPENDENCY_ORDER_AND_LOCKS"
+    },
+    "assembly_scope": {
+      "path": ".build/loading-assembly30-final/receipt.json",
+      "sha256": "d1b4c2b3cc58914afe180baf5180b4cefb7e65bb4fdc10693712b08325ab7f5d",
+      "status": "PASS_PREPARED_GAME_CHANGE_SCOPE"
+    },
+    "cold_small": {
+      "path": ".build/loading-host30-c/cold-receipt.json",
+      "sha256": "7a61ec4adcc108eae0192f819c1aa36e65ecb185f5696fd2f4da9a9102183f0e",
+      "status": "PASS_REAL_HOST_COOPERATIVE_LOADING_GAMEPLAY_SAVE_QUIT"
+    },
+    "warm_small": {
+      "path": ".build/loading-host30-c/warm-receipt.json",
+      "sha256": "66c5c0157bef9793edd5721b49c97c997e68b7f7aed2ef796859d7188a1b8c2e",
+      "status": "PASS_REAL_HOST_COOPERATIVE_LOADING_GAMEPLAY_SAVE_QUIT"
+    },
+    "edge_cases": {
+      "path": ".build/loading-host-edges30-b/receipt.json",
+      "sha256": "ac00fada7594e75779392975ef7be56f084858fa0d017a6bdf66ac60505f6d63",
+      "status": "PASS_REAL_LOADING_EDGE_CASES"
+    },
+    "sj_order_comparison": {
+      "path": ".build/loading-host-edges30-b/dependency-order-comparison.json",
+      "sha256": "3cf41cc79c0cc13c7251708a19677869a1ad911ccec2b6510bff37d807490ac5",
+      "status": "PASS_REAL_SJ_LOAD_ORDER_PRESERVED"
+    },
+    "warm_sj": {
+      "path": ".build/loading-sj-warm30-final/receipt.json",
+      "sha256": "98938d61bb973b3e23234ba964afc0411a451d047d1eb3cb5283af31c401b0c5",
+      "status": "PASS_WARM_SJ_LOADING_GAMEPLAY_SAVE_QUIT"
+    },
+    "iphone_ui": {
+      "path": ".build/loading-ui31-phone/receipt.json",
+      "sha256": "67cb2246313dd496b5d427f80fc8b63a756f091ada2974f2047ce0fea1e88715",
+      "status": "PASS_LOADING_PRESENTATION_XCUITEST",
+      "screenshots": [
+        {
+          "name": "loading-error-landscape_0_4B431BAE-5F98-4B1A-A47C-C80D6FE73099.png",
+          "path": ".build/loading-ui31-phone/screenshots/1B264349-24A1-4017-855F-57F30BAB8F06.png",
+          "sha256": "fbbc42930d671892d2a53de87fa69a46b6c76242741f25de5bc3416875314387"
+        },
+        {
+          "name": "loading-error-portrait_0_2F3E1993-FC87-4661-BA65-2DBFEF2B07C4.png",
+          "path": ".build/loading-ui31-phone/screenshots/9E23F912-CC7E-4169-9DF8-401D4BE4DB51.png",
+          "sha256": "778410bc89c9bd4e57295ad511be1f82a609cda568b86554b284e41a600146f3"
+        },
+        {
+          "name": "loading-landscape-collapsed_0_814B76FC-FFE0-4413-A5E3-E078D595B9E3.png",
+          "path": ".build/loading-ui31-phone/screenshots/47DBCBAD-8584-4C6F-930C-1B24D728407D.png",
+          "sha256": "80361b8768145f54e1c55b315e383d59047689ff9f4533af8060ca2ee9cb31a8"
+        },
+        {
+          "name": "loading-landscape_0_5B091478-4176-4FD6-B8DB-D3B5297D2A25.png",
+          "path": ".build/loading-ui31-phone/screenshots/59990570-5107-44F6-BA13-CA32CB880103.png",
+          "sha256": "08dce2e1571668d40d464d6aca7c126f0e194d33cd77c8406d2bfdc2394a492b"
+        },
+        {
+          "name": "loading-details-portrait_0_2CE4909D-AE23-4BC3-81B7-D80576100F05.png",
+          "path": ".build/loading-ui31-phone/screenshots/19190D7F-97E5-409E-A895-F9DF194EA5B9.png",
+          "sha256": "4ed10019408032f2974fdf815ed8a952e426e6c0c808a0fc756b359d3fa4a6f2"
+        },
+        {
+          "name": "loading-portrait_0_22C94140-79B0-481E-9511-AFE6F716A1A8.png",
+          "path": ".build/loading-ui31-phone/screenshots/E4D393C2-F211-45E3-B483-B0F0BB613752.png",
+          "sha256": "14f1009e1946546359641b20b1032377e2b1e0120ae90e41e4d4494cc81f72b9"
+        }
+      ]
+    },
+    "ipad_ui": {
+      "path": ".build/loading-ui31-ipad/receipt.json",
+      "sha256": "8627b8b8f4b462b9a6ce4db7cad5dd9d7fba853dc35613d440bdadf9217b4f2a",
+      "status": "PASS_LOADING_PRESENTATION_XCUITEST",
+      "screenshots": [
+        {
+          "name": "loading-error-landscape_0_FA26BD70-5F6C-4DF3-8454-6E74CAB6E69A.png",
+          "path": ".build/loading-ui31-ipad/screenshots/362FEF5E-F54A-4334-BEB7-3CC54030217B.png",
+          "sha256": "33579b66dfa52b9c744d2742f7f8bd0ecdd4b3b4b899a60a257731da853b9f2e"
+        },
+        {
+          "name": "loading-error-portrait_0_EAEC1A65-A7C4-4927-B702-D1B0893231E5.png",
+          "path": ".build/loading-ui31-ipad/screenshots/6CA44D82-154F-4035-823F-A3282EAE739E.png",
+          "sha256": "3f6555183e701f9a507dcb10e73ed7972e0c62ae4d8cc639bd3173c590e1d9ae"
+        },
+        {
+          "name": "loading-landscape-collapsed_0_BF5420F4-C57E-410C-B976-0727A0345EF1.png",
+          "path": ".build/loading-ui31-ipad/screenshots/75F66117-59BB-4E2C-96E8-F5306F003F06.png",
+          "sha256": "8c06848402de3189719f1182e884b710a02b513ea02411d59c74f6a4e054c375"
+        },
+        {
+          "name": "loading-landscape_0_022C1471-FEE6-40E9-800F-872F9958E43B.png",
+          "path": ".build/loading-ui31-ipad/screenshots/2146BCF8-9971-4676-848F-8569E60A7CEF.png",
+          "sha256": "9e0ae6b8582b6c888f737fc77c2cac8c1f5bdbc4026f456632d3dee1721776dc"
+        },
+        {
+          "name": "loading-details-portrait_0_F1B538B4-E867-4DD2-BA22-6F435FE0B759.png",
+          "path": ".build/loading-ui31-ipad/screenshots/D32ED27F-D6FC-4F58-9B0F-63A66836C1B6.png",
+          "sha256": "c0506895f850176b52e17ef2342cad4581fd42d16529bae0c27a0ed24ddb2682"
+        },
+        {
+          "name": "loading-portrait_0_A290D3FD-F322-47DE-9157-45F137CAF642.png",
+          "path": ".build/loading-ui31-ipad/screenshots/F15AE0A8-7172-44D2-9086-6DB43800CA51.png",
+          "sha256": "652dd0c3b41a1cc4b444199b9be5bcda05f157ccb38758b4952b58f443f3dc6e"
+        }
+      ]
+    },
+    "native_package": {
+      "path": "artifacts/cabrillo-build31/verification.json",
+      "sha256": "1bcb5e55a53a204b18a7a6bcdb7546d7df649e569538ae33841ce3804cc798fb",
+      "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS"
+    },
+    "native_build": {
+      "path": "artifacts/cabrillo-build31/build-receipt.json",
+      "sha256": "ed6a79169d05eade8baf7224b082b8e6fd650bd45054d6707a3f41581f0c8d67",
+      "status": "BUILD_COMPLETE_AWAITING_PACKAGE_VERIFICATION"
+    },
+    "package_negative_controls": {
+      "path": ".build/loading-package31-controls/results.json",
+      "sha256": "a98ef8b2907bcc648902ab7ec269d5db39c05fecbf0c1ee710001274a531639e",
+      "status": "PASS_LOADING_PACKAGE_NEGATIVE_CONTROLS"
+    }
+  },
+  "scheduling": {
+    "native_owner": "UIKit main CADisplayLink",
+    "pending_result": 3,
+    "complete_result": 1,
+    "ready_gate": "OuiTitleScreen after game frame",
+    "nested_uikit_loop": false,
+    "arbitrary_graphics_worker": false,
+    "archive_and_final_delayed_module_yields": true,
+    "delayed_list_monitor_held_across_yield": false,
+    "delayed_reentrancy_guard_retained": true,
+    "normal_recursive_dependencies_preserved": true,
+    "slow_step_retention": 8
+  },
+  "limitations": {
+    "individual_operations_non_preemptible": true,
+    "sj_fresh_mod_cache_maximum_step_seconds": 18.092374,
+    "sj_fresh_mod_cache_maximum_step_module": "StrawberryJam2021 1.0.12",
+    "sj_warm_mod_cache_maximum_step_seconds": 4.991238,
+    "sj_warm_mod_cache_maximum_step_phase": "game_content",
+    "host_measurements_are_controlled_benchmarks": false,
+    "iphone_jit_window_background_acceptance_pending": true
+  },
+  "validation": {
+    "delayed_dependency_reference_cases": 8,
+    "native_managed_contract_checks": 11,
+    "small_cold_warm_pass": true,
+    "small_profile_modules": [
+      "Cateline 0.1.0",
+      "memorialHelper 1.0.4",
+      "CJITCodeCanary 1.0.0"
+    ],
+    "real_multi_module_archive": {
+      "archives": 4,
+      "module_loads": 5
+    },
+    "real_thrown_mod_failure_retained": true,
+    "sj_required_module_identities": 52,
+    "sj_loaded_archives": 53,
+    "sj_loaded_modules": 53,
+    "sj_startup_callbacks": 144,
+    "original_sj_order_events_preserved": 106,
+    "ui_tests_per_simulator": 4,
+    "gameplay_save_quit_pass": true
+  },
+  "independence": {
+    "policy_path": ".build/loading-managed-sandbox.sb",
+    "policy_sha256": "3d5759604a9f54188cd1b142cdd5b4fdb0f9884568441cc473c6709bed2f5c76",
+    "denied_legacy_reads_and_writes": true,
+    "denied_private_writes": true,
+    "managed_capsule_manifest": ".private/loading-inputs/manifest.json",
+    "managed_capsule_manifest_sha256": "6c1c1fac32edc52a05fe5759e82a28e11eee899eb505d4f6a11c000a267bebd2"
+  },
+  "delivery": {
+    "status": "PASS_ICLOUD_UPLOAD_AND_LOCAL_BYTES",
+    "placed_utc": "2026-09-15T09:34:39.731589+00:00",
+    "source": "/Users/harrymcneill/Projects/Cabrillo/artifacts/cabrillo-build31/phone-kit",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.16.1-build-31",
+    "cloud_parent_bytes": 713086841,
+    "files": {
+      "INSTALL.md": {
+        "bytes": 797,
+        "sha256": "483eb18a047f69d4569f3652a36af59d87da0d635f385b5c123f13c1ee972efd"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 6345,
+        "sha256": "1e81917abada3d294e061ffaea381ff91f77bc1a83c3c2f7df872af2fa0f0689"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 797,
+        "sha256": "68ce063d689485b2e972e036674c5d0319a8dd53c5b3e692f61b432ad41c3776"
+      },
+      "README-FIRST.txt": {
+        "bytes": 2231,
+        "sha256": "5ef0f8fa2a23ddacf69b075dddcf7f5e8dfb50b54958dc596e17fbbf63658dc5"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 438,
+        "sha256": "9f949a3fde5c27452f5661053bc8564201594cb0b9264c8cc118c021f0a6beba"
+      },
+      "Cabrillo-0.16.1-build-31-unsigned.ipa": {
+        "bytes": 23859068,
+        "sha256": "369ca8a970dd0eadce1b6ba67d2a0277072731fd625823717e2b46c82246cd4c"
+      }
+    },
+    "upload_confirmed": true,
+    "phone_download_confirmed": false,
+    "phone_executed": false,
+    "upload_status_checked_utc": "2026-09-15T09:35:51.959032+00:00",
+    "upload_status_sha256": "11a8a882b3a7287d9b7dc42314fcd769d665be434ad6a6e478ad415d9c631d7c"
+  },
+  "package": {
+    "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS",
+    "build_id": "launcher-loading-20260915-31",
+    "ipa_sha256": "369ca8a970dd0eadce1b6ba67d2a0277072731fd625823717e2b46c82246cd4c",
+    "bytes": 23859068,
+    "executable_uuid": "4337244a22f831eabe6055db41e3f3aa",
+    "compiled_source_count": 61,
+    "managed_assemblies": 201,
+    "rebuilt_managed_assemblies": 4,
+    "preserved_managed_assemblies": 197,
+    "unsigned": true,
+    "symbols_outside_ipa": true,
+    "device_tested": false,
+    "cooperative_loading_implemented": true,
+    "uninterruptible_step_limit": true
+  },
+  "repository_boundary": {
+    "status": "PASS_CABRILLO_REPOSITORY_BOUNDARY",
+    "public_files": 2482,
+    "locked_build28_sources": 228,
+    "locked_native_vendor_sources": 49,
+    "original_private_inputs": 455,
+    "receipt": "artifacts/cabrillo-build31/repository-check.json",
+    "git_writes_authorized_or_performed": false
+  },
+  "phone_review": {
+    "report": "docs/ios-jit/BUILD_31_LOADING_REVIEW.md",
+    "ledger": "docs/ios-jit/BUILD_31_LOADING_REVIEW_EVIDENCE.json",
+    "two_build31_runs_reviewed": true,
+    "backend_pass": true,
+    "loading_ux_refinement_pending": true
+  }
+}

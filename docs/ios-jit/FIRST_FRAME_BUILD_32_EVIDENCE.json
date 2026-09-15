@@ -1,0 +1,191 @@
+{
+  "schema": 1,
+  "status": "PASS_PHYSICAL_BUILD32_FIRST_FRAME_GAMEPLAY_SAVE_QUIT",
+  "updated_utc": "2026-09-15T18:27:40.891444+00:00",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.16.2",
+    "build_number": "32",
+    "build_id": "launcher-first-frame-20260915-32",
+    "scope": "Passive startup details and first-rendered-frame game presentation; physical acceptance pending",
+    "device_jit_tested": false
+  },
+  "package": {
+    "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS",
+    "build_id": "launcher-first-frame-20260915-32",
+    "ipa_sha256": "86f9de0b51073473e7562ea2ef97073889bf48123a424e8d6f98ec245c65b9f1",
+    "bytes": 23862241,
+    "executable_uuid": "342d1b258de339b18a53a40ed579fc01",
+    "compiled_source_count": 62,
+    "managed_assemblies": 201,
+    "rebuilt_managed_assemblies": 4,
+    "preserved_managed_assemblies": 197,
+    "unsigned": true,
+    "symbols_outside_ipa": true,
+    "device_tested": false,
+    "cooperative_loading_implemented": true,
+    "uninterruptible_step_limit": true
+  },
+  "accepted_fallback": "build32; build28/27/31 preserved",
+  "phone_acceptance": true,
+  "receipts": {
+    "phone31_review": {
+      "path": "docs/ios-jit/BUILD_31_LOADING_REVIEW_EVIDENCE.json",
+      "sha256": "b1d4789e539217b54315cc6353a5f840dfe879f17f0f8e8c0d8a465c46d06085"
+    },
+    "build": {
+      "path": "artifacts/cabrillo-build32/build-receipt.json",
+      "sha256": "3088adf93121665cac0adc043355378161f7f991231124aa41f61e640f0cf028"
+    },
+    "native": {
+      "path": "artifacts/cabrillo-build32/native-receipt.json",
+      "sha256": "1d10602c7b8e5fbac5316e53908c9b5d37a39fa5fbeb574fad12159d9d658478"
+    },
+    "managed": {
+      "path": "artifacts/cabrillo-build32/managed-receipt.json",
+      "sha256": "2c7392aa313865137c74cfd13bfb89168eb32d6e9da31421d88ec059581c26e4"
+    },
+    "verification": {
+      "path": "artifacts/cabrillo-build32/verification.json",
+      "sha256": "8f48ca3184cf90251960907db495cb33c18b1d6fd8e0e2fafb104af8b4ddf4f4"
+    },
+    "build31_comparison": {
+      "path": "artifacts/cabrillo-build32/build31-comparison.json",
+      "sha256": "0c24eb4b5eec6d90d044017fc78878c7e15ffd59c5c3f158d78130c4dfa4e891"
+    },
+    "package_controls": {
+      "path": ".build/first-frame-package32-controls/results.json",
+      "sha256": "5a040fb77ddcc22fdaeb4c27b4870d28b5a9ac4177ffb320009b3bd07a5c4d90"
+    },
+    "iphone_ui": {
+      "path": ".build/first-frame-ui32-phone-final/receipt.json",
+      "sha256": "58d22296453a434721df7fe181403cd095c5b41adbea8e4c4de138f58e2ec378"
+    },
+    "ipad_ui": {
+      "path": ".build/first-frame-ui32-ipad-final/receipt.json",
+      "sha256": "62aecc4a384713dafe2cb67d5a2b0f18a7122633e2c661d485f80c986b7da03e"
+    },
+    "frame_observer": {
+      "path": ".build/first-frame-observer32-b/receipt.json",
+      "sha256": "d044b9f2b02e08194b91bef1a7d62ff3f5bc64bbba59093818bc661198e28ff0"
+    },
+    "early_game_frames": {
+      "path": ".build/first-frame-host32-b/receipt.json",
+      "sha256": "8072e268baf0aa97b0b653857621da6a8e17e3ffd9cecdf4a911bc9c630e5721"
+    },
+    "delivery": {
+      "path": "artifacts/cabrillo-build32/delivery.json",
+      "sha256": "ddd9635b22c4fe6189c3362c35620d8db17ecee65e7ff4920af68a3d05043b3c"
+    },
+    "icloud_status": {
+      "path": "artifacts/cabrillo-build32/icloud-status.json",
+      "sha256": "3753feebd100f68bfc4ee64a4276b20149526c1a06121e6a7638fc86947ff5be"
+    }
+  },
+  "delivery": {
+    "status": "PASS_ICLOUD_UPLOAD_AND_LOCAL_BYTES",
+    "placed_utc": "2026-09-15T10:33:38.507277+00:00",
+    "source": "/Users/harrymcneill/Projects/Cabrillo/artifacts/cabrillo-build32/phone-kit",
+    "destination": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.16.2-build-32",
+    "cloud_parent_bytes": 742066033,
+    "files": {
+      "Cabrillo-0.16.2-build-32-unsigned.ipa": {
+        "bytes": 23862241,
+        "sha256": "86f9de0b51073473e7562ea2ef97073889bf48123a424e8d6f98ec245c65b9f1"
+      },
+      "INSTALL.md": {
+        "bytes": 797,
+        "sha256": "7826b90ffdbbfa357901507f335a366933e0206e1867a0df95db248d925837ad"
+      },
+      "README-FIRST.txt": {
+        "bytes": 2554,
+        "sha256": "a19bc69e7da87ad6e2feb2739047b1e5b6af73d0dccc2fc74baa7b6cd794406d"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 438,
+        "sha256": "234cbf809d706cd55b5d0600075acec1bfc5c4891983eab527fc6f9a096996bb"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 831,
+        "sha256": "c54e8b58b4461ff502b5723d2a731ce397acf0242d2aaba8c7cbb320616fdab5"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 6396,
+        "sha256": "ef4aaa5c311bca564d24d7f4ab7bc311bb81d00aeb1768b93e4a3bb60c5a8019"
+      }
+    },
+    "upload_confirmed": true,
+    "phone_download_confirmed": false,
+    "phone_executed": false,
+    "upload_status_checked_utc": "2026-09-15T10:39:03.333340+00:00",
+    "upload_status_sha256": "3753feebd100f68bfc4ee64a4276b20149526c1a06121e6a7638fc86947ff5be",
+    "initial_upload_error_resolved": true
+  },
+  "build31_comparison": {
+    "status": "PASS_BUILD31_MANAGED_PAYLOAD_PRESERVED",
+    "build31_ipa_sha256": "369ca8a970dd0eadce1b6ba67d2a0277072731fd625823717e2b46c82246cd4c",
+    "build32_ipa_sha256": "86f9de0b51073473e7562ea2ef97073889bf48123a424e8d6f98ec245c65b9f1",
+    "same_entry_names": true,
+    "managed_assemblies_identical": 201,
+    "changed_package_entries": [
+      "Payload/CelesteJITEverest.app/BuildInfo.json",
+      "Payload/CelesteJITEverest.app/CelesteJITEverest",
+      "Payload/CelesteJITEverest.app/Info.plist",
+      "Payload/CelesteJITEverest.app/THIRD_PARTY_NOTICES.md"
+    ]
+  },
+  "implementation": {
+    "normal_loading": "Passive fixed layout; visible stage/detail, real archive/folder and module/dependency counts, elapsed time",
+    "unknown_work": "Core Animation activity segment; never a synthetic percentage; reduced motion uses stationary segment",
+    "interactive_recovery": [
+      "file preparation cancellation",
+      "startup error scrolling/text selection/Export diagnostics"
+    ],
+    "first_frame_gate": [
+      "successful managed Frame callback",
+      "main thread and foreground",
+      "valid same-scene game window",
+      "Metal and existing GPU checks",
+      "first real draw",
+      "existing post-Present readback",
+      "active loading presentation without failure"
+    ],
+    "native_observer": "CJStartupFrame consumes existing pinned adapter events; no new managed callback or GPU work",
+    "handoff_event": "startup_window_handoff reason=first_rendered_frame; progress.ready may be false; later game_menu OuiTitleScreen records menu readiness",
+    "managed_payload_identical_to_build31": true,
+    "native_runtime_renderer_archives_changed": false,
+    "loader_schedule_changed": false
+  },
+  "validation": {
+    "ui_tests_per_device": 6,
+    "frame_observer_cases": 10,
+    "phone31_sessions_replayed": 2,
+    "package_negative_controls": 5,
+    "game_observation": "Existing validated macOS host, unchanged game/FNA/adapter with host Mono BCL; extra image captures only in external fixture",
+    "early_game_frames": "Frame1 GameLoader opening black fade with controls; frame15 GameLoader background; later Overworld. This does not establish exact physical display latency.",
+    "private_inputs_and_legacy_read_only": "Native build and host observation ran under loading-managed-sandbox.sb denying all legacy/input folders and writes to .private"
+  },
+  "limitations": {
+    "individual_main_thread_mod_game_calls_still_block_text_updates": true,
+    "phone32_window_audio_timing_unconfirmed": true,
+    "ipad_physical_support_unconfirmed": true,
+    "controlled_performance_benchmark": false
+  },
+  "repository_boundary": {
+    "committed": false,
+    "pushed": false,
+    "game_assets_and_raw_logs_private": true,
+    "frozen_builds_preserved": [
+      28,
+      29,
+      30,
+      31
+    ],
+    "final_audit_path": "artifacts/cabrillo-build32/repository-check.json"
+  },
+  "phone_review": {
+    "report": "docs/ios-jit/BUILD_32_ACCEPTANCE.md",
+    "ledger": "docs/ios-jit/BUILD_32_ACCEPTANCE_EVIDENCE.json"
+  }
+}
