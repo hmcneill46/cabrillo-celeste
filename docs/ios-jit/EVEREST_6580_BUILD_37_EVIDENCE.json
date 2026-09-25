@@ -1,0 +1,1253 @@
+{
+  "schema": 1,
+  "as_of": "2026-09-25",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.20.0",
+    "build_number": "37",
+    "build_id": "launcher-everest6580-20260925-37",
+    "scope": "Everest stable 1.6580 upgrade with build36 native visibility and build34/35 repairs; physical validation pending",
+    "device_jit_tested": false
+  },
+  "upstream": {
+    "version": "1.6580.0",
+    "commit": "082e21b0b6dd7ff7c96d65b2ca2c632f4fd8df75",
+    "channel": "stable",
+    "published_at": "2026-09-19T19:53:34Z",
+    "changed_files": 22,
+    "source_manifest_sha256": "59e566969b086b5aa5e9ec7841a8a9638944725b3a9aacaadec04fd42f65a99b"
+  },
+  "managed": {
+    "receipt": ".build/everest-managed37-b/receipt.json",
+    "sha256": "277fbf915027ea3e791facdb35266a9e87c8be12ff9b5fabb905c7d2cecc558d",
+    "changed_assemblies": 4,
+    "preserved_assemblies": 197,
+    "preserved_native_archives": 16
+  },
+  "physical_device_tested": true,
+  "delivery_pending": false,
+  "publication_authorized": false,
+  "checked_utc": "2026-09-25T10:23:39.414404+00:00",
+  "verification": {
+    "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS",
+    "build_id": "launcher-everest6580-20260925-37",
+    "ipa_sha256": "893a9f3fe146e4319751bb19c8b12f2431c7b4abb0c5be8a8f4dcef538cd37e6",
+    "bytes": 24121997,
+    "executable_uuid": "f04dfd220a173910b5b7be9d6bf9d481",
+    "compiled_source_count": 68,
+    "managed_assemblies": 201,
+    "managed_assemblies_changed_from_build36": 4,
+    "native_archives_changed_from_build36": 0,
+    "native_archives_preserved_from_build36": 16,
+    "unchanged_mono_objects": 259,
+    "unsigned": true,
+    "symbols_outside_ipa": true,
+    "device_tested": false,
+    "cooperative_loading_implemented": true,
+    "uninterruptible_step_limit": true
+  },
+  "host_validation": {
+    "profiles": {
+      "receipt": ".build/everest-profiles37-a/receipt.json",
+      "sha256": "2a11917f0fd9842c4c0c97d59a8bcb7fe629e5e8be047a2956eda0324cdf7795",
+      "status": "PASS_PROFILE_BACKUPS"
+    },
+    "game": {
+      "receipt": ".build/everest-game37-c/receipt.json",
+      "sha256": "385954d5903e633a9ebbf2a88e5486a7a8f927ebd9148db91a5e3ebd405c01d1",
+      "status": "PASS_BACKUP_RESTORED_REAL_GAME_SAVE_QUIT"
+    },
+    "motion": {
+      "receipt": ".build/everest-motion37-a/receipt.json",
+      "sha256": "2fb3e42e09b7520af67f91682f1792925115a978f34e916b78211a8c1cd3de35",
+      "status": "PASS_MOTION_VISIBILITY_RESTORED_HOST"
+    },
+    "vanilla": {
+      "receipt": ".build/everest-vanilla37-a/receipt.json",
+      "sha256": "c5063501420e56a970a136a4816423b8dd11716ebd74ebe94404ea290a35cbb8",
+      "status": "PASS_CABRILLO_VANILLA_EVEREST_SAVE_ROUNDTRIP"
+    }
+  },
+  "frozen_sources": {
+    "receipt": "artifacts/cabrillo-build37-final/frozen-source-manifest.json",
+    "sha256": "cc23a500c46a9c4e75d0810ca4006aadb349914e58b77e26b593c73523afa701",
+    "file_count": 220
+  },
+  "delivery": {
+    "status": "PASS_ICLOUD_UPLOAD_AND_LOCAL_BYTES",
+    "checked_utc": "2026-09-25T02:03:57.548046+00:00",
+    "cloud_directory": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.20.0-build-37",
+    "files": {
+      "Cabrillo-0.20.0-build-37-unsigned.ipa": {
+        "bytes": 24121997,
+        "sha256": "893a9f3fe146e4319751bb19c8b12f2431c7b4abb0c5be8a8f4dcef538cd37e6"
+      },
+      "INSTALL.md": {
+        "bytes": 815,
+        "sha256": "5985465a4b22e2860fad6963989a2b57af5147f830dfd97293e8587e45c8a033"
+      },
+      "README-FIRST.txt": {
+        "bytes": 4896,
+        "sha256": "13a5cbc4808e54eb2e1210508d9065c92cfc4798235e8db831a09a218a1c1536"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 438,
+        "sha256": "f4dbe8d7f83b3891d4457597a75625c20e34bf32b682b9c1a3d53739cda643e4"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 587,
+        "sha256": "93a1f33fd572eecc2de2e116e9587e2bf35b5d5be5ac073717f36fba59dc7e9e"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 7427,
+        "sha256": "7ffe0e520ffeaab66df7c22f349896deccae74a2be116ccdb57e366aec945167"
+      }
+    },
+    "all_kits_total_bytes": 897775166,
+    "phone_download_or_execution_confirmed": true
+  },
+  "physical_device_scope": "iPad native launch; iPhone boot/first frame/main menu with exact 54-mod selection, followed by owner-confirmed unexpected app exit during loading; no completed build37 gameplay/Quit",
+  "physical_gameplay_tested": false,
+  "ipad": {
+    "status": "PASS_IPAD_INSTALL_AND_OPEN",
+    "created_utc": "2026-09-25T02:03:14.964961+00:00",
+    "version": "0.20.0",
+    "build": "37",
+    "ipa_sha256": "893a9f3fe146e4319751bb19c8b12f2431c7b4abb0c5be8a8f4dcef538cd37e6",
+    "usb_bytes_verified": true,
+    "trollstore_exit": 0,
+    "uiopen_exit": 0,
+    "preinstall_no_managed_start": true,
+    "device_gameplay_tested": false,
+    "data_container_present": true,
+    "log_sha256": "1ebfd8cb666e0f9efc9f9b385f65d28b908a68c7b7a3362e286b9cb6bd09aaa7",
+    "hardware": "iPad5,1",
+    "os_version": "15.8.8",
+    "native_log_sha256": "204f5eb83898a02d1d24903991bd3f1f1cb970696f998d6a5b14eb74b1afa9f1",
+    "native_log_bytes": 63163,
+    "native_events": 6,
+    "native_build_identity_confirmed": "launcher-everest6580-20260925-37",
+    "bundled_everest_identity": "1.6580.0",
+    "bundled_runtime_identity_sha256": "dd8b855016d65dd90d2bf67231c2cad9b95e7fdca3774de9bee670044b4df7b2",
+    "existing_profile_ready": true,
+    "imported_content_pointer_found": true,
+    "managed_start_observed": false,
+    "fresh_jit_checks_observed": false
+  },
+  "phone": {
+    "status": "FAIL_IOS_JETSAM_PER_PROCESS_LIMIT",
+    "execution_confirmed": true,
+    "export": {
+      "filename": "CelesteJIT-c2f1df9c-f202-4f85-aa92-e715b0eb827c.diagnostics.json",
+      "sha256": "999d4ad11dfdb16c9b1043a048a8449d7b659b336b3a5e8237de10e8f9a21489",
+      "bytes": 3451426,
+      "storage_error": null
+    },
+    "device": {
+      "guest_bundle_id": "io.github.hmcneill46.celeste.everest.jit.everest",
+      "hardware": "iPhone16,2",
+      "os_build_description": "Version 26.5 (Build 23F77)",
+      "os_version": "26.5",
+      "page_size": 16384,
+      "physical_memory_bytes": 8025686016,
+      "simulator": 0
+    },
+    "owner_observation": "Build37 app closed or restarted by itself during the test.",
+    "sessions": [
+      {
+        "session": "c2f1df9c-f202-4f85-aa92-e715b0eb827c",
+        "build_number": "37",
+        "exact_packaged_build_info_match": true,
+        "retained_events": 8,
+        "bounded_excerpt": false,
+        "invalid_lines": 0,
+        "started_utc": "2026-09-25T02:43:47.132219+00:00",
+        "last_utc": "2026-09-25T02:43:52.189147+00:00",
+        "last_event": "diagnostics_export",
+        "native_checks_passed": 0,
+        "graphics_checks_passed": 0,
+        "everest": null,
+        "catalogue_active_requests": null,
+        "rooms": [],
+        "normal_quit": null,
+        "save_readback": null,
+        "resume_events": 0,
+        "frame_metrics": [],
+        "native_display_request": null,
+        "sampled_peak_footprint_bytes": null,
+        "last_runtime": null,
+        "recorded_runtime_errors": []
+      },
+      {
+        "session": "97b9feb9-ac3c-4d52-ae24-58e119b4018f",
+        "build_number": "37",
+        "exact_packaged_build_info_match": true,
+        "retained_events": 720,
+        "bounded_excerpt": false,
+        "invalid_lines": 0,
+        "started_utc": "2026-09-25T02:42:23.060837+00:00",
+        "last_utc": "2026-09-25T02:43:37.878225+00:00",
+        "last_event": "game_worker_end",
+        "native_checks_passed": 26,
+        "graphics_checks_passed": 14,
+        "everest": "1.6580.0-cjit-082e21b",
+        "catalogue_active_requests": 0,
+        "rooms": [],
+        "normal_quit": null,
+        "save_readback": null,
+        "resume_events": 0,
+        "frame_metrics": [
+          {
+            "callback_fps": 58.58502255315532,
+            "gpu_completion_measured": false,
+            "maximum_interval_ms": 215.70333333329472,
+            "mean_frame_callback_ms": 15.699880077909787,
+            "one_percent_low_fps": 15.003213188167596,
+            "window_samples": 599
+          }
+        ],
+        "native_display_request": {
+          "main_thread": true,
+          "screen_maximum_fps": 120,
+          "target_fps": 120
+        },
+        "jit_provider": "stikdebug",
+        "selected_archives": 54,
+        "selected_mods": [
+          {
+            "name": "AdventureHelper",
+            "version": "1.6.0",
+            "sha256": "cf0facab708f25958c560ddf58831e02f7d2b0c9f81571e090e034ce9dc927e7",
+            "bytes": 88955
+          },
+          {
+            "name": "Anonhelper",
+            "version": "1.1.1",
+            "sha256": "6417a5591a7039218c68f61869a20100ce67287d4024645e8b97cac5486e74ae",
+            "bytes": 322423
+          },
+          {
+            "name": "BGswitch",
+            "version": "1.2.2",
+            "sha256": "c85b83155269d7b5fce6ab10b0aed6b7ffd30d62d0b09345df8e67040076fadb",
+            "bytes": 29096
+          },
+          {
+            "name": "Batteries",
+            "version": "1.1.4",
+            "sha256": "088d46393db29a72cabddef670d84183bcb4696f3d9e0e91321e67fe2837d047",
+            "bytes": 94600
+          },
+          {
+            "name": "BounceHelper",
+            "version": "1.14.1",
+            "sha256": "91eca27c7453031fcce4234fe4051801f908d8f71f4a01a7f5e988c6ada470b2",
+            "bytes": 430162
+          },
+          {
+            "name": "BrokemiaHelper",
+            "version": "1.8.5",
+            "sha256": "c80d7d71cdccef7c9b418e05d53debd197b59717d3cdeade72910ace33d4fbeb",
+            "bytes": 386366
+          },
+          {
+            "name": "CJITCodeCanary",
+            "version": "1.0.0",
+            "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b",
+            "bytes": 3560
+          },
+          {
+            "name": "CanyonHelper",
+            "version": "1.1.6",
+            "sha256": "20f3affc4005d8177099776fbb350c258344d08c10bf4601c74763e4c26e4851",
+            "bytes": 4454892
+          },
+          {
+            "name": "CavernHelper",
+            "version": "1.3.7",
+            "sha256": "9e699b141e1f2336a6aab795161498c09f986f6ff7b8fa426a3b9d53f2490041",
+            "bytes": 133823
+          },
+          {
+            "name": "CherryHelper",
+            "version": "1.8.2",
+            "sha256": "8ca640f9e14f844507e0bbedc2afcb99ef61bec6957a7558cee90e9fabd2fba7",
+            "bytes": 1344762
+          },
+          {
+            "name": "CollabUtils2",
+            "version": "1.13.4",
+            "sha256": "4bcea8a9011edb8b7d27b433c47f1f4a871b8f7a4dd7f2bffac67bb99c7f6ad5",
+            "bytes": 5406848
+          },
+          {
+            "name": "ColoredLights",
+            "version": "1.2.0",
+            "sha256": "042dce422374bb2c5d7a9355ac814daa13f582bc4b123a8b239a4e33bfcdad2f",
+            "bytes": 200
+          },
+          {
+            "name": "CommunalHelper",
+            "version": "1.25.7",
+            "sha256": "ef291b3372ee76a9d0f3ba81ef171357d9883f679a005231fc4c8e6e7475ae66",
+            "bytes": 20249067
+          },
+          {
+            "name": "ContortHelper",
+            "version": "1.5.5",
+            "sha256": "d8b42128a808e68d30329baa9299fdb41bf7d24743635dec3137c36bcc87956a",
+            "bytes": 140727
+          },
+          {
+            "name": "CrystallineHelper",
+            "version": "1.17.3",
+            "sha256": "5f7aa68c1cd3ef3b2a620b79e2a49d2a7f943525a938a30269ae3995345f281b",
+            "bytes": 659906
+          },
+          {
+            "name": "DJMapHelper",
+            "version": "1.13.4",
+            "sha256": "95ab02d657213031b70c3079738b21be399e567ca8a32b1fe8e8effc0778eedb",
+            "bytes": 433079
+          },
+          {
+            "name": "DisposableTheo",
+            "version": "1.0.6",
+            "sha256": "df291c0175df46682791fb6373c47eb557c47483eca3db96895eba9b5bbe85b5",
+            "bytes": 12901
+          },
+          {
+            "name": "EeveeHelper",
+            "version": "1.12.6",
+            "sha256": "ce48b44901754d8e072d9bc966d45d4fa0ac27fb47fe2af0fbbd22214417fd36",
+            "bytes": 220091
+          },
+          {
+            "name": "EmHelper",
+            "version": "1.3.0",
+            "sha256": "bdd31089c9163d2111aaaff6bfaf7c828674566d5ab8c23e08d3f4806bee31b3",
+            "bytes": 186110
+          },
+          {
+            "name": "ExtendedVariantMode",
+            "version": "0.51.0",
+            "sha256": "468077af4655349ded0821e3dd283d7dc366d9e3a781a15dc67698f8fb3c9fcc",
+            "bytes": 499117
+          },
+          {
+            "name": "FactoryHelper",
+            "version": "1.4.1",
+            "sha256": "7db9a9d063884beb4f714b9c3fafa7bf06084572e97a4da36d5926050ab7d18e",
+            "bytes": 8175682
+          },
+          {
+            "name": "FancyTileEntities",
+            "version": "1.6.2",
+            "sha256": "c37806dc7e7db4a392c8ab79030701f4cf2046109cc19435b607fca7fe41c8d8",
+            "bytes": 64653
+          },
+          {
+            "name": "FemtoHelper",
+            "version": "1.15.22",
+            "sha256": "5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419",
+            "bytes": 11103153
+          },
+          {
+            "name": "FlaglinesAndSuch",
+            "version": "1.6.80",
+            "sha256": "fb0fd300f95d77539eb9079aed445c81f263557c1a1715187bd509d39c1eb794",
+            "bytes": 700428
+          },
+          {
+            "name": "FrostHelper",
+            "version": "1.81.0",
+            "sha256": "f0f24e97b270b41a55ae00e8f5167b877be4f6b23d9c0f238734ad5fb7d6cb51",
+            "bytes": 1213299
+          },
+          {
+            "name": "FurryHelper",
+            "version": "1.0.6",
+            "sha256": "5f60b2d9c18f6234405137ddc282fd34c6002315fb005412e0d3ab5a58d3afb1",
+            "bytes": 15131
+          },
+          {
+            "name": "GravityHelper",
+            "version": "1.2.28",
+            "sha256": "d4a40744f4c155d655973754422643980321b6660027bc01b660a71b0d00649b",
+            "bytes": 747044
+          },
+          {
+            "name": "HonlyHelper",
+            "version": "1.7.5",
+            "sha256": "6a2d0f04a5be3a9c9c3bf66ec7e93701398a64d5a0e72add5df682e860e7d08d",
+            "bytes": 1042358
+          },
+          {
+            "name": "IsaGrabBag",
+            "version": "1.7.3",
+            "sha256": "557af62a5c932439d906b4a1838ad19dfabc28c97ee57de6490c2b905549f007",
+            "bytes": 165166
+          },
+          {
+            "name": "JackalHelper",
+            "version": "1.7.7.1",
+            "sha256": "ee1d9b01accfc06e4d42357c99b3d0fb4163fa160acc6f06401106d36643c2f5",
+            "bytes": 9984914
+          },
+          {
+            "name": "JungleHelper",
+            "version": "1.4.10",
+            "sha256": "a140e21cbb5fd2dcaac70d4d5e36d49476e414861455ae25dedc0678164406cc",
+            "bytes": 7584200
+          },
+          {
+            "name": "LuaCutscenes",
+            "version": "0.2.13",
+            "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8",
+            "bytes": 43788
+          },
+          {
+            "name": "LunaticHelper",
+            "version": "1.1.1",
+            "sha256": "b10e044b1dfa412605bee3ba6bfdd4263591099d331d6c1aab1e9ba65bf6a3e5",
+            "bytes": 931124
+          },
+          {
+            "name": "MaxHelpingHand",
+            "version": "1.40.10",
+            "sha256": "d5257cb3da742165c6b051805220d72cd0c52f6b35c5de747513a543c17b4bf1",
+            "bytes": 964295
+          },
+          {
+            "name": "MoreDasheline",
+            "version": "1.7.1",
+            "sha256": "f29173e525f9c660503aaf36d6c509d07e8ed048d4b060fb4da70f7e2d735a01",
+            "bytes": 21459
+          },
+          {
+            "name": "MotionSmoothing",
+            "version": "1.8.0",
+            "sha256": "fb021011aa505e5670cf08ade375e7f80b58eb40c5045f9da15556a9bff888d2",
+            "bytes": 127522
+          },
+          {
+            "name": "OutbackHelper",
+            "version": "1.7.3",
+            "sha256": "0005f588824ccfc1c593551c8b166c306d7161e1d04cd4ec6524ce51403680dd",
+            "bytes": 46206
+          },
+          {
+            "name": "PandorasBox",
+            "version": "1.0.49",
+            "sha256": "25f9c7d6792983ac697e3780667fb0963233c0c08f6e528f5c6d9fe732cded05",
+            "bytes": 245309
+          },
+          {
+            "name": "SafeRespawnCrumble",
+            "version": "1.2.1",
+            "sha256": "33d24b09e08647fb72dd238f197b7b2caaa92073f8b29c15ddbf07b0b5fe5e29",
+            "bytes": 19664
+          },
+          {
+            "name": "Sardine7",
+            "version": "1.2.0",
+            "sha256": "af9b613ef7c3eecf19502aa5256eee47c148e05b15e490dd2f34bc6c85329562",
+            "bytes": 228761
+          },
+          {
+            "name": "ShroomHelper",
+            "version": "1.2.10",
+            "sha256": "6a2c3eacc68353c0f8bb69bb9b59ca62128e6d3f54ff38a8ff1f282f0cdd97d7",
+            "bytes": 1824703
+          },
+          {
+            "name": "SorbetHelper",
+            "version": "1.9.2",
+            "sha256": "992ddebc35b86d584c73d45a7e81424927740f0d1ae3980cd618be1782c274d6",
+            "bytes": 387824
+          },
+          {
+            "name": "SpirialisHelper",
+            "version": "1.0.8",
+            "sha256": "207daf679c760d99202323c5c4bcc6a67b0578873c2cb230d94c245ee55c4cc2",
+            "bytes": 116013
+          },
+          {
+            "name": "StrawberryJam2021",
+            "version": "1.0.13",
+            "sha256": "0ea966416e74807ee052f9119dcb4d6ecd8ef5c8566affe90b24bdb43a07a9b0",
+            "bytes": 94225580
+          },
+          {
+            "name": "StrawberryJam2021Assets",
+            "version": "1.0.1",
+            "sha256": "26fab85f20fff89d1adcba2ef926c3447d9996057c7dfc78e5d97f9d96ed7e45",
+            "bytes": 91062907
+          },
+          {
+            "name": "StrawberryJam2021AudioA",
+            "version": "1.0.4",
+            "sha256": "81e9cbc39b3a5525c93dfc5b24b675a833a8fb616e8a01cfc0838296f5e37e1d",
+            "bytes": 318011755
+          },
+          {
+            "name": "StrawberryJam2021AudioB",
+            "version": "1.0.0",
+            "sha256": "70b90f45709956a4d18bfbb5941836c534344a1cf0ab859a50430daa3b76ef42",
+            "bytes": 318382262
+          },
+          {
+            "name": "StrawberryJam2021AudioC",
+            "version": "1.0.1",
+            "sha256": "298e20ba83fd086c6a747c786475f1753e008016bfa18551e49ffb56dd271c79",
+            "bytes": 317738998
+          },
+          {
+            "name": "TwigHelper",
+            "version": "1.6.0",
+            "sha256": "cc23c5b5c85769e2fe5dbe047091028c3affa3145fadee47c51ec569e3e721e3",
+            "bytes": 293
+          },
+          {
+            "name": "VivHelper",
+            "version": "1.14.10",
+            "sha256": "9a95f51659ccfcb78404f9610307918d6114fc824298fbb8493651ec7c80215a",
+            "bytes": 6543567
+          },
+          {
+            "name": "VortexHelper",
+            "version": "1.2.19",
+            "sha256": "b6280fe2e3c05d355c32a51049854137c41be72d24ec4aec9d997cc7c4394db2",
+            "bytes": 2195976
+          },
+          {
+            "name": "XaphanHelper",
+            "version": "1.0.79",
+            "sha256": "ca868d06eb05f0c5de55126090e5019210e9d83c3dae9394cbcd155acf8eb16f",
+            "bytes": 6957784
+          },
+          {
+            "name": "YetAnotherHelper",
+            "version": "1.2.5",
+            "sha256": "73d64e1b3457e2461d3368a01de9f5f31a58bf24e130f3e35ec7280b24814c2d",
+            "bytes": 53525
+          },
+          {
+            "name": "memorialHelper",
+            "version": "1.0.4",
+            "sha256": "ea66a574e5e1639c580974828b201633aadbd25b6699529c89fbd86db501fda4",
+            "bytes": 13965
+          }
+        ],
+        "module_selection_result": "All 57 selected/built-in metadata identities match actual Everest registration; no disabled extras.",
+        "sampled_peak_footprint_bytes": 3529428720,
+        "last_runtime": {
+          "code_allocations": 6685,
+          "code_budget_bytes": 536870912,
+          "code_reserved_bytes": 111345664,
+          "jit_done_count": 27709,
+          "jit_failed": 0,
+          "jit_unowned": 0,
+          "managed_errors": 0,
+          "patch_rejections": 0,
+          "patches": 4949
+        },
+        "handoff_frame_callbacks": 1,
+        "handoff_after_first_callback_ms": 1.3422083320620004,
+        "handoff_checks": {
+          "failed_checks": 0,
+          "first_frame_drawn": true,
+          "first_frame_readback_passed": true,
+          "gpu_readback_passed": true
+        },
+        "recorded_runtime_errors": []
+      },
+      {
+        "session": "3161ec0b-961c-4683-a311-d73d347d2068",
+        "build_number": "37",
+        "exact_packaged_build_info_match": true,
+        "retained_events": 972,
+        "bounded_excerpt": false,
+        "invalid_lines": 0,
+        "started_utc": "2026-09-25T02:05:27.504294+00:00",
+        "last_utc": "2026-09-25T02:42:17.609826+00:00",
+        "last_event": "launcher_frame_metrics",
+        "native_checks_passed": 26,
+        "graphics_checks_passed": 14,
+        "everest": "1.6580.0-cjit-082e21b",
+        "catalogue_active_requests": 0,
+        "rooms": [],
+        "normal_quit": null,
+        "save_readback": null,
+        "resume_events": 0,
+        "frame_metrics": [
+          {
+            "callback_fps": 57.39915447483621,
+            "gpu_completion_measured": false,
+            "maximum_interval_ms": 351.19520833359275,
+            "mean_frame_callback_ms": 14.225637242653983,
+            "one_percent_low_fps": 9.13854664996151,
+            "window_samples": 599
+          }
+        ],
+        "native_display_request": {
+          "main_thread": true,
+          "screen_maximum_fps": 120,
+          "target_fps": 120
+        },
+        "jit_provider": "stikdebug",
+        "selected_archives": 54,
+        "selected_mods": [
+          {
+            "name": "AdventureHelper",
+            "version": "1.6.0",
+            "sha256": "cf0facab708f25958c560ddf58831e02f7d2b0c9f81571e090e034ce9dc927e7",
+            "bytes": 88955
+          },
+          {
+            "name": "Anonhelper",
+            "version": "1.1.1",
+            "sha256": "6417a5591a7039218c68f61869a20100ce67287d4024645e8b97cac5486e74ae",
+            "bytes": 322423
+          },
+          {
+            "name": "BGswitch",
+            "version": "1.2.2",
+            "sha256": "c85b83155269d7b5fce6ab10b0aed6b7ffd30d62d0b09345df8e67040076fadb",
+            "bytes": 29096
+          },
+          {
+            "name": "Batteries",
+            "version": "1.1.4",
+            "sha256": "088d46393db29a72cabddef670d84183bcb4696f3d9e0e91321e67fe2837d047",
+            "bytes": 94600
+          },
+          {
+            "name": "BounceHelper",
+            "version": "1.14.1",
+            "sha256": "91eca27c7453031fcce4234fe4051801f908d8f71f4a01a7f5e988c6ada470b2",
+            "bytes": 430162
+          },
+          {
+            "name": "BrokemiaHelper",
+            "version": "1.8.5",
+            "sha256": "c80d7d71cdccef7c9b418e05d53debd197b59717d3cdeade72910ace33d4fbeb",
+            "bytes": 386366
+          },
+          {
+            "name": "CJITCodeCanary",
+            "version": "1.0.0",
+            "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b",
+            "bytes": 3560
+          },
+          {
+            "name": "CanyonHelper",
+            "version": "1.1.6",
+            "sha256": "20f3affc4005d8177099776fbb350c258344d08c10bf4601c74763e4c26e4851",
+            "bytes": 4454892
+          },
+          {
+            "name": "CavernHelper",
+            "version": "1.3.7",
+            "sha256": "9e699b141e1f2336a6aab795161498c09f986f6ff7b8fa426a3b9d53f2490041",
+            "bytes": 133823
+          },
+          {
+            "name": "CherryHelper",
+            "version": "1.8.2",
+            "sha256": "8ca640f9e14f844507e0bbedc2afcb99ef61bec6957a7558cee90e9fabd2fba7",
+            "bytes": 1344762
+          },
+          {
+            "name": "CollabUtils2",
+            "version": "1.13.4",
+            "sha256": "4bcea8a9011edb8b7d27b433c47f1f4a871b8f7a4dd7f2bffac67bb99c7f6ad5",
+            "bytes": 5406848
+          },
+          {
+            "name": "ColoredLights",
+            "version": "1.2.0",
+            "sha256": "042dce422374bb2c5d7a9355ac814daa13f582bc4b123a8b239a4e33bfcdad2f",
+            "bytes": 200
+          },
+          {
+            "name": "CommunalHelper",
+            "version": "1.25.7",
+            "sha256": "ef291b3372ee76a9d0f3ba81ef171357d9883f679a005231fc4c8e6e7475ae66",
+            "bytes": 20249067
+          },
+          {
+            "name": "ContortHelper",
+            "version": "1.5.5",
+            "sha256": "d8b42128a808e68d30329baa9299fdb41bf7d24743635dec3137c36bcc87956a",
+            "bytes": 140727
+          },
+          {
+            "name": "CrystallineHelper",
+            "version": "1.17.3",
+            "sha256": "5f7aa68c1cd3ef3b2a620b79e2a49d2a7f943525a938a30269ae3995345f281b",
+            "bytes": 659906
+          },
+          {
+            "name": "DJMapHelper",
+            "version": "1.13.4",
+            "sha256": "95ab02d657213031b70c3079738b21be399e567ca8a32b1fe8e8effc0778eedb",
+            "bytes": 433079
+          },
+          {
+            "name": "DisposableTheo",
+            "version": "1.0.6",
+            "sha256": "df291c0175df46682791fb6373c47eb557c47483eca3db96895eba9b5bbe85b5",
+            "bytes": 12901
+          },
+          {
+            "name": "EeveeHelper",
+            "version": "1.12.6",
+            "sha256": "ce48b44901754d8e072d9bc966d45d4fa0ac27fb47fe2af0fbbd22214417fd36",
+            "bytes": 220091
+          },
+          {
+            "name": "EmHelper",
+            "version": "1.3.0",
+            "sha256": "bdd31089c9163d2111aaaff6bfaf7c828674566d5ab8c23e08d3f4806bee31b3",
+            "bytes": 186110
+          },
+          {
+            "name": "ExtendedVariantMode",
+            "version": "0.51.0",
+            "sha256": "468077af4655349ded0821e3dd283d7dc366d9e3a781a15dc67698f8fb3c9fcc",
+            "bytes": 499117
+          },
+          {
+            "name": "FactoryHelper",
+            "version": "1.4.1",
+            "sha256": "7db9a9d063884beb4f714b9c3fafa7bf06084572e97a4da36d5926050ab7d18e",
+            "bytes": 8175682
+          },
+          {
+            "name": "FancyTileEntities",
+            "version": "1.6.2",
+            "sha256": "c37806dc7e7db4a392c8ab79030701f4cf2046109cc19435b607fca7fe41c8d8",
+            "bytes": 64653
+          },
+          {
+            "name": "FemtoHelper",
+            "version": "1.15.22",
+            "sha256": "5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419",
+            "bytes": 11103153
+          },
+          {
+            "name": "FlaglinesAndSuch",
+            "version": "1.6.80",
+            "sha256": "fb0fd300f95d77539eb9079aed445c81f263557c1a1715187bd509d39c1eb794",
+            "bytes": 700428
+          },
+          {
+            "name": "FrostHelper",
+            "version": "1.81.0",
+            "sha256": "f0f24e97b270b41a55ae00e8f5167b877be4f6b23d9c0f238734ad5fb7d6cb51",
+            "bytes": 1213299
+          },
+          {
+            "name": "FurryHelper",
+            "version": "1.0.6",
+            "sha256": "5f60b2d9c18f6234405137ddc282fd34c6002315fb005412e0d3ab5a58d3afb1",
+            "bytes": 15131
+          },
+          {
+            "name": "GravityHelper",
+            "version": "1.2.28",
+            "sha256": "d4a40744f4c155d655973754422643980321b6660027bc01b660a71b0d00649b",
+            "bytes": 747044
+          },
+          {
+            "name": "HonlyHelper",
+            "version": "1.7.5",
+            "sha256": "6a2d0f04a5be3a9c9c3bf66ec7e93701398a64d5a0e72add5df682e860e7d08d",
+            "bytes": 1042358
+          },
+          {
+            "name": "IsaGrabBag",
+            "version": "1.7.3",
+            "sha256": "557af62a5c932439d906b4a1838ad19dfabc28c97ee57de6490c2b905549f007",
+            "bytes": 165166
+          },
+          {
+            "name": "JackalHelper",
+            "version": "1.7.7.1",
+            "sha256": "ee1d9b01accfc06e4d42357c99b3d0fb4163fa160acc6f06401106d36643c2f5",
+            "bytes": 9984914
+          },
+          {
+            "name": "JungleHelper",
+            "version": "1.4.10",
+            "sha256": "a140e21cbb5fd2dcaac70d4d5e36d49476e414861455ae25dedc0678164406cc",
+            "bytes": 7584200
+          },
+          {
+            "name": "LuaCutscenes",
+            "version": "0.2.13",
+            "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8",
+            "bytes": 43788
+          },
+          {
+            "name": "LunaticHelper",
+            "version": "1.1.1",
+            "sha256": "b10e044b1dfa412605bee3ba6bfdd4263591099d331d6c1aab1e9ba65bf6a3e5",
+            "bytes": 931124
+          },
+          {
+            "name": "MaxHelpingHand",
+            "version": "1.40.10",
+            "sha256": "d5257cb3da742165c6b051805220d72cd0c52f6b35c5de747513a543c17b4bf1",
+            "bytes": 964295
+          },
+          {
+            "name": "MoreDasheline",
+            "version": "1.7.1",
+            "sha256": "f29173e525f9c660503aaf36d6c509d07e8ed048d4b060fb4da70f7e2d735a01",
+            "bytes": 21459
+          },
+          {
+            "name": "MotionSmoothing",
+            "version": "1.8.0",
+            "sha256": "fb021011aa505e5670cf08ade375e7f80b58eb40c5045f9da15556a9bff888d2",
+            "bytes": 127522
+          },
+          {
+            "name": "OutbackHelper",
+            "version": "1.7.3",
+            "sha256": "0005f588824ccfc1c593551c8b166c306d7161e1d04cd4ec6524ce51403680dd",
+            "bytes": 46206
+          },
+          {
+            "name": "PandorasBox",
+            "version": "1.0.49",
+            "sha256": "25f9c7d6792983ac697e3780667fb0963233c0c08f6e528f5c6d9fe732cded05",
+            "bytes": 245309
+          },
+          {
+            "name": "SafeRespawnCrumble",
+            "version": "1.2.1",
+            "sha256": "33d24b09e08647fb72dd238f197b7b2caaa92073f8b29c15ddbf07b0b5fe5e29",
+            "bytes": 19664
+          },
+          {
+            "name": "Sardine7",
+            "version": "1.2.0",
+            "sha256": "af9b613ef7c3eecf19502aa5256eee47c148e05b15e490dd2f34bc6c85329562",
+            "bytes": 228761
+          },
+          {
+            "name": "ShroomHelper",
+            "version": "1.2.10",
+            "sha256": "6a2c3eacc68353c0f8bb69bb9b59ca62128e6d3f54ff38a8ff1f282f0cdd97d7",
+            "bytes": 1824703
+          },
+          {
+            "name": "SorbetHelper",
+            "version": "1.9.2",
+            "sha256": "992ddebc35b86d584c73d45a7e81424927740f0d1ae3980cd618be1782c274d6",
+            "bytes": 387824
+          },
+          {
+            "name": "SpirialisHelper",
+            "version": "1.0.8",
+            "sha256": "207daf679c760d99202323c5c4bcc6a67b0578873c2cb230d94c245ee55c4cc2",
+            "bytes": 116013
+          },
+          {
+            "name": "StrawberryJam2021",
+            "version": "1.0.13",
+            "sha256": "0ea966416e74807ee052f9119dcb4d6ecd8ef5c8566affe90b24bdb43a07a9b0",
+            "bytes": 94225580
+          },
+          {
+            "name": "StrawberryJam2021Assets",
+            "version": "1.0.1",
+            "sha256": "26fab85f20fff89d1adcba2ef926c3447d9996057c7dfc78e5d97f9d96ed7e45",
+            "bytes": 91062907
+          },
+          {
+            "name": "StrawberryJam2021AudioA",
+            "version": "1.0.4",
+            "sha256": "81e9cbc39b3a5525c93dfc5b24b675a833a8fb616e8a01cfc0838296f5e37e1d",
+            "bytes": 318011755
+          },
+          {
+            "name": "StrawberryJam2021AudioB",
+            "version": "1.0.0",
+            "sha256": "70b90f45709956a4d18bfbb5941836c534344a1cf0ab859a50430daa3b76ef42",
+            "bytes": 318382262
+          },
+          {
+            "name": "StrawberryJam2021AudioC",
+            "version": "1.0.1",
+            "sha256": "298e20ba83fd086c6a747c786475f1753e008016bfa18551e49ffb56dd271c79",
+            "bytes": 317738998
+          },
+          {
+            "name": "TwigHelper",
+            "version": "1.6.0",
+            "sha256": "cc23c5b5c85769e2fe5dbe047091028c3affa3145fadee47c51ec569e3e721e3",
+            "bytes": 293
+          },
+          {
+            "name": "VivHelper",
+            "version": "1.14.10",
+            "sha256": "9a95f51659ccfcb78404f9610307918d6114fc824298fbb8493651ec7c80215a",
+            "bytes": 6543567
+          },
+          {
+            "name": "VortexHelper",
+            "version": "1.2.19",
+            "sha256": "b6280fe2e3c05d355c32a51049854137c41be72d24ec4aec9d997cc7c4394db2",
+            "bytes": 2195976
+          },
+          {
+            "name": "XaphanHelper",
+            "version": "1.0.79",
+            "sha256": "ca868d06eb05f0c5de55126090e5019210e9d83c3dae9394cbcd155acf8eb16f",
+            "bytes": 6957784
+          },
+          {
+            "name": "YetAnotherHelper",
+            "version": "1.2.5",
+            "sha256": "73d64e1b3457e2461d3368a01de9f5f31a58bf24e130f3e35ec7280b24814c2d",
+            "bytes": 53525
+          },
+          {
+            "name": "memorialHelper",
+            "version": "1.0.4",
+            "sha256": "ea66a574e5e1639c580974828b201633aadbd25b6699529c89fbd86db501fda4",
+            "bytes": 13965
+          }
+        ],
+        "module_selection_result": "All 57 selected/built-in metadata identities match actual Everest registration; no disabled extras.",
+        "sampled_peak_footprint_bytes": 2612907496,
+        "last_runtime": {
+          "code_allocations": 6665,
+          "code_budget_bytes": 536870912,
+          "code_reserved_bytes": 110903296,
+          "jit_done_count": 27205,
+          "jit_failed": 0,
+          "jit_unowned": 0,
+          "managed_errors": 0,
+          "patch_rejections": 0,
+          "patches": 4949
+        },
+        "handoff_frame_callbacks": 1,
+        "handoff_after_first_callback_ms": 2.959749999718042,
+        "handoff_checks": {
+          "failed_checks": 0,
+          "first_frame_drawn": true,
+          "first_frame_readback_passed": true,
+          "gpu_readback_passed": true
+        },
+        "recorded_runtime_errors": []
+      }
+    ],
+    "ios_termination_report_collected": true,
+    "mod_configuration_changed_from_build36": true,
+    "full_gameplay_save_quit_accepted": false,
+    "steady_120fps_accepted": false,
+    "save_backup_transfer_gate_accepted": false,
+    "ios_termination_evidence": {
+      "status": "CONFIRMED_IOS_PER_PROCESS_MEMORY_LIMIT_TERMINATIONS",
+      "collection_transport": "paired CoreDevice Wi-Fi / native RemoteXPC tunnel",
+      "debugger_attached": false,
+      "system_log_archive_files": 966,
+      "filtered_os_log_sha256": "292ca5c59860f546b0a1c841742aff39dfb9aa95253c9746d71618c243d65563",
+      "process_ids": [
+        3496,
+        3932
+      ],
+      "limit_mib": 3376,
+      "limit_bytes": 3539992576,
+      "last_sample_second_run_bytes": 3529428720,
+      "termination_summaries": [
+        {
+          "timestamp": "2026-09-25 03:43:38.195886+0100",
+          "message": "Process LiveContainer [3496] killed by jetsam reason per-process-limit"
+        },
+        {
+          "timestamp": "2026-09-25 03:43:38.195898+0100",
+          "message": "Process LiveContainer [3932] killed by jetsam reason per-process-limit"
+        }
+      ],
+      "attribution_limit": "OS cause is proven; the reason the older build ran above this limit and the actionable allocation regression remain under investigation."
+    },
+    "owner_additional_observation": "Strawberry Jam also closes with Motion Smoothing disabled; it worked before the iOS15-support builds.",
+    "host_exact_mod_reproduction": {
+      "status": "PASS_HOST_EXACT_PHONE37_MOD_SET_OLD_SITE_BOTH_RENDERERS",
+      "source_export_sha256": "999d4ad11dfdb16c9b1043a048a8449d7b659b336b3a5e8237de10e8f9a21489",
+      "mod_archives": 54,
+      "configuration_sha256": "fc76ab02f841c4308e0cb7123a1f9a885374bca4298a7703f91771f96f79b882",
+      "exact_mod_manifest_sha256": "2df3033b41735923ab6f87af2ffd5df4f4fa44a6b9388edf992e1c55514b10a6",
+      "results": [
+        {
+          "case": "Fast120",
+          "exit_code": 0,
+          "elapsed_seconds": 121.95223851999981,
+          "log_sha256": "1826ac16dc15beaba1472b6ccf0177925734f493891626cf744b1be5952839a1",
+          "peak_sampled_footprint_bytes": 3040706560,
+          "motion": "PASS_MOTION_SMOOTHING_REAL_GAME fps=120; renderer=Fast; draws=520; physics_updates=452; physics_seconds=7.53334803879261; wall_seconds=7.5102531; fixed_step=60",
+          "old_site_room10_entered": true,
+          "normal_save_resume_quit": true
+        },
+        {
+          "case": "Fancy120",
+          "exit_code": 0,
+          "elapsed_seconds": 77.08507254300093,
+          "log_sha256": "ec8692bfda898c8b5fcddaf605a8d366220a178733b56a7675c26ce20ead51a3",
+          "peak_sampled_footprint_bytes": 2718597120,
+          "motion": "PASS_MOTION_SMOOTHING_REAL_GAME fps=120; renderer=Fancy; draws=520; physics_updates=267; physics_seconds=4.450008686631918; wall_seconds=4.4580903; fixed_step=60",
+          "old_site_room10_entered": true,
+          "normal_save_resume_quit": true
+        }
+      ],
+      "phone_fault_reproduced": false,
+      "host_only": true,
+      "user_save_or_mod_settings_copied": false
+    },
+    "host_memory_entitlement": {
+      "status": "CONFIRMED_MEMORY_PERMISSION_PRESENT_IN_PRIOR_PROFILES_ABSENT_IN_CURRENT_PROFILES_AND_INSTALL",
+      "host": "LiveContainer",
+      "host_version": "3.8.10",
+      "get_task_allow": true,
+      "increased_memory_limit_entitlement": false,
+      "extended_virtual_addressing_entitlement": false,
+      "source_record_sha256": "be771885145b6fbca7e4c172313a470be9db38bb7fb91a7007a2621b286f81f9",
+      "source": "paired Wi-Fi installation_proxy Lookup; signing details retained privately",
+      "prior_host_version_reported": "3.8.9 (diagnostics label; not an installation record)",
+      "prior_entitlement_not_collected": false,
+      "host_source_version_audited": "4dbe0f9a626de801184a42c0be8d2cb105058e3d",
+      "host_upstream_requests_increased_memory_limit": true,
+      "scope": "Pre-repair observation: earlier signing profiles grant increased-memory-limit; the current installation and profiles omitted it. See host_signing_repair for the applied repair. Fresh phone gameplay remains pending.",
+      "signing_profiles": [
+        {
+          "signing_identity": "previous",
+          "created": "2026-09-19T08:45:17",
+          "expiry": "2026-09-26T08:45:17",
+          "increased_memory_limit": true,
+          "get_task_allow": true
+        },
+        {
+          "signing_identity": "current",
+          "created": "2026-09-20T08:55:05",
+          "expiry": "2026-09-27T08:55:05",
+          "increased_memory_limit": false,
+          "get_task_allow": true
+        },
+        {
+          "signing_identity": "previous",
+          "created": "2026-09-20T08:56:07",
+          "expiry": "2026-09-27T08:56:07",
+          "increased_memory_limit": true,
+          "get_task_allow": true
+        },
+        {
+          "signing_identity": "previous",
+          "created": "2026-09-24T23:53:09",
+          "expiry": "2026-10-01T23:53:09",
+          "increased_memory_limit": true,
+          "get_task_allow": true
+        },
+        {
+          "signing_identity": "current",
+          "created": "2026-09-25T00:02:07",
+          "expiry": "2026-10-02T00:02:07",
+          "increased_memory_limit": false,
+          "get_task_allow": true
+        },
+        {
+          "signing_identity": "current",
+          "created": "2026-09-25T00:04:30",
+          "expiry": "2026-10-02T00:04:30",
+          "increased_memory_limit": false,
+          "get_task_allow": true
+        },
+        {
+          "signing_identity": "current",
+          "created": "2026-09-25T00:08:08",
+          "expiry": "2026-10-02T00:08:08",
+          "increased_memory_limit": false,
+          "get_task_allow": true
+        }
+      ],
+      "profile_metadata_sha256": "1caf42a129cb9d1d5709fd4657d06b4b279f70df52f0773a05a163852361e20c"
+    },
+    "host_signing_repair": {
+      "status": "PASS_INSTALLED_HOST_PERMISSION_REPAIR_GAMEPLAY_PENDING",
+      "checked_utc": "2026-09-25T03:58:28.574447+00:00",
+      "signed_package": {
+        "status": "PASS_SAME_RELEASE_LIVECONTAINER_SIGNING_REPAIR",
+        "upstream_sha256": "bec41bc21d75a0f2e85a0aa589ce5772e24e410deb017486758a3bc0503c8de7",
+        "ipa_sha256": "aab1ca813c35be16e4433d6780c90c6c1f6f95a0e4d07c8282c04cf4001ca21a",
+        "ipa_bytes": 35946678,
+        "version": "3.8.10",
+        "source_version": "Release (main/4dbe0f9)",
+        "main_macho_uuid": "10A2F666-F59A-316B-9DD8-F0EE0498649B",
+        "same_main_uuid_as_preexisting_device_report": true,
+        "unchanged_macho_section_sets": 15,
+        "unchanged_ordinary_resources": 254,
+        "changed_info_plists": [
+          "Info.plist",
+          "PlugIns/LiveProcess.appex/Info.plist",
+          "PlugIns/LiveWidgetExtension.appex/Info.plist",
+          "PlugIns/ShareExtension.appex/Info.plist",
+          "PlugIns/LaunchAppExtension.appex/Info.plist"
+        ],
+        "same_main_app_identifier": true,
+        "same_main_app_groups": true,
+        "same_main_keychain_groups": true,
+        "new_main_entitlement_only": "com.apple.developer.kernel.increased-memory-limit",
+        "strict_signature_verification_passed": true
+      },
+      "installed_verification": {
+        "same_bundle_id": true,
+        "high_memory": true,
+        "only_main_entitlement_change": true,
+        "same_groups": true,
+        "same_version": true,
+        "same_release": true,
+        "container_path_changed": true,
+        "saves_preserved_exactly": true,
+        "verified_save_files": 14
+      },
+      "install_success": true,
+      "native_launch_success": true,
+      "native_launch_pid": 4581,
+      "transport": "paired Wi-Fi",
+      "debugger_attached": false,
+      "post_repair_gameplay_accepted": true,
+      "effective_post_repair_memory_limit_observed": true,
+      "private_evidence_sha256": {
+        "host-install-records-after.json": "bc8a7299872522ee31ab9f62a73a44b1329b6cc2dc314503ea4e4d50623146b5",
+        "install-result.json": "43158f8f4fab9b74da6acfdfd0b5c937f3ffeddc3c64b514125d07d49233fa57",
+        "native-launch-result.json": "bdeadb52cbfd3b540f7006634827ce9b8289ba6d62cb24382f985d4128cb8d45",
+        "save-hashes-before.json": "0d66d5450ddfbd0108da3e86695029c43fc9048d8604ba9a1eb71ffb52f2325e",
+        "save-hashes-after.json": "0d66d5450ddfbd0108da3e86695029c43fc9048d8604ba9a1eb71ffb52f2325e"
+      },
+      "effective_memory_limit": {
+        "status": "CONFIRMED_EFFECTIVE_OS_LIMIT_RESTORED",
+        "process_id": 4581,
+        "before_mib": 3376,
+        "after_mib": 6144,
+        "before_bytes": 3539992576,
+        "after_bytes": 6442450944,
+        "source": "iOS runningboardd unified log collected over paired Wi-Fi",
+        "source_sha256": "347965da76c4e6e98061b598b3109e34d2ba4b08dddee1f041f37649717c7dcf",
+        "records": [
+          {
+            "timestamp": "2026-09-25 04:52:33.755174+0100",
+            "active_mib": 6144,
+            "inactive_mib": 6144
+          }
+        ],
+        "debugger_attached": false
+      },
+      "installed": true,
+      "post_repair_gameplay_scope": "SJ room/touch gameplay only; normal Quit and full save/native-return gate not recorded in this run."
+    },
+    "host_matched_build32_build37_comparison": {
+      "receipt_path": ".build/phone37-memory-pair-a/receipt.json",
+      "receipt_sha256": "f5d534f7af36d6e3e93a29939ad61f3aa5e4a18a8a64e91afd9932b1c001e266",
+      "status": "PASS_MATCHED_SJ_BUILD32_BUILD37_HOST_COMPARISON",
+      "results": [
+        {
+          "version": "32",
+          "exit_code": 0,
+          "seconds": 245.22586512199996,
+          "peak_host_footprint": 3457781760,
+          "managed_observations": [
+            "MEMORY_MANAGED phase=menu-before scene=Overworld used=1092446544 heap=1209286656 fragmented=124132904 total=51539607552 collections=55",
+            "MEMORY_MANAGED phase=menu-after-gc scene=Overworld used=1091182480 heap=1209253888 fragmented=127754656 total=51539607552 collections=57",
+            "MEMORY_MANAGED phase=level-ready scene=Level used=1150979656 heap=1278476288 fragmented=139008808 total=51539607552 collections=59"
+          ],
+          "log_sha256": "bb21b6e3637c6819c32ca26d75774ae4053b32cc90f008f6b814c60da65f348c"
+        },
+        {
+          "version": "37",
+          "exit_code": 0,
+          "seconds": 243.66470421100166,
+          "peak_host_footprint": 3349229568,
+          "managed_observations": [
+            "MEMORY_MANAGED phase=menu-before scene=Overworld used=1029141760 heap=1134075904 fragmented=112178960 total=51539607552 collections=54",
+            "MEMORY_MANAGED phase=menu-after-gc scene=Overworld used=1028489128 heap=1125949440 fragmented=108635232 total=51539607552 collections=56",
+            "MEMORY_MANAGED phase=level-ready scene=Level used=1096208520 heap=1213571072 fragmented=126966120 total=51539607552 collections=58"
+          ],
+          "log_sha256": "9557327185e44ce0ec12fa819772450725fb37ceecb0e632edca39fd147a94f1"
+        }
+      ],
+      "host_only": true,
+      "mod_archives": 53,
+      "mod_version": "StrawberryJam2021 1.0.12 with exact compatible dependencies",
+      "scenario": "SJ Beginner Lobby, touch, resume, save, normal Quit",
+      "same_cloned_phone_saves": true,
+      "same_native_fps": 60,
+      "cold_profile_caches": true,
+      "scope": "Host comparison only; current CommunalHelper1.25.7 requires Everest1.6580 and cannot serve as a build32 control."
+    },
+    "post_repair_status": "PASS_PHONE37_SJ_GAMEPLAY_AFTER_HOST_MEMORY_PERMISSION_REPAIR",
+    "post_repair_gameplay_review": {
+      "status": "PASS_PHONE37_SJ_GAMEPLAY_AFTER_HOST_MEMORY_PERMISSION_REPAIR",
+      "checked_utc": "2026-09-25T10:23:39.414404+00:00",
+      "source": "Cabrillo retained session journal collected over paired Wi-Fi; independent iCloud export not yet present",
+      "session": "bd1717f8-d16b-4628-93ea-fb44fdb0348d",
+      "source_bytes": 963505,
+      "source_sha256": "97d8539ac2738466d09977d7339982fd7b63dd93e052393ef7b9959f102a831b",
+      "retained_event_rows": 1491,
+      "build_info_matches_delivered_37": true,
+      "pid": 7416,
+      "first_event_utc": "2026-09-25T10:04:49.205791+00:00",
+      "last_event_utc": "2026-09-25T10:15:21.035865+00:00",
+      "native_checks": 26,
+      "graphics_checks": 14,
+      "catalogue_active_requests": 0,
+      "selected_identities_verified": 57,
+      "registered_modules": 59,
+      "sj_hooks_executed": true,
+      "rooms": [
+        "area=2; sid=Celeste/2-OldSite; mode=Normal; room=10",
+        "area=20; sid=StrawberryJam2021/0-Lobbies/0-Prologue; mode=Normal; room=prologue-00",
+        "area=20; sid=StrawberryJam2021/0-Lobbies/0-Prologue; mode=Normal; room=prologue-01",
+        "area=21; sid=StrawberryJam2021/0-Lobbies/1-Beginner; mode=Normal; room=sj2021beginnerlobby",
+        "area=34; sid=StrawberryJam2021/1-Beginner/NotYourBadeline; mode=Normal; room=a_01",
+        "area=34; sid=StrawberryJam2021/1-Beginner/NotYourBadeline; mode=Normal; room=a_02",
+        "area=34; sid=StrawberryJam2021/1-Beginner/NotYourBadeline; mode=Normal; room=a_03"
+      ],
+      "max_footprint_bytes": 4049129488,
+      "final_footprint_bytes": 3930263568,
+      "final_input_sample": {
+        "contacts": 0,
+        "controllers": 0,
+        "frames": 31629,
+        "resumes": 0,
+        "touch_presses": 501,
+        "touch_releases": 501
+      },
+      "maximum_runtime_error_counters": {
+        "jit_failed": 0,
+        "jit_unowned": 0,
+        "managed_errors": 0,
+        "patch_rejections": 0
+      },
+      "final_scene": "Celeste.Level",
+      "ends_backgrounded": true,
+      "normal_quit_recorded": false,
+      "save_readback_gate_closed": false,
+      "full_gameplay_save_quit_accepted": false,
+      "steady_120fps_accepted": false,
+      "save_backup_transfer_gate_accepted": false,
+      "owner_confirmation": "Yep that\u2019s worked now!",
+      "scope": "Actual SJ rooms and touch gameplay pass after the host permission repair. The journal ends during a normal background/pause transition; it does not contain normal Quit/native return, and does not establish another unexpected exit."
+    },
+    "owner_post_repair_confirmation": {
+      "date": "2026-09-25",
+      "text": "Yep that\u2019s worked now!",
+      "scope": "Owner confirms the Strawberry Jam repair works."
+    }
+  }
+}

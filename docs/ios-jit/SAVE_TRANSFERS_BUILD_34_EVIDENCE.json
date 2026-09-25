@@ -1,0 +1,153 @@
+{
+  "schema": 1,
+  "status": "LOCAL_PASS_UPLOADED_AWAITING_COMBINED_BUILD34_PHONE_ACCEPTANCE",
+  "version": "0.18.0",
+  "build": 34,
+  "build_id": "launcher-save-transfers-20260917-34",
+  "accepted_fallback": 32,
+  "phone_accepted": false,
+  "build33_accepted": false,
+  "owner_deferred_build33_to_combined34": true,
+  "published_commit_through_build32": "16ff42ca62438ccfa1c3ea14e76a6606da1bc820",
+  "build33_34_git_publication": false,
+  "ipa_sha256": "02440e406dd9e940465684e9ac32824966303d0067e0dbe650fac73891f786e7",
+  "ipa_bytes": 24056162,
+  "executable_uuid": "FD136517-5EE7-3169-B275-3CE4BB0011F0",
+  "compiled_sources": 66,
+  "source_hashes": 139,
+  "managed_assemblies": 201,
+  "managed_assemblies_identical_to_build32": 200,
+  "changed_managed_assemblies": [
+    "Celeste.dll"
+  ],
+  "native_archives_identical": 16,
+  "derived_managed_receipt_sha256": "80bb0a19d7f63944aa6fe23379338c747db776cae51744c73482a390425b13aa",
+  "profile_checks": 119,
+  "whole_profile_crash_boundaries": 8,
+  "slot_crash_boundaries": 4,
+  "ui_checks_each_device": 8,
+  "simulator_families": 2,
+  "precision_controls": 6,
+  "negative_package_controls": 8,
+  "numerical_repair": {
+    "changed_methods": {
+      "System.Void Celeste.PlayerHair::AfterUpdate()": 1,
+      "System.Void Celeste.PlayerSeeker::Update()": 6,
+      "System.Boolean Celeste.Player/<BirdDashTutorialCoroutine>d__561::MoveNext()": 3,
+      "System.Void Celeste.LavaRect::Resize(System.Single,System.Single,System.Int32)": 3
+    },
+    "unchanged_method_bodies": 17300,
+    "preserved_double_precision_sites": 10,
+    "mixed_arithmetic_before": 11,
+    "mixed_arithmetic_after": 0,
+    "float_boundaries_before": 2,
+    "float_boundaries_after": 0,
+    "hair_first_segment_travel_before": 0,
+    "hair_first_segment_travel_after": 1.7500038,
+    "lava_surface_bubbles_before": 4,
+    "lava_surface_bubbles_after": 40,
+    "lava_underlying_bubbles_unchanged": 163,
+    "hair_matches_original_vanilla_normalized_il": true,
+    "audit_scope": "Conservative straight-line expression analysis; unknown control-flow joins and unsupported expressions are not guessed."
+  },
+  "checks": {
+    "artifacts/cabrillo-build34/verification.json": {
+      "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS",
+      "sha256": "2eda8050cddb15d12ee2db0f8c58e42a8298dd3faeacb49010ed8a3d02b2a26a"
+    },
+    "artifacts/cabrillo-build34/build-receipt.json": {
+      "status": "BUILD_COMPLETE_AWAITING_PACKAGE_VERIFICATION",
+      "sha256": "5ee11f52ef0e4e0880d4cccd273b30271c9f6ec896a91776848a0f5d2a95e6a2"
+    },
+    "artifacts/cabrillo-build34/native-receipt.json": {
+      "status": "PASS_FRESH_NATIVE_COMPILATION",
+      "sha256": "33d7a905b533d603ec2ff9f2c8f1e2aabd02d93dbc66413ff0393add8a80a202"
+    },
+    "artifacts/cabrillo-build34/managed-receipt.json": {
+      "status": "PASS_PLAYER_PRECISION_REPAIR_BUILD",
+      "sha256": "80bb0a19d7f63944aa6fe23379338c747db776cae51744c73482a390425b13aa"
+    },
+    "artifacts/cabrillo-build34/repair.json": {
+      "status": "PASS_SCOPED_PLAYER_PRECISION_REPAIR",
+      "sha256": "6d65ef7a91a9f5e923b9b28f6effccbd988e846ff3e28467c1acadaaeabb4359"
+    },
+    "artifacts/cabrillo-build34/source-preservation.json": {
+      "status": "PASS_CURRENT_TEST_AND_FROZEN_SOURCE_IDENTITIES",
+      "sha256": "f7d7a790166d8d45c6a7795efc69511d84d30e3e4a073ca21d8e7036e39155ba"
+    },
+    "artifacts/cabrillo-build34/build-comparison.json": {
+      "status": "PASS_PACKAGE_BYTES_AND_PRESERVATION",
+      "sha256": "99124d97adaca1366a81188c31da8d713b289da1b3a4daf6435bf468279d573d"
+    },
+    ".build/save-transfers-host34-c/receipt.json": {
+      "status": "PASS_PROFILE_BACKUPS",
+      "sha256": "4a0a7a053fbcd2819c59c2f8a873d7a1d87ad562fc24ac76b18ae9abf9a96264"
+    },
+    ".build/save-transfers-ui34-b/receipt.json": {
+      "status": "PASS_PROFILE_UI_XCUITEST",
+      "sha256": "8d4c6e0ef9cb0018f6a2c8e5fda154a33fb516a8790d12587d16c8d6324b734b"
+    },
+    ".build/save-transfers-game34-e/receipt.json": {
+      "status": "PASS_BACKUP_RESTORED_REAL_GAME_SAVE_QUIT",
+      "sha256": "81cf79d98be21e8d8029bb81790fe46f785b8bb489d35f803cbd85b640d45cf4"
+    },
+    ".build/save-transfers-game34-final/receipt.json": {
+      "status": "PASS_BACKUP_RESTORED_REAL_GAME_SAVE_QUIT",
+      "sha256": "22919bc0aaf9fd1af7583111eb1cc3fd3a03fc0c9a28af408b01839669d4fe72"
+    },
+    ".build/vanilla-save34-a/receipt.json": {
+      "status": "PASS_CABRILLO_VANILLA_EVEREST_SAVE_ROUNDTRIP",
+      "sha256": "d7a9c4eef2ff0dcc45f1f6a7e0913d17709d86f0e6483a421ed4895284361474"
+    },
+    ".build/precision-controls34-final/results.json": {
+      "status": "PASS_PRECISION_REPAIR_CONTROLS",
+      "sha256": "8daba0c916e8cbd1e184cdb14a18971823bc34ae7b2c9234e68a4e26438e7416"
+    },
+    ".build/save-transfers-package34-final/results.json": {
+      "status": "PASS_LOADING_PACKAGE_NEGATIVE_CONTROLS",
+      "sha256": "d52f95bcc9f78c9ca4472b921a5a57b8835409593999fa151bd7a7c7b0c0699d"
+    },
+    "artifacts/cabrillo-build34/delivery.json": {
+      "status": "PASS_ICLOUD_UPLOAD_AND_LOCAL_BYTES",
+      "sha256": "4aae88bf214f1e62975a473d320ee731f28d1217072b517128696dcf18fc85c2"
+    }
+  },
+  "limits": [
+    "No physical phone34 acceptance or download/execution confirmation.",
+    "Seeker/tutorial visual behavior remains unaccepted; exact instruction repair and audit pass.",
+    "Original vanilla1.4.0.0 serializer and pinned Everest tested, not every version/platform or custom mod format.",
+    "Vanilla roundtrip used precursor repair34-c; all four repaired method hashes match final, which has a fresh MVID. Exact final managed payload has a separate passing real-game receipt.",
+    "Simulator Files presentation is a fixture; production Swift view/store checked, physical document picker remains pending.",
+    "Standard numbered save files transfer unchanged; nonstandard/external mod data needs a whole-profile or separate backup.",
+    "No automatic cloud merge, mod archive installation or unlimited slot-capacity guarantee.",
+    "Public IPA original-IL/FMOD permission remains separate."
+  ],
+  "exploratory_runs": "Preserved failed compile/query/timing harness attempts; final production/test source hashes are checked against the passing receipts. No physical PASS inferred.",
+  "source_preservation": "All build31/32/33 packaged sources and entire33 lane match; final34 build and all final test source hashes match.",
+  "delivery_receipt": "artifacts/cabrillo-build34/delivery.json",
+  "delivery": {
+    "folder": "Celeste JIT Tests/0.18.0-build-34",
+    "kit_files": 6,
+    "bytes_verified": true,
+    "upload_confirmed": true,
+    "initial_upload_error_resolved": true,
+    "cloud_parent_bytes": 794488191,
+    "phone_download_confirmed": false,
+    "phone_executed": false,
+    "all_prior_builds_and_results_preserved": true
+  },
+  "repository_audit": "artifacts/cabrillo-build34/repository-check.json",
+  "retained_evidence_review_2026_09_25": {
+    "source_build35_export_sha256": "9a4db6179cad5386d140e5f90c7e4d1ce0154d139dce1e1f1d0538e8580b082d",
+    "session": "ba62b760-248a-427a-84bc-834f1a8a956f",
+    "native_gameplay_save_quit_pass": true,
+    "shutdown_stage": 8,
+    "frame_callbacks": 3533,
+    "managed_errors": 0,
+    "jit_failed": 0,
+    "jit_unowned": 0,
+    "patch_rejections": 0,
+    "backup_transfer_ui_acceptance": false,
+    "scope": "Retained build34 gameplay session in a build35 export; no profile backup/restore or per-slot transfer UI actions recorded"
+  }
+}

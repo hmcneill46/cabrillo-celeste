@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "manifest": ".private/loading-inputs/manifest.json",
+  "manifest_sha256": "6c1c1fac32edc52a05fe5759e82a28e11eee899eb505d4f6a11c000a267bebd2",
+  "sdk8": "8.0.422",
+  "sdk9": "9.0.300",
+  "everest_source": "082e21b0b6dd7ff7c96d65b2ca2c632f4fd8df75",
+  "scope": "Managed source build and isolated host validation; unchanged native inputs use Dependencies.json",
+  "everest_version": "1.6580.0",
+  "everest_manifest": ".private/everest6580-inputs/manifest.json",
+  "everest_manifest_sha256": "59e566969b086b5aa5e9ec7841a8a9638944725b3a9aacaadec04fd42f65a99b"
+}

@@ -1,4 +1,42 @@
+## 25 September 2026 update
+
+Build37 updates Everest to stable1.6580.0 and preserves the build36 Motion
+Smoothing startup fix. All host regression gates pass; its six-file kit is
+uploaded and the iPad native launcher has opened with the new identity.
+Phone37 unexpectedly closes; iOS logs confirm a reduced per-process memory limit.
+The installed LiveContainer signing profile omitted Increased Memory Limit, which
+retained earlier profiles grant. The same host release is now repaired and its
+installed permission/save preservation verified; iOS confirms6144MiB of process
+memory allowance versus3376MiB previously. The owner confirms success and the
+new37 phone journal verifies SJ room/touch gameplay at4.05GB with zero runtime
+errors. It ends backgrounded, so normal Quit/save readback remain unrecorded for
+this run; see [the memory review](BUILD_37_MEMORY_REVIEW.md). The retained36
+export passes its scoped base-game/Motion Smoothing runtime gate. The combined
+native saves gate and sustained120Hz performance remain pending.
+
+Build35 passed a scoped iPad mini4 base-game run with touch, save/Quit and native
+return. Other JIT routes and sustained physical120Hz performance need separate
+evidence. The full touch editor follows the combined backup/save-transfer gate.
+All packaged lanes are frozen; the next unused identity is38. Earlier dated
+roadmap sections below describe their historical state.
+
 # Native Celeste launcher: product design after build22
+
+**17 September2026:** [build34](SAVE_TRANSFERS_BUILD_34.md) adds individual desktop
+save transfers, empty base slots, long-press actions and scoped hair/seeker/tutorial/
+lava numerical repairs to33's profile backups. Local native, UI, real-game,
+original-vanilla serialization and package checks pass; the kit is uploaded.
+The owner deferred33 testing, so the pending gate is one combined34 phone test.
+Build32 stays the accepted fallback. All34 inputs are frozen; next unused build35.
+The full touch editor follows34 acceptance.33/34 remain unpublished local work.
+
+**15 September2026:** build32 is physically accepted and published. Build33
+implements the next whole-profile backup/restore/rollback increment, including
+discovery of additional Everest slots. See [its report](PROFILE_BACKUPS_BUILD_33.md).
+Local evidence and delivery are distinct from the pending phone33 gate. The
+full touch editor follows that gate. Earlier dated roadmap sections remain
+historical design context.
+
 
 **15 September build32 acceptance:** [the phone export confirms callback1 handoff](BUILD_32_ACCEPTANCE.md),
 approximately1.3ms after its first-return marker, plus SJ saved-room gameplay,
@@ -692,3 +730,14 @@ SwiftUI touch editor. Retain scope from the earlier product roadmap; specific
 collabs remain regression fixtures. Performance overlays must label actual
 measurements, and new iOS compatibility limits need evidence. Public preparation
 and FMOD permissions stay independent release gates.
+
+
+## Later25 September: visibility correction and Everest upgrade
+
+Build35's phone Motion Smoothing failure identified a missing Mono visibility
+patch in the iOS15 native rebuild. Build36 restores it; original-source host
+controls reproduce the failure and corrected-source tests pass. The owner reports
+phone startup/gameplay now work. Build37 follows the owner's additional request
+to upgrade to Everest stable1.6580, with the corrected native runtime preserved.
+See the36/37 reports for current delivery and physical acceptance. The pending
+save/restore UI gate still precedes full touch-editor work.

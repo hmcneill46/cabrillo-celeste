@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "receipt": ".build/everest-profiles37-a/receipt.json",
+    "sha256": "2a11917f0fd9842c4c0c97d59a8bcb7fe629e5e8be047a2956eda0324cdf7795"
+  },
+  "game": {
+    "receipt": ".build/everest-game37-c/receipt.json",
+    "sha256": "385954d5903e633a9ebbf2a88e5486a7a8f927ebd9148db91a5e3ebd405c01d1"
+  },
+  "motion": {
+    "receipt": ".build/everest-motion37-a/receipt.json",
+    "sha256": "2fb3e42e09b7520af67f91682f1792925115a978f34e916b78211a8c1cd3de35"
+  },
+  "vanilla": {
+    "receipt": ".build/everest-vanilla37-a/receipt.json",
+    "sha256": "c5063501420e56a970a136a4816423b8dd11716ebd74ebe94404ea290a35cbb8"
+  }
+}

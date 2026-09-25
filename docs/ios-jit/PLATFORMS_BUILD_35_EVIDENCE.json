@@ -1,0 +1,443 @@
+{
+  "schema": 1,
+  "as_of": "2026-09-25",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.19.0",
+    "build_number": "35",
+    "build_id": "launcher-platforms-20260925-35",
+    "scope": "iOS15 native compatibility and explicit JIT activation routes; physical validation pending",
+    "device_jit_tested": false
+  },
+  "package": {
+    "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS",
+    "build_id": "launcher-platforms-20260925-35",
+    "ipa_sha256": "6227fb1d8197442dcdd5dc4471c3b46f237f4d7b6fb59809dccb0c423a7dd662",
+    "bytes": 24113498,
+    "executable_uuid": "b6e76e0bc4d8377abaeee65cfba3f9a3",
+    "compiled_source_count": 68,
+    "managed_assemblies": 201,
+    "managed_assemblies_changed_from_build34": 1,
+    "native_archives_rebuilt": 7,
+    "native_archives_preserved": 9,
+    "unsigned": true,
+    "symbols_outside_ipa": true,
+    "device_tested": false,
+    "cooperative_loading_implemented": true,
+    "uninterruptible_step_limit": true
+  },
+  "managed": {
+    "receipt": ".build/platform-managed35-b/receipt.json",
+    "sha256": "e03d75eb1377a81a71d596c7e47567b431e2c67103eb2af1346f5bc315943fcc",
+    "changed_from_build34": [
+      "Managed/CelesteJITEverest.dll"
+    ],
+    "precision_base_sha256": "80bb0a19d7f63944aa6fe23379338c747db776cae51744c73482a390425b13aa"
+  },
+  "native": {
+    "receipt": ".build/platform-native35-c/receipt.json",
+    "sha256": "f248baee9188df20b53d094eeab1840f996d9d22309a71c0a45342148e076ae7",
+    "libraries": [
+      {
+        "path": ".build/platform-native35-c/stage/libraries/libmonosgen-2.0.a",
+        "sha256": "ba8647827c804684fb15e11c1812881fc6630ee01c57fbc612f227ac1da07459",
+        "rebuilt": true,
+        "baseline_sha256": "bc3ff35d0de075e2859cee2b0ad461294effac4c1bf8b013df6b5c326c9cdc7f",
+        "deployment": {
+          "versioned_objects": 260,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".build/platform-native35-c/stage/libraries/libmono-component-marshal-ilgen-static.a",
+        "sha256": "9fa1d620aa39bb564324e4333856e6218a1236deaf0d2ef4eb43aa2b67ea6709",
+        "rebuilt": true,
+        "baseline_sha256": "856ac91de63f3cc0b1e2ec03446fb02af98c255d638079d9b6947563dd7263d9",
+        "deployment": {
+          "versioned_objects": 1,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".build/platform-native35-c/stage/libraries/libmono-component-debugger-stub-static.a",
+        "sha256": "b42a4db7d847fd6b97c4201e1077cfbe46ece529f8f0e91184b36b7033fd9f44",
+        "rebuilt": true,
+        "baseline_sha256": "4bb293af9026c0e05174e81c1070d76d5e6ec40443b8d44df523248fdb53bc48",
+        "deployment": {
+          "versioned_objects": 1,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".build/platform-native35-c/stage/libraries/libmono-component-hot_reload-stub-static.a",
+        "sha256": "ae189691a2ff052f45ad05a8b99a5637c8c103db8596b7040a4eadc925ba5c02",
+        "rebuilt": true,
+        "baseline_sha256": "02f549af6073eae5f7e508e13898f56f6f652fdf414d4a6a353b13888bfdfaac",
+        "deployment": {
+          "versioned_objects": 1,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".build/platform-native35-c/stage/libraries/libmono-component-diagnostics_tracing-stub-static.a",
+        "sha256": "ea41a4e48080c707c5fab6df72c37ffa8228411921550b6966d09857801b45be",
+        "rebuilt": true,
+        "baseline_sha256": "2ebb7ca1caca7bd85f9dec907def8e38b32481cae3b8e48cd0af1a8b9ffe83a9",
+        "deployment": {
+          "versioned_objects": 2,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".private/inputs/.build/ios-jit/managed-runtime/pack-ios-8.0.28/runtimes/ios-arm64/native/libSystem.Native.a",
+        "sha256": "af4ec4c9593581699514b991056f484366290de8ac78b15b65d8d187ac491628",
+        "rebuilt": false,
+        "baseline_sha256": "af4ec4c9593581699514b991056f484366290de8ac78b15b65d8d187ac491628",
+        "deployment": {
+          "versioned_objects": 28,
+          "maximum_minimum_os": "11.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".private/inputs/.build/ios-jit/managed-runtime/pack-ios-8.0.28/runtimes/ios-arm64/native/libSystem.IO.Compression.Native.a",
+        "sha256": "02e7ab9095ead6da6ecd8e38a84e2193fe9303964b81dc1f46b22152aa607a24",
+        "rebuilt": false,
+        "baseline_sha256": "02e7ab9095ead6da6ecd8e38a84e2193fe9303964b81dc1f46b22152aa607a24",
+        "deployment": {
+          "versioned_objects": 31,
+          "maximum_minimum_os": "11.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".private/inputs/.build/ios-jit/managed-runtime/pack-ios-8.0.28/runtimes/ios-arm64/native/libSystem.Security.Cryptography.Native.Apple.a",
+        "sha256": "7bbf6af4a17af7ca1b62a63604258d84ca6ecbac394e29598613bb4ed2294fa4",
+        "rebuilt": false,
+        "baseline_sha256": "7bbf6af4a17af7ca1b62a63604258d84ca6ecbac394e29598613bb4ed2294fa4",
+        "deployment": {
+          "versioned_objects": 16,
+          "maximum_minimum_os": "11.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".build/platform-native35-c/stage/libraries/libFNA3D.a",
+        "sha256": "5102780d2ecbee70dfa9d50991da79284610f817daf23bb0260f6eec3282f78c",
+        "rebuilt": true,
+        "baseline_sha256": "605628b5f18d3571502bbe9f5f991f30e160dbf7641d924f867e2555c156081d",
+        "deployment": {
+          "versioned_objects": 13,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".private/inputs/.build/ios-jit/game-native-output/FAudio.xcframework/ios-arm64/libFAudio.a",
+        "sha256": "cbc7747e3dd5d910350385eedab671291a211c2896e7b4b09802a0aa7968eb62",
+        "rebuilt": false,
+        "baseline_sha256": "cbc7747e3dd5d910350385eedab671291a211c2896e7b4b09802a0aa7968eb62",
+        "deployment": {
+          "versioned_objects": 18,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".private/inputs/.build/ios-jit/game-native-output/Theorafile.xcframework/ios-arm64/libTheorafile.a",
+        "sha256": "4e2fbfbb6ac1b102665cba3b3b528c082cd8d5bf52feedad01f1d5a6aa62f1f6",
+        "rebuilt": false,
+        "baseline_sha256": "4e2fbfbb6ac1b102665cba3b3b528c082cd8d5bf52feedad01f1d5a6aa62f1f6",
+        "deployment": {
+          "versioned_objects": 37,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".private/inputs/.build/ios-jit/game-native-output/SDL2.xcframework/ios-arm64/libSDL2.a",
+        "sha256": "58e09f2225321f7c4f3ed30976fc72ab8f5d5667176c4f13604c9290ee6ab17a",
+        "rebuilt": false,
+        "baseline_sha256": "58e09f2225321f7c4f3ed30976fc72ab8f5d5667176c4f13604c9290ee6ab17a",
+        "deployment": {
+          "versioned_objects": 188,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".private/inputs/.build/ios-jit/game-native-output/ApplePlatformStubs.xcframework/ios-arm64/libApplePlatformStubs.a",
+        "sha256": "bbb901a116542a9ffe8540cdab65f012c49b60afbf13dd14256e0b8d5d1642c3",
+        "rebuilt": false,
+        "baseline_sha256": "bbb901a116542a9ffe8540cdab65f012c49b60afbf13dd14256e0b8d5d1642c3",
+        "deployment": {
+          "versioned_objects": 1,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".private/inputs/.build/ios-jit/celeste-fmod/FMOD.xcframework/ios-arm64/libfmod_iphoneos-localized.a",
+        "sha256": "f8d9d2224e94fece780cb203afdeb477c2b0340f6d57bf80d7124792f245d6e0",
+        "rebuilt": false,
+        "baseline_sha256": "f8d9d2224e94fece780cb203afdeb477c2b0340f6d57bf80d7124792f245d6e0",
+        "deployment": {
+          "versioned_objects": 1,
+          "maximum_minimum_os": "6.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".private/inputs/.build/ios-jit/celeste-fmod/FMODStudio.xcframework/ios-arm64/libfmodstudio_iphoneos-arm64.a",
+        "sha256": "f972062c8148665587fac3f3abac9d64416e4044d54ecbf2efb64b2722fcd9dc",
+        "rebuilt": false,
+        "baseline_sha256": "f972062c8148665587fac3f3abac9d64416e4044d54ecbf2efb64b2722fcd9dc",
+        "deployment": {
+          "versioned_objects": 1,
+          "maximum_minimum_os": "6.0",
+          "arm64": true
+        }
+      },
+      {
+        "path": ".build/platform-native35-c/stage/libraries/liblua54.a",
+        "sha256": "3e616f74c90be9b19721d7373b86564881b1942ae5fa042dc07ef288c6b1a563",
+        "rebuilt": true,
+        "baseline_sha256": "051a06e1f8d02ff03e2d42b098ed435193db9f4a8e96197f971643f84e932468",
+        "deployment": {
+          "versioned_objects": 32,
+          "maximum_minimum_os": "15.0",
+          "arm64": true
+        }
+      }
+    ]
+  },
+  "host_motion": {
+    "receipt": ".build/motion35-host-c/receipt.json",
+    "sha256": "f4844649d1b695d6d34ce78cbac0df5e9e1fdd4a6dffa62f0e36bab9c9032f92",
+    "mod": "MotionSmoothing 1.8.0",
+    "mod_sha256": "fb021011aa505e5670cf08ade375e7f80b58eb40c5045f9da15556a9bff888d2",
+    "results": [
+      {
+        "fps": 60,
+        "renderer": "Fast",
+        "observation": "PASS_MOTION_SMOOTHING_REAL_GAME fps=60; renderer=Fast; draws=520; physics_updates=426; physics_seconds=7.100013859570026; wall_seconds=10.2328393; fixed_step=60",
+        "log_sha256": "071c8f376a266fadcaa135105b407da2f14959e7a143c0d927a0bf4a151482c3"
+      },
+      {
+        "fps": 120,
+        "renderer": "Fast",
+        "observation": "PASS_MOTION_SMOOTHING_REAL_GAME fps=120; renderer=Fast; draws=520; physics_updates=261; physics_seconds=4.350008491426706; wall_seconds=4.3498713; fixed_step=60",
+        "log_sha256": "1a75a1464e9dd80ac42f65c3f7ddfe2435eabd1fe1f29d1848d1cc6ee497c9f1"
+      },
+      {
+        "fps": 60,
+        "renderer": "Fancy",
+        "observation": "PASS_MOTION_SMOOTHING_REAL_GAME fps=60; renderer=Fancy; draws=520; physics_updates=426; physics_seconds=7.100013859570026; wall_seconds=10.2335002; fixed_step=60",
+        "log_sha256": "0e0a846c8cf7448462c7cf90e0cf4dd2ce4d6438c232fdce3bab712cd43ee608"
+      },
+      {
+        "fps": 120,
+        "renderer": "Fancy",
+        "observation": "PASS_MOTION_SMOOTHING_REAL_GAME fps=120; renderer=Fancy; draws=520; physics_updates=260; physics_seconds=4.333341792225838; wall_seconds=4.3414464; fixed_step=60",
+        "log_sha256": "315554cc65e61e4e8704ad774cef90ef182e0a650fa272e1a809a16ee0035e1d"
+      }
+    ],
+    "phone_refresh_rate_tested": false
+  },
+  "device": {
+    "hardware": "iPad5,1",
+    "os": "15.8.8",
+    "installed_via": "USB SSH / TrollStore 2.1.1",
+    "install_exit": 0,
+    "native_launcher_started": true,
+    "game_zip_usb_verified": true,
+    "game_zip_bytes": 875540825,
+    "jit_checks_passed": true,
+    "gameplay_accepted": true,
+    "owner_visual_check_pending": false,
+    "native_checks": 26,
+    "acceptance_scope": "iPad mini4 iOS15.8.8 Dopamine/TrollStore: base game, touch, lifecycle, save/Quit and native return; optional mod/device routes separate",
+    "owner_visual_audio_pass": true,
+    "normal_quit": true,
+    "shutdown_stage": 8,
+    "post_run_alive": true,
+    "frame_callbacks": 7020,
+    "runtime": {
+      "code_allocations": 940,
+      "code_budget_bytes": 536870912,
+      "code_reserved_bytes": 16154624,
+      "jit_done_count": 17428,
+      "jit_failed": 0,
+      "jit_unowned": 0,
+      "managed_errors": 0,
+      "patch_rejections": 0,
+      "patches": 98
+    },
+    "catalogue_active_requests": 0,
+    "first_frame_handoff_callback": 1,
+    "physical_evidence_directory": ".private/device-evidence/2026-09-25/build35-complete",
+    "physical_evidence_sha256": {
+      "session-9301b8aa-cb2c-4a03-b429-95cd1c7955f9.jsonl": "516a0e31916d5afc76e51eacba61ce7b55622bd64cace2262ff42fb9906daeeb",
+      "console-9301b8aa-cb2c-4a03-b429-95cd1c7955f9.txt": "9a8536e2ec27ee44c4774a9a42bb5c24b8cf38be6818563b342a2ccd336110c0",
+      "session-9301b8aa-cb2c-4a03-b429-95cd1c7955f9.jsonl.allocations.bin": "1731caba4f00d658d47b8fde60b22e2deaafb8c1c09b70f64e2f205259ee3c06"
+    },
+    "native_return_screenshot_sha256": "827d46004109ec2a47f8b2be9d84cd720a143c932a62e3c5539f47f07294f718",
+    "resume_scope": "Resign/foreground observed; recorded background duration zero, not a long-background test"
+  },
+  "publication_authorized": false,
+  "accepted_fallback": "build32",
+  "delivery": {
+    "upload_confirmed": true,
+    "phone_download_confirmed": true,
+    "phone_executed": true,
+    "cloud_directory": "Celeste JIT Tests/0.19.0-build-35",
+    "receipt_sha256": "ef9532268c565c2af702cf393674300fd040011aff9f0280de2b5d970a193d76"
+  },
+  "phone": {
+    "status": "FAIL_MOTION_SMOOTHING_STARTUP",
+    "hardware": "iPhone16,2",
+    "os": "26.5",
+    "exports": [
+      {
+        "file": "CelesteJIT-dd6e972d-8210-4d72-91d7-cc7feebaa44f.diagnostics.json",
+        "sha256": "9a4db6179cad5386d140e5f90c7e4d1ce0154d139dce1e1f1d0538e8580b082d",
+        "bytes": 3731672,
+        "build": "launcher-platforms-20260925-35",
+        "screen": {
+          "main_thread": true,
+          "screen_maximum_fps": 120,
+          "target_fps": 60
+        },
+        "native_checks": 26,
+        "catalogue": {
+          "activeRequests": 0,
+          "counts": {},
+          "decodedImageLimit": 16777216,
+          "imageDiskLimit": 33554432,
+          "lastFailure": {},
+          "maximumRetainedRows": 200,
+          "metadataDiskLimit": 25165824,
+          "pageSize": 20,
+          "schema": 1,
+          "suspendedForGame": true
+        },
+        "first_failure": {
+          "callback_succeeded": false,
+          "failure": {
+            "stage": "Frame",
+            "summary": "System.MethodAccessException: Method `Monocle.Engine.OnSceneTransition(Monocle.Scene,Monocle.Scene)' is inaccessible from method `DMD<Update>?-1572179577._Monocle_Engine::Update(Monocle.Engine,Microsoft.Xna.Framework.GameTime)'"
+          },
+          "managed_result": 0,
+          "runtime": {
+            "code_allocations": 683,
+            "code_budget_bytes": 536870912,
+            "code_reserved_bytes": 11632640,
+            "jit_done_count": 11921,
+            "jit_failed": 0,
+            "jit_unowned": 0,
+            "managed_errors": 1,
+            "patch_rejections": 0,
+            "patches": 76
+          }
+        },
+        "bridge": {
+          "background_seconds": 0,
+          "detached": true,
+          "frame_callbacks": 0,
+          "gameplay_checks_completed": false,
+          "managed_result": 2,
+          "maximum_frame_gap_seconds": 0,
+          "reason": "save_frame_failure",
+          "runtime": {
+            "code_allocations": 698,
+            "code_budget_bytes": 536870912,
+            "code_reserved_bytes": 11878400,
+            "jit_done_count": 12227,
+            "jit_failed": 0,
+            "jit_unowned": 0,
+            "managed_errors": 3,
+            "patch_rejections": 0,
+            "patches": 174
+          },
+          "shutdown_stage": 8,
+          "stopped": true
+        }
+      },
+      {
+        "file": "CelesteJIT-fd2259a3-3203-4cb9-b428-ea5ec2169f47.diagnostics.json",
+        "sha256": "b80307ff8795d9a8b43ce0d3d3abc9866184171846e6457ad15b8b79c50be38a",
+        "bytes": 3388450,
+        "build": "launcher-platforms-20260925-35",
+        "screen": {
+          "main_thread": true,
+          "screen_maximum_fps": 120,
+          "target_fps": 120
+        },
+        "native_checks": 26,
+        "catalogue": {
+          "activeRequests": 0,
+          "counts": {},
+          "decodedImageLimit": 16777216,
+          "imageDiskLimit": 33554432,
+          "lastFailure": {},
+          "maximumRetainedRows": 200,
+          "metadataDiskLimit": 25165824,
+          "pageSize": 20,
+          "schema": 1,
+          "suspendedForGame": true
+        },
+        "first_failure": {
+          "callback_succeeded": false,
+          "failure": {
+            "stage": "Frame",
+            "summary": "System.MethodAccessException: Method `Monocle.Engine.OnSceneTransition(Monocle.Scene,Monocle.Scene)' is inaccessible from method `DMD<Update>?33405331._Monocle_Engine::Update(Monocle.Engine,Microsoft.Xna.Framework.GameTime)'"
+          },
+          "managed_result": 0,
+          "runtime": {
+            "code_allocations": 683,
+            "code_budget_bytes": 536870912,
+            "code_reserved_bytes": 11632640,
+            "jit_done_count": 11928,
+            "jit_failed": 0,
+            "jit_unowned": 0,
+            "managed_errors": 1,
+            "patch_rejections": 0,
+            "patches": 76
+          }
+        },
+        "bridge": {
+          "background_seconds": 0,
+          "detached": true,
+          "frame_callbacks": 0,
+          "gameplay_checks_completed": false,
+          "managed_result": 2,
+          "maximum_frame_gap_seconds": 0,
+          "reason": "save_frame_failure",
+          "runtime": {
+            "code_allocations": 699,
+            "code_budget_bytes": 536870912,
+            "code_reserved_bytes": 11894784,
+            "jit_done_count": 12240,
+            "jit_failed": 0,
+            "jit_unowned": 0,
+            "managed_errors": 3,
+            "patch_rejections": 0,
+            "patches": 174
+          },
+          "shutdown_stage": 8,
+          "stopped": true
+        }
+      }
+    ],
+    "cause": "The build35 iOS native rebuild omitted the accepted class.c assembly-scoped protected-member visibility correction; host retained it.",
+    "owner_controls": "Mod enabled fails with 120Hz on or off. Mod disabled starts with 120Hz on.",
+    "modless_120hz_owner_pass": true,
+    "modless_120hz_log_reviewed": false
+  }
+}

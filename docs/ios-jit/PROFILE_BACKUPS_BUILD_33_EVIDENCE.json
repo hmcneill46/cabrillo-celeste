@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "status": "LOCAL_PASS_AWAITING_BUILD33_PHONE_ACCEPTANCE",
+  "version": "0.17.0",
+  "build": 33,
+  "accepted_fallback": 32,
+  "phone_accepted": false,
+  "published_commit_through_build32": "16ff42ca62438ccfa1c3ea14e76a6606da1bc820",
+  "build33_git_publication": false,
+  "ipa_sha256": "a66a44bd1e477fadb4df8d9127912fca2412babf87b3d3603b9f67461f5de79d",
+  "ipa_bytes": 24000196,
+  "executable_uuid": "b08439650fc83020b7d33e5421c8fe13",
+  "compiled_sources": 65,
+  "managed_assemblies_identical_to_build32": 201,
+  "native_archives_identical": 16,
+  "profile_checks": 59,
+  "crash_process_boundaries": 8,
+  "ui_checks_each_device": 5,
+  "simulator_families": [
+    "iPhone17ProMax",
+    "iPadPro11M5"
+  ],
+  "real_game_after_native_restore": "PASS gameplay, save/resume contracts and normal Quit on macOS host; phone untested",
+  "checks": {
+    "native": {
+      "path": "artifacts/cabrillo-build33/verification.json",
+      "sha256": "2356e9943815807c49bfd493a23d3b59e3183a3f9f15f622cafe8af2d40fb4fa",
+      "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS"
+    },
+    "profile": {
+      "path": ".build/backups-host33-final/receipt.json",
+      "sha256": "056112ad72ab0e8bcce8a4c8389d65e4b00536d5f74e124027be12ce2866604e",
+      "status": "PASS_PROFILE_BACKUPS"
+    },
+    "ui": {
+      "path": ".build/backups-ui33-d/receipt.json",
+      "sha256": "62bf8b9d6812a52ee77838f0ff23159c4376c94c4e9623c38449e4bfd5cf6b6c",
+      "status": "PASS_PROFILE_UI_XCUITEST"
+    },
+    "restored_game": {
+      "path": ".build/backups-game33-a/receipt.json",
+      "sha256": "c21777993bcb1c664e3b69b5883c877defbce8e74a7ddc2b29e38cb6e688fd4c",
+      "status": "PASS_BACKUP_RESTORED_REAL_GAME_SAVE_QUIT"
+    },
+    "package_controls": {
+      "path": ".build/backups-package33-controls/results.json",
+      "sha256": "bb7663351e53957357a376a2193ab3250fe15d15e7e491311d39764d12a83ed1",
+      "status": "PASS_LOADING_PACKAGE_NEGATIVE_CONTROLS"
+    },
+    "build32_resources": {
+      "path": "artifacts/cabrillo-build33/build32-comparison.json",
+      "sha256": "a7913190247c81567ba815a8f2cd060f1bcf24e72b4ca54682a8b8a00a251b8c",
+      "status": "PASS_BUILD32_RESOURCE_PRESERVATION"
+    },
+    "delivery": {
+      "path": "artifacts/cabrillo-build33/delivery.json",
+      "sha256": "80eafb4f853027f6a42e45d3cb23ff6692269ba48ddebffe48e7eb33e1933729"
+    },
+    "source_preservation": {
+      "path": "artifacts/cabrillo-build33/source-preservation.json",
+      "sha256": "dd028eae64e2b7612e01a091f29aa16dcdedc7bfc073dd6387ded74a967bad39"
+    }
+  },
+  "limits": {
+    "persistent_profile_bytes": 2147483648,
+    "persistent_file_bytes": 536870912,
+    "entries": 50000,
+    "retained_backup_count": 100,
+    "requires_exact_installed_archive_set": true,
+    "external_mod_storage_included": false
+  },
+  "early_ui_attempts": "Initial UI harness queries and screen-wide gestures failed. Production view unchanged; final tests use explicit UIKit fixture ownership, scrolling to status and gestures within the list. Both final device suites pass.",
+  "source_preservation": "Build31/32 source inputs unchanged; repository audit also locks build28/native/vendor inputs.",
+  "delivery_receipt": "artifacts/cabrillo-build33/delivery.json",
+  "delivery": {
+    "status": "PASS_ICLOUD_UPLOAD_AND_LOCAL_BYTES",
+    "all_six_files_uploaded": true,
+    "bytes_verified": true,
+    "folder": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.17.0-build-33",
+    "total_cloud_bytes": 770419328,
+    "checked_utc": "2026-09-15T19:14:51.663057+00:00",
+    "phone_downloaded": false,
+    "phone_executed": false
+  },
+  "repository_audit": "artifacts/cabrillo-build33/repository-check.json"
+}

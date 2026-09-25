@@ -1,0 +1,6 @@
+{
+  "schema": 1,
+  "receipt": ".build/visibility-runtime36-a/receipt.json",
+  "receipt_sha256": "3e30564ab34bbaaa3d7a33375522f26dfd0a5cddaef8aba19297759a80b335ca",
+  "reason": "Restore exact assembly-scoped visibility rule in one Mono object; all other build35 native and managed inputs preserved"
+}

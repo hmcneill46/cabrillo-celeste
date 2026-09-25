@@ -6,13 +6,20 @@ It includes source plus a Git-ignored copy of the pinned dependencies. The
 original JIT checkout, the AOT checkout and the owner's original input folder
 are not used by the build command.
 
+For checks that run from a fresh **public clone**, use
+[the CI and release guide](RELEASING.md). GitHub Actions compiles the current
+native save/backup test suite without `.private`. Public IPA publishing remains
+gated: the recipes below still require private inputs and do not meet the public
+release contract.
+
 ## Tools and inputs
 
 - Python3 with its standard library. No third-party Python packages are required
   by the root build, verification or native catalogue check commands.
 - Xcode26.6, build17F113, installed at `/Applications/Xcode-26.6.app`, with the
   iPhoneOS26.5 SDK. The build pins and checks this toolchain. It targets arm64,
-  minimum iOS26.0. Migration was tested on the owner's Intel Mac.
+  minimum iOS26.0 for historical lanes; build35 explicitly rebuilds the required
+  archives and targets iOS15.0. Migration was tested on the owner's Intel Mac.
 - The local `.private` folder. Its 455 locked build inputs total98,059,597 bytes.
   They include16 native archives, matching Mono/SDL headers, the accepted managed
   payload, and frozen build28 resources. The separate small native-test fixture
@@ -265,3 +272,130 @@ It uses the established macOS Mono BCL and unchanged game/FNA/adapter bytes.
 Extra image readbacks exist only in this external host fixture, never the IPA.
 See [the build32 report](ios-jit/FIRST_FRAME_BUILD_32.md) and evidence ledger for
 current checks and physical acceptance status.
+
+## Build33 profile backups
+
+Build33 uses `experiments/ios-jit/launcher-backups` and reuses every managed
+assembly from accepted32. It adds native Swift profile storage/summary/UI and
+Objective-C lifecycle/document-picker integration. Use fresh output directories:
+
+```sh
+python3 tools/build_backups.py --managed .build/loading-managed30-d/receipt.json \
+  --work .build/my-backups-build --output artifacts/my-backups-build
+python3 tools/verify_backups.py artifacts/my-backups-build
+python3 tools/check_backups_package.py artifacts/my-backups-build \
+  --output .build/my-backups-package-controls
+python3 tools/check_backups.py --work .build/my-backups-tests
+python3 tools/check_backups_ui.py --work .build/my-backups-ui --device <simulator-udid>
+python3 tools/check_backups_host.py --work .build/my-backups-game \
+  --host .build/loading-host30-c --native .build/my-backups-tests/native \
+  --managed .build/loading-managed30-d/receipt.json
+```
+
+The source/resource hashes and new executable/dSYM UUID are verified as in32.
+The ZIP format limits, recovery contract and actual delivery status are in
+[the build33 report](ios-jit/PROFILE_BACKUPS_BUILD_33.md). New implementation after
+packaging33 needs a new identity. Builds34–37 now exist; the next unused number is38.
+
+## Build34 individual saves and numerical repair
+
+`experiments/ios-jit/launcher-save-transfers` is a fresh frozen lane. The production
+native build pins `.build/precision-managed34-final/receipt.json`, SHA-256
+`80bb0a19d7f63944aa6fe23379338c747db776cae51744c73482a390425b13aa`.
+It derives from the accepted loading receipt, changing only Celeste.dll and four
+method bodies. All other managed resources and16 native archives remain unchanged.
+The base/derived receipts, repair report and source/resource hashes are required;
+the capsule cannot silently fall back to a legacy checkout.
+
+```sh
+python3 tools/build_save_transfers.py --managed .build/precision-managed34-final/receipt.json \
+  --work .build/my-save-transfers-build --output artifacts/my-save-transfers-build
+python3 tools/verify_save_transfers.py artifacts/my-save-transfers-build
+python3 tools/check_save_transfers_package.py artifacts/my-save-transfers-build \
+  --output .build/my-save-transfers-controls
+python3 tools/check_save_transfers.py --work .build/my-save-transfer-tests
+python3 tools/check_save_transfers_ui.py --work .build/my-save-transfer-ui \
+  --device <phone-simulator-udid> --device <ipad-simulator-udid>
+python3 tools/check_precision_repair.py --managed .build/precision-managed34-final/receipt.json \
+  --work .build/my-precision-controls
+python3 tools/check_save_transfers_host.py --work .build/my-save-transfer-game \
+  --host .build/loading-host30-c --native .build/my-save-transfer-tests/native \
+  --managed .build/precision-managed34-final/receipt.json --hair-fixed
+python3 tools/check_vanilla_save.py --work .build/my-vanilla-save \
+  --game .build/my-save-transfer-game --native .build/my-save-transfer-tests/native
+```
+
+The original repair command was `python3 tools/repair_player_precision.py --base
+.build/loading-managed30-d/receipt.json --work .build/precision-managed34-final`.
+That directory is immutable. Fresh repair experiments require another directory;
+their fresh managed MVID/receipt must not replace the shipped pin. A new native
+build similarly receives a new UUID and timestamp; no historical UUID restoration
+is permitted. Changed implementation or dependencies require identity35 or later.
+
+See [the build34 report](ios-jit/SAVE_TRANSFERS_BUILD_34.md) for119 native checks,
+16 simulator UI tests, numerical scope, vanilla compatibility limits and the
+combined phone gate. The original serializer test uses the owner's local Mono
+installation and private original game files; it ships neither in the IPA.
+
+## Build35 — iOS15 and input timing
+
+[Build35 report](ios-jit/PLATFORMS_BUILD_35.md) records the native source import,
+seven rebuilt archives, scoped managed adapter change, real iPad acceptance and
+pending phone gate. The standalone pinned capsule remains unchanged.
+
+```sh
+python3 tools/build_platform_runtime.py --inputs .private/platform-inputs35 \
+  --manifest-sha256 6f57a25d28981cd827f920324737f06ec8ff0a51ef2f3f5efe007aeffa9f027b \
+  --work .build/platform-native-new
+python3 tools/build_platform_adapter.py --base .build/precision-managed34-final/receipt.json \
+  --work .build/platform-managed-new
+python3 tools/build_platforms.py --managed .build/platform-managed35-b/receipt.json \
+  --work .build/platforms-reproduction --output artifacts/platforms-reproduction
+python3 tools/verify_platforms.py artifacts/platforms-reproduction
+```
+
+The last two commands use35's exact native/managed receipts from its lane locks.
+Fresh runtime rebuild receipts need explicit review and a new identity/pin before
+being used in a changed package. Reproduction gets fresh metadata/UUIDs; it does
+not claim the delivered IPA's byte identity. All16 selected archive OS floors,
+managed resources and executable/dSYM identity are independently checked.
+The four Motion Smoothing host cases use a private cloned profile and the original
+released ZIP; no game files or mod ZIPs enter Git. Device tooling and USB artifacts
+are separate ignored dependencies, not app build inputs.
+
+
+## Build36 visibility restoration
+
+Build35 is frozen and contains a Motion Smoothing startup regression. Build36
+restores only the accepted Mono class.c archive member, with all other35 native
+archives and managed resources pinned. Run the runtime restoration builder into
+a fresh .build directory, then the field/method and original/corrected Motion
+Smoothing checks. The final lane pins their receipts in RuntimeValidation.json.
+
+```sh
+python3 tools/build_visibility.py --managed .build/platform-managed35-b/receipt.json --work .build/visibility-build36-reproduction --output artifacts/cabrillo-build36-reproduction
+python3 tools/verify_visibility.py artifacts/cabrillo-build36-reproduction
+```
+
+See docs/ios-jit/VISIBILITY_BUILD_36.md for the exact patch and acceptance limits.
+
+
+## Build37 Everest stable1.6580
+
+The source snapshot is separately pinned in launcher-everest6580/ManagedDependencies.json.
+The managed builder applies the existing cooperative loading and four-method
+precision repairs to the new upstream source. Generated native/managed runtime
+identities come from the same JSON. FNA semantic reuse is checked, and every
+other managed assembly and all16 corrected36 native archives stay exact.
+EverestValidation.json pins native profile tests, real gameplay/source controls,
+Motion Smoothing60/120 and the vanilla save roundtrip before packaging.
+
+```sh
+python3 tools/build_everest6580_managed.py --work .build/everest-managed37-reproduction
+python3 tools/build_everest6580.py --managed .build/everest-managed37-b/receipt.json --work .build/everest-build37-reproduction --output artifacts/cabrillo-build37-reproduction
+python3 tools/verify_everest6580.py artifacts/cabrillo-build37-reproduction
+```
+
+The packaged lane requires its exact validated managed receipt. A newly rebuilt
+managed payload has a new identity and needs a separate reviewed build lane;
+never overwrite a historical receipt to make a different payload pass its lock.

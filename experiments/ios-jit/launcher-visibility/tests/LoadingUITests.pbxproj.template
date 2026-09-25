@@ -1,0 +1,18 @@
+// !$*UTF8*$!
+{
+archiveVersion = 1; classes = {}; objectVersion = 56;
+objects = {
+A00000000000000000000001 = {isa = PBXProject; buildConfigurationList = A00000000000000000000002; compatibilityVersion = "Xcode 14.0"; mainGroup = A00000000000000000000003; productRefGroup = A00000000000000000000004; projectDirPath = ""; projectRoot = ""; targets = (A00000000000000000000005); };
+A00000000000000000000002 = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000006); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+A00000000000000000000003 = {isa = PBXGroup; children = (A00000000000000000000009,A00000000000000000000004); sourceTree = "<group>"; };
+A00000000000000000000004 = {isa = PBXGroup; children = (A0000000000000000000000A); name = Products; sourceTree = "<group>"; };
+A00000000000000000000005 = {isa = PBXNativeTarget; buildConfigurationList = A00000000000000000000007; buildPhases = (A0000000000000000000000B); buildRules = (); dependencies = (); name = LoadingUITests; productName = LoadingUITests; productReference = A0000000000000000000000A; productType = "com.apple.product-type.bundle.ui-testing"; };
+A00000000000000000000006 = {isa = XCBuildConfiguration; buildSettings = {SDKROOT = iphonesimulator; IPHONEOS_DEPLOYMENT_TARGET = 26.0; }; name = Debug; };
+A00000000000000000000007 = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000008); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+A00000000000000000000008 = {isa = XCBuildConfiguration; buildSettings = {PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = "io.github.hmcneill46.cabrillo.loading.uitests"; SWIFT_VERSION = 5.0; GENERATE_INFOPLIST_FILE = YES; CODE_SIGNING_ALLOWED = NO; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+A00000000000000000000009 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SOURCE_PATH"; sourceTree = "<absolute>"; };
+A0000000000000000000000A = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LoadingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+A0000000000000000000000B = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A0000000000000000000000C); runOnlyForDeploymentPostprocessing = 0; };
+A0000000000000000000000C = {isa = PBXBuildFile; fileRef = A00000000000000000000009; };
+}; rootObject = A00000000000000000000001;
+}

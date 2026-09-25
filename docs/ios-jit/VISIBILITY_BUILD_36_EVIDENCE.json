@@ -1,0 +1,437 @@
+{
+  "schema": 1,
+  "as_of": "2026-09-25",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.19.1",
+    "build_number": "36",
+    "build_id": "launcher-visibility-20260925-36",
+    "scope": "Restore explicit Mono member visibility grants lost in the iOS15 rebuild; physical mod validation pending",
+    "device_jit_tested": false
+  },
+  "package": {
+    "status": "PASS_NEW_BUILD_PACKAGE_AND_SYMBOLS",
+    "build_id": "launcher-visibility-20260925-36",
+    "ipa_sha256": "efbbfb12bf1e6095d0dfa31227913cf90f3349944bf7e9b3e31d539668064e22",
+    "bytes": 24114019,
+    "executable_uuid": "a9dcb11b22f037a2a664f377add16b9d",
+    "compiled_source_count": 68,
+    "managed_assemblies": 201,
+    "managed_assemblies_changed_from_build35": 0,
+    "native_archives_changed_from_build35": 1,
+    "native_archives_preserved_from_build35": 15,
+    "unchanged_mono_objects": 259,
+    "unsigned": true,
+    "symbols_outside_ipa": true,
+    "device_tested": false,
+    "cooperative_loading_implemented": true,
+    "uninterruptible_step_limit": true
+  },
+  "baseline": "build35",
+  "native_receipt": {
+    "path": ".build/visibility-runtime36-a/receipt.json",
+    "sha256": "3e30564ab34bbaaa3d7a33375522f26dfd0a5cddaef8aba19297759a80b335ca"
+  },
+  "regression_gates": {
+    "visibility": {
+      "receipt": ".build/visibility-controls36-b/receipt.json",
+      "sha256": "c37a8522722c1219ca4e0b2952bd044e59de5eb295839cdb27dc2277915d2f76"
+    },
+    "motion_control": {
+      "receipt": ".build/visibility-motion-control36-a/receipt.json",
+      "sha256": "2d8f48d37c35b36a73dd1295c36dd75ecd5b09aa53f22ebd3cc6372a7e82f34b"
+    },
+    "motion_fixed": {
+      "receipt": ".build/visibility-motion-fixed36-a/receipt.json",
+      "sha256": "c31809eb680a9c0219592e26d000a0d82d578a6cf6eb1a994e268d7980adf972"
+    },
+    "source_audit": {
+      "receipt": ".build/visibility-source-audit36/receipt.json",
+      "sha256": "ffb42fb04029204bc3646d360eb4de59b93db170686cba6ab7c4a4486c5408c2"
+    }
+  },
+  "delivery": {
+    "upload_confirmed": true,
+    "receipt_sha256": "1a3bb876111047a2a8ec6993f5ac1dc85e21028429d3b634371d69956fecdae3",
+    "cloud_directory": "Celeste JIT Tests/0.19.1-build-36"
+  },
+  "ipad": {
+    "installed": true,
+    "installer_exit": 0,
+    "launch_exit": 0,
+    "gameplay_tested": false,
+    "native_jit_checks_pass": true
+  },
+  "phone": {
+    "execution_confirmed": true,
+    "acceptance_pending": false,
+    "owner_startup_gameplay_pass": true,
+    "log_export_arrived": true,
+    "status": "PASS_PHYSICAL_BASE_GAME_MOTION_SMOOTHING_SAVE_RESUME_QUIT",
+    "scope": "Base game plus MotionSmoothing1.8.0; sustained120fps and full save-manager gate remain unaccepted",
+    "export": {
+      "filename": "CelesteJIT-c2f1df9c-f202-4f85-aa92-e715b0eb827c.diagnostics.json",
+      "sha256": "999d4ad11dfdb16c9b1043a048a8449d7b659b336b3a5e8237de10e8f9a21489",
+      "bytes": 3451426,
+      "storage_error": null
+    },
+    "device": {
+      "guest_bundle_id": "io.github.hmcneill46.celeste.everest.jit.everest",
+      "hardware": "iPhone16,2",
+      "os_build_description": "Version 26.5 (Build 23F77)",
+      "os_version": "26.5",
+      "page_size": 16384,
+      "physical_memory_bytes": 8025686016,
+      "simulator": 0
+    },
+    "session": {
+      "session": "11fd2056-8c80-4585-b05c-7e96881c264c",
+      "build_number": "36",
+      "exact_packaged_build_info_match": true,
+      "retained_events": 847,
+      "bounded_excerpt": false,
+      "invalid_lines": 0,
+      "started_utc": "2026-09-25T01:56:52.299063+00:00",
+      "last_utc": "2026-09-25T02:04:35.714336+00:00",
+      "last_event": "app_background",
+      "native_checks_passed": 26,
+      "graphics_checks_passed": 23,
+      "everest": "1.6531.0-cjit-d72e94f",
+      "catalogue_active_requests": 0,
+      "rooms": [
+        "area=2; sid=Celeste/2-OldSite; mode=Normal; room=10",
+        "area=0; sid=Celeste/0-Intro; mode=Normal; room=0",
+        "area=0; sid=Celeste/0-Intro; mode=Normal; room=-1",
+        "area=7; sid=Celeste/7-Summit; mode=CSide; room=01",
+        "area=7; sid=Celeste/7-Summit; mode=Normal; room=g-00",
+        "area=7; sid=Celeste/7-Summit; mode=Normal; room=g-00b"
+      ],
+      "normal_quit": {
+        "background_seconds": 67.49049774999912,
+        "detached": true,
+        "frame_callbacks": 18982,
+        "gameplay_checks_completed": true,
+        "managed_result": 1,
+        "maximum_frame_gap_seconds": 0.33263816666658386,
+        "reason": "game_quit",
+        "runtime": {
+          "code_allocations": 1373,
+          "code_budget_bytes": 536870912,
+          "code_reserved_bytes": 23265280,
+          "jit_done_count": 17876,
+          "jit_failed": 0,
+          "jit_unowned": 0,
+          "managed_errors": 0,
+          "patch_rejections": 0,
+          "patches": 754
+        },
+        "shutdown_stage": 8,
+        "stopped": true
+      },
+      "save_readback": {
+        "main_thread": true,
+        "message": "slot=1; complete=True"
+      },
+      "resume_events": 4,
+      "frame_metrics": [
+        {
+          "callback_fps": 118.655214534126,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 24.577083333497285,
+          "mean_frame_callback_ms": 1.8923350309234122,
+          "one_percent_low_fps": 59.98680290413094,
+          "window_samples": 270
+        },
+        {
+          "callback_fps": 92.76237780584913,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 332.63816666658386,
+          "mean_frame_callback_ms": 8.025868819477182,
+          "one_percent_low_fps": 12.355572792342132,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 86.72777983841576,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 34.05466666663415,
+          "mean_frame_callback_ms": 10.839893541645628,
+          "one_percent_low_fps": 37.716061961491505,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 86.93666647545287,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 33.76933333311172,
+          "mean_frame_callback_ms": 10.600334097201388,
+          "one_percent_low_fps": 37.78389083762943,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 60.64376234305503,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 40.3079166662792,
+          "mean_frame_callback_ms": 15.064919652762304,
+          "one_percent_low_fps": 32.627898529646785,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 58.97893142733842,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 50.782416665242636,
+          "mean_frame_callback_ms": 15.159182916704594,
+          "one_percent_low_fps": 27.128693434908254,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 60.01154196986233,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 30.188499998985208,
+          "mean_frame_callback_ms": 14.68602222227067,
+          "one_percent_low_fps": 38.0803786875165,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.392490792087344,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 61.51800000043295,
+          "mean_frame_callback_ms": 15.242957916637655,
+          "one_percent_low_fps": 21.53018299895034,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.82154137479572,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 73.24420833356271,
+          "mean_frame_callback_ms": 14.727782361096615,
+          "one_percent_low_fps": 27.314972360591003,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.69831728975362,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 85.78816666522471,
+          "mean_frame_callback_ms": 13.982197569442482,
+          "one_percent_low_fps": 27.58442077865812,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.68834551106061,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 58.34616666652437,
+          "mean_frame_callback_ms": 14.131427013850649,
+          "one_percent_low_fps": 30.369066405959966,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.99153894332642,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 26.39370833276189,
+          "mean_frame_callback_ms": 15.491894097252347,
+          "one_percent_low_fps": 38.747091277154006,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 60.008586478615605,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 33.34066666684521,
+          "mean_frame_callback_ms": 15.165807569471022,
+          "one_percent_low_fps": 31.12808840985432,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 60.01444297582133,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 30.146249999233987,
+          "mean_frame_callback_ms": 14.117185138926894,
+          "one_percent_low_fps": 37.058721344603875,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 61.80458480949929,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 25.00549999967916,
+          "mean_frame_callback_ms": 13.552460784601006,
+          "one_percent_low_fps": null,
+          "window_samples": 17
+        },
+        {
+          "callback_fps": 60.20511999109416,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 33.34066666684521,
+          "mean_frame_callback_ms": 13.770723381760478,
+          "one_percent_low_fps": 35.48464759122839,
+          "window_samples": 551
+        },
+        {
+          "callback_fps": 58.98614636210986,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 82.40354166628094,
+          "mean_frame_callback_ms": 13.376805486156323,
+          "one_percent_low_fps": 16.74888157607643,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.16565286594081,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 73.50395833236689,
+          "mean_frame_callback_ms": 13.885989791636652,
+          "one_percent_low_fps": 17.504898028547565,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.49085225070751,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 63.501583334073075,
+          "mean_frame_callback_ms": 14.115482638844696,
+          "one_percent_low_fps": 21.921495167888942,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.97254656726684,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 24.03420833434211,
+          "mean_frame_callback_ms": 13.73522756940171,
+          "one_percent_low_fps": 42.55574433060448,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.975492264575415,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 40.50950000055309,
+          "mean_frame_callback_ms": 12.69689138888983,
+          "one_percent_low_fps": 36.2385310695529,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.76249116059856,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 50.675291666266276,
+          "mean_frame_callback_ms": 13.552406180539643,
+          "one_percent_low_fps": 32.79987973409953,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 60.08655543417905,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 27.5303750004241,
+          "mean_frame_callback_ms": 14.286992847210058,
+          "one_percent_low_fps": 38.49849454863172,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.77330947476362,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 62.229416666014004,
+          "mean_frame_callback_ms": 13.857356805616897,
+          "one_percent_low_fps": 30.053137704353297,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.801137298029474,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 65.58012500136101,
+          "mean_frame_callback_ms": 13.594414652786023,
+          "one_percent_low_fps": 29.27764724806712,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.8370144441386,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 66.70275000033143,
+          "mean_frame_callback_ms": 14.192552777810002,
+          "one_percent_low_fps": 31.132651253920834,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.7873168340283,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 66.40904166670225,
+          "mean_frame_callback_ms": 14.534879027772453,
+          "one_percent_low_fps": 29.675547348887015,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.575993927714585,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 66.18449999950826,
+          "mean_frame_callback_ms": 13.757672500041735,
+          "one_percent_low_fps": 24.409278509397566,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.802020676225965,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 64.20987500132469,
+          "mean_frame_callback_ms": 13.859967847223137,
+          "one_percent_low_fps": 31.653972836624643,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.83536946308007,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 66.12712500100315,
+          "mean_frame_callback_ms": 14.37796861110352,
+          "one_percent_low_fps": 31.31193075774598,
+          "window_samples": 600
+        },
+        {
+          "callback_fps": 59.93666068514842,
+          "gpu_completion_measured": false,
+          "maximum_interval_ms": 28.856958333562943,
+          "mean_frame_callback_ms": 14.384599861083794,
+          "one_percent_low_fps": 37.880073266531454,
+          "window_samples": 600
+        }
+      ],
+      "native_display_request": {
+        "main_thread": true,
+        "screen_maximum_fps": 120,
+        "target_fps": 120
+      },
+      "jit_provider": "stikdebug",
+      "selected_archives": 2,
+      "selected_mods": [
+        {
+          "name": "CJITCodeCanary",
+          "version": "1.0.0",
+          "sha256": "d30cc5b1d28d7821764fb18a35a182aa808cee56f4d0c4c778d9fa7bd4ef450b",
+          "bytes": 3560
+        },
+        {
+          "name": "MotionSmoothing",
+          "version": "1.8.0",
+          "sha256": "fb021011aa505e5670cf08ade375e7f80b58eb40c5045f9da15556a9bff888d2",
+          "bytes": 127522
+        }
+      ],
+      "module_selection_result": "All 5 selected/built-in metadata identities match actual Everest registration; no disabled extras.",
+      "sampled_peak_footprint_bytes": 1934903968,
+      "last_runtime": {
+        "code_allocations": 1368,
+        "code_budget_bytes": 536870912,
+        "code_reserved_bytes": 23183360,
+        "jit_done_count": 17757,
+        "jit_failed": 0,
+        "jit_unowned": 0,
+        "managed_errors": 0,
+        "patch_rejections": 0,
+        "patches": 672
+      },
+      "handoff_frame_callbacks": 1,
+      "handoff_after_first_callback_ms": 0.980958333457238,
+      "handoff_checks": {
+        "failed_checks": 0,
+        "first_frame_drawn": true,
+        "first_frame_readback_passed": true,
+        "gpu_readback_passed": true
+      },
+      "post_quit_alive_seconds": 5.174207500000193,
+      "recorded_runtime_errors": []
+    },
+    "steady_120fps_accepted": false,
+    "save_backup_transfer_gate_accepted": false
+  },
+  "publication_authorized": false,
+  "reviewed_utc": "2026-09-25T02:54:34.585668+00:00"
+}
