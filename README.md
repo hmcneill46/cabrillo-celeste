@@ -62,7 +62,7 @@ the broader accepted fallback. Current mod dependencies may require newer Everes
 
 ## Saves and numerical fixes in development
 
-Build32 is the accepted phone fallback and its loading work is published on
+Build32 is the accepted phone fallback and its loading work was published on
 `main` (`16ff42c`). Build34 combines build33's whole-profile backup/restore with
 individual desktop save transfers, long-press slot actions and retained rollback.
 It also repairs hair and related seeker/tutorial/lava arithmetic errors. The

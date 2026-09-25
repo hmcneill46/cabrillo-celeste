@@ -11,14 +11,21 @@ Recheck current files and owner messages before treating this dated state as liv
 The owner requested GitHub Actions for deliberate stable IPA releases, then chose
 "Set up CI now; keep IPA publishing gated until public packaging is ready" after
 the current private game/FMOD/compiled dependency constraints were explained.
-This authorizes publishing the current public source through37 and the CI/release
+This authorizes publishing the current public source through build37 and the CI/release
 workflows. It supersedes older no-GitHub-write statements for this scoped task;
 it does not authorize publishing the current private IPA or unrelated GitHub writes.
 
-The workflows and [release guide](docs/RELEASING.md) are prepared on
-`codex/github-releases`; publication and hosted verification are pending.
-Local Xcode26.6 freshly compiled native source passes all119 profile checks,
-20 Python build/release checks pass and actionlint validates both workflows.
+The source, workflows and [release guide](docs/RELEASING.md) are published through
+[PR2](https://github.com/hmcneill46/cabrillo-celeste/pull/2), prepared on
+`codex/github-releases` for `main`. The initial
+[push run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36128707831)
+and [PR run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36128772553)
+both pass at source commit `23b323b4961e4343c3628507f24df6a169ddc578`.
+Fresh GitHub-hosted Xcode26.6 compilation passes all 119 native profile checks;
+the public inventory audit and all 20 Python build/release controls also pass.
+Actionlint validates both workflows. Artifact actions were subsequently updated
+to pinned upload7.0.1/download8.0.1 to remove the runner's Node20 warning; see the
+PR's final check status for that revision.
 Public CI needs no private capsule. Normal branch pushes/PRs run checks;
 matching version tags or manual tag runs request a separately gated release.
 `release/current.json` explicitly blocks37. A reviewed public build recipe is
@@ -213,7 +220,8 @@ The full touch editor follows the combined34 phone gate. All packaged lanes are 
 The owner explicitly authorized committing/pushing the completed loading work to
 GitHub on15 September2026. That publication is complete: commit
 `16ff42ca62438ccfa1c3ea14e76a6606da1bc820` was fast-forward pushed and verified on
-`origin/main` on15 September. Local next-feature work is on `codex/profile-backups`. This approval covers completed work through build32 and its acceptance;
+`origin/main` on15 September. The next-feature work used `codex/profile-backups`;
+the newer CI/source publication is recorded at the top of this handoff. This earlier approval covered completed work through build32 and its acceptance;
 future unrelated feature publication still needs owner authorization.
 
 ## Build34 combined phone gate —17 September

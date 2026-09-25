@@ -38,8 +38,9 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
 
 ## Current state
 
-- Public CI and a gated version-tag release workflow are prepared. CI runs a
-  public inventory audit, Python build/release controls and119 native profile
+- Public CI and a gated version-tag release workflow are configured through
+  [PR2](https://github.com/hmcneill46/cabrillo-celeste/pull/2). Fresh GitHub-hosted
+  runs pass the public inventory audit, 20 Python build/release controls and119 native profile
   checks without private dependencies. `release/current.json` blocks37 IPA
   publication; the dedicated public builder is intentionally absent until game
   preparation, FMOD distribution and public dependencies are resolved. These
@@ -116,8 +117,9 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   numerical repairs and backup/transfer gate, now also carried by35. Managed pin:
   `.build/platform-managed35-b/receipt.json` (derived from exact34); native pin:
   `.build/platform-native35-c/receipt.json`. Both hashes are in the lane JSON locks.
-  Final package/artifacts: `artifacts/cabrillo-build35-final`. No35 GitHub write
-  is authorized. Next unused identity is38; recheck before allocation.
+  Final package/artifacts: `artifacts/cabrillo-build35-final`. Public source is
+  included in the later scoped CI publication above. Next unused identity is38;
+  recheck before allocation.
 
 - Accepted physical fallback: build32, Everest1.6531.0; preserve28/27/31 too.
   The15 September review of one export plus retained history closes the native

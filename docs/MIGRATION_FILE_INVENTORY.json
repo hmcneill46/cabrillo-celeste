@@ -10,13 +10,13 @@
     },
     ".github/workflows/ci.yml": {
       "reason": "Fresh public-source inventory, release controls and native profile checks on pushes and pull requests",
-      "sha256": "7600594a50da45a5810140e1890ca5fc6a94e6bb3d2757a3ffbbc2f649385643",
-      "bytes": 2083
+      "sha256": "d40685ee4cfc348bbd8ffd262c94f0938ed3c57d89b6e4c81f1ecb9f8d0d4cba",
+      "bytes": 2091
     },
     ".github/workflows/release.yml": {
       "reason": "Explicit version-tag release gate, public build contract, attestations and verified IPA publication",
-      "sha256": "fe35dad02dbae96372b77bec58970473dcff246bbe65482898649f6a5e4a5471",
-      "bytes": 4140
+      "sha256": "bec5d36763d98c66de9a09698f1a402ee6244d43c9d761009a9baff9e6db3893",
+      "bytes": 4148
     },
     ".gitignore": {
       "reason": "Exclude private dependencies, device data, signing inputs and generated builds from Git",
@@ -25,13 +25,13 @@
     },
     "AGENTS.md": {
       "reason": "Current Cabrillo development ownership, immutable builds, repository boundaries and physical testing instructions",
-      "sha256": "afaddd4767ff95136029e942a7a899b75f6a3eca5a2be0a864dbedebefbb6333",
-      "bytes": 15892
+      "sha256": "bd34968fc1c9efd4c471702a30bb86517408669e123d21e3f95564bbeeb07fa7",
+      "bytes": 16029
     },
     "HANDOFF.md": {
       "reason": "Current development handoff: accepted build32, published loading work, combined build34 saves/numerical phone gate, exact identities, ownership and next roadmap constraints",
-      "sha256": "511946383c9aa450bc052bf27f252872f35dcfaff3c1c74c0fdcb5a60b4b5997",
-      "bytes": 57165
+      "sha256": "9699e1d8f20b755e77acd7c55fb2011e36f03e100ddbcc0a90789f2a5c4950dc",
+      "bytes": 57763
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -41,8 +41,8 @@
     },
     "README.md": {
       "reason": "Cabrillo entry point, Morro relationship, local build and platform direction",
-      "sha256": "3999fa2db00ec1d1b74aa7e6bfc50a704e442d4e95831bd8f4a69d75bfe83680",
-      "bytes": 9242
+      "sha256": "b88f7e3fb2e911d85524e49c6d6c79c43e920e81e16503be92a2ed4e5b40573f",
+      "bytes": 9243
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
