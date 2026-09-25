@@ -1,0 +1,120 @@
+name: Publish IPA
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  eligibility:
+    name: Require public packaging and an exact version tag
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      tag: ${{ steps.preflight.outputs.tag }}
+      source_commit: ${{ steps.preflight.outputs.source_commit }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check release eligibility
+        id: preflight
+        run: python3 tools/release.py preflight
+
+  checks:
+    needs: eligibility
+    uses: ./.github/workflows/ci.yml
+    permissions:
+      contents: read
+
+  build:
+    name: Build and attest an eligible public IPA
+    needs: [eligibility, checks]
+    runs-on: macos-26
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      # No private capsules, signing credentials or prebuilt IPA downloads.
+      # Build37 stops in eligibility; its public packaging recipe does not exist yet.
+      - name: Build from the tagged public source and verify the package
+        run: python3 tools/release.py build
+      - name: Attest every release file
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4
+        with:
+          subject-path: .build/public-release-kit/*
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: public-ipa-release
+          path: .build/public-release-kit/
+          if-no-files-found: error
+          retention-days: 14
+
+  publish:
+    name: Verify provenance and publish the GitHub Release
+    needs: [eligibility, build]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+      attestations: read
+    env:
+      RELEASE_TAG: ${{ needs.eligibility.outputs.tag }}
+      SOURCE_COMMIT: ${{ needs.eligibility.outputs.source_commit }}
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: public-ipa-release
+          path: release-kit
+      - name: Verify checksums, workflow identity and source commit
+        working-directory: release-kit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          sha256sum --check SHA256SUMS
+          for asset in *; do
+            gh attestation verify "$asset" --repo "$GITHUB_REPOSITORY" \
+              --signer-workflow "$GITHUB_REPOSITORY/.github/workflows/release.yml" \
+              --source-digest "$SOURCE_COMMIT" --source-ref "refs/tags/$RELEASE_TAG" \
+              --deny-self-hosted-runners
+          done
+          current=$(gh api "repos/$GITHUB_REPOSITORY/commits/$RELEASE_TAG" --jq .sha)
+          test "$current" = "$SOURCE_COMMIT"
+      - name: Create the release without overwriting an existing release
+        working-directory: release-kit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo 'This release already exists; it will not be overwritten.' >&2
+            exit 1
+          fi
+          options=(--latest)
+          if [[ "$RELEASE_TAG" == *-rc.* ]]; then
+            options=(--prerelease --latest=false)
+          fi
+          gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --verify-tag \
+            --target "$SOURCE_COMMIT" --title "Cabrillo $RELEASE_TAG" \
+            --notes-file RELEASE_NOTES.md "${options[@]}" \
+            ./*.ipa BUILD_PROVENANCE.json SHA256SUMS RELEASE_NOTES.md

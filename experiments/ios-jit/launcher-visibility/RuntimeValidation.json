@@ -1,0 +1,18 @@
+{
+  "visibility": {
+    "receipt": ".build/visibility-controls36-b/receipt.json",
+    "sha256": "c37a8522722c1219ca4e0b2952bd044e59de5eb295839cdb27dc2277915d2f76"
+  },
+  "motion_control": {
+    "receipt": ".build/visibility-motion-control36-a/receipt.json",
+    "sha256": "2d8f48d37c35b36a73dd1295c36dd75ecd5b09aa53f22ebd3cc6372a7e82f34b"
+  },
+  "motion_fixed": {
+    "receipt": ".build/visibility-motion-fixed36-a/receipt.json",
+    "sha256": "c31809eb680a9c0219592e26d000a0d82d578a6cf6eb1a994e268d7980adf972"
+  },
+  "source_audit": {
+    "receipt": ".build/visibility-source-audit36/receipt.json",
+    "sha256": "ffb42fb04029204bc3646d360eb4de59b93db170686cba6ab7c4a4486c5408c2"
+  }
+}

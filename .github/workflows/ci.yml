@@ -1,0 +1,63 @@
+name: Public source checks
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source:
+    name: Source inventory and release controls
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Audit the public checkout
+        run: python3 tools/ci/check_public_repository.py --output .build/ci/source.json
+      - name: Test build boundaries and release rejection cases
+        run: python3 -m unittest discover -s tools/tests -v
+      - name: Report current IPA release readiness
+        run: python3 tools/release.py readiness --output .build/ci/release-readiness.json
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: source-check-reports
+          path: .build/ci/*.json
+          if-no-files-found: error
+          retention-days: 14
+
+  profiles:
+    name: Native saves and backup checks
+    runs-on: macos-26
+    timeout-minutes: 20
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Compile current native source and run 119 checks
+        run: python3 tools/ci/check_native_profiles.py
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: native-profile-check-reports
+          path: |
+            .build/ci/native-profiles/receipt.json
+            .build/ci/native-profiles/results/results.json
+          if-no-files-found: error
+          retention-days: 14

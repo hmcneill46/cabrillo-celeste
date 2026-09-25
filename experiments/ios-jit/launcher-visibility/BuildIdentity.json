@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.19.1",
+  "build_number": "36",
+  "build_id": "launcher-visibility-20260925-36",
+  "scope": "Restore explicit Mono member visibility grants lost in the iOS15 rebuild; physical mod validation pending",
+  "device_jit_tested": false
+}

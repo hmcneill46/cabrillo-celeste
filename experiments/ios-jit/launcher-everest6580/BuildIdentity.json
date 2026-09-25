@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.20.0",
+  "build_number": "37",
+  "build_id": "launcher-everest6580-20260925-37",
+  "scope": "Everest stable 1.6580 upgrade with build36 native visibility and build34/35 repairs; physical validation pending",
+  "device_jit_tested": false
+}

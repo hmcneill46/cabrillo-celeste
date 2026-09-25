@@ -1,0 +1,6 @@
+{
+  "schema": 1,
+  "receipt": ".build/platform-native35-c/receipt.json",
+  "receipt_sha256": "f248baee9188df20b53d094eeab1840f996d9d22309a71c0a45342148e076ae7",
+  "reason": "Seven archives rebuilt from explicit pinned sources for iOS15; nine existing compatible archives retained"
+}

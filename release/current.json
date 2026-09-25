@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "lane": "experiments/ios-jit/launcher-everest6580",
+  "version": "0.20.0",
+  "build_number": "37",
+  "public_ipa_ready": false,
+  "public_build_script": null,
+  "blockers": [
+    "The current IPA contains prepared Celeste game code. Implement and verify preparation from the user's own game installation without bundling that code.",
+    "Resolve and document permission to redistribute the linked FMOD iOS runtime, or implement a distributable audio alternative.",
+    "Provide a fresh public-checkout dependency/build recipe; the current builder reuses private managed assemblies and native archives."
+  ],
+  "provenance_claim": "Cabrillo source and declared dependencies; never an assertion that proprietary dependencies are open source",
+  "report": "docs/ios-jit/IOS_REUSE_AND_DISTRIBUTION_2026-09-11.md"
+}

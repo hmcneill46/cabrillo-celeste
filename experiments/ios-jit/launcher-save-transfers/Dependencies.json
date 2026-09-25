@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "capsule_manifest": ".private/migration/inputs.json",
+  "capsule_manifest_sha256": "b60593398aefe520fec2ab81202bbfca7193bd10a9aa6fda48239712778ea9dc",
+  "resource_root": ".private/resources/build28",
+  "native_libraries": [
+    {
+      "path": ".private/inputs/.build/ios-jit/sj-lobby-runtime/ios/libmonosgen-2.0.a",
+      "sha256": "bc3ff35d0de075e2859cee2b0ad461294effac4c1bf8b013df6b5c326c9cdc7f"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/managed-runtime/mono-build-ios/mono/mini/libmono-component-marshal-ilgen-static.a",
+      "sha256": "856ac91de63f3cc0b1e2ec03446fb02af98c255d638079d9b6947563dd7263d9"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/managed-runtime/mono-build-ios/mono/mini/libmono-component-debugger-stub-static.a",
+      "sha256": "4bb293af9026c0e05174e81c1070d76d5e6ec40443b8d44df523248fdb53bc48"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/managed-runtime/mono-build-ios/mono/mini/libmono-component-hot_reload-stub-static.a",
+      "sha256": "02f549af6073eae5f7e508e13898f56f6f652fdf414d4a6a353b13888bfdfaac"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/managed-runtime/mono-build-ios/mono/mini/libmono-component-diagnostics_tracing-stub-static.a",
+      "sha256": "2ebb7ca1caca7bd85f9dec907def8e38b32481cae3b8e48cd0af1a8b9ffe83a9"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/managed-runtime/pack-ios-8.0.28/runtimes/ios-arm64/native/libSystem.Native.a",
+      "sha256": "af4ec4c9593581699514b991056f484366290de8ac78b15b65d8d187ac491628"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/managed-runtime/pack-ios-8.0.28/runtimes/ios-arm64/native/libSystem.IO.Compression.Native.a",
+      "sha256": "02e7ab9095ead6da6ecd8e38a84e2193fe9303964b81dc1f46b22152aa607a24"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/managed-runtime/pack-ios-8.0.28/runtimes/ios-arm64/native/libSystem.Security.Cryptography.Native.Apple.a",
+      "sha256": "7bbf6af4a17af7ca1b62a63604258d84ca6ecbac394e29598613bb4ed2294fa4"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/launcher-backbuffer-renderer/stage/ios-arm64/libFNA3D.a",
+      "sha256": "605628b5f18d3571502bbe9f5f991f30e160dbf7641d924f867e2555c156081d"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/game-native-output/FAudio.xcframework/ios-arm64/libFAudio.a",
+      "sha256": "cbc7747e3dd5d910350385eedab671291a211c2896e7b4b09802a0aa7968eb62"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/game-native-output/Theorafile.xcframework/ios-arm64/libTheorafile.a",
+      "sha256": "4e2fbfbb6ac1b102665cba3b3b528c082cd8d5bf52feedad01f1d5a6aa62f1f6"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/game-native-output/SDL2.xcframework/ios-arm64/libSDL2.a",
+      "sha256": "58e09f2225321f7c4f3ed30976fc72ab8f5d5667176c4f13604c9290ee6ab17a"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/game-native-output/ApplePlatformStubs.xcframework/ios-arm64/libApplePlatformStubs.a",
+      "sha256": "bbb901a116542a9ffe8540cdab65f012c49b60afbf13dd14256e0b8d5d1642c3"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/celeste-fmod/FMOD.xcframework/ios-arm64/libfmod_iphoneos-localized.a",
+      "sha256": "f8d9d2224e94fece780cb203afdeb477c2b0340f6d57bf80d7124792f245d6e0"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/celeste-fmod/FMODStudio.xcframework/ios-arm64/libfmodstudio_iphoneos-arm64.a",
+      "sha256": "f972062c8148665587fac3f3abac9d64416e4044d54ecbf2efb64b2722fcd9dc"
+    },
+    {
+      "path": ".private/inputs/.build/ios-jit/everest-lua/ios/liblua54.a",
+      "sha256": "051a06e1f8d02ff03e2d42b098ed435193db9f4a8e96197f971643f84e932468"
+    }
+  ],
+  "include_directories": [
+    ".private/inputs/.build/ios-jit/game-native-output/SDL2.xcframework/ios-arm64/Headers",
+    ".private/inputs/.build/ios-jit/managed-runtime/pack-ios-8.0.28/runtimes/ios-arm64/native/include/mono-2.0"
+  ],
+  "shared_source_sha256": {
+    "experiments/ios-jit/hook-canary/src/CJHookNative.c": "f7697e464775fab08350f82c8f1cc6a1e1a42093dc45893f10f22e36bcbe6d82",
+    "experiments/ios-jit/managed-canary/src/CJCodeArena.c": "066f045e8efd18adc8b61e4d1c74ad435a618bdf4acaf7871fcfa51f6af1b4c0",
+    "experiments/ios-jit/managed-canary/src/CJCodeArena.h": "1f7c5bd7f3d385d9cf3dc36f885ce6781d2f40c017225f970676a09060d76ef0",
+    "experiments/ios-jit/managed-canary/src/CJMonoThread.c": "e14870d004d9d59c5fb58588c97482a0061a997eff25914da4d7f6e5150b0c30",
+    "experiments/ios-jit/managed-canary/src/CJMonoThread.h": "e0d67534d589a23e3ab4eed2f2ca0faee8920ef5e0913d38abd919a2f7089905",
+    "experiments/ios-jit/managed-canary/src/CJNativeResolver.c": "bef84c4de54236e415af5f0d09ec7ba1ce40cf21a7c38d684e387102768b6749",
+    "experiments/ios-jit/managed-canary/src/CJNativeResolver.h": "c05a2110289820594b523f7045bb0dd5c0737d8913ef6804cef05dcdda02b075",
+    "experiments/ios-jit/managed-canary/src/CanaryNative.c": "fea973495fa8d3a7e366197326d8461ebcb9783e35320563278fc421c1b8d4c8",
+    "experiments/ios-jit/managed-canary/src/cjit-mono-bridge.h": "40b11905b934a867964a42bad2cbf7942f520e3fa01d2e4f4b93f9a1b787aca1",
+    "experiments/ios-jit/native-probe/scripts/make_icon.swift": "1c61416c90b9dcf49a334ebd18fdae9fd6c739525f66a689216a95e8a03e67d6",
+    "vendor/Yams/Sources/CYaml/include/CYaml.h": "1034b7397806523b3d6a6f8a631fe66a0a881dd429312e879dbe576b8c6c7040",
+    "vendor/Yams/Sources/CYaml/include/module.modulemap": "6c25b6c3cf0c5529169400fb9d555e57ed3e9a91a73c41c8afea232fa8ced583",
+    "vendor/Yams/Sources/CYaml/include/yaml.h": "e64f1da89c04ab728f828965a510dadd99d39778f4c48617d95cfbb9da069af8",
+    "vendor/Yams/Sources/CYaml/src/api.c": "332a0fdeeb6c2d5bacc6fc93d19f80db59eedf51ec87f0851742bcf441b69421",
+    "vendor/Yams/Sources/CYaml/src/emitter.c": "fbec4f702153929ad1421636ab0f5ecded140f0f37014d5ab3c65dfecd7e0743",
+    "vendor/Yams/Sources/CYaml/src/parser.c": "00990d692199723a087b8e123d5b49e3d422cf10a806e852c43f1cc12b257c28",
+    "vendor/Yams/Sources/CYaml/src/reader.c": "c428a44b177391557bdf49177c1dc0216edf2a2bbe0e24ca2ef2725ef7f01e9d",
+    "vendor/Yams/Sources/CYaml/src/scanner.c": "338ee97fc97aa97c08a74cd3349462bea4e1f7ce836e4c7b04334fa1c74031c0",
+    "vendor/Yams/Sources/CYaml/src/writer.c": "44a75c870a0b7039e37b457850b31748a69ce3bf1bf39950e7b855acef472de2",
+    "vendor/Yams/Sources/CYaml/src/yaml_private.h": "2e2f7887f27da6bff518db117d358f708c1af30ebabdeeea612e628b9ed18841",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+BackingConfiguration.swift": "d9ebf96a0080d2b79207f85bcd3e46812baa94e35d35ea66114153fd4dc5f49d",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+Deprecated.swift": "1824adfa6e318fcdcc5c43431633ed42c4de845f3d8575807b24bc626addc63e",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+Helpers.swift": "2b660b56fcdc8a57de59b6ae0527894dfe2cd895a5037795f827763ea56be6c8",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+MemoryFile.swift": "c480fa8e999604787bebfba3ae5eb9e0dea0b8bced7063c93f853f252d4828a7",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+Progress.swift": "c8b26546f4183d127bb5fca7612cb87b18253d4a1788cbc0dd222280e7e1b9bf",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+Reading.swift": "14f4c1c9ffbe45fb4618625be15105507010110680e7e4a90c9061e222ec8b03",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+ReadingDeprecated.swift": "a5036f209dc6609c17adf64cdd1682cd6fc319f405e709a147cea087172a6dfe",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+Writing.swift": "6081d702339396741e85e0b430f66b5f3c4443e2e13164e69758857429fd5996",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+WritingDeprecated.swift": "2f2046af246e02648db773e3e36133a96e7ab4a72942f39a87e6e29ddf51310b",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive+ZIP64.swift": "21465808aa72245ecf5e1c69231d187a133d0a86f180148828de86431fce424a",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Archive.swift": "a36fb6c28dc61665003d0de996eeeccf3ddd829c1c5a3ff0a375ec86a302e912",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Data+Compression.swift": "88c2b802cc903d48987cd3808cd9212226e889948c76f0790a01572bdaab1d2d",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Data+CompressionDeprecated.swift": "b76157d54942ae30f9e6b3a460222725602e6f60cdf8f51020d511e04674347a",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Data+Serialization.swift": "0582aa3a7f58bf20b214eabfd6f7c41b78684780b5dbea663e09025d829bbd82",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Date+ZIP.swift": "88edc8e6b839309df32f03b5a387cff4ba3f5151be4cf154b33810d7e235d02f",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Entry+Serialization.swift": "31b5f2a1b9e91b9f4dd0ee3dedefaa3f3b0efafb96e6d3815a6b3c2dbd34c87f",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Entry+ZIP64.swift": "ec1664c6ad88acb387344fe8faf3159641476feb99c75a5d47e1a11bc81636dd",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/Entry.swift": "d6f5570877afa147db0235479d4bdf18c7489af79fcbb20f022d0eee2bc42212",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/FileManager+ZIP.swift": "e299de3ad3615a315ee033169fbbb965bab8f0256f36b7acd101f71ce9b947e4",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/FileManager+ZIPDeprecated.swift": "dbc4082819be0af06e942396152d584e010740b798da2ead51117e3094fbcd4e",
+    "vendor/ZIPFoundation/Sources/ZIPFoundation/URL+ZIP.swift": "89f4a8cb15a21ac1cb55d0c5f251546d254abe8a7f4aab0645a4470e57052206"
+  },
+  "baseline_build_info_sha256": "98b69f90f5f314acd900481c51b052e8833d4ce9c1c991b261de8c6d0d3faa04",
+  "baseline_ipa_sha256": "87db3cf1936fc3a0253cbddbe6cb40466f024a1bbe98dcda93d7efd5c2bbcea2",
+  "baseline_executable_uuid": "98537ca109ce344bb3705c27d8f83dc2"
+}

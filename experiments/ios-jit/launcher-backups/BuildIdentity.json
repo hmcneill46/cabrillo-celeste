@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.17.0",
+  "build_number": "33",
+  "build_id": "launcher-backups-20260915-33",
+  "scope": "Whole-profile backups with staged exact restore and retained rollback; phone acceptance pending",
+  "device_jit_tested": false
+}

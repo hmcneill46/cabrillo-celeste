@@ -1,10 +1,180 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated 15 September after build28 phone acceptance
-and build31 phone review / build32 first-frame presentation, for a fresh development chat opened in
+Written 14 September 2026; updated25 September after iOS15/iPad support, the
+build36 Motion Smoothing correction and requested build37 Everest upgrade, for a fresh development chat opened in
 `/Users/harrymcneill/Projects/Cabrillo`. Read this and [AGENTS.md](AGENTS.md) first.
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
+
+## Latest owner request: public CI and gated IPA releases —25 September
+
+The owner requested GitHub Actions for deliberate stable IPA releases, then chose
+"Set up CI now; keep IPA publishing gated until public packaging is ready" after
+the current private game/FMOD/compiled dependency constraints were explained.
+This authorizes publishing the current public source through build37 and the CI/release
+workflows. It supersedes older no-GitHub-write statements for this scoped task;
+it does not authorize publishing the current private IPA or unrelated GitHub writes.
+
+The source, workflows and [release guide](docs/RELEASING.md) are published through
+[PR2](https://github.com/hmcneill46/cabrillo-celeste/pull/2), prepared on
+`codex/github-releases` for `main`. The initial
+[push run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36128707831)
+and [PR run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36128772553)
+both pass at source commit `23b323b4961e4343c3628507f24df6a169ddc578`.
+Fresh GitHub-hosted Xcode26.6 compilation passes all 119 native profile checks;
+the public inventory audit and all 20 Python build/release controls also pass.
+Actionlint validates both workflows. Artifact actions were subsequently updated
+to pinned upload7.0.1/download8.0.1 to remove the runner's Node20 warning; see the
+PR's final check status for that revision.
+Public CI needs no private capsule. Normal branch pushes/PRs run checks;
+matching version tags or manual tag runs request a separately gated release.
+`release/current.json` explicitly blocks37. A reviewed public build recipe is
+still required; no tag, public IPA or38 app has been created for this request.
+Attestations will identify workflow/source provenance, not make proprietary
+dependencies open source or establish byte-for-byte reproducibility.
+
+All frozen37 implementation inputs and physical acceptance boundaries remain
+unchanged. The memory repair and remaining save/lifecycle work below still apply.
+
+## Latest evidence: build37 memory repair and SJ gameplay —25 September
+
+The owner uploaded build37 diagnostics and confirms the app closed/restarted by
+itself. Read [the37 phone review](docs/ios-jit/EVEREST_6580_BUILD_37.md#phone-evidence--later25-september)
+and ledger before further development. Both initial37 attempts pass JIT, Everest1.6580,
+MotionSmoothing1.8.0 and the exact54-archive selection, then end during loading.
+One reaches the main menu and starts Old Site. Those initial runs have no gameplay/Quit pass.
+Wi-Fi iOS unified logs confirm both were killed by jetsam per-process-limit;
+the second process was limited to3376MiB and its last sample reaches3.53GB.
+The owner installed the full current SJ dependency set, unlike36's two archives.
+Do not attribute this solely to Everest or mark37 accepted. The accepted32 run reached4GB on this phone, and the owner reports SJ alone
+also fails now. The installed LiveContainer signature and current profiles omit
+Increased Memory Limit, while retained profiles for the earlier identity grant it.
+The same LiveContainer3.8.10 release has now been re-signed with that permission
+and installed in place over Wi-Fi. Its installed permission is verified and all14
+Cabrillo save/settings files remain exact. New iOS logs verify the effective
+process ceiling rose from3376MiB to6144MiB. Read
+[the memory review](docs/ios-jit/BUILD_37_MEMORY_REVIEW.md) before further action.
+The owner now confirms SJ works. A new journal collected over Wi-Fi matches37
+exactly and verifies SJ Prologue, Beginner Lobby and NotYourBadeline rooms a_01–03,
+501 paired touch inputs and4.05GB peak footprint, with zero runtime errors.
+The scoped SJ loading/gameplay regression is resolved. The journal ends during
+background/pause, so normal Quit/native return and full save readback remain
+unrecorded in this37 run. The independent new iCloud export is not yet present;
+preserve it when available, without requesting a repeat of successful SJ gameplay.
+No debugger was attached. [The memory setup guide](docs/INCREASED_MEMORY_LIMIT.md)
+now documents GetMoreRam, host-versus-standalone selection and re-signing.
+All54 exact mod archives are in `.build/phone37-repro-inputs`, with a manifest;
+`.build/phone37-crash-repro-a` passes isolated host Old Site runs with both
+renderers; it does not reproduce iOS memory termination. Matched cold SJ tests of32
+and37 also pass;37 has a slightly lower host peak (3.35GB versus3.46GB). Current
+phone save/settings files and signing repair receipts remain private. No Cabrillo38
+package exists: the repair changes host signing, not frozen37 implementation.
+Preserve37 and the scoped gameplay evidence; remaining lifecycle/save gates stay open.
+
+The same export contains a complete36 base-game/Motion Smoothing run: actual
+rooms, four resumes, slot1 readback, stage8 normal Quit and delayed native alive,
+with zero runtime failures. Standalone StikDebug works in this tested LC setup.
+Most gameplay callback windows are about60 despite a120 request; no sustained120
+performance claim is accepted. Read the36 report. The native saves/backup/restore
+phone gate remains open. Raw logs stay private. No GitHub write is authorized.
+
+## Latest owner request: Everest stable upgrade —25 September
+
+Build37 (`launcher-everest6580`,0.20.0) updates actual Everest source from1.6531
+to stable1.6580 (released19 September), commit082e21b0b6dd7ff7c96d65b2ca2c632f4fd8df75.
+Read [its report](docs/ios-jit/EVEREST_6580_BUILD_37.md) and ledger for delivery
+and current physical evidence before acting. Native archives are all exact36;
+four managed assemblies change. The input snapshot is
+`.private/everest6580-inputs/manifest.json`; the validated managed receipt is
+`.build/everest-managed37-b/receipt.json`. Both are pinned by the37 lane.
+
+All119 profile checks, real gameplay/save-transfer/readback/hair/lava/resume/Quit,
+new upstream source behavior controls, Fast/Fancy Motion Smoothing60/120 and the
+original vanilla save roundtrip pass. An explicit FNA semantic audit allows only
+three new patch attributes and two upstream dialogue resources in temporary
+preparation output; the actual shipped FNA binary remains exact. Existing loading
+continuations, touch polling and four-method precision repair remain. Tests are
+host evidence. Later phone evidence above establishes unexpected37 exits and
+a complete scoped36 run; it supersedes the earlier empty-Results observation.
+
+The six-file37 kit is confirmed uploaded to
+`iCloud Drive/Celeste JIT Tests/0.20.0-build-37`. It is also installed through
+TrollStore on the iPad; its native launch confirms37 and Everest1.6580.0 with the
+existing profile/content. The iPad still has no37 gameplay evidence. The requested phone export has
+arrived and its failure investigation takes priority; see the latest section. Package and all220 captured
+implementation inputs are frozen in `artifacts/cabrillo-build37-final`.
+
+Newly reviewed retained34 history in a35 export includes successful gameplay,
+save/Quit and zero runtime errors. It does not show native backup/restore or
+per-slot transfer actions, so the combined saves gate remains open. Use the latest
+kit guide; do not ask for already-passed native/browser/gameplay suites again.
+Next unused identity is38. All packaged lanes remain frozen. No new GitHub write
+is authorized. The full touch editor follows the outstanding save/recovery gate.
+
+## Earlier failure and correction —25 September
+
+The owner uploaded two build35 phone exports after Motion Smoothing would not
+start, at120Hz and60Hz. Both pass JIT then throw MethodAccessException from the
+generated Engine.Update before frame1. The owner reports120Hz starts with the
+mod disabled. The iOS15 runtime rebuild omitted the previously accepted Mono
+class.c visibility patch; the Mac host archive still had it.
+
+Build36 (`launcher-visibility`,0.19.1) restores the exact accepted patch in one
+Mono archive member. The other259 objects, fifteen archives and all201 managed
+assemblies remain35-identical. The broken-source host control reproduces the
+same exception at60/120; restored-source Fast/Fancy60/120 gameplay/save/Quit and
+72 field/method grant/denied cases pass. All nine accepted Mono source patches
+were audited. Read [the build36 report](docs/ios-jit/VISIBILITY_BUILD_36.md) for
+delivery and current physical evidence. Build35 and its Results stay frozen.
+The owner reports36 launches and plays normally; its complete retained session
+in the37 export now verifies that scoped runtime gate. Build37 is now the requested stable Everest1.6580 upgrade lane. Read
+its report before acting; next unused is38. No new GitHub publication is authorized.
+
+## Earlier owner-prioritized work —25 September
+
+**Build35 is delivered; the iPad base-game gate passes.** The owner prioritized
+[issue1](https://github.com/hmcneill46/cabrillo-celeste/issues/1), older iOS/JIT
+routes and Motion Smoothing over the planned touch editor. Read
+[the build35 report](docs/ios-jit/PLATFORMS_BUILD_35.md) and its ledger first.
+
+`launcher-platforms-20260925-35`,0.19.0, targets iOS15. It is installed over USB
+through TrollStore on the owner's iPad mini4/iOS15.8.8 with Dopamine active.
+The owner played and confirmed correct visuals/audio and normal Quit. Logs pass
+26 native checks, catalogue zero-active quiescence, verified original content,
+first-frame reveal on callback1, real gameplay/touch, brief resign/foreground, save
+readback, shutdown stage8 and a delayed native heartbeat. No JIT/unowned/managed
+errors or patch rejections. This is scoped iPad base-game acceptance; retain32
+as the accepted **phone** fallback. The game ZIP was transferred over USB and
+hash verified; it is already imported on the iPad. Raw device data stays private.
+
+Build35 preserves34's backup/transfer and numerical fixes. It rebuilds seven
+native archives for15 from a separate explicit source import; nine stay exact.
+Only CelesteJITEverest.dll changes among201 assemblies, moving touch polling to
+actual input updates. The 120FPS host test found lost tap edges with the old
+adapter; the fix passes Fast/Fancy60/120 gameplay, touch, save/resume/Quit. Native
+high refresh is optional and capped to the screen; actual phone120Hz, performance
+and new JIT routes are still pending. The original mod remains optional/unbundled.
+
+All six files are confirmed uploaded to `Celeste JIT Tests/0.19.0-build-35`.
+Phone download/execution is unconfirmed. Use35's combined guide for the outstanding
+34 saves/precision gate plus route and optional Motion Smoothing checks;33/34
+Results remain empty. Do not request the already-passed28/32 suites again.
+
+The final package is `artifacts/cabrillo-build35-final`; exact IPA/dSYM/pins and
+receipts are in the report. The derived managed receipt is
+`.build/platform-managed35-b/receipt.json` (SHA256
+`e03d75eb1377a81a71d596c7e47567b431e2c67103eb2af1346f5bc315943fcc`), over the exact
+34 repair. Native receipt:`.build/platform-native35-c/receipt.json`, pinned in
+NativePayload.json. Preserve the explicit `.private/platform-inputs35` source
+capsule and all provenance. An earlier packaging attempt stopped before IPA
+creation; only the final35 was delivered. All35 implementation inputs are frozen.
+Build36 carries the correction described above;37 is also packaged and the next unused is38. No new commit/push or GitHub comment was authorized.
+
+Next: review35 Results when they arrive, fix evidenced problems first, and then
+resume the full touch editor after the outstanding save/recovery gate. Do not
+replace the scoped device evidence with host tests or assume every iOS15 or
+jailbreak combination works. SSH was used over USB for this owner's installation
+and logs; credentials/pairing/host keys stay out of Git and public reports.
 
 ## 1. Where to start right now
 
@@ -40,24 +210,99 @@ is established. The owner approved the result and requested the next feature.
 Build32 is now the accepted fallback,0.16.2 / `launcher-first-frame-20260915-32`.
 Preserve28/27/31 and every Results folder. Build29 and30 remain local historical
 preparation/intermediate builds. All packaged source lanes remain frozen.
-Next is **whole-profile saves/settings backup with staged restore and rollback**,
-then the full touch editor. Next unused build is33; recheck before allocation.
+Build34 now combines **individual desktop save transfers, whole-profile backups
+and hair/seeker/tutorial/lava numerical repairs**. It is packaged as0.18.0 and
+locally validated. The owner explicitly deferred33 testing until these additions
+were ready;33 remains preserved and unaccepted. Read the34 report and Results
+before requesting tests. Builds35–37 are now delivered; the current next unused identity is38.
+The full touch editor follows the combined34 phone gate. All packaged lanes are frozen.
 
 The owner explicitly authorized committing/pushing the completed loading work to
-GitHub on15 September2026. That publication is in progress; verify Git before
-acting. This approval covers completed work through build32 and its acceptance;
+GitHub on15 September2026. That publication is complete: commit
+`16ff42ca62438ccfa1c3ea14e76a6606da1bc820` was fast-forward pushed and verified on
+`origin/main` on15 September. The next-feature work used `codex/profile-backups`;
+the newer CI/source publication is recorded at the top of this handoff. This earlier approval covered completed work through build32 and its acceptance;
 future unrelated feature publication still needs owner authorization.
+
+## Build34 combined phone gate —17 September
+
+The fresh `launcher-save-transfers` lane is0.18.0 /
+`launcher-save-transfers-20260917-34`. Read
+[the report](docs/ios-jit/SAVE_TRANSFERS_BUILD_34.md) and its evidence ledger.
+The unsigned IPA is24,056,162 bytes, SHA-256
+`02440e406dd9e940465684e9ac32824966303d0067e0dbe650fac73891f786e7`.
+Executable/dSYM UUID: `FD136517-5EE7-3169-B275-3CE4BB0011F0`.
+
+Slots1–3 always appear; existing extras are preserved. Long press or ellipsis offers
+ZIP/main-file export, replacement review, duplication and details. Import another
+save chooses an unused index. Raw vanilla imports can retain mod files; complete
+ZIPs replace the target's standard files. All replacements share the durable
+whole-profile journal and retained rollback. Do not weaken fresh-process gates.
+
+The hair fault reproduced on actual Mono8 gameplay. An overbroad historical patch
+mixed float/double arithmetic in hair, PlayerSeeker and the bird tutorial. Repair
+restores ten original float sites while preserving ten deliberate double sites.
+The related lava repair restores40 surface bubbles in the fixture, previously4.
+Only four Celeste method bodies change;17,300 are unchanged. The bounded expression
+audit finds no remaining recognized mismatches, not proof of all game correctness.
+Only Celeste.dll changes among201 managed assemblies relative32/33; all16 native
+archives match. The exact derived receipt is
+`.build/precision-managed34-final/receipt.json`, SHA-256
+`80bb0a19d7f63944aa6fe23379338c747db776cae51744c73482a390425b13aa`.
+Keep its base receipt and repair provenance; never silently substitute32's payload.
+
+119 native checks,16 simulator UI tests, six precision controls, eight package
+negative controls and final package/symbol verification pass. Real game tests use
+the exact shipped managed payload. Original Celeste1.4.0.0 serialization also passes
+a native→vanilla→native→Everest roundtrip; this is not every-version compatibility.
+
+All six kit files are confirmed uploaded to
+`iCloud Drive/Celeste JIT Tests/0.18.0-build-34`, with matching local hashes.
+Delivery receipt: `artifacts/cabrillo-build34/delivery.json`. Check its Results
+before asking for testing. Follow its combined README-FIRST guide instead of a
+separate33 suite. Phone34 download/execution and acceptance remain unconfirmed.
+The whole cloud folder is794,488,191 bytes; every prior build/Results is retained.
+No33/34 GitHub publication is authorized. New implementation now needs36; see the25 September section.
+
+## Preserved build33 —15 September
+
+The new `launcher-backups` lane is0.17.0 / `launcher-backups-20260915-33`.
+Read [the report](docs/ios-jit/PROFILE_BACKUPS_BUILD_33.md) and its evidence ledger.
+The unsigned IPA is24,000,196 bytes, SHA-256
+`a66a44bd1e477fadb4df8d9127912fca2412babf87b3d3603b9f67461f5de79d`.
+Executable/dSYM UUID: `B0843965-0FC8-3020-B7D3-3E5421C8FE13`.
+
+Whole-profile backup, Files review/import/export, staged exact restore and retained
+rollback are implemented.59 fresh native checks,10 iPhone/iPad UI checks, six
+negative package controls, final arm64 package/symbol checks and a cloned real
+profile followed by game load/save/Quit pass. All201 managed assemblies match32.
+The user's extra-save-slot request is covered by dynamic slot discovery and
+preservation of all files, including mod-only sidecars (350 sparse slots tested).
+
+The six-file kit is confirmed uploaded to `iCloud Drive/Celeste JIT Tests/0.17.0-build-33`.
+The delivery receipt is `artifacts/cabrillo-build33/delivery.json`; check
+`Results` for newly arrived evidence. All prior builds/Results are retained.
+The owner subsequently deferred this test; build34 now supplies the combined gate.
+No phone33 acceptance is claimed. Build32 is the fallback. Do not repeat the
+closed build28 browser or build32 loading gates without new failure evidence.
+
+Profile recovery must precede mod scans/startup. Keep exact archive identities,
+disabled choices, unknown persistent files, retained rollback, fresh-process
+requirements and the first-frame handoff. The current portable format requires
+the same installed archive set. Build34 adds per-slot formats; missing-mod automation
+and the full touch editor remain future work. Public release permission remains separate from local phone delivery.
 
 Start in this order:
 
 1. Read this file and `AGENTS.md`, inspect Git status/HEAD and preserve newer work.
 2. Build32's export is reviewed. Do not request a duplicate loading/browser suite.
-3. Put newly evidenced backend failures ahead of features; none is found here.
-4. Implement the saves/settings roadmap: inactive-game-only profile snapshots,
-   all unknown persistent sidecars, mod identity manifest, safe staged exact
-   restore with retained rollback and a fresh process before restored data runs.
-   Game assets/mod ZIPs are excluded from the default portable backup; only
-   explicitly owned disposable cache directories may otherwise be excluded.
+3. Put newly evidenced backend failures ahead of features. Build36 fixes the
+   evidenced35 Motion Smoothing failure;37 adds the requested Everest upgrade.
+4. Check the latest36/37 Results and owner replies first, plus earlier Results
+   if new evidence arrives. Review the focused37 upgrade and outstanding combined
+   saves/backup/restore/hair/gameplay/rollback gate against its exact identity.
+   While waiting, independently prepare touch-editor contracts. All packaged
+   lanes remain frozen; owner36 visual acceptance does not accept37.
 5. Preserve module identities, game-thread ownership, first-frame handoff and
    zero-active catalogue quiescence. The full native touch editor follows backups.
 6. The owner authorized the current loading publication and local next-feature
@@ -81,7 +326,7 @@ when implementation is authorized and feasible.
 | Initial published commit | `bbd86a7680c0a3938fa9715ca27d1dd2e61ce96b` |
 | Separate AOT sibling | **Morro**, currently <https://github.com/hmcneill46/celeste-ios> |
 | Primary physical target | iPhone 15 Pro Max (`iPhone16,2`), iOS 26.5 |
-| Intended next family | iPadOS; declared by the package, not physically accepted |
+| Additional physical target | iPad mini4/iOS15.8.8: scoped build35 base-game acceptance;37 native launch confirmed |
 
 The owner explicitly authorized the initial commit/push and selected **Public**.
 The initial publication is complete. On15 September the owner separately authorized
@@ -518,7 +763,10 @@ Preserve these established contracts:
 
 ## 9. Roadmap after the accepted browser gate
 
-### First: responsive real loading, including backend work
+### Completed through32: responsive real loading, including backend work
+
+The following design rationale is historical. Build32's accepted presentation
+and build31's managed loading work implement this increment; keep their limitations.
 
 Read [the current roadmap](docs/ios-jit/NATIVE_LAUNCHER_ROADMAP_2026-09-12.md),
 especially “Real SwiftUI startup progress”. Desktop Everest uses a separate
@@ -549,7 +797,10 @@ catalogue quiescence. Build 27's observed Run→first-frame 74.71/26.52s and sam
 4.05/3.72 GB footprints justify this work; they are not controlled cold/warm
 benchmarks, a leak diagnosis or older-device performance evidence.
 
-### Next: whole-profile saves/settings backup and restore
+### Implemented in33/34; combined phone gate pending: saves and backups
+
+Build34 adds per-slot transfers to33's whole-profile implementation. Follow the
+current combined phone guide and report above before moving the acceptance gate.
 
 SwiftUI/Files owns the manager. Default small backups preserve saves, settings
 and unknown persistent sidecars plus mod identity/schema manifests, usually
@@ -559,7 +810,7 @@ validate containment and require a fresh process. Never execute a mod to preview
 a backup or discard unknown data because vanilla XML validation rejects it.
 Automatic cloud save merging is later work.
 
-### Then: complete native touch editor and presentation polish
+### Next after34 acceptance: complete native touch editor and presentation polish
 
 Port the full D3 interaction feature set from the read-only AOT reference:
 fixed/floating movement, four split orientations, duplicate/swap, sliding,

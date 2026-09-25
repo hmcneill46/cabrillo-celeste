@@ -1,8 +1,16 @@
 # Cabrillo documentation
 
 - [Fresh-chat development handoff](../HANDOFF.md)
+- [Strawberry Jam: Increased Memory Limit and GetMoreRam setup](INCREASED_MEMORY_LIMIT.md)
 - [Repository separation and verification](CABRILLO_MIGRATION.md)
 - [Building, local private inputs and exact reproduction](BUILDING.md)
+- [Public CI, gated IPA releases and build provenance](RELEASING.md)
+- [Build37 memory investigation and host signing repair](ios-jit/BUILD_37_MEMORY_REVIEW.md) — restored LiveContainer permission; owner confirms Strawberry Jam works afterward.
+- [Build37 Everest stable1.6580 upgrade](ios-jit/EVEREST_6580_BUILD_37.md).
+- [Build36 Motion Smoothing startup correction](ios-jit/VISIBILITY_BUILD_36.md) — scoped phone gameplay/save/Quit passed.
+- [Build35 iOS15 / JIT / refresh](ios-jit/PLATFORMS_BUILD_35.md) — scoped iPad base-game gate passed.
+- [Build34 saves and numerical repairs](ios-jit/SAVE_TRANSFERS_BUILD_34.md) — individual desktop transfers, whole-profile recovery and hair/seeker/tutorial/lava fixes; combined phone gate pending.
+- [Build33 whole-profile backups](ios-jit/PROFILE_BACKUPS_BUILD_33.md) — preserved unaccepted build; the owner deferred testing to34.
 - [Build32 physical acceptance](ios-jit/BUILD_32_ACCEPTANCE.md)
 - [Build32 first-frame presentation and original phone gate](ios-jit/FIRST_FRAME_BUILD_32.md)
 - [Build31 phone review and loading feedback](ios-jit/BUILD_31_LOADING_REVIEW.md)
