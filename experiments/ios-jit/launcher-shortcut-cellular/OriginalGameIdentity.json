@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "source_id": "4b665aa3b550b262100dbe59512d5736379af0a5c4e0e6c0c277f10bcc50a09c",
+  "inputs": {
+    "Celeste.Content.dll": {
+      "bytes": 3072,
+      "sha256": "0b8d6195992c8970e8602bf48a7bf89104b83a98e34a07dc0c18d01581711d15"
+    },
+    "Celeste.exe": {
+      "bytes": 2572800,
+      "sha256": "fd73f8a2311fa5737ded550cbad4b75c85b7686b36432f59185e940fcb65fcfe"
+    },
+    "FNA.dll": {
+      "bytes": 773632,
+      "sha256": "00349b572636c0ed4c97d4e4f74344b3450160c42d4a6b52bcf5e0f2d5193a31"
+    }
+  }
+}

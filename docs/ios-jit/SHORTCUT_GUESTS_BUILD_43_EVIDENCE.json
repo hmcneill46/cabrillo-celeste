@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-26T11:35:01.640455+00:00",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.22.3",
+    "build_number": "43",
+    "build_id": "launcher-shortcut-guests-20260926-43",
+    "scope": "Explicit LiveContainer helper guest launch and reliable shortcut return with the exact build41 runtime",
+    "device_jit_tested": false
+  },
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.22.3",
+    "build_number": "43",
+    "ipa_sha256": "8a3594a4bad7eddd61e8e2fded22726cb745f48ba273d900be9561203a6fc202",
+    "bytes": 18697274,
+    "uuid": "ec31fbfc79a63175b28d936dbb64bcb3",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": false,
+    "distribution_blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "source_inputs": 212,
+  "runtime_comparison": {
+    "status": "PASS_EXACT_BUILD41_RUNTIME",
+    "managed_assemblies": 199,
+    "native_archives": 16,
+    "ui_sources_unchanged": true,
+    "shortcut_revision": 43,
+    "shortcut_protocol": "cabrillo-39"
+  },
+  "host_controls": {
+    "native": 109,
+    "generated_branches": 36,
+    "apple_conditions": 36,
+    "apple_outputs": 17,
+    "native_receipt": ".build/shortcut43-controls-a/receipt.json",
+    "apple_receipt": ".build/shortcut43-apple-c/receipt.json",
+    "physical_device_tested": false
+  },
+  "physical": {
+    "status": "PARTIAL_MANUAL_WARM_JIT_MENU_QUIT_PASS_COLD_SHORTCUT_FAIL",
+    "automatic": "FAIL_AFTER_COLD_HELPER_LAUNCH",
+    "travel_recovery": "PENDING",
+    "gameplay_quit": "MENU_START_AND_NORMAL_QUIT_PASS_LEVEL_INPUT_NOT_OBSERVED",
+    "phone_app_before": "41",
+    "phone_shortcut_before": "42",
+    "installation": "PASS_BUILD43_INSTALLED_SAVES_PRESERVED",
+    "shortcut": "PASS_EXACT_46_REVISION43_ACTIONS",
+    "remote_launch": "COREDEVICE_TIMEOUT_OWNER_TAP_REQUESTED",
+    "latest_collected_journal": "Actual43 f1769b89-5b7e-4108-a632-1d8fd7864f6a; failed cold shortcut, successful same-PID manual warm continuation and normal Quit",
+    "cold_lc2_prepared": true,
+    "journal": "session-f1769b89-5b7e-4108-a632-1d8fd7864f6a.jsonl",
+    "pid": 21378,
+    "actual_build43_run": true,
+    "vpn_loopback": "PASS_REMOTE_PAIRING_HELLO_80MS",
+    "helper_discovery": "PASS_COM_STIK_STIKDEBUG_AND_ACTUAL_DATA_CONTAINER",
+    "helper_cold_launch": "PASS_OWNER_AND_SCREENSHOT",
+    "native_jit": "NOT_REACHED_MAILBOX_STATUS1_UNTRACED",
+    "shortcut_return": "WFOutputAction starts then stalls; later error callback",
+    "owner_prompts": "Allowed Open LiveContainer and Open LiveContainer2",
+    "warm_native_button_test": {
+      "status": "PASS_SAME_PID_DIRECT_REQUEST_AND_RETURN",
+      "native_checks": 26,
+      "debugger_detached": true,
+      "mailbox": 2,
+      "owner_saw_green": true,
+      "owner_started_celeste": true,
+      "graphics_checks": 14,
+      "cached_owned_game_seconds": 0.095,
+      "catalogue_active_requests": 0,
+      "first_frame_readback": true,
+      "title_menu": true,
+      "level_input_observed": false,
+      "normal_quit_stage8": true,
+      "profile_save_readback": true,
+      "delayed_native_heartbeat": true,
+      "runtime_failures": 0,
+      "evidence": ".private/device-evidence/2026-09-26/phone43/before-shortcut44.jsonl"
+    }
+  },
+  "delivery": {
+    "local_icloud_placement": true,
+    "confirmed_upload": true,
+    "initial_upload_error": "Temporary iCloud account/server unavailable",
+    "phone_kit_readback_exact": true,
+    "installed": true,
+    "shortcut_imported": true,
+    "save_profile_files_backed_up": 125,
+    "icloud_folder": "Celeste JIT Tests/0.22.3-build-43",
+    "phone_folder": "On My iPhone/LiveContainer/Cabrillo-build43",
+    "private_evidence_root": ".private/device-evidence/2026-09-26/phone43",
+    "initial_upload_error_cleared": true,
+    "save_profile_files_verified_unchanged": 125,
+    "shortcut_exact_actions": 46
+  },
+  "release": {
+    "github_write": false,
+    "public_ipa": false,
+    "blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "public_source_audit": {
+    "status": "PASS_PUBLIC_SOURCE_CHECKOUT",
+    "public_files": 3902,
+    "receipt": ".build/shortcut43-public-audit.json"
+  }
+}

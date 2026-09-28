@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-26T13:58:07.494466+00:00",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo Home Screen Shortcut",
+    "revision": 45,
+    "app_minimum_build": 43,
+    "build_id": "shortcut-files-20260926-45",
+    "callback_protocol": "cabrillo-39",
+    "scope": "Preserve complete JIT URLs as typed URL items; direct single guest request and natural completion",
+    "ipa_produced": false
+  },
+  "source_inputs": 11,
+  "source_frozen": true,
+  "next_implementation_identity": 46,
+  "artifact": "artifacts/cabrillo-shortcut45-final",
+  "application_changed": false,
+  "host_controls": {
+    "status": "PASS_SHORTCUT45_HOST_CONTROLS",
+    "apple_condition_checks": 36,
+    "apple_completion_checks": 1,
+    "apple_url_content_checks": 18,
+    "original_url_truncation_controls": 4,
+    "expected_original_failures": 12,
+    "generated_branches": 36,
+    "physical_device_tested": false,
+    "source_sha256": {
+      "tools/check_shortcut_files45.py": "3b52420348338585a89344a581fcc112edd6d5c9625de149e2ce7cf28eae614f",
+      "tools/build_shortcut_files45.py": "04bc6939e2073e9008f6c9bec3cb6f04015ca4de64179249c68e31b21a25af31",
+      "experiments/ios-jit/shortcut-files45/AppleWorkflowChecks.m": "d94f37c909245ceae745b139b15b5d540f72b35920a1eeac85f53cf62daf7c11",
+      "experiments/ios-jit/shortcut-files45/AppleURLChecks.m": "da084bb64daee9469358db8c94369ae9a5a9c16c2d06ab03d6a7ed0e796e0b13",
+      "experiments/ios-jit/shortcut-files45/BuildInfo.json": "8e54ca73a9c62cc5cfea6bde870f8768abe0646082fd263fc9828bd235fce747",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJPlatformOptions.m": "d425482dcfe196eaf05641b48977812ee07921083c4af827951ea40ae998f9e1",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJPlatformOptions.h": "bb0ff96f8709ae37fb883d701752975163dd4284a49ea2a97fb9aaafcc5a8da2",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJShortcutPlatform.m": "dbc64dadf5967215dbc33a2bdff16a0ba5175dd6a6a11edeecdd2b6215f7f208",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJShortcutPlatform.h": "ce29acfb2b94f5be4c83acca6a9fa4fd13475c59c1b41ea70eba4232490000c2",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJShortcutSession.m": "1ec187c8098069f4f4eb4fe0190f52404d024f2f519f5d1e725f7f11115b28a1",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJShortcutSession.h": "8bd35bc521f109877fc1a3e6d8efb79a87db67b61968036bbc7d360e29777697"
+    }
+  },
+  "delivery": {
+    "icloud_folder": "Celeste JIT Tests/shortcut-45",
+    "confirmed_upload": true,
+    "kit_files": 6,
+    "files": {
+      "Cabrillo-Standalone.shortcut": {
+        "bytes": 25209,
+        "sha256": "297a3412857ce5eb43a5cef9084fb0953c8b46f69c7b7648bca85e185d748de2"
+      },
+      "Cabrillo.shortcut": {
+        "bytes": 25255,
+        "sha256": "6f3a50934232bcc4a4793d3031c7f81869a4d878d4bdd6392f66b869a15b65e8"
+      },
+      "DELIVERY-NOTE.txt": {
+        "bytes": 389,
+        "sha256": "2834a38d037547287ba316a616667e3ca91c0f313d5c79143ec0e29f0660b2b5"
+      },
+      "README-FIRST.txt": {
+        "bytes": 1920,
+        "sha256": "4a7f13b0f18fef4bef1bf2aa95f1b83069db64669d59a186698148e018ed14eb"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 347,
+        "sha256": "9ba9c33af885b5a1c2164287ead19afa7a92dd173e3cb9bfb691608b4407795c"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1016,
+        "sha256": "1f0bf63b8cc5c172770904baf1b09120ed78c0e31f4fe01d58749a15c2f02769"
+      }
+    },
+    "phone_staged": false,
+    "phone_staging_failure": "USB target unavailable before any phone file copy",
+    "wifi_coredevice": "PAIRED_TUNNEL_UNAVAILABLE",
+    "shortcut_imported": true,
+    "latest_scoped_synced_shortcut": "One Cabrillo; all45 revision45 actions exactly verified",
+    "installed_app_retained": "43",
+    "private_evidence": ".private/device-evidence/2026-09-26/shortcut45",
+    "wifi_screenshot": "TIMED_OUT_TARGET_UNAVAILABLE"
+  },
+  "physical": {
+    "automatic": "FAIL_IMMEDIATE_OPEN_URL_MISSING_INPUT",
+    "travel_recovery": "PENDING",
+    "gameplay_quit": "PENDING_SHORTCUT45_RUN",
+    "prior_manual_gate": "PASS_APP43_WARM_JIT_MENU_SAVE_NORMAL_QUIT",
+    "owner_observation": "Immediate error under final LiveContainer URL before Cabrillo opens; valid URL required",
+    "mac_reproduction": {
+      "command": "shortcuts run Cabrillo",
+      "exit_code": 1,
+      "error": "Make sure to pass a valid URL to the Open URL action.",
+      "receipt": ".build/shortcut46-research/original45-home-run.txt"
+    },
+    "correction": "shortcut46 explicit typed URL output connections"
+  },
+  "release": {
+    "github_write": false,
+    "public_ipa": false,
+    "ipa_produced": false,
+    "blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "public_source_audit": {
+    "status": "PASS_PUBLIC_SOURCE_CHECKOUT",
+    "public_files": 3915,
+    "receipt": ".build/shortcut45-public-audit.json"
+  }
+}

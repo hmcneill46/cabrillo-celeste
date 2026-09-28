@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "product": "Cabrillo Home Screen Shortcut",
+  "revision": 42,
+  "app_minimum_build": 41,
+  "build_id": "shortcut-files-20260926-42",
+  "callback_protocol": "cabrillo-39",
+  "scope": "Explicit text comparisons for generic dictionary values in Apple Shortcuts",
+  "ipa_produced": false
+}

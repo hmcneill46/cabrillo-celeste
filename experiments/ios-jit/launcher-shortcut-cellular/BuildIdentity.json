@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.23.2",
+  "build_number": "50",
+  "build_id": "launcher-shortcut-cellular-20260928-50",
+  "scope": "Travel verifies the VPN route before Airplane Mode and the developer service afterward",
+  "device_jit_tested": false
+}

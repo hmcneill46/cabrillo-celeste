@@ -54,7 +54,10 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       # No private capsules, signing credentials or prebuilt IPA downloads.
-      # Build37 stops in eligibility; its public packaging recipe does not exist yet.
+      # Build38 stops in eligibility until FMOD distribution inputs are approved.
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
       - name: Build from the tagged public source and verify the package
         run: python3 tools/release.py build
       - name: Attest every release file

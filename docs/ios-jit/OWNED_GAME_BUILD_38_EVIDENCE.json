@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "as_of": "2026-09-25",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.21.0",
+    "build_number": "38",
+    "build_id": "launcher-owned-game-20260925-38",
+    "scope": "Owned-game preparation and cached runtime; no bundled original/prepared Celeste code; physical validation pending",
+    "device_jit_tested": false
+  },
+  "verification": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.21.0",
+    "build_number": "38",
+    "ipa_sha256": "9968253600c30566a527d97a96780dad353cdf616be8f2af9e0ec9ae8e0f2e03",
+    "bytes": 18659553,
+    "uuid": "4b29f84240823c0892780a847167a066",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": false,
+    "distribution_blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "frozen_sources": {
+    "receipt": "artifacts/cabrillo-build38-final/frozen-source-manifest.json",
+    "sha256": "7fae0bc62b739c79cabd5ba151f8c307422036b8f3d1f22737f1f31bdc2d1984",
+    "source_archive_sha256": "0c02ec51e3cdbbad5356f644c27097179e66e4a1c10331bc988216acbe6aacee",
+    "file_count": 230
+  },
+  "dependencies": {
+    "public_inputs": {
+      "receipt": ".build/owned-public-inputs38-e/receipt.json",
+      "sha256": "e1dc95106fbf8be136e109fa9d6923c03c72feff5b8f8f82cb443926739d5c50",
+      "status": "PASS_PUBLIC_SOURCE_INPUTS"
+    },
+    "managed": {
+      "receipt": ".build/owned-public-managed38-e/receipt.json",
+      "sha256": "9233d4df8774eed4f3eec462fe19e1f045f5ba041062fe959c84eb598d9576a2",
+      "status": "PASS_PUBLIC_GAME_FREE_MANAGED_BUILD"
+    },
+    "native": {
+      "receipt": ".build/owned-public-native38-e/receipt.json",
+      "sha256": "6b08d3c6b9c5b0de929f9de6c98542411c7976b795a764762517ae1d23c36b1d",
+      "status": "PASS_PUBLIC_NATIVE_DEPENDENCIES"
+    },
+    "fmod": {
+      "receipt": ".build/owned-fmod38-c/receipt.json",
+      "sha256": "d326c611c79b415a6eb11e13c6e1c5369cc4edadd9f035ba9b55458840390c59",
+      "status": "PASS_EXPLICIT_FMOD_SDK"
+    }
+  },
+  "host_validation": {
+    "storage": {
+      "receipt": ".build/owned-game38-store-final/receipt.json",
+      "sha256": "8173ab331ee03f66288c0d6833422ca1d5c4c78f6e963bcb37559f4c6380d6eb",
+      "status": "PASS_OWNED_GAME_STORE"
+    },
+    "game": {
+      "receipt": ".build/owned-game38-host-public-c/receipt.json",
+      "sha256": "5656fbaeb3ef35d8eb7b0293137382950768407fc4b79908f7b6db48c2b9f17f",
+      "status": "PASS_OWNED_GAME_COLD_WARM_GAMEPLAY"
+    },
+    "strawberry_jam": {
+      "receipt": ".build/owned-game38-sj-d/receipt.json",
+      "sha256": "5319d1c300f29442ff50136a3ce23b6193f43ef5f0ff6fa37ebd75e82dcb8de1",
+      "status": "PASS_OWNED_GAME_SJ_COLD_WARM"
+    },
+    "motion": {
+      "receipt": ".build/owned-game38-motion-final/receipt.json",
+      "sha256": "87d58969da1ae8502ee9c4fa060f964a9a9c4ca838a93602215bff0c0034bfed",
+      "status": "PASS_OWNED_GAME_MOTION"
+    },
+    "profiles": {
+      "receipt": ".build/owned-profiles38-a/receipt.json",
+      "sha256": "d2e424026158c370b13bacb5540541949d902945553b0f2ac3fdd28fd755e794",
+      "status": "PASS_PUBLIC_NATIVE_PROFILE_CHECKS"
+    },
+    "loading": {
+      "receipt": ".build/owned-loading-ui38-a/receipt.json",
+      "sha256": "315739854a3c29291a62f1c010e7d216d0f54a3eaef64d00bf539fb36f6f3f1b",
+      "status": "PASS_LOADING_PRESENTATION_XCUITEST"
+    },
+    "isolation": {
+      "receipt": ".build/owned-public-isolation38/receipt.json",
+      "sha256": "015c56cd846ecb7a5299df62b85ac1317cc95c489c0903dbdf56e84e8895af3b",
+      "status": "PASS_PUBLIC_BUILD_INPUT_ISOLATION"
+    }
+  },
+  "prior_frozen_sources": {
+    "receipt": ".build/owned38-prior-frozen-check.json",
+    "sha256": "1a318183e3dc4b6daec690de1c1b5fa484a29470ab48517ffdab54c520038ecb",
+    "status": "PASS_PRIOR_FROZEN_SOURCES"
+  },
+  "delivery": {
+    "status": "PASS_ICLOUD_UPLOAD_AND_LOCAL_BYTES",
+    "cloud_directory": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.21.0-build-38",
+    "files": {
+      "Cabrillo-0.21.0-build-38-unsigned.ipa": {
+        "sha256": "9968253600c30566a527d97a96780dad353cdf616be8f2af9e0ec9ae8e0f2e03",
+        "bytes": 18659553
+      },
+      "INSTALL.md": {
+        "sha256": "425c45632d79ff9545016c1977457c3f878227c68ef50917a7feddef69a6422f",
+        "bytes": 386
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "sha256": "59433fd4ec998b2aa86cb5dd2dc4f9defdc3ec9f9a7e5221513842d3ea8f06f4",
+        "bytes": 3172
+      },
+      "TEST-IDENTITY.json": {
+        "sha256": "47e91a0069b8d7b072845d8df3fb7c64a59256bbaafde06e8114c78024b55ae8",
+        "bytes": 673
+      },
+      "README-FIRST.txt": {
+        "sha256": "2c38710acb37df9b4384f530f5685633e36fb9137e1dde5b45aecc3d8c2dca54",
+        "bytes": 2033
+      },
+      "SHA256SUMS.txt": {
+        "sha256": "e6ce718ea1a215d26bbae89e5bd1f32a6d073e0247f92cf5c9dec8601383696b",
+        "bytes": 438
+      }
+    },
+    "phone_execution": false,
+    "checked_utc": "2026-09-25T13:31:41.601902+00:00",
+    "icloud_status": [
+      {
+        "download_status": "NSURLUbiquitousItemDownloadingStatusCurrent",
+        "error": null,
+        "name": "Cabrillo-0.21.0-build-38-unsigned.ipa",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "download_status": "NSURLUbiquitousItemDownloadingStatusCurrent",
+        "error": null,
+        "name": "INSTALL.md",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "download_status": "NSURLUbiquitousItemDownloadingStatusCurrent",
+        "error": null,
+        "name": "README-FIRST.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "download_status": "NSURLUbiquitousItemDownloadingStatusCurrent",
+        "error": null,
+        "name": "SHA256SUMS.txt",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "download_status": "NSURLUbiquitousItemDownloadingStatusCurrent",
+        "error": null,
+        "name": "TEST-IDENTITY.json",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      },
+      {
+        "download_status": "NSURLUbiquitousItemDownloadingStatusCurrent",
+        "error": null,
+        "name": "THIRD_PARTY_NOTICES.md",
+        "ubiquitous": true,
+        "uploaded": true,
+        "uploading": false
+      }
+    ]
+  },
+  "ipad": {
+    "installed": true,
+    "install_receipt_sha256": "d9e78a3ced47b23279d3c4910691b0b9fcfda8fa939f78e19868228af6b99625",
+    "native_launch": "INSTALLED_AWAITING_NATIVE_LAUNCH",
+    "profile_preservation_sha256": "f30dbf810195b1f75d6f153b67d013549c0970daac34d3a27c0daa757f0d0f3a",
+    "preserved_files": 11,
+    "original_zip_staged": true,
+    "zip_receipt_sha256": "dec410639939dd8d1f99534d03b238e5733a98b88f99b443d4f314a64a07b752",
+    "gameplay_accepted": false,
+    "cached_launch_accepted": false
+  },
+  "phone": {
+    "accepted": false,
+    "download_or_execution_confirmed": false
+  },
+  "public_ipa_publishing_allowed": false,
+  "remaining_known_distribution_gate": "FMOD redistribution permission and authorized SDK input for CI",
+  "github_write_authorized_for_this_work": false
+}

@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.22.2",
+  "build_number": "41",
+  "build_id": "launcher-shortcut-tunnel-20260926-41",
+  "scope": "Probe the actual StikDebug Remote Pairing endpoint without pairing or debugger access; preserve build40 routing and exact runtime",
+  "device_jit_tested": false
+}

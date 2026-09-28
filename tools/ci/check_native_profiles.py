@@ -17,7 +17,9 @@ def main():
     p.add_argument('--work', default='.build/ci/native-profiles')
     p.add_argument('--developer-dir', default=os.environ.get(
         'DEVELOPER_DIR', '/Applications/Xcode-26.6.app/Contents/Developer'))
+    p.add_argument('--lane', choices=['launcher-everest6580','launcher-owned-game'], default='launcher-everest6580')
     args = p.parse_args()
+    source = ROOT / 'experiments/ios-jit' / args.lane
     work = ROOT / args.work
     if work.resolve() != work.absolute() or ROOT / '.build' not in work.parents or work.exists():
         raise ValueError('Choose a fresh, unaliased work directory under .build')
@@ -29,8 +31,8 @@ def main():
     work.mkdir(parents=True)
     native = work / 'native'
     native.mkdir()
-    sources = sorted(f for f in (SOURCE / 'native').glob('*.swift') if f.name != 'PlatformViews.swift')
-    sources += [SOURCE / 'tests/ProfileBackupTests.swift', SOURCE / 'tests/SaveTransferTests.swift']
+    sources = sorted(f for f in (source / 'native').glob('*.swift') if f.name != 'PlatformViews.swift')
+    sources += [source / 'tests/ProfileBackupTests.swift', source / 'tests/SaveTransferTests.swift']
     vendor = sorted((ROOT / 'vendor/ZIPFoundation/Sources/ZIPFoundation').glob('*.swift'))
     yaml = ROOT / 'vendor/Yams/Sources/CYaml'
     c_sources = sorted((yaml / 'src').glob('*.c'))

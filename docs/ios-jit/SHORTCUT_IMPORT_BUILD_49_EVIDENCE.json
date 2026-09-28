@@ -1,0 +1,176 @@
+{
+  "schema": 1,
+  "date": "2026-09-28",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.23.1",
+    "build_number": "49",
+    "build_id": "launcher-shortcut-import-20260928-49",
+    "scope": "Plain text shortcut import question with typed URL handoff",
+    "device_jit_tested": false
+  },
+  "status": "OWNER_IMPORT_PASS_APP49_CELLULAR_HOME_FAILURE",
+  "next_implementation_identity": 50,
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.23.1",
+    "build_number": "49",
+    "ipa_sha256": "2db91b2f496f7e7fe92393822a32e17f78be9c2d8c39f0bba30b5c57ab33b7f6",
+    "bytes": 18758794,
+    "uuid": "15560fd35ba93f459b7a9a4d5225c880",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": false,
+    "distribution_blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "artifacts": {
+    "directory": "artifacts/cabrillo-build49-final",
+    "source_inputs": 238,
+    "frozen_manifest_sha256": "1d86b8abcd727bee115ac40cf7d39f8aee943e039425ac0d7460d5eb28f66605",
+    "frozen_archive_sha256": "953fe2af11de0c1ecd7959372f567decee9f2146befa3a673160842f27575a65",
+    "runtime_comparison": {
+      "status": "PASS_EXACT_BUILD48_RUNTIME",
+      "managed_assemblies": 199,
+      "native_archives": 16,
+      "launch_reducer_unchanged": true,
+      "swiftui_unchanged": true,
+      "changed_launcher_sources": [
+        "src/CJShortcutInstall.m",
+        "src/main.m"
+      ],
+      "shortcut_revision": 49,
+      "shortcut_protocol": "cabrillo-39"
+    }
+  },
+  "failure": {
+    "physical_app48_installed": true,
+    "physical_export48_verified": true,
+    "owner_report": "Configure This Shortcut immediately discards typed input",
+    "screenshot_sha256": "f8ec84b864e26885787781ea9db71a762e07459daa6d684dd0be926aea6ccd36",
+    "journal_sha256": "5c7a2064cce8a681c1506f225bbd560f4713f507c4bcf3d8ed39b33794fae7b3",
+    "scope": "Apple URL-list parameter editor before Home/JIT; not a backend failure"
+  },
+  "validation": {
+    "native_launch_controls": 132,
+    "installation_controls": 50,
+    "shortcut_branches": 36,
+    "rejected_broken_url_connections": 15,
+    "apple_condition_checks": 36,
+    "apple_completion_checks": 1,
+    "apple_url_content_checks": 18,
+    "original_url_truncation_controls": 4,
+    "original43_missing_callback_failure_reproduced": true,
+    "actual_apple_import_ui_tests": 2,
+    "actual_apple_import_runtime": "iOS26.5 simulator / Shortcuts4610",
+    "original48_edit_failure_reproduced": true,
+    "typed_pasted_and_end_editing_values_retained": true,
+    "exact_configured_url_executed": true,
+    "scope": "Actual Apple simulator import and Home URL action to a local fixture; no physical JIT, VPN, game or radio actions",
+    "controls_receipt": {
+      "path": "artifacts/cabrillo-build49-final/shortcut49-controls-a-receipt.json",
+      "sha256": "cdbeb5868a16e2c4d524369cbcf6889a524660a289e8b91198cd3c5463170fc8"
+    },
+    "apple_receipt": {
+      "path": "artifacts/cabrillo-build49-final/shortcut49-apple-controls-receipt.json",
+      "sha256": "40bc170e87418b5c5a4eb8ff290b99ee214b1aad9288307375fd44f43f40d51d"
+    },
+    "import_ui_receipt": {
+      "path": "artifacts/cabrillo-build49-final/shortcut49-import-ui-b-receipt.json",
+      "sha256": "a1d8609d58f7c79f089bf0b2a3eecece2716161b087fef14dc3d1fbc45f3cd5d"
+    },
+    "ios15_compilation": true
+  },
+  "physical": {
+    "installed_build": 49,
+    "new49_shortcut_import_passed": true,
+    "explicit_home_route_passed": false,
+    "jit_or_game_tested": false,
+    "owner_import_test_request": "answered: text stays and import succeeds",
+    "owner_import_confirmation": true,
+    "physical_import_evidence": "owner report on28 September; app48 with shortcut49",
+    "existing_fallback": "app47 / shortcut46",
+    "shortcut49_minimum_app_build": 48,
+    "automatic_installation_performed": false,
+    "cellular_home_failure": {
+      "installed_app": 49,
+      "shortcut_revision": 49,
+      "runs": [
+        {
+          "wifi_disabled_using": "Control Centre",
+          "journal_sha256": "f58d8bcbdf0bd66b0c20ca40981a3f15ba73b1ea93c114020bb9b79c5626a274",
+          "events": 31,
+          "native_checks_passed": 0,
+          "recovery_exists_after_run": false,
+          "mode": "Automatic chose Travel",
+          "failure_stage": "connect before isolation",
+          "probe_failure": "endpoint_unreachable",
+          "restore_receipt_received": true
+        },
+        {
+          "wifi_disabled_using": "Settings",
+          "journal_sha256": "26b69108725a847de3d541f8bc5b7a7118a8e8b3bcc3a4951ae19ac8f2ed7fc6",
+          "events": 29,
+          "native_checks_passed": 0,
+          "recovery_exists_after_run": false,
+          "mode": "Automatic chose Travel",
+          "failure_stage": "connect before isolation",
+          "probe_failure": "endpoint_unreachable",
+          "restore_receipt_received": true
+        }
+      ],
+      "fix_lane": 50
+    },
+    "app49_installation_verified": true
+  },
+  "delivery": {
+    "icloud_folder": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.23.1-build-49",
+    "logical_bytes_all_kits": 995079880,
+    "confirmed_upload": true,
+    "phone_staged": true,
+    "retired_installers": [],
+    "files": {
+      "INSTALL.md": {
+        "bytes": 811,
+        "sha256": "640ae39178f1e03a1e637df256c22ba62d8f0ff8cbee7797c87c0f0e96914b9d"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 3172,
+        "sha256": "59433fd4ec998b2aa86cb5dd2dc4f9defdc3ec9f9a7e5221513842d3ea8f06f4"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 881,
+        "sha256": "e108ea16fd09879440dfd5dccfc0471927f5914a85e411ae1f7390fce4c507b6"
+      },
+      "Cabrillo-0.23.1-build-49-unsigned.ipa": {
+        "bytes": 18758794,
+        "sha256": "2db91b2f496f7e7fe92393822a32e17f78be9c2d8c39f0bba30b5c57ab33b7f6"
+      },
+      "README-FIRST.txt": {
+        "bytes": 2087,
+        "sha256": "5c83540021539484e9acf96567d1af977098d35e95e0866539a171f51436baff"
+      },
+      "Cabrillo.shortcut": {
+        "bytes": 25784,
+        "sha256": "ad4a3a2c7d77803bb98b29e53ff2ee1f0d601d737ff77d75beca9dc114f702d8"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 522,
+        "sha256": "1a054a618da6c1f777f7e99623b956c5b917edc9a61fcd615d8de7bd9f77b89a"
+      }
+    },
+    "usb_staged_files": 7,
+    "installed_before": "48",
+    "installation_performed": false
+  },
+  "usb_receipt": {
+    "path": ".private/device-evidence/2026-09-28/phone49/kit-transfer.json",
+    "sha256": "362197118746ca8a841d15406a7c41d2ab4c2b297ee3a3d09e5ab4480f767501"
+  },
+  "github_written": false,
+  "public_ipa_authorized": false
+}

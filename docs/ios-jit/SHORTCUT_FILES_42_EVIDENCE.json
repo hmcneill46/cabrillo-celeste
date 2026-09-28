@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-26T10:12:35.967243+00:00",
+  "identity": {
+    "schema": 1,
+    "product": "Cabrillo Home Screen Shortcut",
+    "revision": 42,
+    "app_minimum_build": 41,
+    "build_id": "shortcut-files-20260926-42",
+    "callback_protocol": "cabrillo-39",
+    "scope": "Explicit text comparisons for generic dictionary values in Apple Shortcuts",
+    "ipa_produced": false
+  },
+  "app_build": "launcher-shortcut-tunnel-20260926-41",
+  "application_changed": false,
+  "ipa_produced": false,
+  "source_inputs": 6,
+  "host_controls": {
+    "status": "PASS_SHORTCUT42_HOST_CONTROLS",
+    "apple_condition_checks": 36,
+    "expected_original_failures": 12,
+    "generated_branches": 36,
+    "physical_device_tested": false,
+    "source_sha256": {
+      "tools/check_shortcut_files42.py": "19025b49cd2d0fd3e56e83ade0d7431741e7944415b2eb8b14bc16d4e92b4648",
+      "tools/build_shortcut_files42.py": "bf5269962d2f98428392646e4adb0b44a976c5b4db7f4dea9c2596964cfe4365",
+      "experiments/ios-jit/shortcut-files42/AppleConditionChecks.m": "343bd73fc93305591ba998d672fcc29ec828a695714c6ec09f78572f719e6f01",
+      "tools/check_shortcut_launch.py": "5489d590d58609440dcaf91a30ebf04c33b3f423a6f49949d5770c508ae62cf9"
+    }
+  },
+  "delivery": {
+    "confirmed_upload": true,
+    "phone_readback_exact": true,
+    "owner_imported": true,
+    "initial_name": "Cabrillo 1",
+    "correct_name_now_verified": "Cabrillo",
+    "files": {
+      "Cabrillo-Standalone.shortcut": {
+        "bytes": 25266,
+        "sha256": "51b41f51a4dda77df78899fb75911ffe6bf528e48f7e02e9027ea49802086d3b"
+      },
+      "Cabrillo.shortcut": {
+        "bytes": 25304,
+        "sha256": "900ff3b7872d891ad9978220088d863a86991d2ad3e06e5ab10ab9d4feb1ec35"
+      },
+      "README-FIRST.txt": {
+        "bytes": 1149,
+        "sha256": "1eff8ec354b384c23cd51675da5baf46e82e9222166da1988af0e9f63f559526"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1100,
+        "sha256": "ca1cacd3d95db860bc5503301a8a2cddb1dd2583069abb1f4ea0089568caddeb"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 347,
+        "sha256": "f9f13d6f28ae7ff457ca9115c4c70df8330c0fcb59479216d700912a90243f7e"
+      }
+    }
+  },
+  "physical": {
+    "status": "FAIL_COLD_HELPER_ROUTE_AFTER_CONDITION_PASS",
+    "prior_retry_used": "Original39 still named Cabrillo; not a42 execution",
+    "automatic": "FAIL_BEFORE_STIKDEBUG_EXECUTION",
+    "travel_recovery": "PENDING",
+    "gameplay_quit": "PENDING",
+    "app41_vpn_loopback": "PASS_REAL_PHONE_REMOTE_PAIRING_HELLO",
+    "corrected_conditions": "PASS_REAL_PHONE_JIT_BRANCH",
+    "cold_helper": "LC2 opened My Apps instead of the StikDebug guest",
+    "shortcut_return": "No callback while backgrounded; foregrounding Shortcuts later returned an error",
+    "jit": "NOT_REACHED",
+    "network_changes": false,
+    "raw_evidence": ".private/device-evidence/2026-09-26/shortcut42",
+    "observed_app41_session": "2c564712-e4e4-452d-ba01-21700a492df2"
+  },
+  "python_release_controls": {
+    "status": "PASS",
+    "checks": 20,
+    "log": ".build/shortcut42-python-tests.log"
+  },
+  "release": {
+    "github_write": false,
+    "public_ipa": false
+  },
+  "followup": {
+    "identity": 43,
+    "scope": "Explicit helper guest route and typed Stop and Output field",
+    "physical_validation": "PENDING"
+  }
+}

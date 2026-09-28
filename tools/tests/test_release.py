@@ -20,7 +20,8 @@ class ReleaseControls(unittest.TestCase):
         _, result = readiness(ROOT)
         self.assertEqual(result['status'], 'BLOCKED')
         self.assertFalse(result['public_ipa_publishing_allowed'])
-        self.assertGreaterEqual(len(result['blockers']), 3)
+        self.assertTrue(any('FMOD' in b for b in result['blockers']))
+        self.assertEqual(result['public_build_script'], 'tools/build_public_release.py')
         with self.assertRaisesRegex(ValueError, 'Public IPA release is blocked'):
             preflight(ROOT, 'refs/tags/v' + result['version'])
 
@@ -100,6 +101,8 @@ class ReleaseControls(unittest.TestCase):
             verify_ipa(path, '0.21.0', '38')
             for extra in ['Payload/Cabrillo.app/Managed/Celeste.dll',
                           'Payload/Cabrillo.app/Managed/Celeste.Content.dll',
+                          'Payload/Cabrillo.app/Managed/orig/Celeste.exe',
+                          'Payload/Cabrillo.app/Managed/MMHOOK_Celeste.dll',
                           'Payload/Cabrillo.app/embedded.mobileprovision',
                           'Payload/Cabrillo.app/Content/test.bank',
                           'Payload/Cabrillo.app/_CodeSignature/CodeResources',

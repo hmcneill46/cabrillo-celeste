@@ -1,0 +1,147 @@
+{
+  "dependencies": {
+    "Everest": {
+      "commit": "082e21b0b6dd7ff7c96d65b2ca2c632f4fd8df75",
+      "license": "MIT",
+      "repository": "https://github.com/EverestAPI/Everest",
+      "sha256": "7391d51519ec2cf34a7a413c7b6f58e45be41ca3a41910d3a27b2f60a89ba556",
+      "url": "https://codeload.github.com/EverestAPI/Everest/tar.gz/082e21b0b6dd7ff7c96d65b2ca2c632f4fd8df75"
+    },
+    "Everest-libs": {
+      "commit": "591f7c12fcb4e8fda9ef5ef1b331b5ed40d3fb1f",
+      "license": "See bundled dependency licenses",
+      "repository": "https://github.com/EverestAPI/Everest-libs",
+      "sha256": "2c67cea6375132cf0c304e37e70a07336764410cb58ebde3d14a7fbdd252dc99",
+      "url": "https://codeload.github.com/EverestAPI/Everest-libs/tar.gz/591f7c12fcb4e8fda9ef5ef1b331b5ed40d3fb1f"
+    },
+    "FAudio": {
+      "commit": "0e39055a3fb3c27de8dc02d650fe6a3da6c4de2c",
+      "license": "zlib",
+      "repository": "https://github.com/FNA-XNA/FAudio",
+      "sha256": "63a6c25db7247677846d8ae159983cbf178d795d3f8b0167b09e2a06154e7709",
+      "url": "https://codeload.github.com/FNA-XNA/FAudio/tar.gz/0e39055a3fb3c27de8dc02d650fe6a3da6c4de2c"
+    },
+    "FNA": {
+      "commit": "d52b4ce61e4086b785c51a96d331dbf106975a58",
+      "license": "Microsoft Public License",
+      "repository": "https://github.com/FNA-XNA/FNA",
+      "sha256": "d8a22b89f61595647aa570b1f7497dba03763b3715c62c7398ebfedae9bdbd7c",
+      "url": "https://codeload.github.com/FNA-XNA/FNA/tar.gz/d52b4ce61e4086b785c51a96d331dbf106975a58"
+    },
+    "FNA3D": {
+      "commit": "dba98a71514cc30f3c19dc19fc0a479be7c90d52",
+      "license": "zlib",
+      "repository": "https://github.com/FNA-XNA/FNA3D",
+      "sha256": "a4868741a5f68828aea772507b68c620a4fe70d691dbf07471907ef3dfe40225",
+      "url": "https://codeload.github.com/FNA-XNA/FNA3D/tar.gz/dba98a71514cc30f3c19dc19fc0a479be7c90d52"
+    },
+    "MojoShader": {
+      "commit": "c9037d90fa2f59b6be65d1391ca11d345356bad1",
+      "license": "zlib",
+      "repository": "https://github.com/icculus/mojoshader",
+      "sha256": "a9eda2d62ea0bbc4124109c60554578708614bbc4fe439b8a3da3fa18591b322",
+      "url": "https://codeload.github.com/icculus/mojoshader/tar.gz/c9037d90fa2f59b6be65d1391ca11d345356bad1"
+    },
+    "MonoMod": {
+      "commit": "dfc30a1506d37fb88a2c2be004f525205f46a24c",
+      "license": "MIT",
+      "repository": "https://github.com/MonoMod/MonoMod",
+      "sha256": "6e66f0704ef1aa369e2d13a306c97815add3a5ce61f9ff47e0f8feed0e72309e",
+      "url": "https://codeload.github.com/MonoMod/MonoMod/tar.gz/dfc30a1506d37fb88a2c2be004f525205f46a24c"
+    },
+    "NLua": {
+      "commit": "b3524288712743fb2394dcf615d14d0dac3276e2",
+      "license": "MIT",
+      "repository": "https://github.com/EverestAPI/NLua",
+      "sha256": "4db566d7ff11110caf2c2cd2aa8e482150db2cd2cf55cc75b5853524cf2f888e",
+      "url": "https://codeload.github.com/EverestAPI/NLua/tar.gz/b3524288712743fb2394dcf615d14d0dac3276e2"
+    },
+    "SDL2": {
+      "commit": "257cacab183b312bbe60bd7967eee44a3ad7be85",
+      "license": "zlib",
+      "repository": "https://github.com/libsdl-org/SDL",
+      "sha256": "00de2c7175c1e054452a0291b60fa5335c5940a300d44fe7a444b495fca0155f",
+      "url": "https://codeload.github.com/libsdl-org/SDL/tar.gz/257cacab183b312bbe60bd7967eee44a3ad7be85"
+    },
+    "SDL2-CS": {
+      "commit": "2b8d237fd4585d14ea837764ac247d4cd200158f",
+      "license": "zlib",
+      "repository": "https://github.com/flibitijibibo/SDL2-CS",
+      "sha256": "bedb183badf5d89cdd90bba1ed270a9f17ef72536b756624d3be233a9dcf5b68",
+      "url": "https://codeload.github.com/flibitijibibo/SDL2-CS/tar.gz/2b8d237fd4585d14ea837764ac247d4cd200158f"
+    },
+    "Theorafile": {
+      "commit": "0c5504658a3108919e53b625287786a87529de42",
+      "license": "zlib/BSD",
+      "repository": "https://github.com/FNA-XNA/Theorafile",
+      "sha256": "5315596a72482d861a6b5c2680a51af137b69d062734d384d18ec7af45ad65b7",
+      "url": "https://codeload.github.com/FNA-XNA/Theorafile/tar.gz/0c5504658a3108919e53b625287786a87529de42"
+    },
+    "Vulkan-Headers": {
+      "commit": "85470b32ad5d0d7d67fdf411b6e7b502c09c9c52",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/KhronosGroup/Vulkan-Headers",
+      "sha256": "a574cabbf572ed5534fd73550f054dc2546d095c36b73e7a30a59721cfea2194",
+      "url": "https://codeload.github.com/KhronosGroup/Vulkan-Headers/tar.gz/85470b32ad5d0d7d67fdf411b6e7b502c09c9c52"
+    },
+    "iced": {
+      "commit": "c50f29b7bc305696895c075f3fc7719751426b12",
+      "license": "MIT",
+      "repository": "https://github.com/icedland/iced",
+      "sha256": "c5f2473db51e3ab6c48a2c4dcf099e5b29f16ef83b251c46868cb68025b1d7e7",
+      "url": "https://codeload.github.com/icedland/iced/tar.gz/c50f29b7bc305696895c075f3fc7719751426b12"
+    },
+    "lua": {
+      "license": "MIT",
+      "sha256": "4f18ddae154e793e46eeab727c59ef1c0c0c2b744e7b94219710d76f530629ae",
+      "url": "https://www.lua.org/ftp/lua-5.4.8.tar.gz",
+      "version": "5.4.8"
+    },
+    "mono-ios-arm64": {
+      "kind": "zip",
+      "license": "MIT",
+      "sha256": "09aeb41f3759c83c970120957995cbdabe097b6a6981091e588cd65b738408e2",
+      "url": "https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.runtime.mono.ios-arm64/8.0.28/microsoft.netcore.app.runtime.mono.ios-arm64.8.0.28.nupkg",
+      "version": "8.0.28"
+    },
+    "mono-osx-x64": {
+      "kind": "zip",
+      "license": "MIT",
+      "sha256": "977b017b2acc71682f9caca268d997129e76f90d669beaba64a35547eebb4c4a",
+      "url": "https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.runtime.mono.osx-x64/8.0.28/microsoft.netcore.app.runtime.mono.osx-x64.8.0.28.nupkg",
+      "version": "8.0.28"
+    },
+    "runtime": {
+      "commit": "46295af5828b062bbbf93a9cef50fd8cb9fbcb09",
+      "license": "MIT",
+      "repository": "https://github.com/dotnet/runtime",
+      "sha256": "51c896bde013c5d2aa79b9bfb11fc5e655b041cff89dab07c9eba675034442d1",
+      "url": "https://codeload.github.com/dotnet/runtime/tar.gz/46295af5828b062bbbf93a9cef50fd8cb9fbcb09"
+    },
+    "sdk8.0-osx-arm64": {
+      "license": "MIT",
+      "sha512": "c890cd092e4d72f79fcc7be361fa816a6c5b2482c85acb804086e1a386a9b8b35978ce63d1b6984f7d539a6e5a6ce0c9f9ca662865714b6ce7dded717b8a37ff",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.422/dotnet-sdk-8.0.422-osx-arm64.tar.gz",
+      "version": "8.0.422"
+    },
+    "sdk8.0-osx-x64": {
+      "license": "MIT",
+      "sha512": "fb06d2755b407cece4f2a0ad0c3869f28220bf5be7ae69541a3c22855cef01cb463dde0af76000c447541345a261ed68847ef590e4ba7a27109447aed6e79560",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.422/dotnet-sdk-8.0.422-osx-x64.tar.gz",
+      "version": "8.0.422"
+    },
+    "sdk9.0-osx-arm64": {
+      "license": "MIT",
+      "sha512": "fec528cc70edf43e6d91f16f933c54b943776899e7c2d4de7efdfa581173d46793b233abf5bc9ed566e9d9e8d37a0f96b543783fdd581f63aaf18678b82ca426",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.300/dotnet-sdk-9.0.300-osx-arm64.tar.gz",
+      "version": "9.0.300"
+    },
+    "sdk9.0-osx-x64": {
+      "license": "MIT",
+      "sha512": "36ff37eec764c9b509fecea7ea47e4ad3d723b40eb463158de85a4f70dab6583989c4cb7324a8e00fde727dfa77b7ff63f489c255dbce87c1ee725ae445eef62",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.300/dotnet-sdk-9.0.300-osx-x64.tar.gz",
+      "version": "9.0.300"
+    }
+  },
+  "schema": 1
+}

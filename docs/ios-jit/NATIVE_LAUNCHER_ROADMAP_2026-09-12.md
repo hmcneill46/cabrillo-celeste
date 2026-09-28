@@ -1,3 +1,41 @@
+## 26 September 2026 update
+
+The owner prioritized a Home Screen VPN/JIT shortcut after the game-free build38.
+Direct Wi-Fi testing of39 found that LiveContainer denies the LocalDevVPN scheme
+availability query. Separate [build40](SHORTCUT_ROUTING_BUILD_40.md) fixes that
+guard and retains the exact runtime and installed shortcut. Its phone run exposes
+the legacy service probe; [build41](SHORTCUT_TUNNEL_BUILD_41.md) corrects it and
+passes the actual phone's Remote Pairing VPN-loopback hello. The39 shortcut then
+fails its generic-value comparison before opening StikDebug. [Shortcut revision42](SHORTCUT_FILES_42.md)
+adds explicit text coercion, tested with Apple's conditional engine and original
+failure controls. Its correctly named phone run passes those conditions but exposes
+cold LC2 helper selection and output receipt defects. [Build43](SHORTCUT_GUESTS_BUILD_43.md)
+uses explicit shared-guest launch and the correctly typed shortcut output. Native,
+Apple engine and package controls pass; the exact41 runtime is preserved. Installed43
+opens the correct cold helper but its shortcut still fails before JIT/return. A
+subsequent direct warm native-button request passes26 native checks while detached,
+returns automatically and starts Celeste through its title screen. This is a scoped
+manual pass; later collection also verifies save readback and normal Quit/stage8/
+native heartbeat. Cold shortcut, Travel and level-input acceptance remain separate.
+[Shortcut44](SHORTCUT_FILES_44.md) separates helper startup and finishes naturally,
+but its verified phone run exposes a nil-value crash in LC's URL decoder. Apple's
+actual text-to-URL conversion reproduces the lost long query value.
+[Shortcut45](SHORTCUT_FILES_45.md) constructs typed URLs, retaining every byte of
+one direct JIT request. All55 Apple condition/completion/content cases and36
+branches pass, but the exact imported45 shortcut fails immediately because its
+Open URL actions have no explicit inputs. Apple's Mac runner reproduces the same
+error. [Shortcut46](SHORTCUT_FILES_46.md) explicitly binds both typed URL outputs,
+with12 rejected broken-connection controls and the retained checks passing. Its
+exact imported phone run returns automatically, shows green JIT and starts Celeste,
+as reported by the owner. A network screenshot also records app43's contradictory
+Home Screen timeout. [Build47](SHORTCUT_COMPLETION_BUILD_47.md) completes that stage
+from real native execution and detach while preserving network restoration receipts.
+132 native controls, original43 failure reproduction,36 branches and12 connection
+controls pass. All199 managed assemblies/16 archives remain43-identical;221 inputs
+are frozen with a fresh UUID.47 physical acceptance is pending; keep shortcut46.
+Next implementation is48. No public IPA or GitHub write is authorized. Earlier
+acceptance and save/touch-editor gates remain separate.
+
 ## 25 September 2026 update
 
 Build37 updates Everest to stable1.6580.0 and preserves the build36 Motion

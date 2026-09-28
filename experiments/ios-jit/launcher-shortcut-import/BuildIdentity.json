@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.23.1",
+  "build_number": "49",
+  "build_id": "launcher-shortcut-import-20260928-49",
+  "scope": "Plain text shortcut import question with typed URL handoff",
+  "device_jit_tested": false
+}

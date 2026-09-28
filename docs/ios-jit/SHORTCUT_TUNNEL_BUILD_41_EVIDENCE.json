@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-26T09:29:08.277317+00:00",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.22.2",
+    "build_number": "41",
+    "build_id": "launcher-shortcut-tunnel-20260926-41",
+    "scope": "Probe the actual StikDebug Remote Pairing endpoint without pairing or debugger access; preserve build40 routing and exact runtime",
+    "device_jit_tested": false
+  },
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.22.2",
+    "build_number": "41",
+    "ipa_sha256": "9a35a4c1554aceca3a0bb2d9e78ea58bf97000453d421111ad0fa66dd15ef74d",
+    "bytes": 18695000,
+    "uuid": "1dda044b59453b6d9c2790f5e9d0bb4f",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": false,
+    "distribution_blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "source_inputs": 210,
+  "runtime_comparison": {
+    "status": "PASS_EXACT_BUILD40_RUNTIME_AND_SHORTCUT",
+    "managed_assemblies": 199,
+    "native_archives": 16,
+    "shortcut_protocol": "cabrillo-39",
+    "new_native_probe": "RemotePairing hello only, port49152",
+    "ui_sources_unchanged": true
+  },
+  "gates": {
+    "native_controls": {
+      "status": "PASS_HOST",
+      "checks": 91,
+      "receipt": ".build/shortcut41-controls-a/receipt.json"
+    },
+    "shortcut_branches": {
+      "status": "PASS_HOST_INTERPRETER_ONLY",
+      "checks": 36,
+      "limitation": "Interpreter did not detect actual Apple conditional parameter failure."
+    },
+    "protocol_hello": {
+      "status": "PASS_REAL_PHONE_NETWORK_HELLO",
+      "scope": "Unauthenticated Remote Pairing hello from Mac to the identified phone; no pairing or debugger."
+    },
+    "physical": {
+      "status": "FAIL_SHORTCUT_CONDITIONAL",
+      "installation": "PASS",
+      "vpn_loopback": "PASS_REMOTE_PAIRING_HELLO_49152",
+      "fresh_jit_request": "CREATED_NOT_EXECUTED",
+      "automatic": "FAIL_SHORTCUT_BEFORE_STIKDEBUG",
+      "shortcut_error": "ConditionalAction Code=1 WFActionIndex=4; missing comparison parameter in iOS UI",
+      "travel": "NOT_RUN",
+      "gameplay_quit": "NOT_RUN",
+      "journal": "automatic-a-final.jsonl",
+      "journal_sha256": "6df0cfb46ec0447a49be4a182496a94e7cfe1d917a99da68fc5d57b91056ea0f",
+      "native_jit_checks_passed": false
+    },
+    "ui": {
+      "status": "UNCHANGED_39_SOURCE",
+      "rerun": false
+    }
+  },
+  "delivery": {
+    "local_icloud_placement": true,
+    "confirmed_upload": true,
+    "phone_ipa_readback_verified": true,
+    "installed": true,
+    "save_profile_files_verified_unchanged": 125,
+    "private_evidence_root": ".private/device-evidence/2026-09-26/phone41",
+    "icloud_retired_installer": "Only build39 IPA removed after exact local copy verification; Results preserved"
+  },
+  "release": {
+    "public_ipa": false,
+    "github_write": false,
+    "blockers": [
+      "fmod_redistribution"
+    ]
+  }
+}

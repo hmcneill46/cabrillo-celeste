@@ -5,8 +5,12 @@
 [Public source checks](../.github/workflows/ci.yml) runs on branch pushes and pull
 requests, and can be started from GitHub's Actions page. It needs only this public
 checkout. It checks the complete source inventory and private-file exclusions,
-runs the Python build/release controls, and compiles the current build37 native
+runs the Python build/release controls, and compiles the current build38 native
 save and backup code for its 119 checks on macOS with **Xcode 26.6 / 17F113**.
+The build50 shortcut coordinator adds185 native checks, original43/49 failure
+controls,36 generated workflow branches and15 invalid-URL controls. These checks
+need neither signed shortcut files nor an Apple account; actual Apple import and
+phone evidence remains in the build49/50 reports.
 GitHub retains the small JSON reports for 14 days. These are host checks, not an
 IPA build, a game runtime test or physical iPhone/iPad acceptance.
 
@@ -15,39 +19,36 @@ or a manual run against an existing version tag requests a release. Ordinary
 branch pushes run CI without publishing. The release workflow checks eligibility
 before compiling or uploading anything.
 
-**Build37 (0.20.0) is blocked from public IPA publishing.** On 25 September 2026,
-the owner chose to activate CI now and keep IPA publishing gated until public
-packaging is ready. No current private IPA is uploaded by either workflow.
+**Build38 (0.21.0) remains blocked from public IPA publishing.** The new
+[owned-game preparation](ios-jit/OWNED_GAME_BUILD_38.md) removes original and
+prepared Celeste code from the IPA. It rebuilds the public dependencies without
+private capsules, and prepares the user's original ZIP after import.
 
-## Why the current IPA is blocked
+## Remaining distribution gate
 
-[The release manifest](../release/current.json) records these remaining tasks:
+[The release manifest](../release/current.json) records **FMOD redistribution
+permission and an authorized SDK download for release CI** as the remaining
+known distribution dependency. The permission must cover the actual FMOD1.10.09
+iOS libraries in this independent launcher. It has not been granted or inferred
+from another port. Source licenses and component notices remain included.
 
-1. Prepare the user's owned Celeste installation without distributing prepared
-   game assemblies in Cabrillo's IPA. Current packages contain `Celeste.dll` and
-   `Celeste.Content.dll`.
-2. Resolve permission to distribute the linked FMOD iOS runtime, or implement a
-   distributable alternative. An open-source launcher license does not grant
-   rights to FMOD or Celeste.
-3. Implement a fresh public dependency/build recipe. The current launcher build
-   consumes pinned private compiled managed and native dependencies; running that
-   recipe on GitHub would not make those dependencies publicly reproducible.
-
-See the [distribution review](ios-jit/IOS_REUSE_AND_DISTRIBUTION_2026-09-11.md) and
-[local build scope](BUILDING.md). Physical testing and distribution eligibility
-are separate requirements. The existing reports retain the precise device gates
-that passed and those still pending.
+Private local builds explicitly provide the SDK with `--fmod-sdk`; their
+provenance discloses a private input and the publishing wrapper rejects them.
+Earlier packages28–37 retain their original private game/dependency constraints.
+Device acceptance is a separate quality gate before choosing a stable release.
 
 ## Public builder contract
 
-`tools/build_public_release.py` **does not exist yet**. It must be implemented as
-part of the packaging work above. The release gate requires this dedicated recipe;
-it refuses existing private/reproduction builders. Do not bypass the gate with a
-prebuilt IPA, private capsule, signing secret or self-hosted runner.
+`tools/build_public_release.py` is the dedicated source recipe. It downloads
+checksum-pinned public sources, SDK/runtime packs and NuGet packages, builds the
+managed and native dependencies, accepts the approved FMOD SDK, and compiles and
+audits the unsigned app. It does not consume a Celeste game ZIP, private capsule
+or previously compiled Cabrillo. Normal mode fails before building anything
+until the FMOD gate is explicitly resolved.
 
-Once implemented, the builder will receive fresh absolute `--work` and `--output`
-paths beneath `.build/public-release-build`. It must use this exact source
-checkout and publicly available, licensed dependency inputs, then produce:
+The release wrapper supplies fresh absolute `--work` and `--output` paths beneath
+`.build/public-release-build`. Public mode requires the exact source checkout and
+publicly available, licensed dependency inputs, then produces:
 
 - `Cabrillo.ipa`: an unsigned arm64 iOS app with the manifest's version/build.
 - `BUILD_PROVENANCE.json`: schema `1`, the exact Git `source_commit`,
@@ -70,12 +71,14 @@ creating a Release. It refuses to overwrite an existing release.
 
 ## Enabling and making a release later
 
-1. Complete public packaging, its meaningful tests and distribution review. New
-   app changes need a new identity (next unused is38; recheck the handoff). Do not
-   replace frozen37 inputs or label them a public build.
-2. Update `release/current.json` to the new lane/version/build. Point to the public
-   builder, resolve the documented blockers and set `public_ipa_ready` to `true`.
-   Update the test that deliberately keeps today's private build blocked.
+1. Obtain and record FMOD redistribution permission, including authorized SDK
+   delivery for CI. Complete the device gates in the current handoff. Do not
+   relabel frozen private packages as public builds.
+2. Review `release/current.json`: record `fmod_distribution.approved`, a concrete
+   permission reference, an authorized HTTPS SDK ZIP URL and SHA256, then clear
+   the documented blockers and enable `public_ipa_ready`. The archive must have
+   the SDK's `api/` and `doc/` directories at its root. Use a new build identity
+   when changing frozen packaging inputs and update the deliberate blocked test.
 3. Review the source and device evidence, merge the intended source, and wait for
    its CI checks. Create and push a matching version tag only when choosing to
    release, for example `v0.21.0`. The workflow reruns CI at that exact commit.
@@ -117,7 +120,7 @@ identical, or that host checks prove gameplay. See GitHub's
 python3 tools/ci/check_public_repository.py
 python3 -m unittest discover -s tools/tests -v
 python3 tools/release.py readiness
-python3 tools/ci/check_native_profiles.py --work .build/ci/native-profiles-local
+python3 tools/ci/check_native_profiles.py --lane launcher-owned-game --work .build/ci/native-profiles-local
 ```
 
 Use a fresh work directory for the native checks. Locally Xcode defaults to

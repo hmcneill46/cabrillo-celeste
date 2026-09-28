@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-26T09:11:19.422897+00:00",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.22.1",
+    "build_number": "40",
+    "build_id": "launcher-shortcut-routing-20260926-40",
+    "scope": "Allow shortcut helper handoff when LiveContainer denies URL availability queries; exact build39 runtime and shortcut protocol",
+    "device_jit_tested": false
+  },
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.22.1",
+    "build_number": "40",
+    "ipa_sha256": "5d7c397848419c7939e32432586857b4e4e318e10eee61e6c4d01ead2017a48f",
+    "bytes": 18692903,
+    "uuid": "b1bacaaf7b223bad949b6cd09e16e75c",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": false,
+    "distribution_blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "source_inputs": 210,
+  "runtime_comparison": {
+    "status": "PASS_EXACT_BUILD39_RUNTIME_AND_SHORTCUT",
+    "managed_assemblies": 199,
+    "native_archives": 16,
+    "shortcut_generator_unchanged": true,
+    "shortcut_protocol": "cabrillo-39",
+    "changed_native_source": [
+      "CJShortcutPlatform.h",
+      "CJShortcutPlatform.m",
+      "main.m"
+    ]
+  },
+  "gates": {
+    "native_controls": {
+      "status": "PASS_HOST",
+      "checks": 62,
+      "receipt": ".build/shortcut40-controls-b/receipt.json"
+    },
+    "shortcut_branches": {
+      "status": "PASS_HOST_INTERPRETER",
+      "checks": 36
+    },
+    "ui": {
+      "status": "UNCHANGED_39_SOURCE",
+      "prior_receipt": ".build/shortcut39-ui-b/receipt.json",
+      "rerun": false
+    },
+    "physical": {
+      "status": "FAIL_OLD_SERVICE_PROBE",
+      "installation": "PASS",
+      "setup_routing": "PASS_ACTUAL_LC_HOST_RESOLVED",
+      "vpn_open_return": "PASS_OPEN_AND_FOREGROUND_RETURN",
+      "automatic": "FAIL_TIMEOUT_BEFORE_JIT",
+      "travel": "NOT_RUN",
+      "gameplay_quit": "NOT_RUN",
+      "journal": "session-a989e616-345b-4ae2-821f-4901dc95ab24.jsonl",
+      "journal_sha256": "793b5ea990faf889467283ac0762766e45d801a250993d61176d2b0c4cf7259b",
+      "native_jit_request_created": false,
+      "next_build": "41"
+    },
+    "python_release_controls": {
+      "status": "PASS_HOST",
+      "checks": 20,
+      "log": ".build/shortcut40-python-tests.log"
+    },
+    "public_inventory": {
+      "status": "PASS_PUBLIC_SOURCE_CHECKOUT",
+      "receipt": ".build/shortcut40-public-audit.json"
+    }
+  },
+  "delivery": {
+    "local_icloud_placement": true,
+    "confirmed_upload": true,
+    "initial_upload_error": "iCloud account/server inaccessible",
+    "phone_ipa_readback_verified": true,
+    "installed": true,
+    "private_evidence_root": ".private/device-evidence/2026-09-26/phone40",
+    "saves_backed_up": 125,
+    "initial_upload_error_resolved": true,
+    "phone_installer_visible": true,
+    "installer_screenshot_sha256": "1d23e959aa60267ff31fc4d54a96d9eb97f0ed224b324144e2f02c162be9b566",
+    "save_profile_files_verified_unchanged": 125
+  },
+  "release": {
+    "public_ipa": false,
+    "github_write": false,
+    "blockers": [
+      "fmod_redistribution"
+    ]
+  }
+}

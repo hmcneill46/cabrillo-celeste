@@ -1,0 +1,58 @@
+--- a/src/FNA3D_Driver_Metal.c
++++ b/src/FNA3D_Driver_Metal.c
+@@ -774,7 +774,7 @@
+ 			);
+ 			mtlSetAttachmentStoreAction(
+ 				colorAttachment,
+-				MTLStoreActionMultisampleResolve
++				MTLStoreActionStoreAndMultisampleResolve
+ 			);
+ 			mtlSetAttachmentResolveSlice(
+ 				colorAttachment,
+@@ -3097,12 +3097,28 @@
+ 	int32_t dataLength
+ ) {
+ 	MetalRenderer *renderer = (MetalRenderer*) driverData;
+-	MetalTexture backbufferTexture;
+-
+-	/* Create a pseudo-texture we can feed to GetTextureData2D.
+-	 * These are the only members we need to initialize.
+-	 * -caleb
++	MetalTexture backbufferTexture = {0};
++
++	/* CJIT: read the retained, single-sample game surface. The drawable is
++	 * only a presentation destination and may no longer exist. EndPass in
++	 * GetTextureData2D resolves MSAA into this colorBuffer before the blit.
+ 	 */
++	if (data == NULL || x < 0 || y < 0 || w <= 0 || h <= 0 ||
++		x > renderer->backbuffer->width || y > renderer->backbuffer->height ||
++		w > renderer->backbuffer->width - x || h > renderer->backbuffer->height - y ||
++		(int64_t) BytesPerRow(w, renderer->backbuffer->surfaceFormat) * h > dataLength)
++	{
++		FNA3D_LogError("Invalid Metal backbuffer read rectangle or destination capacity");
++		return;
++	}
++	/* Clear is deferred until a pass is encoded. Readback must observe it,
++	 * even when no draw was issued, without changing the bound target.
++	 */
++	if (renderer->shouldClearColor || renderer->shouldClearDepth || renderer->shouldClearStencil)
++	{
++		METAL_INTERNAL_UpdateRenderPass(renderer);
++	}
++	backbufferTexture.handle = renderer->backbuffer->colorBuffer;
+ 	backbufferTexture.width = renderer->backbuffer->width;
+ 	backbufferTexture.height = renderer->backbuffer->height;
+ 	backbufferTexture.format = renderer->backbuffer->surfaceFormat;
+--- a/src/FNA3D_Driver_Metal.h
++++ b/src/FNA3D_Driver_Metal.h
+@@ -46,7 +46,9 @@
+ {
+ 	MTLStoreActionDontCare,
+ 	MTLStoreActionStore,
+-	MTLStoreActionMultisampleResolve
++	MTLStoreActionMultisampleResolve,
++	/* CJIT targets iOS 26 / macOS 14; preserve MSAA samples across readback. */
++	MTLStoreActionStoreAndMultisampleResolve = 3
+ } MTLStoreAction;
+ 
+ typedef enum MTLPrimitiveType

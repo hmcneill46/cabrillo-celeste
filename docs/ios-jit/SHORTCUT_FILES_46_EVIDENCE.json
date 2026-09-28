@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-26T14:07:23.446284+00:00",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo Home Screen Shortcut",
+    "revision": 46,
+    "app_minimum_build": 43,
+    "build_id": "shortcut-files-20260926-46",
+    "callback_protocol": "cabrillo-39",
+    "scope": "Explicit typed URL output connections for both Home Screen and JIT Open URL actions",
+    "ipa_produced": false
+  },
+  "source_inputs": 11,
+  "source_frozen": true,
+  "next_implementation_identity": 47,
+  "artifact": "artifacts/cabrillo-shortcut46-final",
+  "application_changed": false,
+  "host_controls": {
+    "status": "PASS_SHORTCUT46_HOST_CONTROLS",
+    "apple_condition_checks": 36,
+    "apple_completion_checks": 1,
+    "apple_url_content_checks": 18,
+    "original_url_truncation_controls": 4,
+    "expected_original_failures": 12,
+    "generated_branches": 36,
+    "rejected_broken_url_connections": 12,
+    "physical_device_tested": false,
+    "source_sha256": {
+      "tools/check_shortcut_files46.py": "94bd88096d14494736afccc52342a6602bc3b5aa9af3f796ff6ab40d523a122e",
+      "tools/build_shortcut_files46.py": "9a40e5c77b3bc4f9f1cfe9bc2a091babc5262164f3d840aca964ac4626b4ffb0",
+      "experiments/ios-jit/shortcut-files45/AppleWorkflowChecks.m": "d94f37c909245ceae745b139b15b5d540f72b35920a1eeac85f53cf62daf7c11",
+      "experiments/ios-jit/shortcut-files45/AppleURLChecks.m": "da084bb64daee9469358db8c94369ae9a5a9c16c2d06ab03d6a7ed0e796e0b13",
+      "experiments/ios-jit/shortcut-files46/BuildInfo.json": "da88e777430093729313a7ddc1e1bbde95ddac1c922c145842558fdef1c060cb",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJPlatformOptions.m": "d425482dcfe196eaf05641b48977812ee07921083c4af827951ea40ae998f9e1",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJPlatformOptions.h": "bb0ff96f8709ae37fb883d701752975163dd4284a49ea2a97fb9aaafcc5a8da2",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJShortcutPlatform.m": "dbc64dadf5967215dbc33a2bdff16a0ba5175dd6a6a11edeecdd2b6215f7f208",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJShortcutPlatform.h": "ce29acfb2b94f5be4c83acca6a9fa4fd13475c59c1b41ea70eba4232490000c2",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJShortcutSession.m": "1ec187c8098069f4f4eb4fe0190f52404d024f2f519f5d1e725f7f11115b28a1",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJShortcutSession.h": "8bd35bc521f109877fc1a3e6d8efb79a87db67b61968036bbc7d360e29777697"
+    }
+  },
+  "original45_actual_runner": {
+    "status": "REPRODUCED_INVALID_URL",
+    "exit_code": 1,
+    "error": "Make sure to pass a valid URL to the Open URL action.",
+    "receipt": ".build/shortcut46-research/original45-home-run.txt"
+  },
+  "delivery": {
+    "icloud_folder": "Celeste JIT Tests/shortcut-46",
+    "confirmed_upload": true,
+    "kit_files": 5,
+    "files": {
+      "Cabrillo-Standalone.shortcut": {
+        "bytes": 25277,
+        "sha256": "ea2e38744c476f6a870b13255d2f23f92a38f8df092d276e185dae403b500a69"
+      },
+      "Cabrillo.shortcut": {
+        "bytes": 25306,
+        "sha256": "d5dfceac66d731b9d71498cbfa6aae98cc7d903d34443f77cf086e623bd7b11b"
+      },
+      "README-FIRST.txt": {
+        "bytes": 1751,
+        "sha256": "7523731c42047fd67d8d8fe03de309678d903822ba8274a8a2af2ef3dda48b08"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 347,
+        "sha256": "3776f1a0ee62c2f8490a27e7b9c7fb96b54e1ec7d54e94a1bd174aceb644a851"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1059,
+        "sha256": "9c97ac13daa2777d8d4eadfc63eb10979b4bf6cb6cea9798637a31e6095d99aa"
+      }
+    },
+    "phone_staged": false,
+    "wifi_coredevice": "AVAILABLE_PAIRED_SCREENSHOT_SUCCEEDED_FILE_TRANSFERS_TIMED_OUT",
+    "shortcut_imported": true,
+    "latest_scoped_synced_shortcut": "One Cabrillo; all45 exact46 actions verified",
+    "installed_app_retained": "43"
+  },
+  "physical": {
+    "automatic": "OWNER_CONFIRMED_RETURN_NATIVE_GREEN; APP43_COMPLETION_STATUS_FAILS",
+    "travel_recovery": "PENDING",
+    "gameplay_quit": "OWNER_CONFIRMED_CELESTE_START; QUIT_PENDING",
+    "prior_manual_gate": "PASS_APP43_WARM_JIT_MENU_SAVE_NORMAL_QUIT",
+    "home_status": "Spinner then false JIT-unconfirmed timeout",
+    "screenshot_confirms": "Native pass/green JIT and enabled Run Celeste alongside Home Screen timeout",
+    "fresh_journal_collected": false,
+    "private_evidence": ".private/device-evidence/2026-09-26/shortcut46",
+    "next": "App47 completion correction; keep exact46 shortcut"
+  },
+  "release": {
+    "github_write": false,
+    "public_ipa": false,
+    "ipa_produced": false,
+    "blockers": [
+      "fmod_redistribution"
+    ]
+  }
+}

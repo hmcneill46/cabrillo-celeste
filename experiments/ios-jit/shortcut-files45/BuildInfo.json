@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "product": "Cabrillo Home Screen Shortcut",
+  "revision": 45,
+  "app_minimum_build": 43,
+  "build_id": "shortcut-files-20260926-45",
+  "callback_protocol": "cabrillo-39",
+  "scope": "Preserve complete JIT URLs as typed URL items; direct single guest request and natural completion",
+  "ipa_produced": false
+}
