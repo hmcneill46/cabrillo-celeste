@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.22.1",
+  "build_number": "40",
+  "build_id": "launcher-shortcut-routing-20260926-40",
+  "scope": "Allow shortcut helper handoff when LiveContainer denies URL availability queries; exact build39 runtime and shortcut protocol",
+  "device_jit_tested": false
+}

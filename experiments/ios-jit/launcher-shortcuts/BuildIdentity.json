@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.22.0",
+  "build_number": "39",
+  "build_id": "launcher-shortcuts-20260926-39",
+  "scope": "Home Screen shortcut, verified VPN/JIT handoff and recoverable travel networking; device acceptance pending",
+  "device_jit_tested": false
+}

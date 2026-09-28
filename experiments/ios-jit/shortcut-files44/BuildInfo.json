@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "product": "Cabrillo Home Screen Shortcut",
+  "revision": 44,
+  "app_minimum_build": 43,
+  "build_id": "shortcut-files-20260926-44",
+  "callback_protocol": "cabrillo-39",
+  "scope": "Open the selected LiveContainer helper before sending one fresh JIT request; natural shortcut completion without Stop and Output",
+  "ipa_produced": false
+}

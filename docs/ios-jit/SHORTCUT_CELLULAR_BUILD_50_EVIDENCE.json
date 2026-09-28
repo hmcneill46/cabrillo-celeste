@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "date": "2026-09-28",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.23.2",
+    "build_number": "50",
+    "build_id": "launcher-shortcut-cellular-20260928-50",
+    "scope": "Travel verifies the VPN route before Airplane Mode and the developer service afterward",
+    "device_jit_tested": false
+  },
+  "status": "PACKAGED_VERIFIED_PHYSICAL_CELLULAR_LAUNCH_PASS",
+  "next_implementation_identity": 51,
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.23.2",
+    "build_number": "50",
+    "ipa_sha256": "e22ca126d8cb5eb829d027267504d0b9c2600efbf3ebf4c88fd762b080ae87ff",
+    "bytes": 18759543,
+    "uuid": "e5dc790840513f77b0406a1fb0405649",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": false,
+    "distribution_blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "artifacts": {
+    "directory": "artifacts/cabrillo-build50-final",
+    "source_inputs": 243,
+    "frozen_manifest_sha256": "5a9382bd40218e41fad911c09212c89f37fe9c6a1c75583a0baaf48dc9d11c03",
+    "frozen_archive_sha256": "5ffaa64068a239478f0e7276bd1be5c666ea8d3b868395d19e06940113a069a5",
+    "runtime_comparison": {
+      "status": "PASS_EXACT_BUILD49_RUNTIME",
+      "managed_assemblies": 199,
+      "native_archives": 16,
+      "swiftui_unchanged": true,
+      "changed_launcher_sources": [
+        "src/CJShortcutSession.h",
+        "src/CJShortcutRouteProbe.m",
+        "src/main.m",
+        "src/CJShortcutRouteProbe.h",
+        "src/CJShortcutSession.m"
+      ],
+      "shortcut_revision": 49,
+      "shortcut_assets_unchanged": true,
+      "shortcut_protocol": "cabrillo-39"
+    }
+  },
+  "observed_failure": {
+    "installed_app": 49,
+    "shortcut_revision": 49,
+    "owner_reports_both_methods_fail": true,
+    "phone_runs": [
+      {
+        "wifi_disabled_using": "Control Centre",
+        "journal_sha256": "f58d8bcbdf0bd66b0c20ca40981a3f15ba73b1ea93c114020bb9b79c5626a274",
+        "events": 31,
+        "native_checks_passed": 0,
+        "recovery_exists_after_run": false,
+        "mode": "Automatic chose Travel",
+        "failure_stage": "connect before isolation",
+        "probe_failure": "endpoint_unreachable",
+        "restore_receipt_received": true
+      },
+      {
+        "wifi_disabled_using": "Settings",
+        "journal_sha256": "26b69108725a847de3d541f8bc5b7a7118a8e8b3bcc3a4951ae19ac8f2ed7fc6",
+        "events": 29,
+        "native_checks_passed": 0,
+        "recovery_exists_after_run": false,
+        "mode": "Automatic chose Travel",
+        "failure_stage": "connect before isolation",
+        "probe_failure": "endpoint_unreachable",
+        "restore_receipt_received": true
+      }
+    ],
+    "scope": "Both attempts stop before isolation and JIT; preset restoration succeeds"
+  },
+  "diagnosis": {
+    "old_order": "prepare -> Remote Pairing hello -> isolate -> offline hello -> JIT",
+    "new_order": "prepare -> selected tunnel route -> isolate receipt -> offline hello -> JIT",
+    "upstream_guidance": "https://github.com/StikDebug/StikJIT/blob/5d732f94b871031704ef6f580a313e8d99d80ec1/INTEGRATION.md",
+    "scope": "Source and original49 host regression isolate the ordering dependency; exact50 phone launch passes with route before isolation and developer hello afterward",
+    "phone_order_experiment": "CoreDevice start timed out; no isolation intervention or radio mutation dispatched"
+  },
+  "validation": {
+    "native_launch_controls": 132,
+    "installation_controls": 50,
+    "cellular_route_and_ordering_controls": 53,
+    "shortcut_branches": 36,
+    "rejected_broken_url_connections": 15,
+    "original43_missing_callback_failure_reproduced": true,
+    "original49_cellular_order_failure_reproduced": true,
+    "actual_host_route": "local_route_not_tunnel",
+    "ios15_compilation": true,
+    "controls_receipt": {
+      "path": "artifacts/cabrillo-build50-final/controls-receipt.json",
+      "sha256": "440c26f10756cefd1199bb73006775a3b0cf08c6389bbe990d31b3bfbd440643"
+    },
+    "unchanged49_import_ui": "Retained exact signed49 bytes; original49 actual Apple import tests remain scoped to import/URL execution; not rerun",
+    "frozen_historical_builds": 16
+  },
+  "physical": {
+    "installed_before_delivery": 49,
+    "build50_installed": true,
+    "build50_cellular_passed": true,
+    "owner_shortcut49_import_passed": true,
+    "new_shortcut_import_required": false,
+    "save_files_before": 125,
+    "save_bytes_before": 683136,
+    "saves_unchanged_before": true,
+    "preferences_unchanged_before": true,
+    "source": "USB phone50-before comparison against original28 September snapshot",
+    "existing_fallback": "app47 / shortcut46",
+    "remote_taps_unavailable": true,
+    "owner_request": "Answered: installed, started test, owner reports pass",
+    "acceptance": {
+      "status": "PASS_PHYSICAL_AUTOMATIC_CELLULAR_START",
+      "build": 50,
+      "shortcut_revision": 49,
+      "journal_sha256": "6b5b49d5792519fb88352c06a6369a6367c2c95f8132571253834dac753cd31a",
+      "journal_events": 95,
+      "phases": [
+        "prepare",
+        "connect",
+        "isolate",
+        "verify-offline",
+        "jit",
+        "restore",
+        "ready"
+      ],
+      "start_utc": "2026-09-28T15:56:56.647770+00:00",
+      "ready_utc": "2026-09-28T15:57:27.909300+00:00",
+      "seconds_to_ready": 31.262,
+      "automatic_selected_travel": true,
+      "wifi_address_at_start": false,
+      "initial_route_not_tunnel": true,
+      "route_became_ready_after_vpn_return": true,
+      "offline_service_verified": true,
+      "native_checks_passed": 26,
+      "debugger_known_detached": true,
+      "automatic_return_observed": true,
+      "restoration_receipt_received": true,
+      "recovery_cleared": true,
+      "restore_preset": {
+        "wifi": true,
+        "cellular": true
+      },
+      "owner_visual_pass": true,
+      "installed_metadata_and_shortcut_assets_verified": true,
+      "save_files": 125,
+      "save_bytes": 683136,
+      "saves_unchanged": true,
+      "preferences_unchanged": true,
+      "independent_export_pending": false,
+      "scope": "One owner-started Automatic cellular/VPN-off launch; no new game/Quit, alternate preset, sustained out-of-range or other-provider acceptance"
+    },
+    "installation_receipt": {
+      "path": ".private/device-evidence/2026-09-28/phone50-accepted/installation.json",
+      "sha256": "0544921537824878e7b37f75ae7220823752b6ab89726c096ef2692ed299293b"
+    },
+    "post_test_state_receipt": {
+      "path": ".private/device-evidence/2026-09-28/phone50-accepted/comparison.json",
+      "sha256": "7d1c5e8e49ea2b53f045e3d9d2a2c09964a16218c9089d429a2cd5eb18382c9e"
+    },
+    "independent_export": {
+      "status": "PASS_INDEPENDENT_BUILD50_EXPORT",
+      "file": "CelesteJIT-7d1fc7f0-3101-45a3-af58-18438003c60d.diagnostics.json",
+      "bytes": 960314,
+      "sha256": "9fdaaac4ca669c11ccad121acd6f26cf33015dbaa38eca9e1db2b4af9933efa4",
+      "current_events": 98,
+      "accepted_usb_events_matched": 95,
+      "exported_utc": "2026-09-28T16:01:41.331603+00:00",
+      "current_build": 50,
+      "previous_build49_failures_preserved": true,
+      "native_checks_passed": 26,
+      "native_failures": 0,
+      "storage_errors": 0,
+      "network_restoration_confirmed": true,
+      "icloud_upload_confirmed": true,
+      "review_receipt": {
+        "path": "artifacts/cabrillo-build50-final/independent-export-review.json",
+        "sha256": "c13e52cf8b98ba2a08712331885543666dbb6c52fc339304580648306e51a5d4"
+      },
+      "scope": "Closes the independent export requirement for the accepted cellular launch; no extra device pass or game/Quit acceptance"
+    }
+  },
+  "delivery": {
+    "icloud_folder": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.23.2-build-50",
+    "logical_bytes_all_kits": 995088905,
+    "confirmed_upload": true,
+    "phone_staged": true,
+    "retired_installers": [
+      {
+        "path": "/Users/harrymcneill/Library/Mobile Documents/com~apple~CloudDocs/Celeste JIT Tests/0.23.0-build-48/Cabrillo-0.23.0-build-48-unsigned.ipa",
+        "retained_copy": "artifacts/cabrillo-build48-final/Cabrillo-0.23.0-build-48-unsigned.ipa",
+        "sha256": "5e0a7fefddea8ab2346dc997df0677375dd1513448f9fd68ae3921a35179fdb4",
+        "bytes": 18758159,
+        "all_results_preserved": true
+      }
+    ],
+    "files": {
+      "INSTALL.md": {
+        "bytes": 796,
+        "sha256": "676dba7450604f8dd3035d0c740cc50730d58f5bd1f862a4f49579b4f62b21ec"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 3172,
+        "sha256": "59433fd4ec998b2aa86cb5dd2dc4f9defdc3ec9f9a7e5221513842d3ea8f06f4"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 981,
+        "sha256": "fa070fc26b9f36e65af7e3bca9d59f69923085b629acb3939e3bed6d62d8f47b"
+      },
+      "README-FIRST.txt": {
+        "bytes": 2254,
+        "sha256": "9fd68bc95921763d434a0ee9356865f4ef18df1b92d188183af56dc7d633eea8"
+      },
+      "Cabrillo-0.23.2-build-50-unsigned.ipa": {
+        "bytes": 18759543,
+        "sha256": "e22ca126d8cb5eb829d027267504d0b9c2600efbf3ebf4c88fd762b080ae87ff"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 438,
+        "sha256": "e4a38049432d1737cf1000dbc6ebee3177190bbe1712f18e05ddc4d0e98b4a33"
+      }
+    },
+    "usb_staged_files": 6,
+    "installed_before": "49",
+    "installation_performed": false,
+    "installed_build": 50,
+    "installation_verified": true,
+    "owner_installed": true,
+    "icloud_logical_bytes_after_export": 996049219
+  },
+  "github_written": false,
+  "public_ipa_authorized": false,
+  "usb_receipt": {
+    "path": ".private/device-evidence/2026-09-28/phone50/kit-transfer.json",
+    "sha256": "bbb75001a424df4e4cb130d303b60bbb896cfa8ad43922d0d32a0dee18d6b1e7"
+  }
+}

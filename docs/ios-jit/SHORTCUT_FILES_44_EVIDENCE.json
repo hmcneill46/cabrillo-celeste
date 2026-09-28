@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-26T11:59:08.914845+00:00",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo Home Screen Shortcut",
+    "revision": 44,
+    "app_minimum_build": 43,
+    "build_id": "shortcut-files-20260926-44",
+    "callback_protocol": "cabrillo-39",
+    "scope": "Open the selected LiveContainer helper before sending one fresh JIT request; natural shortcut completion without Stop and Output",
+    "ipa_produced": false
+  },
+  "source_inputs": 4,
+  "source_frozen": true,
+  "next_implementation_identity": 45,
+  "artifact": "artifacts/cabrillo-shortcut44-final",
+  "app": "launcher-shortcut-guests-20260926-43",
+  "application_changed": false,
+  "host_controls": {
+    "status": "PASS_SHORTCUT44_HOST_CONTROLS",
+    "apple_condition_checks": 42,
+    "apple_completion_checks": 1,
+    "foundation_request_removal_checks": 2,
+    "expected_original_failures": 14,
+    "generated_branches": 42,
+    "physical_device_tested": false,
+    "source_sha256": {
+      "tools/check_shortcut_files44.py": "8ddba4132d1921703804b5af2482580671618309bd749021768b8b719b03c38f",
+      "tools/build_shortcut_files44.py": "324724b7ac68b88e3865e016fb5eef931496ca38efa4456677ca81f92b90df3d",
+      "experiments/ios-jit/shortcut-files44/AppleWorkflowChecks.m": "c026e6be83a0d496b04eaf8c2ff0fca12dd4a1f63b1fbbde6482b6bfdfcabe14",
+      "experiments/ios-jit/shortcut-files44/BuildInfo.json": "38930421400f5630fed48ef1dc83b50a4c835bb9848eb4882c628426ccfae816"
+    }
+  },
+  "delivery": {
+    "icloud_folder": "Celeste JIT Tests/shortcut-44",
+    "phone_folder": "On My iPhone/LiveContainer/Cabrillo-shortcut44",
+    "confirmed_upload": true,
+    "phone_readback_exact": true,
+    "files": {
+      "Cabrillo-Standalone.shortcut": {
+        "bytes": 25532,
+        "sha256": "c1c8f293542c1a3d807d8982e3ac274bdd4304beefbc9eb71166d83675e31188"
+      },
+      "Cabrillo.shortcut": {
+        "bytes": 25557,
+        "sha256": "eea778517274313d068ba461a3f0273d1f8bc0df1e4e5724d7e72a89f45aeb82"
+      },
+      "README-FIRST.txt": {
+        "bytes": 1979,
+        "sha256": "b1e1092d70ef693c16242ba160da1d889936a2dd91b9f2d527b9ff5e8c204836"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 347,
+        "sha256": "91598a316afa442d38471666a90eaa83e375615508151e99b9eb5e1eb56330ce"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 981,
+        "sha256": "cf8f6855ae65dcc1b4d159698471422108f722591363d28364f3d255b2cd3f79"
+      }
+    },
+    "icloud_logical_bytes": 981405236,
+    "shortcut_imported": true,
+    "exact_named_actions": 48,
+    "installed_app_verified": "43",
+    "private_evidence": ".private/device-evidence/2026-09-26/shortcut44"
+  },
+  "physical": {
+    "automatic": "FAIL_LC_URL_DECODER_EXCEPTION_BEFORE_JIT",
+    "travel_recovery": "PENDING",
+    "gameplay_quit": "PENDING_SHORTCUT44_RUN",
+    "prior_app43_manual_gate": "PASS_WARM_JIT_MENU_NORMAL_QUIT_SEPARATE_FROM_SHORTCUT",
+    "journal": "session-aa99d420-4008-41e4-a9dc-81a0acefca4e.jsonl",
+    "pid": 21828,
+    "vpn_hello_ms": 19,
+    "request_url_characters": 11083,
+    "replace_text_action": "PASS_REAL_IOS_EXECUTION",
+    "helper_opening": "PASS",
+    "full_request_open": "LCHandleControlAppURL_PLUS732_NIL_BASE64_VALUE",
+    "natural_completion": "PASS_WORKFLOW_FINISHED",
+    "native_callback": "NOT_OBSERVED",
+    "native_jit": "NOT_REACHED_MAILBOX1_UNTRACED",
+    "cause": "Original plain-text URL conversion truncates the long query value; reproduced with Apple WFContentItem",
+    "superseded_by": 45
+  },
+  "release": {
+    "github_write": false,
+    "public_ipa": false,
+    "ipa_produced": false,
+    "blockers": [
+      "fmod_redistribution"
+    ]
+  }
+}

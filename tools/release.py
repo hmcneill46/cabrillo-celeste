@@ -101,7 +101,7 @@ def verify_ipa(path, version, build_number):
                 raise ValueError('Case/Unicode collision in IPA: ' + name)
             folded.add(normalized)
             lower = name.lower()
-            if (PurePosixPath(lower).name in {'celeste.dll', 'celeste.exe', 'celeste.content.dll'}
+            if (PurePosixPath(lower).name in {'celeste.dll', 'celeste.exe', 'celeste.content.dll', 'mmhook_celeste.dll'}
                     or PurePosixPath(lower).suffix in {'.bank', '.xnb', '.p12', '.p8', '.mobileprovision', '.a'}
                     or '_CodeSignature' in parts):
                 raise ValueError('Game payload, SDK archive or signing material in public IPA: ' + name)

@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.21.0",
+  "build_number": "38",
+  "build_id": "launcher-owned-game-20260925-38",
+  "scope": "Owned-game preparation and cached runtime; no bundled original/prepared Celeste code; physical validation pending",
+  "device_jit_tested": false
+}

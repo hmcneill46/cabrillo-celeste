@@ -1,10 +1,473 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated25 September after iOS15/iPad support, the
-build36 Motion Smoothing correction and requested build37 Everest upgrade, for a fresh development chat opened in
+Written 14 September 2026; updated29 September for source publication after USB shortcut testing,
+iOS15/iPad support, the
+build36 Motion Smoothing correction, build37 Everest upgrade and build38 owned-game
+preparation, for a fresh development chat opened in
 `/Users/harrymcneill/Projects/Cabrillo`. Read this and [AGENTS.md](AGENTS.md) first.
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
+
+## Source publication —29 September
+
+The owner explicitly requests committing, reviewing and pushing the completed
+work through app50/shortcut49. This supersedes the earlier no-GitHub-write state
+for this source publication only. Private packages, game data, FMOD inputs,
+signing/pairing data and raw device logs remain excluded. No release tag or
+public IPA is authorized; `release/current.json` remains blocked on FMOD.
+
+The publication branch is `codex/owned-game-import`, based on `b7a8d28` (PR2).
+It includes build38 user-owned game preparation and the Home Screen launch work
+through50, preserving all delivered sources. Review corrected CI's obsolete
+build39 shortcut target and Mac-specific Xcode path. The public runner now tests
+the accepted50 coordinator and49 generated workflows with the configured Xcode.
+Local checks pass:20 release controls,119 native save/profile checks,185 native
+shortcut checks,36 workflow branches and15 invalid-URL controls. The original43
+missing-callback and49 cellular-order failures reproduce as negative controls.
+See [the publication review](docs/ios-jit/SOURCE_PUBLICATION_BUILD_50.md).
+Check the branch's remote HEAD and GitHub Actions for publication completion.
+This is a source/CI update; keep app50/shortcut49 and use51 for new app code.
+
+## Active development: app50 /0.23.2 with shortcut49 —28 September
+
+The owner installed50, kept shortcut49 and confirms the fresh cellular test passes.
+USB verifies exact installed BuildInfo and both signed49 assets. The journal starts
+without a Wi-Fi address, Automatic selects Travel, the route becomes ready after
+LocalDevVPN returns, isolation is acknowledged, the offline service hello passes,
+and all26 native JIT checks pass with known debugger detach. Cabrillo returns,
+restores the both-on preset and clears recovery, ready after31.262s.125 saved files/
+683,136bytes and preferences remain unchanged. Journal hash:
+`6b5b49d5792519fb88352c06a6369a6367c2c95f8132571253834dac753cd31a`.
+This is a scoped physical cellular-start pass; no repeat solely for an export.
+The installation/test and independent-export requests are answered. The owner’s
+960,314-byte50 export is reviewed and confirmed uploaded in50/Results; SHA256
+`9fdaaac4ca669c11ccad121acd6f26cf33015dbaa38eca9e1db2b4af9933efa4`.
+Its98 current events contain the exact95 accepted USB events,26 native passes,
+ready/restored status and no storage error. Both prior49 failures are separately
+retained in its history. No game starts in this export. Keep app50/shortcut49;
+no repeat test or export is needed for this gate. Entirely out-of-range operation,
+alternate presets, cancellation, other guests/providers and game/Quit remain
+separate, along with earlier native saves/iPad38/sustained120 gates.
+
+The owner confirms49's text field/import works, then reports cellular
+Home launch failure with Wi-Fi disabled in both Control Centre and Settings. USB
+retrieves both app49 runs: Automatic selects Travel, prepare/LocalDevVPN return, the
+pre-isolation developer endpoint stays unreachable,25s times out, restore succeeds.
+Neither run requests JIT. The second journal hash is
+`26b69108725a847de3d541f8bc5b7a7118a8e8b3bcc3a4951ae19ac8f2ed7fc6`.
+The prior47 cellular tests could rejoin nearby Wi-Fi; keep that scope distinct.
+
+Build50 /0.23.2 in `launcher-shortcut-cellular` checks the selected tunnel route
+before isolation, then the full Remote Pairing hello after the isolate receipt.
+It retains actual native JIT/detach and restoration gates, rejects stale probe
+results and distinguishes route/service timeouts.132 native,50 setup,53 cellular
+controls and36 shortcut branches pass; exact49 reproduces the ordering failure.
+All199 DLLs,16 archives and SwiftUI remain exact49. Both signed49 templates stay
+byte-identical; KEEP the imported49 shortcut. No new shortcut import is needed.
+All243 captured inputs are frozen in `artifacts/cabrillo-build50-final`; next51.
+Read `docs/ios-jit/SHORTCUT_CELLULAR_BUILD_50.md` and its ledger.
+
+All six kit files are confirmed uploaded in `0.23.2-build-50`.
+All six also have exact USB readback at On My iPhone → LiveContainer → Cabrillo-build50.
+App50 installation and the scoped cellular Home/JIT/restoration gate are now
+verified as above. Remote start of the old-order intervention timed out; no test
+or radio mutation was dispatched by that earlier attempt.
+Only the superseded48 cloud IPA was removed after exact local/package verification;
+all Results and accepted32/working43/47 remain. Cloud total996,049,219bytes after the export.
+Finish active games normally. Source publication is authorized on29 September;
+public IPA publishing remains gated. Preserve
+independent exports and the distinct recovery/game/Quit/save-manager/iPad/120 gates.
+
+## Previous development: app49 /0.23.1 with shortcut49 —28 September
+
+The owner reports48's Configure This Shortcut field immediately erases typing.
+USB verifies installed48, native file export and the URL-list setup screen. The
+actual Apple iOS26.5 simulator reproduces the lost edit in the exact48 signed file.
+Build49 /0.23.1 in `launcher-shortcut-import` binds the question to blank Text,
+then uses an explicitly connected typed URL. Empty answers open Cabrillo setup.
+The49 shortcut works with installed48; app49 bundles it for future exports.
+
+Two actual Apple import UI tests pass: original48 failure,49 typing/paste/blur,
+import/replace and exact configured URL delivery to an isolated simulator fixture.
+132 native,50 setup,36 branch and15 bad-connection controls pass; Apple host checks
+also pass. All199 DLLs,16 archives, SwiftUI and the47 reducer remain exact48.
+All238 inputs are frozen in `artifacts/cabrillo-build49-final`; next implementation50.
+Read `docs/ios-jit/SHORTCUT_IMPORT_BUILD_49.md`, its ledger and the setup guide.
+
+All seven kit files are confirmed uploaded at `0.23.1-build-49`. All seven are staged
+with exact USB readback in On My iPhone → LiveContainer → Cabrillo-build49.
+At initial delivery the installed app was48; later failed runs verify app49.
+The owner confirms49's text stays and import succeeds;
+that setup request is answered and the disappearing-field defect is closed.
+The import pass stays separate from the later app49 cellular Home/JIT failure.
+Its installation is now verified; see the accepted50 repair above. Preserve47/46 and all Results. No cloud
+installer was removed; total995,079,880bytes. Keep physical gates distinct and
+finish any active game normally. No GitHub/public IPA write is authorized.
+
+## Previous development: app48 /0.23.0 with shortcut48 —28 September
+
+The owner requested in-app shortcut creation for standalone/LiveContainer and
+current StikDebug provider choices. Build48 is packaged/verified in
+`launcher-shortcut-setup`. Settings → Add Home Screen shortcut exports bundled
+Apple-signed files; LC installs paste an app-generated exact host/guest/data link
+into the import question. Import and Home Screen creation still require owner taps.
+Standalone Cabrillo can configure an LC2 StikDebug guest through its copied launch
+link; same-host LC2 Cabrillo/StikDebug is rejected. Provider changes remain native.
+
+132 retained native controls,50 setup controls,36 branches,12 broken URL controls
+and7 UI tests each on iPhone/iPad simulators pass. All199 managed assemblies,
+16 archives and the47 reducer remain exact47. All233 inputs are frozen in
+`artifacts/cabrillo-build48-final`; next implementation49. Read
+`docs/ios-jit/SHORTCUT_SETUP_BUILD_48.md`, its ledger and the setup guide.
+
+All six48 kit files are confirmed uploaded in `0.23.0-build-48`; initial transient
+errors cleared. The kit is also staged at On My iPhone → LiveContainer →
+Cabrillo-build48 with exact USB readback. Subsequent USB evidence verifies installed48
+and native export. The owner’s setup request is answered: Apple’s URL-list import
+field discards input. See active49 repair above; no48 Home/JIT pass is claimed.
+New physical import/Home routing,
+standalone/LC2 handoff and48 game/Quit are pending. Keep47/46 as the verified phone
+fallback. Only33’s superseded cloud IPA was removed after exact retained-copy and
+receipt checks; every Results folder, local original and32/43/47 installers remain.
+No GitHub/public IPA write is authorized. Finish an active game normally before
+updating; preserve independent48 diagnostics and all older distinct physical gates.
+
+## Previous phone testing: app47 /0.22.4 with shortcut46 —28 September
+
+USB collection now verifies installed47, recovers the missing journals and records
+five successful fresh launches: Automatic on Wi-Fi, two Travel runs with Wi-Fi/VPN
+already connected, Travel starting on cellular with VPN disconnected, and Automatic
+from that same cellular state. The last three are remotely started after ordinary
+process termination of idle Cabrillo/StikDebug. Every run passes26 native checks
+while detached. All four Travel runs verify the tunnel in Airplane Mode, receive
+their restore receipt, clear recovery and return with the correct ready message.
+Automatic correctly chooses Travel without a Wi-Fi address. Times to ready are
+25.9/27.7/28.3/53.2/31.8s respectively. A repeated ready launch does not start new
+JIT/radio work. Read the updated47 report and ledger for hashes and scope.
+
+The original27 September failure is now located: JIT passes, restoration opens
+Shortcuts, then its receipt never arrives. A recovered later journal proves
+fresh-process networking recovery succeeds; another late JIT callback is rejected
+in an idle process. The missing restore receipt remains unexplained and has not
+recurred in the four fresh Travel runs. Do not claim a code fix: app47/shortcut46
+remain unchanged. JIT callbacks are absent in both failures and passes, so that
+absence alone is not a proven cause. All221 frozen47 inputs still match.
+
+The cellular-start passes occur near a known Wi-Fi network; preparation may rejoin
+it before isolation. Entirely out-of-range operation, alternate restore presets,
+user cancellation, other current LC guests,47 normal game Quit and independent
+diagnostic exports remain separate gates.46/47 Results are still empty. The
+recovered47 journals contain game startup/gameplay but no normal Quit. Keep earlier
+save-manager/iPad38/sustained120 gates distinct. No repeat of a passed launch solely
+for an export. No48 implementation was allocated and no GitHub/public IPA write
+is authorized.
+
+The phone is left in Cabrillo with verified JIT ready, Automatic restored, Wi-Fi
+and cellular on, Airplane Mode off, and LocalDevVPN connected. All125 save files
+(683,136 bytes) and launcher preferences match the pre-test snapshot. Private
+evidence is under `.private/device-evidence/2026-09-28/phone47-*`; the last run is
+`phone47-automatic-cellular`. USB collector `.build/phone47-snapshot.py` is read-only.
+The owner setting requests are answered; no further tap is pending.
+
+Remote UI taps are unavailable on26.5; Apple remote control requires27, and the
+signed UI-test runner installation fails the three-app free-signing limit. No
+existing app was removed and no second debugger attached. File/log collection,
+screenshots and normal process control work. CoreDevice URL launches initially
+time out but later recover, allowing the three autonomous fresh tests. A USB
+preference-file edit was ineffective because of cached defaults; use the app UI
+for setting changes. The owner changed Travel and restored Automatic this way.
+Plain LC opening selected the last guest, YouTube, as the owner explained; this is
+not an observed shortcut failure.46's generic Home `open-url` route also merits a
+separate current-guest selection review before claiming universal one-icon routing.
+
+Build47 in `launcher-shortcut-completion` fixes the false Home Screen launch timeout
+observed after the exact46 shortcut successfully enables JIT and returns. The owner
+confirms green JIT and Celeste startup. A Wi-Fi screenshot verifies native-pass/
+green/Run enabled alongside app43's contradictory timeout. At that original43
+review, CoreDevice and native AFC transfers each timed out25s. Do not claim
+new level-input or normal-Quit evidence. Raw scoped records/screenshots are under
+`.private/device-evidence/2026-09-26/shortcut46`. The latest synced read-only shortcut
+check verifies one Cabrillo containing all45 exact46 actions.
+
+App43 waits for an extra JIT-stage Shortcuts receipt even after real native checks
+pass and the debugger detaches. A focused regression against original43 fails on
+that missing-receipt case;47 passes.47 completes JIT from those actual native gates
+in the foreground. It still requires the separate network-stage receipts and keeps
+Travel recovery durable until restoration is confirmed. Late JIT callbacks cannot
+change a completed launch/newer restore. Diagnostics record callback receipt
+separately. Read [the47 report](docs/ios-jit/SHORTCUT_COMPLETION_BUILD_47.md) and ledger.
+
+132 native controls,36 generated branches and12 broken-connection controls pass.
+The package is verified:18,697,409 bytes, SHA256
+`78e259c6dfe9760cdb3df26a7421f290e59fce9a3acdd878616ed94731c71bd8`,
+executable/dSYM UUID`e931080600f83955a66dc1dd3e0b38cd`. All199 managed assemblies,
+16 native dependency archives and SwiftUI sources stay43-identical. Only the native
+session reducer changes, alongside test/build metadata. All221 inputs are frozen
+in `artifacts/cabrillo-build47-final`; all35–46 comparisons pass. Further
+implementation needs48. Keep the exact46 shortcut; no new shortcut import is needed.
+
+All six kit files are confirmed uploaded at `Celeste JIT Tests/0.22.4-build-47`;
+the initial transient iCloud4355 errors cleared. No direct phone-folder staging
+occurred; the owner now reports47 execution after updating through iCloud. To stay below1GB,
+only the superseded41 cloud IPA was removed after verifying the exact retained
+local copy. All Results and accepted32/working43 installers remain.
+
+Keep app47 and shortcut46; the scoped cellular-start/Travel passes are recorded
+above. Preserve an independent export after testing; continue remaining recovery
+and game/Quit checks. No new
+GitHub/public IPA write. Keep native save-manager, iPad38 and sustained120Hz gates
+separate. Finish any current game normally before closing both LiveContainer apps
+for a fresh test. All current setting/launch requests are answered.
+
+### Failed45 and retained conversion evidence
+
+All45 actions are verified in the synced shortcut. The owner reports immediate
+“Make sure you pass a valid URL to the Open URL action”; the installed Mac runner
+returns the same error and exit1. No Cabrillo/JIT handoff occurs. Raw scoped import
+and connection evidence is under `.private/device-evidence/2026-09-26/shortcut45`;
+the Mac reproduction is `.build/shortcut46-research/original45-home-run.txt`.
+All11 revision45 inputs and its six-file uploaded kit remain frozen. Its Apple
+content-conversion evidence remains valid; it did not execute the failing pair.
+No45 phone-folder transfer occurred after USB disconnected.
+
+### Failed44 and the cause now reproduced
+
+The owner imported44; all48 named actions were verified. Actual app43 session
+`aa99d420-4008-41e4-a9dc-81a0acefca4e`, PID21828, passes the VPN hello in19ms. Its
+11,083-character JIT link is plain text in Shortcuts. The first helper opening
+works; the second Open URL triggers `LCHandleControlAppURL +732` with a nil base64
+string. The owner sees Home Screen and the helper error. Mailbox remains1/untraced;
+no JIT/game runs. Replace Text, Nothing and the entire workflow finish on the phone,
+but no native callback is recorded. See [the44 report](docs/ios-jit/SHORTCUT_FILES_44.md).
+
+The pinned3.8.10 handler/binary matches the exception offset: it tries to decode an
+`open-url` query item with no value. Apple's actual WFStringContentItem conversion
+reproduces that exact truncation for long links; WFURLContentItem preserves them.
+This also explains43's cold guest opening without a request and the successful
+native direct route.44's four inputs remain frozen. Its kit is preserved/uploaded;
+use46 for new tests. Raw44 evidence is in the private shortcut44 folder.
+
+### Scoped manual43 acceptance
+
+43's installation retained its data container and125 save/profile files, and its
+original46 shortcut actions were verified. Its cold Automatic session
+`f1769b89-5b7e-4108-a632-1d8fd7864f6a`, PID21378, passes VPN hello in80ms and opens
+StikDebug but executes no request; Stop and Output stalls before a later error.
+No radio changes occurred. This cold shortcut gate remains failed.
+
+The subsequent native Enable via LiveContainer2 tap with StikDebug running succeeds
+for the same PID/request: automatic helper return,26 native checks and debugger
+detach. The owner sees green and starts Celeste. The journal verifies cached game
+preparation in0.095s, zero active catalogue requests,14 graphics passes and the
+first rendered/readback frame. Later collection confirms ten paired menu touches,
+profile save readback, normal Quit/stage8 and a delayed native heartbeat. No level
+input is observed. This is a manual warm JIT/menu/save/Quit pass, not shortcut
+acceptance. See [the43 review](docs/ios-jit/SHORTCUT_GUESTS_BUILD_43.md).
+
+All212 app43 inputs, its exact41 runtime and original shortcut remain frozen.
+All43 kit files are uploaded. Preserve every Results folder and accepted32.
+Private runtime evidence: `.private/device-evidence/2026-09-26/phone43`, especially
+`warm-native-success.jsonl` and `before-shortcut44.jsonl`. Never attach another
+debugger alongside Stik; a retained journal is not a live PID check.
+
+## Previous phone test: shortcut revision42 with app41 —26 September
+
+App41 is installed and all six iCloud kit files are uploaded. Direct collection
+verifies its data container, LC JIT off/Fix File Picker on and125 unchanged
+save/profile files. It passes the actual phone VPN-loopback Remote Pairing hello,
+then the39 shortcut fails its first string comparison before StikDebug opens.
+Apple's device log reports `ConditionalAction Code=1`, `WFActionIndex=4`; the UI
+shows a missing parameter. The native JIT/detach gates correctly remain unpassed.
+
+Shortcut revision42 adds explicit text coercion for the six dictionary-value
+comparisons. It uses the exact installed41 app and39 callback protocol; **no42 IPA
+is produced**. Read [the report](docs/ios-jit/SHORTCUT_FILES_42.md) and its ledger.
+36 isolated Apple conditional-engine checks pass (12 original failure controls),
+as do36 generated branches. Six source/dependency inputs are frozen in
+`artifacts/cabrillo-shortcut42-final`; next implementation identity43. No GitHub
+write/public IPA is authorized. All earlier application inputs remain unchanged.
+
+The five-file42 kit is uploaded to `Celeste JIT Tests/shortcut-42` and staged in
+`On My iPhone/LiveContainer/Cabrillo-shortcut42`; full signed-file readback matches.
+Initial import kept it as Cabrillo 1 beside old Cabrillo, so the first retry still
+executed39 and failed identically. The owner then removed old Cabrillo and renamed
+the new copy. Read-only scoped inspection of the synced Mac shortcut records now
+confirms **Cabrillo** contains42, including all text coercions. Re-add the Home
+Screen icon if its old identifier still targets the removed shortcut.
+
+CoreDevice app-file copies/launches started timing out while LocalDevVPN is on.
+Direct paired USB `pymobiledevice3 apps pull` still collects the guest Diagnostics;
+native DVT screenshots and USB system-log collection work. Do not restart system
+services or attach any debugger. Raw evidence is under
+`.private/device-evidence/2026-09-26/shortcut42` (latest collected41 session400b7f83
+ends failed, untraced, without StikDebug/game execution). The owner has a pending
+request to close Cabrillo/LC1 and run the now-correct shortcut, leaving any prompt
+visible for inspection. Then continue Automatic, fresh-process Travel/recovery
+and game/Quit. Preserve independent exports and earlier distinct acceptance gates.
+
+## Previous phone test: Remote Pairing probe / build41 —26 September
+
+The owner installed40. Direct collection verifies the exact identity, retained
+data container and125 unchanged save/profile files. Automatic passes the LC
+availability fix, opens LocalDevVPN and returns, then times out before any JIT
+request. The probe incorrectly checked legacy lockdown62078; StikDebug uses
+Remote Pairing49152. A hello from the Mac to this phone's verified network address
+returns protocol24/minimum8 with tunnel connections allowed, without pairing or
+debugger access. This is protocol evidence, not VPN-loopback/JIT acceptance.
+
+Build41 /0.22.2 (`launcher-shortcut-tunnel`) implements that bounded hello and
+failure diagnostics, preserving40 routing, actual JIT/detach and recovery gates.
+Read [the report](docs/ios-jit/SHORTCUT_TUNNEL_BUILD_41.md) and
+[ledger](docs/ios-jit/SHORTCUT_TUNNEL_BUILD_41_EVIDENCE.json).91 native checks and36
+generated branches pass; all199 managed assemblies/16 archives, UI and existing
+shortcut are unchanged. All210 inputs are frozen in `artifacts/cabrillo-build41-final`.
+Further implementation needs42. No GitHub write/public IPA is authorized.
+
+The six-file41 kit is staged on the USB-connected phone at
+LiveContainer/Cabrillo-build41 with full IPA readback verified. The unused40
+process was closed after collecting its failed state, and LC's installer opened.
+An owner request to tap the existing red Cabrillo replacement entry is pending.
+Do not retry the ineffective accessibility activation from the40 installer.
+After installation, continue Automatic, then fresh-process Travel and game/Quit.
+The41 iCloud kit is locally placed; recheck upload status. Only the superseded39
+cloud IPA was removed after exact local-copy verification; all Results and local
+artifacts remain. Keep independent exports and the earlier distinct gates.
+
+## Previous phone test: shortcut routing correction / build40 —26 September
+
+The owner installed39 and its shortcut and authorized direct Wi-Fi testing, then
+connected USB. Phone logs reveal a real39 defect: the LC host denies the
+`localdevvpn` availability query, so Cabrillo stops at setup despite the installed
+helper. Remote Shortcuts activation reproduces launch into that guard. No39
+VPN/JIT or Travel pass is present.
+
+Build40 /0.22.1 fixes this in `launcher-shortcut-routing`; read
+[the report](docs/ios-jit/SHORTCUT_ROUTING_BUILD_40.md) and
+[ledger](docs/ios-jit/SHORTCUT_ROUTING_BUILD_40_EVIDENCE.json). It uses actual open
+results/service replies within LC, retaining host identity, native JIT/detach and
+recovery gates. The installed39 shortcut stays compatible.62 native and36
+generated-branch controls pass; all199 managed assemblies/16 dependency archives
+remain exact39. All210 inputs are frozen in `artifacts/cabrillo-build40-final`.
+Next unused identity is41; no GitHub write or public IPA is authorized.
+
+The six-file kit is staged directly on the phone in LiveContainer/Cabrillo-build40;
+the IPA readback is exact. The idle39 process was closed and LC's normal installer
+opened. A concrete owner request to choose replacement of existing Cabrillo is
+pending; do not confuse staging/opening with installation.125 current save/profile
+files and preferences are backed up under the private phone evidence. The six-file
+iCloud kit at0.22.1-build-40 is confirmed uploaded after a transient account/server
+error cleared. Continue with real Automatic, then fresh-process
+Travel and gameplay/Quit; preserve independent Results exports and old gates.
+
+The phone screenshot confirms LC's replacement dialog is actually open. Its red
+`io.github.hmcneill46.celeste.everest.jit.everest.app` option selects the existing
+container. Remote accessibility inspection works, but one activation request had
+no effect; the subsequent installed identity remains39. Do not repeatedly retry
+remote taps or claim40 installed. The owner has the exact on-screen instruction.
+
+## Previous local delivery: Home Screen shortcut / build39 —26 September
+
+The owner requested one Home Screen icon that prepares JIT and returns to Cabrillo,
+including a cellular/Airplane Mode option and recovery. Build39 /0.22.0
+(`launcher-shortcuts-20260926-39`) is packaged and its eleven-file kit is confirmed
+uploaded. Read [the report](docs/ios-jit/SHORTCUT_BUILD_39.md),
+[ledger](docs/ios-jit/SHORTCUT_BUILD_39_EVIDENCE.json) and
+[setup guide](docs/HOME_SCREEN_SHORTCUT.md). This remains local/private work; no
+new GitHub write or public IPA release is authorized.
+
+- Native coordinator: verifies the local VPN before/after Airplane Mode, sends a
+  fresh PID-bound script, supplies the actual LC host bundle for helper return,
+  and waits for native memory checks plus detach. Shortcuts stage callbacks cannot
+  grant JIT readiness. Its recovery record survives restarts and rejects stale
+  callbacks; an unfinished radio shortcut is not followed by concurrent radio writes.
+- Automatic leaves Wi-Fi/cellular switches alone with connected Wi-Fi; Travel
+  uses an explicit restore preset because their exact previous switches cannot be
+  read. First-use permissions, StikDebug's external-request confirmation, pairing
+  and online DDI setup remain explicit platform/helper requirements.
+-54 native controls,36 generated shortcut branches and4 simulator UI tests pass.
+  Two Apple-signed import variants (LC1/default and standalone) exist. All199
+  managed assemblies and16 native archives remain exact38; the39 builder locks
+  the same three managed/native/FMOD receipts. No game assemblies/assets are bundled.
+- Final IPA18,692,002 bytes; SHA256
+  `dcf55b9d891f1c98a0885e798e638a49bf54700032f67a83cbdabdfd19a7a2a0`.
+  New UUID `750fa3a8d4143f3fb813053143dca898`.210 input files and source archive
+  are frozen in `artifacts/cabrillo-build39-final`. New implementation needs40.
+- Kit: iCloud → Celeste JIT Tests →0.22.0-build-39, all11 files uploaded. Also
+  copied over Wi-Fi into On My iPhone → LiveContainer → Cabrillo-build39; the
+  signed shortcut readback is exact. Copying is not installing or executing it.
+  The owner has a concrete pending request to update the existing guest, import
+  Cabrillo.shortcut with its name unchanged, configure the selected helper's
+  confirmation setting and test Automatic on Wi-Fi first. Travel follows in a
+  fresh process. Do not claim39 phone acceptance before reviewing this response/logs.
+- The iPhone15ProMax is reachable through paired CoreDevice over Wi-Fi, confirmed
+  by actual Cabrillo file reads and kit transfer. Airplane Mode deliberately drops
+  that connection; collect the durable logs after radios return. Never attach a
+  second debugger alongside StikDebug. Raw device evidence is private under
+  `.private/device-evidence/2026-09-26/phone39`.
+- Newly collected38 phone evidence verifies cold game preparation15.368s, direct
+  adapter binding, real first-frame/readback and SJ Grandmaster lobby `GM-main`.
+  This scoped38 observation ends backgrounded: cached preparation, normal Quit/
+  native return, owner visual review and existing native save-manager gates remain
+  open. The iPad38 gate remains separate. Preserve32 as the broader fallback.
+
+Next: inspect the owner's39 response and logs, then test Travel/network recovery
+and gameplay/Quit. Preserve independent Results exports. Release configuration
+remains the frozen38 gate; no GitHub run has tested39. Next unused identity is40.
+
+## Previous local delivery: owned-game import / build38 —25 September
+
+The owner requested an IPA with no original/prepared Celeste game code or original
+game assets, allowing heavier one-time preparation from their original ZIP.
+Build38 /0.21.0 (`launcher-owned-game-20260925-38`) is implemented, packaged and
+locally tested on `codex/owned-game-import`. Read
+[the report](docs/ios-jit/OWNED_GAME_BUILD_38.md) and
+[ledger](docs/ios-jit/OWNED_GAME_BUILD_38_EVIDENCE.json). This request authorizes
+local work and the established private device/iCloud delivery, not a fresh GitHub
+write or public IPA publication.
+
+The game-free bootstrap imports three hash-pinned originals, coreifies and patches
+Celeste/Everest and generates hooks in Documents. Original and prepared generations
+have verified receipts and atomic publication. Later launches verify/reuse the
+cache; native frame callbacks bind directly to the existing adapter afterward.
+Two Everest path lookups and Cecil's late assembly-resolution fallback distinguish
+bundled public patch rules from the verified game directory. No original/prepared
+game, generated game hooks or build-only references enter the app bundle.
+
+- Final public inputs: `.build/owned-public-inputs38-e`; final managed build:
+  `.build/owned-public-managed38-e`; native: `.build/owned-public-native38-e`;
+  explicit licensed FMOD SDK preparation: `.build/owned-fmod38-c`.
+- Public source/native/managed/app stages ran with private capsules, original game
+  inputs and historical checkouts inaccessible. No historical folder was modified.
+  FMOD1.10.09 is the only private build dependency. The public release recipe and
+  locks now exist; publishing stays blocked on permission and an authorized CI SDK
+  input. Never describe FMOD as open source or this as bit-for-bit reproducibility.
+- Nineteen storage/recovery controls, cold/cached real-game/save/hair/resume/Quit,
+  full pinned Strawberry Jam cold/warm mods, Motion Smoothing Fast/Fancy60/120,
+  119 profile checks, seven simulator loading tests and20 Python controls pass.
+  Final host fixture is `.build/owned-game38-host-public-c`; the ledger pins all
+  matching receipts. Host gameplay uses a retained macOS native test runtime and
+  does not validate new iOS archives on a device. Mac preparation15.65s and warm
+  verification0.039s are not phone/iPad timings or sustained120Hz evidence.
+- Package/dSYM, frozen230 input hashes and source archive:
+  `artifacts/cabrillo-build38-final`. Unsigned IPA18,659,553 bytes,
+  SHA256 `9968253600c30566a527d97a96780dad353cdf616be8f2af9e0ec9ae8e0f2e03`.
+  Payload audit finds199 managed DLLs and zero bundled game assemblies.
+- All six kit files are confirmed uploaded to
+  `iCloud Drive/Celeste JIT Tests/0.21.0-build-38`; Results is preserved for testing.
+  No phone download/execution is confirmed. Update the existing LC slot, select
+  the original unmodified ZIP once, use fresh JIT, then test first/cached launches.
+- Build38 is installed on the connected TrollStore/Dopamine iPad. All11 captured save/
+  profile files remain exact. The original ZIP was verified and staged over USB.
+  The old suspended37 process was retired; native launch and cold/cached gameplay
+  are awaiting the owner opening the app. A concrete async test request is pending.
+  Private install/profile/log evidence is under
+  `.private/device-evidence/2026-09-25/ipad38`. Do not claim physical38 acceptance.
+
+Next: inspect the owner's38 response/Results and device logs, then fix any actual
+failure in a new identity39. Existing full native save-manager and37 lifecycle
+acceptance gates remain separate. Keep32 as the broad phone fallback. All38
+implementation/package inputs are frozen; next unused identity is39. No new
+GitHub write was authorized for this work.
 
 ## Latest owner request: public CI and gated IPA releases —25 September
 

@@ -1,5 +1,213 @@
 # Building Cabrillo
 
+## Public source checks
+
+From a public clone on macOS with Xcode26.6 /17F113:
+
+```sh
+python3 tools/ci/check_public_repository.py
+python3 -m unittest discover -s tools/tests -v
+python3 tools/ci/check_native_profiles.py --lane launcher-owned-game
+python3 tools/ci/check_native_shortcuts.py
+```
+
+The native wrappers honor `DEVELOPER_DIR` and require fresh work directories;
+use `--work .build/a-new-check-directory` when rerunning. The shortcut wrapper
+tests build50 ordering/recovery and revision49 generated actions without signed
+assets, private inputs, network access in the native tests or a device.
+It does not replace the signed import and phone gates in the reports below.
+See [the release guide](RELEASING.md) for GitHub CI and the FMOD publishing gate.
+
+## Build50: cellular shortcut launch sequence
+
+The50 lane is `experiments/ios-jit/launcher-shortcut-cellular`. It retains all49
+runtime dependencies, SwiftUI and exact signed shortcut49 templates. Native Travel
+checks a selected tunnel route before isolation and the developer service after
+isolation. The original49 reducer fails the new cellular-order control;50 passes.
+
+```sh
+python3 tools/check_shortcut_cellular.py --work .build/shortcut50-checks \
+  --assets .build/shortcut49-assets
+python3 tools/build_shortcut_cellular.py \
+  --managed .build/owned-public-managed38-e/receipt.json \
+  --native .build/owned-public-native38-e/receipt.json \
+  --fmod .build/owned-fmod38-c/receipt.json \
+  --shortcuts .build/shortcut49-assets/receipt.json \
+  --work .build/shortcut50-reproduction --output artifacts/shortcut50-reproduction
+```
+
+Restore the captured49 signed inputs for exact reproduction; do not regenerate or
+change the frozen asset lock. Build50 needs no new shortcut import. Host route and
+session controls do not establish physical cellular acceptance. See the
+[50 report](ios-jit/SHORTCUT_CELLULAR_BUILD_50.md) and retain all earlier frozen lanes.
+
+## Build49: shortcut import field repair
+
+The49 lane is `experiments/ios-jit/launcher-shortcut-import`. It retains48's runtime,
+SwiftUI and JIT reducer, changes the LiveContainer setup question to a blank Text
+parameter, and bundles signed revision49 files. The49 shortcut also works with
+app48. The original48 URL-list editor failure and49 import/execution are checked
+inside Apple's actual simulator Shortcuts app, separate from physical JIT tests.
+
+```sh
+python3 tools/build_shortcut_files49.py --output .build/shortcut49-assets --sign
+python3 tools/check_shortcut_import.py --work .build/shortcut49-checks \
+  --assets .build/shortcut49-assets
+python3 tools/check_shortcut_files49.py --work .build/shortcut49-apple-checks
+python3 tools/check_shortcut_import_ui.py --work .build/shortcut49-import-checks \
+  --device YOUR_IOS_26_5_SIMULATOR_UUID --assets .build/shortcut49-assets \
+  --original-assets .build/shortcut48-assets
+python3 tools/build_shortcut_import.py \
+  --managed .build/owned-public-managed38-e/receipt.json \
+  --native .build/owned-public-native38-e/receipt.json \
+  --fmod .build/owned-fmod38-c/receipt.json \
+  --shortcuts .build/shortcut49-assets/receipt.json \
+  --work .build/shortcut49-reproduction --output artifacts/shortcut49-reproduction
+```
+
+For exact reproduction, restore signed inputs from the frozen artifacts; re-signing
+can change their bytes. Do not change the frozen `ShortcutAssets.json` lock.
+The import test installs an isolated URL receiver in the specified simulator and
+imports/replaces the test-owned Candidate49 shortcut there. It runs only the Home
+branch; no physical apps, JIT services or radio switches are exercised. The original
+control uses the retained48 signed LiveContainer file. See [the49 report](ios-jit/SHORTCUT_IMPORT_BUILD_49.md).
+
+## Build48: in-app Home Screen shortcut setup
+
+The48 lane is `experiments/ios-jit/launcher-shortcut-setup`. It retains the exact38
+managed/native/FMOD receipts used by47. Apple-signed templates are a separate,
+explicit build input pinned by `ShortcutAssets.json`; generated files stay ignored.
+Signing uses the installed macOS Shortcuts CLI in `anyone` mode. End users receive
+these files inside Cabrillo and do not need a Mac or signing credentials.
+
+```sh
+python3 tools/build_shortcut_files48.py --output .build/shortcut48-assets --sign
+python3 tools/check_shortcut_setup.py --work .build/shortcut48-checks \
+  --assets .build/shortcut48-assets
+python3 tools/build_shortcut_setup.py \
+  --managed .build/owned-public-managed38-e/receipt.json \
+  --native .build/owned-public-native38-e/receipt.json \
+  --fmod .build/owned-fmod38-c/receipt.json \
+  --shortcuts .build/shortcut48-assets/receipt.json \
+  --work .build/shortcut48-reproduction --output artifacts/shortcut48-reproduction
+```
+
+For exact reproduction, restore the captured signed inputs from the frozen source
+archive: signing again may produce different signed bytes even for the same plist.
+Do not replace the frozen asset lock to disguise a changed48 build. The builder
+verifies the template source against the generator, all signed input hashes, every
+runtime pin, the no-game payload audit and fresh executable/dSYM identities.
+`tools/check_shortcut_setup_ui.py` tests the production setup/status views in an
+isolated simulator fixture. It needs an explicit simulator UUID and a fresh work
+directory. See [the48 report](ios-jit/SHORTCUT_SETUP_BUILD_48.md). The public release
+workflow remains gated; these local changes grant no publication permission.
+
+## Build38: source build with user-owned game preparation
+
+The new game-free recipe uses public pinned inputs plus an explicit FMOD SDK.
+It requires Python3.12 or later, CMake and Xcode26.6 /17F113.
+It does not consume a Celeste ZIP at build time or require the private compiled
+capsule. The app prepares the user's original ZIP on first launch. See
+[the build38 report](ios-jit/OWNED_GAME_BUILD_38.md) for exact provenance,
+recovery, validation and private installation status.
+
+```sh
+python3 tools/build_public_release.py --work .build/my-source-build \
+  --output .build/my-source-build/output --fmod-sdk '/path/to/FMOD Programmers API'
+```
+
+FMOD1.10.09 / build97915 is required. This explicit SDK option is a private local
+build. Public mode remains blocked until permission and authorized SDK delivery
+are recorded. The historical recipes below retain their original purposes.
+
+## Build39: native shortcut integration with the exact38 runtime
+
+The independently compiled launcher is `experiments/ios-jit/launcher-shortcuts`.
+`tools/build_shortcuts.py` requires the exact three38 receipts pinned in its
+`Dependencies.json`; it produces a fresh executable and dSYM, retaining all199
+managed assemblies and16 dependency archives. `tools/build_shortcut_files.py`
+generates inspectable plist/action JSON and signs importable shortcuts with the
+macOS Shortcuts CLI. See [reproduction and validation](ios-jit/SHORTCUT_BUILD_39.md).
+The public release configuration stays on frozen38 and remains blocked on FMOD.
+
+## Build40: LiveContainer shortcut routing correction
+
+Build40's separate `launcher-shortcut-routing` lane fixes LiveContainer's helper
+availability preflight while retaining the39 runtime and shortcut. Use
+`tools/build_shortcut_routing.py` and `tools/check_shortcut_routing.py`; the same
+three dependency receipts are required. See [the build40 report](ios-jit/SHORTCUT_ROUTING_BUILD_40.md).
+
+## Build41: Remote Pairing service probe
+
+Build41 in `launcher-shortcut-tunnel` replaces the legacy service probe with a
+bounded Remote Pairing hello. Use `tools/build_shortcut_tunnel.py` and
+`tools/check_shortcut_tunnel.py` with the same dependency receipts. The existing
+shortcut is unchanged; see [the build41 report](ios-jit/SHORTCUT_TUNNEL_BUILD_41.md).
+
+## Shortcut revision42: explicit text conditions
+
+`tools/build_shortcut_files42.py` signs corrected shortcuts compatible with app41.
+`tools/check_shortcut_files42.py` exercises36 generated branches and36 isolated
+comparisons in the Mac's Apple WorkflowKit engine, including12 original failure
+controls. The host-only fixture permits only If and Comment actions; it writes no
+shortcut library and changes no radios. It requires macOS with WorkflowKit and
+does not form part of the iOS app or portable CI. See [the report](ios-jit/SHORTCUT_FILES_42.md).
+No42 IPA is produced; all41 application inputs remain frozen.
+
+## Build43: explicit helper guest launch and typed shortcut output
+
+`launcher-shortcut-guests` retains41's exact game runtime and adds shared-helper
+discovery before using LiveContainer's explicit guest-launch route. Use
+`tools/build_shortcut_guests.py` and `tools/check_shortcut_guests.py` with the same
+three dependency receipts. `tools/build_shortcut_files43.py` signs the matching
+shortcut; `tools/check_shortcut_files43.py` runs53 isolated Apple condition/output
+checks, including original failure controls. See [the build43 report](ios-jit/SHORTCUT_GUESTS_BUILD_43.md).
+
+## Shortcut44: helper startup and natural completion with installed app43
+
+`tools/build_shortcut_files44.py` produces the shortcut-only update; no44 IPA is
+needed. It opens the selected LC2 helper before dispatching one original JIT URL,
+then finishes naturally without Stop and Output. `tools/check_shortcut_files44.py`
+runs42 generated branch/routing cases,43 isolated Apple condition/completion cases
+and two separate Foundation regex controls. It does not run radios, URLs or the
+ActionKit Replace Text action. See [the44 report](ios-jit/SHORTCUT_FILES_44.md).
+The frozen package has212 captured inputs; further changes need44.
+
+## Shortcut45: typed URL handoff with installed app43
+
+`tools/build_shortcut_files45.py` inserts URL actions before Open URL, preserving
+long inline requests. `tools/check_shortcut_files45.py` checks36 generated branches,
+37 isolated Apple conditions/completion cases and18 actual content conversions
+using app43's native URL builders. Four original plain-text cases reproduce the
+lost query value. It opens no URL or app and executes no JIT script; ActionKit
+URL/Open URL and end-to-end callbacks still require the phone. See
+[the45 report](ios-jit/SHORTCUT_FILES_45.md). No45 IPA or runtime rebuild is needed.
+
+## Shortcut46: explicit URL inputs with installed app43
+
+The phone and actual Mac Shortcuts runner reproduce45's immediate invalid-URL
+error: Open URL has no input binding. `tools/build_shortcut_files46.py` connects
+both Open URL actions explicitly to the preceding typed URL output.
+`tools/check_shortcut_files46.py` rejects12 broken connection variants, passes36
+generated branches and retains the37 Apple conditions/completion and18 Apple
+content-conversion cases. It reuses the exact45 fixtures. The positive action pair
+and phone return/JIT remain physical gates; see [the46 report](ios-jit/SHORTCUT_FILES_46.md).
+No46 IPA is produced. All11 implementation inputs are frozen; further changes need47.
+
+## Build47: complete launch from verified native JIT
+
+`tools/build_shortcut_completion.py` builds the new `launcher-shortcut-completion`
+lane with the exact43 runtime and the unchanged46 shortcut. The reducer no longer
+waits for an additional JIT callback once native execution passes and the debugger
+is detached. `tools/check_shortcut_completion.py` passes132 native controls,36
+branches and12 rejected URL connections; the original43 reducer fails the focused
+missing-callback control. Networking receipt/recovery checks remain required.
+The verified47 package freezes221 inputs and has a new executable/dSYM UUID.
+See [the47 report](ios-jit/SHORTCUT_COMPLETION_BUILD_47.md); physical47 acceptance
+is separate from the owner's46/app43 JIT and game-start result.
+
+## Historical pinned-capsule builds
+
 The local Cabrillo folder independently reproduces accepted build28 and builds
 the cooperative loading lanes30/31 and native presentation refinement32.
 It includes source plus a Git-ignored copy of the pinned dependencies. The

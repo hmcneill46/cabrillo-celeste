@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.22.3",
+  "build_number": "43",
+  "build_id": "launcher-shortcut-guests-20260926-43",
+  "scope": "Explicit LiveContainer helper guest launch and reliable shortcut return with the exact build41 runtime",
+  "device_jit_tested": false
+}

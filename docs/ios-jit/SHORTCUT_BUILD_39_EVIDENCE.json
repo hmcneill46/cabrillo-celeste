@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-26T08:45:13.101095+00:00",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.22.0",
+    "build_number": "39",
+    "build_id": "launcher-shortcuts-20260926-39",
+    "scope": "Home Screen shortcut, verified VPN/JIT handoff and recoverable travel networking; device acceptance pending",
+    "device_jit_tested": false
+  },
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.22.0",
+    "build_number": "39",
+    "ipa_sha256": "dcf55b9d891f1c98a0885e798e638a49bf54700032f67a83cbdabdfd19a7a2a0",
+    "bytes": 18692002,
+    "uuid": "750fa3a8d4143f3fb813053143dca898",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": false,
+    "distribution_blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "source_inputs": 210,
+  "runtime_comparison": {
+    "status": "PASS_EXACT_BUILD38_RUNTIME",
+    "managed_assemblies": 199,
+    "native_archives": 16,
+    "managed_receipt_sha256": "9233d4df8774eed4f3eec462fe19e1f045f5ba041062fe959c84eb598d9576a2",
+    "unchanged_resources": [
+      "OwnedGameRecipe.json",
+      "GameContentManifest.json",
+      "celeste-jit-probe.js"
+    ],
+    "new_native_uuid": "750fa3a8d4143f3fb813053143dca898"
+  },
+  "gates": {
+    "native_launch_controls": {
+      "status": "PASS_HOST",
+      "checks": 54,
+      "receipt": ".build/shortcut39-controls-b/receipt.json"
+    },
+    "generated_shortcut_branches": {
+      "status": "PASS_HOST_INTERPRETER",
+      "checks": 36,
+      "receipt": ".build/shortcut39-controls-b/receipt.json"
+    },
+    "shortcut_views": {
+      "status": "PASS_SIMULATOR",
+      "checks": 4,
+      "receipt": ".build/shortcut39-ui-b/receipt.json"
+    },
+    "signed_import_files": {
+      "status": "PASS_APPLE_SIGNING",
+      "receipt": ".build/shortcut39-files-a/receipt.json"
+    },
+    "icloud": {
+      "status": "PASS_UPLOADED",
+      "files": 11,
+      "receipt": "artifacts/cabrillo-build39-final/delivery.json"
+    },
+    "wifi_staging": {
+      "status": "PASS_COPIED",
+      "shortcut_readback_sha256": "8cc086b112f96f9a25b18e4261e61e66fb06aa39009e1bcb371cbfbf3c14b5d9",
+      "installed": false
+    },
+    "phone_automatic_wifi": {
+      "status": "PENDING"
+    },
+    "phone_travel": {
+      "status": "PENDING"
+    },
+    "phone_gameplay_quit": {
+      "status": "PENDING"
+    },
+    "independent_export": {
+      "status": "PENDING"
+    },
+    "public_source_audit": {
+      "status": "PASS",
+      "files": 3407,
+      "receipt": ".build/shortcut39-public-audit.json"
+    },
+    "python_release_controls": {
+      "status": "PASS",
+      "checks": 20,
+      "log": ".build/shortcut39-python-tests.log"
+    },
+    "workflow_syntax": {
+      "status": "PASS",
+      "tool": "actionlint1.7.12",
+      "github_run": false
+    },
+    "frozen_predecessors": {
+      "status": "PASS",
+      "builds": {
+        "34": 92,
+        "35": 174,
+        "36": 183,
+        "37": 220,
+        "38": 230
+      }
+    }
+  },
+  "physical_acceptance": false,
+  "github_written": false,
+  "next_unused_build": 40,
+  "phone_review_20260926": {
+    "status": "FAIL_HELPER_AVAILABILITY_PREFLIGHT",
+    "installed_build": "launcher-shortcuts-20260926-39",
+    "shortcut_launch_received": true,
+    "vpn_or_jit_handoff_reached": false,
+    "cause": "LiveContainer host canOpenURL denies localdevvpn scheme query although the guest declares it and LocalDevVPN is installed. Build39 incorrectly interprets that denial as missing setup.",
+    "remote_shortcuts_launch": "devicectl normal activation and URL payload; no debugger attached",
+    "private_evidence_root": ".private/device-evidence/2026-09-26/phone39/wifi-test-a",
+    "sha256": {
+      "BuildInfo.json": "086c41510f38a0a5c05e74484840e76f2cb332c7d29275c69edad9b5903942cf",
+      "LCAppInfo.plist": "b3b9cb0d9b1cac741c853701ab6a09a4f4f7f87b1462ac5c0ea81c3a02762ece",
+      "after-remote-shortcut.jsonl": "a20d8e7dcf3c6396f5531cedb4bcba58f8bd57b3e42fcbca92aeb2bf63bb444d",
+      "diagnostics/session-822273c4-e12e-466c-9ff0-173d30b531a9.jsonl": "d2c728d9cea19b71dec1801e864bc1c49f3b530b755e9ae1aa357bc54104f37a",
+      "diagnostics/console-822273c4-e12e-466c-9ff0-173d30b531a9.txt": "2967593dc4940f8f031efc74fdf49482383ddfe425b5477cab30f6074ed93132"
+    },
+    "next_build": "40"
+  }
+}

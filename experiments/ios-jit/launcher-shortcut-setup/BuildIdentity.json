@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.23.0",
+  "build_number": "48",
+  "build_id": "launcher-shortcut-setup-20260928-48",
+  "scope": "In-app signed Home Screen shortcut setup with explicit guest/data routing and current JIT provider settings",
+  "device_jit_tested": false
+}

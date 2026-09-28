@@ -13,13 +13,33 @@ The name comes from Cerro Cabrillo in California. The source repository is
 
 [GitHub Actions](https://github.com/hmcneill46/cabrillo-celeste/actions/workflows/ci.yml)
 checks the public source on pushes and pull requests, including 119 native save
-and backup checks. A separate version-tag workflow is prepared for unsigned IPA
+and backup checks,185 native shortcut checks and the generated shortcut branches.
+A separate version-tag workflow is prepared for unsigned IPA
 releases with source/dependency hashes and GitHub build attestations.
 
-**IPA publishing is currently blocked**: the private app contains prepared game
-code and FMOD libraries, and its dependency build is not yet public. No existing
-IPA is uploaded by CI. See [the release guide](docs/RELEASING.md) for the remaining
-work, release controls and what provenance can establish.
+**IPA publishing remains blocked on FMOD permission.** [Build38](docs/ios-jit/OWNED_GAME_BUILD_38.md)
+prepares the user's original Celeste ZIP after import and caches the result.
+Its IPA contains no original/prepared game code or original game assets, and its
+public dependencies build without the private capsule. The first launch does
+extra preparation; later launches reuse it. Device acceptance remains separate.
+See [the release guide](docs/RELEASING.md) for the permission and provenance gates.
+
+## Home Screen launch in development
+
+[Build50](docs/ios-jit/SHORTCUT_CELLULAR_BUILD_50.md) corrects the cellular launch
+sequence: connect the local VPN route, enable Airplane Mode, then check the developer
+service before JIT. Native execution, debugger detach and network restoration
+remain required. The owner's fresh cellular-start run now passes all26 native JIT
+checks, automatic return and restoration; USB logs verify the31.3-second launch.
+
+**Settings → Add Home Screen shortcut** exports bundled Apple-signed templates for
+standalone or LiveContainer use. The user imports the file and adds its Home icon.
+Keep the accepted revision49 shortcut when updating to50; no reimport is needed.
+49 fixes the disappearing setup text and has owner-confirmed phone import plus
+actual Apple simulator import/URL execution evidence. App47/shortcut46 retains its
+scoped phone Wi-Fi/Travel passes. [Setup and test steps](docs/HOME_SCREEN_SHORTCUT.md)
+explain helper requirements, recovery and remaining prompts. This is a private
+development delivery.
 
 ## Related project
 
@@ -95,31 +115,28 @@ For development, start with [the current handoff](HANDOFF.md),
 
 ## Build locally
 
-The owner's local development folder contains the pinned private inputs needed
-for the current build. They are intentionally excluded from Git; a fresh clone
-needs these inputs supplied separately. You also need Python3 and **Xcode26.6**,
-installed as `/Applications/Xcode-26.6.app`; no old checkout is needed by the
-standalone build command once the inputs are present.
+The build38 recipe needs Python3.12 or later, CMake, **Xcode26.6 /17F113** and an explicitly
+supplied FMOD1.10.09 SDK. It downloads checksum-pinned public dependencies and
+never reads a game ZIP during the build:
 
 ```sh
-python3 tools/build.py --reproduce-build28
+python3 tools/build_public_release.py --work .build/my-source-build \
+  --output .build/my-source-build/output --fmod-sdk '/path/to/FMOD Programmers API'
 ```
 
-The command requires empty output/work folders. To retain earlier build evidence,
-choose another `--work .build/<name>` and `--output artifacts/<name>`.
-It recompiles the Swift launcher, ZIP/YAML parsers, native bridge and generated
-symbol tables, compiles icon assets, links the app and packages an unsigned IPA.
-It reuses the accepted managed/runtime libraries, as build28 did.
+This creates a private local test build. Public publishing stays gated on FMOD
+permission and authorized SDK delivery. Set `DEVELOPER_DIR` if Xcode is installed
+somewhere other than `/Applications/Xcode-26.6.app/Contents/Developer`.
 
-See [build inputs and reproduction](docs/BUILDING.md) for the precise scope,
-historical metadata policy, and source/private dependency distinction. A GitHub
-clone alone cannot contain owner-owned game IL or licensed FMOD binaries. The
-local `.private` dependency capsule must be backed up separately.
+Historical reproduction uses `tools/build.py --reproduce-build28` with the
+ignored pinned `.private` capsule. See [the build guide](docs/BUILDING.md) for
+that separate scope; preserve and back up earlier inputs and artifacts.
 
 ## Repository layout
 
 | Location | Reason it is here |
 | --- | --- |
+| `experiments/ios-jit/launcher-owned-game` | Build38 source-built bootstrap and preparation of the user's original game |
 | `experiments/ios-jit/launcher-catalogue` | Accepted build28 native browser and preserved source |
 | `experiments/ios-jit/launcher-first-frame` | Build32 passive startup display and first-frame game handoff |
 | `experiments/ios-jit/launcher-save-transfers` | Build34 per-slot transfers, profile backups and scoped numerical repair |
@@ -135,7 +152,8 @@ local `.private` dependency capsule must be backed up separately.
 | `.build`, `artifacts` | Ignored fresh build output, symbols, receipts and unsigned IPAs |
 
 Historical experiment builders retain their original paths as documentation.
-Use `tools/build.py` for this checkout's independent build. They are not a promise
+Use `tools/build_public_release.py` for the new recipe and `tools/build.py` for
+accepted28 reproduction. Historical tools are not a promise
 that every historical failed prototype can be rebuilt from the current capsule.
 The [file inventory](docs/MIGRATION_FILE_INVENTORY.json) records a reason and hash
 for each imported source/document file.
@@ -158,6 +176,6 @@ report and evidence ledger retain their earlier, pre-publication Git snapshot.
 Do not commit `.private`, game files, FMOD SDKs, signing material, device logs or
 generated IPAs.
 
-The launcher remains a private development build. Public original-game preparation
-and FMOD redistribution are still release gates. The inherited source license
-and dependency notices are retained; they do not grant rights to game or SDK data.
+The launcher remains a private development build while FMOD redistribution
+permission is pending. Users supply their original game files separately. Source
+licenses and dependency notices do not grant rights to game or SDK data.

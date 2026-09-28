@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.22.4",
+  "build_number": "47",
+  "build_id": "launcher-shortcut-completion-20260926-47",
+  "scope": "Complete shortcut JIT from verified native execution and debugger detach while retaining exact43 runtime and shortcut46",
+  "device_jit_tested": false
+}

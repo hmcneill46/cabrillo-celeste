@@ -1,0 +1,463 @@
+{
+  "schema": 1,
+  "updated_utc": "2026-09-28T14:19:28.606920+00:00",
+  "build": {
+    "schema": 1,
+    "product": "Cabrillo",
+    "version": "0.22.4",
+    "build_number": "47",
+    "build_id": "launcher-shortcut-completion-20260926-47",
+    "scope": "Complete shortcut JIT from verified native execution and debugger detach while retaining exact43 runtime and shortcut46",
+    "device_jit_tested": false
+  },
+  "source_inputs": 221,
+  "source_frozen": true,
+  "next_implementation_identity": 48,
+  "artifact": "artifacts/cabrillo-build47-final",
+  "shortcut_retained": 46,
+  "cause": {
+    "observation": "Owner automatic return, native green and successful Celeste start with46/app43; Home Screen indicator later falsely times out",
+    "screenshot": ".private/device-evidence/2026-09-26/shortcut46/after-success.png",
+    "fresh_journal_collected": false,
+    "original43_failure_reproduced": true
+  },
+  "host_controls": {
+    "status": "PASS_HOST_SHORTCUT_CONTROLS",
+    "native": "PASS 132 shortcut launch controls",
+    "shortcut_branches": 36,
+    "checks": [
+      "home livecontainer",
+      "livecontainer prepare on on",
+      "livecontainer prepare on off",
+      "livecontainer prepare off on",
+      "livecontainer prepare off off",
+      "livecontainer isolate on on",
+      "livecontainer isolate on off",
+      "livecontainer isolate off on",
+      "livecontainer isolate off off",
+      "livecontainer jit on on",
+      "livecontainer jit on off",
+      "livecontainer jit off on",
+      "livecontainer jit off off",
+      "livecontainer restore on on",
+      "livecontainer restore on off",
+      "livecontainer restore off on",
+      "livecontainer restore off off",
+      "unknown stage livecontainer",
+      "home standalone",
+      "standalone prepare on on",
+      "standalone prepare on off",
+      "standalone prepare off on",
+      "standalone prepare off off",
+      "standalone isolate on on",
+      "standalone isolate on off",
+      "standalone isolate off on",
+      "standalone isolate off off",
+      "standalone jit on on",
+      "standalone jit on off",
+      "standalone jit off on",
+      "standalone jit off off",
+      "standalone restore on on",
+      "standalone restore on off",
+      "standalone restore off on",
+      "standalone restore off off",
+      "unknown stage standalone"
+    ],
+    "rejected_broken_url_connections": 12,
+    "original43_missing_callback_failure_reproduced": true,
+    "physical_device_tested": false,
+    "source_sha256": {
+      "experiments/ios-jit/launcher-shortcut-completion/tests/ShortcutSessionTests.m": "c412e761f21a26ebb32247b317a7f7cf0450c41bb0d5e8f53cf768fdd3004e7a",
+      "experiments/ios-jit/launcher-shortcut-completion/src/CJShortcutSession.m": "254b7e59fb0ad475fa255aee25a997ea0e103d5c9c5e7ade30414612ce0cb3fb",
+      "experiments/ios-jit/launcher-shortcut-completion/src/CJShortcutPlatform.m": "dbc64dadf5967215dbc33a2bdff16a0ba5175dd6a6a11edeecdd2b6215f7f208",
+      "experiments/ios-jit/launcher-shortcut-completion/src/CJPlatformOptions.m": "d425482dcfe196eaf05641b48977812ee07921083c4af827951ea40ae998f9e1",
+      "experiments/ios-jit/launcher-shortcut-guests/src/CJShortcutSession.m": "1ec187c8098069f4f4eb4fe0190f52404d024f2f519f5d1e725f7f11115b28a1",
+      "tools/check_shortcut_completion.py": "6263755a2c00bf114918f637b76f468d361499343f920874f3337ff22816de18",
+      "tools/build_shortcut_files46.py": "9a40e5c77b3bc4f9f1cfe9bc2a091babc5262164f3d840aca964ac4626b4ffb0",
+      "tools/check_shortcut_files46.py": "94bd88096d14494736afccc52342a6602bc3b5aa9af3f796ff6ab40d523a122e"
+    },
+    "rechecked_20260928": {
+      "receipt": ".build/shortcut47-controls-usb-review-20260928/receipt.json",
+      "native": 132,
+      "shortcut_branches": 36,
+      "rejected_broken_url_connections": 12,
+      "original43_failure_control": true,
+      "physical_device_tested": false
+    }
+  },
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.22.4",
+    "build_number": "47",
+    "ipa_sha256": "78e259c6dfe9760cdb3df26a7421f290e59fce9a3acdd878616ed94731c71bd8",
+    "bytes": 18697409,
+    "uuid": "e931080600f83955a66dc1dd3e0b38cd",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": false,
+    "distribution_blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "runtime_comparison": {
+    "status": "PASS_EXACT_BUILD43_RUNTIME",
+    "managed_assemblies": 199,
+    "native_archives": 16,
+    "ui_sources_unchanged": true,
+    "changed_native_sources": [
+      "CJShortcutSession.m"
+    ],
+    "shortcut_revision": 46,
+    "shortcut_protocol": "cabrillo-39"
+  },
+  "frozen_comparison": {
+    "status": "PASS_RECORDED_FROZEN_INPUTS",
+    "builds": [
+      {
+        "build": 35,
+        "inputs": 174
+      },
+      {
+        "build": 36,
+        "inputs": 183
+      },
+      {
+        "build": 37,
+        "inputs": 220
+      },
+      {
+        "build": 38,
+        "inputs": 230
+      },
+      {
+        "build": 39,
+        "inputs": 210
+      },
+      {
+        "build": 40,
+        "inputs": 210
+      },
+      {
+        "build": 41,
+        "inputs": 210
+      },
+      {
+        "build": 42,
+        "inputs": 6
+      },
+      {
+        "build": 43,
+        "inputs": 212
+      },
+      {
+        "build": 44,
+        "inputs": 4
+      },
+      {
+        "build": 45,
+        "inputs": 11
+      },
+      {
+        "build": 46,
+        "inputs": 11
+      },
+      {
+        "build": 47,
+        "inputs": 221
+      }
+    ]
+  },
+  "delivery": {
+    "icloud_folder": "Celeste JIT Tests/0.22.4-build-47",
+    "kit_files": 6,
+    "confirmed_upload": true,
+    "files": {
+      "INSTALL.md": {
+        "bytes": 427,
+        "sha256": "788222be3c47dfef35d731f3672a1187ff33fd9dd9cf337936224bdc14226f86"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "bytes": 3172,
+        "sha256": "59433fd4ec998b2aa86cb5dd2dc4f9defdc3ec9f9a7e5221513842d3ea8f06f4"
+      },
+      "TEST-IDENTITY.json": {
+        "bytes": 1007,
+        "sha256": "5ca9e5af210bcecc1244c7af77cb12512a22e5b4170bf71f31a701bebe1d26ba"
+      },
+      "README-FIRST.txt": {
+        "bytes": 1657,
+        "sha256": "6c7092f2c36635a0c58fa6c2e8ec217f7962b3ca702b6c00cda88a594f660031"
+      },
+      "Cabrillo-0.22.4-build-47-unsigned.ipa": {
+        "bytes": 18697409,
+        "sha256": "78e259c6dfe9760cdb3df26a7421f290e59fce9a3acdd878616ed94731c71bd8"
+      },
+      "SHA256SUMS.txt": {
+        "bytes": 438,
+        "sha256": "7d47c97233d44eaa1c670dfcab98517f12c01299eeedf094430e8a0f4a4a0f31"
+      }
+    },
+    "phone_staged": false,
+    "phone_installed": true,
+    "cloud_state": "ALL_SIX_UPLOADED_NO_ERRORS",
+    "retired_superseded_ipa": 41,
+    "retired_local_bytes_verified": true,
+    "results_preserved": true,
+    "owner_test_requested": true,
+    "phone_installation_evidence": "USB BuildInfo and native journals verify launcher-shortcut-completion-20260926-47 on 28 September",
+    "owner_test_pending": false
+  },
+  "physical": {
+    "automatic": "PASS_WIFI_AND_CELLULAR_START_TO_TRAVEL",
+    "travel_recovery": "PASS_FOUR_FRESH_TRAVEL_RUNS_AND_RETAINED_FRESH_PROCESS_RECOVERY; ORIGINAL_MISSING_RESTORE_RECEIPT_UNEXPLAINED",
+    "game_quit": "BUILD47_GAME_START_AND_GAMEPLAY_OBSERVED; NORMAL_QUIT_PENDING",
+    "prior46": "OWNER_AUTOMATIC_RETURN_NATIVE_GREEN_CELESTE_START; APP43_FALSE_STATUS_TIMEOUT",
+    "owner_observation_date": "2026-09-27",
+    "owner_home_status": "JIT is ready for this running app. Wi-Fi and cellular settings were left unchanged.",
+    "fresh47_journal_collected": true,
+    "results47_files": 0,
+    "installation_metadata_verified": true,
+    "travel_collection": "USB_JOURNALS_AND_SCREENSHOTS_COLLECTED",
+    "last_verified_date": "2026-09-28",
+    "results46_files": 0,
+    "usb_review_20260928": {
+      "date": "2026-09-28",
+      "fresh_successes": [
+        {
+          "case": "automatic_wifi_owner_start",
+          "status": "PASS_SCOPED_PHONE_LAUNCH",
+          "journal": ".private/device-evidence/2026-09-28/phone47-travel-b/owner-start/session-3b427654-96e3-4905-b512-16661186e1c1.jsonl",
+          "sha256": "26e034f7e330a8fa192e5a41aff3715b7194554958858f25a0c9c5e63e7b626e",
+          "mode": "auto",
+          "wifi_address_at_selection": true,
+          "vpn_at_start": "preconnected",
+          "travel": false,
+          "remotely_started": false,
+          "native_checks": 26,
+          "known_detached": true,
+          "seconds_to_ready": 25.879,
+          "callbacks": [],
+          "jit_shortcuts_receipt": false,
+          "recovery_record_cleared": true,
+          "game_started": false
+        },
+        {
+          "case": "travel_wifi_owner_start",
+          "status": "PASS_SCOPED_PHONE_LAUNCH",
+          "journal": ".private/device-evidence/2026-09-28/phone47-travel-c/start/session-9c97889e-0bf2-4321-a6a8-00186da7483f.jsonl",
+          "sha256": "929c8ac906960196dda795df6d3d17b49306f0c6c733c82728340d0a01b68ad4",
+          "mode": "travel",
+          "wifi_address_at_selection": true,
+          "vpn_at_start": "preconnected",
+          "travel": true,
+          "remotely_started": false,
+          "native_checks": 26,
+          "known_detached": true,
+          "seconds_to_ready": 27.735,
+          "callbacks": [
+            {
+              "stage": "prepare",
+              "accepted": true,
+              "outcome": "success"
+            },
+            {
+              "stage": "isolate",
+              "accepted": true,
+              "outcome": "success"
+            },
+            {
+              "stage": "restore",
+              "accepted": true,
+              "outcome": "success"
+            }
+          ],
+          "jit_shortcuts_receipt": false,
+          "recovery_record_cleared": true,
+          "game_started": false
+        },
+        {
+          "case": "travel_wifi_remote_start",
+          "status": "PASS_SCOPED_PHONE_LAUNCH",
+          "journal": ".private/device-evidence/2026-09-28/phone47-travel-d/after-jit/session-ce4d9cf9-3c91-42db-9fe6-adfaa135fb42.jsonl",
+          "sha256": "4ce740526174cd881173a1c7d7677bda39a6cd738ac411cf5d720f366ddbf072",
+          "mode": "travel",
+          "wifi_address_at_selection": true,
+          "vpn_at_start": "preconnected",
+          "travel": true,
+          "remotely_started": true,
+          "native_checks": 26,
+          "known_detached": true,
+          "seconds_to_ready": 28.267,
+          "callbacks": [
+            {
+              "stage": "prepare",
+              "accepted": true,
+              "outcome": "success"
+            },
+            {
+              "stage": "isolate",
+              "accepted": true,
+              "outcome": "success"
+            },
+            {
+              "stage": "restore",
+              "accepted": true,
+              "outcome": "success"
+            }
+          ],
+          "jit_shortcuts_receipt": false,
+          "recovery_record_cleared": true,
+          "game_started": false
+        },
+        {
+          "case": "travel_cellular_remote_start",
+          "status": "PASS_SCOPED_PHONE_LAUNCH",
+          "journal": ".private/device-evidence/2026-09-28/phone47-travel-e/final/session-790b44c3-24fd-4f7c-9633-bd56a7111db8.jsonl",
+          "sha256": "f6656ad2ba6e598776371409386f7cddb5743f5584abac0edab94d1eb55c2c8a",
+          "mode": "travel",
+          "wifi_address_at_selection": false,
+          "vpn_at_start": "disconnected",
+          "travel": true,
+          "remotely_started": true,
+          "native_checks": 26,
+          "known_detached": true,
+          "seconds_to_ready": 53.228,
+          "callbacks": [
+            {
+              "stage": "prepare",
+              "accepted": true,
+              "outcome": "success"
+            },
+            {
+              "stage": "isolate",
+              "accepted": true,
+              "outcome": "success"
+            },
+            {
+              "stage": "restore",
+              "accepted": true,
+              "outcome": "success"
+            }
+          ],
+          "jit_shortcuts_receipt": false,
+          "recovery_record_cleared": true,
+          "game_started": false
+        },
+        {
+          "case": "automatic_cellular_remote_start",
+          "status": "PASS_SCOPED_PHONE_LAUNCH",
+          "journal": ".private/device-evidence/2026-09-28/phone47-automatic-cellular/final/session-aae429c2-27a1-4991-83a2-3395d85bf357.jsonl",
+          "sha256": "993d9af9503484d8f3b6b09be1f62bf5973c14a603602ebf05342ee0bad40916",
+          "mode": "auto",
+          "wifi_address_at_selection": false,
+          "vpn_at_start": "disconnected",
+          "travel": true,
+          "remotely_started": true,
+          "native_checks": 26,
+          "known_detached": true,
+          "seconds_to_ready": 31.755,
+          "callbacks": [
+            {
+              "stage": "prepare",
+              "accepted": true,
+              "outcome": "success"
+            },
+            {
+              "stage": "isolate",
+              "accepted": true,
+              "outcome": "success"
+            },
+            {
+              "stage": "restore",
+              "accepted": true,
+              "outcome": "success"
+            }
+          ],
+          "jit_shortcuts_receipt": false,
+          "recovery_record_cleared": true,
+          "game_started": false
+        }
+      ],
+      "original_failure": {
+        "status": "LOCATED_AFTER_NATIVE_JIT_AT_RESTORE",
+        "path": ".private/device-evidence/2026-09-28/phone47-usb-before/session-f8b8906a-68c3-4258-8405-11433d9ccd52.jsonl",
+        "sha256": "1dbca1158f6b76c215fc9cffd95a36d86f72c025ffeed1b30019e662909fe18c",
+        "native_checks": 26,
+        "restore_opened": true,
+        "restore_receipt": false,
+        "cause_proven": false,
+        "code_fix_claimed": false
+      },
+      "recovered_followup": {
+        "status": "PASS_FRESH_PROCESS_NETWORK_RECOVERY_NO_JIT_GRANTED",
+        "path": ".private/device-evidence/2026-09-28/phone47-usb-before/session-0335aad4-ea14-4e03-8d7d-f7b499db3cd3.jsonl",
+        "sha256": "d3b5d2488743628d08f786ec080a66e9f58c0ab416a735c6b0f7f5534a3ad84b"
+      },
+      "late_callback": {
+        "status": "PASS_REJECTED_IN_FRESH_IDLE_PROCESS",
+        "path": ".private/device-evidence/2026-09-28/phone47-usb-before/current-session-9c4bc8ba-ebf0-4bc1-a291-8c2de3fdeb82.jsonl",
+        "sha256": "0f0ea2b2c439c6a140a77539c61815ffc263790b2ddfc489f40bfdb60876ae87"
+      },
+      "repeated_ready": {
+        "status": "PASS_SAME_PROCESS_NO_NEW_JIT_OR_RADIO_WORK",
+        "summary": ".private/device-evidence/2026-09-28/phone47-travel-c/repeated-home/summary.json"
+      },
+      "preservation": {
+        "save_files": 125,
+        "total_bytes": 683136,
+        "changed": [],
+        "added": [],
+        "removed": [],
+        "all_saves_unchanged": true,
+        "preference_changes": {},
+        "shortcut_preferences": {
+          "shortcut.mode": "auto"
+        },
+        "recovery_exists": false
+      },
+      "before_save_manifest": ".private/device-evidence/2026-09-28/phone47-usb-before/save-manifest.json",
+      "after_save_manifest": ".private/device-evidence/2026-09-28/phone47-automatic-cellular/state-final/save-manifest.json",
+      "phone_left": {
+        "mode": "auto",
+        "jit_ready": true,
+        "wifi": true,
+        "cellular": true,
+        "airplane_mode": false,
+        "localdevvpn_connected": true,
+        "recovery_record": false
+      },
+      "control_limits": {
+        "remote_touch": "UNAVAILABLE_REQUIRES_IOS27",
+        "accessibility_press": "NO_OBSERVED_EFFECT",
+        "xctest": "BUILT_NOT_INSTALLED_FREE_DEVELOPER_THREE_APP_LIMIT",
+        "apps_uninstalled": 0,
+        "extra_debugger_attached": false,
+        "coredevice_url_launch": "INITIAL_TIMEOUTS_THEN_WORKING",
+        "settings": "OWNER_UI_CHANGE_AND_RESTORE; USB_PLIST_EDIT_DID_NOT_OVERRIDE_CACHED_DEFAULTS"
+      },
+      "frozen_input_review": ".private/device-evidence/2026-09-28/phone47-usb-before/frozen47-review.json",
+      "remaining": [
+        "Original missing restoration receipt cause",
+        "Entirely outside Wi-Fi coverage",
+        "Alternate radio restore presets",
+        "User cancellation on device",
+        "Different current LiveContainer guest",
+        "Build47 normal game Quit/native return",
+        "Independent diagnostic export",
+        "Earlier native save-manager/iPad38/sustained120 gates"
+      ],
+      "source_review": "Shortcut46 Home uses generic open-url. Plain LiveContainer reopened YouTube as last guest; no different-guest shortcut failure was reproduced.",
+      "app_or_shortcut_implementation_changed": false
+    }
+  },
+  "release": {
+    "github_write": false,
+    "public_ipa": false,
+    "blockers": [
+      "fmod_redistribution"
+    ]
+  },
+  "packaging_metadata_note": "Embedded build/device_tested flags describe the frozen package-time state; later physical results are in physical.usb_review_20260928."
+}
