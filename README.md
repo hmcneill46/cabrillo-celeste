@@ -9,25 +9,33 @@ The launcher uses SwiftUI; the game and its mods run in the same Mono JIT runtim
 The name comes from Cerro Cabrillo in California. The source repository is
 [hmcneill46/cabrillo-celeste](https://github.com/hmcneill46/cabrillo-celeste).
 
-## CI and releases
+## Downloads and verified builds
 
-[GitHub Actions](https://github.com/hmcneill46/cabrillo-celeste/actions/workflows/ci.yml)
-checks the public source on pushes and pull requests, including 119 native save
-and backup checks,185 native shortcut checks and the generated shortcut branches.
-A separate version-tag workflow is prepared for unsigned IPA
-releases with source/dependency hashes and GitHub build attestations.
+[GitHub Actions](https://github.com/hmcneill46/cabrillo-celeste/actions/workflows/release.yml)
+builds unsigned iPhone/iPad IPAs from the public source. Published versions appear
+under [Releases](https://github.com/hmcneill46/cabrillo-celeste/releases).
+Normal pushes run source checks; a maintainer chooses when to publish a version
+tag. Manual trial builds produce downloadable Actions artifacts without a Release.
 
-**FMOD has confirmed runtime redistribution is allowed in a built application.**
-The owner supplied Firelight's reply on30 September2026. Developers building from
-source must obtain the SDK from FMOD; Cabrillo must not redistribute SDK components.
-Release packaging and CI still need to implement that distinction.
-[Build38](docs/ios-jit/OWNED_GAME_BUILD_38.md)
-prepares the user's original Celeste ZIP after import and caches the result.
-Its IPA contains no original/prepared game code or original game assets, and its
-public dependencies build without the private capsule. The first launch does
-extra preparation; later launches reuse it. Device acceptance remains separate.
-See [the release guide](docs/RELEASING.md) for the permission record and remaining
-packaging/provenance work.
+**Verified trial:** [version 0.24.1 / build 52](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793/artifacts/11083060317) was built and
+[verified successfully by Actions](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793) on 30 September 2026. This is a manual
+run artifact, available for 14 days with GitHub sign-in. No tagged Release has
+been published yet; physical testing of this newly compiled build is separate.
+
+You need **iOS15 or later, a compatible installation/JIT setup, and your own
+Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game
+code or original game assets. Cabrillo prepares your imported copy on its first
+game launch and reuses that cache afterward.
+
+**FMOD runtime code is included with Firelight's permission. Players do not need
+an FMOD account.** Source developers must download their own SDK from FMOD;
+Cabrillo does not redistribute SDK components.
+
+Each build includes checksums, a package audit and source/dependency provenance.
+GitHub attestations tie the downloaded files to the public workflow and commit.
+FMOD, .NET/NuGet binaries and signed Shortcut resources are declared inputs;
+this is not a claim that every dependency is compiled from source or that separate
+builds are byte-identical. See [how releases work and how to verify a download](docs/RELEASING.md).
 
 ## Home Screen launch in development
 
@@ -39,12 +47,12 @@ checks, automatic return and restoration; USB logs verify the31.3-second launch.
 
 **Settings → Add Home Screen shortcut** exports bundled Apple-signed templates for
 standalone or LiveContainer use. The user imports the file and adds its Home icon.
-Keep the accepted revision49 shortcut when updating to50; no reimport is needed.
+The release retains the accepted revision49 shortcut; existing users need no reimport.
 49 fixes the disappearing setup text and has owner-confirmed phone import plus
 actual Apple simulator import/URL execution evidence. App47/shortcut46 retains its
 scoped phone Wi-Fi/Travel passes. [Setup and test steps](docs/HOME_SCREEN_SHORTCUT.md)
-explain helper requirements, recovery and remaining prompts. This is a private
-development delivery.
+explain helper requirements, recovery and remaining prompts. New source builds
+retain this functionality; their device acceptance is recorded separately.
 
 ## Related project
 
@@ -66,7 +74,7 @@ permission belongs to Cabrillo's own signature and provisioning profile.
 The extra allowance depends on the device and does not add RAM. See the
 [setup guide](docs/INCREASED_MEMORY_LIMIT.md) for the steps and verification.
 
-## Current platform build
+## Platform support and device evidence
 
 [Build35](docs/ios-jit/PLATFORMS_BUILD_35.md) adds iOS15 support, selectable JIT
 routes and optional120Hz display callbacks for Motion Smoothing. Real base-game
@@ -95,7 +103,7 @@ It also repairs hair and related seeker/tutorial/lava arithmetic errors. The
 uploaded phone kit. The owner deferred33 testing for one combined34 gate.
 Phone34 acceptance remains pending; host/simulator checks do not replace it.
 
-## Current state
+## Earlier device acceptance
 
 Build28 adds native mod browsing, categories, five sort orders, details and
 reviewed installations. It is [physically accepted](docs/ios-jit/BUILD_28_CATALOGUE_ACCEPTANCE.md)
@@ -118,25 +126,26 @@ For development, start with [the current handoff](HANDOFF.md),
 [the roadmap](docs/ios-jit/NATIVE_LAUNCHER_ROADMAP_2026-09-12.md), and
 [the original feasibility audit](docs/ios-jit/FEASIBILITY_AUDIT.md).
 
-## Build locally
+## Developers: build locally
 
-The build38 recipe needs Python3.12 or later, CMake, **Xcode26.6 /17F113** and an explicitly
-supplied FMOD1.10.09 SDK. It downloads checksum-pinned public dependencies and
-never reads a game ZIP during the build:
+Use macOS, Python3.12 or later, CMake, Mono6.14.1 (including `sn`) and **Xcode26.6 /17F113**. Download your own
+**FMOD Engine1.10.09 iOS SDK** from [fmod.com](https://www.fmod.com/download), then:
 
 ```sh
-python3 tools/build_public_release.py --work .build/my-source-build \
+python3 tools/build_release52.py --work .build/my-source-build \
   --output .build/my-source-build/output --fmod-sdk '/path/to/FMOD Programmers API'
 ```
 
-This frozen recipe creates a private local test build. FMOD runtime permission
-is now recorded; public release tooling still needs the SDK/provenance update
-described in the release guide. Set `DEVELOPER_DIR` if Xcode is installed
-somewhere other than `/Applications/Xcode-26.6.app/Contents/Developer`.
+This fetches pinned public dependencies and compiles the current app with your
+licensed FMOD input. It needs no game ZIP, private compiled capsule or Apple
+signing account. Keep SDK files and credentials out of Git and shared build outputs.
+Set `DEVELOPER_DIR` if your Xcode path differs from
+`/Applications/Xcode-26.6.app/Contents/Developer`.
 
-Historical reproduction uses `tools/build.py --reproduce-build28` with the
-ignored pinned `.private` capsule. See [the build guide](docs/BUILDING.md) for
-that separate scope; preserve and back up earlier inputs and artifacts.
+[The build guide](docs/BUILDING.md) covers requirements and outputs.
+[The release guide](docs/RELEASING.md) explains the protected Actions environment,
+why FMOD is fetched separately, and which files may be published. Historical
+reproduction commands remain documented separately.
 
 ## Repository layout
 
@@ -154,11 +163,12 @@ that separate scope; preserve and back up earlier inputs and artifacts.
 | `modern-ios/Assets/TouchControls` | The reused touch glyph source artwork and its license |
 | `vendor` | Pinned ZIPFoundation/CYaml source and licenses |
 | `tools` | Independent Cabrillo build, import, validation and repository checks |
+| `release` | Current release identity, pinned dependency inputs and verified Shortcut resources |
 | `.private` | Ignored, pinned managed/native inputs and private migration evidence |
 | `.build`, `artifacts` | Ignored fresh build output, symbols, receipts and unsigned IPAs |
 
 Historical experiment builders retain their original paths as documentation.
-Use `tools/build_public_release.py` for the new recipe and `tools/build.py` for
+Use `tools/build_release52.py` for the current recipe and `tools/build.py` for
 accepted28 reproduction. Historical tools are not a promise
 that every historical failed prototype can be rebuilt from the current capsule.
 The [file inventory](docs/MIGRATION_FILE_INVENTORY.json) records a reason and hash
@@ -182,6 +192,6 @@ report and evidence ledger retain their earlier, pre-publication Git snapshot.
 Do not commit `.private`, game files, FMOD SDKs, signing material, device logs or
 generated IPAs.
 
-The launcher remains a private development build while FMOD redistribution
-permission is pending. Users supply their original game files separately. Source
-licenses and dependency notices do not grant rights to game or SDK data.
+FMOD runtime permission is recorded; its SDK remains a separately licensed build
+input. Users supply their original game files. Source licences and dependency
+notices do not grant rights to redistribute game or SDK data.

@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 4628,
+  "file_count": 4627,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -12,11 +12,6 @@
       "reason": "Public source inventory, current native profiles and build50 shortcut checks without private inputs",
       "sha256": "3a5e7210431100f52dc29f8bc5295e3e0cfbffe54de48ba5aca790568acb8f37",
       "bytes": 2522
-    },
-    ".github/workflows/release-tools.yml": {
-      "reason": "Hosted release toolchain and source-generated Apple Shortcut signing capability check",
-      "sha256": "824d4f077396e60af0f0409761600b53b31b0a996863eca219fa492a468a0484",
-      "bytes": 1141
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
@@ -30,13 +25,13 @@
     },
     "AGENTS.md": {
       "reason": "Development constraints, scoped source publication approval through50 and separate physical gates",
-      "sha256": "1e2bebf98df0129a2b91a65b10272efaebeae22204bbe134ebdbf0d64374730d",
-      "bytes": 36800
+      "sha256": "341e32fb6deb6820006ebdc6a3392fb03432b4df13aedd1c03ae4a5fdf225d47",
+      "bytes": 36981
     },
     "HANDOFF.md": {
       "reason": "Active delivery, exact dependency receipts and remaining physical checks for the next development turn",
-      "sha256": "2649aff370c3e313f4add89285f46446c44a97e9c492705ea707941de9da0960",
-      "bytes": 94691
+      "sha256": "d29823209d535e5b0554c3d2659d296320806fd71e6961c63a1b17b573339307",
+      "bytes": 96397
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -46,8 +41,8 @@
     },
     "README.md": {
       "reason": "Public product overview, current source build and FMOD distribution boundary",
-      "sha256": "8c2e7b948ccf7996b381ee7a7e0c99251ed303d2511c8b432e6e2ab5ef8a001f",
-      "bytes": 10805
+      "sha256": "93cc0b2913a21f0421a33e9b8df6adf36b755533d99f93fbdb930ca8c7c6a69f",
+      "bytes": 11701
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -56,8 +51,8 @@
     },
     "docs/BUILDING.md": {
       "reason": "Public owned-game source build plus preserved historical capsule reproduction instructions",
-      "sha256": "338fe937d8bb33372209fc95e941470cf3e18de8dc3915e2f30d6d148faa9c5f",
-      "bytes": 33849
+      "sha256": "69e7293a5f05747556c21f5a9a82d6153d18d91ab4a331a7d3b706d038a08fc6",
+      "bytes": 37696
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -90,8 +85,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Gated CI/source recipe, FMOD input approval and attested release procedure",
-      "sha256": "20f9ccbeb4001f64946ff3fbfe97ed7270de1f8139333bc737d32a3245eb11bf",
-      "bytes": 13426
+      "sha256": "44a85c3afaf2ea4da12a2c45a7917658e3020ecf8e931abf1827b5f48e72157b",
+      "bytes": 12342
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",

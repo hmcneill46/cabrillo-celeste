@@ -8,36 +8,61 @@ preparation, for a fresh development chat opened in
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
 
-## Public Actions integration in progress —30 September
+## Public Actions release build —30 September
 
-The owner requests a complete working hosted IPA build and then README/developer
-instructions. Source/workflow commits, pushes and hosted trials are authorized.
-The owner explicitly permits encrypted GitHub Actions storage of the temporary
-FMOD login. Secrets are configured in `cabrillo-release`, limited to `main`,
-`codex/actions-release` and version tags. Never print or commit their values.
-PR3 has merged into main (`51f2ae9`); this work is on `codex/actions-release`.
+The owner requests a complete hosted IPA build and README/developer guidance,
+and explicitly permits the temporary FMOD login as encrypted Actions secrets.
+Source/workflow commits, pushes and hosted trials are authorized. PR3 is merged
+into main (`51f2ae9`); this work is on `codex/actions-release`. The protected
+`cabrillo-release` environment permits `main`, the trial branch and `v*` tags;
+credentials are confined to the official SDK fetch step. Never print their values.
 
-Fresh public downloads and independent managed/native builds pass locally in
-`.build/release51-local`, with no historical compiled capsule or game ZIP.
-Fresh FMOD preparation matches the accepted runtime archive hashes. Release51
-uses the unchanged build50 launcher sources, fresh dependencies and shortcut49;
-it has its own0.24.0 identity in `release/app51`. Frozen38–50 are preserved.
-The new manifest is `release/public.json`; historical `release/current.json`
-remains unchanged. A complete local package and hosted source build are pending.
+[Hosted run 36682093793](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793) passes the complete fresh build and independent
+verification at commit `789f20e751901cc4538ff25b8033abeb6f339af7`. The
+[trial kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793/artifacts/11083060317) contains five attested files. A separate local download
+check verifies all five attestations, checksums, all247 captured app inputs and
+NLua's strong-name signature. The IPA is18,759,836 bytes, SHA256
+`7392dd6f0199faf0d8501ed690772685e127ee9fd463ed2b3ce59441e719dbe4`.
+This manual run did not create a version tag or GitHub Release.
 
-The hosted toolchain probe confirms Xcode26.6/17F113 and iPhoneOS SDK26.5. Apple
-Shortcut signing needs an iCloud session, unavailable on a fresh runner. The
-reviewed49 signed documents are now public resources with their deterministic
-source. `verify_release_shortcuts.py` validates their Apple certificate chains,
-AEA signatures and every generated action/connection without Apple credentials.
-Only Apple's two observed signing metadata changes are normalized. The existing
-49 templates stay byte-identical. Their certificates expire26 October2027;
-future renewal requires a reviewed signing pass, not an Apple login in Actions.
+All59 Python controls,119 native profile controls,185 native shortcut checks,
+36 generated branches and15 bad-URL controls pass. The complete151-input
+dependency provenance explicitly declares14 source archives, one mixed archive,
+132 public binaries, two licensed FMOD runtime archives and two signed documents.
+The IPA has199 managed assemblies and no bundled original/prepared Celeste code
+or game assets. SDK cleanup passes; only the five allowlisted files are uploaded.
 
-Keep app50/shortcut49 on the phone. This is build/release infrastructure work,
-not a new physical acceptance claim. No public version tag or Release exists yet.
+The downloaded kit, attestations and verification are retained under
+`artifacts/cabrillo-build52-hosted`; raw hosted logs/check reports are ignored in
+`.build/hosted-release52`. All247 captured52 app inputs are frozen at the hosted
+commit above. New app implementation needs53. No phone or iCloud delivery occurs.
 
-## Local FMOD download verification —30 September
+Release52 /0.24.1 uses the unchanged accepted50 launcher sources, freshly built
+public runtime dependencies and the exact signed49 Shortcut documents. Its active
+manifest is `release/public52.json`; local builders use `tools/build_release52.py`
+and their own FMOD SDK. README, BUILDING and RELEASING explain the licensed-input
+boundary, workflow modes and what attestations prove. No game ZIP, prepared Celeste
+code, private compiled capsule, Apple account or private signing key is used.
+
+The full local51 package passes, but its outer wrapper correctly rejected commit
+drift during concurrent workflow edits. Keep that scope separate from hosted52.
+Its245 captured inputs and build50's243 inputs remain byte-exact. Hosted51 exposed
+a missing Mono6.14.1 `sn` prerequisite and an Intel-only NuGet host pin.52 retains
+NLua signing and pins the official Apple Silicon host package separately; all128
+package identities and hashes are checked before native compilation. Preserve
+the51 manifest/compiler/identity and original38 release manifest as frozen history.
+
+Apple Shortcut signing requires an iCloud session. The public reviewed49 signed
+documents instead have their certificate chains, AEA signatures and generated
+actions/connections verified on every Mac run. No new sign-in is needed. Their
+certificates expire26 October2027; renewal needs a reviewed local signing pass.
+
+Keep app50/shortcut49 on the phone. This is source-build/package evidence, not
+physical52 gameplay acceptance. No public version tag or Release has been created.
+The manual Actions kit is available for14 days; tags publish only after rebuilding
+and verifying. Preserve all earlier save-manager/iPad/sustained120/device gates.
+
+## Earlier local FMOD download verification —30 September
 
 The owner requested local CI preparation before Actions and a stop at credentials,
 then supplied a temporary FMOD account for testing. Its credentials were used via
@@ -65,10 +90,9 @@ SDK files: `.private/fmod-ci-2026-09-30-a`; prepared runtime libraries:
 No credentials, account identifiers or signed URLs were written into receipts.
 All48 Python controls pass, including28 new FMOD controls and the retained20.
 
-Next: wire this verified DMG acquisition path into a fresh51 release recipe and
-permitted-binary provenance contract, then run a complete local source IPA build
-before Actions. Preserve frozen38–50 inputs. No GitHub secrets/write, Actions
-run, app identity allocation or change to delivered app50/shortcut49 occurred.
+At this earlier stage no GitHub secrets/write, Actions run or app identity
+allocation had occurred. The completed hosted52 work above supersedes that
+next-step state; delivered app50/shortcut49 remains unchanged.
 
 ## FMOD runtime permission received —30 September
 

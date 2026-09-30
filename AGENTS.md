@@ -43,40 +43,44 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   dependency, not a Git source directory. Build38 uses public source receipts and
   an explicit FMOD SDK instead. Never silently fall back to a legacy checkout.
 
-## FMOD clarification —30 September
+## Public Actions release build —30 September
 
-The owner subsequently requested a complete working GitHub Actions IPA build,
-followed by README/developer documentation explaining FMOD inputs, the workflow
-and release verification. This authorizes source/workflow commits, pushes and
-hosted build trials for this work. Preserve all frozen earlier build inputs;
-new release work uses51. The owner explicitly permits storing the temporary FMOD login as encrypted GitHub
-Actions secrets. They are configured only in the restricted `cabrillo-release`
-environment; never put them in source, shell arguments, reports or public logs.
+The owner requests a complete working GitHub Actions IPA build and README/developer
+instructions. This authorizes source/workflow commits, pushes and hosted trials.
+The owner explicitly permits storing the temporary FMOD login as encrypted GitHub
+Actions secrets. They are confined to the restricted `cabrillo-release` environment
+and the official SDK fetch step. Never print credentials or include them in source,
+shell arguments, reports or public outputs.
 
-The owner supplied an email from Brett Paterson / Firelight Technologies allowing
-release of a built application with FMOD runtime libraries. Source developers must
-download FMOD from fmod.com; redistribution of SDK components is prohibited.
-Treat the runtime redistribution question as answered, subject to those terms.
-See `docs/RELEASING.md` for the local permission record and packaging review.
+The owner supplied Brett Paterson / Firelight's email permitting the FMOD runtime
+inside a built application. Developers must obtain their own SDK from fmod.com;
+SDK components must not be redistributed. This resolves the runtime permission
+gate. Preserve that distinction and the applicable licence/notices. No SDK mirror,
+SDK artifact/cache or embedded game code/assets is permitted.
 
-This does not make SDK redistribution or a public SDK mirror permissible. The
-current38 release manifest/build recipe still records the earlier blocked state
-and rejects explicit local SDK provenance. It is included in the frozen38–50
-inputs, so preserve it and the original receipts. Future release work must use
-the next identity51 and distinguish licensed build inputs from publishable files.
-Keep SDK files/credentials out of Git, public artifacts, caches and logs. This
-email update has not published an IPA or changed the separate device gates.
+The complete52 /0.24.1 hosted run36682093793 passes at `789f20e`: official SDK
+acquisition, fresh public managed/native compilation, app/package audit, five
+attestations and separate Ubuntu verification. Independent downloaded-kit checks
+pass all five attestations/checksums,247 captured app source hashes and NLua's
+strong-name signature. The18,759,836-byte IPA SHA256 is
+`7392dd6f0199faf0d8501ed690772685e127ee9fd463ed2b3ce59441e719dbe4`.
+All59 Python,119 profile,185 shortcut,36 branch and15 bad-URL controls pass.
+See HANDOFF and `docs/RELEASING.md` for run/download links and the exact scope.
 
-The owner then requested local CI preparation, stopping at credentials before
-Actions, then supplied a temporary account for testing. `tools/check_fmod_access.py`
-passes its real account/catalogue check. `tools/fetch_fmod_sdk.py` passes the
-official authenticated DMG download and exact archive/library/licence hashes;
-fresh arm64 preparation produces byte-identical retained FMOD runtime archives.
-Credentials used hidden Terminal input and were not saved; sessions are logged
-out and DMG mounts detached. See `docs/RELEASING.md` and HANDOFF for safe receipts
-and ignored SDK locations. Next is fresh51 release/provenance integration and a
-complete local IPA build before Actions; neither has been done in this step.
-Keep credentials out of chat, shell arguments, Git and public outputs.
+The active manifest is `release/public52.json`; use `tools/build_release52.py` with
+an explicit developer-owned FMOD SDK for local builds. Preserve frozen38–51,
+including51's first local package/compiler/manifest.52 adds only the separately
+pinned Apple Silicon NuGet host package to the original128-package lock; all common
+hashes remain exact. Mono6.14.1 supplies NLua's `sn` build tool; the iOS Mono runtime
+still builds separately from pinned8.0.28 source. Public signed49 Shortcut resources
+are verified against Apple signatures and generated actions, without an iCloud
+login. Their signing certificates expire26 October2027.
+
+All247 captured52 app inputs are frozen in the hosted kit's BUILD_PROVENANCE.json,
+retained in `artifacts/cabrillo-build52-hosted`; use53 for new app implementation.
+No public version tag or Release has been created; manual artifacts last14 days.
+Keep app50/shortcut49 on the phone. Hosted compilation is not new physical-device
+acceptance. Earlier device, save-manager, iPad and sustained120 gates stay distinct.
 
 ## Active owner-prioritized work —28 September, app50 / shortcut49
 
