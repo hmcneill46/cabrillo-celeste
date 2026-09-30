@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "base_lock": "release/owned-game-nuget.json",
+  "base_arch": "x64",
+  "replacements": {
+    "arm64": {
+      "microsoft.netcore.app.host.osx-arm64/8.0.16/microsoft.netcore.app.host.osx-arm64.8.0.16.nupkg": "49096459ff377750e1e3c6572374053a8c4468b013d3f1ed3334d08594b1e4d9"
+    }
+  }
+}

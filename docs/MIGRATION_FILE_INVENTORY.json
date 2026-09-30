@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 4619,
+  "file_count": 4628,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -25451,10 +25451,30 @@
       "sha256": "ddafa585044002fe5efafcaa820aec702881898f3cb5efa0f8c8a9134809abbf",
       "bytes": 3361
     },
+    "release/app52/BuildIdentity.json": {
+      "reason": "Distinct release52 identity/dependency policy preserving frozen app51 inputs",
+      "sha256": "3d6f66da9d7733a96def66b10dee0b90c52455c3326b8217ba5ef1defe73fd74",
+      "bytes": 263
+    },
+    "release/app52/Dependencies.json": {
+      "reason": "Distinct release52 identity/dependency policy preserving frozen app51 inputs",
+      "sha256": "ce6ecda82827ce093552feaae7ba4cd9796c5b6209ab407440f7bb451ccd2d02",
+      "bytes": 5935
+    },
+    "release/app52/Info.plist": {
+      "reason": "Distinct release52 identity/dependency policy preserving frozen app51 inputs",
+      "sha256": "7b1e7f5bb28651ca74a07bc46d60e17e87ddc42d7ab701b6f24e514ca043d58e",
+      "bytes": 3361
+    },
     "release/current.json": {
       "reason": "Explicitly blocked build38 public IPA manifest awaiting FMOD distribution approval",
       "sha256": "0c0ccabcd0a61f00e244aed3d7dcd100933edfa3727d115a007c8eddd13468c2",
       "bytes": 683
+    },
+    "release/nuget-hosts.json": {
+      "reason": "Pinned official Intel/Apple Silicon NuGet build-host package selection; all common packages retain the original lock",
+      "sha256": "6a764270cca41c5cf6d3386cf0d85b123efb80dc11373fd6c143f1511c4a5c54",
+      "bytes": 304
     },
     "release/owned-game-dependencies.json": {
       "reason": "Hash and commit locks for public source, SDK and runtime input downloads",
@@ -25469,6 +25489,11 @@
     "release/public.json": {
       "reason": "Public release permission and official FMOD input manifest",
       "sha256": "477427e7911734874fb280663f7d39e33d1a4143edaf6a4cdf45beb1e229bad9",
+      "bytes": 583
+    },
+    "release/public52.json": {
+      "reason": "Active public source release52 manifest with runtime-only FMOD permission and explicit source recipe",
+      "sha256": "709b8a7326d1b4087c803af0b8600741ad420b364e9334c74b21a4058c36132d",
       "bytes": 583
     },
     "release/shortcuts49/LiveContainer/Cabrillo-unsigned.shortcut": {
@@ -25609,6 +25634,11 @@
       "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
       "sha256": "8c7f07f1dc636c648eea1993d4c100446b4fe6997be048e5cd7b02018932a639",
       "bytes": 9573
+    },
+    "tools/build_release52.py": {
+      "reason": "Fresh hosted/developer source release builder with licensed SDK boundary and complete dependency provenance",
+      "sha256": "16a558ef3706abbaf1037a1608d144f3ab7d67246fb72cf4a067af6700a04e8e",
+      "bytes": 9854
     },
     "tools/build_save_transfers.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",
@@ -26004,6 +26034,11 @@
       "sha256": "6563d9dd7b3b9afa240ea88ff0894bdbca00b105309499974e3baa2f3c218831",
       "bytes": 23475
     },
+    "tools/compile_release52.py": {
+      "reason": "Release52 app compiler using fresh public dependency receipts and architecture-specific NuGet validation",
+      "sha256": "d71c2946c01abe0b75511237673e375b9fa7a3057799eebdd052548dce5c1235",
+      "bytes": 23601
+    },
     "tools/everest6580_inputs.py": {
       "reason": "Validate the explicit upstream source capsule, managed receipt, assembly identities, runtime and regression pins for build37",
       "sha256": "30477782ca245f2178a889147dfac344fc67ec2109154c3d0149ef30ca767115",
@@ -26061,8 +26096,8 @@
     },
     "tools/release_pipeline.py": {
       "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
-      "sha256": "f5862d164de76386c33d98dd977a25e65820fe33eb4218be92644179ca7a1a3f",
-      "bytes": 10765
+      "sha256": "73cb237cb80bb19fd7616028432766b7979ae4d8dbb501808ec9d2b9dbb381e0",
+      "bytes": 10767
     },
     "tools/repair_player_precision.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",
@@ -26098,6 +26133,11 @@
       "reason": "Meaningful public-release rejection and provenance boundary tests",
       "sha256": "daddc73704b28a39b759e43f289e7f4f31dfb2d2cbc9040a92d4b9d089f0014e",
       "bytes": 9084
+    },
+    "tools/tests/test_release_nuget.py": {
+      "reason": "Positive and tampering/wrong-host controls for exact NuGet input pinning",
+      "sha256": "95aef3a629c25a26f1b58ca9d68e31895116bc88ea512c8c73ea21540848c954",
+      "bytes": 2075
     },
     "tools/tests/test_release_pipeline.py": {
       "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
@@ -26145,6 +26185,11 @@
       "reason": "Verify build35 packaging, deployment target, device families, native overlay and managed adapter identity",
       "sha256": "7425f468bd28031e38082a22e88e1acdf7bcfe212dda06b1edca121cd88a2795",
       "bytes": 12356
+    },
+    "tools/verify_release_nuget.py": {
+      "reason": "Exact host-aware NuGet package and checksum verification",
+      "sha256": "74a62d9c8d46ca0cc2efe9da11cd4ed3129039fe1c25033d74bc0d79513da8a4",
+      "bytes": 1644
     },
     "tools/verify_release_shortcuts.py": {
       "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",

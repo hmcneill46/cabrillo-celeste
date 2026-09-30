@@ -13,7 +13,7 @@ import zipfile
 from release import ROOT, public_path, sha, validate_ref, verify_ipa
 from fetch_fmod_sdk import ARCHIVE_SHA256
 
-CONFIG = 'release/public.json'
+CONFIG = 'release/public52.json'
 BUILD_BRANCHES = {'refs/heads/main', 'refs/heads/codex/actions-release'}
 
 
@@ -24,7 +24,7 @@ def readiness(root):
     identity = json.loads(public_path(root, config['lane'] + '/BuildIdentity.json').read_text())
     if any(config[k] != identity[k] for k in ['version', 'build_number']):
         raise ValueError('Release manifest differs from its app identity')
-    if config.get('public_build_script') != 'tools/build_release51.py':
+    if config.get('public_build_script') != 'tools/build_release52.py':
         raise ValueError('Only the fresh public source recipe is eligible')
     public_path(root, config['public_build_script'])
     public_path(root, config['shortcuts'])
