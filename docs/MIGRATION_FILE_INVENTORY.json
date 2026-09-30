@@ -20,8 +20,8 @@
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
-      "sha256": "3e72715157e81d3f25e710b734b4942e5444278bf3c3d0ab33eed1c7f6bc1470",
-      "bytes": 7547
+      "sha256": "6a3b40c9f0c3365e587637213f66f7552ee17504f6d157011ab68165ae59ddb0",
+      "bytes": 8118
     },
     ".gitignore": {
       "reason": "Exclude private dependencies, device data, signing inputs and generated builds from Git",
@@ -25607,8 +25607,8 @@
     },
     "tools/build_release51.py": {
       "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
-      "sha256": "586b83f1c6aae314d8817f8a234ee3e85c9fe3d5e43de76e698d6a9807428c16",
-      "bytes": 8878
+      "sha256": "8c7f07f1dc636c648eea1993d4c100446b4fe6997be048e5cd7b02018932a639",
+      "bytes": 9573
     },
     "tools/build_save_transfers.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",

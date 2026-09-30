@@ -35,6 +35,11 @@ def validate_download(receipt, sdk):
 
 
 def build(work, output, sdk, download=None):
+    if not shutil.which('sn') or not shutil.which('mono'):
+        raise ValueError('Mono 6.14.1, including its sn tool, is required to preserve NLua strong-name signing. Install Mono before building.')
+    mono_version = subprocess.check_output(['mono', '--version'], text=True).splitlines()[0]
+    if not mono_version.startswith('Mono JIT compiler version 6.14.1 '):
+        raise ValueError('The release build uses Mono 6.14.1 for NLua strong-name signing')
     config = json_read(ROOT / 'release/public.json')
     permission = config['fmod_distribution']
     if config['public_ipa_ready'] is not True or permission['approved'] is not True:
@@ -113,7 +118,10 @@ def build(work, output, sdk, download=None):
         fmod_acquisition='official-authenticated-download' if download else 'developer-supplied-sdk',
         fmod_installer_sha256=ARCHIVE_SHA256 if download else None,
         dependencies=dependencies, shortcut_verification=shortcuts,
-        toolchain=dict(xcode='26.6', xcode_build='17F113', iphoneos_sdk='26.5', minimum_ios='15.0'),
+        toolchain=dict(xcode='26.6', xcode_build='17F113', iphoneos_sdk='26.5', minimum_ios='15.0',
+            mono_build_tool=mono_version, strong_name_tool_sha256=sha(Path(shutil.which('sn'))),
+            cmake=subprocess.check_output(['cmake', '--version'], text=True).splitlines()[0],
+            python=sys.version.split()[0]),
         physical_device_tested=False, bit_reproducibility_claimed=False,
         package_receipt_sha256=sha(artifacts / 'build-receipt.json'),
         payload_audit_sha256=sha(artifacts / 'payload-audit.json'),
