@@ -17,12 +17,17 @@ and backup checks,185 native shortcut checks and the generated shortcut branches
 A separate version-tag workflow is prepared for unsigned IPA
 releases with source/dependency hashes and GitHub build attestations.
 
-**IPA publishing remains blocked on FMOD permission.** [Build38](docs/ios-jit/OWNED_GAME_BUILD_38.md)
+**FMOD has confirmed runtime redistribution is allowed in a built application.**
+The owner supplied Firelight's reply on30 September2026. Developers building from
+source must obtain the SDK from FMOD; Cabrillo must not redistribute SDK components.
+Release packaging and CI still need to implement that distinction.
+[Build38](docs/ios-jit/OWNED_GAME_BUILD_38.md)
 prepares the user's original Celeste ZIP after import and caches the result.
 Its IPA contains no original/prepared game code or original game assets, and its
 public dependencies build without the private capsule. The first launch does
 extra preparation; later launches reuse it. Device acceptance remains separate.
-See [the release guide](docs/RELEASING.md) for the permission and provenance gates.
+See [the release guide](docs/RELEASING.md) for the permission record and remaining
+packaging/provenance work.
 
 ## Home Screen launch in development
 
@@ -124,8 +129,9 @@ python3 tools/build_public_release.py --work .build/my-source-build \
   --output .build/my-source-build/output --fmod-sdk '/path/to/FMOD Programmers API'
 ```
 
-This creates a private local test build. Public publishing stays gated on FMOD
-permission and authorized SDK delivery. Set `DEVELOPER_DIR` if Xcode is installed
+This frozen recipe creates a private local test build. FMOD runtime permission
+is now recorded; public release tooling still needs the SDK/provenance update
+described in the release guide. Set `DEVELOPER_DIR` if Xcode is installed
 somewhere other than `/Applications/Xcode-26.6.app/Contents/Developer`.
 
 Historical reproduction uses `tools/build.py --reproduce-build28` with the

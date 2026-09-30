@@ -19,32 +19,135 @@ or a manual run against an existing version tag requests a release. Ordinary
 branch pushes run CI without publishing. The release workflow checks eligibility
 before compiling or uploading anything.
 
-**Build38 (0.21.0) remains blocked from public IPA publishing.** The new
+**FMOD runtime redistribution is confirmed; the release workflow still needs an
+updated SDK-input and provenance path.** The frozen build38 (0.21.0) manifest
+remains blocked. The
 [owned-game preparation](ios-jit/OWNED_GAME_BUILD_38.md) removes original and
 prepared Celeste code from the IPA. It rebuilds the public dependencies without
 private capsules, and prepares the user's original ZIP after import.
 
-## Remaining distribution gate
+## FMOD confirmation —30 September 2026
 
-[The release manifest](../release/current.json) records **FMOD redistribution
-permission and an authorized SDK download for release CI** as the remaining
-known distribution dependency. The permission must cover the actual FMOD1.10.09
-iOS libraries in this independent launcher. It has not been granted or inferred
-from another port. Source licenses and component notices remain included.
+The owner supplied a reply from Brett Paterson of Firelight Technologies confirming
+that a built application may be released with its FMOD runtime libraries. Developers
+accessing the GitHub source must download FMOD from **fmod.com** themselves; SDK
+components must not be redistributed. This answers the runtime redistribution
+question. It does not grant an SDK redistribution exception or relicense FMOD as
+open source. The original owner-supplied text is retained privately; it has not
+been published as an email transcript.
 
-Private local builds explicitly provide the SDK with `--fmod-sdk`; their
-provenance discloses a private input and the publishing wrapper rejects them.
+These conditions agree with the [FMOD EULA](https://www.fmod.com/legal), which
+distinguishes the integrated runtime from SDK components. Preserve the applicable
+licence and attribution. The30 September package review verified the unchanged
+build50 IPA (`e22ca126d8cb5eb829d027267504d0b9c2600efbf3ebf4c88fd762b080ae87ff`)
+against the existing public-package validator and inspected its contents. Its
+FMOD recipe links the pinned runtime libraries; the only FMOD-named packaged
+resource is `licenses/FMOD-LICENSE.TXT`. No FMOD SDK headers, separate development
+archives, examples or authoring tools are included. Retained managed-payload
+evidence separately verifies the absence of original/prepared Celeste assemblies.
+
+## Remaining release work
+
+[The release manifest](../release/current.json) and build38 recipe are historical
+frozen inputs. Their permission flag and receipts describe the state when those
+packages were built; they do not override the later email confirmation. Preserve
+them and use a new build identity for the release implementation (next51).
+
+The existing builder accepts a local SDK using `--fmod-sdk` but labels that input
+private, which the publishing wrapper rejects. The future recipe must obtain its
+SDK through FMOD, keep SDK files and download credentials out of the repository,
+public logs, caches and release artifacts, and disclose the licensed FMOD binary
+dependency accurately. Do not add a Cabrillo SDK mirror for source developers.
+Runtime redistribution permission does not require the SDK itself to be public.
+
 Earlier packages28–37 retain their original private game/dependency constraints.
 Device acceptance is a separate quality gate before choosing a stable release.
 
-## Public builder contract
+## Local FMOD download verification —30 September
+
+The owner requested local preparation before trying Actions, initially stopping
+at credentials, then supplied a temporary FMOD account for the local test.
+`tools/check_fmod_access.py` provides a credential-free preflight:
+
+```sh
+python3 tools/check_fmod_access.py probe \
+  --report .build/fmod-download-preparation/probe.json
+```
+
+The live local probe verifies the reviewed public website scripts and receives
+HTTP401 from the unauthenticated download catalogue. It reports
+`CREDENTIALS_REQUIRED` without attempting sign-in. The observed website uses
+`POST /api-login`, then an authenticated `GET /api-downloads`. Its public download
+component requests a temporary link for a catalogue entry. These are inspected
+website internals, **not a documented stable download API**. The helper checks
+the two reviewed script hashes before prompting and stops if the site changes.
+Public implementation references: [sign-in](https://www.fmod.com/bundle.js) and
+[downloads](https://www.fmod.com/download.chunk.js).
+
+To repeat just the account/catalogue check, enter an FMOD username/email and
+password in the hidden local Terminal prompts, never in shell arguments:
+
+```sh
+python3 tools/check_fmod_access.py check-account \
+  --report .build/fmod-download-preparation/account-check.json
+```
+
+Run these commands in your own checkout. The helper uses a new session and logs
+it out afterward; it does not read browser sessions, save credentials, follow
+redirects or log response bodies. No SDK is downloaded by either access command.
+Reports contain fixed public dependency identities and status only, beneath the
+ignored `.build` directory. The authenticated catalogue is not saved. Local tests
+use synthetic accounts and a loopback redirect trap; they never sign in to FMOD.
+
+The real account check passed. `tools/fetch_fmod_sdk.py` then downloaded the exact
+`fmodstudioapi11009ios-installer.dmg` through FMOD's authenticated catalogue and
+temporary CDN link. Its143,583,015 bytes match the retained original installer,
+whose digest was measured before downloading:
+`7f1934f248df7202b8efb6951570f60c52566217e230f26ed3682a6447336e5f`.
+The file is a **DMG**, so the old ZIP-only recipe was not suitable.
+
+```sh
+python3 tools/fetch_fmod_sdk.py \
+  --work .private/fmod-sdk-new-run \
+  --report .build/fmod-sdk-new-run.json
+```
+
+Choose a fresh work directory each time. The helper confines SDK files to
+`.private`, verifies the complete installer before mounting it read-only, stages
+only the four required library/licence/revision inputs and detaches afterward.
+Both original device archives match the existing build38–50 pins; the licence
+also matches. Running the existing arm64 preparation/localization step on these
+fresh inputs produced byte-identical runtime archives to the retained build.
+Receipts are under `.build/fmod-download-preparation`; the downloaded private SDK
+is under `.private/fmod-ci-2026-09-30-a`. The session was closed successfully.
+Credentials, account identifiers and signed URLs were not saved in these files.
+
+The download host is now restricted to the exact CDN observed in this test,
+`d2m8b09s60for2.cloudfront.net`; its client receives no FMOD account headers/cookies
+and follows no redirects. A changed website flow, host, installer or library
+checksum stops the helper for review. No SDK mirror or public SDK cache is used.
+
+For a future trusted release job, `--credentials-from-env` explicitly consumes
+`CABRILLO_FMOD_USERNAME` and `CABRILLO_FMOD_PASSWORD`. It removes them from its
+process environment before spawning mount/build children. Synthetic tests cover
+this mode; the real local test used hidden prompts. No GitHub secrets were set.
+Keep secrets restricted to that job and keep `.private` out of all cache/artifact
+uploads. The28 new credential, transport, selection and staging controls join the
+existing20 Python build/release controls.
+
+This establishes the previously unverified authenticated SDK acquisition path.
+The fresh51 release recipe still needs the permitted binary-input provenance
+contract and this downloader wired into it, followed by a complete local IPA
+build. No full native rebuild, new IPA, Actions run or publication is claimed.
+
+## Frozen build38 builder contract
 
 `tools/build_public_release.py` is the dedicated source recipe. It downloads
 checksum-pinned public sources, SDK/runtime packs and NuGet packages, builds the
 managed and native dependencies, accepts the approved FMOD SDK, and compiles and
 audits the unsigned app. It does not consume a Celeste game ZIP, private capsule
-or previously compiled Cabrillo. Normal mode fails before building anything
-until the FMOD gate is explicitly resolved.
+or previously compiled Cabrillo. Normal mode still fails before building anything
+with the frozen manifest.
 
 The release wrapper supplies fresh absolute `--work` and `--output` paths beneath
 `.build/public-release-build`. Public mode requires the exact source checkout and
@@ -61,7 +164,8 @@ The wrapper checks app identity, executable platform, unsigned status, archive
 paths, and known game/signing payload exclusions. It checks provenance and refuses
 source modifications during the build. These checks catch known packaging errors;
 they cannot establish licensing rights or detect every possible renamed payload.
-The public recipe and distribution permissions still need review.
+The future release recipe needs review against the recorded runtime permission
+and SDK restrictions.
 
 The wrapper copies only the expected files into a separate release directory,
 renames the IPA to `Cabrillo-<version>-unsigned.ipa`, records source/dependency/IPA
@@ -71,23 +175,25 @@ creating a Release. It refuses to overwrite an existing release.
 
 ## Enabling and making a release later
 
-1. Obtain and record FMOD redistribution permission, including authorized SDK
-   delivery for CI. Complete the device gates in the current handoff. Do not
-   relabel frozen private packages as public builds.
-2. Review `release/current.json`: record `fmod_distribution.approved`, a concrete
-   permission reference, an authorized HTTPS SDK ZIP URL and SHA256, then clear
-   the documented blockers and enable `public_ipa_ready`. The archive must have
-   the SDK's `api/` and `doc/` directories at its root. Use a new build identity
-   when changing frozen packaging inputs and update the deliberate blocked test.
+1. Use the30 September confirmation for the runtime permission record. Implement
+   SDK acquisition from FMOD for the build environment without distributing the
+   SDK to source users. Record its version and hash; keep any authentication
+   information private. Complete the relevant device gates in the current handoff.
+2. Create a fresh release lane and manifest with the next build identity. Update
+   its permission reference, notices, SDK-input contract and provenance controls.
+   Enable `public_ipa_ready` only after the concrete release passes its checks.
+   Do not relabel frozen private packages or rewrite historical receipts.
 3. Review the source and device evidence, merge the intended source, and wait for
    its CI checks. Create and push a matching version tag only when choosing to
-   release, for example `v0.21.0`. The workflow reruns CI at that exact commit.
-   A tag such as `v0.21.0-rc.1` uses app version `0.21.0` and creates a prerelease.
+   release. The workflow reruns CI at that exact commit. A `v<version>-rc.1` tag
+   uses the matching app version and creates a prerelease.
 4. To retry a failed run, use GitHub's rerun control or manually run **Publish IPA**
    against that existing tag. Selecting `main` is rejected. A published tag/release
    is immutable under this workflow; corrections need a new version.
 
-No repository secrets are needed for this workflow. Actions are pinned by commit.
+Public source checks need no repository secrets. The verified FMOD download
+requires credentials; restrict them to that build step and never include them
+in source URLs, provenance or public logs. Actions are pinned by commit.
 Build jobs have read access to source; only the publishing job has Release write
 permission. That job downloads this run's verified artifacts without executing
 the repository's build scripts.

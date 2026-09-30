@@ -1,0 +1,36 @@
+name: Release toolchain check
+
+on:
+  push:
+    branches: [codex/actions-release]
+    paths: [.github/workflows/release-tools.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tools:
+    runs-on: macos-26
+    timeout-minutes: 10
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Verify the pinned Apple toolchain
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          cmake --version
+          python3 --version
+      - name: Generate and Apple-sign the public Home Screen workflows
+        timeout-minutes: 3
+        run: python3 tools/build_shortcut_files49.py --output .build/release-tools-shortcuts --sign
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: release-shortcut-tool-check
+          path: .build/release-tools-shortcuts/receipt.json
+          if-no-files-found: error
+          retention-days: 7

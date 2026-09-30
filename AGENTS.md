@@ -43,6 +43,40 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   dependency, not a Git source directory. Build38 uses public source receipts and
   an explicit FMOD SDK instead. Never silently fall back to a legacy checkout.
 
+## FMOD clarification —30 September
+
+The owner subsequently requested a complete working GitHub Actions IPA build,
+followed by README/developer documentation explaining FMOD inputs, the workflow
+and release verification. This authorizes source/workflow commits, pushes and
+hosted build trials for this work. Preserve all frozen earlier build inputs;
+new release work uses51. The earlier local-only credential instruction still
+requires clarification before putting the temporary FMOD login into GitHub secrets.
+
+The owner supplied an email from Brett Paterson / Firelight Technologies allowing
+release of a built application with FMOD runtime libraries. Source developers must
+download FMOD from fmod.com; redistribution of SDK components is prohibited.
+Treat the runtime redistribution question as answered, subject to those terms.
+See `docs/RELEASING.md` for the local permission record and packaging review.
+
+This does not make SDK redistribution or a public SDK mirror permissible. The
+current38 release manifest/build recipe still records the earlier blocked state
+and rejects explicit local SDK provenance. It is included in the frozen38–50
+inputs, so preserve it and the original receipts. Future release work must use
+the next identity51 and distinguish licensed build inputs from publishable files.
+Keep SDK files/credentials out of Git, public artifacts, caches and logs. This
+email update has not published an IPA or changed the separate device gates.
+
+The owner then requested local CI preparation, stopping at credentials before
+Actions, then supplied a temporary account for testing. `tools/check_fmod_access.py`
+passes its real account/catalogue check. `tools/fetch_fmod_sdk.py` passes the
+official authenticated DMG download and exact archive/library/licence hashes;
+fresh arm64 preparation produces byte-identical retained FMOD runtime archives.
+Credentials used hidden Terminal input and were not saved; sessions are logged
+out and DMG mounts detached. See `docs/RELEASING.md` and HANDOFF for safe receipts
+and ignored SDK locations. Next is fresh51 release/provenance integration and a
+complete local IPA build before Actions; neither has been done in this step.
+Keep credentials out of chat, shell arguments, Git and public outputs.
+
 ## Active owner-prioritized work —28 September, app50 / shortcut49
 
 The owner installed50, kept shortcut49 and confirms the fresh cellular test passes.

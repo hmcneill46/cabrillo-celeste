@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 4598,
+  "file_count": 4603,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -12,6 +12,11 @@
       "reason": "Public source inventory, current native profiles and build50 shortcut checks without private inputs",
       "sha256": "5cf8633cd1fcc74c71d87c6c11eba4ccc63c38830b9cfbf0de0700e10b5d5c5a",
       "bytes": 2299
+    },
+    ".github/workflows/release-tools.yml": {
+      "reason": "Hosted release toolchain and source-generated Apple Shortcut signing capability check",
+      "sha256": "13469f457adc1d966081ca20facd8082e7b19bf4e0da55ffb263c95b73483581",
+      "bytes": 1125
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
@@ -25,13 +30,13 @@
     },
     "AGENTS.md": {
       "reason": "Development constraints, scoped source publication approval through50 and separate physical gates",
-      "sha256": "c9e6a50ca879995b2434f5d140579f6638728d041f59f0ebf26f616868d0507f",
-      "bytes": 34437
+      "sha256": "86b7df8399afca0a0f424ebef0c3d3d7f1ebdcb8d5a2cf12cdceb9c99e263df3",
+      "bytes": 36695
     },
     "HANDOFF.md": {
       "reason": "Active delivery, exact dependency receipts and remaining physical checks for the next development turn",
-      "sha256": "58ce81a67dee566f0702c8d0a253bcf7d010f2711f55dec34085a16a61692342",
-      "bytes": 88982
+      "sha256": "26aaa2a55b3fc246f937b0911c1250a4f1db97782fb6b2f6c0081abd743c5af7",
+      "bytes": 92815
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -41,8 +46,8 @@
     },
     "README.md": {
       "reason": "Public product overview, current source build and FMOD distribution boundary",
-      "sha256": "9e201cde24e10d5b7c4d60ed05c4a977d970e2f5a2f931ca28b1e60659158117",
-      "bytes": 10449
+      "sha256": "8c2e7b948ccf7996b381ee7a7e0c99251ed303d2511c8b432e6e2ab5ef8a001f",
+      "bytes": 10805
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -85,8 +90,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Gated CI/source recipe, FMOD input approval and attested release procedure",
-      "sha256": "a7a7e9086e766703bf20b1aa0586622a3c371e74dbb0c114168af058c380f521",
-      "bytes": 7353
+      "sha256": "20f9ccbeb4001f64946ff3fbfe97ed7270de1f8139333bc737d32a3245eb11bf",
+      "bytes": 13426
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -25714,6 +25719,11 @@
       "sha256": "22315a03ef724befd1705752605a0899bd59f4e5034bea34c9984fb7150b2747",
       "bytes": 5307
     },
+    "tools/check_fmod_access.py": {
+      "reason": "FMOD website preflight, hidden or explicit environment credentials and temporary account-session validation",
+      "sha256": "e030b071aeddcd885683f23dd423874b163598e7e170f84e676e1b9b3b232e87",
+      "bytes": 12430
+    },
     "tools/check_loading_assembly.py": {
       "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
       "sha256": "b7b5df82f1d128689ca787112a9c7a885ca671d7c866a283ca0dee35f7e2b332",
@@ -25934,6 +25944,11 @@
       "sha256": "30477782ca245f2178a889147dfac344fc67ec2109154c3d0149ef30ca767115",
       "bytes": 5266
     },
+    "tools/fetch_fmod_sdk.py": {
+      "reason": "Official authenticated FMOD SDK download, fixed archive and library hashes, private DMG staging and safe receipts",
+      "sha256": "38ec1cce04154bd9107f3ede7153bdbb80d4bc2be7f169fcadf6a7bd615764e3",
+      "bytes": 10549
+    },
     "tools/import_legacy.py": {
       "reason": "One-time read-only extraction procedure for current JIT source, pinned inputs and metadata",
       "sha256": "0da8cbd3890b5d0635de445cc024c109e4dce84d3ad990ac2da0c816d0322efa",
@@ -25993,6 +26008,16 @@
       "reason": "Build output isolation and malformed/signed/wrong-platform Mach-O controls",
       "sha256": "c077c50fac6b8c1b24c3e71c81bcfdde2c09209c1660df59ab5d2d33b2f4c3a3",
       "bytes": 2851
+    },
+    "tools/tests/test_fmod_access.py": {
+      "reason": "Synthetic credential, authentication-boundary, catalogue-selection, logout and secret-redaction controls",
+      "sha256": "71524aa61e45aea3d4e09d3cace53a831d65028031adc5a3ca427bb2a995b455",
+      "bytes": 11480
+    },
+    "tools/tests/test_fmod_fetch.py": {
+      "reason": "Synthetic SDK transport, checksum, private-output, cleanup and credential-isolation controls",
+      "sha256": "901a99235c0187202463ec68af7ac73fe01e6cfae9e47ba194373197da44c4d0",
+      "bytes": 8266
     },
     "tools/tests/test_loading_build.py": {
       "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
