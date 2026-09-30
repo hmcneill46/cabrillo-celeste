@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 4603,
+  "file_count": 4619,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -10,18 +10,18 @@
     },
     ".github/workflows/ci.yml": {
       "reason": "Public source inventory, current native profiles and build50 shortcut checks without private inputs",
-      "sha256": "5cf8633cd1fcc74c71d87c6c11eba4ccc63c38830b9cfbf0de0700e10b5d5c5a",
-      "bytes": 2299
+      "sha256": "3a5e7210431100f52dc29f8bc5295e3e0cfbffe54de48ba5aca790568acb8f37",
+      "bytes": 2522
     },
     ".github/workflows/release-tools.yml": {
       "reason": "Hosted release toolchain and source-generated Apple Shortcut signing capability check",
-      "sha256": "13469f457adc1d966081ca20facd8082e7b19bf4e0da55ffb263c95b73483581",
-      "bytes": 1125
+      "sha256": "824d4f077396e60af0f0409761600b53b31b0a996863eca219fa492a468a0484",
+      "bytes": 1141
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
-      "sha256": "e8172f52655da1a351cdae228aa5bed882ac16f01710ea7d4cdaba59f9574457",
-      "bytes": 4272
+      "sha256": "b465a14949db116f1aa62e6f68e01dfe3c7cff3e82b0b393904ec602397edac4",
+      "bytes": 7546
     },
     ".gitignore": {
       "reason": "Exclude private dependencies, device data, signing inputs and generated builds from Git",
@@ -30,13 +30,13 @@
     },
     "AGENTS.md": {
       "reason": "Development constraints, scoped source publication approval through50 and separate physical gates",
-      "sha256": "86b7df8399afca0a0f424ebef0c3d3d7f1ebdcb8d5a2cf12cdceb9c99e263df3",
-      "bytes": 36695
+      "sha256": "1e2bebf98df0129a2b91a65b10272efaebeae22204bbe134ebdbf0d64374730d",
+      "bytes": 36800
     },
     "HANDOFF.md": {
       "reason": "Active delivery, exact dependency receipts and remaining physical checks for the next development turn",
-      "sha256": "26aaa2a55b3fc246f937b0911c1250a4f1db97782fb6b2f6c0081abd743c5af7",
-      "bytes": 92815
+      "sha256": "2649aff370c3e313f4add89285f46446c44a97e9c492705ea707941de9da0960",
+      "bytes": 94691
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -25436,6 +25436,21 @@
       "bytes": 24115,
       "import_sha256": "fefb7b5c44bee779ee42de61ac0a6b815fb4d7b90266edeabfd33c5f6f06d3d4"
     },
+    "release/app51/BuildIdentity.json": {
+      "reason": "Release51 identity and fresh public dependency contract, preserving frozen earlier builds",
+      "sha256": "215c8de7728ad7164d18fd4517c564c9d6ad65dc7459aa106411cfa1105072f7",
+      "bytes": 263
+    },
+    "release/app51/Dependencies.json": {
+      "reason": "Release51 identity and fresh public dependency contract, preserving frozen earlier builds",
+      "sha256": "1ec38e20da670e430e079d0b4b47a5d9998da55b496e9ba2616ea3683847d79a",
+      "bytes": 5886
+    },
+    "release/app51/Info.plist": {
+      "reason": "Release51 identity and fresh public dependency contract, preserving frozen earlier builds",
+      "sha256": "ddafa585044002fe5efafcaa820aec702881898f3cb5efa0f8c8a9134809abbf",
+      "bytes": 3361
+    },
     "release/current.json": {
       "reason": "Explicitly blocked build38 public IPA manifest awaiting FMOD distribution approval",
       "sha256": "0c0ccabcd0a61f00e244aed3d7dcd100933edfa3727d115a007c8eddd13468c2",
@@ -25450,6 +25465,46 @@
       "reason": "Exact NuGet archive hashes for the public managed dependency build",
       "sha256": "c7865e2ebfb82392ef1c38b4d7a7d569bd698462b2d52c681c3f1e1a22f244e7",
       "bytes": 19810
+    },
+    "release/public.json": {
+      "reason": "Public release permission and official FMOD input manifest",
+      "sha256": "477427e7911734874fb280663f7d39e33d1a4143edaf6a4cdf45beb1e229bad9",
+      "bytes": 583
+    },
+    "release/shortcuts49/LiveContainer/Cabrillo-unsigned.shortcut": {
+      "reason": "Reviewed Apple-signed Shortcut49 documents and generated source for account-free CI verification",
+      "sha256": "8c5fddfd1b8cfa8864a5f6decd79dbf3cbf5a3f7da4e545e93379e277c86fd06",
+      "bytes": 30817
+    },
+    "release/shortcuts49/LiveContainer/Cabrillo.actions.json": {
+      "reason": "Reviewed Apple-signed Shortcut49 documents and generated source for account-free CI verification",
+      "sha256": "67905c1e1e4206c1fb86ce73a2c5ffb1a3c8ebf3499227e116162e1b512d32fb",
+      "bytes": 21862
+    },
+    "release/shortcuts49/LiveContainer/Cabrillo.shortcut": {
+      "reason": "Reviewed Apple-signed Shortcut49 documents and generated source for account-free CI verification",
+      "sha256": "ad4a3a2c7d77803bb98b29e53ff2ee1f0d601d737ff77d75beca9dc114f702d8",
+      "bytes": 25784
+    },
+    "release/shortcuts49/Standalone/Cabrillo-unsigned.shortcut": {
+      "reason": "Reviewed Apple-signed Shortcut49 documents and generated source for account-free CI verification",
+      "sha256": "59a79e722aa9eaa86d319a93b3bcb70317afd5cefb101c0ec8220b1e2e8b814f",
+      "bytes": 26864
+    },
+    "release/shortcuts49/Standalone/Cabrillo.actions.json": {
+      "reason": "Reviewed Apple-signed Shortcut49 documents and generated source for account-free CI verification",
+      "sha256": "b73f98bce85b32fc57ed543bac50cd36dd4f2df719429813800d7c3e04fd8f1d",
+      "bytes": 19059
+    },
+    "release/shortcuts49/Standalone/Cabrillo.shortcut": {
+      "reason": "Reviewed Apple-signed Shortcut49 documents and generated source for account-free CI verification",
+      "sha256": "3a73813b75042561acf23c5d8c5043da801f25eb5d8aeb4541fb87f94767128c",
+      "bytes": 25278
+    },
+    "release/shortcuts49/manifest.json": {
+      "reason": "Reviewed Apple-signed Shortcut49 documents and generated source for account-free CI verification",
+      "sha256": "174bf8bcd13c7d6fd62531d2fd69e5dfb39f7a0468ee19b355c9248909364d19",
+      "bytes": 1096
     },
     "scripts/finalize-apple-archive.py": {
       "reason": "Proven shared control policy/artwork or native archive utility used by the JIT lane; no AOT app/project",
@@ -25549,6 +25604,11 @@
       "reason": "Explicit build38 source preparation, dependency building, package verification or isolated integration check: build_public_release",
       "sha256": "e12cd62a3eef3696a1390cd62884472e62ea5d00f85edc4c2ac1c6bcf3d68e08",
       "bytes": 5735
+    },
+    "tools/build_release51.py": {
+      "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
+      "sha256": "22f024d7b5b27faf863a1a65fe83fe2896011b168b51da06a9068eeef80f03d1",
+      "bytes": 8047
     },
     "tools/build_save_transfers.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",
@@ -25939,6 +25999,11 @@
       "sha256": "8d6e394321823b656da1832ea7c5b8d82737e9689c7bd5d75d5b3e22c199d15b",
       "bytes": 2122
     },
+    "tools/compile_release51.py": {
+      "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
+      "sha256": "6563d9dd7b3b9afa240ea88ff0894bdbca00b105309499974e3baa2f3c218831",
+      "bytes": 23475
+    },
     "tools/everest6580_inputs.py": {
       "reason": "Validate the explicit upstream source capsule, managed receipt, assembly identities, runtime and regression pins for build37",
       "sha256": "30477782ca245f2178a889147dfac344fc67ec2109154c3d0149ef30ca767115",
@@ -25994,6 +26059,11 @@
       "sha256": "d90dd726955f653e8d225dd3ac8b921e3724554198272b4b15139e047e9d96e2",
       "bytes": 11440
     },
+    "tools/release_pipeline.py": {
+      "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
+      "sha256": "f5862d164de76386c33d98dd977a25e65820fe33eb4218be92644179ca7a1a3f",
+      "bytes": 10765
+    },
     "tools/repair_player_precision.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",
       "sha256": "7e55a82fe0f76418cb4f32bf4441926d30b83b67b1d14d6be4ecba6a1719d418",
@@ -26028,6 +26098,11 @@
       "reason": "Meaningful public-release rejection and provenance boundary tests",
       "sha256": "daddc73704b28a39b759e43f289e7f4f31dfb2d2cbc9040a92d4b9d089f0014e",
       "bytes": 9084
+    },
+    "tools/tests/test_release_pipeline.py": {
+      "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
+      "sha256": "5ae080c700a9bd8ee87eef94b4aad4715fae509befc2f12eaa731ca8a0039061",
+      "bytes": 6602
     },
     "tools/verify_backups.py": {
       "reason": "Independent build33 recipe, package checks or isolated profile/UI/real-game validation",
@@ -26070,6 +26145,11 @@
       "reason": "Verify build35 packaging, deployment target, device families, native overlay and managed adapter identity",
       "sha256": "7425f468bd28031e38082a22e88e1acdf7bcfe212dda06b1edca121cd88a2795",
       "bytes": 12356
+    },
+    "tools/verify_release_shortcuts.py": {
+      "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
+      "sha256": "851ac2da71c240feb049418e12c143c879afcf201a6192b19713d22a17ea220d",
+      "bytes": 5550
     },
     "tools/verify_reproduction.py": {
       "reason": "Independent whole-IPA, unsigned, dSYM and negative UUID control checks",

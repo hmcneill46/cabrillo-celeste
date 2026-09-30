@@ -49,8 +49,9 @@ The owner subsequently requested a complete working GitHub Actions IPA build,
 followed by README/developer documentation explaining FMOD inputs, the workflow
 and release verification. This authorizes source/workflow commits, pushes and
 hosted build trials for this work. Preserve all frozen earlier build inputs;
-new release work uses51. The earlier local-only credential instruction still
-requires clarification before putting the temporary FMOD login into GitHub secrets.
+new release work uses51. The owner explicitly permits storing the temporary FMOD login as encrypted GitHub
+Actions secrets. They are configured only in the restricted `cabrillo-release`
+environment; never put them in source, shell arguments, reports or public logs.
 
 The owner supplied an email from Brett Paterson / Firelight Technologies allowing
 release of a built application with FMOD runtime libraries. Source developers must

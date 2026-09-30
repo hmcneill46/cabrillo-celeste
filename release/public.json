@@ -1,0 +1,18 @@
+{
+  "schema": 2,
+  "lane": "release/app51",
+  "version": "0.24.0",
+  "build_number": "51",
+  "public_ipa_ready": true,
+  "public_build_script": "tools/build_release51.py",
+  "blockers": [],
+  "fmod_distribution": {
+    "approved": true,
+    "permission_reference": "docs/RELEASING.md#fmod-runtime-permission",
+    "sdk_source": "https://www.fmod.com/download",
+    "sdk_archive_sha256": "7f1934f248df7202b8efb6951570f60c52566217e230f26ed3682a6447336e5f",
+    "sdk_archive_bytes": 143583015
+  },
+  "shortcuts": "release/shortcuts49/manifest.json",
+  "physical_device_tested": false
+}

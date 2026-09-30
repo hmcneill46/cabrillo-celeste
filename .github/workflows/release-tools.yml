@@ -25,9 +25,9 @@ jobs:
           xcrun --sdk iphoneos --show-sdk-version
           cmake --version
           python3 --version
-      - name: Generate and Apple-sign the public Home Screen workflows
+      - name: Verify the signed Home Screen workflows without an Apple account
         timeout-minutes: 3
-        run: python3 tools/build_shortcut_files49.py --output .build/release-tools-shortcuts --sign
+        run: python3 tools/verify_release_shortcuts.py --output .build/release-tools-shortcuts/receipt.json
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: release-shortcut-tool-check

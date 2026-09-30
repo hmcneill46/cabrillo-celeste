@@ -1,9 +1,45 @@
-name: Publish IPA
+name: Build and publish IPA
 
 on:
   push:
     tags: ['v*']
   workflow_dispatch:
+    inputs:
+      verify:
+    name: Independently verify artifact attestations
+    needs: [eligibility, build]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+      attestations: read
+    env:
+      SOURCE_COMMIT: ${{ needs.eligibility.outputs.source_commit }}
+      SOURCE_REF: ${{ needs.eligibility.outputs.source_ref }}
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: public-ipa-release
+          path: release-kit
+      - name: Verify every file against the hosted workflow and exact source
+        working-directory: release-kit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          sha256sum --check SHA256SUMS
+          for asset in *; do
+            gh attestation verify "$asset" --repo "$GITHUB_REPOSITORY" \
+              --signer-workflow "$GITHUB_REPOSITORY/.github/workflows/release.yml" \
+              --source-digest "$SOURCE_COMMIT" --source-ref "$SOURCE_REF" \
+              --deny-self-hosted-runners
+          done
+
+  publish:
+        description: Publish a Release (requires a matching existing version tag)
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -14,12 +50,14 @@ concurrency:
 
 jobs:
   eligibility:
-    name: Require public packaging and an exact version tag
+    name: Validate the selected source and publication mode
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     outputs:
       tag: ${{ steps.preflight.outputs.tag }}
       source_commit: ${{ steps.preflight.outputs.source_commit }}
+      source_ref: ${{ steps.preflight.outputs.source_ref }}
+      publish: ${{ steps.preflight.outputs.publish }}
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
@@ -28,7 +66,12 @@ jobs:
           persist-credentials: false
       - name: Check release eligibility
         id: preflight
-        run: python3 tools/release.py preflight
+        env:
+          PUBLISH: ${{ github.event_name == 'push' || inputs.publish }}
+        run: |
+          args=()
+          if [[ "$PUBLISH" == "true" ]]; then args+=(--publish); fi
+          python3 tools/release_pipeline.py preflight "${args[@]}"
 
   checks:
     needs: eligibility
@@ -40,7 +83,8 @@ jobs:
     name: Build and attest an eligible public IPA
     needs: [eligibility, checks]
     runs-on: macos-26
-    timeout-minutes: 90
+    timeout-minutes: 180
+    environment: cabrillo-release
     permissions:
       contents: read
       id-token: write
@@ -53,13 +97,42 @@ jobs:
           ref: ${{ github.sha }}
           fetch-depth: 0
           persist-credentials: false
-      # No private capsules, signing credentials or prebuilt IPA downloads.
-      # Build38 stops in eligibility until FMOD distribution inputs are approved.
+      # Only this job can read the restricted environment secrets.
+      # Never cache/upload the SDK, private work directories or raw build logs.
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
-      - name: Build from the tagged public source and verify the package
-        run: python3 tools/release.py build
+      - name: Fetch the pinned SDK directly from FMOD
+        timeout-minutes: 10
+        env:
+          CABRILLO_FMOD_USERNAME: ${{ secrets.CABRILLO_FMOD_USERNAME }}
+          CABRILLO_FMOD_PASSWORD: ${{ secrets.CABRILLO_FMOD_PASSWORD }}
+        run: >-
+          python3 tools/fetch_fmod_sdk.py --credentials-from-env
+          --work .private/fmod-actions --report .build/fmod-acquisition.json
+      - name: Build fresh source and audit the release kit
+        env:
+          PUBLISH: ${{ needs.eligibility.outputs.publish }}
+        run: |
+          args=()
+          if [[ "$PUBLISH" == "true" ]]; then args+=(--publish); fi
+          python3 -u tools/release_pipeline.py build "${args[@]}" \
+            --fmod-sdk .private/fmod-actions/sdk --fmod-download .build/fmod-acquisition.json
+      - name: Remove temporary licensed SDK inputs
+        if: always()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os, shutil
+          for name in ['.private/fmod-actions', '.build/public-release-build/fmod']:
+              path = Path(name).absolute()
+              if os.path.ismount(path / 'mount'):
+                  raise SystemExit('SDK image remains mounted; cleanup stopped')
+              if path.exists() and path.resolve() == path:
+                  shutil.rmtree(path)
+          PY
+      - name: Enforce the release artifact allowlist
+        run: python3 tools/release_pipeline.py verify-kit
       - name: Attest every release file
         uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4
         with:
@@ -67,13 +140,19 @@ jobs:
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: public-ipa-release
-          path: .build/public-release-kit/
+          path: |
+            .build/public-release-kit/*.ipa
+            .build/public-release-kit/BUILD_PROVENANCE.json
+            .build/public-release-kit/PACKAGE_AUDIT.json
+            .build/public-release-kit/SHA256SUMS
+            .build/public-release-kit/RELEASE_NOTES.md
           if-no-files-found: error
           retention-days: 14
 
   publish:
     name: Verify provenance and publish the GitHub Release
-    needs: [eligibility, build]
+    needs: [eligibility, build, verify]
+    if: needs.eligibility.outputs.publish == 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
@@ -120,4 +199,4 @@ jobs:
           gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --verify-tag \
             --target "$SOURCE_COMMIT" --title "Cabrillo $RELEASE_TAG" \
             --notes-file RELEASE_NOTES.md "${options[@]}" \
-            ./*.ipa BUILD_PROVENANCE.json SHA256SUMS RELEASE_NOTES.md
+            ./*.ipa BUILD_PROVENANCE.json PACKAGE_AUDIT.json SHA256SUMS RELEASE_NOTES.md

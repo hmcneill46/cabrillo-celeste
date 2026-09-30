@@ -8,6 +8,35 @@ preparation, for a fresh development chat opened in
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
 
+## Public Actions integration in progress —30 September
+
+The owner requests a complete working hosted IPA build and then README/developer
+instructions. Source/workflow commits, pushes and hosted trials are authorized.
+The owner explicitly permits encrypted GitHub Actions storage of the temporary
+FMOD login. Secrets are configured in `cabrillo-release`, limited to `main`,
+`codex/actions-release` and version tags. Never print or commit their values.
+PR3 has merged into main (`51f2ae9`); this work is on `codex/actions-release`.
+
+Fresh public downloads and independent managed/native builds pass locally in
+`.build/release51-local`, with no historical compiled capsule or game ZIP.
+Fresh FMOD preparation matches the accepted runtime archive hashes. Release51
+uses the unchanged build50 launcher sources, fresh dependencies and shortcut49;
+it has its own0.24.0 identity in `release/app51`. Frozen38–50 are preserved.
+The new manifest is `release/public.json`; historical `release/current.json`
+remains unchanged. A complete local package and hosted source build are pending.
+
+The hosted toolchain probe confirms Xcode26.6/17F113 and iPhoneOS SDK26.5. Apple
+Shortcut signing needs an iCloud session, unavailable on a fresh runner. The
+reviewed49 signed documents are now public resources with their deterministic
+source. `verify_release_shortcuts.py` validates their Apple certificate chains,
+AEA signatures and every generated action/connection without Apple credentials.
+Only Apple's two observed signing metadata changes are normalized. The existing
+49 templates stay byte-identical. Their certificates expire26 October2027;
+future renewal requires a reviewed signing pass, not an Apple login in Actions.
+
+Keep app50/shortcut49 on the phone. This is build/release infrastructure work,
+not a new physical acceptance claim. No public version tag or Release exists yet.
+
 ## Local FMOD download verification —30 September
 
 The owner requested local CI preparation before Actions and a stop at credentials,
