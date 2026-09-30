@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.24.1",
+  "build_number": "52",
+  "build_id": "launcher-release-20260930-52",
+  "scope": "Public source release with fresh runtime builds and explicitly licensed FMOD input",
+  "device_jit_tested": false
+}

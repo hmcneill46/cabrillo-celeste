@@ -32,7 +32,7 @@ jobs:
       - name: Test build boundaries and release rejection cases
         run: python3 -m unittest discover -s tools/tests -v
       - name: Report current IPA release readiness
-        run: python3 tools/release.py readiness --output .build/ci/release-readiness.json
+        run: python3 tools/release_pipeline.py readiness --output .build/ci/release-readiness.json
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: source-check-reports
@@ -51,6 +51,8 @@ jobs:
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
+      - name: Verify bundled signed Shortcuts against their public source
+        run: python3 tools/verify_release_shortcuts.py --output .build/ci/signed-shortcuts.json
       - name: Compile current native source and run 119 checks
         run: python3 tools/ci/check_native_profiles.py --lane launcher-owned-game
       - name: Check build50 shortcut ordering and recovery (host only)
@@ -59,6 +61,7 @@ jobs:
         with:
           name: native-profile-check-reports
           path: |
+            .build/ci/signed-shortcuts.json
             .build/ci/native-shortcuts/receipt.json
             .build/ci/native-profiles/receipt.json
             .build/ci/native-profiles/results/results.json

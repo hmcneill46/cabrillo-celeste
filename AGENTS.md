@@ -43,6 +43,45 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   dependency, not a Git source directory. Build38 uses public source receipts and
   an explicit FMOD SDK instead. Never silently fall back to a legacy checkout.
 
+## Public Actions release build —30 September
+
+The owner requests a complete working GitHub Actions IPA build and README/developer
+instructions. This authorizes source/workflow commits, pushes and hosted trials.
+The owner explicitly permits storing the temporary FMOD login as encrypted GitHub
+Actions secrets. They are confined to the restricted `cabrillo-release` environment
+and the official SDK fetch step. Never print credentials or include them in source,
+shell arguments, reports or public outputs.
+
+The owner supplied Brett Paterson / Firelight's email permitting the FMOD runtime
+inside a built application. Developers must obtain their own SDK from fmod.com;
+SDK components must not be redistributed. This resolves the runtime permission
+gate. Preserve that distinction and the applicable licence/notices. No SDK mirror,
+SDK artifact/cache or embedded game code/assets is permitted.
+
+The complete52 /0.24.1 hosted run36682093793 passes at `789f20e`: official SDK
+acquisition, fresh public managed/native compilation, app/package audit, five
+attestations and separate Ubuntu verification. Independent downloaded-kit checks
+pass all five attestations/checksums,247 captured app source hashes and NLua's
+strong-name signature. The18,759,836-byte IPA SHA256 is
+`7392dd6f0199faf0d8501ed690772685e127ee9fd463ed2b3ce59441e719dbe4`.
+All59 Python,119 profile,185 shortcut,36 branch and15 bad-URL controls pass.
+See HANDOFF and `docs/RELEASING.md` for run/download links and the exact scope.
+
+The active manifest is `release/public52.json`; use `tools/build_release52.py` with
+an explicit developer-owned FMOD SDK for local builds. Preserve frozen38–51,
+including51's first local package/compiler/manifest.52 adds only the separately
+pinned Apple Silicon NuGet host package to the original128-package lock; all common
+hashes remain exact. Mono6.14.1 supplies NLua's `sn` build tool; the iOS Mono runtime
+still builds separately from pinned8.0.28 source. Public signed49 Shortcut resources
+are verified against Apple signatures and generated actions, without an iCloud
+login. Their signing certificates expire26 October2027.
+
+All247 captured52 app inputs are frozen in the hosted kit's BUILD_PROVENANCE.json,
+retained in `artifacts/cabrillo-build52-hosted`; use53 for new app implementation.
+No public version tag or Release has been created; manual artifacts last14 days.
+Keep app50/shortcut49 on the phone. Hosted compilation is not new physical-device
+acceptance. Earlier device, save-manager, iPad and sustained120 gates stay distinct.
+
 ## Active owner-prioritized work —28 September, app50 / shortcut49
 
 The owner installed50, kept shortcut49 and confirms the fresh cellular test passes.

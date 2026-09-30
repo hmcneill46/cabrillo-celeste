@@ -1,5 +1,68 @@
 # Building Cabrillo
 
+## Current source build: version0.24.1 / build52
+
+Use a Mac with **Xcode26.6 /17F113**, iPhoneOS SDK26.5, Python3.12 or newer,
+CMake, Git and **Mono6.14.1** with its `sn` strong-name tool. Both Intel and Apple Silicon SDK downloads are pinned in the
+public dependency lock. The NuGet host lock switches only the pinned macOS app-host
+package between Intel and Apple Silicon; the iOS target remains arm64. Set `DEVELOPER_DIR` if Xcode is installed elsewhere:
+
+```sh
+export DEVELOPER_DIR='/Applications/Xcode-26.6.app/Contents/Developer'
+```
+
+Mono supplies NLua's required assembly-signing tool; the iOS Mono runtime is
+compiled separately from its pinned8.0.28 source. On Homebrew, `brew install mono`
+currently supplies6.14.1; the recipe checks that version and fails early if `sn`
+is unavailable. Do not disable NLua signing to bypass a missing build prerequisite.
+
+### Developers must obtain their own FMOD SDK
+
+Download **FMOD Engine1.10.09 for iOS, build97915** from your own
+[FMOD account](https://www.fmod.com/download). Mount its
+`fmodstudioapi11009ios-installer.dmg` and use the `FMOD Programmers API` directory,
+or copy that directory into an ignored local SDK location. The builder verifies
+the two iOS libraries, licence and version. A newer/different SDK will be rejected.
+
+Firelight permits the built application's FMOD runtime redistribution. That does
+not permit distribution of the SDK. Keep development libraries, headers, examples
+and account credentials outside Git and shared artifacts. End users downloading
+the IPA need no FMOD account. [The release guide](RELEASING.md#fmod-runtime-permission)
+records the distinction and the maintainer's separate CI download setup.
+
+### Build the app
+
+From this checkout, choose fresh work and output paths:
+
+```sh
+python3 tools/build_release52.py --work .build/my-source-build \
+  --output .build/my-source-build/output \
+  --fmod-sdk '/path/to/FMOD Programmers API'
+```
+
+This downloads and verifies pinned public source archives, .NET SDK/runtime packs
+and NuGet inputs, rebuilds the managed/native dependencies, prepares the FMOD
+runtime link inputs, verifies the signed Shortcut resources and compiles the app.
+It consumes no Celeste game ZIP, historical compiled capsule or old checkout.
+The launcher implementation is the accepted build50 source; `release/app52`
+supplies the new identity. Earlier delivered source lanes stay frozen.
+
+The `output` directory contains `Cabrillo.ipa`, `BUILD_PROVENANCE.json`,
+`PACKAGE_AUDIT.json` and `RELEASE_NOTES.md`. Internal logs, symbols and receipts
+are under `artifacts/release52-my-source-build`; dependency work stays beneath
+`.build/my-source-build`. Do not upload whole work/SDK directories. Local builds
+do not acquire a GitHub-hosted attestation. The release workflow additionally
+requires a clean selected commit, produces an allowlisted checksummed kit and
+attests its exact bytes; see [CI and releases](RELEASING.md).
+
+The app remains unsigned for installation using your compatible signing or
+LiveContainer/TrollStore setup. JIT and user-supplied Celeste files are required
+to play. A successful package build is not a physical-device gameplay pass.
+
+The bundled revision49 Shortcut documents are public resources whose signatures
+and actions are verified against the generator. You need no iCloud login to build
+with them. Updating/re-signing a template is a separate reviewed operation.
+
 ## Public source checks
 
 From a public clone on macOS with Xcode26.6 /17F113:
@@ -9,6 +72,7 @@ python3 tools/ci/check_public_repository.py
 python3 -m unittest discover -s tools/tests -v
 python3 tools/ci/check_native_profiles.py --lane launcher-owned-game
 python3 tools/ci/check_native_shortcuts.py
+python3 tools/verify_release_shortcuts.py
 ```
 
 The native wrappers honor `DEVELOPER_DIR` and require fresh work directories;
@@ -16,9 +80,16 @@ use `--work .build/a-new-check-directory` when rerunning. The shortcut wrapper
 tests build50 ordering/recovery and revision49 generated actions without signed
 assets, private inputs, network access in the native tests or a device.
 It does not replace the signed import and phone gates in the reports below.
-See [the release guide](RELEASING.md) for GitHub CI and the FMOD publishing gate.
+See [the release guide](RELEASING.md) for current GitHub CI, official SDK acquisition and publishing.
 
-## Build50: cellular shortcut launch sequence
+## Historical build notes
+
+The following sections preserve version-specific recipes and evidence. Their old
+next-build numbers and distribution gates describe those dates. Use the current
+source recipe above and HANDOFF.md for active work; do not substitute old private
+artifacts into the public release workflow.
+
+## Historical build50: cellular shortcut launch sequence
 
 The50 lane is `experiments/ios-jit/launcher-shortcut-cellular`. It retains all49
 runtime dependencies, SwiftUI and exact signed shortcut49 templates. Native Travel
@@ -117,8 +188,8 @@ python3 tools/build_public_release.py --work .build/my-source-build \
 ```
 
 FMOD1.10.09 / build97915 is required. This explicit SDK option is a private local
-build. Public mode remains blocked until permission and authorized SDK delivery
-are recorded. The historical recipes below retain their original purposes.
+build. Its historical public mode remains blocked; use the current52 recipe above for
+the later permission and SDK contract. The recipes below retain their original purposes.
 
 ## Build39: native shortcut integration with the exact38 runtime
 
@@ -128,7 +199,7 @@ The independently compiled launcher is `experiments/ios-jit/launcher-shortcuts`.
 managed assemblies and16 dependency archives. `tools/build_shortcut_files.py`
 generates inspectable plist/action JSON and signs importable shortcuts with the
 macOS Shortcuts CLI. See [reproduction and validation](ios-jit/SHORTCUT_BUILD_39.md).
-The public release configuration stays on frozen38 and remains blocked on FMOD.
+This historical recipe retains its frozen38 permission state; current release52 uses the separate public manifest.
 
 ## Build40: LiveContainer shortcut routing correction
 

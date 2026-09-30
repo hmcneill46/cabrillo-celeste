@@ -1,12 +1,122 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated29 September for source publication after USB shortcut testing,
+Written 14 September 2026; updated30 September for FMOD clarification after source publication and USB shortcut testing,
 iOS15/iPad support, the
 build36 Motion Smoothing correction, build37 Everest upgrade and build38 owned-game
 preparation, for a fresh development chat opened in
 `/Users/harrymcneill/Projects/Cabrillo`. Read this and [AGENTS.md](AGENTS.md) first.
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
+
+## Public Actions release build —30 September
+
+The owner requests a complete hosted IPA build and README/developer guidance,
+and explicitly permits the temporary FMOD login as encrypted Actions secrets.
+Source/workflow commits, pushes and hosted trials are authorized. PR3 is merged
+into main (`51f2ae9`); this work is on `codex/actions-release`. The protected
+`cabrillo-release` environment permits `main`, the trial branch and `v*` tags;
+credentials are confined to the official SDK fetch step. Never print their values.
+
+[Hosted run 36682093793](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793) passes the complete fresh build and independent
+verification at commit `789f20e751901cc4538ff25b8033abeb6f339af7`. The
+[trial kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793/artifacts/11083060317) contains five attested files. A separate local download
+check verifies all five attestations, checksums, all247 captured app inputs and
+NLua's strong-name signature. The IPA is18,759,836 bytes, SHA256
+`7392dd6f0199faf0d8501ed690772685e127ee9fd463ed2b3ce59441e719dbe4`.
+This manual run did not create a version tag or GitHub Release.
+
+All59 Python controls,119 native profile controls,185 native shortcut checks,
+36 generated branches and15 bad-URL controls pass. The complete151-input
+dependency provenance explicitly declares14 source archives, one mixed archive,
+132 public binaries, two licensed FMOD runtime archives and two signed documents.
+The IPA has199 managed assemblies and no bundled original/prepared Celeste code
+or game assets. SDK cleanup passes; only the five allowlisted files are uploaded.
+
+The downloaded kit, attestations and verification are retained under
+`artifacts/cabrillo-build52-hosted`; raw hosted logs/check reports are ignored in
+`.build/hosted-release52`. All247 captured52 app inputs are frozen at the hosted
+commit above. New app implementation needs53. No phone or iCloud delivery occurs.
+
+Release52 /0.24.1 uses the unchanged accepted50 launcher sources, freshly built
+public runtime dependencies and the exact signed49 Shortcut documents. Its active
+manifest is `release/public52.json`; local builders use `tools/build_release52.py`
+and their own FMOD SDK. README, BUILDING and RELEASING explain the licensed-input
+boundary, workflow modes and what attestations prove. No game ZIP, prepared Celeste
+code, private compiled capsule, Apple account or private signing key is used.
+
+The full local51 package passes, but its outer wrapper correctly rejected commit
+drift during concurrent workflow edits. Keep that scope separate from hosted52.
+Its245 captured inputs and build50's243 inputs remain byte-exact. Hosted51 exposed
+a missing Mono6.14.1 `sn` prerequisite and an Intel-only NuGet host pin.52 retains
+NLua signing and pins the official Apple Silicon host package separately; all128
+package identities and hashes are checked before native compilation. Preserve
+the51 manifest/compiler/identity and original38 release manifest as frozen history.
+
+Apple Shortcut signing requires an iCloud session. The public reviewed49 signed
+documents instead have their certificate chains, AEA signatures and generated
+actions/connections verified on every Mac run. No new sign-in is needed. Their
+certificates expire26 October2027; renewal needs a reviewed local signing pass.
+
+Keep app50/shortcut49 on the phone. This is source-build/package evidence, not
+physical52 gameplay acceptance. No public version tag or Release has been created.
+The manual Actions kit is available for14 days; tags publish only after rebuilding
+and verifying. Preserve all earlier save-manager/iPad/sustained120/device gates.
+
+## Earlier local FMOD download verification —30 September
+
+The owner requested local CI preparation before Actions and a stop at credentials,
+then supplied a temporary FMOD account for testing. Its credentials were used via
+hidden terminal input and were not saved to files, shell arguments or reports.
+`tools/check_fmod_access.py probe` verifies the reviewed public website scripts
+and HTTP401 boundary; `check-account` passes against the real account and exact
+1.10.09 iOS catalogue entry. Sessions are created separately from any browser and
+logged out. A changed website flow stops for review. See `docs/RELEASING.md`.
+
+`tools/fetch_fmod_sdk.py` now passes the actual authenticated official download,
+checksum, read-only DMG mount, four-file staging and detach. The143,583,015-byte
+installer matches the original SHA256 recorded before the download:
+`7f1934f248df7202b8efb6951570f60c52566217e230f26ed3682a6447336e5f`.
+Both device libraries and licence match their existing pins. The existing FMOD
+arm64 preparation/localization step produces byte-identical runtime archives to
+`.build/owned-fmod38-c/receipt.json`, using the retained public native receipt
+only for its Theorafile symbol check. This is not a full native/IPA rebuild.
+
+The helper restricts the CDN to the exact observed host, forwards no account
+headers to it and follows no redirects. Its explicit environment-credential
+mode is covered by synthetic tests; the live test used hidden prompts. Safe
+receipts: `.build/fmod-download-preparation/{probe,account-check,download,component-check}.json`.
+SDK files: `.private/fmod-ci-2026-09-30-a`; prepared runtime libraries:
+`.build/fmod-ci-2026-09-30-prepare`. These remain ignored, never public artifacts.
+No credentials, account identifiers or signed URLs were written into receipts.
+All48 Python controls pass, including28 new FMOD controls and the retained20.
+
+At this earlier stage no GitHub secrets/write, Actions run or app identity
+allocation had occurred. The completed hosted52 work above supersedes that
+next-step state; delivered app50/shortcut49 remains unchanged.
+
+## FMOD runtime permission received —30 September
+
+The owner supplied Firelight's email reply from Brett Paterson: a built application
+may distribute the runtime libraries; source developers must download FMOD from
+fmod.com, and SDK components must not be redistributed. The runtime permission
+question is answered on those terms. See `docs/RELEASING.md`. The supplied email
+text is retained privately at `.private/licensing/fmod/2026-09-30-owner-email.txt`;
+no email headers or account access were supplied or needed for this record.
+
+The unchanged50 IPA passes the existing public-package structure/payload audit.
+Its FMOD input recipe links the two pinned iOS runtime libraries and includes the
+licence notice. The package contains no FMOD SDK headers, separate static archives,
+SDK examples or authoring tools. Existing managed-payload evidence still records
+no bundled original/prepared Celeste assemblies. This review adds no device pass.
+
+Release implementation remains separate: the frozen38 recipe assumes a configured
+SDK ZIP URL and rejects an explicit local SDK as a private input. The local DMG
+acquisition check above now resolves the authenticated-download uncertainty. A future51 release
+must obtain SDK inputs from FMOD, keep SDK components/credentials out of published
+outputs, and truthfully record the licensed binary dependency in provenance.
+Do not mirror the SDK for developers or publish old receipts as new release evidence.
+The email is recorded locally; no release tag, GitHub write or IPA publication was
+performed for this update. Keep app50/shortcut49 and all earlier physical gates.
 
 ## Source publication —29 September
 
