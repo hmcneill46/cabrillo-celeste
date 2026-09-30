@@ -25607,8 +25607,8 @@
     },
     "tools/build_release51.py": {
       "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
-      "sha256": "22f024d7b5b27faf863a1a65fe83fe2896011b168b51da06a9068eeef80f03d1",
-      "bytes": 8047
+      "sha256": "586b83f1c6aae314d8817f8a234ee3e85c9fe3d5e43de76e698d6a9807428c16",
+      "bytes": 8878
     },
     "tools/build_save_transfers.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",

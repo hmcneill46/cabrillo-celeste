@@ -54,8 +54,21 @@ def build(work, output, sdk, download=None):
 
     def run(tool, *arguments):
         print('Building: ' + tool, flush=True)
-        subprocess.run([sys.executable, '-u', str(ROOT / 'tools' / tool), *map(str, arguments)],
-                       cwd=ROOT, check=True)
+        try:
+            subprocess.run([sys.executable, '-u', str(ROOT / 'tools' / tool), *map(str, arguments)],
+                           cwd=ROOT, check=True)
+        except subprocess.CalledProcessError:
+            # These are compiler logs from public source stages, after the SDK
+            # acquisition step's credentials have left the environment. Never
+            # inspect .private, the FMOD stage or arbitrary files for diagnostics.
+            folder = {'build_owned_managed.py': work / 'managed',
+                      'build_owned_native.py': work / 'native'}.get(tool)
+            if folder and folder.is_dir():
+                logs = sorted(folder.glob('*.log'), key=lambda p: p.stat().st_mtime)
+                if logs:
+                    print('Last public-source compiler diagnostics (' + logs[-1].name + '):', flush=True)
+                    print('\n'.join(logs[-1].read_text(errors='replace').splitlines()[-100:]), flush=True)
+            raise
 
     inputs, managed, native, fmod, cache = [work / n for n in ['inputs', 'managed', 'native', 'fmod', 'downloads']]
     run('prepare_owned_public.py', '--work', inputs, '--cache', cache)
