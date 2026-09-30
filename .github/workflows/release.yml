@@ -5,38 +5,7 @@ on:
     tags: ['v*']
   workflow_dispatch:
     inputs:
-      verify:
-    name: Independently verify artifact attestations
-    needs: [eligibility, build]
-    runs-on: ubuntu-24.04
-    timeout-minutes: 10
-    permissions:
-      contents: read
-      actions: read
-      attestations: read
-    env:
-      SOURCE_COMMIT: ${{ needs.eligibility.outputs.source_commit }}
-      SOURCE_REF: ${{ needs.eligibility.outputs.source_ref }}
-    steps:
-      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
-        with:
-          name: public-ipa-release
-          path: release-kit
-      - name: Verify every file against the hosted workflow and exact source
-        working-directory: release-kit
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          sha256sum --check SHA256SUMS
-          for asset in *; do
-            gh attestation verify "$asset" --repo "$GITHUB_REPOSITORY" \
-              --signer-workflow "$GITHUB_REPOSITORY/.github/workflows/release.yml" \
-              --source-digest "$SOURCE_COMMIT" --source-ref "$SOURCE_REF" \
-              --deny-self-hosted-runners
-          done
-
-  publish:
+      publish:
         description: Publish a Release (requires a matching existing version tag)
         type: boolean
         default: false
@@ -148,6 +117,38 @@ jobs:
             .build/public-release-kit/RELEASE_NOTES.md
           if-no-files-found: error
           retention-days: 14
+
+  verify:
+    name: Independently verify artifact attestations
+    needs: [eligibility, build]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+      attestations: read
+    env:
+      SOURCE_COMMIT: ${{ needs.eligibility.outputs.source_commit }}
+      SOURCE_REF: ${{ needs.eligibility.outputs.source_ref }}
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: public-ipa-release
+          path: release-kit
+      - name: Verify every file against the hosted workflow and exact source
+        working-directory: release-kit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          sha256sum --check SHA256SUMS
+          for asset in *; do
+            gh attestation verify "$asset" --repo "$GITHUB_REPOSITORY" \
+              --signer-workflow "$GITHUB_REPOSITORY/.github/workflows/release.yml" \
+              --source-digest "$SOURCE_COMMIT" --source-ref "$SOURCE_REF" \
+              --deny-self-hosted-runners
+          done
+
 
   publish:
     name: Verify provenance and publish the GitHub Release

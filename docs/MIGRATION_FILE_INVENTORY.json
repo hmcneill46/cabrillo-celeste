@@ -20,8 +20,8 @@
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
-      "sha256": "b465a14949db116f1aa62e6f68e01dfe3c7cff3e82b0b393904ec602397edac4",
-      "bytes": 7546
+      "sha256": "3e72715157e81d3f25e710b734b4942e5444278bf3c3d0ab33eed1c7f6bc1470",
+      "bytes": 7547
     },
     ".gitignore": {
       "reason": "Exclude private dependencies, device data, signing inputs and generated builds from Git",
