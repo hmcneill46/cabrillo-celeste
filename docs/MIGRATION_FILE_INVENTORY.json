@@ -25,13 +25,13 @@
     },
     "AGENTS.md": {
       "reason": "Development constraints, scoped source publication approval through50 and separate physical gates",
-      "sha256": "341e32fb6deb6820006ebdc6a3392fb03432b4df13aedd1c03ae4a5fdf225d47",
-      "bytes": 36981
+      "sha256": "cef2edb1f8f9c57d769c20c674386cf97bb46368e73e599d527861bbe1257a37",
+      "bytes": 38276
     },
     "HANDOFF.md": {
       "reason": "Active delivery, exact dependency receipts and remaining physical checks for the next development turn",
-      "sha256": "d29823209d535e5b0554c3d2659d296320806fd71e6961c63a1b17b573339307",
-      "bytes": 96397
+      "sha256": "9fba3f6935a80bf2719a0b737507123082e451f99dd024648932852d4de667b0",
+      "bytes": 98644
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -41,8 +41,8 @@
     },
     "README.md": {
       "reason": "Public product overview, current source build and FMOD distribution boundary",
-      "sha256": "93cc0b2913a21f0421a33e9b8df6adf36b755533d99f93fbdb930ca8c7c6a69f",
-      "bytes": 11701
+      "sha256": "3f5f4fc64e879fd3c4ee5fa745694fd58869f1445942dff360d648b6f132d11d",
+      "bytes": 11779
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -85,8 +85,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Gated CI/source recipe, FMOD input approval and attested release procedure",
-      "sha256": "44a85c3afaf2ea4da12a2c45a7917658e3020ecf8e931abf1827b5f48e72157b",
-      "bytes": 12342
+      "sha256": "8594f0655ac62252de09e3f92589681095804f440822f671cb20e7a20022d57f",
+      "bytes": 13464
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",

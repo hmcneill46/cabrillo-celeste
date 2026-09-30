@@ -8,7 +8,43 @@ preparation, for a fresh development chat opened in
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
 
-## Public Actions release build —30 September
+## Published v0.24.1 / build52 —30 September
+
+The owner tested the verified Actions trial kit, reports that everything looks
+good, and explicitly requests the version tag and workflow publication. This
+supersedes the previous no-tag/no-Release state for52. This is owner-reported
+trial acceptance; no additional device diagnostics or detailed lifecycle/save
+coverage is inferred. Keep the earlier granular device gates distinct.
+
+PR4 is merged at `2acf9af18f9dd1f200d8114ba9cbd2f557dfe24c`. All247 captured
+app inputs and the tested build/publishing scripts match the trial. Annotated
+tag `v0.24.1` points at that commit. The tag-triggered workflow is
+[run36696860903](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36696860903).
+
+[Cabrillo v0.24.1](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.1) is published with the unsigned IPA, provenance,
+package audit, release notes and checksums. Every job in the tag-triggered build,
+independent verification and publisher passes. All five public assets download
+without authentication and pass their API digests/checksums and tag-specific
+GitHub attestations for the exact merged commit.
+
+The release IPA is 18,759,819 bytes, SHA256
+`c223f7e31aea15ecc640f8f10388c4628f9ba063f1a52967279c949023123b47`. All 247 captured app source inputs and all 151
+dependency inputs match the accepted trial; pre-signed document URLs now identify
+the merged commit, with unchanged document hashes. NLua strong-name verification
+passes. 189 of 199 managed DLLs are byte-identical to the trial.
+The tagged binary has no separate device run claimed.
+
+Exact public files, attestation bundles, release metadata and local verification
+are retained in `artifacts/cabrillo-v0.24.1-release`; completed check reports and
+raw hosted logs stay ignored in `.build/release-v0.24.1`.
+
+Preserve both the tested trial kit and the separately attested tagged rebuild.
+No app source/identity changed for publication;53 remains the next implementation.
+FMOD SDK components/credentials and game files remain excluded from Git/releases.
+The public IPA is unsigned and requires the user's compatible installation/JIT
+setup and their original game ZIP. No phone/iCloud mutation was needed for this release.
+
+## Earlier public Actions trial —30 September
 
 The owner requests a complete hosted IPA build and README/developer guidance,
 and explicitly permits the temporary FMOD login as encrypted Actions secrets.

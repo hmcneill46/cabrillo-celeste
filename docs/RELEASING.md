@@ -13,6 +13,22 @@ Players import their own original Celeste FNA1.4.0.0 files. The first game launc
 prepares that copy; subsequent launches reuse the verified cache. FMOD runtime
 code is linked into the app under the permission below. No FMOD SDK is published.
 
+## Published release: v0.24.1
+
+[Download the public IPA](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.24.1/Cabrillo-0.24.1-unsigned.ipa) from the [Release page](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.1).
+[Tagged run36696860903](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36696860903) successfully rebuilt, audited, attested, independently
+verified and published all five files at commit
+`2acf9af18f9dd1f200d8114ba9cbd2f557dfe24c`. A separate unauthenticated download
+verified every published file and its tag-specific attestation. IPA SHA256:
+`c223f7e31aea15ecc640f8f10388c4628f9ba063f1a52967279c949023123b47`.
+
+The owner tested the trial kit and reports everything looks good before authorizing
+publication. The tagged rebuild uses the same 247 captured app source inputs and
+the same 151 dependency inputs. This preserves the scoped trial acceptance; it
+does not claim additional detailed device tests for the freshly compiled binary.
+
+### Earlier trial build
+
 [Hosted run 36682093793](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793) passes the complete fresh build and independent
 verification at commit `789f20e751901cc4538ff25b8033abeb6f339af7`. The
 [trial kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793/artifacts/11083060317) contains five attested files. A separate local download
@@ -23,7 +39,8 @@ This manual run did not create a version tag or GitHub Release.
 
 A successful build/package check is separate from physical gameplay acceptance.
 The existing build50 phone evidence and earlier game/iPad checks remain scoped to
-those builds. Build52 has no newly claimed physical-device pass.
+those builds. The owner subsequently reports a successful trial test as described above; no
+additional diagnostic export or detailed device coverage is inferred.
 
 ## Why there are separate workflows
 
@@ -143,7 +160,7 @@ shasum -a 256 -c SHA256SUMS
 gh attestation verify Cabrillo-0.24.1-unsigned.ipa \
   --repo hmcneill46/cabrillo-celeste \
   --signer-workflow hmcneill46/cabrillo-celeste/.github/workflows/release.yml \
-  --source-ref refs/tags/v0.24.1-rc.1 \
+  --source-ref refs/tags/v0.24.1 \
   --source-digest FULL_COMMIT_FROM_BUILD_PROVENANCE \
   --deny-self-hosted-runners
 ```

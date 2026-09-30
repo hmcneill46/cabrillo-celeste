@@ -43,7 +43,25 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   dependency, not a Git source directory. Build38 uses public source receipts and
   an explicit FMOD SDK instead. Never silently fall back to a legacy checkout.
 
-## Public Actions release build —30 September
+## Published v0.24.1 / build52 —30 September
+
+The owner reports successful testing of the trial kit and explicitly authorizes
+the version tag and public Release. PR4 is merged at `2acf9af`; annotated
+`v0.24.1` targets that commit. [The tagged run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36696860903) passes every build,
+verification and publishing job. [The Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.1) has all five approved assets.
+They independently download without authentication and pass checksums and exact
+source/tag/workflow attestation verification. Release IPA SHA256:
+`c223f7e31aea15ecc640f8f10388c4628f9ba063f1a52967279c949023123b47`. See HANDOFF and docs/RELEASING.md.
+
+The 247 captured app inputs and 151 dependency inputs match the tested trial.
+Retain both immutable kits; the new release files/evidence are in
+`artifacts/cabrillo-v0.24.1-release`. No app implementation changed for publication;
+use53 for new app changes. Owner-reported trial acceptance adds no detailed
+save/lifecycle/iPad/sustained120 gate or new device log. No phone mutation is needed.
+SDK components, credentials and game files remain excluded from public outputs.
+The earlier no-tag/no-Release statements below describe the superseded trial stage.
+
+## Earlier public Actions trial —30 September
 
 The owner requests a complete working GitHub Actions IPA build and README/developer
 instructions. This authorizes source/workflow commits, pushes and hosted trials.

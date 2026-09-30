@@ -17,10 +17,11 @@ under [Releases](https://github.com/hmcneill46/cabrillo-celeste/releases).
 Normal pushes run source checks; a maintainer chooses when to publish a version
 tag. Manual trial builds produce downloadable Actions artifacts without a Release.
 
-**Verified trial:** [version 0.24.1 / build 52](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793/artifacts/11083060317) was built and
-[verified successfully by Actions](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36682093793) on 30 September 2026. This is a manual
-run artifact, available for 14 days with GitHub sign-in. No tagged Release has
-been published yet; physical testing of this newly compiled build is separate.
+**[Download Cabrillo 0.24.1 / build 52](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.24.1/Cabrillo-0.24.1-unsigned.ipa)** ·
+[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.1).
+The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36696860903) rebuilt the tested source, audited the IPA
+and verified all five attestations before publishing. Release assets remain
+available independently of the temporary Actions artifacts.
 
 You need **iOS15 or later, a compatible installation/JIT setup, and your own
 Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game
