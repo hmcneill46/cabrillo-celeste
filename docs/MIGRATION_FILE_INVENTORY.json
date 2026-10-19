@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 4665,
+  "file_count": 4666,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -25,13 +25,18 @@
     },
     "AGENTS.md": {
       "reason": "Build53 signing-picker development scope, published52 preservation and owner approval boundaries",
-      "sha256": "1006bd686126ba8db5a839b4bc679015e04a4cbf408ca858bab3321d016b16ea",
-      "bytes": 42280
+      "sha256": "270e2c76000eefb7da15ae47978f0f6019799f60eae4d7cfbba1f74cf2cad670",
+      "bytes": 43161
+    },
+    "CHANGELOG.md": {
+      "reason": "Public release change notes requested by owner for v0.24.3",
+      "sha256": "e83d641d9498d03a8582a9ebb002c4607a451fa93cf3445b933c8128ebfdba70",
+      "bytes": 1060
     },
     "HANDOFF.md": {
       "reason": "Build53 repair evidence, current build recipe, missing full package inputs and pending unchanged-ID phone gate",
-      "sha256": "c8288c64cf003c6fdecf1fe16fde035a6af2d5bbcea7bf6eb2aa8ff4997da12f",
-      "bytes": 105313
+      "sha256": "f6559f7bbc2d1f9df7c0936a09af67b8c7232792f19ffbc1dc80d8b097931613",
+      "bytes": 106319
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -41,8 +46,8 @@
     },
     "README.md": {
       "reason": "Current product/download overview and build53 signing-aware source recipe",
-      "sha256": "d6e43313bab96bd8b21d81d71b51f355be5eec8b4d5d2d5044fb0440524b4e7d",
-      "bytes": 12685
+      "sha256": "4f7673e732b1b34c53ea8c43203e8d796ba5f891f3e4844769e8617686e6da55",
+      "bytes": 12476
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -85,8 +90,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Current53 source workflow and separate immutable published52 release with licensed-input boundaries",
-      "sha256": "8848904c458a65856711df7a7e210766623252e9baf76d4b012c988c7edbaccc",
-      "bytes": 15661
+      "sha256": "4ecadd6b3c8fd6346ed45f74dd1104edd24969a7fd4b11eeff22625f6e397ccc",
+      "bytes": 16736
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -353,13 +358,13 @@
     },
     "docs/ios-jit/COPY_PICKER_BUILD_54.md": {
       "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
-      "sha256": "5271b4cdaef924f3bd408f47120c66ae21c4ebff3289ed0e2db973e3c99c149c",
-      "bytes": 8094
+      "sha256": "7625783bfb82d51a8c336feefae78acac677cb6edad8eba60df001b543e6b5e0",
+      "bytes": 9561
     },
     "docs/ios-jit/COPY_PICKER_BUILD_54_EVIDENCE.json": {
       "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
-      "sha256": "f8d13371ac4d1624a024b072821efb5c2436f763ccefd002f79720b007c8a8f8",
-      "bytes": 5232
+      "sha256": "fb2b9418a2c5e5c6d87059f2496cd425bfd93f44cd2df2da687c0c595a64a0f8",
+      "bytes": 6846
     },
     "docs/ios-jit/DEVICE_TEST_2026-09-11.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
@@ -25777,8 +25782,8 @@
     },
     "tools/build_release54.py": {
       "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
-      "sha256": "86ea5871295c563669ad37ae33bfefb4e10c318a65685068e30fc021af14e634",
-      "bytes": 9887
+      "sha256": "ee94303be4b8c9e9ab67dd83a4182f839241734bcd86b90208433612fdafbfb4",
+      "bytes": 10446
     },
     "tools/build_save_transfers.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",

@@ -23,16 +23,13 @@ The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/a
 and verified all five attestations before publishing. Release assets remain
 available independently of the temporary Actions artifacts.
 
-Current source includes [build54's copy-based Files imports](docs/ios-jit/COPY_PICKER_BUILD_54.md)
-for standalone signing setups such as Feather with an explicit provisioning ID.
-The53 trial's host hook still failed game selection on the owner's phone;
-its existing copy-based backup picker selected the same ZIP successfully.
-Build54 applies copy mode to game/mod imports. Its
-[unsigned0.24.3 trial kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342/artifacts/12199896629)
-passes the complete source build, package audit and local exact-source attestation
-verification. Actions downloads require GitHub sign-in and last14 days. Game/mod
-phone validation remains pending. Published0.24.1 predates both repairs.
-No0.24.3 tag or Release is published.
+Version0.24.3/build54 adds [the Feather game-ZIP picker fix](docs/ios-jit/COPY_PICKER_BUILD_54.md).
+The [trial kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342/artifacts/12199896629)
+passes the complete hosted build and independent verification. Game-ZIP selection
+and staging are confirmed on iPhone/iOS27.0.1 with the original identifier and
+current Development profile. The owner has authorized public v0.24.3 publication;
+its tagged build is being prepared. See [change notes](CHANGELOG.md). Published
+0.24.1 above predates this fix.
 
 You need **iOS15 or later, a compatible installation/JIT setup, and your own
 Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game

@@ -45,6 +45,20 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
 
 ## Copy-based Files imports —19 October, build54 correction
 
+The owner now confirms54 imports the game ZIP successfully. Read-only USB
+verifies exact0.24.3/build54, original ID, all253 source hashes, copy-mode game
+selection and875,540,825bytes staged on iOS27.0.1. Journal SHA256:
+`92ff72a8361d24ea7efd4dcd3b999d08aecc09e6b1a0468bd02ca3654e042985`.
+The full trial workflow and Ubuntu verification pass. This closes the reported
+game-ZIP selection/staging defect; physical mods/gameplay/JIT remain separate.
+
+On19 October the owner explicitly requests GitHub Release publication and change
+notes. This authorizes the reviewed source/notes merge to main, v0.24.3 tag and
+existing tagged build/verify/publication workflow. Earlier trial-only/no-Release
+statements below are superseded for this release. Keep all253 app inputs frozen;
+only notes/evidence change for publication. No tagged binary/device pass is yet
+claimed. Preserve both the tested trial kit and upcoming tagged release kit.
+
 The owner reports53 still fails game selection. USB verifies exact53 source
 metadata/original ID on iOS27.0.1; entitlement lookup and hook installation pass,
 but game selection never calls the delegate. Two owner-driven backup-picker
@@ -55,12 +69,11 @@ redacted mode diagnostics. The compatibility module remains exact53.
 
 Read `docs/ios-jit/COPY_PICKER_BUILD_54.md` and its ledger before acting. Keep
 all254 captured53 inputs/kit frozen.54 is the active corrective source recipe;
-the complete54 kit is built/independently verified; original-ID game/mod phone
-validation remains pending. All253 captured54 app inputs are frozen; use55 for
-new implementation. The
-owner's approval for this tested picker fix/unsigned trial continues to apply;
-no tag, Release or unrelated write is authorized. Do not infer a game-import
-pass from the existing backup picker or from the iOS26.5 simulator. Original
+the complete54 kit is built/independently verified; original-ID game selection
+and staging now pass as recorded above. All253 captured54 app inputs are frozen;
+use55 for new implementation. Release authorization is recorded above; unrelated
+publication remains outside scope. Do not infer additional device gates from the
+backup picker or iOS26.5 simulator. Original
 private phone evidence stays ignored; read-only USB collection changes no phone
 settings, installation, debugger or user files.
 

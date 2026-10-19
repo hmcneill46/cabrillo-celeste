@@ -5,7 +5,8 @@ repair. Game and mod importers request a temporary copy through Apple's public
 document-picker API, matching the existing save/backup importer policy. Original
 bundle ID, existing signing profile, staging validation and JIT remain intact.
 Local source/UI/production compile checks and complete unsigned54 package/local
-verification pass. A54 game/mod phone pass is not yet claimed.
+verification pass. The original-ID Feather game ZIP selection/staging phone gate now passes;
+physical mod import and broader gameplay/JIT gates remain separate.
 
 ## Phone evidence that changes the diagnosis
 
@@ -74,7 +75,8 @@ Completed local checks:
 | Frozen53 preservation |All254 hosted53 input hashes remain exact; compatibility module byte-identical. |
 | Independent review |No blocking findings; public SDK/dependency/Shortcut pins, original bundle ID and JIT remain exact. |
 | Complete54 IPA |PASS source build, package audit and independent local kit/attestation verification. |
-| Phone game/mod import |Pending physical test on54. |
+| Phone game import |PASS owner confirmation and USB journal: original ID, exact54 source, copy-mode selection and875,540,825 bytes staged on iOS27.0.1. |
+| Physical mod import / new gameplay or JIT acceptance |Not claimed by this game-import test. |
 
 The54 fixture has no entitlement injection and verifies the actual mode and
 returned URL for each selection. Its initializer arguments are checked against
@@ -89,11 +91,12 @@ and record real picker modes, delegate calls, copied/staged bytes and source
 preservation. Simulator open mode is a comparison control, not a reproduction
 of the phone's provisioning failure.
 
-The owner's existing approval covers pushing the tested Files-picker repair and
-running the unsigned test workflow;54 continues that same repair after53 fails.
-No version tag or public Release is authorized. An unsigned54 package must pass
+The owner's initial approval covered pushing the tested Files-picker repair and
+running the unsigned trial after53 fails. Following the confirmed54 phone pass,
+the owner explicitly requests a public Release with change notes. This authorizes
+v0.24.3 publication through the existing tagged workflow. The54 package must pass
 the full fresh source build, package checks and exact-source attestations before
-delivery. Original-ID Feather game/mod import remains a physical test afterward.
+delivery. The game-import phone gate passes below; physical mod import remains separate.
 Keep the working installation and its saves. No new Arctic Sign profile or
 bundle-ID change is part of this repair. See the accompanying evidence ledger
 for completed checks and their precise scope.
@@ -102,8 +105,7 @@ for completed checks and their precise scope.
 
 [Trial39276928342](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342)
 produces the54 kit at `4a094527a96e62fbf63518c088a1dd48d19407e5`, with public
-Release publishing disabled. The separate Ubuntu verification job remains
-pending at this record. The [five-file artifact](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342/artifacts/12199896629)
+Release publishing disabled. The separate Ubuntu verification passes and trial publishing is skipped. The [five-file artifact](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342/artifacts/12199896629)
 requires GitHub sign-in and has14-day retention. A separate download into
 `artifacts/cabrillo-build54-hosted` passes the strict allowlist/checksums, all253
 captured source hashes, all151 unchanged53 dependency hashes, exact49 Shortcut
@@ -117,4 +119,22 @@ IPA bytes:18,764,021. SHA256:
 Package audit reports199 managed assemblies, no original/prepared game assemblies
 or assets, and no distribution blockers. Keep the253 captured54 app inputs and
 kit frozen; use55 for new app implementation. No tag, public Release, cloud kit
-replacement or automatic phone installation occurs.
+replacement or automatic phone installation occurs during the trial.
+
+## Confirmed54 phone game import
+
+The owner confirms that Import game ZIP finishes and reports ready under Feather
+with the same Development profile and original identifier. Read-only USB verifies
+installed0.24.3/build54 and all253 source hashes against the tested hosted kit.
+The iOS27.0.1 journal records copy mode, a game selection callback and completed
+staging of875,540,825bytes. Journal SHA256:
+`92ff72a8361d24ea7efd4dcd3b999d08aecc09e6b1a0468bd02ca3654e042985`.
+This closes the reported picker/staging defect. It adds no physical mod-import,
+JIT or gameplay gate. The original collection/receipt stays ignored in
+`.private/picker-failure-2026-10-19`.
+
+The owner then authorizes the public v0.24.3 Release and change notes. Keep all253
+tested app inputs exact; only documentation and generated release-note prose
+change for publication. The tagged workflow rebuilds, audits, attests, verifies
+and publishes the five-file kit. A tagged build remains separate from an actual
+device run of that freshly compiled IPA; no bit-reproducibility claim is made.

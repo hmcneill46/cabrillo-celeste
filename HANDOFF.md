@@ -11,6 +11,19 @@ Recheck current files and owner messages before treating this dated state as liv
 
 ## Copy-based Files imports —19 October, build54 repair
 
+Owner confirmation and a fresh read-only USB collection now close the reported
+game-ZIP import defect. Exact54/original bundle ID/source hashes on iOS27.0.1
+produce one copy-mode game selection and one875,540,825-byte staged archive.
+Journal SHA256 `92ff72a8361d24ea7efd4dcd3b999d08aecc09e6b1a0468bd02ca3654e042985`.
+No new physical mod/JIT/gameplay acceptance is inferred. Trial39276928342 and
+Ubuntu verification now pass; the trial publication job is skipped.
+
+The owner explicitly requests a public Release and change notes on19 October.
+Proceed with reviewed source/notes on main, annotated v0.24.3 and the existing
+tagged full build/verification/publisher. This supersedes earlier trial-only
+publication limits for54. Preserve all253 tested app inputs and the trial kit;
+new implementation still needs55. Notes/evidence changes do not change the app.
+
 The owner installs53 and reports the same game-ZIP tap stall. Read-only USB
 collection verifies installed53/original bundle ID/iOS27.0.1 and all254 exact
 hosted inputs. Its entitlement is valid and hook is installed, but no game
@@ -25,16 +38,18 @@ to `asCopy:YES`, matching existing backup/save imports. The53 compatibility
 module stays byte-identical. It adds mode diagnostics and keeps all existing
 types, multi-selection, staging, scoped reads, validation, JIT and runtime.
 The copy/backup phone comparison also differs in purpose/filter;54's actual
-game/mod phone test is still required. Local source/UI/compile checks pass;
+game test was still required at that comparison. Local source/UI/compile checks pass;
 the complete unsigned54 kit is built and independently verified as recorded
-below. No54 phone game/mod import pass is yet claimed.
+below. The subsequent game-import phone pass is recorded above; physical mod
+import remains separate.
 
 Read `docs/ios-jit/COPY_PICKER_BUILD_54.md` and its evidence ledger. All25453
 captured inputs/kit remain frozen;54 is the active corrective lane. Original
 logs/receipts are ignored in `.private/picker-failure-2026-10-19`. Only relevant
 app metadata/journals were read; no extra debugger, installation, phone write or
 setting change was dispatched. The owner's prior approval covers this same
-tested picker repair/unsigned trial, not a tag/Release or unrelated publication.
+tested picker repair/unsigned trial. The later explicit Release request above
+extends that scope to v0.24.3 publication, preserving unrelated gates.
 
 Hosted trial39276928342 at `4a094527a96e62fbf63518c088a1dd48d19407e5`
 produces the complete five-file54 kit. SDK acquisition, full compilation, package
@@ -46,7 +61,7 @@ verify exact source/ref/workflow, hosted runner and run identity. IPA bytes:
 18,764,021; SHA256:
 `254a126168837708bbb7d136da0c3e426a3522feb375c0d19bb26d5fbcf89762`.
 Artifact12199896629 has14-day retention; no tag/Release is created. The separate
-Ubuntu verification job is pending at this record. Preserve the immutable253
+Ubuntu verification job now passes; the trial publication job is skipped. Preserve the immutable253
 app inputs/kit; use55 for new implementation. Delivery uses the local IPA and
 Actions artifact, with no cloud installer replacement or automatic phone install.
 

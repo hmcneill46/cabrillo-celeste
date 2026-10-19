@@ -3,7 +3,7 @@
   "date": "2026-10-19",
   "version": "0.24.3",
   "build_number": "54",
-  "status": "PASS_HOSTED_PACKAGE_AND_LOCAL_ATTESTATIONS_AWAITING_PHONE_AND_UBUNTU_VERIFICATION",
+  "status": "PASS_HOSTED_KIT_AND_ORIGINAL_ID_FEATHER_PHONE_GAME_IMPORT",
   "implementation": {
     "overlay": "experiments/ios-jit/launcher-copy-picker",
     "original_bundle_identifier_preserved": true,
@@ -78,11 +78,12 @@
   },
   "limitations": {
     "complete54_ipa_built": true,
-    "physical54_game_or_mod_import_tested": false,
+    "physical54_game_or_mod_import_tested": true,
     "simulator_does_not_reproduce_mismatched_phone_signature": true,
     "gameplay_or_jit_retested": false,
     "new_tag_or_release": false,
-    "device_mutation_dispatched": false
+    "device_mutation_dispatched": false,
+    "physical54_mod_import_tested": false
   },
   "authorization": "Continuation of owner-approved tested Files-picker correction/source push/unsigned hosted trial after53 fails; no tag, Release or unrelated write.",
   "python_log": {
@@ -95,13 +96,15 @@
     "source_ref": "refs/heads/codex/actions-release",
     "source_build_and_package": "PASS",
     "local_all_five_attestations": "PASS",
-    "ubuntu_verification": "PENDING",
+    "ubuntu_verification": "PASS",
     "publish_requested": false,
     "artifact_id": 12199896629,
     "retention_days": 14,
     "next_app_implementation": "55",
     "captured_app_inputs": 253,
-    "unchanged53_dependency_hashes": 151
+    "unchanged53_dependency_hashes": 151,
+    "conclusion": "SUCCESS",
+    "publication": "SKIPPED_TRIAL"
   },
   "hosted_kit": {
     "path": "artifacts/cabrillo-build54-hosted",
@@ -126,6 +129,38 @@
         "bytes": 351,
         "sha256": "5c6ffb9ecbcf39bcbe2a58c2016d7de361162d9d6ad20ec8284b4000bf68cd0f"
       }
-    }
+    },
+    "immutable_copy_path": "artifacts/cabrillo-build54-trial-frozen",
+    "local_renamed_zip_preserved": true
+  },
+  "physical54_evidence": {
+    "status": "CONFIRMED_BUILD54_COPY_GAME_IMPORT_STAGING",
+    "private_receipt": ".private/picker-failure-2026-10-19/build54-phone-receipt.json",
+    "private_receipt_sha256": "2cc066b0220b6a1a0886ef999376adfdc09e91c66968af467d52e84f1ea40c49",
+    "owner_confirms_game_zip_ready": true,
+    "sessions": [
+      {
+        "journal_sha256": "92ff72a8361d24ea7efd4dcd3b999d08aecc09e6b1a0468bd02ca3654e042985",
+        "version": "0.24.3",
+        "build_number": "54",
+        "os": "27.0.1",
+        "original_bundle_id": true,
+        "source_hashes_match_hosted54": true,
+        "prepared_game_count": 1,
+        "selected_game_count": 1,
+        "selected_game_copy_mode": true,
+        "staged_archive_count": 1,
+        "staged_archive_bytes": [
+          875540825
+        ],
+        "game_copy_import_staging_pass": true
+      }
+    ],
+    "scope": "Original-ID Feather Development-signature game ZIP selection and875540825-byte archive staging only. No new gameplay, JIT or physical mod-import acceptance."
+  },
+  "publication_authorization": {
+    "date": "2026-10-19",
+    "request": "Please push that to github, so it appears as a release please. thank you! maybe put in change notes as well",
+    "scope": "Publish reviewed fix/source, v0.24.3 tag, existing audited tagged workflow and public five-asset Release with change notes. Preserve app253inputs and original trial kit."
   }
 }
