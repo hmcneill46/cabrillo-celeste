@@ -1,12 +1,129 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated30 September for FMOD clarification after source publication and USB shortcut testing,
+Written 14 September 2026; updated19 October for the signing-aware Files picker,
+following30 September FMOD clarification after source publication and USB shortcut testing,
 iOS15/iPad support, the
 build36 Motion Smoothing correction, build37 Everest upgrade and build38 owned-game
 preparation, for a fresh development chat opened in
 `/Users/harrymcneill/Projects/Cabrillo`. Read this and [AGENTS.md](AGENTS.md) first.
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
+
+## Copy-based Files imports —19 October, build54 repair
+
+Owner confirmation and a fresh read-only USB collection now close the reported
+game-ZIP import defect. Exact54/original bundle ID/source hashes on iOS27.0.1
+produce one copy-mode game selection and one875,540,825-byte staged archive.
+Journal SHA256 `92ff72a8361d24ea7efd4dcd3b999d08aecc09e6b1a0468bd02ca3654e042985`.
+No new physical mod/JIT/gameplay acceptance is inferred. Trial39276928342 and
+Ubuntu verification now pass; the trial publication job is skipped.
+
+The owner explicitly requests a public Release and change notes on19 October.
+Proceed with reviewed source/notes on main, annotated v0.24.3 and the existing
+tagged full build/verification/publisher. This supersedes earlier trial-only
+publication limits for54. Preserve all253 tested app inputs and the trial kit;
+new implementation still needs55. Notes/evidence changes do not change the app.
+
+The owner installs53 and reports the same game-ZIP tap stall. Read-only USB
+collection verifies installed53/original bundle ID/iOS27.0.1 and all254 exact
+hosted inputs. Its entitlement is valid and hook is installed, but no game
+selection callback arrives. The owner tests the same game ZIP in the existing
+Saves → Import backup picker: two real callbacks arrive and backup validation
+correctly rejects the game ZIP. A further game attempt still fails; no restore
+or rollback occurs. Thus53's host hook is insufficient. Keep its build/package
+passes separate from this confirmed phone failure.
+
+Build54 /0.24.3 in `launcher-copy-picker` switches just the game/mod selectors
+to `asCopy:YES`, matching existing backup/save imports. The53 compatibility
+module stays byte-identical. It adds mode diagnostics and keeps all existing
+types, multi-selection, staging, scoped reads, validation, JIT and runtime.
+The copy/backup phone comparison also differs in purpose/filter;54's actual
+game test was still required at that comparison. Local source/UI/compile checks pass;
+the complete unsigned54 kit is built and independently verified as recorded
+below. The subsequent game-import phone pass is recorded above; physical mod
+import remains separate.
+
+Read `docs/ios-jit/COPY_PICKER_BUILD_54.md` and its evidence ledger. All25453
+captured inputs/kit remain frozen;54 is the active corrective lane. Original
+logs/receipts are ignored in `.private/picker-failure-2026-10-19`. Only relevant
+app metadata/journals were read; no extra debugger, installation, phone write or
+setting change was dispatched. The owner's prior approval covers this same
+tested picker repair/unsigned trial. The later explicit Release request above
+extends that scope to v0.24.3 publication, preserving unrelated gates.
+
+Hosted trial39276928342 at `4a094527a96e62fbf63518c088a1dd48d19407e5`
+produces the complete five-file54 kit. SDK acquisition, full compilation, package
+and attestation creation pass. The independently downloaded kit in
+`artifacts/cabrillo-build54-hosted` passes checksums, all253 captured input hashes,
+all151 unchanged53 dependency hashes, original bundle ID, copy-import BuildInfo,
+production symbols and absence of the test seam. All five local attestations
+verify exact source/ref/workflow, hosted runner and run identity. IPA bytes:
+18,764,021; SHA256:
+`254a126168837708bbb7d136da0c3e426a3522feb375c0d19bb26d5fbcf89762`.
+Artifact12199896629 has14-day retention; no tag/Release is created. The separate
+Ubuntu verification job now passes; the trial publication job is skipped. Preserve the immutable253
+app inputs/kit; use55 for new implementation. Delivery uses the local IPA and
+Actions artifact, with no cloud installer replacement or automatic phone install.
+
+## Signing-aware Files picker —19 October, build53 trial
+
+The owner installed standalone52 through Feather with the supplied Development
+profile. Its local ZIP appears normal but tapping never selects/imports; there
+is no Open button. They confirm Feather retained Cabrillo's original bundle ID.
+The private profile audit finds an explicit different application ID. The owner
+then confirms matching Feather's Identifier fixes selection and asks to remove
+that workaround for themselves and other users.
+
+Build53 /0.24.2 implements automatic Documents UI host-identifier compatibility
+without changing Cabrillo's bundle ID, files, runtime, JIT protocol or scripts.
+The new source overlay is `experiments/ios-jit/launcher-signing-picker`; all168
+accepted50 base files are locked in `release/app53/Dependencies.json`. Only the
+new main and compatibility module replace/add native implementation. Policy,
+production arm64 compilation and actual Apple picker/staging checks have
+separate receipts; see `docs/ios-jit/SIGNING_PICKER_BUILD_53.md` for final results
+and the distinction between synthetic simulator identity tests and phone proof.
+
+`release/public53.json` is the preserved53 manifest. Those builds use
+`tools/build_release53.py` with an explicit FMOD SDK. The52 release remains
+published and immutable. This Mac has Xcode26.6 but lacks the licensed SDK,
+Mono/sn and CMake needed for a local complete fresh dependency/IPA build. The
+hosted53 IPA is now built and independently verified as recorded below. No
+unchanged-ID phone test has occurred. The next step is an owner phone install
+with the original Cabrillo identifier and existing
+Development profile. Do not delete either of the owner's existing installations
+or infer save migration between their different bundle IDs.
+
+The adapter uses optional Security SPI and private `DOCConfiguration` lookup;
+it fails back to original behavior with redacted diagnostics when unavailable.
+LiveContainer keeps its existing picker fix. Fixture-only entitlement injection
+must never enter production. After reviewing the local checks, the owner
+explicitly approves committing/pushing the53 fix and running the existing hosted
+workflow for an unsigned test IPA. This is approval for the source/build trial,
+not a version tag, public Release or device mutation. Hosted results remain
+separate from phone acceptance. Preserve all older runtime/save/lifecycle/iPad/
+120Hz acceptance gates.
+
+Source commit `1f2de6d` is now pushed to `codex/actions-release`. Hosted trial
+39266218357 passes source/native checks but stops SDK acquisition before sign-in
+on a changed public FMOD download-page pin. Independent public-source review
+confirms the helper's request contract still matches; only that reviewed asset
+hash is refreshed. A credential-free probe and67 Python controls pass. SDK and
+library pins/authentication restrictions remain exact; retry the unsigned trial.
+See the53 report/ledger for this preparation, separate from phone proof.
+
+Retry39267829175 succeeds at `e63f1e0a8030daa3f0f4228ca6992c428e4f1811`:
+official SDK acquisition, full fresh managed/native build, package audit, all
+five attestations and separate Ubuntu verification pass; publication is skipped.
+The independently downloaded five-file kit in `artifacts/cabrillo-build53-hosted`
+passes checksums, all254 captured app-source hashes, all151 unchanged52 dependency
+hashes, original bundle ID, production picker symbol and absence of its test seam.
+IPA bytes18,763,886; SHA256
+`cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
+The Actions artifact is12194283151 with14-day retention; no tag/Release is made.
+Keep this immutable kit; use54 for new app implementation. Delivery is through
+the local IPA/Actions artifact; no existing iCloud kit, phone or app data is changed.
+The unchanged-ID Feather signing/import phone gate subsequently fails as
+recorded above. Hosted/package success is not physical acceptance.
 
 ## Published v0.24.1 / build52 —30 September
 

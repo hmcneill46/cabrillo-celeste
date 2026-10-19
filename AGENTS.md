@@ -43,6 +43,81 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   dependency, not a Git source directory. Build38 uses public source receipts and
   an explicit FMOD SDK instead. Never silently fall back to a legacy checkout.
 
+## Copy-based Files imports —19 October, build54 correction
+
+The owner now confirms54 imports the game ZIP successfully. Read-only USB
+verifies exact0.24.3/build54, original ID, all253 source hashes, copy-mode game
+selection and875,540,825bytes staged on iOS27.0.1. Journal SHA256:
+`92ff72a8361d24ea7efd4dcd3b999d08aecc09e6b1a0468bd02ca3654e042985`.
+The full trial workflow and Ubuntu verification pass. This closes the reported
+game-ZIP selection/staging defect; physical mods/gameplay/JIT remain separate.
+
+On19 October the owner explicitly requests GitHub Release publication and change
+notes. This authorizes the reviewed source/notes merge to main, v0.24.3 tag and
+existing tagged build/verify/publication workflow. Earlier trial-only/no-Release
+statements below are superseded for this release. Keep all253 app inputs frozen;
+only notes/evidence change for publication. No tagged binary/device pass is yet
+claimed. Preserve both the tested trial kit and upcoming tagged release kit.
+
+The owner reports53 still fails game selection. USB verifies exact53 source
+metadata/original ID on iOS27.0.1; entitlement lookup and hook installation pass,
+but game selection never calls the delegate. Two owner-driven backup-picker
+tests select the same game ZIP and correctly reject its backup manifest; no
+restore/rollback runs. Save/backup already request copies; game/mod request
+open-in-place. Build54 /0.24.3 changes those two selectors to copies and adds
+redacted mode diagnostics. The compatibility module remains exact53.
+
+Read `docs/ios-jit/COPY_PICKER_BUILD_54.md` and its ledger before acting. Keep
+all254 captured53 inputs/kit frozen.54 is the active corrective source recipe;
+the complete54 kit is built/independently verified; original-ID game selection
+and staging now pass as recorded above. All253 captured54 app inputs are frozen;
+use55 for new implementation. Release authorization is recorded above; unrelated
+publication remains outside scope. Do not infer additional device gates from the
+backup picker or iOS26.5 simulator. Original
+private phone evidence stays ignored; read-only USB collection changes no phone
+settings, installation, debugger or user files.
+
+## Signing-aware Files picker —19 October, build53 trial
+
+The owner confirms that matching Feather's Identifier to the supplied explicit
+Development profile repairs ZIP selection, then explicitly requests an in-app
+fix preserving Cabrillo's bundle ID and existing signing setup. Build53 /0.24.2
+adds `launcher-signing-picker` as an overlay: a new `main.m` and a narrow Documents
+UI host-identifier adapter, with the accepted50/52 base frozen and hash-pinned.
+Read `docs/ios-jit/SIGNING_PICKER_BUILD_53.md` for behavior and validation limits.
+
+The preserved53 source manifest is `release/public53.json`; its recipe is
+`tools/build_release53.py` / `compile_release53.py`. Published52 and its builders
+remain immutable. Source commit `1f2de6d` is pushed to `codex/actions-release`;
+the completed53 IPA is now independently verified. No phone acceptance, tag or
+Release is claimed. The first hosted trial
+passes source/native checks and stops SDK acquisition before sign-in on FMOD's
+changed download-page pin. The independently reviewed pin is refreshed without
+changing SDK or authentication boundaries; see the53 report. This Mac lacks the licensed FMOD SDK and
+full runtime build tools; native device compilation and simulator controls are
+separate from a complete package build. After reviewing the completed local
+checks, the owner explicitly approves committing/pushing this53 fix and running
+the existing GitHub workflow for an unsigned test IPA. This authorizes the trial
+source/build writes; it does not authorize a version tag or public Release.
+
+Retry39267829175 passes SDK acquisition, fresh build/package audit, all five
+attestations and independent Ubuntu verification at `e63f1e0`. The separately
+downloaded kit in `artifacts/cabrillo-build53-hosted` passes checksums, all254
+captured source hashes, all151 unchanged52 dependency hashes and production
+picker/bundle-ID checks. IPA SHA256:
+`cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
+Keep53 frozen;54 continues the repair. Original-ID Feather phone testing
+subsequently fails as recorded above. No existing cloud kit, device or app data
+is changed by its delivery.
+
+The adapter reads only the running process's own `application-identifier` and
+adjusts Documents UI requests for that app's original host. It never changes the
+public bundle identifier, JIT state, entitlements, permissions or data paths.
+LiveContainer retains its own picker handling. Missing private APIs retain the
+original path and report a redacted status. Test identity injection is compiled
+only into fixtures; production objects must exclude its symbol. Preserve all
+older source lanes and scoped device gates; no new physical pass is inferred.
+
 ## Published v0.24.1 / build52 —30 September
 
 The owner reports successful testing of the trial kit and explicitly authorizes

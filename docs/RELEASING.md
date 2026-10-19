@@ -4,9 +4,58 @@
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current release recipe is [release/public52.json](../release/public52.json),
-version0.24.1/build52. It compiles the accepted build50 launcher source and freshly
-builds its managed and native runtime dependencies. It retains shortcut49.
+The current source recipe is [release/public54.json](../release/public54.json),
+version0.24.3/build54. It adds copy-based game/mod imports to the accepted build50
+launcher with exact53 signing adaptation, freshly compiled managed/native runtime
+and shortcut49. [Build54's report](ios-jit/COPY_PICKER_BUILD_54.md) distinguishes
+its checks from phone acceptance. The owner confirms54 game-ZIP import and
+explicitly requests public v0.24.3 Release publication with change notes on
+19 October2026. This authorizes the source/notes merge, version tag and existing
+tagged release workflow; the earlier trial-only restriction is superseded.
+
+## v0.24.3 release preparation —19 October2026
+
+The owner confirms game ZIP ready; USB verifies exact54 source/original ID,
+copy-mode callback and875,540,825-byte staging on iOS27.0.1. The public Release
+uses the same253 captured app inputs and151 dependency hashes as the accepted
+trial. Only generated release-note prose and documentation change; the builder
+wrapper is outside those253 app inputs and its new hash is recorded explicitly.
+The trial kit remains immutable at `artifacts/cabrillo-build54-trial-frozen`;
+a locally renamed byte-identical ZIP copy is preserved separately. A tagged
+rebuild must pass the full build, package audit, five attestations and independent
+verification before the publisher creates the Release. The freshly tagged
+binary has no separate physical-device run claimed. See [CHANGELOG](../CHANGELOG.md).
+
+## Unsigned0.24.3/build54 trial —19 October2026
+
+[Run39276928342](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342)
+produces the unsigned54 kit from `4a094527a96e62fbf63518c088a1dd48d19407e5`.
+Official SDK acquisition, fresh compilation, package audit and attestation
+creation and separate Ubuntu verification pass; trial publication is skipped.
+The [five-file artifact](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342/artifacts/12199896629)
+requires GitHub sign-in and has14-day retention. A separately downloaded copy
+passes checksums, all253 captured source hashes, all151 unchanged53 dependency
+hashes, original bundle ID and copy-import BuildInfo. All five local attestations
+verify the exact source/ref/workflow, GitHub-hosted runner and run invocation.
+IPA bytes18,764,021; SHA256:
+`254a126168837708bbb7d136da0c3e426a3522feb375c0d19bb26d5fbcf89762`.
+Keep the253 app inputs/kit frozen; use55 for new implementation. Original-ID
+Feather game ZIP selection/staging passes; physical mod import remains separate.
+The owner subsequently authorizes v0.24.3 public Release publication below.
+
+## Unsigned0.24.2/build53 trial —19 October2026
+
+[Run39267829175](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39267829175)
+passes all build/audit and independent attestation jobs at
+`e63f1e0a8030daa3f0f4228ca6992c428e4f1811`. Release publication is skipped.
+The [five-file test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39267829175/artifacts/12194283151)
+has14-day retention and requires GitHub sign-in. A separately downloaded copy
+passes checksums, exact source/dependency checks and all five attestations.
+The18,763,886-byte IPA SHA256 is
+`cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
+All254 captured app inputs are frozen; new app changes need54. Phone acceptance
+with the original identifier/current Feather profile subsequently fails. See the53
+report for the reviewed public FMOD website pin repair needed before this trial.
 
 The build takes no Celeste game ZIP and no private compiled Cabrillo capsule.
 Players import their own original Celeste FNA1.4.0.0 files. The first game launch

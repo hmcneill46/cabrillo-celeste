@@ -1,0 +1,166 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "version": "0.24.3",
+  "build_number": "54",
+  "status": "PASS_HOSTED_KIT_AND_ORIGINAL_ID_FEATHER_PHONE_GAME_IMPORT",
+  "implementation": {
+    "overlay": "experiments/ios-jit/launcher-copy-picker",
+    "original_bundle_identifier_preserved": true,
+    "game_and_mod_as_copy": true,
+    "picker_content_types_and_multiple_selection_preserved": true,
+    "staging_and_validation_unchanged": true,
+    "compatibility_module_exact53": true,
+    "jit_or_runtime_changed": false,
+    "frozen53_app_inputs": 254
+  },
+  "physical53_evidence": {
+    "status": "CONFIRMED_BUILD53_GAME_SELECTION_FAILURE_WITH_COPY_PICKER_PASS",
+    "private_receipt": ".private/picker-failure-2026-10-19/phone-comparison.json",
+    "private_receipt_sha256": "33595d360fa05ccf58e9e4babf85971e58a43891a2029fb51a4a2d13560fc7a1",
+    "os": "27.0.1",
+    "exact_installed53_metadata_matches_hosted": true,
+    "entitlement_lookup_and_hook_install": "PASS",
+    "game_selected_callbacks": 0,
+    "backup_selected_callbacks": 2,
+    "backup_invalid_manifest_rejections": 2,
+    "restore_or_rollback_actions": 0,
+    "scope": "Same installed53/signature/device; backup type filter and picker purpose also differ, so this supports but does not isolate copy mode as sole cause. Build54 game/mod phone test remains necessary.",
+    "journal_hashes": {
+      "initial": [
+        "38f0a5b4591ba7726157db8d844dc62be58aab53ffb02dbe45ce75d09512bb0e"
+      ],
+      "copy_probe": [
+        "521a137fcc3faa183e92fc2959fcf8e75621f104f9db05efd0022af8d1a7d26e"
+      ]
+    }
+  },
+  "checks": {
+    "python_tests": 76,
+    "new54_recipe_controls": 9,
+    "production_target": "arm64-apple-ios15.0",
+    "swift_sources": 42,
+    "cyaml_c_sources": 6,
+    "objc_sources": 2,
+    "production_source_hashes": 82,
+    "production_test_seam_absent": true,
+    "apple_ui_tests": 2,
+    "real_selections_per_mode": 2,
+    "cancellations_per_mode": 1,
+    "copy_mode_import_controller_observed": true,
+    "copy_url_local_and_distinct_from_original": true,
+    "exact_staged_hash_and_source_preserved": true,
+    "entitlement_test_seam_in_fixture": false,
+    "all254_frozen53_source_hashes_preserved": true,
+    "independent_review": "NO_BLOCKING_FINDINGS"
+  },
+  "receipts": {
+    "production_compilation": {
+      "path": ".build/copy-picker54-production-compile/receipt.json",
+      "sha256": "75cfee717553441a3497aa1b93993b9a6d77da85f896e247bb16c5b4db3a2d0f",
+      "status": "PASS_PRODUCTION_IOS_LAUNCHER_COMPILE"
+    },
+    "apple_picker_ui": {
+      "path": ".build/picker54-ui-20261019-a/receipt.json",
+      "sha256": "1ef4ecd6f54df612292a7567de217c44cc639701622b3bb8bcaab8a3f17fa8e3",
+      "status": "PASS_COPY54_PICKER_REAL_APPLE_UI"
+    },
+    "independent_download": {
+      "path": ".build/copy-picker54-hosted/download-verification.json",
+      "sha256": "94bf5b94d80d94dad6671db17208b1d9596c6aa1498fbec532d78241090d49e9",
+      "status": "PASS_INDEPENDENT_DOWNLOADED_BUILD54_KIT"
+    },
+    "independent_attestations": {
+      "path": ".build/copy-picker54-hosted/attestations/receipt.json",
+      "sha256": "72d9d044fb0be22c9ac5f19284986d3fdb5cceff468a7a8f0b2a5ddf022752cc",
+      "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS"
+    }
+  },
+  "limitations": {
+    "complete54_ipa_built": true,
+    "physical54_game_or_mod_import_tested": true,
+    "simulator_does_not_reproduce_mismatched_phone_signature": true,
+    "gameplay_or_jit_retested": false,
+    "new_tag_or_release": false,
+    "device_mutation_dispatched": false,
+    "physical54_mod_import_tested": false
+  },
+  "authorization": "Continuation of owner-approved tested Files-picker correction/source push/unsigned hosted trial after53 fails; no tag, Release or unrelated write.",
+  "python_log": {
+    "path": ".build/copy-picker54-production-compile/python-controls.log",
+    "sha256": "dd86c3f9ac93afed6235c6e7781db20d7f6893f409f97b491ffb595e404bd0ee"
+  },
+  "hosted_trial": {
+    "run_id": 39276928342,
+    "source_commit": "4a094527a96e62fbf63518c088a1dd48d19407e5",
+    "source_ref": "refs/heads/codex/actions-release",
+    "source_build_and_package": "PASS",
+    "local_all_five_attestations": "PASS",
+    "ubuntu_verification": "PASS",
+    "publish_requested": false,
+    "artifact_id": 12199896629,
+    "retention_days": 14,
+    "next_app_implementation": "55",
+    "captured_app_inputs": 253,
+    "unchanged53_dependency_hashes": 151,
+    "conclusion": "SUCCESS",
+    "publication": "SKIPPED_TRIAL"
+  },
+  "hosted_kit": {
+    "path": "artifacts/cabrillo-build54-hosted",
+    "files": {
+      "BUILD_PROVENANCE.json": {
+        "bytes": 100096,
+        "sha256": "420de53b53e79bffa07ec6f873331466dbbb7f4d106107aaa659675c70f71c17"
+      },
+      "Cabrillo-0.24.3-unsigned.ipa": {
+        "bytes": 18764021,
+        "sha256": "254a126168837708bbb7d136da0c3e426a3522feb375c0d19bb26d5fbcf89762"
+      },
+      "PACKAGE_AUDIT.json": {
+        "bytes": 427,
+        "sha256": "102b179eacd0d56ede049ac222d56c01db6440e90ddbe4cf3e77a098b78875fc"
+      },
+      "RELEASE_NOTES.md": {
+        "bytes": 1105,
+        "sha256": "34da33db86f0c0c2ddfaf8e203680ae8f02bc463633ba0d3a9b0a0dd55c9fd3b"
+      },
+      "SHA256SUMS": {
+        "bytes": 351,
+        "sha256": "5c6ffb9ecbcf39bcbe2a58c2016d7de361162d9d6ad20ec8284b4000bf68cd0f"
+      }
+    },
+    "immutable_copy_path": "artifacts/cabrillo-build54-trial-frozen",
+    "local_renamed_zip_preserved": true
+  },
+  "physical54_evidence": {
+    "status": "CONFIRMED_BUILD54_COPY_GAME_IMPORT_STAGING",
+    "private_receipt": ".private/picker-failure-2026-10-19/build54-phone-receipt.json",
+    "private_receipt_sha256": "2cc066b0220b6a1a0886ef999376adfdc09e91c66968af467d52e84f1ea40c49",
+    "owner_confirms_game_zip_ready": true,
+    "sessions": [
+      {
+        "journal_sha256": "92ff72a8361d24ea7efd4dcd3b999d08aecc09e6b1a0468bd02ca3654e042985",
+        "version": "0.24.3",
+        "build_number": "54",
+        "os": "27.0.1",
+        "original_bundle_id": true,
+        "source_hashes_match_hosted54": true,
+        "prepared_game_count": 1,
+        "selected_game_count": 1,
+        "selected_game_copy_mode": true,
+        "staged_archive_count": 1,
+        "staged_archive_bytes": [
+          875540825
+        ],
+        "game_copy_import_staging_pass": true
+      }
+    ],
+    "scope": "Original-ID Feather Development-signature game ZIP selection and875540825-byte archive staging only. No new gameplay, JIT or physical mod-import acceptance."
+  },
+  "publication_authorization": {
+    "date": "2026-10-19",
+    "request": "Please push that to github, so it appears as a release please. thank you! maybe put in change notes as well",
+    "scope": "Publish reviewed fix/source, v0.24.3 tag, existing audited tagged workflow and public five-asset Release with change notes. Preserve app253inputs and original trial kit."
+  }
+}

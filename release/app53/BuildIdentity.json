@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.24.2",
+  "build_number": "53",
+  "build_id": "launcher-signing-picker-20261019-53",
+  "scope": "Automatic Files picker host identity compatibility for sideloaded signatures",
+  "device_jit_tested": false
+}

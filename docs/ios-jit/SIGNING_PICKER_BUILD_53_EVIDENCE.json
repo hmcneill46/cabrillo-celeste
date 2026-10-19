@@ -1,0 +1,189 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "build_number": "53",
+  "version": "0.24.2",
+  "status": "PASS_HOSTED_AND_SIMULATOR_CONTROLS_FAILED_ORIGINAL_ID_PHONE_GAME_PICKER",
+  "owner_evidence": "Owner confirms exact53 with original ID still stalls game selection. USB confirms valid entitlement and installed hook, zero game callbacks; existing copy-based backup selector selects twice and rejects same game ZIP as invalidbackup without restore.",
+  "implementation": {
+    "overlay": "experiments/ios-jit/launcher-signing-picker",
+    "bundle_identifier": "io.github.hmcneill46.celeste.everest.jit.everest",
+    "bundle_identifier_changed": false,
+    "frozen_base_files": 168,
+    "jit_or_runtime_changed": false,
+    "profile_specific_values_in_source": false,
+    "private_api": "DOCConfiguration.setHostIdentifier:",
+    "livecontainer_managed": true
+  },
+  "checks": {
+    "python_tests": 67,
+    "compatibility_host_scenarios": 12,
+    "unsafe_host_output_path_controls": 4,
+    "production_target": "arm64-apple-ios15.0",
+    "production_test_seam_absent": true,
+    "apple_picker_tests": 2,
+    "hook_installed_with_zero_prior_picker_initializations": true,
+    "real_zip_taps_and_delegate_callbacks": true,
+    "exact_staged_bytes_and_sha256": true,
+    "synthetic_source_preserved": true,
+    "cancel_and_repeat": true,
+    "profile_checks": 119,
+    "shortcut_checks": 185,
+    "workflow_branches": 36,
+    "broken_url_controls": 15,
+    "downloaded_source_hashes": 254,
+    "unchanged52_dependency_hashes": 151,
+    "independent_attestations": 5,
+    "packaged_production_symbol_present": true,
+    "packaged_test_seam_absent": true,
+    "packaged_original_bundle_identifier": true
+  },
+  "receipts": {
+    "compatibility_policy": {
+      "path": ".build/picker53-policy-20261019-b/receipt.json",
+      "sha256": "7d411b03482438557c5e96693b0c4aafb4441fcbb602913399069fb83bfca8bd",
+      "status": "PASS_HOST_DOCUMENT_PICKER_COMPATIBILITY_CONTROLS"
+    },
+    "production_compilation": {
+      "path": ".build/signing-picker53-production-compile-final/receipt.json",
+      "sha256": "3968084cb9965aac34f43dcd08aed438bd2c63ca274165158aca4eee8d7d1d49",
+      "status": "PASS_PRODUCTION_IOS_LAUNCHER_COMPILE"
+    },
+    "apple_picker_ui": {
+      "path": ".build/picker53-ui-20261019-first-picker/receipt.json",
+      "sha256": "ce89c6f5e867dd45727d297e3239882e7d08210f31f79b0b09b2a84ff9cac6c5",
+      "status": "PASS_SIGNING_PICKER_REAL_APPLE_UI"
+    },
+    "profile_regression": {
+      "path": ".build/signing-picker53-profile-regression/receipt.json",
+      "sha256": "d2e424026158c370b13bacb5540541949d902945553b0f2ac3fdd28fd755e794",
+      "status": "PASS_PUBLIC_NATIVE_PROFILE_CHECKS"
+    },
+    "shortcut_regression": {
+      "path": ".build/signing-picker53-shortcut-regression/receipt.json",
+      "sha256": "dbc01fe45aed7cd7eae24abc3dacf1c4f5201da5a9bc46b7379b505780bb73f1",
+      "status": "PASS_PUBLIC_NATIVE_SHORTCUT_CHECKS"
+    },
+    "downloaded_kit": {
+      "path": ".build/signing-picker53-hosted/download-verification.json",
+      "sha256": "ce4ba8ca621edfa9d6306da46f9b0be7d065008644668d1febf7ba41a8cc9802",
+      "status": "PASS_INDEPENDENT_DOWNLOADED_BUILD53_KIT"
+    },
+    "independent_attestations": {
+      "path": ".build/signing-picker53-hosted/attestations/receipt.json",
+      "sha256": "5b122f727dd5a3c58a4264acf970cb3d24f07be26a17842a36a447136a489a23",
+      "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS"
+    }
+  },
+  "python_log": {
+    "path": ".build/signing-picker53-python-sdk-pin.log",
+    "sha256": "eddea8e4bc81cb1f46f3cc60e1872d1aa0a3f9f725a0c67d147a5fd4ac794c42"
+  },
+  "limitations": {
+    "complete_ipa_built": true,
+    "physical_feather_signature_tested": true,
+    "simulator_identity_test_is_synthetic": true,
+    "private_api_future_compatibility_guaranteed": false,
+    "gameplay_or_jit_tested": false,
+    "new_release_published": false,
+    "github_written": true,
+    "signing_keys_used_by_fix": false,
+    "missing_local_full_build_inputs": [
+      "Mono 6.14.1 and sn",
+      "CMake",
+      "FMOD Engine iOS 1.10.09 SDK"
+    ]
+  },
+  "primary_sources": [
+    "https://github.com/claration/feather/issues/610#issuecomment-4182946719",
+    "https://github.com/LiveContainer/LiveContainer/blob/9108ae624ea001f7d7696d48407f890b48fa2653/TweakLoader/DocumentPicker.m#L103"
+  ],
+  "hosted_trial_authorization": "Owner explicitly approves commit/push and existing GitHub build for unsigned test IPA; no version tag or public Release.",
+  "hosted_trials": [
+    {
+      "run_id": 39266218357,
+      "source_commit": "1f2de6de055e200886a144baf617207fca7d30de",
+      "source_and_native_checks": "PASS",
+      "sdk_fetch": "STOPPED_BEFORE_AUTHENTICATION_PUBLIC_ASSET_PIN_CHANGE",
+      "complete_ipa_built": false
+    },
+    {
+      "run_id": 39267829175,
+      "source_commit": "e63f1e0a8030daa3f0f4228ca6992c428e4f1811",
+      "source_ref": "refs/heads/codex/actions-release",
+      "conclusion": "SUCCESS",
+      "source_and_native_checks": "PASS",
+      "sdk_fetch": "PASS_OFFICIAL_PINNED_AUTHENTICATED_DOWNLOAD",
+      "complete_ipa_built": true,
+      "package_audit": "PASS_OWNED_GAME_PACKAGE",
+      "hosted_independent_attestations": "PASS_ALL_FIVE",
+      "release_publication": "SKIPPED",
+      "artifact_id": 12194283151,
+      "artifact_retention_days": 14
+    }
+  ],
+  "fmod_public_asset_review": {
+    "date": "2026-10-19",
+    "origin": "https://www.fmod.com",
+    "download_asset_sha256": "85fe802e316372e1a243b0785d62be6ce6c69edbb83e12a7a0508b282536137f",
+    "login_bundle_unchanged": true,
+    "observed_request_contract_matches": true,
+    "historical_download_body_available": false,
+    "probe_report": ".build/signing-picker53-hosted/fmod-probe-reviewed.json",
+    "probe_sha256": "6bb075e7e5b3d932ec6b0e74e3eb8fa6f02065a2f71edab61e0043ffd9cbc5ef",
+    "probe_authentication_attempted": false,
+    "sdk_pins_or_authentication_boundaries_changed": false
+  },
+  "hosted_kit": {
+    "path": "artifacts/cabrillo-build53-hosted",
+    "ipa_bytes": 18763886,
+    "ipa_sha256": "cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55",
+    "captured_app_inputs": 254,
+    "unchanged_dependency_hashes": 151,
+    "next_app_build_number": "54",
+    "files": {
+      "BUILD_PROVENANCE.json": {
+        "bytes": 100277,
+        "sha256": "f02d17d6be67ef2b0c3d114534a69705314d76de545c91f0354a7bb7b449274c"
+      },
+      "Cabrillo-0.24.2-unsigned.ipa": {
+        "bytes": 18763886,
+        "sha256": "cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55"
+      },
+      "PACKAGE_AUDIT.json": {
+        "bytes": 427,
+        "sha256": "8c547c7e4e4e41bb4aee61ee420f031461c004e601d450298cda309a15234b07"
+      },
+      "RELEASE_NOTES.md": {
+        "bytes": 1117,
+        "sha256": "daf990b3c9b7306077b27fa4453765355a8f725b0587ef8c2a10d362dea064f4"
+      },
+      "SHA256SUMS": {
+        "bytes": 351,
+        "sha256": "6963c3c20813076bb7eb94a8f5389bd77d0786def9909098c3c5eb4c1e0eb4b3"
+      }
+    }
+  },
+  "physical_result": "FAILED_GAME_SELECTION",
+  "physical_review": {
+    "status": "CONFIRMED_BUILD53_GAME_SELECTION_FAILURE_WITH_COPY_PICKER_PASS",
+    "private_receipt": ".private/picker-failure-2026-10-19/phone-comparison.json",
+    "private_receipt_sha256": "33595d360fa05ccf58e9e4babf85971e58a43891a2029fb51a4a2d13560fc7a1",
+    "os": "27.0.1",
+    "exact_installed53_metadata_matches_hosted": true,
+    "entitlement_lookup_and_hook_install": "PASS",
+    "game_selected_callbacks": 0,
+    "backup_selected_callbacks": 2,
+    "backup_invalid_manifest_rejections": 2,
+    "restore_or_rollback_actions": 0,
+    "scope": "Same installed53/signature/device; backup type filter and picker purpose also differ, so this supports but does not isolate copy mode as sole cause. Build54 game/mod phone test remains necessary.",
+    "journal_hashes": {
+      "initial": [
+        "38f0a5b4591ba7726157db8d844dc62be58aab53ffb02dbe45ce75d09512bb0e"
+      ],
+      "copy_probe": [
+        "521a137fcc3faa183e92fc2959fcf8e75621f104f9db05efd0022af8d1a7d26e"
+      ]
+    }
+  }
+}

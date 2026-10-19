@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 4627,
+  "file_count": 4666,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -9,9 +9,9 @@
       "bytes": 82
     },
     ".github/workflows/ci.yml": {
-      "reason": "Public source inventory, current native profiles and build50 shortcut checks without private inputs",
-      "sha256": "3a5e7210431100f52dc29f8bc5295e3e0cfbffe54de48ba5aca790568acb8f37",
-      "bytes": 2522
+      "reason": "Public source, native profile/shortcut and build53 signing-picker policy/device-compilation checks without licensed inputs",
+      "sha256": "1fcc9bff8f937c88f003a11b8057e22b6f983b6392f2a3f3e2cb67e0e52cc00d",
+      "bytes": 2974
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
@@ -24,14 +24,19 @@
       "bytes": 226
     },
     "AGENTS.md": {
-      "reason": "Development constraints, scoped source publication approval through50 and separate physical gates",
-      "sha256": "cef2edb1f8f9c57d769c20c674386cf97bb46368e73e599d527861bbe1257a37",
-      "bytes": 38276
+      "reason": "Build53 signing-picker development scope, published52 preservation and owner approval boundaries",
+      "sha256": "270e2c76000eefb7da15ae47978f0f6019799f60eae4d7cfbba1f74cf2cad670",
+      "bytes": 43161
+    },
+    "CHANGELOG.md": {
+      "reason": "Public release change notes requested by owner for v0.24.3",
+      "sha256": "af3de772dee962db03eb10006883f71691ccabc6228232697fab890311df78d3",
+      "bytes": 1076
     },
     "HANDOFF.md": {
-      "reason": "Active delivery, exact dependency receipts and remaining physical checks for the next development turn",
-      "sha256": "9fba3f6935a80bf2719a0b737507123082e451f99dd024648932852d4de667b0",
-      "bytes": 98644
+      "reason": "Build53 repair evidence, current build recipe, missing full package inputs and pending unchanged-ID phone gate",
+      "sha256": "f6559f7bbc2d1f9df7c0936a09af67b8c7232792f19ffbc1dc80d8b097931613",
+      "bytes": 106319
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -40,9 +45,9 @@
       "import_sha256": "acf5d461ffa95ebf30463e77ed4b26834ba011d430a3ef716a65ac4cb2fd05da"
     },
     "README.md": {
-      "reason": "Public product overview, current source build and FMOD distribution boundary",
-      "sha256": "3f5f4fc64e879fd3c4ee5fa745694fd58869f1445942dff360d648b6f132d11d",
-      "bytes": 11779
+      "reason": "Current product/download overview and build53 signing-aware source recipe",
+      "sha256": "4f7673e732b1b34c53ea8c43203e8d796ba5f891f3e4844769e8617686e6da55",
+      "bytes": 12476
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -50,9 +55,9 @@
       "bytes": 2966
     },
     "docs/BUILDING.md": {
-      "reason": "Public owned-game source build plus preserved historical capsule reproduction instructions",
-      "sha256": "69e7293a5f05747556c21f5a9a82d6153d18d91ab4a331a7d3b706d038a08fc6",
-      "bytes": 37696
+      "reason": "Current build53 developer SDK recipe and preserved historical reproduction instructions",
+      "sha256": "b3de56622ddf3bc271577212b804150b4f38f588a890aceb6b653d2373057a35",
+      "bytes": 38121
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -84,9 +89,9 @@
       "bytes": 2751
     },
     "docs/RELEASING.md": {
-      "reason": "Gated CI/source recipe, FMOD input approval and attested release procedure",
-      "sha256": "8594f0655ac62252de09e3f92589681095804f440822f671cb20e7a20022d57f",
-      "bytes": 13464
+      "reason": "Current53 source workflow and separate immutable published52 release with licensed-input boundaries",
+      "sha256": "4ecadd6b3c8fd6346ed45f74dd1104edd24969a7fd4b11eeff22625f6e397ccc",
+      "bytes": 16736
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -350,6 +355,16 @@
       "sha256": "5042229d787dd8483cc1276f2f19c3a6234e8d68edefde1284ae3b823ca34cb8",
       "bytes": 2882,
       "import_sha256": "5042229d787dd8483cc1276f2f19c3a6234e8d68edefde1284ae3b823ca34cb8"
+    },
+    "docs/ios-jit/COPY_PICKER_BUILD_54.md": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "7625783bfb82d51a8c336feefae78acac677cb6edad8eba60df001b543e6b5e0",
+      "bytes": 9561
+    },
+    "docs/ios-jit/COPY_PICKER_BUILD_54_EVIDENCE.json": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "fb2b9418a2c5e5c6d87059f2496cd425bfd93f44cd2df2da687c0c595a64a0f8",
+      "bytes": 6846
     },
     "docs/ios-jit/DEVICE_TEST_2026-09-11.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
@@ -649,8 +664,8 @@
     },
     "docs/ios-jit/NATIVE_LAUNCHER_ROADMAP_2026-09-12.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
-      "sha256": "eca8e44b29b8cb4cbec9e72d48bc731805a82d4ce581cbeb94362dcaeb9bab63",
-      "bytes": 51498,
+      "sha256": "d65841b7ca6ab0fded630e95d04bd45c87366763d83ec04051b6ab261786eabb",
+      "bytes": 52670,
       "import_sha256": "17f2e775e49ddea8e327f8808f755004dd733dbf63b363638874374fb28f7ee3"
     },
     "docs/ios-jit/NATIVE_LAUNCHER_ROADMAP_EVIDENCE.json": {
@@ -857,6 +872,16 @@
       "reason": "Build41 Remote Pairing probe or revision42 typed shortcut conditions, validation and evidence",
       "sha256": "93480740c81ec2261f85a04779ba38ddbd25a818f98d135daa24d904dc92aed6",
       "bytes": 2968
+    },
+    "docs/ios-jit/SIGNING_PICKER_BUILD_53.md": {
+      "reason": "Build53 signing-picker behavior, sanitized local check evidence and pending IPA/device acceptance",
+      "sha256": "c57c33431397e1585d3c050f4c058adc3eeec458ade348dfc677339ffcc7711e",
+      "bytes": 11473
+    },
+    "docs/ios-jit/SIGNING_PICKER_BUILD_53_EVIDENCE.json": {
+      "reason": "Build53 signing-picker behavior, sanitized local check evidence and pending IPA/device acceptance",
+      "sha256": "b12a92865ece99583933f1a6d9472e4785e472158afb8581528083101f1b9e1c",
+      "bytes": 8056
     },
     "docs/ios-jit/SJ_HELPERS_BUILD_15.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
@@ -5946,6 +5971,41 @@
       "sha256": "2588a7f68a5b882f715cef771931fa30b9971c98b80dde4d5f369f30edad1bdd",
       "bytes": 1335,
       "import_sha256": "2588a7f68a5b882f715cef771931fa30b9971c98b80dde4d5f369f30edad1bdd"
+    },
+    "experiments/ios-jit/launcher-copy-picker/src/CJDocumentPickerCompatibility.h": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "6d2bed1bad7cd043612a27b4f9637b57bba74c22dc533d23b4f68f5c67e91bbd",
+      "bytes": 1544
+    },
+    "experiments/ios-jit/launcher-copy-picker/src/CJDocumentPickerCompatibility.m": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "4775d4238edf7c2789bb1a8c2ff09a6c6a1c9674bea4ad72781576fe633fcc5f",
+      "bytes": 9261
+    },
+    "experiments/ios-jit/launcher-copy-picker/src/main.m": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "ba7d8051baf68b6f9de99db92bb73c66bee4fff10a1fec375038f28367876e2a",
+      "bytes": 139670
+    },
+    "experiments/ios-jit/launcher-copy-picker/tests/PickerPreview.m": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "9f865f5e1010cf8786468b8bb1417f21093ab38e76ff1d39c60b9f22a49a0fae",
+      "bytes": 8802
+    },
+    "experiments/ios-jit/launcher-copy-picker/tests/PickerUITests.pbxproj.template": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "39184bb856f3dfa975f729226f5bd0b372edc5ad9e157675b1a6d57b52e8c7aa",
+      "bytes": 2395
+    },
+    "experiments/ios-jit/launcher-copy-picker/tests/PickerUITests.swift": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "e555b993323de403f977c18d738dc89b100b716bf52a26972fe5ff05ed96a9d8",
+      "bytes": 2196
+    },
+    "experiments/ios-jit/launcher-copy-picker/tests/PickerUITests.xcscheme": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "6d2adab50d21a09c5c7ae5dd23df63a51f47e303720c42528e099d9cbbceaed8",
+      "bytes": 1096
     },
     "experiments/ios-jit/launcher-dependencies/CompatibilityDownloads.json": {
       "reason": "Pinned JIT input, compatibility or protocol metadata for launcher-dependencies; preserve current implementation and versioned investigation history",
@@ -20575,6 +20635,46 @@
       "sha256": "3d21ec1379229256215755d40bd76b5ec44e07c30321c559cde1013c39f06562",
       "bytes": 4344
     },
+    "experiments/ios-jit/launcher-signing-picker/src/CJDocumentPickerCompatibility.h": {
+      "reason": "Build53 standalone document-service host identity repair and launcher integration outside frozen50/52 sources",
+      "sha256": "6d2bed1bad7cd043612a27b4f9637b57bba74c22dc533d23b4f68f5c67e91bbd",
+      "bytes": 1544
+    },
+    "experiments/ios-jit/launcher-signing-picker/src/CJDocumentPickerCompatibility.m": {
+      "reason": "Build53 standalone document-service host identity repair and launcher integration outside frozen50/52 sources",
+      "sha256": "4775d4238edf7c2789bb1a8c2ff09a6c6a1c9674bea4ad72781576fe633fcc5f",
+      "bytes": 9261
+    },
+    "experiments/ios-jit/launcher-signing-picker/src/main.m": {
+      "reason": "Build53 standalone document-service host identity repair and launcher integration outside frozen50/52 sources",
+      "sha256": "e280d1cfcac70552c7e82725b8bca4f16287c53c0ee164d4a338631312d2356e",
+      "bytes": 139513
+    },
+    "experiments/ios-jit/launcher-signing-picker/tests/DocumentPickerCompatibilityTests.m": {
+      "reason": "Build53 synthetic policy/runtime and actual Apple document-picker staging/cancellation regression fixture",
+      "sha256": "7f8a228af4baa0085deb632845d7b950b168fdd051730cab1d2d07f214ea2814",
+      "bytes": 9951
+    },
+    "experiments/ios-jit/launcher-signing-picker/tests/PickerPreview.m": {
+      "reason": "Build53 synthetic policy/runtime and actual Apple document-picker staging/cancellation regression fixture",
+      "sha256": "ac26c76e02e6bc256e29acb9f0c48f9edcfaeb2808c87d37bcdf2544b3f07abf",
+      "bytes": 8278
+    },
+    "experiments/ios-jit/launcher-signing-picker/tests/PickerUITests.pbxproj.template": {
+      "reason": "Build53 synthetic policy/runtime and actual Apple document-picker staging/cancellation regression fixture",
+      "sha256": "6da500618ed1bb4cce21741343fb62c57f108063152045e5441b04ee66b5c3b9",
+      "bytes": 2398
+    },
+    "experiments/ios-jit/launcher-signing-picker/tests/PickerUITests.swift": {
+      "reason": "Build53 synthetic policy/runtime and actual Apple document-picker staging/cancellation regression fixture",
+      "sha256": "020d03371d534a49e6a2ba247624476fe67e2f858d466778de70fbc2c2e3487f",
+      "bytes": 2268
+    },
+    "experiments/ios-jit/launcher-signing-picker/tests/PickerUITests.xcscheme": {
+      "reason": "Build53 synthetic policy/runtime and actual Apple document-picker staging/cancellation regression fixture",
+      "sha256": "6d2adab50d21a09c5c7ae5dd23df63a51f47e303720c42528e099d9cbbceaed8",
+      "bytes": 1096
+    },
     "experiments/ios-jit/launcher-startup/BuildIdentity.json": {
       "reason": "Fresh build29 product/version authority preserving the existing guest/data identity",
       "sha256": "078c4664d88670c51b7d279b2b076b8f48708b71a5eb39efa5db1c3618178189",
@@ -25461,6 +25561,36 @@
       "sha256": "7b1e7f5bb28651ca74a07bc46d60e17e87ddc42d7ab701b6f24e514ca043d58e",
       "bytes": 3361
     },
+    "release/app53/BuildIdentity.json": {
+      "reason": "Build53 identity, original bundle ID and explicit source-overlay/frozen-base build pins",
+      "sha256": "f063f016ff62848a202e31b1105f5d70a294244f39825d53acd97006f81655d4",
+      "bytes": 264
+    },
+    "release/app53/Dependencies.json": {
+      "reason": "Build53 identity, original bundle ID and explicit source-overlay/frozen-base build pins",
+      "sha256": "af449ef94742cac91ec625d60f4d51e94876d8865c72d7265fd4fd3230dc56b7",
+      "bytes": 31356
+    },
+    "release/app53/Info.plist": {
+      "reason": "Build53 identity, original bundle ID and explicit source-overlay/frozen-base build pins",
+      "sha256": "87ef9e475bae36505e2f44147af23906f91bc59c32b260d941587daf3f7185b9",
+      "bytes": 3361
+    },
+    "release/app54/BuildIdentity.json": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "06c90b5281b49deab508da4662131e307da58001e9064eefacacce79b1a45c33",
+      "bytes": 257
+    },
+    "release/app54/Dependencies.json": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "630e917d030608c9b778e2432f9f936a38a6ef41c880a10812c3c32375fded18",
+      "bytes": 31712
+    },
+    "release/app54/Info.plist": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "ac98c4e03fc2a42ac502452ddff79bac953bf5c22ed38f19b56062e5b3deeba6",
+      "bytes": 3361
+    },
     "release/current.json": {
       "reason": "Explicitly blocked build38 public IPA manifest awaiting FMOD distribution approval",
       "sha256": "0c0ccabcd0a61f00e244aed3d7dcd100933edfa3727d115a007c8eddd13468c2",
@@ -25489,6 +25619,16 @@
     "release/public52.json": {
       "reason": "Active public source release52 manifest with runtime-only FMOD permission and explicit source recipe",
       "sha256": "709b8a7326d1b4087c803af0b8600741ad420b364e9334c74b21a4058c36132d",
+      "bytes": 583
+    },
+    "release/public53.json": {
+      "reason": "Build53 identity, original bundle ID and explicit source-overlay/frozen-base build pins",
+      "sha256": "b78e6a3c315c5e4e0e27032976b36cb1b6a8c17e93add31c6a7eaa66723db81d",
+      "bytes": 583
+    },
+    "release/public54.json": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "a392f74dd30a9143202332cf0e7f110fc65293dab016bb4630aac84fded91cff",
       "bytes": 583
     },
     "release/shortcuts49/LiveContainer/Cabrillo-unsigned.shortcut": {
@@ -25635,6 +25775,16 @@
       "sha256": "16a558ef3706abbaf1037a1608d144f3ab7d67246fb72cf4a067af6700a04e8e",
       "bytes": 9854
     },
+    "tools/build_release53.py": {
+      "reason": "Build53 fresh source recipe or focused signing-picker native/device/UI validation tool",
+      "sha256": "bd28eefaf2122b96023294e6a3f3d37bbd08682e86c8645f6c0dabc8fdc70403",
+      "bytes": 9899
+    },
+    "tools/build_release54.py": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "203fc809dfc4e1434e68caf311a9493c75899a0d591d2db40ccd41f2f0d19101",
+      "bytes": 10468
+    },
     "tools/build_save_transfers.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",
       "sha256": "e48538d4e2ef06ebc763370aba05052de75261d0c18f48cb4eca96b7db5eb752",
@@ -25755,10 +25905,25 @@
       "sha256": "5d5da4394c249cae6b28bf604bc7281cb2e00ea1454b6e3403a29ab03ff067b1",
       "bytes": 3779
     },
+    "tools/check_copy_picker_compile.py": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "8c3acf39eb81229d1fc0db695fa0ad6b23ce280206fec6f383ee38030f57a32a",
+      "bytes": 7429
+    },
+    "tools/check_copy_picker_ui.py": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "59dfa33ae4c48e10693a51112c1a156df4a25fdb09018520ebb3ce2a0982b757",
+      "bytes": 12009
+    },
     "tools/check_development_package.py": {
       "reason": "Negative controls against the actual new IPA for stale metadata, changed managed code/protocol and mismatched symbols",
       "sha256": "856b4fb4cf5d56556b1e04409187aeec1794a4aebe922e2a90a8afec2d3d177a",
       "bytes": 4291
+    },
+    "tools/check_document_picker_compatibility.py": {
+      "reason": "Build53 fresh source recipe or focused signing-picker native/device/UI validation tool",
+      "sha256": "62f68b1f06431d0032f2564eac8d621e6d10391afdbc67e8ec153d048cbfd695",
+      "bytes": 3726
     },
     "tools/check_everest6580_host.py": {
       "reason": "Exercise the actual upgraded Everest game, upstream behavior controls, native save transfers, hair/lava, touch, resume and Quit",
@@ -25806,8 +25971,8 @@
     },
     "tools/check_fmod_access.py": {
       "reason": "FMOD website preflight, hidden or explicit environment credentials and temporary account-session validation",
-      "sha256": "e030b071aeddcd885683f23dd423874b163598e7e170f84e676e1b9b3b232e87",
-      "bytes": 12430
+      "sha256": "09bca9319af114fb481d69c852342a301ca0c4a0573217ea2d28acdf9b2a6a3c",
+      "bytes": 12445
     },
     "tools/check_loading_assembly.py": {
       "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
@@ -25989,6 +26154,16 @@
       "sha256": "68ecf77e68b2c58e18d5fb0739c512706661cb0af9e437ab4e2909266cb58b5f",
       "bytes": 4892
     },
+    "tools/check_signing_picker_compile.py": {
+      "reason": "Build53 fresh source recipe or focused signing-picker native/device/UI validation tool",
+      "sha256": "5706ef40b07e8ad3b05fd02fd1faa9a523bb008525203221898e91bd597c5273",
+      "bytes": 7435
+    },
+    "tools/check_signing_picker_ui.py": {
+      "reason": "Build53 fresh source recipe or focused signing-picker native/device/UI validation tool",
+      "sha256": "8bebc82f3eef9cf4225bf1c3575d688d0549cb3314df0b031b896d1054c1f570",
+      "bytes": 9061
+    },
     "tools/check_vanilla_save.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",
       "sha256": "aeb24662cbd1b943755215bd21cf094b8ef9c1b0e70f55a223bd6b8f8e9239db",
@@ -26033,6 +26208,16 @@
       "reason": "Release52 app compiler using fresh public dependency receipts and architecture-specific NuGet validation",
       "sha256": "d71c2946c01abe0b75511237673e375b9fa7a3057799eebdd052548dce5c1235",
       "bytes": 23601
+    },
+    "tools/compile_release53.py": {
+      "reason": "Build53 fresh source recipe or focused signing-picker native/device/UI validation tool",
+      "sha256": "0c3e6eb86235e0944c9463dd5e5c07f75b3092f3f31f13c98921f8fdb3964bed",
+      "bytes": 25441
+    },
+    "tools/compile_release54.py": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "8679f6009b25d5f132c352a0370f6f9bc795d067ab7d49359866b4ddea0f943a",
+      "bytes": 26041
     },
     "tools/everest6580_inputs.py": {
       "reason": "Validate the explicit upstream source capsule, managed receipt, assembly identities, runtime and regression pins for build37",
@@ -26090,8 +26275,8 @@
       "bytes": 11440
     },
     "tools/release_pipeline.py": {
-      "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
-      "sha256": "73cb237cb80bb19fd7616028432766b7979ae4d8dbb501808ec9d2b9dbb381e0",
+      "reason": "Select build53 source recipe while retaining gated clean-ref IPA publishing and SDK provenance checks",
+      "sha256": "86c339a9feae0de57f1f86817d7d44c10f836bf53953c89153df6923332ae527",
       "bytes": 10767
     },
     "tools/repair_player_precision.py": {
@@ -26104,6 +26289,11 @@
       "sha256": "dc2154ec8714016e5c4b198815ef2e7690ba10512934edac9343cad08a284118",
       "bytes": 2219
     },
+    "tools/tests/test_copy_picker_build.py": {
+      "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
+      "sha256": "e60b274a0a9d066099b19da1ee09ce62ca8d48e4aaa7b3de551217f0167ffd29",
+      "bytes": 4380
+    },
     "tools/tests/test_development_build.py": {
       "reason": "Build output isolation and malformed/signed/wrong-platform Mach-O controls",
       "sha256": "c077c50fac6b8c1b24c3e71c81bcfdde2c09209c1660df59ab5d2d33b2f4c3a3",
@@ -26111,8 +26301,8 @@
     },
     "tools/tests/test_fmod_access.py": {
       "reason": "Synthetic credential, authentication-boundary, catalogue-selection, logout and secret-redaction controls",
-      "sha256": "71524aa61e45aea3d4e09d3cace53a831d65028031adc5a3ca427bb2a995b455",
-      "bytes": 11480
+      "sha256": "22cae654a99e11575e1529a734220e95a6f570ae47a7a2ecacfd38b6defbfee3",
+      "bytes": 12356
     },
     "tools/tests/test_fmod_fetch.py": {
       "reason": "Synthetic SDK transport, checksum, private-output, cleanup and credential-isolation controls",
@@ -26138,6 +26328,11 @@
       "reason": "Fresh release51 source compilation, provenance, distribution boundaries and verification controls",
       "sha256": "5ae080c700a9bd8ee87eef94b4aad4715fae509befc2f12eaa731ca8a0039061",
       "bytes": 6602
+    },
+    "tools/tests/test_signing_picker_build.py": {
+      "reason": "Build53 source selection and frozen-input rejection regression controls",
+      "sha256": "19c10b7455152e9373dbc1dc36306ac38d78af245dca6dac28a3754eda1da370",
+      "bytes": 3215
     },
     "tools/verify_backups.py": {
       "reason": "Independent build33 recipe, package checks or isolated profile/UI/real-game validation",

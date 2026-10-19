@@ -35,7 +35,7 @@ records the distinction and the maintainer's separate CI download setup.
 From this checkout, choose fresh work and output paths:
 
 ```sh
-python3 tools/build_release52.py --work .build/my-source-build \
+python3 tools/build_release54.py --work .build/my-source-build \
   --output .build/my-source-build/output \
   --fmod-sdk '/path/to/FMOD Programmers API'
 ```
@@ -44,8 +44,13 @@ This downloads and verifies pinned public source archives, .NET SDK/runtime pack
 and NuGet inputs, rebuilds the managed/native dependencies, prepares the FMOD
 runtime link inputs, verifies the signed Shortcut resources and compiles the app.
 It consumes no Celeste game ZIP, historical compiled capsule or old checkout.
-The launcher implementation is the accepted build50 source; `release/app52`
-supplies the new identity. Earlier delivered source lanes stay frozen.
+The launcher uses the accepted build50 source plus build54's copy-based Files
+picker overlay; `release/app54` supplies the new identity and pins the frozen
+base and exact53 compatibility module. Earlier source lanes and all254 captured53
+app inputs stay frozen. See [the build54 report](ios-jit/COPY_PICKER_BUILD_54.md)
+for the confirmed53 phone failure, successful existing backup-selector comparison,
+new source checks, successful54 package/local verification and separate phone
+game-import gate. All253 captured54 app inputs are frozen; use55 for new app changes.
 
 The `output` directory contains `Cabrillo.ipa`, `BUILD_PROVENANCE.json`,
 `PACKAGE_AUDIT.json` and `RELEASE_NOTES.md`. Internal logs, symbols and receipts
@@ -188,7 +193,7 @@ python3 tools/build_public_release.py --work .build/my-source-build \
 ```
 
 FMOD1.10.09 / build97915 is required. This explicit SDK option is a private local
-build. Its historical public mode remains blocked; use the current52 recipe above for
+build. Its historical public mode remains blocked; use the current54 recipe above for
 the later permission and SDK contract. The recipes below retain their original purposes.
 
 ## Build39: native shortcut integration with the exact38 runtime
@@ -199,7 +204,7 @@ The independently compiled launcher is `experiments/ios-jit/launcher-shortcuts`.
 managed assemblies and16 dependency archives. `tools/build_shortcut_files.py`
 generates inspectable plist/action JSON and signs importable shortcuts with the
 macOS Shortcuts CLI. See [reproduction and validation](ios-jit/SHORTCUT_BUILD_39.md).
-This historical recipe retains its frozen38 permission state; current release52 uses the separate public manifest.
+This historical recipe retains its frozen38 permission state; current source builds use the separate public54 manifest.
 
 ## Build40: LiveContainer shortcut routing correction
 
