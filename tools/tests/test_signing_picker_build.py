@@ -25,10 +25,13 @@ class SigningPickerBuildTests(unittest.TestCase):
         self.assertEqual(repaired['CFBundleIdentifier'], original['CFBundleIdentifier'])
         self.assertEqual(repaired['CFBundleURLTypes'], original['CFBundleURLTypes'])
 
-    def test_current_release_recipe_selects_build53(self):
+    def test_preserved_build53_manifest_remains_independent(self):
+        preserved = json.loads((build.ROOT / 'release/public53.json').read_text())
+        self.assertEqual(preserved['public_build_script'], 'tools/build_release53.py')
+        self.assertEqual(preserved['build_number'], '53')
         config, report = readiness(build.ROOT)
-        self.assertEqual(config['public_build_script'], 'tools/build_release53.py')
-        self.assertEqual(report['build_number'], '53')
+        self.assertEqual(config['public_build_script'], 'tools/build_release54.py')
+        self.assertEqual(report['build_number'], '54')
         self.assertFalse(report['physical_device_tested'])
 
     def test_recipe_cannot_silently_build_original_main(self):

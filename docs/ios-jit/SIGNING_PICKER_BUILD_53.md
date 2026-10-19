@@ -4,7 +4,7 @@
 for standalone sideloading profiles whose explicit application ID differs from
 Cabrillo's bundle ID. The source is committed/pushed and the complete unsigned53
 IPA passes hosted build/audits and independent download checks. A phone run with
-the unchanged bundle ID remains pending.
+the unchanged bundle ID subsequently fails as recorded below.
 
 ## Confirmed problem
 
@@ -161,5 +161,23 @@ Package audit reports199 managed assemblies, zero bundled game assemblies/assets
 and no distribution blockers. These are build/package checks, separate from a
 phone pass. Keep the immutable kit and all254 app inputs; use54 for new app
 implementation. No0.24.2 tag/Release, iCloud replacement, phone install or device
-mutation occurs in this delivery. The current signing/import phone test remains
-the next owner action.
+mutation occurs in this delivery. The subsequent signing/import phone test
+fails as recorded below.
+
+## Phone result: original-ID game selection still fails
+
+The owner installs this53 trial and reports the same ZIP-tap stall. Read-only
+USB collection verifies its exact build/source hashes and original bundle ID on
+iOS27.0.1. Both entitlement lookup and hook registration report success. The
+game picker never calls the selection delegate. Two selections of the same game
+ZIP through the existing copy-based backup picker do reach the delegate, then
+correctly fail backup validation. No restore/rollback is requested. A later
+game-picker attempt still fails. This closes53's phone gate as FAILED for the
+reported problem; its hosted and simulator passes remain valid in their scope.
+
+[Build54](COPY_PICKER_BUILD_54.md) changes the game/mod selectors to copy mode,
+matching the existing save/backup behavior. The initial assertion that a system
+copy could not address this signing issue was too strong. Primary maintainer
+reports and this physical comparison support testing that path. Preserve53's
+immutable source and artifact as the failed control; do not republish it as a
+verified Feather fix.

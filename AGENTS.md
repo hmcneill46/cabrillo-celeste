@@ -43,7 +43,26 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   dependency, not a Git source directory. Build38 uses public source receipts and
   an explicit FMOD SDK instead. Never silently fall back to a legacy checkout.
 
-## Signing-aware Files picker —19 October, build53 source
+## Copy-based Files imports —19 October, build54 correction
+
+The owner reports53 still fails game selection. USB verifies exact53 source
+metadata/original ID on iOS27.0.1; entitlement lookup and hook installation pass,
+but game selection never calls the delegate. Two owner-driven backup-picker
+tests select the same game ZIP and correctly reject its backup manifest; no
+restore/rollback runs. Save/backup already request copies; game/mod request
+open-in-place. Build54 /0.24.3 changes those two selectors to copies and adds
+redacted mode diagnostics. The compatibility module remains exact53.
+
+Read `docs/ios-jit/COPY_PICKER_BUILD_54.md` and its ledger before acting. Keep
+all254 captured53 inputs/kit frozen.54 is the active corrective source recipe;
+full54 package and original-ID game/mod phone validation are in progress. The
+owner's approval for this tested picker fix/unsigned trial continues to apply;
+no tag, Release or unrelated write is authorized. Do not infer a game-import
+pass from the existing backup picker or from the iOS26.5 simulator. Original
+private phone evidence stays ignored; read-only USB collection changes no phone
+settings, installation, debugger or user files.
+
+## Signing-aware Files picker —19 October, build53 trial
 
 The owner confirms that matching Feather's Identifier to the supplied explicit
 Development profile repairs ZIP selection, then explicitly requests an in-app
@@ -52,7 +71,7 @@ adds `launcher-signing-picker` as an overlay: a new `main.m` and a narrow Docume
 UI host-identifier adapter, with the accepted50/52 base frozen and hash-pinned.
 Read `docs/ios-jit/SIGNING_PICKER_BUILD_53.md` for behavior and validation limits.
 
-The current source release manifest is `release/public53.json`; the recipe is
+The preserved53 source manifest is `release/public53.json`; its recipe is
 `tools/build_release53.py` / `compile_release53.py`. Published52 and its builders
 remain immutable. Source commit `1f2de6d` is pushed to `codex/actions-release`;
 the completed53 IPA is now independently verified. No phone acceptance, tag or
@@ -72,8 +91,9 @@ downloaded kit in `artifacts/cabrillo-build53-hosted` passes checksums, all254
 captured source hashes, all151 unchanged52 dependency hashes and production
 picker/bundle-ID checks. IPA SHA256:
 `cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
-Keep53 frozen; new app implementation needs54. Original-ID Feather phone testing
-is still pending. No existing cloud kit, device or app data is changed.
+Keep53 frozen;54 continues the repair. Original-ID Feather phone testing
+subsequently fails as recorded above. No existing cloud kit, device or app data
+is changed by its delivery.
 
 The adapter reads only the running process's own `application-identifier` and
 adjusts Documents UI requests for that app's original host. It never changes the

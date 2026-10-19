@@ -4,13 +4,12 @@
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current source recipe is [release/public53.json](../release/public53.json),
-version0.24.2/build53. It adds the signing-aware picker overlay to the accepted
-build50 launcher and freshly builds its managed/native runtime dependencies,
-retaining shortcut49. [Build53's report](ios-jit/SIGNING_PICKER_BUILD_53.md)
-distinguishes its native checks, successful hosted IPA and pending phone gate.
-The published0.24.1 release below remains unchanged. The owner authorized this
-source push and unsigned hosted trial; no0.24.2 tag or Release is authorized.
+The current source recipe is [release/public54.json](../release/public54.json),
+version0.24.3/build54. It adds copy-based game/mod imports to the accepted build50
+launcher with exact53 signing adaptation, freshly compiled managed/native runtime
+and shortcut49. [Build54's report](ios-jit/COPY_PICKER_BUILD_54.md) distinguishes
+its checks from phone acceptance. The owner-authorized correction/unsigned trial
+continues after53 fails on the phone. No0.24.3 tag or Release is authorized.
 
 ## Unsigned0.24.2/build53 trial —19 October2026
 
@@ -23,7 +22,7 @@ passes checksums, exact source/dependency checks and all five attestations.
 The18,763,886-byte IPA SHA256 is
 `cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
 All254 captured app inputs are frozen; new app changes need54. Phone acceptance
-with the original identifier/current Feather profile remains pending. See the53
+with the original identifier/current Feather profile subsequently fails. See the53
 report for the reviewed public FMOD website pin repair needed before this trial.
 
 The build takes no Celeste game ZIP and no private compiled Cabrillo capsule.

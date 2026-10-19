@@ -59,8 +59,8 @@ jobs:
         run: python3 tools/ci/check_native_shortcuts.py
       - name: Check signing-aware Files picker policy and runtime hooks
         run: python3 tools/check_document_picker_compatibility.py --work .build/ci/signing-picker-policy
-      - name: Compile build53 production launcher for iOS15 and later
-        run: python3 tools/check_signing_picker_compile.py --work .build/ci/signing-picker-compile
+      - name: Compile build54 production launcher for iOS15 and later
+        run: python3 tools/check_copy_picker_compile.py --work .build/ci/copy-picker-compile
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: native-profile-check-reports
@@ -70,6 +70,6 @@ jobs:
             .build/ci/native-profiles/receipt.json
             .build/ci/native-profiles/results/results.json
             .build/ci/signing-picker-policy/receipt.json
-            .build/ci/signing-picker-compile/receipt.json
+            .build/ci/copy-picker-compile/receipt.json
           if-no-files-found: error
           retention-days: 14

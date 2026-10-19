@@ -1,3 +1,12 @@
+## 19 October2026 copy-import correction
+
+The owner reports53 fails and USB verifies the exact installed source/signature
+setup: entitlement and hook preparation succeed but game selection never calls
+back. The existing copy-based backup picker selects the same ZIP twice, then
+correctly rejects its backup manifest. [Build54](COPY_PICKER_BUILD_54.md) changes
+the game/mod selectors to copies and retains the53 compatibility module. Its
+full package and actual game/mod phone pass remain separate gates in progress.
+
 ## 19 October 2026 update
 
 The owner confirms a Feather signing application-ID mismatch caused standalone52

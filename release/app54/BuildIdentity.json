@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.24.3",
+  "build_number": "54",
+  "build_id": "launcher-copy-picker-20261019-54",
+  "scope": "Copy-backed game and mod ZIP imports with retained signing compatibility",
+  "device_jit_tested": false
+}

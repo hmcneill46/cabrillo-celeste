@@ -9,7 +9,33 @@ preparation, for a fresh development chat opened in
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
 
-## Signing-aware Files picker —19 October, build53 source
+## Copy-based Files imports —19 October, build54 repair
+
+The owner installs53 and reports the same game-ZIP tap stall. Read-only USB
+collection verifies installed53/original bundle ID/iOS27.0.1 and all254 exact
+hosted inputs. Its entitlement is valid and hook is installed, but no game
+selection callback arrives. The owner tests the same game ZIP in the existing
+Saves → Import backup picker: two real callbacks arrive and backup validation
+correctly rejects the game ZIP. A further game attempt still fails; no restore
+or rollback occurs. Thus53's host hook is insufficient. Keep its build/package
+passes separate from this confirmed phone failure.
+
+Build54 /0.24.3 in `launcher-copy-picker` switches just the game/mod selectors
+to `asCopy:YES`, matching existing backup/save imports. The53 compatibility
+module stays byte-identical. It adds mode diagnostics and keeps all existing
+types, multi-selection, staging, scoped reads, validation, JIT and runtime.
+The copy/backup phone comparison also differs in purpose/filter;54's actual
+game/mod phone test is still required. Source validation and the new unsigned
+trial are in progress; no54 package or device pass is yet claimed.
+
+Read `docs/ios-jit/COPY_PICKER_BUILD_54.md` and its evidence ledger. All25453
+captured inputs/kit remain frozen;54 is the active corrective lane. Original
+logs/receipts are ignored in `.private/picker-failure-2026-10-19`. Only relevant
+app metadata/journals were read; no extra debugger, installation, phone write or
+setting change was dispatched. The owner's prior approval covers this same
+tested picker repair/unsigned trial, not a tag/Release or unrelated publication.
+
+## Signing-aware Files picker —19 October, build53 trial
 
 The owner installed standalone52 through Feather with the supplied Development
 profile. Its local ZIP appears normal but tapping never selects/imports; there
@@ -27,7 +53,7 @@ production arm64 compilation and actual Apple picker/staging checks have
 separate receipts; see `docs/ios-jit/SIGNING_PICKER_BUILD_53.md` for final results
 and the distinction between synthetic simulator identity tests and phone proof.
 
-`release/public53.json` is the active source manifest. New builds use
+`release/public53.json` is the preserved53 manifest. Those builds use
 `tools/build_release53.py` with an explicit FMOD SDK. The52 release remains
 published and immutable. This Mac has Xcode26.6 but lacks the licensed SDK,
 Mono/sn and CMake needed for a local complete fresh dependency/IPA build. The
@@ -66,7 +92,8 @@ IPA bytes18,763,886; SHA256
 The Actions artifact is12194283151 with14-day retention; no tag/Release is made.
 Keep this immutable kit; use54 for new app implementation. Delivery is through
 the local IPA/Actions artifact; no existing iCloud kit, phone or app data is changed.
-The unchanged-ID Feather signing/import phone gate remains pending.
+The unchanged-ID Feather signing/import phone gate subsequently fails as
+recorded above. Hosted/package success is not physical acceptance.
 
 ## Published v0.24.1 / build52 —30 September
 

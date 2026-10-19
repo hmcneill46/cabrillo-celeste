@@ -3,8 +3,8 @@
   "date": "2026-10-19",
   "build_number": "53",
   "version": "0.24.2",
-  "status": "PASS_HOSTED_BUILD_AND_INDEPENDENT_KIT_VERIFICATION_AWAITING_PHONE",
-  "owner_evidence": "Owner confirms that matching Feather Identifier to explicit Developer profile restores local ZIP selection; unchanged-ID build53 has not yet been installed.",
+  "status": "PASS_HOSTED_AND_SIMULATOR_CONTROLS_FAILED_ORIGINAL_ID_PHONE_GAME_PICKER",
+  "owner_evidence": "Owner confirms exact53 with original ID still stalls game selection. USB confirms valid entitlement and installed hook, zero game callbacks; existing copy-based backup selector selects twice and rejects same game ZIP as invalidbackup without restore.",
   "implementation": {
     "overlay": "experiments/ios-jit/launcher-signing-picker",
     "bundle_identifier": "io.github.hmcneill46.celeste.everest.jit.everest",
@@ -81,7 +81,7 @@
   },
   "limitations": {
     "complete_ipa_built": true,
-    "physical_feather_signature_tested": false,
+    "physical_feather_signature_tested": true,
     "simulator_identity_test_is_synthetic": true,
     "private_api_future_compatibility_guaranteed": false,
     "gameplay_or_jit_tested": false,
@@ -162,6 +162,28 @@
         "bytes": 351,
         "sha256": "6963c3c20813076bb7eb94a8f5389bd77d0786def9909098c3c5eb4c1e0eb4b3"
       }
+    }
+  },
+  "physical_result": "FAILED_GAME_SELECTION",
+  "physical_review": {
+    "status": "CONFIRMED_BUILD53_GAME_SELECTION_FAILURE_WITH_COPY_PICKER_PASS",
+    "private_receipt": ".private/picker-failure-2026-10-19/phone-comparison.json",
+    "private_receipt_sha256": "33595d360fa05ccf58e9e4babf85971e58a43891a2029fb51a4a2d13560fc7a1",
+    "os": "27.0.1",
+    "exact_installed53_metadata_matches_hosted": true,
+    "entitlement_lookup_and_hook_install": "PASS",
+    "game_selected_callbacks": 0,
+    "backup_selected_callbacks": 2,
+    "backup_invalid_manifest_rejections": 2,
+    "restore_or_rollback_actions": 0,
+    "scope": "Same installed53/signature/device; backup type filter and picker purpose also differ, so this supports but does not isolate copy mode as sole cause. Build54 game/mod phone test remains necessary.",
+    "journal_hashes": {
+      "initial": [
+        "38f0a5b4591ba7726157db8d844dc62be58aab53ffb02dbe45ce75d09512bb0e"
+      ],
+      "copy_probe": [
+        "521a137fcc3faa183e92fc2959fcf8e75621f104f9db05efd0022af8d1a7d26e"
+      ]
     }
   }
 }
