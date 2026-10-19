@@ -30,9 +30,10 @@ and the distinction between synthetic simulator identity tests and phone proof.
 `release/public53.json` is the active source manifest. New builds use
 `tools/build_release53.py` with an explicit FMOD SDK. The52 release remains
 published and immutable. This Mac has Xcode26.6 but lacks the licensed SDK,
-Mono/sn and CMake needed for the complete fresh dependency/IPA build. No53 IPA
-or unchanged-ID phone test has occurred. The next delivery step is a complete
-build, then a phone install with the original Cabrillo identifier and existing
+Mono/sn and CMake needed for a local complete fresh dependency/IPA build. The
+hosted53 IPA is now built and independently verified as recorded below. No
+unchanged-ID phone test has occurred. The next step is an owner phone install
+with the original Cabrillo identifier and existing
 Development profile. Do not delete either of the owner's existing installations
 or infer save migration between their different bundle IDs.
 
@@ -52,7 +53,20 @@ on a changed public FMOD download-page pin. Independent public-source review
 confirms the helper's request contract still matches; only that reviewed asset
 hash is refreshed. A credential-free probe and67 Python controls pass. SDK and
 library pins/authentication restrictions remain exact; retry the unsigned trial.
-See the53 report/ledger for this preparation, separate from package/phone proof.
+See the53 report/ledger for this preparation, separate from phone proof.
+
+Retry39267829175 succeeds at `e63f1e0a8030daa3f0f4228ca6992c428e4f1811`:
+official SDK acquisition, full fresh managed/native build, package audit, all
+five attestations and separate Ubuntu verification pass; publication is skipped.
+The independently downloaded five-file kit in `artifacts/cabrillo-build53-hosted`
+passes checksums, all254 captured app-source hashes, all151 unchanged52 dependency
+hashes, original bundle ID, production picker symbol and absence of its test seam.
+IPA bytes18,763,886; SHA256
+`cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
+The Actions artifact is12194283151 with14-day retention; no tag/Release is made.
+Keep this immutable kit; use54 for new app implementation. Delivery is through
+the local IPA/Actions artifact; no existing iCloud kit, phone or app data is changed.
+The unchanged-ID Feather signing/import phone gate remains pending.
 
 ## Published v0.24.1 / build52 —30 September
 

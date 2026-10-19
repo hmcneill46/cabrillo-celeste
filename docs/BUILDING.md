@@ -48,8 +48,9 @@ The launcher uses the accepted build50 source plus build53's signing-aware Files
 picker overlay; `release/app53` supplies the new identity and pins the frozen
 base. Earlier delivered source lanes, including published52, stay frozen.
 See [the build53 report](ios-jit/SIGNING_PICKER_BUILD_53.md) for its local native
-checks and pending complete-package/phone validation. Published0.24.1 predates
-this repair; the new source alone does not update an installed app.
+checks, successful hosted package/verification and pending unchanged-ID phone
+validation. Published0.24.1 predates this repair; install the separate53 trial
+kit to test it. All254 captured53 app inputs are frozen; use54 for new app changes.
 
 The `output` directory contains `Cabrillo.ipa`, `BUILD_PROVENANCE.json`,
 `PACKAGE_AUDIT.json` and `RELEASE_NOTES.md`. Internal logs, symbols and receipts

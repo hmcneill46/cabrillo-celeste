@@ -55,7 +55,8 @@ Read `docs/ios-jit/SIGNING_PICKER_BUILD_53.md` for behavior and validation limit
 The current source release manifest is `release/public53.json`; the recipe is
 `tools/build_release53.py` / `compile_release53.py`. Published52 and its builders
 remain immutable. Source commit `1f2de6d` is pushed to `codex/actions-release`;
-no53 IPA, phone acceptance, tag or Release is claimed. The first hosted trial
+the completed53 IPA is now independently verified. No phone acceptance, tag or
+Release is claimed. The first hosted trial
 passes source/native checks and stops SDK acquisition before sign-in on FMOD's
 changed download-page pin. The independently reviewed pin is refreshed without
 changing SDK or authentication boundaries; see the53 report. This Mac lacks the licensed FMOD SDK and
@@ -64,6 +65,15 @@ separate from a complete package build. After reviewing the completed local
 checks, the owner explicitly approves committing/pushing this53 fix and running
 the existing GitHub workflow for an unsigned test IPA. This authorizes the trial
 source/build writes; it does not authorize a version tag or public Release.
+
+Retry39267829175 passes SDK acquisition, fresh build/package audit, all five
+attestations and independent Ubuntu verification at `e63f1e0`. The separately
+downloaded kit in `artifacts/cabrillo-build53-hosted` passes checksums, all254
+captured source hashes, all151 unchanged52 dependency hashes and production
+picker/bundle-ID checks. IPA SHA256:
+`cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
+Keep53 frozen; new app implementation needs54. Original-ID Feather phone testing
+is still pending. No existing cloud kit, device or app data is changed.
 
 The adapter reads only the running process's own `application-identifier` and
 adjusts Documents UI requests for that app's original host. It never changes the

@@ -25,9 +25,11 @@ available independently of the temporary Actions artifacts.
 
 Current source includes [build53's automatic Files picker signing repair](docs/ios-jit/SIGNING_PICKER_BUILD_53.md)
 for standalone installations with a different provisioning application ID, such
-as some Feather setups. Published0.24.1 predates this repair. Build53's complete
-IPA and unchanged-ID phone validation are pending; source tests alone do not
-update an installed app.
+as some Feather setups. Published0.24.1 predates this repair. The
+[unsigned0.24.2/build53 trial kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39267829175/artifacts/12194283151)
+passes the complete hosted build, package audit and independent verification;
+Actions downloads require GitHub sign-in and expire after14 days. Unchanged-ID
+Feather phone validation remains pending. No0.24.2 tag or Release is published.
 
 You need **iOS15 or later, a compatible installation/JIT setup, and your own
 Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game

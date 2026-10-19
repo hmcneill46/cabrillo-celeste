@@ -8,9 +8,23 @@ The current source recipe is [release/public53.json](../release/public53.json),
 version0.24.2/build53. It adds the signing-aware picker overlay to the accepted
 build50 launcher and freshly builds its managed/native runtime dependencies,
 retaining shortcut49. [Build53's report](ios-jit/SIGNING_PICKER_BUILD_53.md)
-distinguishes its native checks from the pending complete IPA and phone gate.
-The published0.24.1 release below remains unchanged; preparing a new source
-recipe does not authorize a tag, hosted run or publication.
+distinguishes its native checks, successful hosted IPA and pending phone gate.
+The published0.24.1 release below remains unchanged. The owner authorized this
+source push and unsigned hosted trial; no0.24.2 tag or Release is authorized.
+
+## Unsigned0.24.2/build53 trial —19 October2026
+
+[Run39267829175](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39267829175)
+passes all build/audit and independent attestation jobs at
+`e63f1e0a8030daa3f0f4228ca6992c428e4f1811`. Release publication is skipped.
+The [five-file test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39267829175/artifacts/12194283151)
+has14-day retention and requires GitHub sign-in. A separately downloaded copy
+passes checksums, exact source/dependency checks and all five attestations.
+The18,763,886-byte IPA SHA256 is
+`cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
+All254 captured app inputs are frozen; new app changes need54. Phone acceptance
+with the original identifier/current Feather profile remains pending. See the53
+report for the reviewed public FMOD website pin repair needed before this trial.
 
 The build takes no Celeste game ZIP and no private compiled Cabrillo capsule.
 Players import their own original Celeste FNA1.4.0.0 files. The first game launch

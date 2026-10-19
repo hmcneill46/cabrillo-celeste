@@ -2,8 +2,9 @@
 
 19 October2026. Version0.24.2/build53 adds automatic document-picker compatibility
 for standalone sideloading profiles whose explicit application ID differs from
-Cabrillo's bundle ID. The source is committed and pushed; a complete53 IPA
-and a phone run with the unchanged bundle ID remain pending.
+Cabrillo's bundle ID. The source is committed/pushed and the complete unsigned53
+IPA passes hosted build/audits and independent download checks. A phone run with
+the unchanged bundle ID remains pending.
 
 ## Confirmed problem
 
@@ -67,7 +68,8 @@ Final local results:
 | Actual Apple Files UI |Two iOS26.5 simulator tests pass ZIP tap/delegate/staging, exact bytes/hash, unchanged source, cancel and repeat. |
 | First picker |Compatibility installs with zero earlier picker constructions; actual Apple host setter maps the synthetic request correctly. |
 | Retained native regression |119 profile checks and185 shortcut checks pass, plus36 workflow branches and15 broken-URL controls. |
-| Complete53 IPA / physical signing |NOT OBSERVED; licensed build inputs and unchanged-ID phone validation remain pending. |
+| Complete53 IPA |PASS hosted source build, package audit, five attestations and independent downloaded-kit checks. |
+| Physical Feather signing |Unchanged-ID phone validation remains pending. |
 
 The checks exercise policy and runtime method chaining, actual production iOS
 compilation, and real Apple picker interaction separately. The simulator fixture
@@ -111,7 +113,7 @@ does not require those runtime link inputs. A complete build must use the
 explicit developer SDK recipe or an owner-authorized hosted workflow; do not
 extract development inputs from the old IPA or use a legacy checkout.
 
-After a complete build, install53 through Feather with the original Cabrillo
+Install the completed53 trial through Feather with the original Cabrillo
 Identifier and the existing Development profile. Test local game/mod imports,
 cancel/reopen, backup/save import/export and existing JIT/game behavior. Preserve
 both current installations and their data: the temporary matching-ID workaround
@@ -119,7 +121,7 @@ has a different app container and does not automatically migrate to the original
 ID. Record that physical result separately. After the local checks, the owner
 explicitly authorizes committing/pushing this fix and running the existing
 hosted workflow for an unsigned test IPA. No tag or public Release is authorized;
-the local results above do not establish a package or phone pass. Keep game
+the local results above are separate from the hosted package and phone gates. Keep game
 content, SDK components and signing credentials outside source/build outputs.
 
 ## Hosted trial preparation
@@ -138,5 +140,26 @@ Only the reviewed `download.chunk.js` SHA256 pin changes to
 The credential-free probe passes the expected HTTP401 sign-in boundary. SDK
 version/archive/library pins, origin/redirect restrictions and credential handling
 remain unchanged. A new synthetic regression rejects a changed second asset
-before reading environment credentials. The next hosted trial still requires
-the complete source/package and independent attestation gates.
+before reading environment credentials. The retry passes the complete
+source/package and independent attestation gates below.
+
+## Completed unsigned hosted trial
+
+[Retry39267829175](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39267829175)
+passes all jobs at `e63f1e0a8030daa3f0f4228ca6992c428e4f1811`, with publishing
+skipped. The [five-file test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39267829175/artifacts/12194283151)
+is downloaded separately to `artifacts/cabrillo-build53-hosted`; Actions access
+requires GitHub sign-in and retention is14 days. Checksums, all five exact-source
+hosted-workflow attestations, original bundle ID, automatic-picker BuildInfo,
+all254 captured source hashes and151 unchanged52 dependency hashes verify.
+The final arm64 executable contains the production picker adapter and no test
+environment symbol. Both signed49 Shortcut assets remain exact.
+
+IPA size:18,763,886bytes. SHA256:
+`cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
+Package audit reports199 managed assemblies, zero bundled game assemblies/assets
+and no distribution blockers. These are build/package checks, separate from a
+phone pass. Keep the immutable kit and all254 app inputs; use54 for new app
+implementation. No0.24.2 tag/Release, iCloud replacement, phone install or device
+mutation occurs in this delivery. The current signing/import phone test remains
+the next owner action.
