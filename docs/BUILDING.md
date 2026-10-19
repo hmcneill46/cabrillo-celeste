@@ -1,6 +1,6 @@
 # Building Cabrillo
 
-## Current source build: version0.24.1 / build52
+## Current development source build: version0.25.0 / build55
 
 Use a Mac with **Xcode26.6 /17F113**, iPhoneOS SDK26.5, Python3.12 or newer,
 CMake, Git and **Mono6.14.1** with its `sn` strong-name tool. Both Intel and Apple Silicon SDK downloads are pinned in the
@@ -35,7 +35,7 @@ records the distinction and the maintainer's separate CI download setup.
 From this checkout, choose fresh work and output paths:
 
 ```sh
-python3 tools/build_release54.py --work .build/my-source-build \
+python3 tools/build_release55.py --work .build/my-source-build \
   --output .build/my-source-build/output \
   --fmod-sdk '/path/to/FMOD Programmers API'
 ```
@@ -44,17 +44,18 @@ This downloads and verifies pinned public source archives, .NET SDK/runtime pack
 and NuGet inputs, rebuilds the managed/native dependencies, prepares the FMOD
 runtime link inputs, verifies the signed Shortcut resources and compiles the app.
 It consumes no Celeste game ZIP, historical compiled capsule or old checkout.
-The launcher uses the accepted build50 source plus build54's copy-based Files
-picker overlay; `release/app54` supplies the new identity and pins the frozen
-base and exact53 compatibility module. Earlier source lanes and all254 captured53
-app inputs stay frozen. See [the build54 report](ios-jit/COPY_PICKER_BUILD_54.md)
-for the confirmed53 phone failure, successful existing backup-selector comparison,
-new source checks, successful54 package/local verification and separate phone
-game-import gate. All253 captured54 app inputs are frozen; use55 for new app changes.
+The launcher retains build50's base and build54's copy-based Files picker, with
+the new `launcher-everest6642` overlay supplying synchronized runtime identities
+and the versioned platform patch for official stable1.6642. `release/app55` pins
+all253 captured54 inputs. Only the Everest public-source dependency changes;
+the native/.NET/NuGet/FMOD/Shortcut pins remain unchanged. See
+[the upgrade report](ios-jit/EVEREST_6642_BUILD_55.md) for checks and their scope.
+The preparation recipe selects a new code-cache generation from retained
+originals; users keep their bundle ID, profiles and saves.
 
 The `output` directory contains `Cabrillo.ipa`, `BUILD_PROVENANCE.json`,
 `PACKAGE_AUDIT.json` and `RELEASE_NOTES.md`. Internal logs, symbols and receipts
-are under `artifacts/release52-my-source-build`; dependency work stays beneath
+are under `artifacts/release55-my-source-build`; dependency work stays beneath
 `.build/my-source-build`. Do not upload whole work/SDK directories. Local builds
 do not acquire a GitHub-hosted attestation. The release workflow additionally
 requires a clean selected commit, produces an allowlisted checksummed kit and
@@ -75,7 +76,7 @@ From a public clone on macOS with Xcode26.6 /17F113:
 ```sh
 python3 tools/ci/check_public_repository.py
 python3 -m unittest discover -s tools/tests -v
-python3 tools/ci/check_native_profiles.py --lane launcher-owned-game
+python3 tools/ci/check_everest55_profiles.py
 python3 tools/ci/check_native_shortcuts.py
 python3 tools/verify_release_shortcuts.py
 ```

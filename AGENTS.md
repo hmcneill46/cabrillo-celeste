@@ -43,6 +43,29 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   dependency, not a Git source directory. Build38 uses public source receipts and
   an explicit FMOD SDK instead. Never silently fall back to a legacy checkout.
 
+## Everest stable1.6642 update —19 October, build55
+
+The owner requests the latest Everest after54 publication and asks future pushes
+to use GitHub account `hmcneill46`. Repository-local Git author/committer are now
+`hmcneill46 <57508980+hmcneill46@users.noreply.github.com>`. The authenticated
+GitHub API account and sole listed repository collaborator are `hmcneill46`;
+commit display names are separate from push authentication. Preserve published
+history and use this identity for the current source/build trial.
+
+Build55 /0.25.0 uses official stable1.6642.0, released17 October, commit
+`5abd7876821223c20711c1844a5187321d6e904c`. Its new overlay is
+`launcher-everest6642`; source recipes/manifests have55 identities. Only the
+Everest dependency pin changes. Existing platform patches and loading, all253
+captured54 inputs, Feather copy imports, native/runtime pins and signed49
+Shortcuts remain preserved. Native and managed runtime expectations change
+together. The preparation recipe automatically creates a new cache generation
+while retaining the original game identity/files, previous generations and saves.
+
+Read `docs/ios-jit/EVEREST_6642_BUILD_55.md` and its ledger for current checks.
+Local source and iOS compilation pass; the full hosted managed/native package
+and device gameplay/JIT remain separate gates. No55 public version tag or Release
+is requested yet. Preserve published54 and every earlier scoped device result.
+
 ## Copy-based Files imports —19 October, build54 correction
 
 The owner now confirms54 imports the game ZIP successfully. Read-only USB

@@ -9,6 +9,29 @@ preparation, for a fresh development chat opened in
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
 
+## Everest stable1.6642 update —19 October, build55
+
+The owner requests latest Everest after the54 release. Official stable1.6642.0
+was released17 October2026; exact source is
+`5abd7876821223c20711c1844a5187321d6e904c` (7 commits/17 files after6580).
+The new55/v0.25.0 lane is `launcher-everest6642`, with separate source recipes,
+public dependency lock and synchronized native/managed runtime identities.
+Existing platform/loading patches apply, and all253 captured54 inputs remain
+exact. Retain the Feather import fix, original bundle ID, JIT/native pins and
+Shortcut49. Original game source identity stays unchanged; new patch-tool hashes
+select a new prepared-code generation without replacing saves or originals.
+
+Local89 Python controls and the actual arm64/iOS15 production compile pass.
+Save/profile controls and full hosted managed/native compilation/package checks
+are tracked separately in `docs/ios-jit/EVEREST_6642_BUILD_55.md` and its ledger.
+This is active55 work, with no new physical gameplay/JIT or public Release yet.
+Keep the published54 kit and all earlier device acceptance distinct.
+
+The owner also asks pushes/commits to use `hmcneill46`. The authenticated account
+is confirmed and repository-local author/committer use
+`57508980+hmcneill46@users.noreply.github.com`. Git's prior automatic name/email
+did not grant repository access; do not rewrite published release history.
+
 ## Copy-based Files imports —19 October, build54 repair
 
 Owner confirmation and a fresh read-only USB collection now close the reported

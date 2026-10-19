@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.25.0 · development
+
+Updates Everest from1.6580.0 to stable1.6642.0, including updated GameBanana mirror
+handling, the TeleportTrigger API and a separate menu-search binding. Existing
+Feather ZIP imports, bundle ID, profiles, saves, JIT routes and Shortcut49 are
+retained. The first launch prepares the newer Everest from retained originals;
+later launches reuse the new verified cache. Device gameplay/JIT acceptance is
+tracked separately in the build55 report.
+
 ## 0.24.3 · 19 October 2026
 
 Fixes the game ZIP picker stall seen after signing Cabrillo with Feather using a

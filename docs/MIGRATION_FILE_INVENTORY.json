@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 4666,
+  "file_count": 4688,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -10,8 +10,8 @@
     },
     ".github/workflows/ci.yml": {
       "reason": "Public source, native profile/shortcut and build53 signing-picker policy/device-compilation checks without licensed inputs",
-      "sha256": "1fcc9bff8f937c88f003a11b8057e22b6f983b6392f2a3f3e2cb67e0e52cc00d",
-      "bytes": 2974
+      "sha256": "b948fa43dcf9a052e57c7a0a6723637353d58122a01313597dfbf93b32c3976c",
+      "bytes": 2946
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
@@ -25,18 +25,18 @@
     },
     "AGENTS.md": {
       "reason": "Build53 signing-picker development scope, published52 preservation and owner approval boundaries",
-      "sha256": "1d67da87f5dd15ed78b2462d5d9743b7495f4aab747d2e816f835e5037f0798b",
-      "bytes": 43742
+      "sha256": "10b00d8dfa4370e4cde05337805063f94e2ca87a267d606a0057df930b7f09c7",
+      "bytes": 45183
     },
     "CHANGELOG.md": {
       "reason": "Public release change notes requested by owner for v0.24.3",
-      "sha256": "af3de772dee962db03eb10006883f71691ccabc6228232697fab890311df78d3",
-      "bytes": 1076
+      "sha256": "b8acc287c2c8aa465a614e19aa50fbfe872a4e1e783afa290add817ca4824534",
+      "bytes": 1545
     },
     "HANDOFF.md": {
       "reason": "Build53 repair evidence, current build recipe, missing full package inputs and pending unchanged-ID phone gate",
-      "sha256": "9fd94d334a4a326a046f6de5843569c240b54ecf432603a725cb0eb00896430a",
-      "bytes": 107011
+      "sha256": "d6897c694c11a8d90730afb8ad5d667e9752ab534674e5787654c19438258b8e",
+      "bytes": 108414
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -46,8 +46,8 @@
     },
     "README.md": {
       "reason": "Current product/download overview and build53 signing-aware source recipe",
-      "sha256": "80b0db79d71f1102c74aa8946fa92c8492f0bd7fcd03e92681ed680b9711caa1",
-      "bytes": 12422
+      "sha256": "94352855eb486ecc9a44a877b92edd7cb454cd21459ad04f71b6d6447d69746d",
+      "bytes": 12713
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -56,8 +56,8 @@
     },
     "docs/BUILDING.md": {
       "reason": "Current build53 developer SDK recipe and preserved historical reproduction instructions",
-      "sha256": "b3de56622ddf3bc271577212b804150b4f38f588a890aceb6b653d2373057a35",
-      "bytes": 38121
+      "sha256": "cf033b39b5b658a3f0b1a714a3bffcc40894ed74898fd1f5bfb36f8c82c1fac4",
+      "bytes": 38139
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -90,8 +90,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Current53 source workflow and separate immutable published52 release with licensed-input boundaries",
-      "sha256": "99bebec29e47a3b99cd8ce1e7358b4d6a2ff279d59bb003581a22144fac694c6",
-      "bytes": 17399
+      "sha256": "3de529543389e33b5177c9296afff673c9094318a7e96d31e6cd55103c62b425",
+      "bytes": 17339
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -26276,7 +26276,7 @@
     },
     "tools/release_pipeline.py": {
       "reason": "Select build53 source recipe while retaining gated clean-ref IPA publishing and SDK provenance checks",
-      "sha256": "86c339a9feae0de57f1f86817d7d44c10f836bf53953c89153df6923332ae527",
+      "sha256": "b73412180dcf7e5a35e234dba58f742dd085c7535dee128a5d4107461848938f",
       "bytes": 10767
     },
     "tools/repair_player_precision.py": {
@@ -26291,8 +26291,8 @@
     },
     "tools/tests/test_copy_picker_build.py": {
       "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
-      "sha256": "e60b274a0a9d066099b19da1ee09ce62ca8d48e4aaa7b3de551217f0167ffd29",
-      "bytes": 4380
+      "sha256": "2f3a316866091fadf9f4c2a4a384b0516a6121c8727e0fe91db363f2981ac027",
+      "bytes": 4374
     },
     "tools/tests/test_development_build.py": {
       "reason": "Build output isolation and malformed/signed/wrong-platform Mach-O controls",
@@ -26331,7 +26331,7 @@
     },
     "tools/tests/test_signing_picker_build.py": {
       "reason": "Build53 source selection and frozen-input rejection regression controls",
-      "sha256": "19c10b7455152e9373dbc1dc36306ac38d78af245dca6dac28a3754eda1da370",
+      "sha256": "687a53d5444264ade602a23253779e9cb07685df56384222d650518d96806a0e",
       "bytes": 3215
     },
     "tools/verify_backups.py": {
@@ -26603,6 +26603,116 @@
       "sha256": "89f4a8cb15a21ac1cb55d0c5f251546d254abe8a7f4aab0645a4470e57052206",
       "bytes": 929,
       "import_sha256": "89f4a8cb15a21ac1cb55d0c5f251546d254abe8a7f4aab0645a4470e57052206"
+    },
+    "docs/ios-jit/EVEREST_6642_BUILD_55.md": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "5a6311566296f6d120e94f3f640fd6e891b1ff589cfc5a280759efc7f0358305",
+      "bytes": 8338
+    },
+    "docs/ios-jit/EVEREST_6642_BUILD_55_EVIDENCE.json": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "94187f1b066efb6f615f9379a522f623e4f1bce18569197775d0053900a779a4",
+      "bytes": 11859
+    },
+    "experiments/ios-jit/launcher-everest6642/README.md": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "5445790a272132b71ff11bf42cc0bf75a0dbc9d38b2cae2ec3bf2de7d28c257a",
+      "bytes": 1073
+    },
+    "experiments/ios-jit/launcher-everest6642/RuntimeIdentity.json": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "47ac6860ade5fb91acc9bd37d654c18c7bcd6679920eb817950c5880d3a1f359",
+      "bytes": 246
+    },
+    "experiments/ios-jit/launcher-everest6642/managed/RuntimeIdentity.cs": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "310d1dd9c5b3236c8c1954eaaf34fec222889b3b5077513c3970cdf5ec414148",
+      "bytes": 719
+    },
+    "experiments/ios-jit/launcher-everest6642/native/RuntimeIdentity.swift": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "ec3cfb20387343412c90dc6010034c608c0b407fa4ef92fff59b9f0574488448",
+      "bytes": 941
+    },
+    "experiments/ios-jit/launcher-everest6642/public-build/Everest.patch": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "2bf3ff8be54d9ce57f9b06e76c9e46f081cf1135bb85b04d84d29044cd6250ee",
+      "bytes": 4538
+    },
+    "experiments/ios-jit/launcher-everest6642/public-build/patch-provenance.json": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "e20ebb9adb80bc135b6c6f90c95127141376150c1186715e9b025061ff913668",
+      "bytes": 10834
+    },
+    "experiments/ios-jit/launcher-everest6642/tests/Everest6642Audit.cs": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "cc9017b2cbcea7b30f1dcc224f9760a73ad8c68a440aef463b0a5d2810981222",
+      "bytes": 13277
+    },
+    "release/app55/BuildIdentity.json": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "d770ac789195d8739cdec95448386fd6c6a8c9dde39deadf69de839eb9513f67",
+      "bytes": 278
+    },
+    "release/app55/Dependencies.json": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "6b34a44fbff8adcc4f19db74a2481d9e2558423631fcf87db966c418324da931",
+      "bytes": 66848
+    },
+    "release/app55/Info.plist": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "1a297e883b72bbcc12c1157e2a78ee8c447dad974a376d755c652b5d8951fabd",
+      "bytes": 3361
+    },
+    "release/everest55-dependencies.json": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "a136fa8abd88a303bee45e0954c9bfaf790021cd64856a00e029c7be0fba169f",
+      "bytes": 7604
+    },
+    "release/public55.json": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "6a5601d3c6ed3afd435148b0e7f4d2cf4ced8d66483481ac314b4b7adc9a3ff0",
+      "bytes": 583
+    },
+    "tools/build_everest55_managed.py": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "c63cebd5d06d60d3c9fb5826824cc842cd8f7fb50ba0b0741c66fe573232ef6e",
+      "bytes": 13297
+    },
+    "tools/build_release55.py": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "1af500ef88230eff1546e149b64c6714c4991f5bb85bf440fb81422c6a821ccd",
+      "bytes": 10645
+    },
+    "tools/check_everest6642_compile.py": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "22b0dec26bb41bc7573a11166204255c1f9e93ca3f5a3548c264504ae8378363",
+      "bytes": 13243
+    },
+    "tools/check_everest6642_managed.py": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "c20a9912999a9627cee7681dafd1b3b433928f61a41ea59812e686f80132e639",
+      "bytes": 12538
+    },
+    "tools/ci/check_everest55_profiles.py": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "f053b4bcd777090096b479cd98b2b1facab706e25cfb5a9f9166e40175b85d06",
+      "bytes": 4728
+    },
+    "tools/compile_release55.py": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "b2cec054c13a6f79598165779ea3751789adbf235da1bb3a925fdb9157ee4bde",
+      "bytes": 29275
+    },
+    "tools/prepare_everest55_public.py": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "fdc37dc82bbf24056b075b282c3f84d76ed4aa4e2edf4aa67c3150ab722b448b",
+      "bytes": 7673
+    },
+    "tools/tests/test_everest6642_compile.py": {
+      "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
+      "sha256": "a018ef759ff6da7445b0e6eda634bc24ef115d48884d2457b1d7cd5bba937665",
+      "bytes": 7344
     }
   },
   "private_manifests": [

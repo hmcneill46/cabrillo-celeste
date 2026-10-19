@@ -1,0 +1,244 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "recorded_utc": "2026-10-19T20:32:16.923360+00:00",
+  "version": "0.25.0",
+  "build_number": "55",
+  "build_id": "launcher-everest6642-20261019-55",
+  "status": "PASS_LOCAL_SOURCE_IDENTITY_NATIVE_PROFILE_AND_AUDITOR_CONTROLS_HOSTED_AND_DEVICE_PENDING",
+  "upstream": {
+    "repository": "https://github.com/EverestAPI/Everest",
+    "channel": "stable",
+    "version": "1.6642.0",
+    "tag": "stable-1.6642.0",
+    "release_url": "https://github.com/EverestAPI/Everest/releases/tag/stable-1.6642.0",
+    "published_utc": "2026-10-17T20:15:26Z",
+    "prerelease": false,
+    "source_commit": "5abd7876821223c20711c1844a5187321d6e904c",
+    "commit_utc": "2026-09-28T20:55:38Z",
+    "previous_version": "1.6580.0",
+    "previous_commit": "082e21b0b6dd7ff7c96d65b2ca2c632f4fd8df75",
+    "compared_commits": 7,
+    "changed_files": 17,
+    "source_archive_url": "https://codeload.github.com/EverestAPI/Everest/tar.gz/5abd7876821223c20711c1844a5187321d6e904c",
+    "source_archive_bytes": 6971655,
+    "source_archive_sha256": "e5b4b25d332390e53c46e33115629ab9bbdb38ef408000a81ada2698a6aa988e",
+    "dependency_lock": "release/everest55-dependencies.json",
+    "dependency_lock_sha256": "a136fa8abd88a303bee45e0954c9bfaf790021cd64856a00e029c7be0fba169f",
+    "only_changed_dependency_row": "Everest",
+    "other_dependency_rows_unchanged": true,
+    "project_target_framework_runtime_and_submodule_pins_changed": false,
+    "features": [
+      "Separately rebindable MenuSearch input; keyboard R default, no default controller binding",
+      "TeleportTrigger using existing Level.TeleportTo",
+      "Update mirrors use ModUpdateInfo.MirrorName",
+      "TAS-check workflow/dependency updates"
+    ],
+    "removed_api": [
+      "ModUpdateInfo.GameBananaType",
+      "ModUpdateInfo.GameBananaId",
+      "ModUpdaterHelper.GetAllMirrorUrls(string)"
+    ],
+    "replacement_api": "ModUpdaterHelper.GetAllMirrorUrls(ModUpdateInfo) returning IEnumerable<string>",
+    "compatibility_risk": "External mods referencing removed members may need updates; no specific installed-mod failure is asserted.",
+    "latest_release_api_evidence": {
+      "path": ".build/everest55-upstream/research/latest.json",
+      "sha256": "98de9f2b9d0663f5480102bbf60882404f82ae4a3dfdfe7e465521bdbf878e56"
+    },
+    "comparison_evidence": {
+      "path": ".build/everest55-upstream/research/comparison.json",
+      "sha256": "b01b857e749313752d5c4781fac38bd1fe866e6d21fb85265037aef74de7a537"
+    }
+  },
+  "implementation": {
+    "overlay": "experiments/ios-jit/launcher-everest6642",
+    "public_build_script": "tools/build_release55.py",
+    "release_manifest": "release/public55.json",
+    "runtime_identity": {
+      "schema": 1,
+      "everestSourceCommit": "5abd7876821223c20711c1844a5187321d6e904c",
+      "compatibilityPolicy": 1,
+      "builtins": {
+        "Celeste": "1.4.0.0",
+        "CelesteIOS": "1.0.0",
+        "Everest": "1.6642.0",
+        "EverestCore": "1.6642.0"
+      }
+    },
+    "runtime_identity_manifest_sha256": "47ac6860ade5fb91acc9bd37d654c18c7bcd6679920eb817950c5880d3a1f359",
+    "managed_identity_source_sha256": "310d1dd9c5b3236c8c1954eaaf34fec222889b3b5077513c3970cdf5ec414148",
+    "swift_identity_source_sha256": "ec3cfb20387343412c90dc6010034c608c0b407fa4ef92fff59b9f0574488448",
+    "matching_generated_identities": true,
+    "injected_everest_version": "1.6642.0-cjit-5abd787",
+    "platform_patch_sha256": "2bf3ff8be54d9ce57f9b06e76c9e46f081cf1135bb85b04d84d29044cd6250ee",
+    "patch_provenance_sha256": "e20ebb9adb80bc135b6c6f90c95127141376150c1186715e9b025061ff913668",
+    "everest_patch_files": 5,
+    "actual_git_apply_check_and_application": true,
+    "loading_patch_edits_and_additions": 4,
+    "monomod_runtime_patch_rows_unchanged": true,
+    "explicit_import_rows_unchanged": true,
+    "cache": {
+      "mechanism": "OwnedGameRecipe tool hashes, including Celeste.Mod.mm.dll, select a new recipe-hash generation; existing GameCodeStore verifies/reuses original inputs and later prepared results.",
+      "source_id": "4b665aa3b550b262100dbe59512d5736379af0a5c4e0e6c0c277f10bcc50a09c",
+      "original_source_id_unchanged": true,
+      "cache_schema_changed": false,
+      "manual_cache_deletion_required": false,
+      "old_published_generations_retained": true,
+      "saves_retained_by_existing_store": true,
+      "resulting55_recipe_audited": false,
+      "actual55_first_cached_transition_tested": false
+    },
+    "retained_build54_app_input_count": 253,
+    "all253_retained_build54_inputs_exact": true,
+    "retained_build54_source_pin_map_sha256": "4cf32f28d39208363d79f5039c2181585ce6cf37c56ae2ef8960610fdc9518ac",
+    "retained_picker_policy": "Build54 copy-based game/mod imports and original bundle identifier/signing compatibility",
+    "retained_jit_policy": "Existing actual native JIT checks, known debugger detach, shortcut routing/restoration and recovery gates",
+    "signed_shortcut_revision": 49,
+    "new_jit_entitlements_or_certificate_only_mode": false,
+    "frozen_prior_sources_mutated": false,
+    "retained_build54_source_pin_map_canonicalization": "SHA256 of UTF-8 json.dumps(map, sort_keys=True, separators=(',', ':')) with no trailing newline"
+  },
+  "checks": {
+    "python_controls": {
+      "status": "PASS",
+      "count": 89,
+      "path": ".build/everest55-python-controls.log",
+      "sha256": "e9abd80e4c866b0881e00e044426e985fecb3d69fe872a009b9ebd0af20cfad9"
+    },
+    "native_compile_controls": {
+      "status": "PASS",
+      "count": 13,
+      "included_in_89_python_controls": true
+    },
+    "production_compilation": {
+      "status": "PASS",
+      "target": "arm64-apple-ios15.0",
+      "xcode": "Xcode 26.6\nBuild version 17F113",
+      "sdk": "26.5",
+      "captured_inputs": 263,
+      "compiled_swift_sources": 42,
+      "compiled_cyaml_c_sources": 6,
+      "compiled_objc_sources": 2,
+      "production_test_seam_absent": true,
+      "broader_selected_native_sources": "HASH_CHECKED_ONLY",
+      "app_linked": false,
+      "managed_payload_compiled": false,
+      "ipa_built": false
+    },
+    "native_profiles": {
+      "status": "PASS",
+      "checks": 119,
+      "new55_generated_identity": true,
+      "network_and_private_legacy_inputs_denied": true,
+      "host": "macOS",
+      "physical_device_tested": false,
+      "initial_harness_result": "NO_PASS_IOS_ONLY_SHORTCUTVIEWS_INCLUDED",
+      "corrected_new55_wrapper": "Exclude PlatformViews.swift and ShortcutViews.swift from macOS storage tests; actual iOS compile includes both"
+    },
+    "early_managed_auditor": {
+      "status": "PASS_EARLY_COMPILED_AUDITOR_OLD_VERSION_CONTROL",
+      "sdk": "8.0.422",
+      "reference_assemblies": 163,
+      "actual_published54_dlls_checked": 199,
+      "actual54_old_version_rejected": true,
+      "isolated_control_constructor": "Synthetic string fixture only",
+      "actual55_positive_audit": false,
+      "game_or_adapter_executed": false,
+      "final_auditor_source_sha256": "cc9017b2cbcea7b30f1dcc224f9760a73ad8c68a440aef463b0a5d2810981222"
+    },
+    "managed_checker_independent_review": {
+      "status": "NO_BLOCKING_FINDINGS",
+      "files": [
+        "tools/check_everest6642_managed.py",
+        "experiments/ios-jit/launcher-everest6642/tests/Everest6642Audit.cs"
+      ],
+      "scope": "Read-only source review against pinned6642 source and builder integration; actual positive55 metadata paths await the hosted payload.",
+      "observations": [
+        "Compiled VersionString, adapter constants/module strings, feature metadata and mirror signature checks match pinned upstream source",
+        "Original pins, canonical source_id, exact preparation tool set/hashes are checked",
+        "Wrong-version and stale-recipe controls require their intended failures and preserve production resources",
+        "Root55 builder invokes the managed auditor before packaging",
+        "Final auditor also rejects nonflat/non-DLL Managed entries before auditing every assembly identity"
+      ],
+      "source_sha256": {
+        "tools/check_everest6642_managed.py": "c20a9912999a9627cee7681dafd1b3b433928f61a41ea59812e686f80132e639",
+        "experiments/ios-jit/launcher-everest6642/tests/Everest6642Audit.cs": "cc9017b2cbcea7b30f1dcc224f9760a73ad8c68a440aef463b0a5d2810981222"
+      }
+    }
+  },
+  "receipts": {
+    "patch_application": {
+      "path": ".build/everest55-upstream/patch-validation/receipt.json",
+      "sha256": "b5d17f69b6d16934ab20ce7df74e0f45d432166c7a05734eb07d2a7d499255d6",
+      "status": "PASS_EVEREST6642_PATCH_AND_LOADING_APPLICATION"
+    },
+    "native_compile_controls": {
+      "path": ".build/everest55-native-controls.json",
+      "sha256": "27a0f9da112836b9eb912022cdbb65e88050c85fe51f42f1a4754d762c6a0f68",
+      "status": "PASS_EVEREST55_NATIVE_COMPILE_CONTROLS"
+    },
+    "production_compilation": {
+      "path": ".build/everest6642-production-compile-a/receipt.json",
+      "sha256": "a8cd6d8fa58d5b6701063e8bc1e9b9b54567f015287243c63d82c7e870e7a257",
+      "status": "PASS_PRODUCTION_IOS_LAUNCHER_COMPILE"
+    },
+    "native_profiles": {
+      "path": ".build/everest55-profiles-b/receipt.json",
+      "sha256": "117eb81b40c74cd2a1f87fc5624af066288c2e7a07bdcca155b28e165b018487",
+      "status": "PASS_PUBLIC_NATIVE_PROFILE_CHECKS"
+    },
+    "early_managed_auditor": {
+      "path": ".build/everest55-auditor-compile/receipt.json",
+      "sha256": "a4db89c85105406746503112b22743e6000ec7ab84d26973c6d78ef0f387b3c6",
+      "status": "PASS_EARLY_COMPILED_AUDITOR_OLD_VERSION_CONTROL"
+    },
+    "sdk_only_public_audit_tools": {
+      "path": ".build/everest55-audit-sdk/receipt.json",
+      "sha256": "29cdcecc6990bee90fdb4082521297f38a0f60c48e85271de7a11a7fbbd12303",
+      "status": "PASS_SDK_ONLY_PUBLIC_AUDIT_TOOLS"
+    },
+    "stopped_homebrew_install": {
+      "path": ".build/everest55-tools/receipt.json",
+      "sha256": "6d85cb059e80f4fd8f34087ef48546a3f329052c92f3817b5d418ad006127fb8",
+      "status": "STOPPED_NO_MONO_INSTALLED"
+    }
+  },
+  "pending": {
+    "fresh_hosted_managed_build": true,
+    "fresh_hosted_native_runtime_build": true,
+    "full55_positive_metadata_audit_and_negative_controls": true,
+    "fresh_nlua_strong_name_verification": true,
+    "complete_unsigned_ipa": true,
+    "package_and_dependency_audits": true,
+    "exact_source_ref_workflow_hosted_attestations": true,
+    "physical55_jit": true,
+    "physical55_first_and_cached_preparation": true,
+    "physical55_mod_selection_and_gameplay": true,
+    "physical55_save_resume_quit_native_return": true,
+    "earlier_native_save_manager_ipad_and_sustained120_gates_remain_distinct": true
+  },
+  "retained_evidence": {
+    "build54_report": "docs/ios-jit/COPY_PICKER_BUILD_54.md",
+    "build54_ledger": "docs/ios-jit/COPY_PICKER_BUILD_54_EVIDENCE.json",
+    "scope": "Earlier original-ID Feather Development-signature game ZIP selection/staging only; no55 or new physical mod/gameplay/JIT acceptance."
+  },
+  "publication_identity": {
+    "owner_selected_repository_identity": "hmcneill46",
+    "repository_git_email_policy": "GitHub noreply",
+    "authenticated_repository_account": "hmcneill46",
+    "repository_only_collaborator": "hmcneill46",
+    "verification_source": "Parent task current repository/API check",
+    "identity_setting_alone_authorizes_publication": false
+  },
+  "limitations": {
+    "complete55_ipa_built": false,
+    "actual55_managed_payload_compiled": false,
+    "new55_game_or_adapter_executed": false,
+    "new55_device_jit_tested": false,
+    "new55_physical_gameplay_tested": false,
+    "device_mutation_dispatched": false,
+    "new55_tag_or_release_published": false,
+    "raw_private_evidence_in_public_source": false
+  },
+  "scope": "Draft local55 implementation/evidence record. Root will finalize hosted/build/package/physical statuses only from their own results."
+}

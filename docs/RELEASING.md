@@ -4,14 +4,13 @@
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current source recipe is [release/public54.json](../release/public54.json),
-version0.24.3/build54. It adds copy-based game/mod imports to the accepted build50
-launcher with exact53 signing adaptation, freshly compiled managed/native runtime
-and shortcut49. [Build54's report](ios-jit/COPY_PICKER_BUILD_54.md) distinguishes
-its checks from phone acceptance. The owner confirms54 game-ZIP import and
-explicitly requests public v0.24.3 Release publication with change notes on
-19 October2026. This authorizes the source/notes merge, version tag and existing
-tagged release workflow; the earlier trial-only restriction is superseded.
+The current development recipe is [release/public55.json](../release/public55.json),
+version0.25.0/build55. It updates actual Everest source to stable1.6642, retains
+the accepted build50 launcher and build54 Feather picker repair, and uses the
+same native/.NET/NuGet/FMOD/Shortcut49 pins. [Build55's report](ios-jit/EVEREST_6642_BUILD_55.md)
+distinguishes source/build checks from physical acceptance. The owner requests
+the upgrade and future pushes as `hmcneill46`; the new unsigned trial remains
+separate from choosing a public55 tag/Release. Published v0.24.3 is below.
 
 ## Published release: v0.24.3 —19 October2026
 

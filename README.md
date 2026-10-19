@@ -136,11 +136,16 @@ For development, start with [the current handoff](HANDOFF.md),
 
 ## Developers: build locally
 
+The current development source updates Everest to stable1.6642.0 in
+0.25.0/build55 while retaining build54's Feather import fix. Its validation and
+delivery are recorded in [the upgrade report](docs/ios-jit/EVEREST_6642_BUILD_55.md).
+The download above remains the published0.24.3 release.
+
 Use macOS, Python3.12 or later, CMake, Mono6.14.1 (including `sn`) and **Xcode26.6 /17F113**. Download your own
 **FMOD Engine1.10.09 iOS SDK** from [fmod.com](https://www.fmod.com/download), then:
 
 ```sh
-    python3 tools/build_release54.py --work .build/my-source-build \
+    python3 tools/build_release55.py --work .build/my-source-build \
   --output .build/my-source-build/output --fmod-sdk '/path/to/FMOD Programmers API'
 ```
 
