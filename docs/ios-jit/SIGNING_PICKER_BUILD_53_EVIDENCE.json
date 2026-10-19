@@ -16,7 +16,7 @@
     "livecontainer_managed": true
   },
   "checks": {
-    "python_tests": 66,
+    "python_tests": 67,
     "compatibility_host_scenarios": 12,
     "unsafe_host_output_path_controls": 4,
     "production_target": "arm64-apple-ios15.0",
@@ -60,8 +60,8 @@
     }
   },
   "python_log": {
-    "path": ".build/signing-picker53-python-final.log",
-    "sha256": "120a6d1915dd5e87432faebdd524c1f781f3c3d4ef30640269f51f23cf577bdf"
+    "path": ".build/signing-picker53-python-sdk-pin.log",
+    "sha256": "eddea8e4bc81cb1f46f3cc60e1872d1aa0a3f9f725a0c67d147a5fd4ac794c42"
   },
   "limitations": {
     "complete_ipa_built": false,
@@ -70,7 +70,7 @@
     "private_api_future_compatibility_guaranteed": false,
     "gameplay_or_jit_tested": false,
     "new_release_published": false,
-    "github_written": false,
+    "github_written": true,
     "signing_keys_used_by_fix": false,
     "missing_full_build_inputs": [
       "Mono 6.14.1 and sn",
@@ -82,5 +82,26 @@
     "https://github.com/claration/feather/issues/610#issuecomment-4182946719",
     "https://github.com/LiveContainer/LiveContainer/blob/9108ae624ea001f7d7696d48407f890b48fa2653/TweakLoader/DocumentPicker.m#L103"
   ],
-  "hosted_trial_authorization": "Owner explicitly approves commit/push and existing GitHub build for unsigned test IPA; no version tag or public Release."
+  "hosted_trial_authorization": "Owner explicitly approves commit/push and existing GitHub build for unsigned test IPA; no version tag or public Release.",
+  "hosted_trials": [
+    {
+      "run_id": 39266218357,
+      "source_commit": "1f2de6de055e200886a144baf617207fca7d30de",
+      "source_and_native_checks": "PASS",
+      "sdk_fetch": "STOPPED_BEFORE_AUTHENTICATION_PUBLIC_ASSET_PIN_CHANGE",
+      "complete_ipa_built": false
+    }
+  ],
+  "fmod_public_asset_review": {
+    "date": "2026-10-19",
+    "origin": "https://www.fmod.com",
+    "download_asset_sha256": "85fe802e316372e1a243b0785d62be6ce6c69edbb83e12a7a0508b282536137f",
+    "login_bundle_unchanged": true,
+    "observed_request_contract_matches": true,
+    "historical_download_body_available": false,
+    "probe_report": ".build/signing-picker53-hosted/fmod-probe-reviewed.json",
+    "probe_sha256": "6bb075e7e5b3d932ec6b0e74e3eb8fa6f02065a2f71edab61e0043ffd9cbc5ef",
+    "probe_authentication_attempted": false,
+    "sdk_pins_or_authentication_boundaries_changed": false
+  }
 }

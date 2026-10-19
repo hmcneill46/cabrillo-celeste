@@ -54,8 +54,11 @@ Read `docs/ios-jit/SIGNING_PICKER_BUILD_53.md` for behavior and validation limit
 
 The current source release manifest is `release/public53.json`; the recipe is
 `tools/build_release53.py` / `compile_release53.py`. Published52 and its builders
-remain immutable. No53 IPA, phone acceptance, commit, push, tag or release is
-claimed by these local source changes. This Mac lacks the licensed FMOD SDK and
+remain immutable. Source commit `1f2de6d` is pushed to `codex/actions-release`;
+no53 IPA, phone acceptance, tag or Release is claimed. The first hosted trial
+passes source/native checks and stops SDK acquisition before sign-in on FMOD's
+changed download-page pin. The independently reviewed pin is refreshed without
+changing SDK or authentication boundaries; see the53 report. This Mac lacks the licensed FMOD SDK and
 full runtime build tools; native device compilation and simulator controls are
 separate from a complete package build. After reviewing the completed local
 checks, the owner explicitly approves committing/pushing this53 fix and running

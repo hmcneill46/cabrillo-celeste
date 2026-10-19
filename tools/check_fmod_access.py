@@ -3,7 +3,8 @@
 
 `probe` needs no credentials. `check-account` asks privately in a real terminal,
 checks the exact pinned SDK in the authenticated catalogue, then logs out. This
-uses the website flow observed on 2026-09-30, not a promised public FMOD API.
+uses the website flow reviewed on 2026-09-30 and 2026-10-19, not a promised
+public FMOD API.
 """
 
 import argparse
@@ -30,7 +31,7 @@ FILENAME = "fmodstudioapi11009ios-installer.dmg"
 # Re-review the sign-in/download implementation if these change.
 WEBSITE_ASSETS = {
     "/bundle.js": "358709ab352db862f028436d555e069251c6b463898019799b311b00084ce6f5",
-    "/download.chunk.js": "3bd5c44d2dd377aedd4d2c917894c2df164988aa7aaa4cea9f6bc2ba05e9340f",
+    "/download.chunk.js": "85fe802e316372e1a243b0785d62be6ce6c69edbb83e12a7a0508b282536137f",
 }
 API_PATHS = {"/api-login", "/api-downloads", "/api-logout", "/api-get-download-link"}
 MAX_RESPONSE = 8 * 1024 * 1024

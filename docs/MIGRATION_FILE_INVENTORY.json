@@ -25,13 +25,13 @@
     },
     "AGENTS.md": {
       "reason": "Build53 signing-picker development scope, published52 preservation and owner approval boundaries",
-      "sha256": "53ee73ac1ceb7e1e0ae1c7f1790f2f6a673a3f964397ee2897c7ed3320e15024",
-      "bytes": 40085
+      "sha256": "9c43c6738773c06823c9e71f835d3884df0333df559e53d219bff62ef5dd595f",
+      "bytes": 40345
     },
     "HANDOFF.md": {
       "reason": "Build53 repair evidence, current build recipe, missing full package inputs and pending unchanged-ID phone gate",
-      "sha256": "019ae3d244cccb22c0d779020a47e91b3dfaa651cd0b961605622aed082feeda",
-      "bytes": 101088
+      "sha256": "423545145e75b8f0281fdcf7c0a74afa83b145ebd24c144a1d9c2f602120b2b6",
+      "bytes": 101646
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -860,13 +860,13 @@
     },
     "docs/ios-jit/SIGNING_PICKER_BUILD_53.md": {
       "reason": "Build53 signing-picker behavior, sanitized local check evidence and pending IPA/device acceptance",
-      "sha256": "0baf34e4fa4d001f2c67d63be5b69618452afa479258f22bdd1d4d346d8510f7",
-      "bytes": 7659
+      "sha256": "58aacb988cbfd9d621f9b0d50d40b722bae4a21189563d9b825176d6e7b9db3b",
+      "bytes": 8908
     },
     "docs/ios-jit/SIGNING_PICKER_BUILD_53_EVIDENCE.json": {
       "reason": "Build53 signing-picker behavior, sanitized local check evidence and pending IPA/device acceptance",
-      "sha256": "16614e60ec3c00639b799ab2d9db0a8d6cc7dc5dd127802ddd2968f469682310",
-      "bytes": 3630
+      "sha256": "dcba0cfbc24c9c82b9bad938efd61aae59c50605a315aaa94dc45a8f5222ac26",
+      "bytes": 4518
     },
     "docs/ios-jit/SJ_HELPERS_BUILD_15.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
@@ -25886,8 +25886,8 @@
     },
     "tools/check_fmod_access.py": {
       "reason": "FMOD website preflight, hidden or explicit environment credentials and temporary account-session validation",
-      "sha256": "e030b071aeddcd885683f23dd423874b163598e7e170f84e676e1b9b3b232e87",
-      "bytes": 12430
+      "sha256": "09bca9319af114fb481d69c852342a301ca0c4a0573217ea2d28acdf9b2a6a3c",
+      "bytes": 12445
     },
     "tools/check_loading_assembly.py": {
       "reason": "Independent loading build/import validation, private host integration, simulator presentation or package rejection check",
@@ -26206,8 +26206,8 @@
     },
     "tools/tests/test_fmod_access.py": {
       "reason": "Synthetic credential, authentication-boundary, catalogue-selection, logout and secret-redaction controls",
-      "sha256": "71524aa61e45aea3d4e09d3cace53a831d65028031adc5a3ca427bb2a995b455",
-      "bytes": 11480
+      "sha256": "22cae654a99e11575e1529a734220e95a6f570ae47a7a2ecacfd38b6defbfee3",
+      "bytes": 12356
     },
     "tools/tests/test_fmod_fetch.py": {
       "reason": "Synthetic SDK transport, checksum, private-output, cleanup and credential-isolation controls",

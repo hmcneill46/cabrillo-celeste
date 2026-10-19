@@ -2,7 +2,7 @@
 
 19 October2026. Version0.24.2/build53 adds automatic document-picker compatibility
 for standalone sideloading profiles whose explicit application ID differs from
-Cabrillo's bundle ID. The implementation is local source work; a complete53 IPA
+Cabrillo's bundle ID. The source is committed and pushed; a complete53 IPA
 and a phone run with the unchanged bundle ID remain pending.
 
 ## Confirmed problem
@@ -61,7 +61,7 @@ Final local results:
 
 | Check | Result and scope |
 | --- | --- |
-| Python build/release controls |66 pass, including new53 source-selection rejection cases. |
+| Python build/release controls |67 pass, including new53 source-selection rejection cases and a changed download-page rejection before environment credentials are read. |
 | Compatibility policy/runtime |12 host scenarios pass, including malformed inputs, absent APIs, retry, prior hooks, inherited methods and LiveContainer bypass. |
 | Production device compilation |Actual launcher Swift/vendor sources and53 main/helper compile for arm64/iOS15 with the real generated Swift bridge; production test seam absent. |
 | Actual Apple Files UI |Two iOS26.5 simulator tests pass ZIP tap/delegate/staging, exact bytes/hash, unchanged source, cancel and repeat. |
@@ -121,3 +121,22 @@ explicitly authorizes committing/pushing this fix and running the existing
 hosted workflow for an unsigned test IPA. No tag or public Release is authorized;
 the local results above do not establish a package or phone pass. Keep game
 content, SDK components and signing credentials outside source/build outputs.
+
+## Hosted trial preparation
+
+Commit `1f2de6de055e200886a144baf617207fca7d30de` is pushed to the trusted
+`codex/actions-release` branch. [The first trial](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39266218357)
+passes source and native controls, including the new production picker compile.
+SDK acquisition stops before sign-in because FMOD's public download-page asset
+changed. Independent inspection of the official public JavaScript confirms the
+login bundle is byte-identical and the current catalogue/download-link requests
+still match the helper. The previous download chunk body is unavailable, so no
+claim is made about the precise changed lines.
+
+Only the reviewed `download.chunk.js` SHA256 pin changes to
+`85fe802e316372e1a243b0785d62be6ce6c69edbb83e12a7a0508b282536137f`.
+The credential-free probe passes the expected HTTP401 sign-in boundary. SDK
+version/archive/library pins, origin/redirect restrictions and credential handling
+remain unchanged. A new synthetic regression rejects a changed second asset
+before reading environment credentials. The next hosted trial still requires
+the complete source/package and independent attestation gates.

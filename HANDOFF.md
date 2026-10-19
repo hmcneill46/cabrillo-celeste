@@ -46,6 +46,14 @@ not a version tag, public Release or device mutation. Hosted results remain
 separate from phone acceptance. Preserve all older runtime/save/lifecycle/iPad/
 120Hz acceptance gates.
 
+Source commit `1f2de6d` is now pushed to `codex/actions-release`. Hosted trial
+39266218357 passes source/native checks but stops SDK acquisition before sign-in
+on a changed public FMOD download-page pin. Independent public-source review
+confirms the helper's request contract still matches; only that reviewed asset
+hash is refreshed. A credential-free probe and67 Python controls pass. SDK and
+library pins/authentication restrictions remain exact; retry the unsigned trial.
+See the53 report/ledger for this preparation, separate from package/phone proof.
+
 ## Published v0.24.1 / build52 —30 September
 
 The owner tested the verified Actions trial kit, reports that everything looks
