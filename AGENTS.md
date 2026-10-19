@@ -62,9 +62,20 @@ together. The preparation recipe automatically creates a new cache generation
 while retaining the original game identity/files, previous generations and saves.
 
 Read `docs/ios-jit/EVEREST_6642_BUILD_55.md` and its ledger for current checks.
-Local source and iOS compilation pass; the full hosted managed/native package
-and device gameplay/JIT remain separate gates. No55 public version tag or Release
-is requested yet. Preserve published54 and every earlier scoped device result.
+Local89 Python controls,119 save/profile checks and actual iOS compilation pass.
+[Hosted trial39320628794](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794)
+at `e1e78a3511df5642537a75d86ae46e98e0411f34` now passes fresh public managed/native
+compilation, official SDK acquisition, package audits, all five attestations and
+separate Ubuntu verification. Release publication is skipped. The independently
+downloaded kit in `artifacts/cabrillo-build55-hosted` verifies all261 captured
+source hashes,151 dependencies (only Everest changes), original bundle ID/copy-import metadata
+and signed49 Shortcuts. Its actual199-DLL metadata passes434 checks, with the
+independent report exactly matching the hosted audit. IPA bytes:18,765,294;
+SHA256 `abd79be029902c301778f8b11044484d00cedc07988f14b3243cf42cde8b04cd`.
+All261 captured55 inputs/kit are frozen; use56 for new app implementation.
+Draft [PR6](https://github.com/hmcneill46/cabrillo-celeste/pull/6) retains the
+source trial; no55 tag/Release or physical JIT/gameplay is claimed. Preserve
+published54 and every earlier scoped device result.
 
 ## Copy-based Files imports —19 October, build54 correction
 

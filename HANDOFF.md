@@ -1,6 +1,7 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated19 October for copy-based Files imports and v0.24.3 publication,
+Written 14 September 2026; updated19 October for the verified Everest6642/build55 trial,
+copy-based Files imports and v0.24.3 publication,
 following30 September FMOD clarification after source publication and USB shortcut testing,
 iOS15/iPad support, the
 build36 Motion Smoothing correction, build37 Everest upgrade and build38 owned-game
@@ -21,16 +22,38 @@ exact. Retain the Feather import fix, original bundle ID, JIT/native pins and
 Shortcut49. Original game source identity stays unchanged; new patch-tool hashes
 select a new prepared-code generation without replacing saves or originals.
 
-Local89 Python controls and the actual arm64/iOS15 production compile pass.
-Save/profile controls and full hosted managed/native compilation/package checks
-are tracked separately in `docs/ios-jit/EVEREST_6642_BUILD_55.md` and its ledger.
-This is active55 work, with no new physical gameplay/JIT or public Release yet.
-Keep the published54 kit and all earlier device acceptance distinct.
+Local89 Python controls,119 native save/profile checks and the actual arm64/iOS15
+production compile pass. [Hosted trial39320628794](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794)
+passes all five active jobs at `e1e78a3511df5642537a75d86ae46e98e0411f34`:
+fresh public-source managed/native compilation, official SDK acquisition, full
+package audit, all five attestations and independent Ubuntu verification. The
+publication job is skipped. The [five-file test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/artifacts/12221245338)
+requires GitHub sign-in and expires2 November2026 at20:48:01 UTC.
+
+The independent download at `artifacts/cabrillo-build55-hosted` verifies all261
+captured app inputs,151 dependencies with only the Everest source hash changed,
+original bundle ID/copy-import metadata and signed49 Shortcuts. The actual199
+packaged managed DLLs pass434 metadata checks; the local audit report exactly
+matches the fresh hosted report. Wrong compiled version and stale tool-hash
+controls pass. Actual55 and published54 recipes retain identical original input
+pins/source identity, with a new preparation generation. No game, adapter,
+native runtime or device JIT was executed by those metadata checks.
+
+IPA bytes:18,765,294; SHA256:
+`abd79be029902c301778f8b11044484d00cedc07988f14b3243cf42cde8b04cd`.
+Read `docs/ios-jit/EVEREST_6642_BUILD_55.md` and its ledger for exact receipts.
+All261 captured55 app inputs and the kit are frozen; next implementation56.
+Draft [PR6](https://github.com/hmcneill46/cabrillo-celeste/pull/6) contains the
+source upgrade. No55 tag/Release or new physical game/JIT result is claimed.
+First/cached preparation, mods, gameplay/save/resume/normal Quit/native return
+remain device gates. Keep published54 and all earlier device evidence distinct.
 
 The owner also asks pushes/commits to use `hmcneill46`. The authenticated account
 is confirmed and repository-local author/committer use
 `57508980+hmcneill46@users.noreply.github.com`. Git's prior automatic name/email
 did not grant repository access; do not rewrite published release history.
+The source commit's author and committer both resolve to `hmcneill46` in GitHub's
+API. Repository-local identity changes leave global Git settings unchanged.
 
 ## Copy-based Files imports —19 October, build54 repair
 

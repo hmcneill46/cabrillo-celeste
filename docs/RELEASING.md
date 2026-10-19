@@ -12,6 +12,35 @@ distinguishes source/build checks from physical acceptance. The owner requests
 the upgrade and future pushes as `hmcneill46`; the new unsigned trial remains
 separate from choosing a public55 tag/Release. Published v0.24.3 is below.
 
+## Unsigned0.25.0/build55 trial —19 October2026
+
+[Run39320628794](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794)
+passes all five active jobs at source `e1e78a3511df5642537a75d86ae46e98e0411f34`,
+ref `refs/heads/codex/actions-release`, attempt1. Official SDK acquisition, fresh
+managed/native compilation, package audit, all five attestations and separate
+Ubuntu verification pass. The publication job is skipped; no55 version tag or
+Release is created. Source attribution resolves to `hmcneill46` for both author
+and committer.
+
+The [five-file test artifact](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/artifacts/12221245338)
+requires GitHub sign-in and expires2 November2026 at20:48:01 UTC. The independently
+downloaded kit in `artifacts/cabrillo-build55-hosted` verifies checksums,261
+captured app source hashes,151 dependency hashes with only Everest changed,
+original bundle ID, copy imports and signed49 Shortcuts. All five attestations
+verify the exact source/ref/workflow and hosted run identity. Its199 compiled
+managed DLLs pass434 metadata checks, with a byte-identical independent/hosted
+audit report. Hosted wrong-version and stale-recipe controls pass. Original game
+input pins/source ID are identical to published54, while preparation tool hashes
+select a new cache generation.
+
+IPA bytes:18,765,294. SHA256:
+`abd79be029902c301778f8b11044484d00cedc07988f14b3243cf42cde8b04cd`.
+Freeze all261 captured app inputs and this kit; use56 for new implementation.
+These checks execute the metadata auditor, not the game or iOS JIT. First/cached
+preparation, mods and physical gameplay/save/lifecycle acceptance remain pending.
+See [the build55 report](ios-jit/EVEREST_6642_BUILD_55.md) and
+[draft PR6](https://github.com/hmcneill46/cabrillo-celeste/pull/6).
+
 ## Published release: v0.24.3 —19 October2026
 
 [Download the public IPA](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.24.3/Cabrillo-0.24.3-unsigned.ipa) from the [Release page](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3).

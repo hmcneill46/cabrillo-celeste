@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "date": "2026-10-19",
-  "recorded_utc": "2026-10-19T20:32:16.923360+00:00",
+  "recorded_utc": "2026-10-19T20:56:03.503858+00:00",
   "version": "0.25.0",
   "build_number": "55",
   "build_id": "launcher-everest6642-20261019-55",
-  "status": "PASS_LOCAL_SOURCE_IDENTITY_NATIVE_PROFILE_AND_AUDITOR_CONTROLS_HOSTED_AND_DEVICE_PENDING",
+  "status": "PASS_HOSTED_BUILD55_KIT_SOURCE_METADATA_SIGNATURE_AND_ATTESTATIONS_DEVICE_PENDING",
   "upstream": {
     "repository": "https://github.com/EverestAPI/Everest",
     "channel": "stable",
@@ -85,8 +85,24 @@
       "manual_cache_deletion_required": false,
       "old_published_generations_retained": true,
       "saves_retained_by_existing_store": true,
-      "resulting55_recipe_audited": false,
-      "actual55_first_cached_transition_tested": false
+      "resulting55_recipe_audited": true,
+      "actual55_first_cached_transition_tested": false,
+      "original_input_pins_unchanged": true,
+      "published54_recipe_sha256": "ea7ced9b2c8cec90ff9f33d519f7f93a03fa3cb983813f3939f2e31505346af4",
+      "resulting55_recipe_sha256": "9e0cef654c0845c5246ea951ead3557a83c8c6641a81bf2aacd0dba01442c73e",
+      "new_recipe_generation": true,
+      "compiled_tools_with_changed_hashes": [
+        "Celeste.Mod.mm.dll",
+        "FNA.dll",
+        "MonoMod.Core.dll",
+        "MonoMod.Iced.dll",
+        "MonoMod.Patcher.dll",
+        "MonoMod.RuntimeDetour.HookGen.dll",
+        "MonoMod.RuntimeDetour.dll",
+        "MonoMod.Utils.dll",
+        "NETCoreifier.dll"
+      ],
+      "other_dependency_source_pins_unchanged": true
     },
     "retained_build54_app_input_count": 253,
     "all253_retained_build54_inputs_exact": true,
@@ -96,7 +112,10 @@
     "signed_shortcut_revision": 49,
     "new_jit_entitlements_or_certificate_only_mode": false,
     "frozen_prior_sources_mutated": false,
-    "retained_build54_source_pin_map_canonicalization": "SHA256 of UTF-8 json.dumps(map, sort_keys=True, separators=(',', ':')) with no trailing newline"
+    "retained_build54_source_pin_map_canonicalization": "SHA256 of UTF-8 json.dumps(map, sort_keys=True, separators=(',', ':')) with no trailing newline",
+    "captured55_app_input_count": 261,
+    "captured55_inputs_frozen": true,
+    "next_app_implementation_build": 56
   },
   "checks": {
     "python_controls": {
@@ -152,7 +171,7 @@
         "tools/check_everest6642_managed.py",
         "experiments/ios-jit/launcher-everest6642/tests/Everest6642Audit.cs"
       ],
-      "scope": "Read-only source review against pinned6642 source and builder integration; actual positive55 metadata paths await the hosted payload.",
+      "scope": "Read-only source review against pinned6642 source and builder integration before the hosted build; the completed positive55 metadata audit is recorded separately below.",
       "observations": [
         "Compiled VersionString, adapter constants/module strings, feature metadata and mirror signature checks match pinned upstream source",
         "Original pins, canonical source_id, exact preparation tool set/hashes are checked",
@@ -164,6 +183,206 @@
         "tools/check_everest6642_managed.py": "c20a9912999a9627cee7681dafd1b3b433928f61a41ea59812e686f80132e639",
         "experiments/ios-jit/launcher-everest6642/tests/Everest6642Audit.cs": "cc9017b2cbcea7b30f1dcc224f9760a73ad8c68a440aef463b0a5d2810981222"
       }
+    },
+    "hosted_trial": {
+      "status": "PASS",
+      "run_id": 39320628794,
+      "run_attempt": 1,
+      "url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794",
+      "event": "workflow_dispatch",
+      "source_commit": "e1e78a3511df5642537a75d86ae46e98e0411f34",
+      "source_ref": "refs/heads/codex/actions-release",
+      "completed_utc": "2026-10-19T20:48:33Z",
+      "publish": false,
+      "jobs": [
+        {
+          "name": "Validate the selected source and publication mode",
+          "conclusion": "success",
+          "url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/job/118293428876"
+        },
+        {
+          "name": "checks / Source inventory and release controls",
+          "conclusion": "success",
+          "url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/job/118293492445"
+        },
+        {
+          "name": "checks / Native saves and shortcut checks",
+          "conclusion": "success",
+          "url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/job/118293492588"
+        },
+        {
+          "name": "Build and attest an eligible public IPA",
+          "conclusion": "success",
+          "url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/job/118295702513"
+        },
+        {
+          "name": "Independently verify artifact attestations",
+          "conclusion": "success",
+          "url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/job/118299282134"
+        },
+        {
+          "name": "Verify provenance and publish the GitHub Release",
+          "conclusion": "skipped",
+          "url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/job/118299487167"
+        }
+      ],
+      "active_jobs_passed": 5,
+      "publisher": "SKIPPED",
+      "fresh_managed_payload_compiled": true,
+      "fresh_native_runtime_compiled": true,
+      "toolchain": {
+        "xcode": "26.6",
+        "xcode_build": "17F113",
+        "iphoneos_sdk": "26.5",
+        "minimum_ios": "15.0",
+        "mono_build_tool": "Mono JIT compiler version 6.14.1 (tarball Tue Apr 29 17:43:02 UTC 2025)",
+        "strong_name_tool_sha256": "08aba1fde451d10af696ea0ce14717460eada05b30af9fc767e5ca5a76a810ac",
+        "cmake": "cmake version 4.4.4",
+        "python": "3.12.10"
+      },
+      "official_pinned_fmod_acquisition_passed": true,
+      "temporary_licensed_sdk_inputs_removed": true,
+      "five_file_artifact_allowlist_passed": true,
+      "sdk_archives_build_inputs_signing_credentials_and_original_game_files_excluded": true,
+      "artifact": {
+        "id": 12221245338,
+        "name": "public-ipa-release",
+        "bytes": 18545987,
+        "created_utc": "2026-10-19T20:48:03Z",
+        "expires_utc": "2026-11-02T20:48:01Z",
+        "url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/artifacts/12221245338"
+      },
+      "kit_path": "artifacts/cabrillo-build55-hosted",
+      "kit_files": {
+        "BUILD_PROVENANCE.json": {
+          "bytes": 107853,
+          "sha256": "8bf9c834515f4d167df5c124a26a8fcc4527e12d050c924d8ca75214ecce8fd8"
+        },
+        "Cabrillo-0.25.0-unsigned.ipa": {
+          "bytes": 18765294,
+          "sha256": "abd79be029902c301778f8b11044484d00cedc07988f14b3243cf42cde8b04cd"
+        },
+        "PACKAGE_AUDIT.json": {
+          "bytes": 427,
+          "sha256": "d23da43e2a0fd4de0dcde5d91243f0d8c7465c620a5227123016d06196f9939f"
+        },
+        "RELEASE_NOTES.md": {
+          "bytes": 1436,
+          "sha256": "f9aa0a3e8ca07ce8f3de0d990187134aba70fa11aa891a1fb62bf34c8a791a0a"
+        },
+        "SHA256SUMS": {
+          "bytes": 351,
+          "sha256": "fc984d760c0b3436af235734e3d80d464ebb8e792f3a145539ae7d473afd2c0f"
+        }
+      }
+    },
+    "actual55_compiled_managed_payload": {
+      "status": "PASS_BUILD55_COMPILED_MANAGED_PAYLOAD",
+      "metadata_report_status": "PASS_EVEREST6642_COMPILED_MANAGED_AUDIT",
+      "checks": 434,
+      "managed_assemblies": 199,
+      "version_string": "1.6642.0-cjit-5abd787",
+      "everest_source_commit": "5abd7876821223c20711c1844a5187321d6e904c",
+      "runtime_manifest_sha256": "47ac6860ade5fb91acc9bd37d654c18c7bcd6679920eb817950c5880d3a1f359",
+      "managed_receipt_sha256": "63ef33c919d08f94dc1dedf328b77fefd2ec036239ce0eedcf638988c16c534a",
+      "input_receipt_sha256": "59c8bb2321def8aa8ad40fb23d594dbecd6363a5d86fe267f81b7d7c31c5cb1a",
+      "audit_report_sha256": "cfa519b51ac67044201731c7c0f57dfd10630381552d764ab578e6bf6083e2fd",
+      "negative_controls_passed": [
+        "wrong_compiled_everest_version",
+        "stale_preparation_tool_hash"
+      ],
+      "compiled_adapter_and_native_planning_identity_agree": true,
+      "teleport_trigger_menu_search_and_new_mirror_signature_verified": true,
+      "original_source_and_exact_preparation_tool_pins_verified": true,
+      "flat_dll_payload_without_game_assemblies_verified": true,
+      "game_or_adapter_executed": false,
+      "native_runtime_executed": false
+    },
+    "independent_downloaded_kit": {
+      "status": "PASS_INDEPENDENT_DOWNLOADED_BUILD55_KIT",
+      "verified_at_utc": "2026-10-19T20:49:16.273522+00:00",
+      "source_files_verified": 261,
+      "preserved53_source_files": 254,
+      "preserved54_source_files": 253,
+      "dependency_hashes_verified": 151,
+      "changed_dependencies": [
+        "Everest"
+      ],
+      "original_bundle_identifier_preserved": true,
+      "copy_imports_verified": true,
+      "production_picker_symbol_present": true,
+      "test_seam_absent": true,
+      "signed49_shortcuts_verified": true,
+      "fresh_managed_audit_receipt_bound": true,
+      "kit_allowlist_checksums_and_crc_verified": true,
+      "official_sdk_provenance_verified": true,
+      "static_native_symbol_inspection_only": true,
+      "game_or_adapter_executed": false,
+      "native_runtime_executed": false,
+      "ios_jit_executed": false,
+      "physical_device_tested": false,
+      "kit_or_source_mutations": false,
+      "local_packaged_metadata_audit": {
+        "status": "PASS_EVEREST6642_COMPILED_MANAGED_AUDIT",
+        "checks": 434,
+        "managed_assemblies": 199,
+        "report_path": ".build/everest55-hosted/packaged-managed-audit.json",
+        "report_sha256": "cfa519b51ac67044201731c7c0f57dfd10630381552d764ab578e6bf6083e2fd",
+        "exact_hosted_audit_report_match": true,
+        "auditor_sha256": "e5366246770d1b4f11c04486b08a0a66c591da9105d16362523dafe0810e14ad",
+        "sdk_version": "8.0.422",
+        "cecil_sha256": "e3d33263117ffe94550abb1099dc75eb501b7ea9622a93a880decb992dfde7e7"
+      }
+    },
+    "fresh_nlua_strong_name": {
+      "status": "PASS_BUILD55_NLUA_CRYPTOGRAPHIC_STRONG_NAME",
+      "verified_at_utc": "2026-10-19T20:53:00.866481+00:00",
+      "assembly_sha256": "f4fd0bfb1740b2bae4ae44b1336ce78d6b40d86c3f2b1865a8e2ed8c094b3052",
+      "assembly_bytes": 93696,
+      "assembly_name": "NLua",
+      "assembly_version": "1.4.1.0",
+      "algorithm": "RSA PKCS#1 v1.5 / SHA-1 (CLI strong-name format)",
+      "rsa_bits": 1024,
+      "public_exponent": 65537,
+      "public_key_token": "6a194c04b9c89217",
+      "signature_bytes": 128,
+      "full_rsa_encoded_message_matches": true,
+      "strict_pkcs1_padding_and_digest_info_verified": true,
+      "negative_controls": {
+        "covered_byte_tamper_rejected": true,
+        "signature_byte_tamper_rejected": true
+      },
+      "same_nlua_bytes_as_published54": false,
+      "published54_nlua_sha256": "8e76b8eb919a84f7e91e18d79a7098eda830425021713847ad0153771cff1591",
+      "metadata_reader_sdk": "8.0.422",
+      "target_assembly_loaded_or_executed": false,
+      "game_or_adapter_executed": false,
+      "native_runtime_executed": false,
+      "packages_or_mono_installed": false,
+      "source_or_kit_mutated": false,
+      "physical_device_tested": false,
+      "implementation_references": [
+        "https://source.dot.net/Microsoft.DotNet.StrongName/Utils.cs.html",
+        "https://source.dot.net/Microsoft.DotNet.StrongName/Verification.cs.html",
+        "https://github.com/mono/mono/blob/main/mcs/class/Mono.Security/Mono.Security/StrongName.cs"
+      ]
+    },
+    "all_five_attestations": {
+      "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS",
+      "verified_utc": "2026-10-19T20:49:31.634991+00:00",
+      "repository": "hmcneill46/cabrillo-celeste",
+      "source_digest": "e1e78a3511df5642537a75d86ae46e98e0411f34",
+      "source_ref": "refs/heads/codex/actions-release",
+      "signer_workflow": "hmcneill46/cabrillo-celeste/.github/workflows/release.yml",
+      "deny_self_hosted_runners": true,
+      "expected_run_id": 39320628794,
+      "expected_run_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794",
+      "expected_run_attempt": 1,
+      "kit_unchanged": true,
+      "all_observed_run_identities_match": true,
+      "verifier_sha256": "fd2c6632b731ee950a5beac4682430c85f47c6d4a76590a2c156adb9c5761d6c",
+      "verified_files": 5,
+      "cli_and_parsed_subject_certificate_statement_checks_passed": true
     }
   },
   "receipts": {
@@ -201,16 +420,54 @@
       "path": ".build/everest55-tools/receipt.json",
       "sha256": "6d85cb059e80f4fd8f34087ef48546a3f329052c92f3817b5d418ad006127fb8",
       "status": "STOPPED_NO_MONO_INSTALLED"
+    },
+    "completed_hosted_run": {
+      "path": ".build/everest55-hosted/completed-run.json",
+      "sha256": "19969cc74248a87f6bd20b33c2e1a143aba581f48ec1df7300991a17060cb6fa",
+      "status": "completed"
+    },
+    "hosted_artifact_metadata": {
+      "path": ".build/everest55-hosted/artifacts.json",
+      "sha256": "ce54bcf0d9a280c9785de9c8ac71d05d48a86ff37e496c90d56291d5070f938d"
+    },
+    "downloaded_kit": {
+      "path": ".build/everest55-hosted/download-verification.json",
+      "sha256": "e246ad4b7729c9c089ad780421b0eb3a0a61b0cf78c6ef0a122a3ac4b1dbd3b1",
+      "status": "PASS_INDEPENDENT_DOWNLOADED_BUILD55_KIT"
+    },
+    "packaged_managed_metadata": {
+      "path": ".build/everest55-hosted/packaged-managed-audit.json",
+      "sha256": "cfa519b51ac67044201731c7c0f57dfd10630381552d764ab578e6bf6083e2fd",
+      "status": "PASS_EVEREST6642_COMPILED_MANAGED_AUDIT"
+    },
+    "all_five_attestations": {
+      "path": ".build/everest55-hosted/attestations/receipt.json",
+      "sha256": "e04f272440fef2c6ac8f8a800c42bc5d3dbdff5a6d95d67e704c18576607f541",
+      "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS"
+    },
+    "fresh_nlua_strong_name": {
+      "path": ".build/everest55-hosted/nlua-strong-name/receipt.json",
+      "sha256": "3ddf2a2b8e1a46bb9bfe26522e50c784bf79c22d01395a8a0b26c0fa9b77c661",
+      "status": "PASS_BUILD55_NLUA_CRYPTOGRAPHIC_STRONG_NAME"
+    },
+    "source_identity": {
+      "path": ".build/everest55-publication/source-identity.json",
+      "sha256": "148ccbbf91f518c7011019d867814a1445cb9fcc30720ae7cf71bb6bec2acbee",
+      "status": "PASS_GITHUB_COMMIT_ATTRIBUTION"
+    },
+    "hosted_build_provenance": {
+      "path": "artifacts/cabrillo-build55-hosted/BUILD_PROVENANCE.json",
+      "sha256": "8bf9c834515f4d167df5c124a26a8fcc4527e12d050c924d8ca75214ecce8fd8"
     }
   },
   "pending": {
-    "fresh_hosted_managed_build": true,
-    "fresh_hosted_native_runtime_build": true,
-    "full55_positive_metadata_audit_and_negative_controls": true,
-    "fresh_nlua_strong_name_verification": true,
-    "complete_unsigned_ipa": true,
-    "package_and_dependency_audits": true,
-    "exact_source_ref_workflow_hosted_attestations": true,
+    "fresh_hosted_managed_build": false,
+    "fresh_hosted_native_runtime_build": false,
+    "full55_positive_metadata_audit_and_negative_controls": false,
+    "fresh_nlua_strong_name_verification": false,
+    "complete_unsigned_ipa": false,
+    "package_and_dependency_audits": false,
+    "exact_source_ref_workflow_hosted_attestations": false,
     "physical55_jit": true,
     "physical55_first_and_cached_preparation": true,
     "physical55_mod_selection_and_gameplay": true,
@@ -227,18 +484,28 @@
     "repository_git_email_policy": "GitHub noreply",
     "authenticated_repository_account": "hmcneill46",
     "repository_only_collaborator": "hmcneill46",
-    "verification_source": "Parent task current repository/API check",
-    "identity_setting_alone_authorizes_publication": false
+    "verification_source": "GitHub commit attribution API receipt for the actual hosted source commit",
+    "identity_setting_alone_authorizes_publication": false,
+    "hosted_source_commit": "e1e78a3511df5642537a75d86ae46e98e0411f34",
+    "verified_author_login": "hmcneill46",
+    "verified_committer_login": "hmcneill46",
+    "author_and_committer_email": "57508980+hmcneill46@users.noreply.github.com",
+    "source_identity_receipt": {
+      "path": ".build/everest55-publication/source-identity.json",
+      "sha256": "148ccbbf91f518c7011019d867814a1445cb9fcc30720ae7cf71bb6bec2acbee",
+      "status": "PASS_GITHUB_COMMIT_ATTRIBUTION"
+    }
   },
   "limitations": {
-    "complete55_ipa_built": false,
-    "actual55_managed_payload_compiled": false,
+    "complete55_ipa_built": true,
+    "actual55_managed_payload_compiled": true,
     "new55_game_or_adapter_executed": false,
     "new55_device_jit_tested": false,
     "new55_physical_gameplay_tested": false,
     "device_mutation_dispatched": false,
     "new55_tag_or_release_published": false,
-    "raw_private_evidence_in_public_source": false
+    "raw_private_evidence_in_public_source": false,
+    "fresh55_nlua_cryptographic_strong_name_verified": true
   },
-  "scope": "Draft local55 implementation/evidence record. Root will finalize hosted/build/package/physical statuses only from their own results."
+  "scope": "Completed unsigned55 hosted trial and independent downloaded-kit source/package/compiled-metadata/signature/attestation verification. Earlier local compile and harness scopes remain separate. All new55 physical runtime gates remain pending; no55 version tag or public Release."
 }

@@ -8,10 +8,13 @@ published17 October2026 at20:15:26 UTC, commit
 this stable release; it is not a prerelease. The commit's28 September date is
 separate from the release publication date.
 
-This is the local implementation and verification record. Fresh hosted managed
-and native compilation, a complete55 IPA, package audits and physical55 testing
-remain pending. No55 tag or Release has been published, and no device action was
-dispatched for this work. The current public fallback remains
+The complete unsigned55 trial is built and independently verified from source
+`e1e78a3511df5642537a75d86ae46e98e0411f34`.
+[Hosted run39320628794](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794)
+passes all five active jobs, including fresh managed/native compilation and
+separate Ubuntu attestation verification. Its publisher is skipped because
+`publish=false`. No55 tag or Release has been published, and no device action was
+dispatched. All physical55 gates remain pending. The public fallback remains
 [v0.24.3/build54](COPY_PICKER_BUILD_54.md).
 
 ## Upstream change and compatibility
@@ -67,9 +70,15 @@ generation; subsequent launches can reuse its verified result. Verified original
 game files retain the same `source_id`
 `4b665aa3b550b262100dbe59512d5736379af0a5c4e0e6c0c277f10bcc50a09c`.
 Old published generations and saves remain retained by the existing store.
-There is no cache-schema change or manual deletion step. This describes the
-retained implementation; the resulting55 recipe and device cache transition
-still need their hosted/runtime checks.
+There is no cache-schema change or manual deletion step. The actual downloaded55
+recipe is now audited: its hash/generation is
+`9e0cef654c0845c5246ea951ead3557a83c8c6641a81bf2aacd0dba01442c73e`,
+compared with54's
+`ea7ced9b2c8cec90ff9f33d519f7f93a03fa3cb983813f3939f2e31505346af4`.
+The original source/input pins are exact; nine compiled preparation-tool hashes
+differ. Source dependency pins other than Everest remain unchanged. This proves
+the recipe selects a new generation; actual first/cached preparation on a device
+is still untested.
 
 All253 captured build54 app inputs remain byte-identical. The55 lane adds new
 source/identity/recipe inputs rather than editing that frozen set. It retains
@@ -78,6 +87,8 @@ original bundle identifier, JIT/detach/recovery policy and signed49 Shortcuts.
 The accepted54 original-ID Feather game-ZIP selection/staging result is retained
 as earlier evidence; it does not establish55 gameplay, JIT or physical mod import.
 No new JIT entitlement or certificate-only JIT mode is introduced.
+All261 captured55 source inputs are now frozen in the downloaded provenance.
+Use56 for new app implementation and preserve the55 kit.
 
 ## Completed local checks
 
@@ -115,21 +126,77 @@ they do not run the new Everest payload or establish physical save acceptance.
 Receipt paths, hashes and precise scopes are in the
 [evidence ledger](EVEREST_6642_BUILD_55_EVIDENCE.json). The local SDK/Cecil tools
 are explicit public audit inputs only. Homebrew Mono setup was stopped before
-any package installation; fresh managed compilation and NLua strong-name signing
-remain assigned to the existing hosted macOS build.
+any local package installation. The completed hosted macOS build supplies
+Mono6.14.1 and its `sn` signing tool. Independent verification of the actual55
+NLua strong-name signature also passes as recorded below.
 
-## Remaining gates and publication identity
+## Completed hosted trial and downloaded kit
 
-Before calling55 a completed trial, require fresh pinned public-source managed
-and native compilation, the actual positive55 metadata audit and negative
-controls, NLua strong-name verification, complete IPA/package checks, and exact
-source/ref/workflow hosted attestations. Physical testing then needs the actual
-new Everest registration, first/cached preparation, the owner's mod selection,
-gameplay/save/resume/normal Quit and native return. Earlier save-manager, iPad
-and sustained120Hz gates remain separate. No local compile closes these gates.
+The full run uses `refs/heads/codex/actions-release`, attempt1, at the exact source
+commit above. Eligibility, source controls, native checks, fresh build/attestation
+and independent Ubuntu verification all pass. Official pinned FMOD acquisition,
+cleanup, package audits and the five-file allowlist pass. SDK archives/build
+inputs, signing credentials and original game files remain excluded from public
+outputs.
+
+The [five-file Actions artifact12221245338](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/artifacts/12221245338)
+expires2 November2026 at20:48:01 UTC. Its byte-verified local kit is
+`artifacts/cabrillo-build55-hosted`:
+
+- Unsigned IPA:18,765,294 bytes; SHA256
+  `abd79be029902c301778f8b11044484d00cedc07988f14b3243cf42cde8b04cd`.
+- `BUILD_PROVENANCE.json`: SHA256
+  `8bf9c834515f4d167df5c124a26a8fcc4527e12d050c924d8ca75214ecce8fd8`.
+
+The independent download check verifies all261 captured source hashes and151
+dependency inputs, with only Everest's source input changed. It confirms the
+original bundle ID, retained copy-import BuildInfo, production picker symbol,
+absence of the test seam and exact signed49 Shortcuts.
+
+The actual199-DLL payload passes434 compiled-metadata checks, including the
+injected1.6642 VersionString, adapter/native identity agreement, TeleportTrigger,
+MenuSearch metadata, new mirror API and preparation-tool hashes. The hosted
+checker also rejects an isolated wrong compiled version and stale recipe hash
+at their intended checks. An independent local metadata-only audit of the
+downloaded DLLs produces the exact hosted report hash
+`cfa519b51ac67044201731c7c0f57dfd10630381552d764ab578e6bf6083e2fd`.
+Neither metadata audit executes the game, adapter or native runtime.
+
+The actual55 `NLua.dll` independently passes strict RSA/PKCS1 v1.5 SHA1 CLI
+strong-name signature verification, with both covered-byte and signature-byte
+tamper controls rejected. This metadata-only check uses pinned SDK8 PEReader and
+Python RSA verification; it loads no payload assembly and installs no software.
+The DLL SHA256 is
+`f4fd0bfb1740b2bae4ae44b1336ce78d6b40d86c3f2b1865a8e2ed8c094b3052`,
+which differs from54. Receipt
+`.build/everest55-hosted/nlua-strong-name/receipt.json` has SHA256
+`3ddf2a2b8e1a46bb9bfe26522e50c784bf79c22d01395a8a0b26c0fa9b77c661`.
+
+All five downloaded files independently pass GitHub attestation verification.
+Parsed certificate/statement checks bind their actual bytes to the exact source,
+branch ref, `.github/workflows/release.yml`, GitHub-hosted runner and
+run39320628794/attempt1. The kit remains unchanged.
+
+| Verification | Ignored receipt | SHA256 |
+| --- | --- | --- |
+| Download, package and source checks | `.build/everest55-hosted/download-verification.json` | `e246ad4b7729c9c089ad780421b0eb3a0a61b0cf78c6ef0a122a3ac4b1dbd3b1` |
+| Independent packaged metadata | `.build/everest55-hosted/packaged-managed-audit.json` | `cfa519b51ac67044201731c7c0f57dfd10630381552d764ab578e6bf6083e2fd` |
+| All five exact-run attestations | `.build/everest55-hosted/attestations/receipt.json` | `e04f272440fef2c6ac8f8a800c42bc5d3dbdff5a6d95d67e704c18576607f541` |
+
+## Remaining physical gates and publication identity
+
+Physical testing still needs actual new Everest registration, first/cached
+preparation, the owner's mod selection, gameplay/save/resume/normal Quit and
+native return. Controller/touch MenuSearch and the new upstream behavior remain
+runtime checks. Earlier save-manager, iPad and sustained120Hz gates stay separate.
+Hosted compilation and metadata checks establish no physical55 acceptance.
 
 The owner selected `hmcneill46` with a GitHub noreply identity for repository
-attribution. The parent task verified the authenticated repository account and
-sole collaborator as `hmcneill46`. This identity setting does not itself publish
-source or authorize a new tag/Release. No private signing, pairing, game code,
-assets, SDK components or private logs belong in the public source/output.
+attribution. GitHub links both the author and committer of
+[the hosted source commit](https://github.com/hmcneill46/cabrillo-celeste/commit/e1e78a3511df5642537a75d86ae46e98e0411f34)
+to that account, with the selected noreply address. Receipt
+`.build/everest55-publication/source-identity.json` has SHA256
+`148ccbbf91f518c7011019d867814a1445cb9fcc30720ae7cf71bb6bec2acbee`.
+This completed source/trial publication creates no55 tag or public Release.
+No private signing, pairing, original game code/assets, SDK archives/build inputs
+or private logs belong in the public source/output.

@@ -24,9 +24,9 @@
       "bytes": 226
     },
     "AGENTS.md": {
-      "reason": "Build53 signing-picker development scope, published52 preservation and owner approval boundaries",
-      "sha256": "10b00d8dfa4370e4cde05337805063f94e2ca87a267d606a0057df930b7f09c7",
-      "bytes": 45183
+      "reason": "Build55 Everest trial and Git identity scope, frozen source preservation, prior acceptance and owner approval boundaries",
+      "sha256": "905c20192e2725c7380e1a87f129332223bfc38d13e3a220a8fb6c7f749a214f",
+      "bytes": 46056
     },
     "CHANGELOG.md": {
       "reason": "Public release change notes requested by owner for v0.24.3",
@@ -35,8 +35,8 @@
     },
     "HANDOFF.md": {
       "reason": "Build53 repair evidence, current build recipe, missing full package inputs and pending unchanged-ID phone gate",
-      "sha256": "d6897c694c11a8d90730afb8ad5d667e9752ab534674e5787654c19438258b8e",
-      "bytes": 108414
+      "sha256": "d10a01d740ade627dea4e2f36d2efb45c98cec8a9b6bf8a6bf92b15956ca71c7",
+      "bytes": 110064
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -46,8 +46,8 @@
     },
     "README.md": {
       "reason": "Current product/download overview and build53 signing-aware source recipe",
-      "sha256": "94352855eb486ecc9a44a877b92edd7cb454cd21459ad04f71b6d6447d69746d",
-      "bytes": 12713
+      "sha256": "2c5306b16cbd3d56434362569939d69ac7167e0bf7e21836988d4ce74b745aba",
+      "bytes": 13184
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -90,8 +90,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Current53 source workflow and separate immutable published52 release with licensed-input boundaries",
-      "sha256": "3de529543389e33b5177c9296afff673c9094318a7e96d31e6cd55103c62b425",
-      "bytes": 17339
+      "sha256": "7bd9fd3b793bc54dde08e19a736bf33f5f42f5d471296f96adae73a879c45d39",
+      "bytes": 19159
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -26606,13 +26606,13 @@
     },
     "docs/ios-jit/EVEREST_6642_BUILD_55.md": {
       "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
-      "sha256": "5a6311566296f6d120e94f3f640fd6e891b1ff589cfc5a280759efc7f0358305",
-      "bytes": 8338
+      "sha256": "e6e7c23381690b0a047cc153fa569a74da84f55beb4c6a7c461e35765bd72aae",
+      "bytes": 12427
     },
     "docs/ios-jit/EVEREST_6642_BUILD_55_EVIDENCE.json": {
       "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
-      "sha256": "94187f1b066efb6f615f9379a522f623e4f1bce18569197775d0053900a779a4",
-      "bytes": 11859
+      "sha256": "e5374be69f8ab9e9052893c725d86467a5062aa9ed12947b34fb459dfec63bf3",
+      "bytes": 24330
     },
     "experiments/ios-jit/launcher-everest6642/README.md": {
       "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
