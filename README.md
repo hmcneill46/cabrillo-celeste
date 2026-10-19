@@ -23,6 +23,12 @@ The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/a
 and verified all five attestations before publishing. Release assets remain
 available independently of the temporary Actions artifacts.
 
+Current source includes [build53's automatic Files picker signing repair](docs/ios-jit/SIGNING_PICKER_BUILD_53.md)
+for standalone installations with a different provisioning application ID, such
+as some Feather setups. Published0.24.1 predates this repair. Build53's complete
+IPA and unchanged-ID phone validation are pending; source tests alone do not
+update an installed app.
+
 You need **iOS15 or later, a compatible installation/JIT setup, and your own
 Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game
 code or original game assets. Cabrillo prepares your imported copy on its first
@@ -133,7 +139,7 @@ Use macOS, Python3.12 or later, CMake, Mono6.14.1 (including `sn`) and **Xcode26
 **FMOD Engine1.10.09 iOS SDK** from [fmod.com](https://www.fmod.com/download), then:
 
 ```sh
-python3 tools/build_release52.py --work .build/my-source-build \
+    python3 tools/build_release53.py --work .build/my-source-build \
   --output .build/my-source-build/output --fmod-sdk '/path/to/FMOD Programmers API'
 ```
 
@@ -152,6 +158,7 @@ reproduction commands remain documented separately.
 
 | Location | Reason it is here |
 | --- | --- |
+| `experiments/ios-jit/launcher-signing-picker` | Build53 automatic Documents UI host identity repair, over the frozen build50 source |
 | `experiments/ios-jit/launcher-owned-game` | Build38 source-built bootstrap and preparation of the user's original game |
 | `experiments/ios-jit/launcher-catalogue` | Accepted build28 native browser and preserved source |
 | `experiments/ios-jit/launcher-first-frame` | Build32 passive startup display and first-frame game handoff |
@@ -169,7 +176,7 @@ reproduction commands remain documented separately.
 | `.build`, `artifacts` | Ignored fresh build output, symbols, receipts and unsigned IPAs |
 
 Historical experiment builders retain their original paths as documentation.
-Use `tools/build_release52.py` for the current recipe and `tools/build.py` for
+Use `tools/build_release53.py` for the current recipe and `tools/build.py` for
 accepted28 reproduction. Historical tools are not a promise
 that every historical failed prototype can be rebuilt from the current capsule.
 The [file inventory](docs/MIGRATION_FILE_INVENTORY.json) records a reason and hash

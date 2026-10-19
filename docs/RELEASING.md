@@ -4,9 +4,13 @@
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current release recipe is [release/public52.json](../release/public52.json),
-version0.24.1/build52. It compiles the accepted build50 launcher source and freshly
-builds its managed and native runtime dependencies. It retains shortcut49.
+The current source recipe is [release/public53.json](../release/public53.json),
+version0.24.2/build53. It adds the signing-aware picker overlay to the accepted
+build50 launcher and freshly builds its managed/native runtime dependencies,
+retaining shortcut49. [Build53's report](ios-jit/SIGNING_PICKER_BUILD_53.md)
+distinguishes its native checks from the pending complete IPA and phone gate.
+The published0.24.1 release below remains unchanged; preparing a new source
+recipe does not authorize a tag, hosted run or publication.
 
 The build takes no Celeste game ZIP and no private compiled Cabrillo capsule.
 Players import their own original Celeste FNA1.4.0.0 files. The first game launch

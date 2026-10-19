@@ -1,12 +1,50 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated30 September for FMOD clarification after source publication and USB shortcut testing,
+Written 14 September 2026; updated19 October for the signing-aware Files picker,
+following30 September FMOD clarification after source publication and USB shortcut testing,
 iOS15/iPad support, the
 build36 Motion Smoothing correction, build37 Everest upgrade and build38 owned-game
 preparation, for a fresh development chat opened in
 `/Users/harrymcneill/Projects/Cabrillo`. Read this and [AGENTS.md](AGENTS.md) first.
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
+
+## Signing-aware Files picker —19 October, build53 source
+
+The owner installed standalone52 through Feather with the supplied Development
+profile. Its local ZIP appears normal but tapping never selects/imports; there
+is no Open button. They confirm Feather retained Cabrillo's original bundle ID.
+The private profile audit finds an explicit different application ID. The owner
+then confirms matching Feather's Identifier fixes selection and asks to remove
+that workaround for themselves and other users.
+
+Build53 /0.24.2 implements automatic Documents UI host-identifier compatibility
+without changing Cabrillo's bundle ID, files, runtime, JIT protocol or scripts.
+The new source overlay is `experiments/ios-jit/launcher-signing-picker`; all168
+accepted50 base files are locked in `release/app53/Dependencies.json`. Only the
+new main and compatibility module replace/add native implementation. Policy,
+production arm64 compilation and actual Apple picker/staging checks have
+separate receipts; see `docs/ios-jit/SIGNING_PICKER_BUILD_53.md` for final results
+and the distinction between synthetic simulator identity tests and phone proof.
+
+`release/public53.json` is the active source manifest. New builds use
+`tools/build_release53.py` with an explicit FMOD SDK. The52 release remains
+published and immutable. This Mac has Xcode26.6 but lacks the licensed SDK,
+Mono/sn and CMake needed for the complete fresh dependency/IPA build. No53 IPA
+or unchanged-ID phone test has occurred. The next delivery step is a complete
+build, then a phone install with the original Cabrillo identifier and existing
+Development profile. Do not delete either of the owner's existing installations
+or infer save migration between their different bundle IDs.
+
+The adapter uses optional Security SPI and private `DOCConfiguration` lookup;
+it fails back to original behavior with redacted diagnostics when unavailable.
+LiveContainer keeps its existing picker fix. Fixture-only entitlement injection
+must never enter production. After reviewing the local checks, the owner
+explicitly approves committing/pushing the53 fix and running the existing hosted
+workflow for an unsigned test IPA. This is approval for the source/build trial,
+not a version tag, public Release or device mutation. Hosted results remain
+separate from phone acceptance. Preserve all older runtime/save/lifecycle/iPad/
+120Hz acceptance gates.
 
 ## Published v0.24.1 / build52 —30 September
 

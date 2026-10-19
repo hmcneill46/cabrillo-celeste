@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "build_number": "53",
+  "version": "0.24.2",
+  "status": "PASS_LOCAL_SOURCE_CONTROLS_AWAITING_FULL_IPA_AND_PHONE",
+  "owner_evidence": "Owner confirms that matching Feather Identifier to explicit Developer profile restores local ZIP selection; unchanged-ID build53 has not yet been installed.",
+  "implementation": {
+    "overlay": "experiments/ios-jit/launcher-signing-picker",
+    "bundle_identifier": "io.github.hmcneill46.celeste.everest.jit.everest",
+    "bundle_identifier_changed": false,
+    "frozen_base_files": 168,
+    "jit_or_runtime_changed": false,
+    "profile_specific_values_in_source": false,
+    "private_api": "DOCConfiguration.setHostIdentifier:",
+    "livecontainer_managed": true
+  },
+  "checks": {
+    "python_tests": 66,
+    "compatibility_host_scenarios": 12,
+    "unsafe_host_output_path_controls": 4,
+    "production_target": "arm64-apple-ios15.0",
+    "production_test_seam_absent": true,
+    "apple_picker_tests": 2,
+    "hook_installed_with_zero_prior_picker_initializations": true,
+    "real_zip_taps_and_delegate_callbacks": true,
+    "exact_staged_bytes_and_sha256": true,
+    "synthetic_source_preserved": true,
+    "cancel_and_repeat": true,
+    "profile_checks": 119,
+    "shortcut_checks": 185,
+    "workflow_branches": 36,
+    "broken_url_controls": 15
+  },
+  "receipts": {
+    "compatibility_policy": {
+      "path": ".build/picker53-policy-20261019-b/receipt.json",
+      "sha256": "7d411b03482438557c5e96693b0c4aafb4441fcbb602913399069fb83bfca8bd",
+      "status": "PASS_HOST_DOCUMENT_PICKER_COMPATIBILITY_CONTROLS"
+    },
+    "production_compilation": {
+      "path": ".build/signing-picker53-production-compile-final/receipt.json",
+      "sha256": "3968084cb9965aac34f43dcd08aed438bd2c63ca274165158aca4eee8d7d1d49",
+      "status": "PASS_PRODUCTION_IOS_LAUNCHER_COMPILE"
+    },
+    "apple_picker_ui": {
+      "path": ".build/picker53-ui-20261019-first-picker/receipt.json",
+      "sha256": "ce89c6f5e867dd45727d297e3239882e7d08210f31f79b0b09b2a84ff9cac6c5",
+      "status": "PASS_SIGNING_PICKER_REAL_APPLE_UI"
+    },
+    "profile_regression": {
+      "path": ".build/signing-picker53-profile-regression/receipt.json",
+      "sha256": "d2e424026158c370b13bacb5540541949d902945553b0f2ac3fdd28fd755e794",
+      "status": "PASS_PUBLIC_NATIVE_PROFILE_CHECKS"
+    },
+    "shortcut_regression": {
+      "path": ".build/signing-picker53-shortcut-regression/receipt.json",
+      "sha256": "dbc01fe45aed7cd7eae24abc3dacf1c4f5201da5a9bc46b7379b505780bb73f1",
+      "status": "PASS_PUBLIC_NATIVE_SHORTCUT_CHECKS"
+    }
+  },
+  "python_log": {
+    "path": ".build/signing-picker53-python-final.log",
+    "sha256": "120a6d1915dd5e87432faebdd524c1f781f3c3d4ef30640269f51f23cf577bdf"
+  },
+  "limitations": {
+    "complete_ipa_built": false,
+    "physical_feather_signature_tested": false,
+    "simulator_identity_test_is_synthetic": true,
+    "private_api_future_compatibility_guaranteed": false,
+    "gameplay_or_jit_tested": false,
+    "new_release_published": false,
+    "github_written": false,
+    "signing_keys_used_by_fix": false,
+    "missing_full_build_inputs": [
+      "Mono 6.14.1 and sn",
+      "CMake",
+      "FMOD Engine iOS 1.10.09 SDK"
+    ]
+  },
+  "primary_sources": [
+    "https://github.com/claration/feather/issues/610#issuecomment-4182946719",
+    "https://github.com/LiveContainer/LiveContainer/blob/9108ae624ea001f7d7696d48407f890b48fa2653/TweakLoader/DocumentPicker.m#L103"
+  ],
+  "hosted_trial_authorization": "Owner explicitly approves commit/push and existing GitHub build for unsigned test IPA; no version tag or public Release."
+}

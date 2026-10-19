@@ -43,6 +43,33 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   dependency, not a Git source directory. Build38 uses public source receipts and
   an explicit FMOD SDK instead. Never silently fall back to a legacy checkout.
 
+## Signing-aware Files picker —19 October, build53 source
+
+The owner confirms that matching Feather's Identifier to the supplied explicit
+Development profile repairs ZIP selection, then explicitly requests an in-app
+fix preserving Cabrillo's bundle ID and existing signing setup. Build53 /0.24.2
+adds `launcher-signing-picker` as an overlay: a new `main.m` and a narrow Documents
+UI host-identifier adapter, with the accepted50/52 base frozen and hash-pinned.
+Read `docs/ios-jit/SIGNING_PICKER_BUILD_53.md` for behavior and validation limits.
+
+The current source release manifest is `release/public53.json`; the recipe is
+`tools/build_release53.py` / `compile_release53.py`. Published52 and its builders
+remain immutable. No53 IPA, phone acceptance, commit, push, tag or release is
+claimed by these local source changes. This Mac lacks the licensed FMOD SDK and
+full runtime build tools; native device compilation and simulator controls are
+separate from a complete package build. After reviewing the completed local
+checks, the owner explicitly approves committing/pushing this53 fix and running
+the existing GitHub workflow for an unsigned test IPA. This authorizes the trial
+source/build writes; it does not authorize a version tag or public Release.
+
+The adapter reads only the running process's own `application-identifier` and
+adjusts Documents UI requests for that app's original host. It never changes the
+public bundle identifier, JIT state, entitlements, permissions or data paths.
+LiveContainer retains its own picker handling. Missing private APIs retain the
+original path and report a redacted status. Test identity injection is compiled
+only into fixtures; production objects must exclude its symbol. Preserve all
+older source lanes and scoped device gates; no new physical pass is inferred.
+
 ## Published v0.24.1 / build52 —30 September
 
 The owner reports successful testing of the trial kit and explicitly authorizes

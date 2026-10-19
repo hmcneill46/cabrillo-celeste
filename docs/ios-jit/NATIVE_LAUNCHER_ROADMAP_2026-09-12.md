@@ -1,3 +1,14 @@
+## 19 October 2026 update
+
+The owner confirms a Feather signing application-ID mismatch caused standalone52
+to stall when selecting a local game ZIP. Matching the signing Identifier works;
+they now request automatic support with Cabrillo's existing bundle ID. Build53
+adds a narrow Documents UI host adapter in a new source overlay, preserving the
+accepted runtime/JIT behavior and frozen50/52 source. See
+[the build53 report](SIGNING_PICKER_BUILD_53.md) for local checks, private-API
+fallback and the pending complete IPA/unchanged-ID phone gate. No new release or
+physical acceptance is implied, and older save/lifecycle/iPad/120Hz gates remain.
+
 ## 26 September 2026 update
 
 The owner prioritized a Home Screen VPN/JIT shortcut after the game-free build38.
