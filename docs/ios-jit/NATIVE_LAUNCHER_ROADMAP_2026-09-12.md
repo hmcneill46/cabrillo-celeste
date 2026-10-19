@@ -5,9 +5,13 @@ setup: entitlement and hook preparation succeed but game selection never calls
 back. The existing copy-based backup picker selects the same ZIP twice, then
 correctly rejects its backup manifest. [Build54](COPY_PICKER_BUILD_54.md) changes
 the game/mod selectors to copies and retains the53 compatibility module. Its
-full package and actual game/mod phone pass remain separate gates in progress.
+full package, independent verification and original-ID game-ZIP selection/staging
+phone gate now pass. [v0.24.3](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3) is published through tagged
+run39285104629, retaining all253 tested app inputs and151 dependency hashes. Physical
+mod import and broader gameplay/JIT gates remain separate; use55 for new app
+implementation. The tagged binary has no separate device run claimed.
 
-## 19 October 2026 update
+## Earlier19 October2026 signing-host trial
 
 The owner confirms a Feather signing application-ID mismatch caused standalone52
 to stall when selecting a local game ZIP. Matching the signing Identifier works;
@@ -15,8 +19,9 @@ they now request automatic support with Cabrillo's existing bundle ID. Build53
 adds a narrow Documents UI host adapter in a new source overlay, preserving the
 accepted runtime/JIT behavior and frozen50/52 source. See
 [the build53 report](SIGNING_PICKER_BUILD_53.md) for local checks, private-API
-fallback, successful hosted IPA and pending unchanged-ID phone gate. No new release or
-physical acceptance is implied, and older save/lifecycle/iPad/120Hz gates remain.
+fallback and successful hosted IPA. Its unchanged-ID phone gate subsequently
+failed, leading to the54 copy-import repair above. That53 trial created no
+Release or physical acceptance; older save/lifecycle/iPad/120Hz gates remain.
 
 ## 26 September 2026 update
 

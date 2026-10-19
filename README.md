@@ -17,19 +17,18 @@ under [Releases](https://github.com/hmcneill46/cabrillo-celeste/releases).
 Normal pushes run source checks; a maintainer chooses when to publish a version
 tag. Manual trial builds produce downloadable Actions artifacts without a Release.
 
-**[Download Cabrillo 0.24.1 / build 52](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.24.1/Cabrillo-0.24.1-unsigned.ipa)** ·
-[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.1).
-The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36696860903) rebuilt the tested source, audited the IPA
-and verified all five attestations before publishing. Release assets remain
-available independently of the temporary Actions artifacts.
+**[Download Cabrillo 0.24.3 / build 54](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.24.3/Cabrillo-0.24.3-unsigned.ipa)** ·
+[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3).
+The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39285104629) rebuilt the tested source, audited the IPA
+and verified all five attestations before publishing. All five Release assets
+also pass independent downloads without sign-in, checksums and tag-specific
+attestation verification. Release assets persist beyond temporary Actions artifacts.
 
 Version0.24.3/build54 adds [the Feather game-ZIP picker fix](docs/ios-jit/COPY_PICKER_BUILD_54.md).
-The [trial kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342/artifacts/12199896629)
-passes the complete hosted build and independent verification. Game-ZIP selection
-and staging are confirmed on iPhone/iOS27.0.1 with the original identifier and
-current Development profile. The owner has authorized public v0.24.3 publication;
-its tagged build is being prepared. See [change notes](CHANGELOG.md). Published
-0.24.1 above predates this fix.
+Game-ZIP selection and staging pass on the tested trial with iPhone/iOS27.0.1,
+the original identifier and current Development profile. The tagged rebuild
+retains all253 tested app inputs and151 dependency hashes; no separate device
+run of that freshly built IPA is claimed. See [change notes](CHANGELOG.md).
 
 You need **iOS15 or later, a compatible installation/JIT setup, and your own
 Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game

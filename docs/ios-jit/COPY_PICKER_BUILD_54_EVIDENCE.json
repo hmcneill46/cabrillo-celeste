@@ -3,7 +3,7 @@
   "date": "2026-10-19",
   "version": "0.24.3",
   "build_number": "54",
-  "status": "PASS_HOSTED_KIT_AND_ORIGINAL_ID_FEATHER_PHONE_GAME_IMPORT",
+  "status": "PASS_PUBLIC_V0243_RELEASE_AND_ORIGINAL_ID_FEATHER_PHONE_GAME_IMPORT",
   "implementation": {
     "overlay": "experiments/ios-jit/launcher-copy-picker",
     "original_bundle_identifier_preserved": true,
@@ -25,7 +25,7 @@
     "backup_selected_callbacks": 2,
     "backup_invalid_manifest_rejections": 2,
     "restore_or_rollback_actions": 0,
-    "scope": "Same installed53/signature/device; backup type filter and picker purpose also differ, so this supports but does not isolate copy mode as sole cause. Build54 game/mod phone test remains necessary.",
+    "scope": "Same installed53/signature/device; backup type filter and picker purpose also differ, so this supports but does not isolate copy mode as sole cause. At that comparison54 phone tests remained necessary; the subsequent54 game-import pass is recorded separately and physical mod import remains unaccepted.",
     "journal_hashes": {
       "initial": [
         "38f0a5b4591ba7726157db8d844dc62be58aab53ffb02dbe45ce75d09512bb0e"
@@ -74,6 +74,16 @@
       "path": ".build/copy-picker54-hosted/attestations/receipt.json",
       "sha256": "72d9d044fb0be22c9ac5f19284986d3fdb5cceff468a7a8f0b2a5ddf022752cc",
       "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS"
+    },
+    "published_release_download": {
+      "path": ".build/release-v0.24.3/download-verification.json",
+      "sha256": "88228e502781742e2ce963a1bff7461cd6d56810b4890bda5e5a50781b14792a",
+      "status": "PASS_ANONYMOUS_V0243_RELEASE_DOWNLOAD_AND_SOURCE_VERIFICATION"
+    },
+    "published_release_attestations": {
+      "path": ".build/release-v0.24.3/attestations/receipt.json",
+      "sha256": "76c0322157dd6a5afb9c948b973b9e00beaa5161fbfced96f902910cd3529603",
+      "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS"
     }
   },
   "limitations": {
@@ -81,11 +91,12 @@
     "physical54_game_or_mod_import_tested": true,
     "simulator_does_not_reproduce_mismatched_phone_signature": true,
     "gameplay_or_jit_retested": false,
-    "new_tag_or_release": false,
+    "new_tag_or_release": true,
     "device_mutation_dispatched": false,
-    "physical54_mod_import_tested": false
+    "physical54_mod_import_tested": false,
+    "fresh_tagged_binary_device_tested": false
   },
-  "authorization": "Continuation of owner-approved tested Files-picker correction/source push/unsigned hosted trial after53 fails; no tag, Release or unrelated write.",
+  "authorization": "Owner-confirmed54 game import followed by explicit19 October2026 approval for reviewed source/change notes, annotated v0.24.3, the existing tagged build/verify/publication workflow and public five-asset Release. Unrelated future writes remain outside scope.",
   "python_log": {
     "path": ".build/copy-picker54-production-compile/python-controls.log",
     "sha256": "dd86c3f9ac93afed6235c6e7781db20d7f6893f409f97b491ffb595e404bd0ee"
@@ -162,5 +173,45 @@
     "date": "2026-10-19",
     "request": "Please push that to github, so it appears as a release please. thank you! maybe put in change notes as well",
     "scope": "Publish reviewed fix/source, v0.24.3 tag, existing audited tagged workflow and public five-asset Release with change notes. Preserve app253inputs and original trial kit."
+  },
+  "trial_authorization": "Continuation of owner-approved tested Files-picker correction/source push/unsigned hosted trial after53 fails; no tag, Release or unrelated write.",
+  "published_release": {
+    "tag": "v0.24.3",
+    "source_commit": "46dc40678fe839b676a2a9496eb84229d0b4c331",
+    "source_ref": "refs/tags/v0.24.3",
+    "workflow_run_id": 39285104629,
+    "workflow_run_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39285104629",
+    "release_url": "https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3",
+    "anonymous_all_five_downloads": "PASS",
+    "exact_tag_source_workflow_run_attestations": "PASS",
+    "captured_tested_app_inputs": 253,
+    "unchanged_dependency_hashes": 151,
+    "next_app_implementation": "55",
+    "kit_path": "artifacts/cabrillo-v0.24.3-release",
+    "files": {
+      "BUILD_PROVENANCE.json": {
+        "bytes": 100088,
+        "sha256": "50e844e4b7cb550de81ad96981696c75efd38eed2b6fa0d8e91aea159c53a88f"
+      },
+      "Cabrillo-0.24.3-unsigned.ipa": {
+        "bytes": 18764014,
+        "sha256": "e3520bced1ff72886d2b1796ee1420f797df71a514ee9b9e0430fd933e18a583"
+      },
+      "PACKAGE_AUDIT.json": {
+        "bytes": 427,
+        "sha256": "212a7e47ea775f43a8dfd9c65eecac30a25ed2c86393ca38133d6e9688b1d398"
+      },
+      "RELEASE_NOTES.md": {
+        "bytes": 1617,
+        "sha256": "c56b43cd51a4abf9064762c12fb66ad94015b0aea031b996d8af127da02b3dd3"
+      },
+      "SHA256SUMS": {
+        "bytes": 351,
+        "sha256": "5a46df1459b7ffec1cd1f04539de1f648d94e29eea6c8ae5d667e2aaefc1b8d1"
+      }
+    },
+    "ipa_bytes": 18764014,
+    "ipa_sha256": "e3520bced1ff72886d2b1796ee1420f797df71a514ee9b9e0430fd933e18a583",
+    "fresh_tagged_binary_device_tested": false
   }
 }

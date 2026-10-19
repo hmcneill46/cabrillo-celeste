@@ -52,12 +52,17 @@ selection and875,540,825bytes staged on iOS27.0.1. Journal SHA256:
 The full trial workflow and Ubuntu verification pass. This closes the reported
 game-ZIP selection/staging defect; physical mods/gameplay/JIT remain separate.
 
-On19 October the owner explicitly requests GitHub Release publication and change
-notes. This authorizes the reviewed source/notes merge to main, v0.24.3 tag and
-existing tagged build/verify/publication workflow. Earlier trial-only/no-Release
-statements below are superseded for this release. Keep all253 app inputs frozen;
-only notes/evidence change for publication. No tagged binary/device pass is yet
-claimed. Preserve both the tested trial kit and upcoming tagged release kit.
+On19 October the owner explicitly authorized GitHub Release publication and
+change notes. Annotated `v0.24.3` targets `46dc40678fe839b676a2a9496eb84229d0b4c331`; [tagged run39285104629](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39285104629)
+and the [public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3) now complete the existing audited
+build/verify/publication workflow. All five assets independently download without
+authentication and pass checksums and exact tag/source/workflow/run attestations.
+Release IPA SHA256: `e3520bced1ff72886d2b1796ee1420f797df71a514ee9b9e0430fd933e18a583`.
+All253 app inputs and151 dependency hashes match the tested trial. Preserve both
+immutable kits; the tagged kit is `artifacts/cabrillo-v0.24.3-release`. Earlier trial-only/no-Release
+statements below describe historical stages. No separate tagged-binary device
+run or new mod/JIT/gameplay/save/lifecycle/iPad/120Hz acceptance is inferred.
+Use55 for new implementation; unrelated future GitHub writes remain outside scope.
 
 The owner reports53 still fails game selection. USB verifies exact53 source
 metadata/original ID on iOS27.0.1; entitlement lookup and hook installation pass,

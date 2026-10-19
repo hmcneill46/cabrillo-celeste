@@ -1,6 +1,6 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated19 October for the signing-aware Files picker,
+Written 14 September 2026; updated19 October for copy-based Files imports and v0.24.3 publication,
 following30 September FMOD clarification after source publication and USB shortcut testing,
 iOS15/iPad support, the
 build36 Motion Smoothing correction, build37 Everest upgrade and build38 owned-game
@@ -18,11 +18,17 @@ Journal SHA256 `92ff72a8361d24ea7efd4dcd3b999d08aecc09e6b1a0468bd02ca3654e042985
 No new physical mod/JIT/gameplay acceptance is inferred. Trial39276928342 and
 Ubuntu verification now pass; the trial publication job is skipped.
 
-The owner explicitly requests a public Release and change notes on19 October.
-Proceed with reviewed source/notes on main, annotated v0.24.3 and the existing
-tagged full build/verification/publisher. This supersedes earlier trial-only
-publication limits for54. Preserve all253 tested app inputs and the trial kit;
-new implementation still needs55. Notes/evidence changes do not change the app.
+The owner explicitly authorized the public Release and change notes on19 October.
+Annotated `v0.24.3` targets `46dc40678fe839b676a2a9496eb84229d0b4c331`. [Tagged run39285104629](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39285104629) and the
+[public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3) complete the build, audit, attestation,
+independent verification and five-file publication. All five assets download
+without authentication and pass checksums and exact tag/source/workflow/run
+attestations. Release IPA bytes:18,764,014; SHA256:
+`e3520bced1ff72886d2b1796ee1420f797df71a514ee9b9e0430fd933e18a583`.
+All253 tested app inputs and151 dependency hashes remain exact. Preserve the
+trial kit and separate tagged kit in `artifacts/cabrillo-v0.24.3-release`; use55 for new app
+implementation. The tagged binary has no separate device run claimed, and all
+older physical mod/JIT/gameplay/save/lifecycle/iPad/120Hz gates retain their scope.
 
 The owner installs53 and reports the same game-ZIP tap stall. Read-only USB
 collection verifies installed53/original bundle ID/iOS27.0.1 and all254 exact
@@ -60,10 +66,11 @@ production symbols and absence of the test seam. All five local attestations
 verify exact source/ref/workflow, hosted runner and run identity. IPA bytes:
 18,764,021; SHA256:
 `254a126168837708bbb7d136da0c3e426a3522feb375c0d19bb26d5fbcf89762`.
-Artifact12199896629 has14-day retention; no tag/Release is created. The separate
+Artifact12199896629 has14-day retention. This manual trial created no tag or
+Release; the subsequent tagged publication is recorded above. The separate
 Ubuntu verification job now passes; the trial publication job is skipped. Preserve the immutable253
-app inputs/kit; use55 for new implementation. Delivery uses the local IPA and
-Actions artifact, with no cloud installer replacement or automatic phone install.
+app inputs/kit; use55 for new implementation. Trial delivery used the local IPA
+and Actions artifact, with no cloud installer replacement or automatic phone install.
 
 ## Signing-aware Files picker —19 October, build53 trial
 

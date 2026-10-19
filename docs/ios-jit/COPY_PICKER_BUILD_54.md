@@ -133,8 +133,20 @@ This closes the reported picker/staging defect. It adds no physical mod-import,
 JIT or gameplay gate. The original collection/receipt stays ignored in
 `.private/picker-failure-2026-10-19`.
 
-The owner then authorizes the public v0.24.3 Release and change notes. Keep all253
-tested app inputs exact; only documentation and generated release-note prose
-change for publication. The tagged workflow rebuilds, audits, attests, verifies
-and publishes the five-file kit. A tagged build remains separate from an actual
-device run of that freshly compiled IPA; no bit-reproducibility claim is made.
+## Published v0.24.3
+
+The owner authorized the public Release and change notes after the confirmed
+trial phone pass. Annotated `v0.24.3` targets `46dc40678fe839b676a2a9496eb84229d0b4c331`.
+[Tagged run39285104629](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39285104629) rebuilt, audited, attested, independently verified
+and published the [five-file Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3). An independent download
+without authentication verifies every file's size/checksum/API digest and exact
+tag/source/workflow/run attestation. Release IPA bytes:18,764,014; SHA256:
+`e3520bced1ff72886d2b1796ee1420f797df71a514ee9b9e0430fd933e18a583`.
+
+All253 tested app inputs and151 dependency hashes remain exact; only documentation
+and generated release-note prose changed for publication. Preserve the trial kit
+and separate tagged kit in `artifacts/cabrillo-v0.24.3-release`. Verification receipt paths/hashes
+and all five published file records are in the evidence ledger. Use55 for new
+app implementation. The newly compiled tagged IPA has no separate device run;
+physical mod import/gameplay/JIT gates remain distinct and no bit-reproducibility
+claim is made.

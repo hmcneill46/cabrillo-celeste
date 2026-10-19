@@ -13,18 +13,27 @@ explicitly requests public v0.24.3 Release publication with change notes on
 19 October2026. This authorizes the source/notes merge, version tag and existing
 tagged release workflow; the earlier trial-only restriction is superseded.
 
-## v0.24.3 release preparation —19 October2026
+## Published release: v0.24.3 —19 October2026
 
-The owner confirms game ZIP ready; USB verifies exact54 source/original ID,
-copy-mode callback and875,540,825-byte staging on iOS27.0.1. The public Release
-uses the same253 captured app inputs and151 dependency hashes as the accepted
-trial. Only generated release-note prose and documentation change; the builder
-wrapper is outside those253 app inputs and its new hash is recorded explicitly.
-The trial kit remains immutable at `artifacts/cabrillo-build54-trial-frozen`;
-a locally renamed byte-identical ZIP copy is preserved separately. A tagged
-rebuild must pass the full build, package audit, five attestations and independent
-verification before the publisher creates the Release. The freshly tagged
-binary has no separate physical-device run claimed. See [CHANGELOG](../CHANGELOG.md).
+[Download the public IPA](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.24.3/Cabrillo-0.24.3-unsigned.ipa) from the [Release page](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3).
+Annotated `v0.24.3` targets `46dc40678fe839b676a2a9496eb84229d0b4c331`. [Tagged run39285104629](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39285104629) rebuilt,
+audited, attested, independently verified and published the five-file kit.
+A separate download without authentication verifies every public file's size,
+checksum/API digest and exact tag/source/workflow/run attestation.
+
+Release IPA bytes:18,764,014. SHA256:
+`e3520bced1ff72886d2b1796ee1420f797df71a514ee9b9e0430fd933e18a583`.
+All253 captured app inputs and151 dependency hashes match the accepted trial.
+Only generated release-note prose and documentation changed for publication;
+the builder wrapper is outside those253 inputs and its hash is recorded in
+provenance. The trial kit remains immutable at
+`artifacts/cabrillo-build54-trial-frozen`; retain the separately verified tagged
+kit in `artifacts/cabrillo-v0.24.3-release` and the byte-identical locally renamed trial ZIP.
+
+The owner-confirmed trial game-ZIP selection/staging pass uses the original ID
+and existing Development profile on iOS27.0.1. The freshly tagged binary has no
+separate physical-device run claimed; mod import, gameplay and JIT acceptance
+remain distinct. See [CHANGELOG](../CHANGELOG.md).
 
 ## Unsigned0.24.3/build54 trial —19 October2026
 
@@ -41,7 +50,7 @@ IPA bytes18,764,021; SHA256:
 `254a126168837708bbb7d136da0c3e426a3522feb375c0d19bb26d5fbcf89762`.
 Keep the253 app inputs/kit frozen; use55 for new implementation. Original-ID
 Feather game ZIP selection/staging passes; physical mod import remains separate.
-The owner subsequently authorizes v0.24.3 public Release publication below.
+The subsequently published tagged Release is recorded above.
 
 ## Unsigned0.24.2/build53 trial —19 October2026
 
@@ -174,7 +183,7 @@ identical. A package missing from or added to the lock fails the build.
 
 The run uploads only these five files:
 
-- `Cabrillo-0.24.1-unsigned.ipa`
+- `Cabrillo-0.24.3-unsigned.ipa`
 - `BUILD_PROVENANCE.json`
 - `PACKAGE_AUDIT.json`
 - `RELEASE_NOTES.md`
@@ -206,10 +215,10 @@ To check downloaded files from the **same** release on a Mac with GitHub CLI:
 
 ```sh
 shasum -a 256 -c SHA256SUMS
-gh attestation verify Cabrillo-0.24.1-unsigned.ipa \
+gh attestation verify Cabrillo-0.24.3-unsigned.ipa \
   --repo hmcneill46/cabrillo-celeste \
   --signer-workflow hmcneill46/cabrillo-celeste/.github/workflows/release.yml \
-  --source-ref refs/tags/v0.24.1 \
+  --source-ref refs/tags/v0.24.3 \
   --source-digest FULL_COMMIT_FROM_BUILD_PROVENANCE \
   --deny-self-hosted-runners
 ```

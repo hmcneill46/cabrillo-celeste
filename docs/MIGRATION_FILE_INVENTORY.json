@@ -25,8 +25,8 @@
     },
     "AGENTS.md": {
       "reason": "Build53 signing-picker development scope, published52 preservation and owner approval boundaries",
-      "sha256": "270e2c76000eefb7da15ae47978f0f6019799f60eae4d7cfbba1f74cf2cad670",
-      "bytes": 43161
+      "sha256": "1d67da87f5dd15ed78b2462d5d9743b7495f4aab747d2e816f835e5037f0798b",
+      "bytes": 43742
     },
     "CHANGELOG.md": {
       "reason": "Public release change notes requested by owner for v0.24.3",
@@ -35,8 +35,8 @@
     },
     "HANDOFF.md": {
       "reason": "Build53 repair evidence, current build recipe, missing full package inputs and pending unchanged-ID phone gate",
-      "sha256": "f6559f7bbc2d1f9df7c0936a09af67b8c7232792f19ffbc1dc80d8b097931613",
-      "bytes": 106319
+      "sha256": "9fd94d334a4a326a046f6de5843569c240b54ecf432603a725cb0eb00896430a",
+      "bytes": 107011
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -46,8 +46,8 @@
     },
     "README.md": {
       "reason": "Current product/download overview and build53 signing-aware source recipe",
-      "sha256": "4f7673e732b1b34c53ea8c43203e8d796ba5f891f3e4844769e8617686e6da55",
-      "bytes": 12476
+      "sha256": "80b0db79d71f1102c74aa8946fa92c8492f0bd7fcd03e92681ed680b9711caa1",
+      "bytes": 12422
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -90,8 +90,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Current53 source workflow and separate immutable published52 release with licensed-input boundaries",
-      "sha256": "4ecadd6b3c8fd6346ed45f74dd1104edd24969a7fd4b11eeff22625f6e397ccc",
-      "bytes": 16736
+      "sha256": "99bebec29e47a3b99cd8ce1e7358b4d6a2ff279d59bb003581a22144fac694c6",
+      "bytes": 17399
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -358,13 +358,13 @@
     },
     "docs/ios-jit/COPY_PICKER_BUILD_54.md": {
       "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
-      "sha256": "7625783bfb82d51a8c336feefae78acac677cb6edad8eba60df001b543e6b5e0",
-      "bytes": 9561
+      "sha256": "f7844b6c583674d8e4eef75b09f31da54d16b5c48c88c841c1eb5118201aaae1",
+      "bytes": 10371
     },
     "docs/ios-jit/COPY_PICKER_BUILD_54_EVIDENCE.json": {
       "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
-      "sha256": "fb2b9418a2c5e5c6d87059f2496cd425bfd93f44cd2df2da687c0c595a64a0f8",
-      "bytes": 6846
+      "sha256": "2fffca797e9f35a4467c88d2f35caf1b6d2efeb7e828aac9af8822dd9a2f6e00",
+      "bytes": 9395
     },
     "docs/ios-jit/DEVICE_TEST_2026-09-11.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
@@ -664,8 +664,8 @@
     },
     "docs/ios-jit/NATIVE_LAUNCHER_ROADMAP_2026-09-12.md": {
       "reason": "JIT architecture, research, implementation and acceptance record",
-      "sha256": "d65841b7ca6ab0fded630e95d04bd45c87366763d83ec04051b6ab261786eabb",
-      "bytes": 52670,
+      "sha256": "f19a8007edf71f21b6c14414858e09eb268a3b290157ab23962a98a502db1786",
+      "bytes": 53113,
       "import_sha256": "17f2e775e49ddea8e327f8808f755004dd733dbf63b363638874374fb28f7ee3"
     },
     "docs/ios-jit/NATIVE_LAUNCHER_ROADMAP_EVIDENCE.json": {
