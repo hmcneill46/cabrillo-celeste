@@ -138,7 +138,7 @@ def build(work, output, sdk, download=None):
         'the document-service host identity and uses temporary copies for game and mod imports. '
         'Keep your existing profile, bundle ID and settings. Original files remain unchanged; '
         'large ZIPs can take time to copy and need extra temporary storage. Shortcut49 is retained.\n\n'
-        'Verified on iPhone 15 Pro Max / iOS 27.0.1 with the original bundle ID and the same Development profile: '
+        'The build54 trial was verified on iPhone 15 Pro Max / iOS 27.0.1 with the original bundle ID and the same Development profile: '
         'game ZIP selection completes and an 875,540,825-byte archive stages successfully. '
         'Gameplay, JIT and mod imports have no new physical test result in this release.\n\n'
         'Unsigned iPhone/iPad IPA built from the tagged or selected public source ' + build_location + '. '

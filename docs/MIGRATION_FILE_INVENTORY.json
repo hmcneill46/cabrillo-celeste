@@ -30,8 +30,8 @@
     },
     "CHANGELOG.md": {
       "reason": "Public release change notes requested by owner for v0.24.3",
-      "sha256": "e83d641d9498d03a8582a9ebb002c4607a451fa93cf3445b933c8128ebfdba70",
-      "bytes": 1060
+      "sha256": "af3de772dee962db03eb10006883f71691ccabc6228232697fab890311df78d3",
+      "bytes": 1076
     },
     "HANDOFF.md": {
       "reason": "Build53 repair evidence, current build recipe, missing full package inputs and pending unchanged-ID phone gate",
@@ -25782,8 +25782,8 @@
     },
     "tools/build_release54.py": {
       "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
-      "sha256": "ee94303be4b8c9e9ab67dd83a4182f839241734bcd86b90208433612fdafbfb4",
-      "bytes": 10446
+      "sha256": "203fc809dfc4e1434e68caf311a9493c75899a0d591d2db40ccd41f2f0d19101",
+      "bytes": 10468
     },
     "tools/build_save_transfers.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",
