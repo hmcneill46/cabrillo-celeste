@@ -11,6 +11,22 @@ and shortcut49. [Build54's report](ios-jit/COPY_PICKER_BUILD_54.md) distinguishe
 its checks from phone acceptance. The owner-authorized correction/unsigned trial
 continues after53 fails on the phone. No0.24.3 tag or Release is authorized.
 
+## Unsigned0.24.3/build54 trial —19 October2026
+
+[Run39276928342](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342)
+produces the unsigned54 kit from `4a094527a96e62fbf63518c088a1dd48d19407e5`.
+Official SDK acquisition, fresh compilation, package audit and attestation
+creation pass; the separate Ubuntu verification is pending at this record.
+The [five-file artifact](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342/artifacts/12199896629)
+requires GitHub sign-in and has14-day retention. A separately downloaded copy
+passes checksums, all253 captured source hashes, all151 unchanged53 dependency
+hashes, original bundle ID and copy-import BuildInfo. All five local attestations
+verify the exact source/ref/workflow, GitHub-hosted runner and run invocation.
+IPA bytes18,764,021; SHA256:
+`254a126168837708bbb7d136da0c3e426a3522feb375c0d19bb26d5fbcf89762`.
+Keep the253 app inputs/kit frozen; use55 for new implementation. Original-ID
+Feather game/mod phone testing remains pending. No tag/Release is created.
+
 ## Unsigned0.24.2/build53 trial —19 October2026
 
 [Run39267829175](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39267829175)

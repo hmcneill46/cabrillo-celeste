@@ -25,8 +25,9 @@ to `asCopy:YES`, matching existing backup/save imports. The53 compatibility
 module stays byte-identical. It adds mode diagnostics and keeps all existing
 types, multi-selection, staging, scoped reads, validation, JIT and runtime.
 The copy/backup phone comparison also differs in purpose/filter;54's actual
-game/mod phone test is still required. Source validation and the new unsigned
-trial are in progress; no54 package or device pass is yet claimed.
+game/mod phone test is still required. Local source/UI/compile checks pass;
+the complete unsigned54 kit is built and independently verified as recorded
+below. No54 phone game/mod import pass is yet claimed.
 
 Read `docs/ios-jit/COPY_PICKER_BUILD_54.md` and its evidence ledger. All25453
 captured inputs/kit remain frozen;54 is the active corrective lane. Original
@@ -34,6 +35,20 @@ logs/receipts are ignored in `.private/picker-failure-2026-10-19`. Only relevant
 app metadata/journals were read; no extra debugger, installation, phone write or
 setting change was dispatched. The owner's prior approval covers this same
 tested picker repair/unsigned trial, not a tag/Release or unrelated publication.
+
+Hosted trial39276928342 at `4a094527a96e62fbf63518c088a1dd48d19407e5`
+produces the complete five-file54 kit. SDK acquisition, full compilation, package
+and attestation creation pass. The independently downloaded kit in
+`artifacts/cabrillo-build54-hosted` passes checksums, all253 captured input hashes,
+all151 unchanged53 dependency hashes, original bundle ID, copy-import BuildInfo,
+production symbols and absence of the test seam. All five local attestations
+verify exact source/ref/workflow, hosted runner and run identity. IPA bytes:
+18,764,021; SHA256:
+`254a126168837708bbb7d136da0c3e426a3522feb375c0d19bb26d5fbcf89762`.
+Artifact12199896629 has14-day retention; no tag/Release is created. The separate
+Ubuntu verification job is pending at this record. Preserve the immutable253
+app inputs/kit; use55 for new implementation. Delivery uses the local IPA and
+Actions artifact, with no cloud installer replacement or automatic phone install.
 
 ## Signing-aware Files picker —19 October, build53 trial
 

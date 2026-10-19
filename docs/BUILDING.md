@@ -49,7 +49,8 @@ picker overlay; `release/app54` supplies the new identity and pins the frozen
 base and exact53 compatibility module. Earlier source lanes and all254 captured53
 app inputs stay frozen. See [the build54 report](ios-jit/COPY_PICKER_BUILD_54.md)
 for the confirmed53 phone failure, successful existing backup-selector comparison,
-new source checks and separate full-package/game-import phone gates.
+new source checks, successful54 package/local verification and separate phone
+game-import gate. All253 captured54 app inputs are frozen; use55 for new app changes.
 
 The `output` directory contains `Cabrillo.ipa`, `BUILD_PROVENANCE.json`,
 `PACKAGE_AUDIT.json` and `RELEASE_NOTES.md`. Internal logs, symbols and receipts

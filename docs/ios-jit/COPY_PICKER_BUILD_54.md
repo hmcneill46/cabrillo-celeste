@@ -4,7 +4,8 @@
 repair. Game and mod importers request a temporary copy through Apple's public
 document-picker API, matching the existing save/backup importer policy. Original
 bundle ID, existing signing profile, staging validation and JIT remain intact.
-Local source/UI/production compile checks pass; a54 IPA/phone pass is not yet claimed.
+Local source/UI/production compile checks and complete unsigned54 package/local
+verification pass. A54 game/mod phone pass is not yet claimed.
 
 ## Phone evidence that changes the diagnosis
 
@@ -72,7 +73,8 @@ Completed local checks:
 | Copy semantics |54 returns Import mode and distinct app-local temporary Inbox URLs;53 comparison returns Open mode and original URL. |
 | Frozen53 preservation |All254 hosted53 input hashes remain exact; compatibility module byte-identical. |
 | Independent review |No blocking findings; public SDK/dependency/Shortcut pins, original bundle ID and JIT remain exact. |
-| Complete54 IPA / phone game import |Pending separate hosted build and physical test. |
+| Complete54 IPA |PASS source build, package audit and independent local kit/attestation verification. |
+| Phone game/mod import |Pending physical test on54. |
 
 The54 fixture has no entitlement injection and verifies the actual mode and
 returned URL for each selection. Its initializer arguments are checked against
@@ -95,3 +97,24 @@ delivery. Original-ID Feather game/mod import remains a physical test afterward.
 Keep the working installation and its saves. No new Arctic Sign profile or
 bundle-ID change is part of this repair. See the accompanying evidence ledger
 for completed checks and their precise scope.
+
+## Unsigned hosted54 kit
+
+[Trial39276928342](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342)
+produces the54 kit at `4a094527a96e62fbf63518c088a1dd48d19407e5`, with public
+Release publishing disabled. The separate Ubuntu verification job remains
+pending at this record. The [five-file artifact](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342/artifacts/12199896629)
+requires GitHub sign-in and has14-day retention. A separate download into
+`artifacts/cabrillo-build54-hosted` passes the strict allowlist/checksums, all253
+captured source hashes, all151 unchanged53 dependency hashes, exact49 Shortcut
+resources, original bundle ID and copy-import BuildInfo. Production symbols
+are present; no entitlement test-seam symbol/string appears. All five local
+attestations verify the exact commit/ref/workflow, GitHub-hosted runner and
+run39276928342/attempt1.
+
+IPA bytes:18,764,021. SHA256:
+`254a126168837708bbb7d136da0c3e426a3522feb375c0d19bb26d5fbcf89762`.
+Package audit reports199 managed assemblies, no original/prepared game assemblies
+or assets, and no distribution blockers. Keep the253 captured54 app inputs and
+kit frozen; use55 for new app implementation. No tag, public Release, cloud kit
+replacement or automatic phone installation occurs.

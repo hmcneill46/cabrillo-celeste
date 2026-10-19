@@ -27,8 +27,11 @@ Current source includes [build54's copy-based Files imports](docs/ios-jit/COPY_P
 for standalone signing setups such as Feather with an explicit provisioning ID.
 The53 trial's host hook still failed game selection on the owner's phone;
 its existing copy-based backup picker selected the same ZIP successfully.
-Build54 applies copy mode to game/mod imports. Its complete IPA and game/mod
-phone validation are in progress. Published0.24.1 predates both repairs.
+Build54 applies copy mode to game/mod imports. Its
+[unsigned0.24.3 trial kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39276928342/artifacts/12199896629)
+passes the complete source build, package audit and local exact-source attestation
+verification. Actions downloads require GitHub sign-in and last14 days. Game/mod
+phone validation remains pending. Published0.24.1 predates both repairs.
 No0.24.3 tag or Release is published.
 
 You need **iOS15 or later, a compatible installation/JIT setup, and your own

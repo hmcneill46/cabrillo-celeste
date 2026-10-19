@@ -55,7 +55,9 @@ redacted mode diagnostics. The compatibility module remains exact53.
 
 Read `docs/ios-jit/COPY_PICKER_BUILD_54.md` and its ledger before acting. Keep
 all254 captured53 inputs/kit frozen.54 is the active corrective source recipe;
-full54 package and original-ID game/mod phone validation are in progress. The
+the complete54 kit is built/independently verified; original-ID game/mod phone
+validation remains pending. All253 captured54 app inputs are frozen; use55 for
+new implementation. The
 owner's approval for this tested picker fix/unsigned trial continues to apply;
 no tag, Release or unrelated write is authorized. Do not infer a game-import
 pass from the existing backup picker or from the iOS26.5 simulator. Original
