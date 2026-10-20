@@ -5,7 +5,8 @@ The owner asks to repair the Strawberry Jam downloader and verify that the app,
 actual Everest payload and dependency resolver agree about supported versions.
 The implementation uses the retained stable1.6642.0 source. Final local native,
 live installation, actual broken-link recovery and independently verified hosted
-IPA checks pass. No56 tag, Release or physical runtime pass is claimed.
+IPA checks pass. The owner now authorizes merging PR6 and the0.25.1 Release;
+physical runtime acceptance remains separate.
 
 ## Confirmed failure and exact archive relocation
 
@@ -170,3 +171,35 @@ tool hashes select recipe generation
 first/cached phone preparation is still a separate device gate. All274 captured
 app inputs and `artifacts/cabrillo-build56-hosted` are frozen; use57 for new app
 implementation. Delivery notes remain outside those frozen app inputs.
+
+
+## Physical phone installer acceptance —20 October2026
+
+On20 October the owner confirms “Yep all works now!” The attached exact56
+diagnostics match all274 hosted source hashes on physical iOS27.0.1. Copy-mode
+game ZIP import stages875,540,825 bytes; all52 Strawberry Jam archives verify and
+install, and a52-change receipt commits successfully. FemtoHelper1.15.22 uses
+1838255 with the exact tested SHA256. No storage error is reported. This closes
+the phone downloader defect. The export contains no JIT/preparation/gameplay/
+save/Quit events, so those separate runtime gates remain. Diagnostics SHA256:
+`d8a2d67212a30d4cba221fddf829f28946370eac6836c2bf872bf2b99455eef7`. Raw evidence stays ignored in
+`.private/device-evidence/2026-10-20/build56-owner-install`.
+
+The owner confirmation answers the request to install the unsigned56 trial with
+the existing Feather setup and retry Strawberry Jam. All189 events and the
+completed transaction are reviewed; the original attachment is retained privately.
+The bundled runtime identity reports Everest/EverestCore1.6642.0. No original
+game or device data is changed by this read-only evidence review. All274 app
+inputs and the test kit remain frozen.
+
+
+## Release publication authorized —20 October2026
+
+After confirming the phone installer, the owner explicitly requests merging PR6
+and publishing the latest version as a Release. Preparation commits only scoped
+phone acceptance, authorization and release notes. All274 captured app inputs
+and151 dependency pins remain exact to the accepted56 trial. The release uses
+an annotated `v0.25.1` on reviewed merged `main` and the existing full tagged
+build/audit/attestation/verification/publisher workflow. The public five-file kit
+will be independently downloaded and checked against that exact tag/run before
+publication is recorded as complete. Existing immutable kits and history remain.

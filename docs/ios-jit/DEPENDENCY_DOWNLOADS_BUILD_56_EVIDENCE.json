@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "date": "2026-10-20",
-  "recorded_utc": "2026-10-20T05:07:43.911438+00:00",
+  "recorded_utc": "2026-10-20T05:28:05.998565+00:00",
   "version": "0.25.1",
   "build_number": "56",
   "build_id": "launcher-dependency-downloads-20261019-56",
-  "status": "PASS_HOSTED_BUILD56_KIT_SOURCE_METADATA_SIGNATURE_VERSION_PARITY_AND_ATTESTATIONS_DEVICE_PENDING",
+  "status": "PASS_HOSTED56_AND_PHYSICAL_INSTALLER_GAMEPLAY_JIT_PENDING",
   "diagnosis": {
     "reported_build": "55",
     "verified_archives_before_failure": 33,
@@ -285,8 +285,6 @@
       "Repair validation and delivery notes"
     ],
     "approval_excludes": [
-      "New version tag",
-      "Public Release",
       "Unrelated future changes"
     ],
     "source_commit": "9e1f6cc4838e7b8aaff1ce86d57e307a5e84abee",
@@ -300,12 +298,56 @@
     "ipa_sha256": "b9e0fa34a9163ad0024f4ff2ff02d10290716537deb6629b0e4ead33946d3fe0",
     "captured_source_files": 274,
     "dependency_hashes": 151,
-    "dependency_hashes_exact55": true
+    "dependency_hashes_exact55": true,
+    "release_publication": {
+      "status": "EXPLICIT_OWNER_AUTHORIZATION_PREPARING",
+      "date": "2026-10-20",
+      "owner_request": "merge the pr and get the latest as a release",
+      "pull_request": 6,
+      "tag": "v0.25.1",
+      "version": "0.25.1",
+      "scope": [
+        "Merge reviewed PR6",
+        "Annotated matching version tag on merged main",
+        "Existing tagged build/audit/attestation/publish workflow",
+        "Public five-file Release and notes"
+      ],
+      "accepted274_app_inputs_preserved": true
+    }
   },
   "limitations": {
-    "physical_device_tested": false,
+    "physical_device_tested": true,
     "gameplay_or_jit_executed": false,
     "fresh56_managed_payload_compiled": true,
-    "known_tested_installer_cases_do_not_establish_all_future_mod_compatibility": true
+    "known_tested_installer_cases_do_not_establish_all_future_mod_compatibility": true,
+    "physical_device_scope": "Game ZIP copy selection/staging and all52 Strawberry Jam archives installed; runtime/gameplay/JIT/save/Quit not established by this export"
+  },
+  "physical_installer_acceptance": {
+    "status": "PASS_PHYSICAL_BUILD56_GAME_COPY_IMPORT_AND_STRAWBERRY_JAM_INSTALL",
+    "date": "2026-10-20",
+    "owner_confirmation": "Yep all works now!",
+    "diagnostics_sha256": "d8a2d67212a30d4cba221fddf829f28946370eac6836c2bf872bf2b99455eef7",
+    "diagnostics_bytes": 621595,
+    "private_original": ".private/device-evidence/2026-10-20/build56-owner-install/owner-diagnostics.json",
+    "build_number": "56",
+    "version": "0.25.1",
+    "source_commit": "9e1f6cc4838e7b8aaff1ce86d57e307a5e84abee",
+    "all274_captured_source_hashes_match_hosted_kit": true,
+    "physical_device": true,
+    "os_version": "27.0.1",
+    "game_zip_copy_import": true,
+    "game_zip_staged_bytes": 875540825,
+    "verified_archives": 52,
+    "installed_archives": 52,
+    "committed_changes": 52,
+    "transaction_outcome": "completed",
+    "application_state": "applied",
+    "femto_version": "1.15.22",
+    "femto_source_url": "https://gamebanana.com/mmdl/1838255",
+    "femto_verified_sha256": "5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419",
+    "current_events": 189,
+    "storage_error": null,
+    "runtime_jit_preparation_gameplay_save_or_quit_events_present": false,
+    "scope": "Physical phone game ZIP selection/staging and complete reviewed mod installation; no additional runtime/gameplay/save/lifecycle acceptance inferred"
   }
 }

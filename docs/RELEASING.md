@@ -11,8 +11,9 @@ Every recovered download must pass the original reviewed size, hash and module
 versions. It retains stable Everest1.6642.0, the build54 Feather picker repair,
 and the same native/.NET/NuGet/FMOD/Shortcut49 dependency pins as55.
 [Build56's report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) records the completed
-local and hosted checks. The owner approves its source/unsigned trial on20 October;
-publication as a new tag/Release and physical gameplay/JIT acceptance stay separate.
+local and hosted checks. The owner approves its source/unsigned trial and then
+explicitly requests merging PR6 and publishing0.25.1 on20 October. Physical
+gameplay/JIT acceptance remains separate from the accepted installer/publication.
 Commits resolve to `hmcneill46` for both author and committer. Published v0.24.3 is below.
 
 ## Unsigned0.25.1/build56 trial —20 October2026

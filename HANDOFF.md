@@ -32,6 +32,16 @@ IPA SHA256 `b9e0fa34a9163ad0024f4ff2ff02d10290716537deb6629b0e4ead33946d3fe0`.
 All274 captured56 app inputs and `artifacts/cabrillo-build56-hosted` are frozen;
 use57 for new app implementation. Physical gameplay/JIT remains untested for56.
 
+On20 October the owner confirms “Yep all works now!” The attached exact56
+diagnostics match all274 hosted source hashes on physical iOS27.0.1. Copy-mode
+game ZIP import stages875,540,825 bytes; all52 Strawberry Jam archives verify and
+install, and a52-change receipt commits successfully. FemtoHelper1.15.22 uses
+1838255 with the exact tested SHA256. No storage error is reported. This closes
+the phone downloader defect. The export contains no JIT/preparation/gameplay/
+save/Quit events, so those separate runtime gates remain. Diagnostics SHA256:
+`d8a2d67212a30d4cba221fddf829f28946370eac6836c2bf872bf2b99455eef7`. Raw evidence stays ignored in
+`.private/device-evidence/2026-10-20/build56-owner-install`.
+
 The supplied exact55 diagnostics show33/52 archives verified, then
 FemtoHelper1.15.22 oldfile1776026 fails; no mod transaction commits. The official
 archived file1838255 has identical11,103,153 bytes/SHA256
@@ -46,8 +56,12 @@ On20 October, after the local fix/checks completed, the owner explicitly answers
 “Go for it” to committing/pushing tested56 as `hmcneill46`, updating existing
 draft PR6 and running the existing workflow for an unsigned test IPA. This
 includes the repair's source, validation/delivery notes and scoped build fixes.
-Preserve published history. No new public tag or Release is authorized.
-Physical gameplay/JIT/save/lifecycle gates stay distinct.
+The owner then confirms the phone installer and explicitly requests on20 October:
+“merge the pr and get the latest as a release”. This authorizes merging PR6,
+annotated `v0.25.1` at the reviewed merged source, the existing tagged release
+workflow, public IPA/verification assets and release/change/delivery notes.
+Preserve published history and all274 frozen app inputs. Physical gameplay/JIT/
+save/lifecycle gates stay distinct from the accepted phone installer.
 
 ## Everest stable1.6642 update —19 October, build55
 

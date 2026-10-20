@@ -17,18 +17,21 @@ under [Releases](https://github.com/hmcneill46/cabrillo-celeste/releases).
 Normal pushes run source checks; a maintainer chooses when to publish a version
 tag. Manual trial builds produce downloadable Actions artifacts without a Release.
 
-**[Download Cabrillo 0.24.3 / build 54](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.24.3/Cabrillo-0.24.3-unsigned.ipa)** ·
-[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3).
-The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39285104629) rebuilt the tested source, audited the IPA
-and verified all five attestations before publishing. All five Release assets
-also pass independent downloads without sign-in, checksums and tag-specific
-attestation verification. Release assets persist beyond temporary Actions artifacts.
+**[Download Cabrillo 0.25.1 / build 56](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.25.1/Cabrillo-0.25.1-unsigned.ipa)** ·
+[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.25.1).
+Publication is being prepared through the tagged build/audit/attestation workflow.
+The accepted [unsigned trial](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102)
+passes fresh source compilation, package checks and independent verification of
+all five attestations. Release download verification is recorded after publication.
 
-Version0.24.3/build54 adds [the Feather game-ZIP picker fix](docs/ios-jit/COPY_PICKER_BUILD_54.md).
-Game-ZIP selection and staging pass on the tested trial with iPhone/iOS27.0.1,
-the original identifier and current Development profile. The tagged rebuild
-retains all253 tested app inputs and151 dependency hashes; no separate device
-run of that freshly built IPA is claimed. See [change notes](CHANGELOG.md).
+Version0.25.1/build56 updates Everest to stable1.6642.0 and adds general recovery
+of moved mod downloads, current mirror metadata and matching dependency rules.
+The phone trial confirms game ZIP copying and all52 Strawberry Jam archives
+installed successfully, including the exact tested FemtoHelper archive. The
+Feather import repair, save/profile paths, JIT routes and Shortcut49 are retained.
+All274 tested app source inputs and151 dependency hashes stay frozen for the
+release rebuild. See [change notes](CHANGELOG.md) and
+[the verification report](docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md).
 
 You need **iOS15 or later, a compatible installation/JIT setup, and your own
 Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game
@@ -145,7 +148,7 @@ passes fresh compilation, package checks and independent verification of all274
 captured sources,151 dependency hashes,199 managed DLLs and all five attestations.
 It requires GitHub sign-in and expires3 November2026. Physical gameplay/JIT testing
 of56 remains pending.
-The download above remains the published0.24.3 release.
+The download above targets the owner-approved0.25.1 release publication.
 
 Use macOS, Python3.12 or later, CMake, Mono6.14.1 (including `sn`) and **Xcode26.6 /17F113**. Download your own
 **FMOD Engine1.10.09 iOS SDK** from [fmod.com](https://www.fmod.com/download), then:
