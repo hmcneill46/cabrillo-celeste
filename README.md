@@ -17,25 +17,25 @@ under [Releases](https://github.com/hmcneill46/cabrillo-celeste/releases).
 Normal pushes run source checks; a maintainer chooses when to publish a version
 tag. Manual trial builds produce downloadable Actions artifacts without a Release.
 
-**[Download Cabrillo 0.26.0 / build 57](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.26.0/Cabrillo-0.26.0-unsigned.ipa)** ·
-[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0).
-The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270) passes
-fresh compilation, package audits, all five attestations, separate verification
-and publication. All five Release assets independently download without sign-in
-and pass checksums/API digests and exact tag/source/workflow/run verification.
+**[Download Cabrillo 0.29.0 / build 58](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.29.0/Cabrillo-0.29.0-unsigned.ipa)** ·
+[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.29.0).
+The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39431127531) passes fresh compilation,
+package audits, all five attestations, separate verification and publication.
+All five Release assets independently download without sign-in and pass
+checksums/API digests and exact tag/source/workflow/run verification.
 Release assets persist beyond temporary Actions artifacts.
 
-Version 0.26.0 / build 57 adds recommended Built-in StikJIT for new standalone
-iOS 17.4+ installations. Run Celeste prepares and enables JIT with visible progress,
-then launches after native checks and known debugger detach. Manual pairing-file
-import, actual local-tunnel readiness and a visible, centered Run icon are included.
-Existing saved JIT choices, external methods and LiveContainer support remain.
+Version 0.29.0 combines original itch.io, Steam and Epic game-file support with a
+full-display SwiftUI touch editor, optional feather/swipe controls and live input
+preferences. It retains stable Everest 1.6642.0, Built-in StikJIT for supported
+standalone iOS 17.4+ installations, existing LiveContainer/external JIT choices,
+copy-based imports, dependency recovery, saves and Shortcut49.
 
-Stable Everest 1.6642.0, the dependency-download and Feather import repairs,
-save/profile paths and Shortcut49 are retained. All 299 captured trial sources
-and 153 dependency hashes match the release; StikJIT's upstream prebuilt idevice
-library is explicitly disclosed. See [change notes](CHANGELOG.md) and
-[the verification report](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md).
+All 345 captured app inputs match the owner-accepted local test build. Shared
+dependencies match that trial; host-specific SDK/NuGet inputs follow their declared
+architecture pins. StikJIT's upstream prebuilt idevice library remains disclosed.
+The local test kit and hosted release have separate package identities. See
+[change notes](CHANGELOG.md) and [verification and device-test scope](docs/ios-jit/UNIFIED_BUILD_58.md).
 
 You need **iOS15 or later, a compatible installation/JIT setup, and your own
 Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game
@@ -52,15 +52,16 @@ FMOD, .NET/NuGet binaries and signed Shortcut resources are declared inputs;
 this is not a claim that every dependency is compiled from source or that separate
 builds are byte-identical. See [how releases work and how to verify a download](docs/RELEASING.md).
 
-## Version0.29.0 / build58 publication
+## What is new in 0.29.0 / build 58
 
 The owner has tested and approved the combined build for release. Version0.29.0
 brings together the published v0.26.0 work and this Mac's game-input and touch-control
 development. All nine original game ZIPs, the touch editor, cold/cached Strawberry
 Jam and Motion Smoothing pass host/simulator checks. Both source histories are
 preserved by [PR8](https://github.com/hmcneill46/cabrillo-celeste/pull/8).
-The tagged GitHub Actions build will compile and verify the release; the download
-above remains v0.26.0 until publication succeeds.
+The tagged GitHub Actions release is independently verified and available above.
+The owner's acceptance covers the local trial; publication adds no new physical
+device-test result.
 See [integration and publication status](docs/ios-jit/UNIFIED_BUILD_58.md).
 
 ### Game files from itch.io, Steam and Epic
@@ -199,7 +200,7 @@ For development, start with [the current handoff](HANDOFF.md),
 ## Developers: build locally
 
 The combined development recipe is `tools/build_release58.py`; it targets
-0.29.0/build58 with stable Everest1.6642.0, dependency download recovery, copy-based
+0.29.0/build58 with stable Everest 1.6642.0, dependency download recovery, copy-based
 Files imports, Built-in StikJIT and the touch/input features above. Use
 `tools/build_release57.py` to reproduce the published v0.26.0 source lane.
 Build58 validation and delivery are tracked in

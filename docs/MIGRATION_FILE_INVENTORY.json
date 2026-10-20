@@ -25,18 +25,18 @@
     },
     "AGENTS.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "694a3b89242b483c1037a9b53f1e864391b989f76060cdb94575fb8c199275ce",
-      "bytes": 78625
+      "sha256": "d376ef6c9b6c70568f0c500ea9fc1569425f186982ec08693205b680a257aab0",
+      "bytes": 79604
     },
     "CHANGELOG.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "216d17650ff5480d9cf7bac6ddd79b9a65330d30d23d9c937b91d00bc3b438d6",
-      "bytes": 4478
+      "sha256": "5fb59b858666b19e505102bb02591a37aa0f9ee46ae274bd3e1477b0259b8395",
+      "bytes": 4918
     },
     "HANDOFF.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "6f5920fbf6317d3d2b2d824d61376f48a6f0e7876b28d62b5257585c015a6f87",
-      "bytes": 141962
+      "sha256": "cd439ad93487d4c223954eeb635c904da13bf4b526fdca45e3a019564df82ce3",
+      "bytes": 142941
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -46,8 +46,8 @@
     },
     "README.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "e9736526358bbb31039b703f206436db9593ce5c78d019995903aa6e33426b79",
-      "bytes": 17150
+      "sha256": "22b243fef4b6f9508fdfe7ca82f91531047bce13cb421f45d88db99f2f5c3702",
+      "bytes": 17222
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -56,8 +56,8 @@
     },
     "docs/BUILDING.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "79fdb1a8189ab919ed9815eff6aabe96df47c21170805f8e53656dd12feb49a2",
-      "bytes": 47942
+      "sha256": "40743d03535ad6025c729b0203aca816d8fdbc305fb4b7f55188fc6bf0ca6ea2",
+      "bytes": 48484
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -95,8 +95,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "f135124e1c8fd41b532a303857a450e767f0eaf88f164f9ceb29107b2e08e554",
-      "bytes": 24625
+      "sha256": "782110c9589294055c3a94b3c365899817bef7e5eda0a22c6635cd5eefa5db7f",
+      "bytes": 25511
     },
     "docs/TOUCH_CONTROLS.md": {
       "reason": "Build56 control customization guide or evidence summary; private logs and binaries remain ignored",
@@ -1037,13 +1037,13 @@
       "bytes": 4294
     },
     "docs/ios-jit/UNIFIED_BUILD_58.md": {
-      "bytes": 11842,
-      "sha256": "c8069053c8eb4734cd475bc171b4e14a6db188e39b29b5c1914aad232bcbaee9",
+      "bytes": 12961,
+      "sha256": "f8c4c5d02eac42d2aa7247c8e424cf27409e076b73829c0fe70f843fe1c8faa2",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "docs/ios-jit/UNIFIED_BUILD_58_EVIDENCE.json": {
-      "bytes": 9211,
-      "sha256": "ed686289822d17c75096dd95680c90812f67733ad3963c50c05272dfb6fa73ac",
+      "bytes": 10674,
+      "sha256": "5cdbdaa5f4e1c1e88d18bcb0e2937ad945118273087e3eb4121db1048efbfbc7",
       "reason": "Combined Cabrillo build58 implementation, regression or public-source build tooling."
     },
     "docs/ios-jit/VISIBILITY_BUILD_36.md": {

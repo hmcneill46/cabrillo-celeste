@@ -3,7 +3,7 @@
   "date": "2026-10-20",
   "version": "0.29.0",
   "build_number": 58,
-  "status": "OWNER_ACCEPTED_BUILD58_RELEASE_PUBLICATION_IN_PROGRESS",
+  "status": "PASS_PUBLISHED_BUILD58_AND_INDEPENDENT_PUBLIC_VERIFICATION",
   "source_lineages": {
     "local_snapshot": "ee475e3",
     "published_main": "65e45c2",
@@ -60,8 +60,8 @@
     "physical_dualsense_colours_tested": false,
     "sustained_physical_120hz_tested": false,
     "device_helper_ddi_jit_tested": false,
-    "new_tag_created": false,
-    "new_public_release_created": false,
+    "new_tag_created": true,
+    "new_public_release_created": true,
     "owner_reported_test_build_acceptance": true,
     "physical_device_test_scope": "Existing automated evidence remains host/simulator-only; owner general acceptance is recorded separately without new device diagnostics.",
     "phone_modified_by_agent": false
@@ -172,12 +172,15 @@
     "final_build_receipt": {
       "sha256": "95363f171683d37fa690fea8be5dd27dedace37a807f4bcdbd19e95ad59f31d1",
       "status": "BUILD_COMPLETE_AWAITING_PACKAGE_VERIFICATION"
+    },
+    "published_release_verification": {
+      "sha256": "b74e1dd87ee813a1cb1177e5db5713c43b25efa6178aca2f30d391c58821499b",
+      "status": "PASS_DOWNLOADED_PUBLISHED_RELEASE",
+      "path": "artifacts/cabrillo-v0.29.0-release/verification.json"
     }
   },
   "remaining": [
-    "Authorized publication commit/tag and tagged GitHub Actions release",
-    "Independent public asset checksum, provenance and attestation verification",
-    "Existing granular physical-device evidence gates remain separate from general owner acceptance"
+    "Existing granular physical-device evidence gates remain separate from general owner acceptance and release publication"
   ],
   "final_package": {
     "source_commit": "5d535d85ffc2f43d60c58a7fe9bc2064dffa2522",
@@ -206,14 +209,48 @@
     "granular_device_gates_unchanged": true
   },
   "publication": {
-    "status": "IN_PROGRESS",
+    "status": "PASS_PUBLISHED_AND_VERIFIED",
     "version_tag": "v0.29.0",
     "owner_authorized_main_commit": true,
     "owner_authorized_tag_and_release": true,
     "github_account": "hmcneill46",
-    "tagged_workflow_success_confirmed": false,
-    "public_assets_independently_verified": false,
+    "tagged_workflow_success_confirmed": true,
+    "public_assets_independently_verified": true,
     "tested_inputs_to_preserve": 345,
-    "app_implementation_changes_authorized_by_this_publication_request": false
+    "app_implementation_changes_authorized_by_this_publication_request": false,
+    "source_commit": "3bdf1713667bacedf3cd639e3c6eba3e19ac52b5",
+    "workflow_run_id": "39431127531",
+    "workflow_run_attempt": "1",
+    "run_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39431127531",
+    "release_url": "https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.29.0"
+  },
+  "published_release": {
+    "source_commit": "3bdf1713667bacedf3cd639e3c6eba3e19ac52b5",
+    "tag": "v0.29.0",
+    "ipa_sha256": "1226d62149d8fa5189da6c0aa5261ace9cd89962e5b458558fe7f0d67b45efa5",
+    "bytes": 21326287,
+    "source_inputs": 345,
+    "accepted_app_inputs_match": true,
+    "assets": 5,
+    "attestations": 5,
+    "downloads_without_authentication": true,
+    "managed_assemblies": 199,
+    "managed_metadata_checks": 434,
+    "nlua_signature_verified": true,
+    "physical_device_tested": false,
+    "retained_kit": "artifacts/cabrillo-v0.29.0-release",
+    "dependency_verification": {
+      "count": 153,
+      "host_arch": "arm64",
+      "local_host_arch": "x64",
+      "architecture_specific_dependencies": [
+        "sdk8.0-osx-arm64",
+        "sdk9.0-osx-arm64",
+        "microsoft.netcore.app.host.osx-arm64/8.0.16"
+      ],
+      "shared_dependencies_match_accepted_trial": true,
+      "dependencies_match_frozen_pins": true,
+      "dependencies_match_accepted_trial": false
+    }
   }
 }

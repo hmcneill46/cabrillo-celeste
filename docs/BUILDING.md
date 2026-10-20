@@ -1,13 +1,19 @@
 # Building Cabrillo
 
-## Combined development build: version0.29.0 / build58
+## Current published source build: version0.29.0 / build58
 
-Build58 combines the local game-input/touch-editor work with published v0.26.0.
-Host, simulator and package checks pass; [the integration report](ios-jit/UNIFIED_BUILD_58.md)
-records the verified local test IPA and iCloud delivery. The owner accepts that
-test build and authorizes the v0.29.0 Release; tagged publication is in progress.
-Detailed device gates keep their recorded scope. Build58 is frozen; use59 for new
-app implementation.
+Build58 combines both development histories. The [public v0.29.0 Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.29.0)
+passes the [tagged build](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39431127531) and independent download, checksum/API-digest
+and attestation checks for all five assets. Its source commit is
+`3bdf1713667bacedf3cd639e3c6eba3e19ac52b5`. All345 captured app inputs match the owner-accepted local trial and
+remain frozen; use59 for new app implementation.
+
+The [integration report](ios-jit/UNIFIED_BUILD_58.md) records the hosted release
+and separate local test IPA/iCloud evidence. Shared dependencies match the local
+trial; host-specific SDK/NuGet packages follow the appropriate declared pins.
+The permitted FMOD runtime and upstream prebuilt idevice component remain disclosed;
+developers must obtain their own FMOD SDK. Detailed physical-device gates keep
+their recorded scope; publication adds no device-test result.
 
 Use the same Xcode, Mono and developer-owned FMOD prerequisites below:
 
@@ -33,7 +39,7 @@ its receipt with a published recipe that shares its number. Local feature lanes,
 tests and evidence remain available here. See the
 [lineage table](ios-jit/UNIFIED_BUILD_58.md#source-lineages).
 
-## Current published source build: version0.26.0 / build57
+## Preserved published recipe: version0.26.0 / build57
 
 The integrated StikJIT implementation uses the same Xcode26.6 /17F113, SDK26.5,
 Mono6.14.1 and developer-owned FMOD SDK as56 below:

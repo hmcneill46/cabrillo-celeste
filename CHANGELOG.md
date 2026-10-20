@@ -6,11 +6,15 @@
 - Add original itch.io, Steam and Epic game-file compatibility and store acquisition instructions; retain imported originals across cache rebuilds.
 - Add a full-display SwiftUI touch editor with actual-size landscape editing, split regions, duplicate buttons, Crouch Dash, Quick Restart and optional swipe-to-dash.
 - Add live feather steering, original Celeste grab semantics with separate input preferences, optional persistent toggling and controller symbol/light support.
-- Preserve both sets of independently numbered53–57 recipes in Git history and use a new build58 identity for the combined test IPA.
+- Preserve both sets of independently numbered53–57 recipes in Git history and use a new build58 identity for the combined release.
 
-The owner reports that the combined test build looks good and authorizes the
-version tag and public Release. Publication is in progress through GitHub Actions;
-[the integration report](docs/ios-jit/UNIFIED_BUILD_58.md) records its scope.
+The owner accepts the combined local test build. The [public v0.29.0 Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.29.0)
+now includes the unsigned IPA and verification files. [Tagged run39431127531](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39431127531)
+and independent public-download checks pass all five checksums/API digests and
+exact source/tag/workflow/run attestations. All345 app inputs match the accepted
+trial; its package identity and scoped acceptance remain separate from the hosted
+release. Publication adds no detailed physical-device results. See
+[the integration and release report](docs/ios-jit/UNIFIED_BUILD_58.md).
 
 ## 0.26.0 · 20 October 2026
 

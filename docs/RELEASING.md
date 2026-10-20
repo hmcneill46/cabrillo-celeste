@@ -4,7 +4,7 @@
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current development recipe is [release/public58.json](../release/public58.json),
+The current public release recipe is [release/public58.json](../release/public58.json),
 version 0.29.0 / build58. It combines both computers' development: game-file
 compatibility, full-display touch editing and live input preferences, alongside
 stable Everest1.6642, copy-based imports, dependency recovery and Built-in StikJIT.
@@ -17,15 +17,26 @@ test-kit checks. The owner reports **“Yep looks good”** after testing the de
 build58 and explicitly requests committing to `main` and updating GitHub Releases.
 This authorizes the publication commit, annotated **`v0.29.0`** tag and existing
 tagged release workflow, including its public IPA and verification assets.
-Publication is in progress. Record the tagged run and independently downloaded
-assets only after they pass; the local test IPA is not a hosted attestation.
+The [public v0.29.0 Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.29.0) is verified. Annotated `v0.29.0`
+points to `3bdf1713667bacedf3cd639e3c6eba3e19ac52b5`. [Tagged run 39431127531](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39431127531)
+completed the existing build, audit, attestation and publication workflow.
+All five assets independently download without authentication and match their
+API digests/checksums and exact source/tag/workflow/run attestations. All 345
+captured app inputs match the accepted local trial. The actual 199 managed
+assemblies pass 434 metadata checks and NLua signature verification.
+
+Published IPA: **21,326,287 bytes**; SHA256:
+`1226d62149d8fa5189da6c0aa5261ace9cd89962e5b458558fe7f0d67b45efa5`.
+The public package and independent verification are retained in
+`artifacts/cabrillo-v0.29.0-release`, separately from the accepted local test kit.
+Publication adds no new device-test result; the owner's general acceptance and
+all granular physical gates retain their recorded scope.
 
 Preserve the tested local IPA and all345 frozen app inputs from clean `5d535d8`.
 The owner's general acceptance adds no detailed helper/DDI/JIT, controller-colour,
 sustained120Hz or other granular device result. The previous public
 v0.26.0/build57 and its unchanged
-[report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) remain available while the new
-release is prepared. Source and delivery commits use `hmcneill46`. Manual
+[report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) remain available alongside v0.29.0. Source and delivery commits use `hmcneill46`. Manual
 non-publishing trials still use `publish=false`. No iLoader work is authorized.
 
 ## Published v0.26.0 / build57 —20 October2026

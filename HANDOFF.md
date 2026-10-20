@@ -1,15 +1,29 @@
 # Cabrillo development handoff
 
-## Current work: unified build58 / 0.29.0 — 20 October 2026
+## Published v0.29.0 / build58 — 20 October 2026
 
 The owner requested preserving and merging this Mac's work with published
 v0.26.0 as `hmcneill46`, then testing an unsigned IPA. After receiving build58,
 the owner reports **“Yep looks good”** and explicitly requests committing to
 `main` and updating GitHub Releases. This authorizes the publication commit,
 annotated **`v0.29.0`** tag, existing tagged GitHub Actions build and public
-Release assets. **Publication is in progress; do not claim the Release is
-available until the workflow and independent download checks pass.** No iLoader
-change or submission is included.
+Release assets. **Publication and independent public-download verification pass.**
+No iLoader change or submission is included.
+
+The [public v0.29.0 Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.29.0) is verified. Annotated `v0.29.0`
+points to `3bdf1713667bacedf3cd639e3c6eba3e19ac52b5`. [Tagged run 39431127531](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39431127531)
+completed the existing build, audit, attestation and publication workflow.
+All five assets independently download without authentication and match their
+API digests/checksums and exact source/tag/workflow/run attestations. All 345
+captured app inputs match the accepted local trial. The actual 199 managed
+assemblies pass 434 metadata checks and NLua signature verification.
+
+Published IPA: **21,326,287 bytes**; SHA256:
+`1226d62149d8fa5189da6c0aa5261ace9cd89962e5b458558fe7f0d67b45efa5`.
+The public package and independent verification are retained in
+`artifacts/cabrillo-v0.29.0-release`, separately from the accepted local test kit.
+Publication adds no new device-test result; the owner's general acceptance and
+all granular physical gates retain their recorded scope.
 
 Integration uses `launcher-unified58`, version0.29.0/build58. The local source was
 captured at `ee475e3` on `codex/game-input-compatibility`; the other computer's
@@ -44,7 +58,7 @@ The owner's acceptance applies to this delivered test build. No new diagnostic
 export or detailed device-test results accompany that reply; helper/DDI/JIT,
 DualSense colours, sustained120Hz and earlier granular gates keep their existing
 scope. No phone was modified by the agent. Preserve the tested kit and all345
-frozen sources while the authorized tagged release is built and verified.
+frozen sources alongside the independently verified tagged release.
 
 Build numbers53–57 were allocated independently on both computers. Canonical
 `release/app53`–`app57`, `release/public53.json`–`public57.json` and numbered

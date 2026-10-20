@@ -10,8 +10,8 @@ The owner requested preserving both computers' work, merging and pushing it as
 owner reports **“Yep looks good”** and explicitly requests committing to `main`
 and updating GitHub Releases. This authorizes the publication commit, annotated
 **`v0.29.0`** tag and the existing tagged workflow's public IPA and verification
-assets. Publication is in progress; no completed release or hosted attestation
-is claimed here yet. The existing
+assets. The tagged workflow and independent public-download verification now
+pass; the published identity is recorded below. The existing
 [public v0.26.0](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
 remains available. No iLoader change or submission is included.
 
@@ -66,7 +66,7 @@ The merge at `eaa57b0` has both preserved parents, `ee475e3` and `65e45c2`.
 source and records its final GitHub check and merge status. Both histories must
 be retained with a merge commit. The local test package and iCloud delivery
 are verified below. The subsequent owner-authorized v0.29.0 publication is
-in progress; its tagged run and published asset checks are recorded separately.
+complete; its tagged run and published asset checks are recorded separately below.
 
 All299 captured published57 sources remain exact. All291 captured local57
 sources remain exact in its snapshot parent; the six colliding canonical paths
@@ -147,7 +147,8 @@ receipts were checked; all Results folders, local artifacts and accepted
 fallbacks remain. Total cloud size is996,437,125 bytes.
 
 The package was compiled locally from fresh pinned public managed/native inputs
-and a developer-owned FMOD SDK. It is not a new hosted release/attestation claim.
+and a developer-owned FMOD SDK. This local test evidence stays separate from
+the independently verified tagged release below.
 GitHub's retained `6dd9991` push and PR runs
 [39424156697](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39424156697)
 and [39424166753](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39424166753)
@@ -155,7 +156,7 @@ pass source and combined native/Swift/helper/policy jobs. PR8 records the final
 head's checks before merge. The public workflow selects58. The owner now
 authorizes the v0.29.0 tagged release; manual non-publishing trials continue to
 use `publish=false`. The tagged build and independent public-download checks
-remain pending and will have their own package identity and evidence.
+pass and have their own package identity and evidence below.
 
 All345 captured app inputs are frozen after this review; use59 for new app changes.
 
@@ -172,5 +173,22 @@ or detailed per-feature results. Actual installed helper registration/DDI/JIT,
 physical touch comfort, DualSense light colours and sustained120Hz retain their
 separate evidence requirements. Earlier save-manager, lifecycle and iPad gates
 keep their original scope. No phone was modified by the agent during integration.
-The accepted local test kit remains immutable while the authorized tagged
-release is rebuilt and independently verified.
+The accepted local test kit remains immutable alongside the independently
+verified tagged release.
+
+## Published v0.29.0
+
+The [public v0.29.0 Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.29.0) is verified. Annotated `v0.29.0`
+points to `3bdf1713667bacedf3cd639e3c6eba3e19ac52b5`. [Tagged run 39431127531](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39431127531)
+completed the existing build, audit, attestation and publication workflow.
+All five assets independently download without authentication and match their
+API digests/checksums and exact source/tag/workflow/run attestations. All 345
+captured app inputs match the accepted local trial. The actual 199 managed
+assemblies pass 434 metadata checks and NLua signature verification.
+
+Published IPA: **21,326,287 bytes**; SHA256:
+`1226d62149d8fa5189da6c0aa5261ace9cd89962e5b458558fe7f0d67b45efa5`.
+The public package and independent verification are retained in
+`artifacts/cabrillo-v0.29.0-release`, separately from the accepted local test kit.
+Publication adds no new device-test result; the owner's general acceptance and
+all granular physical gates retain their recorded scope.
