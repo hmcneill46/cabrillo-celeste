@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "date": "2026-10-20",
-  "recorded_utc": "2026-10-20T04:44:29.598178+00:00",
+  "recorded_utc": "2026-10-20T05:07:43.911438+00:00",
   "version": "0.25.1",
   "build_number": "56",
   "build_id": "launcher-dependency-downloads-20261019-56",
-  "status": "PASS_FINAL_LOCAL_SOURCE_NATIVE_LIVE_INSTALL_AND_EXACT_ARCHIVE_RECOVERY_HOSTED_AND_DEVICE_PENDING",
+  "status": "PASS_HOSTED_BUILD56_KIT_SOURCE_METADATA_SIGNATURE_VERSION_PARITY_AND_ATTESTATIONS_DEVICE_PENDING",
   "diagnosis": {
     "reported_build": "55",
     "verified_archives_before_failure": 33,
@@ -68,7 +68,10 @@
     "frozen_prior_app_inputs_mutated": false,
     "original_bundle_id_retained": true,
     "copy_imports_retained": true,
-    "signed_shortcut_revision": 49
+    "signed_shortcut_revision": 49,
+    "captured56_app_input_count": 274,
+    "captured56_inputs_frozen": true,
+    "next_app_implementation_build": 57
   },
   "checks": {
     "python": {
@@ -197,15 +200,81 @@
       "status": "PASS_PUBLIC_SOURCE_CHECKOUT",
       "public_files": 4715,
       "private_dependencies_used": false,
-      "scope": "Current Git candidate names, content hashes, reasons, public syntax and ignored boundaries; no IPA or device claim"
+      "scope": "Final source/delivery-note inventory and exclusion audit; this ledger and other delivery notes are outside the274 frozen app inputs"
+    },
+    "hosted": {
+      "status": "PASS_ALL_FIVE_ACTIVE_JOBS",
+      "source_commit": "9e1f6cc4838e7b8aaff1ce86d57e307a5e84abee",
+      "source_ref": "refs/heads/codex/actions-release",
+      "workflow_run_id": "39371266102",
+      "attempt": 1,
+      "workflow_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102",
+      "publisher": "SKIPPED",
+      "source_inventory_controls": 100,
+      "native_profiles": 119,
+      "dependency_controls": 321,
+      "dependency_suites": {
+        "mirrors": 76,
+        "runtime": 167,
+        "relocation": 78
+      },
+      "fresh_managed_and_native_compilation": true,
+      "official_sdk_acquisition": true,
+      "package_audits": true,
+      "independent_ubuntu_attestations": true
+    },
+    "independent_hosted_kit": {
+      "downloaded_kit": {
+        "status": "PASS_INDEPENDENT_DOWNLOADED_BUILD56_KIT",
+        "path": ".build/dependency56-hosted/download-verification.json",
+        "sha256": "b915babeef7cc4c72b285768c28803ed174e7d1f988998c00e08b0e5588da2a9"
+      },
+      "attestations": {
+        "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS",
+        "path": ".build/dependency56-hosted/attestations/receipt.json",
+        "sha256": "c29e8b923c683fd66c5d13de4ae241030feca5f8d14b949e956f43478d7242dd"
+      },
+      "packaged_managed": {
+        "status": "PASS_INDEPENDENT_BUILD56_PACKAGED_MANAGED_AND_STRONG_NAME",
+        "path": ".build/dependency56-hosted/managed-audit/receipt.json",
+        "sha256": "e5543597eadaa963fd77cb242369bc51b498cb5885ace2d2f675bacc897e3d90",
+        "assemblies": 199,
+        "metadata_checks": 434,
+        "exact_hosted_report_match": true,
+        "report_sha256": "1643e80f851adbdb8604bd6e2591f77304715be3dee1575a9e96825a9e1a4173",
+        "nlua_strong_name": {
+          "status": "PASS_CRYPTOGRAPHIC_NLUA_STRONG_NAME",
+          "assembly_sha256": "91ae47319afe5597ab95d141621abde68110daeb77c274d46666d33204785195",
+          "assembly_version": "1.4.1.0",
+          "algorithm": "RSA PKCS#1 v1.5 / SHA-1 (CLI strong-name format)",
+          "rsa_bits": 1024,
+          "public_exponent": 65537,
+          "public_key_sha256": "d2f227435896f748d9e46b42c899416fc73943443abaa285658188573cceebd4",
+          "public_key_token": "6a194c04b9c89217",
+          "signing_digest_sha1": "ae7a34606dc3fe741c1c226bb6d494e3c8a65b78",
+          "full_rsa_encoded_message_matches": true,
+          "covered_byte_tamper_rejected": true,
+          "signature_byte_tamper_rejected": true
+        },
+        "initial_attempt": "Ignored verifier receipt construction had a Python variable-shadowing error after its checks; no PASS receipt was issued. Only ignored tooling was corrected, then the complete audit reran in a fresh directory."
+      },
+      "actual56_version_parity": {
+        "status": "PASS_BUILD56_ACTUAL_PACKAGED_RUNTIME_VERSION_PARITY",
+        "path": ".build/dependency56-hosted/version-parity/receipt.json",
+        "sha256": "687e2c20434725f4116f54ad17e8ff01342585c8a4a899df47805981ee01a379",
+        "comparisons": 14,
+        "assertions": 156,
+        "report_sha256": "5e24d53ff40be1fb97bde95d6b0e623316a3250b2d7a972d31fece116ae22049",
+        "original_everest_assembly_loaded": false
+      }
     }
   },
   "delivery": {
     "github_write_approval": "EXPLICIT_OWNER_APPROVAL_2026_10_20",
-    "committed": false,
-    "pushed": false,
-    "hosted_build": false,
-    "ipa_built": false,
+    "committed": true,
+    "pushed": true,
+    "hosted_build": true,
+    "ipa_built": true,
     "tag_created": false,
     "public_release_created": false,
     "git_identity": "hmcneill46 <57508980+hmcneill46@users.noreply.github.com>",
@@ -219,12 +288,24 @@
       "New version tag",
       "Public Release",
       "Unrelated future changes"
-    ]
+    ],
+    "source_commit": "9e1f6cc4838e7b8aaff1ce86d57e307a5e84abee",
+    "workflow_run_id": "39371266102",
+    "workflow_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102",
+    "artifact_id": 12241274430,
+    "artifact_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102/artifacts/12241274430",
+    "artifact_expires_utc": "2026-11-03T05:04:01Z",
+    "kit_path": "artifacts/cabrillo-build56-hosted",
+    "ipa_bytes": 18784686,
+    "ipa_sha256": "b9e0fa34a9163ad0024f4ff2ff02d10290716537deb6629b0e4ead33946d3fe0",
+    "captured_source_files": 274,
+    "dependency_hashes": 151,
+    "dependency_hashes_exact55": true
   },
   "limitations": {
     "physical_device_tested": false,
     "gameplay_or_jit_executed": false,
-    "fresh56_managed_payload_compiled": false,
+    "fresh56_managed_payload_compiled": true,
     "known_tested_installer_cases_do_not_establish_all_future_mod_compatibility": true
   }
 }

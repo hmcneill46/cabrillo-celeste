@@ -4,8 +4,8 @@
 The owner asks to repair the Strawberry Jam downloader and verify that the app,
 actual Everest payload and dependency resolver agree about supported versions.
 The implementation uses the retained stable1.6642.0 source. Final local native,
-live installation and actual broken-link recovery checks pass. No56 IPA, tag,
-Release or physical runtime pass is claimed here until recorded below.
+live installation, actual broken-link recovery and independently verified hosted
+IPA checks pass. No56 tag, Release or physical runtime pass is claimed.
 
 ## Confirmed failure and exact archive relocation
 
@@ -103,7 +103,7 @@ metadata, audited to permit only integer/boolean operations and System.Version
 getters, then isolated into a core-library-only fixture. Its14 comparison cases
 agree with the final Swift fixture;156 guard/comparison assertions pass. No
 original Everest initializer, adapter or game code runs. Fresh56 managed package
-metadata remains a separate hosted-build check.
+metadata and actual56 version parity also pass as recorded below.
 
 The earlier live transport baseline downloaded and verified all52 Strawberry
 Jam archives (1,235,908,245 bytes) and passed128 installation/cache checks. That
@@ -128,11 +128,45 @@ with private/generated inputs excluded. On20 October the owner explicitly
 approves committing/pushing as `hmcneill46`, updating existing draft PR6 and
 running the existing restricted SDK workflow for an unsigned56 trial. This
 covers the repair and its validation/delivery notes; no new tag/Release is
-authorized. Hosted package verification is recorded below when complete.
+authorized. Hosted package verification is recorded below.
 
 Host installation and metadata checks do not establish physical gameplay, JIT,
 first/cached game preparation, save/resume/normal Quit or native return. The
 published54 fallback and earlier iPad/sustained120/save-manager gates remain
-separate. Preserve all frozen53/54/55 inputs and packages. New source changes are
-confined to the56 lane and current orchestration; no original/private game,
+separate. Preserve all frozen53/54/55/56 inputs and packages. Use57 for new app
+implementation; no original/private game,
 credentials, pairing data or SDK build inputs belong in public source or outputs.
+
+
+## Completed hosted trial and independent kit verification
+
+[Run39371266102](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102) at source
+`9e1f6cc4838e7b8aaff1ce86d57e307a5e84abee` completes all five active jobs on20 October.
+The publication job is skipped. Both commit author and committer resolve to
+`hmcneill46`. The hosted native reports independently confirm119 profile checks,
+321 dependency controls and actual arm64/iOS15 compilation. The full build uses
+fresh public managed/native sources and the approved official SDK.
+
+The [unsigned five-file kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102/artifacts/12241274430) requires GitHub sign-in;
+expiry is3 November2026 at05:04:01 UTC. Independent download verification checks
+all274 captured app source hashes, every retained53/54/55 source map, all151
+unchanged55 dependency hashes, exact56 download metadata, original bundle ID,
+copy imports, signed49 resources and absence of production test fixtures. All
+five cryptographic attestations match the exact source, ref, workflow, run and
+attempt; the kit stays unchanged throughout verification.
+
+The actual199 packaged DLLs pass434 metadata checks, whose report exactly matches
+the hosted fresh-build audit. NLua1.4.1's full RSA strong-name signature validates;
+covered-byte and signature-byte tamper controls are rejected. A separate guarded
+comparator extracted from this actual56 patch agrees with all14 final Swift
+version cases, with156 assertions. Only the isolated pure numeric comparison
+runs; the original Everest assembly, initializer, adapter and game never run.
+
+IPA bytes:18,784,686. SHA256:
+`b9e0fa34a9163ad0024f4ff2ff02d10290716537deb6629b0e4ead33946d3fe0`.
+The preparation recipe preserves original source/input identities. Fresh compiled
+tool hashes select recipe generation
+`27cbd4baf70cbc5b70173eb6e4e06d34f507dac9f61e8f8e2a0b65c9e9b2765b`;
+first/cached phone preparation is still a separate device gate. All274 captured
+app inputs and `artifacts/cabrillo-build56-hosted` are frozen; use57 for new app
+implementation. Delivery notes remain outside those frozen app inputs.

@@ -1,6 +1,6 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated20 October for the local general download repair,
+Written 14 September 2026; updated20 October for the verified build56 general download repair,
 the verified Everest6642/build55 trial,
 copy-based Files imports and v0.24.3 publication,
 following30 September FMOD clarification after source publication and USB shortcut testing,
@@ -15,7 +15,7 @@ Recheck current files and owner messages before treating this dated state as liv
 
 The owner requests the FemtoHelper download repair and explicitly requires a
 general solution for moved downloads, plus agreement between actual Everest and
-native dependency/version checks. Work is local in
+native dependency/version checks. The completed source is in
 `launcher-dependency-downloads`, Cabrillo0.25.1/build56, retaining stable1.6642.0.
 All261 captured55 inputs stay frozen. Read
 `docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md` and its evidence ledger for current
@@ -23,8 +23,14 @@ checks. Final100 Python,119 save/profile,321 dependency controls and actual iOS
 compilation pass. The final host installation verifies all52 Strawberry Jam
 archives and232 checks with seeded public cache, then a separate uncached real
 1776026→1838255 recovery passes14 assertions. Original fresh52-download baseline
-is retained separately. No56 package or physical pass is claimed until its own
-receipt exists.
+is retained separately. [Hosted run39371266102](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102)
+passes fresh managed/native compilation, official SDK acquisition, package audits,
+all five attestations and independent Ubuntu verification. The downloaded kit
+verifies all274 captured sources,151 exact55 dependency hashes,199 DLLs/434 metadata
+checks, full NLua strong-name signature and14 actual56/native version comparisons.
+IPA SHA256 `b9e0fa34a9163ad0024f4ff2ff02d10290716537deb6629b0e4ead33946d3fe0`.
+All274 captured56 app inputs and `artifacts/cabrillo-build56-hosted` are frozen;
+use57 for new app implementation. Physical gameplay/JIT remains untested for56.
 
 The supplied exact55 diagnostics show33/52 archives verified, then
 FemtoHelper1.15.22 oldfile1776026 fails; no mod transaction commits. The official

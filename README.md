@@ -140,10 +140,11 @@ The current development source uses stable Everest1.6642.0 in
 0.25.1/build56, with general dependency download recovery and build54's Feather
 import fix. Its validation and
 delivery are recorded in [the dependency repair report](docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md).
-The earlier55 [unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/artifacts/12221245338)
-passes fresh compilation, package checks and independent verification of all five
-attestations. It requires GitHub sign-in and expires2 November2026. Phone testing
-of the new Everest version remains pending.
+The build56 [unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102/artifacts/12241274430)
+passes fresh compilation, package checks and independent verification of all274
+captured sources,151 dependency hashes,199 managed DLLs and all five attestations.
+It requires GitHub sign-in and expires3 November2026. Physical gameplay/JIT testing
+of56 remains pending.
 The download above remains the published0.24.3 release.
 
 Use macOS, Python3.12 or later, CMake, Mono6.14.1 (including `sn`) and **Xcode26.6 /17F113**. Download your own

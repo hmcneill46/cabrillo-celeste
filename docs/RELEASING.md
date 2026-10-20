@@ -10,10 +10,34 @@ version0.25.1/build56. It adds bounded recovery of moved mod archives, native
 Every recovered download must pass the original reviewed size, hash and module
 versions. It retains stable Everest1.6642.0, the build54 Feather picker repair,
 and the same native/.NET/NuGet/FMOD/Shortcut49 dependency pins as55.
-[Build56's report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) records local checks;
-the owner explicitly approves its source/unsigned hosted trial on20 October. No56 hosted IPA, tag,
-Release or physical gameplay/JIT acceptance is claimed at this preparation stage.
-Future authorized pushes use `hmcneill46`. Published v0.24.3 is below.
+[Build56's report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) records the completed
+local and hosted checks. The owner approves its source/unsigned trial on20 October;
+publication as a new tag/Release and physical gameplay/JIT acceptance stay separate.
+Commits resolve to `hmcneill46` for both author and committer. Published v0.24.3 is below.
+
+## Unsigned0.25.1/build56 trial —20 October2026
+
+[Run39371266102](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102) passes all five active jobs at
+`9e1f6cc4838e7b8aaff1ce86d57e307a5e84abee`, ref
+`refs/heads/codex/actions-release`, attempt1. Official SDK acquisition, fresh
+managed/native compilation, package audits, all five attestations and separate
+Ubuntu verification pass. Release publication is skipped.
+
+The [five-file unsigned kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102/artifacts/12241274430)
+requires GitHub sign-in and expires3 November2026 at05:04:01 UTC. Its independent
+download at `artifacts/cabrillo-build56-hosted` verifies all274 captured source
+hashes, all151 unchanged55 dependency hashes, original bundle ID/copy imports,
+exact compatibility archives and signed49 Shortcuts. The actual199 DLLs pass434
+metadata checks matching the hosted audit exactly, full NLua RSA strong-name
+verification with tamper controls, and14 numeric dependency comparisons against
+the production Swift rules. No game, adapter or original Everest initializer runs.
+
+IPA bytes:18,784,686. SHA256:
+`b9e0fa34a9163ad0024f4ff2ff02d10290716537deb6629b0e4ead33946d3fe0`.
+Freeze all274 captured56 app inputs and the kit; use57 for new app implementation.
+Physical gameplay/JIT, first/cached preparation, saves/lifecycle and earlier
+separate iPad/120Hz gates remain distinct. See
+[the56 report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) and its evidence ledger.
 
 ## Unsigned0.25.0/build55 trial —19 October2026
 
