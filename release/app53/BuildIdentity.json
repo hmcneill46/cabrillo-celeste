@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "product": "Cabrillo",
-  "version": "0.25.0",
+  "version": "0.24.2",
   "build_number": "53",
-  "build_id": "launcher-game-inputs-20260930-53",
-  "scope": "Verified original itch.io, Steam and Epic FNA inputs with source-aware preparation cache",
+  "build_id": "launcher-signing-picker-20261019-53",
+  "scope": "Automatic Files picker host identity compatibility for sideloaded signatures",
   "device_jit_tested": false
 }

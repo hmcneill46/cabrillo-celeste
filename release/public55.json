@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "lane": "release/app55",
-  "version": "0.26.1",
+  "version": "0.25.0",
   "build_number": "55",
   "public_ipa_ready": true,
   "public_build_script": "tools/build_release55.py",

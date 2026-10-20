@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Compile release54 from fresh public dependency receipts and licensed FMOD runtime inputs."""
+"""Compile build54's copy-import picker overlay with fresh public dependencies."""
 import argparse, datetime, json, os, plistlib, re, shutil, subprocess, zipfile
 from pathlib import Path
-from compile_feather_touch import ROOT, sha
-SOURCE = ROOT / 'experiments/ios-jit/launcher-feather-touch'
+from compile_owned_game import ROOT, sha
+SOURCE = ROOT / 'experiments/ios-jit/launcher-shortcut-cellular'
+OVERLAY = ROOT / 'experiments/ios-jit/launcher-copy-picker'
 IDENTITY = ROOT / 'release/app54'
 
 DEVELOPER=os.environ.get('DEVELOPER_DIR','/Applications/Xcode-26.6.app/Contents/Developer')
@@ -17,6 +18,36 @@ def local_path(name):
     path=(ROOT/name).absolute()
     if path.resolve()!=path or ROOT not in path.parents: raise ValueError('Expected an unaliased repository path: '+str(name))
     return path
+
+def validate_overlay(lock):
+    """Do not mutate frozen50/52/53 sources or silently omit the picker repair."""
+    if lock.get('application_source') != str(SOURCE.relative_to(ROOT)) or lock.get('application_overlay') != str(OVERLAY.relative_to(ROOT)):
+        raise ValueError('Unexpected copy-picker source lanes')
+    expected_overrides = {'src/main.m': str((OVERLAY / 'src/main.m').relative_to(ROOT))}
+    expected_additions = [str((OVERLAY / 'src/CJDocumentPickerCompatibility.m').relative_to(ROOT))]
+    if lock.get('source_overrides') != expected_overrides or lock.get('added_native_sources') != expected_additions:
+        raise ValueError('Build54 must compile its exact main and compatibility module')
+    expected_base = {str(p.relative_to(ROOT)) for p in SOURCE.rglob('*') if p.is_file()}
+    if set(lock.get('base_source_sha256', {})) != expected_base:
+        raise ValueError('Incomplete frozen source lock')
+    for name, digest in lock['base_source_sha256'].items():
+        if sha(local_path(name)) != digest:
+            raise ValueError('Frozen source differs: ' + name)
+    retained = lock.get('retained_picker_compatibility_sha256', {})
+    expected_retained = {str((OVERLAY / 'src' / ('CJDocumentPickerCompatibility.' + ext)).relative_to(ROOT))
+                         for ext in ['h', 'm']}
+    if set(retained) != expected_retained:
+        raise ValueError('Incomplete retained picker compatibility lock')
+    for name, digest in retained.items():
+        if sha(local_path(name)) != digest:
+            raise ValueError('Retained picker compatibility differs: ' + name)
+    return expected_overrides, expected_additions
+
+def selected_native_sources(lock):
+    overrides, additions = validate_overlay(lock)
+    return sorted([local_path(overrides['src/' + p.name]) if 'src/' + p.name in overrides else p
+                   for p in (SOURCE / 'src').iterdir() if p.suffix in {'.c', '.m'}] +
+                  [local_path(name) for name in additions])
 
 def validate(args):
     paths=[local_path(n) for n in [args.managed,args.native,args.fmod]]
@@ -50,7 +81,7 @@ def collect_notices(inputs,managed_work,app):
             relative=Path(label)/path.relative_to(root); target=destination/relative
             target.parent.mkdir(parents=True,exist_ok=True); shutil.copyfile(path,target); records[str(relative)]=sha(target)
     for name,path in [('CABRILLO-LICENSE',ROOT/'LICENSE'),('ZIPFoundation-LICENSE',ROOT/'vendor/ZIPFoundation/LICENSE'),
-                      ('Yams-LICENSE',ROOT/'vendor/Yams/LICENSE'),('MORRO-LICENSE',ROOT/'docs/licenses/MORRO-LICENSE.txt')]:
+                      ('Yams-LICENSE',ROOT/'vendor/Yams/LICENSE')]:
         shutil.copyfile(path,destination/name); records[name]=sha(path)
     # Lua's license is in its public header; retain the full upstream text.
     for label,path in [('Lua-lua.h',inputs/'lua/src/lua.h'),('DOTNET-LICENSE.TXT',inputs/'mono-ios-arm64/LICENSE.TXT'),
@@ -78,6 +109,7 @@ def main():
     assert settings['CFBundleVersion']==identity['build_number'] and settings['CFBundleShortVersionString']==identity['version']
     assert identity['build_number']=='54' and settings['CFBundleIdentifier']=='io.github.hmcneill46.celeste.everest.jit.everest'
     lock=read_json(IDENTITY/'Dependencies.json')
+    validate_overlay(lock)
     for name,digest in lock['shared_source_sha256'].items():
         if sha(local_path(name))!=digest: raise ValueError('Shared source differs: '+name)
     from verify_release_shortcuts import verify as verify_shortcuts
@@ -86,13 +118,12 @@ def main():
         raise ValueError('Use the public reviewed Shortcut templates')
     verify_shortcuts(shortcut_receipt.parent)
     shortcut_assets=shortcut_receipt.parent
-    sources=[Path(__file__),ROOT/'tools/build_shortcut_files49.py',ROOT/'tools/check_shortcut_files49.py',ROOT/'tools/check_shortcut_cellular.py',ROOT/'tools/check_shortcut_import_ui.py',ROOT/'tools/compile_feather_touch.py',ROOT/'tools/verify_owned_game.py',ROOT/'tools/prepare_owned_public.py',SOURCE/'tools/AuditPayload.cs',
+    sources=[Path(__file__),ROOT/'tools/build_shortcut_files49.py',ROOT/'tools/check_shortcut_files49.py',ROOT/'tools/check_shortcut_cellular.py',ROOT/'tools/check_shortcut_import_ui.py',ROOT/'tools/compile_owned_game.py',ROOT/'tools/verify_owned_game.py',ROOT/'tools/prepare_owned_public.py',SOURCE/'tools/AuditPayload.cs',
              ROOT/'release/public54.json',ROOT/'release/owned-game-dependencies.json',ROOT/'release/owned-game-nuget.json',ROOT/'LICENSE',ROOT/'vendor/ZIPFoundation/LICENSE',ROOT/'vendor/Yams/LICENSE',ROOT/'modern-ios/Assets/TouchControls/NOTICE.md']
-    sources += [ROOT/'docs/licenses/MORRO-LICENSE.txt', ROOT/'tools/ci/check_native_game_inputs.py', SOURCE/'tests/GameInputStateTests.m', ROOT/'tools/build_release54.py', ROOT/'tools/probe_game_inputs.py', ROOT/'tools/check_game_inputs_host.py', ROOT/'tools/check_game_inputs_motion.py', ROOT/'tools/check_game_inputs_sj.py', SOURCE/'tests/InputMatrixTests.cs', SOURCE/'tests/GameCodeStoreTests.cs']
-    sources += [ROOT/'tools/check_feather_touch_host.py',ROOT/'tools/check_feather_touch_ui.py',ROOT/'tools/check_feather_touch_motion.py']
-    sources += [SOURCE/'tests'/n for n in ['FeatherTouchTests.cs','FeatherMotionTests.cs','FeatherIntegrationTests.cs','FeatherPreview.swift','FeatherUITests.swift','SessionIntegrationTests.cs','MotionSmoothingTests.cs','host_motion.m']]
     sources += [ROOT/'tools/verify_release_nuget.py', ROOT/'release/nuget-hosts.json']
     sources += [p for folder in [SOURCE/'src',SOURCE/'native',SOURCE/'public-build'] for p in folder.rglob('*') if p.is_file()]
+    sources = [p for p in sources if p != SOURCE/'src/main.m']
+    sources += [p for p in OVERLAY.rglob('*') if p.is_file()]
     sources += [SOURCE/'tests/ShortcutCellularTests.m',ROOT/'experiments/ios-jit/launcher-shortcut-import/src/CJShortcutSession.m',ROOT/'experiments/ios-jit/launcher-shortcut-import/src/CJShortcutSession.h']
     sources += [SOURCE/'tests/ShortcutImportPreview.swift',SOURCE/'tests/ShortcutImportUITests.swift',SOURCE/'tests/ShortcutInstallTests.m', ROOT/'tools/verify_release_shortcuts.py', shortcut_receipt]
     sources += [p for p in shortcut_assets.rglob('*') if p.is_file()]
@@ -165,9 +196,9 @@ def main():
                         r"_(SystemNative_|CompressionNative_|AppleCryptoNative_)[A-Za-z0-9_]+", 100),
               make_table("FNAStaticTable.c", "CJResolveFNAStatic", libraries,
                         r"_(FMOD_[A-Za-z0-9_]+|SDL_[A-Za-z0-9_]+|FNA3D_[A-Za-z0-9_]+|FAudio[A-Za-z0-9_]*|F3DAudio[A-Za-z0-9_]*|FACT[A-Za-z0-9_]*|FAPO[A-Za-z0-9_]*|XNA_[A-Za-z0-9_]+|stb_vorbis_[A-Za-z0-9_]+|tf_[A-Za-z0-9_]+|luaL?_[A-Za-z0-9_]+|luaopen_[A-Za-z0-9_]+)", 500)]
-    includes = [SOURCE / "src", native, ROOT / "experiments/ios-jit/managed-canary/src"]
+    includes = [OVERLAY / "src", SOURCE / "src", native, ROOT / "experiments/ios-jit/managed-canary/src"]
     includes += [inputs / "SDL2/include", inputs / "mono-ios-arm64/runtimes/ios-arm64/native/include/mono-2.0"]
-    native_sources = sorted(p for p in (SOURCE / "src").iterdir() if p.suffix in {".c", ".m"})
+    native_sources = selected_native_sources(lock)
     native_sources += [ROOT / "experiments/ios-jit/managed-canary/src" / n for n in ["CanaryNative.c", "CJNativeResolver.c", "CJMonoThread.c"]]
     native_sources += tables
     objects = []
@@ -215,16 +246,16 @@ def main():
     canary=app/'CJITCodeCanary-v1.0.0.zip'
     info['mod_download_manifest'][canary.name]=dict(bytes=canary.stat().st_size,sha256=sha(canary),url=None)
     runtime=read_json(SOURCE/'RuntimeIdentity.json'); recipe=read_json(app/'OwnedGameRecipe.json')
-    info.update(identity,feather_touch=dict(built_in=True,default_enabled=False,preference="cabrillo.featherTouch",physics="original",physical_tested=False),shortcut_install=dict(revision=49,variants=['Standalone','LiveContainer'],signed_receipt_sha256=sha(shortcut_receipt),user_import_required=True),shortcut_launch=dict(schema=1,network_restore="configured_preset_for_travel",vpn_gate="travel_route_then_offline_rppairing_v19_hello",jit_gate="native_checks_after_detach",physical_tested=False),created_utc=created,xcode=XCODE,sdk='iphoneos',sdk_version=sdk_version,target=TARGET,
+    info.update(identity,document_picker_imports=dict(schema=1,mode='copy',originals_modified=False,physical_tested=False),document_picker_compatibility=dict(schema=1,automatic=True,scope='standalone_document_service_host_identifier',bundle_identifier_changed=False,livecontainer_managed=True,physical_tested=False),shortcut_install=dict(revision=49,variants=['Standalone','LiveContainer'],signed_receipt_sha256=sha(shortcut_receipt),user_import_required=True),shortcut_launch=dict(schema=1,network_restore="configured_preset_for_travel",vpn_gate="travel_route_then_offline_rppairing_v19_hello",jit_gate="native_checks_after_detach",physical_tested=False),created_utc=created,xcode=XCODE,sdk='iphoneos',sdk_version=sdk_version,target=TARGET,
         bundled_runtime_identity=runtime,bundled_runtime_identity_sha256=sha(SOURCE/'RuntimeIdentity.json'),
         base_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         working_tree_dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT)),source_sha256=source_hashes,
         launcher_native_receipt_sha256=sha(output/'native-receipt.json'),managed_build_receipt_sha256=sha(paths[0]),
-        game_code_legacy_source_id=recipe['legacy_source_id'],game_code_sources=[dict(source_id=s['source_id'],kind=s['kind']) for s in recipe['sources']],game_code_recipe_sha256=sha(app/'OwnedGameRecipe.json'),
+        game_code_source_id=recipe['source_id'],game_code_recipe_sha256=sha(app/'OwnedGameRecipe.json'),
         game_fixture_sha256=sha(app/'Managed/Cabrillo.Bootstrap.dll'),game_adapter_sha256=sha(app/'Managed/CelesteJITEverest.dll'),
         game_content_manifest_sha256=sha(app/'GameContentManifest.json'),script_template_sha256=sha(app/'celeste-jit-probe.js'),
         compatibility_downloads_sha256=sha(app/'CompatibilityDownloads.json'),runtime_compatible_releases_sha256=sha(app/'RuntimeCompatibleReleases.json'),
-        private_prepared_game_il=False,owned_game_preparation=dict(schema=2,cached=True,bundled_game=False,one_time_jit_required=True),
+        private_prepared_game_il=False,owned_game_preparation=dict(schema=1,cached=True,bundled_game=False,one_time_jit_required=True),
         runtime_pin=dict(runtime_commit=native_overlay['runtime_commit'],version='8.0.28'),
         monomod_pin=dict(commit='dfc30a1506d37fb88a2c2be004f525205f46a24c'),reflection_flags=dict(abi=1),
         ios_support=dict(id='CelesteIOS',version='1.0.0',abi=1,required=True,sha256=sha(app/'Managed/CelesteIOS.dll')),

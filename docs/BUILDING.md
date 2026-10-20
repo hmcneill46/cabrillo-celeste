@@ -1,83 +1,79 @@
 # Building Cabrillo
 
-## Development: input preferences / build57
+## Combined development build: version0.29.0 / build58
 
-`launcher-input-preferences` adds live feather/grab/prompt preferences and SDL
-controller identity/light restoration. Use `tools/build_release57.py` with the
-same fresh public inputs and your own FMOD SDK as the earlier builders. Public
-workflows still select52; no57 publication is requested.
+Build58 combines the local game-input/touch-editor work with published v0.26.0.
+Validation is in progress; [the integration report](ios-jit/UNIFIED_BUILD_58.md)
+records current results and the eventual test IPA. No new public Release is
+authorized until the owner tests it.
 
-Local checks are `check_input_preferences_policy.py`,
-`check_input_preferences_ui.py`, `check_input_preferences_host.py` and
-`check_input_preferences_motion.py`. `check_grab_lifecycle_host.py` additionally
-checks actual death, respawn and map changes. Host controller tests require an explicit
-receipt from `build_input_preferences_host_backend.py`: it builds the same pinned
-SDL source with a Mac virtual-controller backend. The PS5 family is supplied at
-the test boundary because SDL's virtual bus hides VID/PID. Input and LED callbacks
-still use real SDL. This fixture is excluded from the IPA and is not a physical
-controller acceptance test. See [the57 report](ios-jit/INPUT_PREFERENCES_BUILD_57.md).
-
-## Development: SwiftUI touch editor / build56
-
-`launcher-touch-editor` adds editable full-display controls and experimental tap/
-swipe input, retaining55's saved-original startup repair. Use
-`python3 tools/build_release56.py --work .build/my-touch-build --output .build/my-touch-build/output --fmod-sdk "/path/to/FMOD Programmers API"`.
-Public workflows still select52. The iterative managed builder is
-`build_touch_editor_managed.py`, with the same verified `--package-cache` option.
-`compile_release56.py` requires explicit managed/native/FMOD receipts and the
-reviewed `release/shortcuts49/manifest.json`.
-
-Local controls are `check_touch_policy.py`, `check_touch_editor_ui.py`,
-`check_touch_editor_host.py` and `check_touch_editor_motion.py`. Simulator UI and
-private host gameplay results are separate from physical device acceptance.
-See [the guide](TOUCH_CONTROLS.md) and [the56 report](ios-jit/TOUCH_EDITOR_BUILD_56.md).
-
-## Development: saved-game startup / build55
-
-`launcher-saved-game` repairs53/54's handling of the absent native ZIP staging
-path, retaining verified originals and the optional feather control. Use
-`python3 tools/build_release55.py --work .build/my-saved-game-build --output .build/my-saved-game-build/output --fmod-sdk "/path/to/FMOD Programmers API"`.
-The public workflows still select52. `build_saved_game_managed.py` accepts the
-same verified `--package-cache` option described below.
-See [the55 diagnosis and tests](ios-jit/SAVED_GAME_BUILD_55.md).
-
-## Development: feather touch / build54
-
-`launcher-feather-touch` adds the optional control to build53. Use
-`python3 tools/build_release54.py --work .build/my-feather-build --output .build/my-feather-build/output --fmod-sdk "/path/to/FMOD Programmers API"`.
-The public workflows still select the accepted52 release. Local iteration may
-pass an explicitly verified public NuGet archive cache to
-`build_feather_touch_managed.py --package-cache PATH`; archives must match the
-release pins and are extracted afresh, with no reused application binaries.
-See [the build54 report](ios-jit/FEATHER_TOUCH_BUILD_54.md).
-
-## Development: game input compatibility / build53
-
-The new `launcher-game-inputs` lane adds the nine original itch.io, Steam and
-Epic FNA packages described in [the game files guide](CELESTE_INPUTS.md).
-Build53 /0.25.0 has a separate identity and recipe; build52 and its published
-workflow remain unchanged. Use the same toolchain and your own FMOD SDK below:
+Use the same Xcode, Mono and developer-owned FMOD prerequisites below:
 
 ```sh
-python3 tools/build_release53.py --work .build/my-game-input-build \
-  --output .build/my-game-input-build/output --fmod-sdk '/path/to/FMOD Programmers API'
+python3 tools/build_release58.py --work .build/my-unified-source-build \
+  --output .build/my-unified-source-build/output \
+  --fmod-sdk '/path/to/FMOD Programmers API'
 ```
 
-This entry point rebuilds public dependencies, then uses
-`build_game_inputs_managed.py` and `compile_release53.py`. Game files are not build
-inputs. The preparation recipe contains hashes for four code/input combinations;
-the user's ZIP is identified and prepared on device. Source selection is committed
-after preparation succeeds, and prepared generations include both recipe and
-original-input identity. Existing standard originals migrate without a new ZIP.
+The new `launcher-unified58` lane must retain both the original-game importer,
+full-display editor and live input preferences from this Mac, and the published
+copy picker, Everest1.6642, dependency download recovery and integrated StikJIT.
+A fresh prepared-code cache is expected; original game files, profiles and saves
+remain in their existing locations. Keep the signed revision49 Shortcuts.
 
-Private regression testing uses `probe_game_inputs.py --work <fresh .build path>
---managed <public managed receipt> --game-files <folder containing nine ZIPs>` and
-`check_game_inputs_host.py --work <fresh .build path> --managed <receipt>
---game-zip <original ZIP>`. These tools use explicitly pinned retained Mac test
-fixtures; they are separate from the public builder and from device acceptance.
-The [build53 report](ios-jit/GAME_INPUTS_BUILD_53.md) records the exact evidence.
+### Two historical build-number series
 
-## Current source build: version0.24.1 / build52
+Both computers independently used53–57. In this merged tree, numbered release
+manifests/builders53–57 reproduce the **published** series. Exact **local**53–57
+release recipes are preserved at `ee475e3` on `codex/game-input-compatibility`.
+Use a separate checkout at that commit for historical reproduction; never mix
+its receipt with a published recipe that shares its number. Local feature lanes,
+tests and evidence remain available here. See the
+[lineage table](ios-jit/UNIFIED_BUILD_58.md#source-lineages).
+
+## Current published source build: version0.26.0 / build57
+
+The integrated StikJIT implementation uses the same Xcode26.6 /17F113, SDK26.5,
+Mono6.14.1 and developer-owned FMOD SDK as56 below:
+
+```sh
+python3 tools/build_release57.py --work .build/my-integrated-source-build \
+  --output .build/my-integrated-source-build/output \
+  --fmod-sdk '/path/to/FMOD Programmers API'
+```
+
+It additionally downloads the exact pinned StikJIT1.9.0 source archive and builds
+its Swift framework and a separate iOS17.4 helper extension. Upstream includes a
+prebuilt idevice FFI static library; its binary hash and the mixed archive are
+explicitly disclosed. No Rust toolchain, pairing file, device or signing identity
+is needed to build. The host retains iOS15 support and does not load StikJIT.
+Both helper and framework must remain in the final signed installation.
+
+All274 accepted56 app inputs remain frozen. Existing Everest1.6642.0, original151
+dependency hashes, game preparation, Feather imports and saves stay preserved.
+See [the57 report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) for signing/pairing
+requirements, the iLoader compatibility limitation and current device gates.
+The [public v0.26.0 release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
+passes fresh tagged compilation/package audits and independent downloaded-kit
+checks. Its five assets download without sign-in. All 299 captured build57 app
+inputs are frozen; use58 for new implementation. Physical helper/JIT acceptance
+remains separate. The original trial kit is retained independently.
+
+Additional source-only checks on a Mac with the pinned Xcode:
+
+```sh
+python3 tools/check_integrated57_native.py --work .build/my-integrated-controls
+python3 tools/check_integrated57_compile.py --work .build/my-integrated-host
+python3 tools/build_stikjit57.py --work .build/my-integrated-helper
+```
+
+The first uses synthetic pairing data and a stubbed service boundary; the second
+compiles the actual selected host for arm64/iOS15; the third builds the actual
+framework/helper for arm64/iOS17.4. These checks do not build a full IPA, mount a
+device image, enable real JIT or run a game. Keep work directories private and
+publish only the existing allowlisted release kit after scoped owner approval.
+
+## Preserved build56 recipe and shared build prerequisites
 
 Use a Mac with **Xcode26.6 /17F113**, iPhoneOS SDK26.5, Python3.12 or newer,
 CMake, Git and **Mono6.14.1** with its `sn` strong-name tool. Both Intel and Apple Silicon SDK downloads are pinned in the
@@ -85,7 +81,7 @@ public dependency lock. The NuGet host lock switches only the pinned macOS app-h
 package between Intel and Apple Silicon; the iOS target remains arm64. Set `DEVELOPER_DIR` if Xcode is installed elsewhere:
 
 ```sh
-export DEVELOPER_DIR='/Applications/Xcode-26.6.app/Contents/Developer'
+export DEVELOPER_DIR='/Applications/Xcode.app/Contents/Developer'
 ```
 
 Mono supplies NLua's required assembly-signing tool; the iOS Mono runtime is
@@ -112,7 +108,7 @@ records the distinction and the maintainer's separate CI download setup.
 From this checkout, choose fresh work and output paths:
 
 ```sh
-python3 tools/build_release52.py --work .build/my-source-build \
+python3 tools/build_release56.py --work .build/my-source-build \
   --output .build/my-source-build/output \
   --fmod-sdk '/path/to/FMOD Programmers API'
 ```
@@ -121,12 +117,20 @@ This downloads and verifies pinned public source archives, .NET SDK/runtime pack
 and NuGet inputs, rebuilds the managed/native dependencies, prepares the FMOD
 runtime link inputs, verifies the signed Shortcut resources and compiles the app.
 It consumes no Celeste game ZIP, historical compiled capsule or old checkout.
-The launcher implementation is the accepted build50 source; `release/app52`
-supplies the new identity. Earlier delivered source lanes stay frozen.
+The launcher retains build50's base and build54's copy-based Files picker, with
+the retained `launcher-everest6642` overlay supplying synchronized runtime identities
+and the versioned platform patch for official stable1.6642. The new
+`launcher-dependency-downloads` overlay provides bounded exact-archive relocation,
+current mirror metadata and matching required/optional dependency aliases. `release/app56` pins
+all261 captured55 inputs. The source dependency pins remain exact55;
+the native/.NET/NuGet/FMOD/Shortcut pins remain unchanged. See
+[the dependency repair report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) for checks and their scope.
+Changed preparation-tool hashes select a new code-cache generation from retained
+originals; users keep their bundle ID, profiles and saves.
 
 The `output` directory contains `Cabrillo.ipa`, `BUILD_PROVENANCE.json`,
 `PACKAGE_AUDIT.json` and `RELEASE_NOTES.md`. Internal logs, symbols and receipts
-are under `artifacts/release52-my-source-build`; dependency work stays beneath
+are under `artifacts/release56-my-source-build`; dependency work stays beneath
 `.build/my-source-build`. Do not upload whole work/SDK directories. Local builds
 do not acquire a GitHub-hosted attestation. The release workflow additionally
 requires a clean selected commit, produces an allowlisted checksummed kit and
@@ -147,9 +151,20 @@ From a public clone on macOS with Xcode26.6 /17F113:
 ```sh
 python3 tools/ci/check_public_repository.py
 python3 -m unittest discover -s tools/tests -v
-python3 tools/ci/check_native_profiles.py --lane launcher-owned-game
+python3 tools/ci/check_dependency56_profiles.py
+python3 tools/check_dependency56_native.py
+python3 tools/check_dependency56_compile.py
 python3 tools/ci/check_native_shortcuts.py
 python3 tools/verify_release_shortcuts.py
+```
+
+The separate live mod-install check downloads about1.24GB of public Strawberry
+Jam dependencies into an isolated host profile, verifies their actual ZIP
+metadata and transaction, tests cache reuse, and exercises recovery from the
+removed FemtoHelper URL. It runs no game or mod DLL and requires no game ZIP:
+
+```sh
+python3 tools/check_dependency56_live.py --work .build/my-live-dependency-check
 ```
 
 The native wrappers honor `DEVELOPER_DIR` and require fresh work directories;
@@ -158,6 +173,92 @@ tests build50 ordering/recovery and revision49 generated actions without signed
 assets, private inputs, network access in the native tests or a device.
 It does not replace the signed import and phone gates in the reports below.
 See [the release guide](RELEASING.md) for current GitHub CI, official SDK acquisition and publishing.
+
+## Preserved local53–57 build notes
+
+The following records describe the September/October local checkout at
+`ee475e3`, before the two computers were merged. Their workflow references and
+numbered recipe paths are historical: those paths now select the published
+series. Use the snapshot checkout for these commands, and build58 for current
+combined development. Their test receipts establish the recorded original lanes,
+not new build58 acceptance.
+
+## Historical local development: input preferences / build57
+
+`launcher-input-preferences` adds live feather/grab/prompt preferences and SDL
+controller identity/light restoration. Use `tools/build_release57.py` with the
+same fresh public inputs and your own FMOD SDK as the earlier builders. Public
+workflows still select52; no57 publication is requested.
+
+Local checks are `check_input_preferences_policy.py`,
+`check_input_preferences_ui.py`, `check_input_preferences_host.py` and
+`check_input_preferences_motion.py`. `check_grab_lifecycle_host.py` additionally
+checks actual death, respawn and map changes. Host controller tests require an explicit
+receipt from `build_input_preferences_host_backend.py`: it builds the same pinned
+SDL source with a Mac virtual-controller backend. The PS5 family is supplied at
+the test boundary because SDL's virtual bus hides VID/PID. Input and LED callbacks
+still use real SDL. This fixture is excluded from the IPA and is not a physical
+controller acceptance test. See [the57 report](ios-jit/INPUT_PREFERENCES_BUILD_57.md).
+
+## Historical local development: SwiftUI touch editor / build56
+
+`launcher-touch-editor` adds editable full-display controls and experimental tap/
+swipe input, retaining55's saved-original startup repair. Use
+`python3 tools/build_release56.py --work .build/my-touch-build --output .build/my-touch-build/output --fmod-sdk "/path/to/FMOD Programmers API"`.
+Public workflows still select52. The iterative managed builder is
+`build_touch_editor_managed.py`, with the same verified `--package-cache` option.
+`compile_release56.py` requires explicit managed/native/FMOD receipts and the
+reviewed `release/shortcuts49/manifest.json`.
+
+Local controls are `check_touch_policy.py`, `check_touch_editor_ui.py`,
+`check_touch_editor_host.py` and `check_touch_editor_motion.py`. Simulator UI and
+private host gameplay results are separate from physical device acceptance.
+See [the guide](TOUCH_CONTROLS.md) and [the56 report](ios-jit/TOUCH_EDITOR_BUILD_56.md).
+
+## Historical local development: saved-game startup / build55
+
+`launcher-saved-game` repairs53/54's handling of the absent native ZIP staging
+path, retaining verified originals and the optional feather control. Use
+`python3 tools/build_release55.py --work .build/my-saved-game-build --output .build/my-saved-game-build/output --fmod-sdk "/path/to/FMOD Programmers API"`.
+The public workflows still select52. `build_saved_game_managed.py` accepts the
+same verified `--package-cache` option described below.
+See [the55 diagnosis and tests](ios-jit/SAVED_GAME_BUILD_55.md).
+
+## Historical local development: feather touch / build54
+
+`launcher-feather-touch` adds the optional control to build53. Use
+`python3 tools/build_release54.py --work .build/my-feather-build --output .build/my-feather-build/output --fmod-sdk "/path/to/FMOD Programmers API"`.
+The public workflows still select the accepted52 release. Local iteration may
+pass an explicitly verified public NuGet archive cache to
+`build_feather_touch_managed.py --package-cache PATH`; archives must match the
+release pins and are extracted afresh, with no reused application binaries.
+See [the build54 report](ios-jit/FEATHER_TOUCH_BUILD_54.md).
+
+## Historical local development: game input compatibility / build53
+
+The new `launcher-game-inputs` lane adds the nine original itch.io, Steam and
+Epic FNA packages described in [the game files guide](CELESTE_INPUTS.md).
+Build53 /0.25.0 has a separate identity and recipe; build52 and its published
+workflow remain unchanged. Use the same toolchain and your own FMOD SDK below:
+
+```sh
+python3 tools/build_release53.py --work .build/my-game-input-build \
+  --output .build/my-game-input-build/output --fmod-sdk '/path/to/FMOD Programmers API'
+```
+
+This entry point rebuilds public dependencies, then uses
+`build_game_inputs_managed.py` and `compile_release53.py`. Game files are not build
+inputs. The preparation recipe contains hashes for four code/input combinations;
+the user's ZIP is identified and prepared on device. Source selection is committed
+after preparation succeeds, and prepared generations include both recipe and
+original-input identity. Existing standard originals migrate without a new ZIP.
+
+Private regression testing uses `probe_game_inputs.py --work <fresh .build path>
+--managed <public managed receipt> --game-files <folder containing nine ZIPs>` and
+`check_game_inputs_host.py --work <fresh .build path> --managed <receipt>
+--game-zip <original ZIP>`. These tools use explicitly pinned retained Mac test
+fixtures; they are separate from the public builder and from device acceptance.
+The [build53 report](ios-jit/GAME_INPUTS_BUILD_53.md) records the exact evidence.
 
 ## Historical build notes
 
@@ -265,7 +366,7 @@ python3 tools/build_public_release.py --work .build/my-source-build \
 ```
 
 FMOD1.10.09 / build97915 is required. This explicit SDK option is a private local
-build. Its historical public mode remains blocked; use the current52 recipe above for
+build. Its historical public mode remains blocked; use the current54 recipe above for
 the later permission and SDK contract. The recipes below retain their original purposes.
 
 ## Build39: native shortcut integration with the exact38 runtime
@@ -276,7 +377,7 @@ The independently compiled launcher is `experiments/ios-jit/launcher-shortcuts`.
 managed assemblies and16 dependency archives. `tools/build_shortcut_files.py`
 generates inspectable plist/action JSON and signs importable shortcuts with the
 macOS Shortcuts CLI. See [reproduction and validation](ios-jit/SHORTCUT_BUILD_39.md).
-This historical recipe retains its frozen38 permission state; current release52 uses the separate public manifest.
+This historical recipe retains its frozen38 permission state; current source builds use the separate public54 manifest.
 
 ## Build40: LiveContainer shortcut routing correction
 

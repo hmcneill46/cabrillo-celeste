@@ -1,4 +1,45 @@
-## 3 October 2026 update — controls and input preferences
+## 20 October2026 integration — build58 / 0.29.0
+
+The owner requests merging the two computers' work, pushing the combined source
+as `hmcneill46` and delivering a test IPA before a later release decision.
+`launcher-unified58` combines the local full-display touch editor, live input
+preferences and game-import compatibility with published v0.26.0's copy picker,
+Everest1.6642, dependency download recovery and integrated StikJIT. Preserve both
+histories and test the combined behavior. See [the integration report](UNIFIED_BUILD_58.md).
+A new version tag or public Release is not authorized by this request.
+
+Build numbers53–57 below belong to two independent histories. The **published**
+series owns the current numbered release paths; exact conflicting **local**
+recipes remain in commit `ee475e3`. Earlier workflow/no-publication/next-build
+statements are dated records. Integration checks are pending; neither lineage's
+prior results establish build58 physical acceptance.
+
+## 19 October2026 copy-import correction
+
+The owner reports53 fails and USB verifies the exact installed source/signature
+setup: entitlement and hook preparation succeed but game selection never calls
+back. The existing copy-based backup picker selects the same ZIP twice, then
+correctly rejects its backup manifest. [Build54](COPY_PICKER_BUILD_54.md) changes
+the game/mod selectors to copies and retains the53 compatibility module. Its
+full package, independent verification and original-ID game-ZIP selection/staging
+phone gate now pass. [v0.24.3](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3) is published through tagged
+run39285104629, retaining all253 tested app inputs and151 dependency hashes. Physical
+mod import and broader gameplay/JIT gates remain separate; use55 for new app
+implementation. The tagged binary has no separate device run claimed.
+
+## Earlier19 October2026 signing-host trial
+
+The owner confirms a Feather signing application-ID mismatch caused standalone52
+to stall when selecting a local game ZIP. Matching the signing Identifier works;
+they now request automatic support with Cabrillo's existing bundle ID. Build53
+adds a narrow Documents UI host adapter in a new source overlay, preserving the
+accepted runtime/JIT behavior and frozen50/52 source. See
+[the build53 report](SIGNING_PICKER_BUILD_53.md) for local checks, private-API
+fallback and successful hosted IPA. Its unchanged-ID phone gate subsequently
+failed, leading to the54 copy-import repair above. That53 trial created no
+Release or physical acceptance; older save/lifecycle/iPad/120Hz gates remain.
+
+## Historical local3 October2026 update — controls and input preferences
 
 Build56 delivers the SwiftUI touch editor with full-display placement, actual-size
 landscape editing, a16:9 game guide, split regions, duplicates and experimental

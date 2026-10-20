@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "product": "Cabrillo",
-  "version": "0.27.0",
+  "version": "0.25.1",
   "build_number": "56",
-  "build_id": "launcher-touch-editor-20261003-56",
-  "scope": "SwiftUI touch customization and optional tap-and-swipe controls",
+  "build_id": "launcher-dependency-downloads-20261019-56",
+  "scope": "Verified compatibility download relocation and current Everest mirror metadata with synchronized stable1.6642 runtime/dependency checks",
   "device_jit_tested": false
 }

@@ -12,7 +12,7 @@ import shutil
 import subprocess
 import sys
 
-from compile_game_inputs import ROOT, sha
+from compile_owned_game import ROOT, sha
 from fetch_fmod_sdk import ARCHIVE_BYTES, ARCHIVE_SHA256, LICENSE_SHA256, validate_sdk
 from verify_release_shortcuts import verify as verify_shortcuts
 from verify_release_nuget import verify_packages
@@ -67,7 +67,7 @@ def build(work, output, sdk, download=None):
             # These are compiler logs from public source stages, after the SDK
             # acquisition step's credentials have left the environment. Never
             # inspect .private, the FMOD stage or arbitrary files for diagnostics.
-            folder = {'build_game_inputs_managed.py': work / 'managed',
+            folder = {'build_owned_managed.py': work / 'managed',
                       'build_owned_native.py': work / 'native'}.get(tool)
             if folder and folder.is_dir():
                 logs = sorted(folder.glob('*.log'), key=lambda p: p.stat().st_mtime)
@@ -78,7 +78,7 @@ def build(work, output, sdk, download=None):
 
     inputs, managed, native, fmod, cache = [work / n for n in ['inputs', 'managed', 'native', 'fmod', 'downloads']]
     run('prepare_owned_public.py', '--work', inputs, '--cache', cache)
-    run('build_game_inputs_managed.py', '--inputs', inputs, '--work', managed)
+    run('build_owned_managed.py', '--inputs', inputs, '--work', managed)
     verify_packages(json_read(managed / 'receipt.json')['nuget_packages'], json_read(inputs / 'receipt.json')['sdk_arch'])
     run('build_owned_native.py', '--inputs', inputs, '--work', native)
     run('prepare_owned_fmod.py', '--sdk', sdk, '--native', native / 'receipt.json', '--work', fmod)
@@ -139,7 +139,7 @@ def build(work, output, sdk, download=None):
         'later launches reuse its verified cache. No Celeste game code or assets are bundled.\n\n'
         'FMOD runtime code is included with Firelight permission. Players do not need an FMOD account. '
         'Developers must obtain their own SDK from fmod.com; SDK components are not distributed.\n\n'
-        'The launcher adds verified itch.io, Steam and Epic game inputs and retains shortcut49 templates. This newly compiled '
+        'The launcher adds automatic Files picker signing compatibility to the accepted build50 source, retaining shortcut49. This newly compiled '
         'build has passed package checks; physical-device acceptance is separate and has not been claimed.\n\n'
         'BUILD_PROVENANCE.json records source, dependency hashes and binary inputs. GitHub attestations '
         'bind each download to its workflow and commit. They do not promise bit-for-bit reproducibility '

@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "product": "Cabrillo",
-  "version": "0.26.1",
+  "version": "0.25.0",
   "build_number": "55",
-  "build_id": "launcher-saved-game-20261003-55",
-  "scope": "Reuse verified original game files when the native staging path has no ZIP",
+  "build_id": "launcher-everest6642-20261019-55",
+  "scope": "Everest stable1.6642 with retained copy-based Files imports and existing runtime/JIT behavior",
   "device_jit_tested": false
 }

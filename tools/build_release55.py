@@ -12,7 +12,7 @@ import shutil
 import subprocess
 import sys
 
-from compile_saved_game import ROOT, sha
+from compile_owned_game import ROOT, sha
 from fetch_fmod_sdk import ARCHIVE_BYTES, ARCHIVE_SHA256, LICENSE_SHA256, validate_sdk
 from verify_release_shortcuts import verify as verify_shortcuts
 from verify_release_nuget import verify_packages
@@ -67,7 +67,8 @@ def build(work, output, sdk, download=None):
             # These are compiler logs from public source stages, after the SDK
             # acquisition step's credentials have left the environment. Never
             # inspect .private, the FMOD stage or arbitrary files for diagnostics.
-            folder = {'build_saved_game_managed.py': work / 'managed',
+            folder = {'build_everest55_managed.py': work / 'managed',
+                      'check_everest6642_managed.py': work / 'everest-audit',
                       'build_owned_native.py': work / 'native'}.get(tool)
             if folder and folder.is_dir():
                 logs = sorted(folder.glob('*.log'), key=lambda p: p.stat().st_mtime)
@@ -77,9 +78,10 @@ def build(work, output, sdk, download=None):
             raise
 
     inputs, managed, native, fmod, cache = [work / n for n in ['inputs', 'managed', 'native', 'fmod', 'downloads']]
-    run('prepare_owned_public.py', '--work', inputs, '--cache', cache)
-    run('build_saved_game_managed.py', '--inputs', inputs, '--work', managed)
+    run('prepare_everest55_public.py', '--work', inputs, '--cache', cache)
+    run('build_everest55_managed.py', '--inputs', inputs, '--work', managed)
     verify_packages(json_read(managed / 'receipt.json')['nuget_packages'], json_read(inputs / 'receipt.json')['sdk_arch'])
+    run('check_everest6642_managed.py', '--managed', managed / 'receipt.json', '--work', work / 'everest-audit')
     run('build_owned_native.py', '--inputs', inputs, '--work', native)
     run('prepare_owned_fmod.py', '--sdk', sdk, '--native', native / 'receipt.json', '--work', fmod)
     artifacts = ROOT / 'artifacts' / ('release55-' + work.name)
@@ -120,6 +122,8 @@ def build(work, output, sdk, download=None):
         fmod_acquisition='official-authenticated-download' if download else 'developer-supplied-sdk',
         fmod_installer_sha256=ARCHIVE_SHA256 if download else None,
         dependencies=dependencies, shortcut_verification=shortcuts,
+        everest_release=json_read(ROOT / 'release/everest55-dependencies.json')['everest_release'],
+        managed_runtime_audit=json_read(work / 'everest-audit/receipt.json'),
         toolchain=dict(xcode='26.6', xcode_build='17F113', iphoneos_sdk='26.5', minimum_ios='15.0',
             mono_build_tool=mono_version, strong_name_tool_sha256=sha(Path(shutil.which('sn'))),
             cmake=subprocess.check_output(['cmake', '--version'], text=True).splitlines()[0],
@@ -133,14 +137,18 @@ def build(work, output, sdk, download=None):
     build_location = 'on GitHub Actions' if os.environ.get('GITHUB_ACTIONS') == 'true' else 'locally'
     (output / 'RELEASE_NOTES.md').write_text(
         '# Cabrillo ' + config['version'] + ' · build ' + config['build_number'] + '\n\n'
+        'Updates Everest to stable1.6642.0 (17 October2026), built from pinned upstream source. '
+        'Includes the updated GameBanana mirror handling, TeleportTrigger API and separate menu-search binding. '
+        'Retains the build54 Feather ZIP-import repair, bundle ID, save/profile paths, JIT routes and Shortcut49.\n\n'
+        'The first game launch prepares the newer Everest from your retained original game files; '
+        'later launches reuse its verified cache. Existing saves and original imported files are preserved. '
+        'No new physical-device gameplay or JIT test is claimed by this build.\n\n'
         'Unsigned iPhone/iPad IPA built from the tagged or selected public source ' + build_location + '. '
         'Install with a compatible sideloading/LiveContainer or TrollStore setup; iOS 15 or later and JIT are required.\n\n'
         'Import your own original Celeste FNA 1.4.0.0 game ZIP. The first game launch prepares your copy; '
         'later launches reuse its verified cache. No Celeste game code or assets are bundled.\n\n'
         'FMOD runtime code is included with Firelight permission. Players do not need an FMOD account. '
         'Developers must obtain their own SDK from fmod.com; SDK components are not distributed.\n\n'
-        'The launcher adds verified itch.io, Steam and Epic game inputs and retains shortcut49 templates. This newly compiled '
-        'build has passed package checks; physical-device acceptance is separate and has not been claimed.\n\n'
         'BUILD_PROVENANCE.json records source, dependency hashes and binary inputs. GitHub attestations '
         'bind each download to its workflow and commit. They do not promise bit-for-bit reproducibility '
         'or make proprietary dependencies open source. See docs/RELEASING.md and docs/BUILDING.md.\n')

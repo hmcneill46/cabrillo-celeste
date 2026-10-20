@@ -12,7 +12,7 @@ import shutil
 import subprocess
 import sys
 
-from compile_feather_touch import ROOT, sha
+from compile_owned_game import ROOT, sha
 from fetch_fmod_sdk import ARCHIVE_BYTES, ARCHIVE_SHA256, LICENSE_SHA256, validate_sdk
 from verify_release_shortcuts import verify as verify_shortcuts
 from verify_release_nuget import verify_packages
@@ -67,7 +67,7 @@ def build(work, output, sdk, download=None):
             # These are compiler logs from public source stages, after the SDK
             # acquisition step's credentials have left the environment. Never
             # inspect .private, the FMOD stage or arbitrary files for diagnostics.
-            folder = {'build_feather_touch_managed.py': work / 'managed',
+            folder = {'build_owned_managed.py': work / 'managed',
                       'build_owned_native.py': work / 'native'}.get(tool)
             if folder and folder.is_dir():
                 logs = sorted(folder.glob('*.log'), key=lambda p: p.stat().st_mtime)
@@ -78,7 +78,7 @@ def build(work, output, sdk, download=None):
 
     inputs, managed, native, fmod, cache = [work / n for n in ['inputs', 'managed', 'native', 'fmod', 'downloads']]
     run('prepare_owned_public.py', '--work', inputs, '--cache', cache)
-    run('build_feather_touch_managed.py', '--inputs', inputs, '--work', managed)
+    run('build_owned_managed.py', '--inputs', inputs, '--work', managed)
     verify_packages(json_read(managed / 'receipt.json')['nuget_packages'], json_read(inputs / 'receipt.json')['sdk_arch'])
     run('build_owned_native.py', '--inputs', inputs, '--work', native)
     run('prepare_owned_fmod.py', '--sdk', sdk, '--native', native / 'receipt.json', '--work', fmod)
@@ -133,14 +133,20 @@ def build(work, output, sdk, download=None):
     build_location = 'on GitHub Actions' if os.environ.get('GITHUB_ACTIONS') == 'true' else 'locally'
     (output / 'RELEASE_NOTES.md').write_text(
         '# Cabrillo ' + config['version'] + ' · build ' + config['build_number'] + '\n\n'
+        'Fixes the game ZIP picker stall seen when Feather signs Cabrillo with a Development profile '
+        'whose app identifier differs from Cabrillo\'s bundle ID. The launcher automatically adapts '
+        'the document-service host identity and uses temporary copies for game and mod imports. '
+        'Keep your existing profile, bundle ID and settings. Original files remain unchanged; '
+        'large ZIPs can take time to copy and need extra temporary storage. Shortcut49 is retained.\n\n'
+        'The build54 trial was verified on iPhone 15 Pro Max / iOS 27.0.1 with the original bundle ID and the same Development profile: '
+        'game ZIP selection completes and an 875,540,825-byte archive stages successfully. '
+        'Gameplay, JIT and mod imports have no new physical test result in this release.\n\n'
         'Unsigned iPhone/iPad IPA built from the tagged or selected public source ' + build_location + '. '
         'Install with a compatible sideloading/LiveContainer or TrollStore setup; iOS 15 or later and JIT are required.\n\n'
         'Import your own original Celeste FNA 1.4.0.0 game ZIP. The first game launch prepares your copy; '
         'later launches reuse its verified cache. No Celeste game code or assets are bundled.\n\n'
         'FMOD runtime code is included with Firelight permission. Players do not need an FMOD account. '
         'Developers must obtain their own SDK from fmod.com; SDK components are not distributed.\n\n'
-        'The launcher adds verified itch.io, Steam and Epic game inputs and retains shortcut49 templates. This newly compiled '
-        'build has passed package checks; physical-device acceptance is separate and has not been claimed.\n\n'
         'BUILD_PROVENANCE.json records source, dependency hashes and binary inputs. GitHub attestations '
         'bind each download to its workflow and commit. They do not promise bit-for-bit reproducibility '
         'or make proprietary dependencies open source. See docs/RELEASING.md and docs/BUILDING.md.\n')

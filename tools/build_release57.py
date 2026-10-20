@@ -12,7 +12,7 @@ import shutil
 import subprocess
 import sys
 
-from compile_input_preferences import ROOT, sha
+from compile_owned_game import ROOT, sha
 from fetch_fmod_sdk import ARCHIVE_BYTES, ARCHIVE_SHA256, LICENSE_SHA256, validate_sdk
 from verify_release_shortcuts import verify as verify_shortcuts
 from verify_release_nuget import verify_packages
@@ -67,7 +67,9 @@ def build(work, output, sdk, download=None):
             # These are compiler logs from public source stages, after the SDK
             # acquisition step's credentials have left the environment. Never
             # inspect .private, the FMOD stage or arbitrary files for diagnostics.
-            folder = {'build_input_preferences_managed.py': work / 'managed',
+            folder = {'build_everest55_managed.py': work / 'managed',
+                      'check_dependency56_managed.py': work / 'everest-audit',
+                      'build_stikjit57.py': work / 'stikjit',
                       'build_owned_native.py': work / 'native'}.get(tool)
             if folder and folder.is_dir():
                 logs = sorted(folder.glob('*.log'), key=lambda p: p.stat().st_mtime)
@@ -77,20 +79,29 @@ def build(work, output, sdk, download=None):
             raise
 
     inputs, managed, native, fmod, cache = [work / n for n in ['inputs', 'managed', 'native', 'fmod', 'downloads']]
-    run('prepare_owned_public.py', '--work', inputs, '--cache', cache)
-    run('build_input_preferences_managed.py', '--inputs', inputs, '--work', managed)
+    run('prepare_everest55_public.py', '--work', inputs, '--cache', cache)
+    run('build_everest55_managed.py', '--inputs', inputs, '--work', managed)
     verify_packages(json_read(managed / 'receipt.json')['nuget_packages'], json_read(inputs / 'receipt.json')['sdk_arch'])
+    run('check_dependency56_managed.py', '--managed', managed / 'receipt.json', '--work', work / 'everest-audit')
     run('build_owned_native.py', '--inputs', inputs, '--work', native)
     run('prepare_owned_fmod.py', '--sdk', sdk, '--native', native / 'receipt.json', '--work', fmod)
     artifacts = ROOT / 'artifacts' / ('release57-' + work.name)
+    run('build_stikjit57.py', '--work', work / 'stikjit')
     run('compile_release57.py', '--managed', managed / 'receipt.json', '--native', native / 'receipt.json',
-        '--fmod', fmod / 'receipt.json', '--shortcuts', ROOT / 'release/shortcuts49/manifest.json',
+        '--fmod', fmod / 'receipt.json', '--stikjit', work / 'stikjit/receipt.json', '--shortcuts', ROOT / 'release/shortcuts49/manifest.json',
         '--work', work / 'app', '--output', artifacts)
     receipt = json_read(artifacts / 'build-receipt.json')
     output.mkdir(parents=True)
     shutil.copyfile(artifacts / receipt['ipa'], output / 'Cabrillo.ipa')
     shutil.copyfile(artifacts / 'verification.json', output / 'PACKAGE_AUDIT.json')
     dependencies = []
+    stikjit = json_read(work / 'stikjit/receipt.json')
+    stikjit_lock = json_read(ROOT / 'release/stikjit57.json')
+    dependencies.append(dict(name='StikJIT/' + stikjit['source_commit'], kind='mixed',
+        url=stikjit_lock['url'], sha256=stikjit['archive_sha256'], license=stikjit_lock['license']))
+    dependencies.append(dict(name='StikJIT/idevice-ffi', kind='binary',
+        url='https://raw.githubusercontent.com/StikDebug/StikJIT/' + stikjit['source_commit'] + '/idevice/libidevice_ffi.a',
+        sha256=stikjit['bundled_idevice_ffi']['sha256'], license='MIT; included idevice notice. Upstream binary source revision undisclosed.'))
     for name, row in json_read(inputs / 'receipt.json')['dependencies'].items():
         kind = 'binary' if name.startswith(('sdk', 'mono-')) else 'source'
         if name == 'Everest-libs':
@@ -120,6 +131,11 @@ def build(work, output, sdk, download=None):
         fmod_acquisition='official-authenticated-download' if download else 'developer-supplied-sdk',
         fmod_installer_sha256=ARCHIVE_SHA256 if download else None,
         dependencies=dependencies, shortcut_verification=shortcuts,
+        integrated_jit=dict(upstream_commit=stikjit['source_commit'], archive_sha256=stikjit['archive_sha256'],
+            bundled_idevice_ffi=stikjit['bundled_idevice_ffi'], framework_linked_into_host=False,
+            helper_minimum_ios='17.4', helper_files=stikjit['files'], physical_device_tested=False),
+        everest_release=json_read(ROOT / 'release/everest55-dependencies.json')['everest_release'],
+        managed_runtime_audit=json_read(work / 'everest-audit/receipt.json'),
         toolchain=dict(xcode='26.6', xcode_build='17F113', iphoneos_sdk='26.5', minimum_ios='15.0',
             mono_build_tool=mono_version, strong_name_tool_sha256=sha(Path(shutil.which('sn'))),
             cmake=subprocess.check_output(['cmake', '--version'], text=True).splitlines()[0],
@@ -133,14 +149,28 @@ def build(work, output, sdk, download=None):
     build_location = 'on GitHub Actions' if os.environ.get('GITHUB_ACTIONS') == 'true' else 'locally'
     (output / 'RELEASE_NOTES.md').write_text(
         '# Cabrillo ' + config['version'] + ' · build ' + config['build_number'] + '\n\n'
+        'Adds recommended Built-in StikJIT for standalone iOS17.4 or later, using a separate signed helper extension. '
+        'Run Celeste now prepares JIT, shows progress and starts the game only after helper success, native JIT checks and known debugger detach. '
+        'Retains existing explicit JIT provider choices, StikDebug/LiveContainer methods, manual activation and signed Shortcut49. '
+        'Adds pairing-file import and automatic discovery of pairingFile.plist placed in Documents by compatible tools. '
+        'Shows bounded actual Remote Pairing service readiness and separate Developer Disk Image status. '
+        'Fixes the filled Run button by centering its visible play icon and title together. '
+        'Retains stable Everest1.6642.0, the general dependency-download repair, Feather copy imports, bundle ID and save/profile paths.\n\n'
+        'Built-in StikJIT needs a Development-signed installation preserving get-task-allow and the helper extension, '
+        'Developer Mode, a valid pairing file and LocalDevVPN or a compatible tunnel at10.7.0.1:49152. '
+        'It is unavailable inside LiveContainer; use one of the retained JIT methods there. '
+        'Current iLoader versions use a fixed app list and do not list Cabrillo; '
+        'export a pairing file and import it in Cabrillo instead. No iLoader changes are required. '
+        'Helper launch/signing and physical JIT/gameplay require device acceptance.\n\n'
+        'Existing verified game preparation can be reused while its identity remains valid. '
+        'Existing saves and original imported files are preserved. '
+        'No new physical-device gameplay or JIT test is claimed by this build.\n\n'
         'Unsigned iPhone/iPad IPA built from the tagged or selected public source ' + build_location + '. '
         'Install with a compatible sideloading/LiveContainer or TrollStore setup; iOS 15 or later and JIT are required.\n\n'
         'Import your own original Celeste FNA 1.4.0.0 game ZIP. The first game launch prepares your copy; '
         'later launches reuse its verified cache. No Celeste game code or assets are bundled.\n\n'
         'FMOD runtime code is included with Firelight permission. Players do not need an FMOD account. '
         'Developers must obtain their own SDK from fmod.com; SDK components are not distributed.\n\n'
-        'The launcher adds verified itch.io, Steam and Epic game inputs and retains shortcut49 templates. This newly compiled '
-        'build has passed package checks; physical-device acceptance is separate and has not been claimed.\n\n'
         'BUILD_PROVENANCE.json records source, dependency hashes and binary inputs. GitHub attestations '
         'bind each download to its workflow and commit. They do not promise bit-for-bit reproducibility '
         'or make proprietary dependencies open source. See docs/RELEASING.md and docs/BUILDING.md.\n')

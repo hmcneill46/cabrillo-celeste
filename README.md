@@ -17,11 +17,25 @@ under [Releases](https://github.com/hmcneill46/cabrillo-celeste/releases).
 Normal pushes run source checks; a maintainer chooses when to publish a version
 tag. Manual trial builds produce downloadable Actions artifacts without a Release.
 
-**[Download Cabrillo 0.24.1 / build 52](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.24.1/Cabrillo-0.24.1-unsigned.ipa)** ·
-[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.1).
-The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/36696860903) rebuilt the tested source, audited the IPA
-and verified all five attestations before publishing. Release assets remain
-available independently of the temporary Actions artifacts.
+**[Download Cabrillo 0.26.0 / build 57](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.26.0/Cabrillo-0.26.0-unsigned.ipa)** ·
+[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0).
+The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270) passes
+fresh compilation, package audits, all five attestations, separate verification
+and publication. All five Release assets independently download without sign-in
+and pass checksums/API digests and exact tag/source/workflow/run verification.
+Release assets persist beyond temporary Actions artifacts.
+
+Version 0.26.0 / build 57 adds recommended Built-in StikJIT for new standalone
+iOS 17.4+ installations. Run Celeste prepares and enables JIT with visible progress,
+then launches after native checks and known debugger detach. Manual pairing-file
+import, actual local-tunnel readiness and a visible, centered Run icon are included.
+Existing saved JIT choices, external methods and LiveContainer support remain.
+
+Stable Everest 1.6642.0, the dependency-download and Feather import repairs,
+save/profile paths and Shortcut49 are retained. All 299 captured trial sources
+and 153 dependency hashes match the release; StikJIT's upstream prebuilt idevice
+library is explicitly disclosed. See [change notes](CHANGELOG.md) and
+[the verification report](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md).
 
 You need **iOS15 or later, a compatible installation/JIT setup, and your own
 Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game
@@ -38,45 +52,56 @@ FMOD, .NET/NuGet binaries and signed Shortcut resources are declared inputs;
 this is not a claim that every dependency is compiled from source or that separate
 builds are byte-identical. See [how releases work and how to verify a download](docs/RELEASING.md).
 
-## Game files from itch.io, Steam and Epic
+## Combined development build
 
-Build53 /0.25.0 development adds the nine original FNA1.4.0.0 distributions
-provided for compatibility testing, including Steam and Epic Windows.
-[Get the correct game ZIP](docs/CELESTE_INPUTS.md), with Steam depot and Epic
-download instructions. The published build52 still uses the earlier importer.
+The next test build, **0.29.0 / build58**, brings together the published v0.26.0
+work and this Mac's previously unpushed game-input and touch-control development.
+It is being validated before a new public release. The download above remains
+the published v0.26.0; the features below describe the combined development lane.
+See [integration status and source preservation](docs/ios-jit/UNIFIED_BUILD_58.md).
 
-## Custom touch controls in development
+### Game files from itch.io, Steam and Epic
 
-Build57 /0.28.0 includes a SwiftUI editor in **Settings → Controls** and
-**Pause → Touch controls**. Arrange and resize circles or rectangles, duplicate
-buttons, split Jump/Dash regions, add Crouch Dash/Quick Restart, and choose
-Hold/Toggle/Inverse Grab. Layouts can be saved to Files and shared.
-The Behavior page uses Celeste’s own grab logic, remembers each input method’s
-mode, and offers optional persistent toggling. Feather steering and controller
-prompts can also be changed during play. Automatic prompts recognise DualSense;
-the game’s light colour is replayed after controller reconnection. Physical
-DualSense light behaviour still needs device verification.
+The importer supports the nine original FNA1.4.0.0 distributions used for local
+compatibility testing, including Steam and Epic Windows. Read
+[how to obtain the correct game ZIP](docs/CELESTE_INPUTS.md) for Steam depot and
+Epic download instructions. Existing retained game files can rebuild their
+prepared cache without requiring the original temporary import ZIP again.
 
-Controls can use the entire display, edge to edge. Portrait provides the detailed
-editor; landscape becomes an actual-size layout with a 16:9 game-image guide.
+### Custom touch controls
+
+**Settings → Controls → Customize touch controls** and **Pause → Touch controls**
+open a SwiftUI editor. Arrange and resize circles or rectangles, duplicate
+buttons, split Jump/Dash regions, and add Crouch Dash or Quick Restart. Controls
+can use the entire display, edge to edge. Portrait provides detailed choices;
+landscape shows an actual-size layout with a16:9 game-image guide. Layouts can be
+saved to Files and shared, including conversion of Morro D3 v2 layouts.
+
 An optional experimental preset uses touch/hold for Jump and an eight-direction
-swipe for Dash, independently of the movement joystick. It keeps Celeste's physics.
+swipe for Dash, independently of the movement joystick. **Feather follows finger**
+is also optional and can be changed during play. Both retain Celeste's physics.
+
+The Behavior page uses Celeste's own Hold/Toggle/Inverse Grab logic, remembers
+each input method's choice and offers optional toggling that persists across
+death and map changes. Controller symbols can be selected manually; Automatic
+recognizes DualSense through SDL. Original controller light colours replay after
+reconnection. Physical DualSense light behavior still needs device verification.
 See the [touch controls guide](docs/TOUCH_CONTROLS.md) and
-[build57 evidence](docs/ios-jit/INPUT_PREFERENCES_BUILD_57.md).
-This development feature is not in the published build52 release.
+[local input-preference evidence](docs/ios-jit/INPUT_PREFERENCES_BUILD_57.md).
 
-## Optional feather touch control in development
+## Built-in JIT setup
 
-Build54 /0.26.0 adds **Settings → Cabrillo extras → Feather follows finger**.
-During feather flight, drag in the game area to steer toward your finger. Lifting
-it, or bringing it into the small neutral zone around Madeline, uses Celeste's
-normal slow coast. The game retains its original speed and turning rules.
-The option defaults off and needs no imported mod; turning it off restores the
-usual feather joystick. [Behavior and testing](docs/ios-jit/FEATHER_TOUCH_BUILD_54.md).
-Build57 includes the55 development repair for existing installations, which fixes
-53/54 rejecting startup after the temporary game ZIP has been removed.
-[Startup repair](docs/ios-jit/SAVED_GAME_BUILD_55.md).
-This development feature is not in the published build52 release.
+[Build57 /0.26.0](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) adds integrated
+StikJIT for supported standalone installations: connect the local VPN, import
+your pairing file and press Run Celeste. Cabrillo shows preparation progress and
+verifies JIT before launching. Existing saved JIT choices and LiveContainer
+methods remain available. Manual pairing import also works when a tool does not
+yet recognize Cabrillo. Sign with debugging permission, preserve the embedded
+helper extension, enable Developer Mode and use a valid pairing file. Built-in
+JIT requires standalone iOS 17.4+; LiveContainer keeps its existing methods.
+The public release passes build/package checks; physical helper/JIT acceptance
+remains separate. See [building instructions](docs/BUILDING.md) and the report's
+signing and setup details. No iLoader changes are required.
 
 ## Home Screen launch in development
 
@@ -158,8 +183,9 @@ runs. Its loading UI pauses and delayed game reveal are addressed in
 [build32](docs/ios-jit/FIRST_FRAME_BUILD_32.md): always-visible startup details and
 handoff after the first rendered game frame. The verified kit is uploaded to
 iCloud; [its phone gate is accepted](docs/ios-jit/BUILD_32_ACCEPTANCE.md).
-Build32 remains an accepted fallback. The owner-prioritized build56 editor is
-tracked separately from the earlier pending save-manager device gate.
+Build32 remains an accepted fallback. The local touch editor was developed at
+the owner's request; its device acceptance remains separate from the earlier
+save-manager gate.
 Build32 reuses31's exact managed payload. Original28/29/30/31 artifacts remain frozen.
 
 For development, start with [the current handoff](HANDOFF.md),
@@ -169,11 +195,18 @@ For development, start with [the current handoff](HANDOFF.md),
 
 ## Developers: build locally
 
+The combined development recipe is `tools/build_release58.py`; it targets
+0.29.0/build58 with stable Everest1.6642.0, dependency download recovery, copy-based
+Files imports, Built-in StikJIT and the touch/input features above. Use
+`tools/build_release57.py` to reproduce the published v0.26.0 source lane.
+Build58 validation and delivery are tracked in
+[the integration report](docs/ios-jit/UNIFIED_BUILD_58.md).
+
 Use macOS, Python3.12 or later, CMake, Mono6.14.1 (including `sn`) and **Xcode26.6 /17F113**. Download your own
 **FMOD Engine1.10.09 iOS SDK** from [fmod.com](https://www.fmod.com/download), then:
 
 ```sh
-python3 tools/build_release52.py --work .build/my-source-build \
+python3 tools/build_release58.py --work .build/my-source-build \
   --output .build/my-source-build/output --fmod-sdk '/path/to/FMOD Programmers API'
 ```
 
@@ -192,6 +225,12 @@ reproduction commands remain documented separately.
 
 | Location | Reason it is here |
 | --- | --- |
+| `experiments/ios-jit/launcher-unified58` | Combined build58 source, preserving both development histories |
+| `experiments/ios-jit/launcher-input-preferences` | Preserved local57 input/editor implementation and regression fixtures |
+| `experiments/ios-jit/launcher-integrated-jit` | Published57 standalone StikJIT host/helper integration |
+| `experiments/ios-jit/launcher-dependency-downloads` | Build56 general archive relocation, current mirror metadata and runtime/dependency parity |
+| `experiments/ios-jit/launcher-everest6642` | Build55 stable1.6642 source patch, synchronized runtime identities and compiled metadata audit |
+| `experiments/ios-jit/launcher-copy-picker` | Build54 copy-based game/mod imports with retained build53 signing adaptation |
 | `experiments/ios-jit/launcher-owned-game` | Build38 source-built bootstrap and preparation of the user's original game |
 | `experiments/ios-jit/launcher-catalogue` | Accepted build28 native browser and preserved source |
 | `experiments/ios-jit/launcher-first-frame` | Build32 passive startup display and first-frame game handoff |
@@ -209,7 +248,7 @@ reproduction commands remain documented separately.
 | `.build`, `artifacts` | Ignored fresh build output, symbols, receipts and unsigned IPAs |
 
 Historical experiment builders retain their original paths as documentation.
-Use `tools/build_release52.py` for the current recipe and `tools/build.py` for
+Use `tools/build_release58.py` for the combined development recipe and `tools/build.py` for
 accepted28 reproduction. Historical tools are not a promise
 that every historical failed prototype can be rebuilt from the current capsule.
 The [file inventory](docs/MIGRATION_FILE_INVENTORY.json) records a reason and hash

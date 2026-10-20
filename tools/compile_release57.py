@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""Compile release57 from fresh public dependency receipts and licensed FMOD runtime inputs."""
+"""Compile build57 with current dependency downloads and the retained Everest1.6642 runtime."""
 import argparse, datetime, json, os, plistlib, re, shutil, subprocess, zipfile
 from pathlib import Path
-from compile_input_preferences import ROOT, sha
-SOURCE = ROOT / 'experiments/ios-jit/launcher-input-preferences'
+from compile_owned_game import ROOT, sha
+SOURCE = ROOT / 'experiments/ios-jit/launcher-shortcut-cellular'
+OVERLAY = ROOT / 'experiments/ios-jit/launcher-copy-picker'
+INTEGRATED_OVERLAY = ROOT / 'experiments/ios-jit/launcher-integrated-jit'
 IDENTITY = ROOT / 'release/app57'
+DEPENDENCY_OVERLAY = ROOT / 'experiments/ios-jit/launcher-dependency-downloads'
+EVEREST_OVERLAY = ROOT / 'experiments/ios-jit/launcher-everest6642'
 
-DEVELOPER=os.environ.get('DEVELOPER_DIR','/Applications/Xcode-26.6.app/Contents/Developer')
+DEVELOPER=os.environ.get('DEVELOPER_DIR','/Applications/Xcode.app/Contents/Developer')
 XCODE='Xcode 26.6\nBuild version 17F113'
 TARGET='arm64-apple-ios15.0'
 APP_NAME='CelesteJITEverest'
@@ -18,6 +22,76 @@ def local_path(name):
     if path.resolve()!=path or ROOT not in path.parents: raise ValueError('Expected an unaliased repository path: '+str(name))
     return path
 
+def validate_runtime_identity():
+    import ast
+    manifest = read_json(EVEREST_OVERLAY / 'RuntimeIdentity.json')
+    if manifest.get('everestSourceCommit') != '5abd7876821223c20711c1844a5187321d6e904c' or manifest.get('builtins') != {'Celeste': '1.4.0.0', 'CelesteIOS': '1.0.0', 'Everest': '1.6642.0', 'EverestCore': '1.6642.0'} or manifest.get('compatibilityPolicy') != 1:
+        raise ValueError('Unexpected Everest55 runtime identity')
+    # Read the frozen generator's string templates without executing its writes.
+    templates={node.targets[0].id:node.value.left.value
+               for node in ast.parse((SOURCE/'generate_runtime_identity.py').read_text()).body
+               if isinstance(node,ast.Assign) and len(node.targets)==1
+               and isinstance(node.targets[0],ast.Name) and node.targets[0].id in {'swift','managed'}
+               and isinstance(node.value,ast.BinOp) and isinstance(node.value.left,ast.Constant)}
+    if set(templates)!={'swift','managed'}: raise ValueError('Runtime identity generator templates differ')
+    digest=sha(EVEREST_OVERLAY/'RuntimeIdentity.json')
+    prefix=(digest,manifest['everestSourceCommit'],'1.6642.0-cjit-5abd787')
+    swift=templates['swift'] % (*prefix,', '.join(json.dumps(k)+': '+json.dumps(v) for k,v in sorted(manifest['builtins'].items())),1)
+    managed=templates['managed'] % (*prefix,'\n'.join('        { '+json.dumps(k)+', new Version('+json.dumps(v)+') },' for k,v in sorted(manifest['builtins'].items()) if k!='EverestCore'))
+    for path,expected in [(EVEREST_OVERLAY/'native/RuntimeIdentity.swift',swift),(EVEREST_OVERLAY/'managed/RuntimeIdentity.cs',managed)]:
+        if path.read_text()!=expected: raise ValueError('Runtime identity source differs: '+str(path))
+    return manifest
+
+def selected_swift_sources():
+    validate_runtime_identity()
+    overrides = {name: DEPENDENCY_OVERLAY/'native'/name for name in ['DependencyPlan.swift','DependencyInstaller.swift','ModLibrary.swift']}
+    overrides['LauncherUI.swift'] = INTEGRATED_OVERLAY/'native/LauncherUI.swift'
+    return sorted([EVEREST_OVERLAY/'native/RuntimeIdentity.swift' if p.name=='RuntimeIdentity.swift' else overrides.get(p.name,p) for p in (SOURCE/'native').glob('*.swift')] + [INTEGRATED_OVERLAY/'native/IntegratedJITViews.swift'])
+
+def validate_overlay(lock):
+    """Retain all274 accepted56 app inputs and select only the new57 overlay."""
+    import compile_release56 as previous
+    previous.validate_overlay(read_json(ROOT/'release/app56/Dependencies.json'))
+    rows = lock.get('retained_build56_source_sha256', {})
+    if len(rows) != 274 or __import__('hashlib').sha256(json.dumps(rows,sort_keys=True,separators=(',',':')).encode()).hexdigest() != '7f022b5d0502a95edf509d2837c08c70a90b85dbc652a4e0229b84a6ca45d517':
+        raise ValueError('Incomplete or changed retained build56 source lock')
+    for name, digest in rows.items():
+        if sha(local_path(name)) != digest: raise ValueError('Retained build56 source differs: '+name)
+    if lock.get('integrated_jit_overlay') != str(INTEGRATED_OVERLAY.relative_to(ROOT)) or lock.get('stikjit_dependency_lock') != 'release/stikjit57.json':
+        raise ValueError('Unexpected integrated JIT source/dependency selection')
+    overrides = {'src/'+name: str((INTEGRATED_OVERLAY/'src'/name).relative_to(ROOT)) for name in ['main.m','CJPlatformOptions.m']}
+    additions = [str((OVERLAY/'src/CJDocumentPickerCompatibility.m').relative_to(ROOT))] + [str((INTEGRATED_OVERLAY/'src'/name).relative_to(ROOT)) for name in ['CJIntegratedJITCoordinator.m','CJIntegratedJITLaunch.m']]
+    if lock.get('source_overrides') != overrides or lock.get('added_native_sources') != additions:
+        raise ValueError('Unexpected build57 native source selection')
+    swift_overrides = {'native/'+name:str((DEPENDENCY_OVERLAY/'native'/name).relative_to(ROOT)) for name in ['DependencyPlan.swift','DependencyInstaller.swift','ModLibrary.swift']}
+    swift_overrides['native/LauncherUI.swift'] = str((INTEGRATED_OVERLAY/'native/LauncherUI.swift').relative_to(ROOT))
+    if lock.get('swift_source_overrides') != swift_overrides or lock.get('added_swift_sources') != [str((INTEGRATED_OVERLAY/'native/IntegratedJITViews.swift').relative_to(ROOT))]:
+        raise ValueError('Unexpected build57 Swift source selection')
+    return overrides, additions
+
+def validate_download_metadata():
+    """Only transport references change; tested compatibility archives stay exact."""
+    expected = read_json(SOURCE/'CompatibilityDownloads.json')
+    pages = {'GravityHelper':'https://gamebanana.com/mods/53767','CollabUtils2':'https://gamebanana.com/mods/53704','FemtoHelper':'https://gamebanana.com/mods/53722'}
+    for row in expected:
+        if any(module['name']=='FemtoHelper' for module in row['modules']):
+            row['url']='https://gamebanana.com/mmdl/1838255'
+        row['mirrorName']=row['url'].rsplit('/',1)[-1]
+        row['gameBananaPage']=pages[row['modules'][0]['name']]
+    if read_json(DEPENDENCY_OVERLAY/'CompatibilityDownloads.json') != expected:
+        raise ValueError('Compatibility archive version, metadata or integrity changed')
+    expected_contract = read_json(SOURCE/'BuildContract.json')
+    expected_contract['mod_download_manifest']['FemtoHelper-v1.15.22.zip']['url']='https://gamebanana.com/mmdl/1838255'
+    if read_json(DEPENDENCY_OVERLAY/'BuildContract.json') != expected_contract:
+        raise ValueError('Build contract changed beyond the verified Femto transport reference')
+    return expected
+
+def selected_native_sources(lock):
+    overrides, additions = validate_overlay(lock)
+    return sorted([local_path(overrides['src/' + p.name]) if 'src/' + p.name in overrides else p
+                   for p in (SOURCE / 'src').iterdir() if p.suffix in {'.c', '.m'}] +
+                  [local_path(name) for name in additions])
+
 def validate(args):
     paths=[local_path(n) for n in [args.managed,args.native,args.fmod]]
     managed,native,fmod=map(read_json,paths)
@@ -26,6 +100,11 @@ def validate(args):
     assert fmod['status']=='PASS_EXPLICIT_FMOD_SDK' and not fmod['redistribution_permission_granted']
     assert fmod['native_receipt_sha256']==sha(paths[1])
     manifest=Path(managed['input_receipt']); inputs=manifest.parent
+    if read_json(manifest)['dependencies']['Everest']['commit']!='5abd7876821223c20711c1844a5187321d6e904c':
+        raise ValueError('Managed input is not the pinned Everest1.6642 source')
+    identity_source=EVEREST_OVERLAY/'managed/RuntimeIdentity.cs'
+    if managed['source_sha256'].get(str(identity_source.relative_to(ROOT)))!=sha(identity_source):
+        raise ValueError('Managed payload lacks the new runtime identity source')
     from verify_release_nuget import verify_packages
     verify_packages(managed['nuget_packages'], read_json(manifest)['sdk_arch'])
     assert native['input_manifest_sha256']==managed['input_receipt_sha256']==sha(manifest)
@@ -50,7 +129,7 @@ def collect_notices(inputs,managed_work,app):
             relative=Path(label)/path.relative_to(root); target=destination/relative
             target.parent.mkdir(parents=True,exist_ok=True); shutil.copyfile(path,target); records[str(relative)]=sha(target)
     for name,path in [('CABRILLO-LICENSE',ROOT/'LICENSE'),('ZIPFoundation-LICENSE',ROOT/'vendor/ZIPFoundation/LICENSE'),
-                      ('Yams-LICENSE',ROOT/'vendor/Yams/LICENSE'),('MORRO-LICENSE',ROOT/'docs/licenses/MORRO-LICENSE.txt')]:
+                      ('Yams-LICENSE',ROOT/'vendor/Yams/LICENSE')]:
         shutil.copyfile(path,destination/name); records[name]=sha(path)
     # Lua's license is in its public header; retain the full upstream text.
     for label,path in [('Lua-lua.h',inputs/'lua/src/lua.h'),('DOTNET-LICENSE.TXT',inputs/'mono-ios-arm64/LICENSE.TXT'),
@@ -69,15 +148,19 @@ def collect_notices(inputs,managed_work,app):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for name in ['managed','native','fmod','shortcuts','work','output']: p.add_argument('--'+name,required=True)
+    for name in ['managed','native','fmod','shortcuts','stikjit','work','output']: p.add_argument('--'+name,required=True)
     p.add_argument('--compile-only',action='store_true',help='Compile native code without making an IPA or freezing the lane')
     args=p.parse_args(); paths,managed,native_overlay,fmod,inputs,overlay,selected_libraries=validate(args)
+    from build_stikjit57 import validate_receipt as validate_stikjit
+    stikjit_receipt_path=local_path(args.stikjit)
+    stikjit=validate_stikjit(stikjit_receipt_path)
     work=local_path(args.work); output=local_path(args.output)
     assert ROOT/'.build' in work.parents and ROOT/'artifacts' in output.parents and not work.exists() and not output.exists()
     identity=read_json(IDENTITY/'BuildIdentity.json'); settings=plistlib.loads((IDENTITY/'Info.plist').read_bytes())
     assert settings['CFBundleVersion']==identity['build_number'] and settings['CFBundleShortVersionString']==identity['version']
     assert identity['build_number']=='57' and settings['CFBundleIdentifier']=='io.github.hmcneill46.celeste.everest.jit.everest'
     lock=read_json(IDENTITY/'Dependencies.json')
+    validate_overlay(lock)
     for name,digest in lock['shared_source_sha256'].items():
         if sha(local_path(name))!=digest: raise ValueError('Shared source differs: '+name)
     from verify_release_shortcuts import verify as verify_shortcuts
@@ -86,14 +169,17 @@ def main():
         raise ValueError('Use the public reviewed Shortcut templates')
     verify_shortcuts(shortcut_receipt.parent)
     shortcut_assets=shortcut_receipt.parent
-    sources=[Path(__file__),ROOT/'tools/build_shortcut_files49.py',ROOT/'tools/check_shortcut_files49.py',ROOT/'tools/check_shortcut_cellular.py',ROOT/'tools/check_shortcut_import_ui.py',ROOT/'tools/compile_input_preferences.py',ROOT/'tools/verify_owned_game.py',ROOT/'tools/prepare_owned_public.py',SOURCE/'tools/AuditPayload.cs',
-             ROOT/'release/public57.json',ROOT/'release/owned-game-dependencies.json',ROOT/'release/owned-game-nuget.json',ROOT/'LICENSE',ROOT/'vendor/ZIPFoundation/LICENSE',ROOT/'vendor/Yams/LICENSE',ROOT/'modern-ios/Assets/TouchControls/NOTICE.md']
-    sources += [ROOT/'docs/licenses/MORRO-LICENSE.txt', ROOT/'tools/ci/check_native_game_inputs.py', SOURCE/'tests/GameInputStateTests.m', ROOT/'tools/build_release57.py', ROOT/'tools/probe_game_inputs.py', ROOT/'tools/check_game_inputs_host.py', ROOT/'tools/check_game_inputs_motion.py', ROOT/'tools/check_game_inputs_sj.py', SOURCE/'tests/InputMatrixTests.cs', SOURCE/'tests/GameCodeStoreTests.cs']
-    sources += [ROOT/'tools/check_input_preferences_policy.py',ROOT/'tools/check_input_preferences_ui.py',*[SOURCE/'tests'/n for n in ['TouchProfileTests.swift','TouchPolicyTests.cs','TouchEditorPreview.swift','TouchEditorUITests.swift','TouchInputIntegrationTests.cs','InputPreferencesIntegrationTests.cs']]]
-    sources += [ROOT/'tools/check_grab_lifecycle_host.py',SOURCE/'tests/GrabLifecycleTests.cs',ROOT/'tools/build_input_preferences_host_backend.py', ROOT/'tools/check_input_preferences_host.py',ROOT/'tools/check_input_preferences_motion.py',SOURCE/'tests/TouchEditorMotionTests.cs',ROOT/'tools/probe_saved_game.py',ROOT/'tools/check_feather_touch_ui.py',ROOT/'tools/check_feather_touch_motion.py']
-    sources += [SOURCE/'tests'/n for n in ['FeatherTouchTests.cs','FeatherMotionTests.cs','FeatherIntegrationTests.cs','FeatherPreview.swift','FeatherUITests.swift','SessionIntegrationTests.cs','MotionSmoothingTests.cs','host_motion.m']]
+    sources=[Path(__file__),ROOT/'tools/build_shortcut_files49.py',ROOT/'tools/check_shortcut_files49.py',ROOT/'tools/check_shortcut_cellular.py',ROOT/'tools/check_shortcut_import_ui.py',ROOT/'tools/compile_owned_game.py',ROOT/'tools/verify_owned_game.py',ROOT/'tools/prepare_owned_public.py',SOURCE/'tools/AuditPayload.cs',
+             ROOT/'release/public57.json',ROOT/'release/everest55-dependencies.json',ROOT/'release/owned-game-nuget.json',ROOT/'LICENSE',ROOT/'vendor/ZIPFoundation/LICENSE',ROOT/'vendor/Yams/LICENSE',ROOT/'modern-ios/Assets/TouchControls/NOTICE.md']
     sources += [ROOT/'tools/verify_release_nuget.py', ROOT/'release/nuget-hosts.json']
     sources += [p for folder in [SOURCE/'src',SOURCE/'native',SOURCE/'public-build'] for p in folder.rglob('*') if p.is_file()]
+    sources = [p for p in sources if p != SOURCE/'src/main.m']
+    sources += [p for p in OVERLAY.rglob('*') if p.is_file()]
+    sources += [p for p in INTEGRATED_OVERLAY.rglob('*') if p.is_file()]
+    sources += [ROOT/'tools/build_stikjit57.py', ROOT/'release/stikjit57.json', ROOT/'tools/compile_release56.py', ROOT/'tools/verify_integrated_jit57.py']
+    sources += [p for p in EVEREST_OVERLAY.rglob('*') if p.is_file()]
+    sources += [p for p in DEPENDENCY_OVERLAY.rglob('*') if p.is_file()]
+    sources += [ROOT/'tools/prepare_everest55_public.py', ROOT/'tools/build_everest55_managed.py']
     sources += [SOURCE/'tests/ShortcutCellularTests.m',ROOT/'experiments/ios-jit/launcher-shortcut-import/src/CJShortcutSession.m',ROOT/'experiments/ios-jit/launcher-shortcut-import/src/CJShortcutSession.h']
     sources += [SOURCE/'tests/ShortcutImportPreview.swift',SOURCE/'tests/ShortcutImportUITests.swift',SOURCE/'tests/ShortcutInstallTests.m', ROOT/'tools/verify_release_shortcuts.py', shortcut_receipt]
     sources += [p for p in shortcut_assets.rglob('*') if p.is_file()]
@@ -108,6 +194,7 @@ def main():
     sources += [ROOT/n for n in lock['shared_source_sha256']]
     script=ROOT/'experiments/ios-jit/launcher-catalogue/scripts/celeste-jit-probe.js'; sources.append(script)
     for r in [managed,native_overlay,fmod]: sources += [ROOT/n for n in r['source_sha256']]
+    sources += [ROOT/n for n in stikjit['source_sha256']]
     source_hashes={str(p.relative_to(ROOT)):sha(p) for p in sorted(set(sources))}
     work.mkdir(parents=True); output.mkdir(parents=True)
     env=dict(os.environ,DEVELOPER_DIR=DEVELOPER,CLANG_MODULE_CACHE_PATH=str(work/'module-cache'),SWIFT_MODULECACHE_PATH=str(work/'module-cache'))
@@ -141,7 +228,7 @@ def main():
         yaml_objects.append(obj)
         compiled.append(source)
     run(["xcrun", "libtool", "-static", "-o", native / "libCYaml.a", *yaml_objects])
-    swift_sources = sorted((SOURCE / "native").glob("*.swift"))
+    swift_sources = selected_swift_sources()
     run(["xcrun", "swiftc", *swift_flags, "-module-name", "CJLauncher", "-I", native, "-I", yaml / "include",
          "-emit-library", "-static", "-emit-module", "-emit-module-path", native / "CJLauncher.swiftmodule",
          "-emit-objc-header-path", native / "CJLauncher-Swift.h", "-o", native / "libCJLauncher.a", *swift_sources])
@@ -166,9 +253,9 @@ def main():
                         r"_(SystemNative_|CompressionNative_|AppleCryptoNative_)[A-Za-z0-9_]+", 100),
               make_table("FNAStaticTable.c", "CJResolveFNAStatic", libraries,
                         r"_(FMOD_[A-Za-z0-9_]+|SDL_[A-Za-z0-9_]+|FNA3D_[A-Za-z0-9_]+|FAudio[A-Za-z0-9_]*|F3DAudio[A-Za-z0-9_]*|FACT[A-Za-z0-9_]*|FAPO[A-Za-z0-9_]*|XNA_[A-Za-z0-9_]+|stb_vorbis_[A-Za-z0-9_]+|tf_[A-Za-z0-9_]+|luaL?_[A-Za-z0-9_]+|luaopen_[A-Za-z0-9_]+)", 500)]
-    includes = [SOURCE / "src", native, ROOT / "experiments/ios-jit/managed-canary/src"]
+    includes = [INTEGRATED_OVERLAY / "src", OVERLAY / "src", SOURCE / "src", native, ROOT / "experiments/ios-jit/managed-canary/src"]
     includes += [inputs / "SDL2/include", inputs / "mono-ios-arm64/runtimes/ios-arm64/native/include/mono-2.0"]
-    native_sources = sorted(p for p in (SOURCE / "src").iterdir() if p.suffix in {".c", ".m"})
+    native_sources = selected_native_sources(lock)
     native_sources += [ROOT / "experiments/ios-jit/managed-canary/src" / n for n in ["CanaryNative.c", "CJNativeResolver.c", "CJMonoThread.c"]]
     native_sources += tables
     objects = []
@@ -191,16 +278,22 @@ def main():
         print('PASS_OWNED_GAME_NATIVE_COMPILATION'); return
     for path,name in zip(paths,['managed-receipt.json','native-dependencies.json','fmod-receipt.json']): shutil.copyfile(path,output/name)
     app=stage/'Payload'/(APP_NAME+'.app'); shutil.copytree(overlay,app)
+    (app/'Frameworks').mkdir(); (app/'PlugIns').mkdir()
+    shutil.copytree(local_path(stikjit['framework']),app/'Frameworks/StikJIT.framework')
+    shutil.copytree(local_path(stikjit['helper']),app/'PlugIns/CabrilloJITHelper.appex')
     home_shortcuts=app/'HomeShortcuts';home_shortcuts.mkdir()
     shutil.copyfile(shortcut_receipt,home_shortcuts/'manifest.json')
     for variant in ['Standalone','LiveContainer']:
         target=home_shortcuts/variant;target.mkdir()
         shutil.copyfile(shortcut_assets/variant/'Cabrillo.shortcut',target/'Cabrillo.shortcut')
     for name in ['RuntimeIdentity.json','CompatibilityDownloads.json','RuntimeCompatibleReleases.json','THIRD_PARTY_NOTICES.md']:
-        shutil.copyfile(SOURCE/name,app/name)
+        shutil.copyfile((EVEREST_OVERLAY if name=='RuntimeIdentity.json' else DEPENDENCY_OVERLAY if name=='CompatibilityDownloads.json' else SOURCE)/name,app/name)
     shutil.copyfile(script,app/'celeste-jit-probe.js')
     shutil.copyfile(ROOT/'modern-ios/Assets/TouchControls/NOTICE.md',app/'TOUCH_ARTWORK_NOTICE.md')
     collect_notices(inputs,paths[0].parent,app)
+    shutil.copytree(INTEGRATED_OVERLAY/'notices',app/'licenses/StikJIT')
+    shutil.copyfile(INTEGRATED_OVERLAY/'THIRD_PARTY_NOTICES.md',app/'THIRD_PARTY_NOTICES.md')
+    write_json(app/'licenses/StikJIT/UPSTREAM.json',read_json(ROOT/'release/stikjit57.json'))
     shutil.copyfile(paths[2].parent/'FMOD-LICENSE.TXT',app/'licenses/FMOD-LICENSE.TXT')
     assets = stage / "Assets.xcassets"
     icon = assets / "AppIcon.appiconset"
@@ -212,24 +305,25 @@ def main():
          "--target-device", "iphone", "--target-device", "ipad", "--app-icon", "AppIcon", "--output-partial-info-plist", stage / "asset-info.plist"])
     settings.update(plistlib.loads((stage / "asset-info.plist").read_bytes()))
     (app / "Info.plist").write_bytes(plistlib.dumps(settings, fmt=plistlib.FMT_BINARY))
-    info=read_json(SOURCE/'BuildContract.json'); info.pop('provenance')
+    info=read_json(DEPENDENCY_OVERLAY/'BuildContract.json'); info.pop('provenance')
     canary=app/'CJITCodeCanary-v1.0.0.zip'
     info['mod_download_manifest'][canary.name]=dict(bytes=canary.stat().st_size,sha256=sha(canary),url=None)
-    runtime=read_json(SOURCE/'RuntimeIdentity.json'); recipe=read_json(app/'OwnedGameRecipe.json')
-    info.update(identity,touch_controls=dict(schema=1,coordinate_space="full_display",editor="SwiftUI",landscape_actual_size=True,game_guide="16:9",in_game_editor=True,max_controls=24,swipe_default_enabled=False,original_physics=True,physical_tested=False),input_preferences=dict(original_grab=True,per_source_modes=True,persistent_toggle_optional=True,controller_prompts=True,sdl_controller_identity=True,light_reconnect_replay=True,physical_tested=False),feather_touch=dict(live=True,built_in=True,default_enabled=False,preference="cabrillo.featherTouch",physics="original",physical_tested=False),shortcut_install=dict(revision=49,variants=['Standalone','LiveContainer'],signed_receipt_sha256=sha(shortcut_receipt),user_import_required=True),shortcut_launch=dict(schema=1,network_restore="configured_preset_for_travel",vpn_gate="travel_route_then_offline_rppairing_v19_hello",jit_gate="native_checks_after_detach",physical_tested=False),created_utc=created,xcode=XCODE,sdk='iphoneos',sdk_version=sdk_version,target=TARGET,
-        bundled_runtime_identity=runtime,bundled_runtime_identity_sha256=sha(SOURCE/'RuntimeIdentity.json'),
+    runtime=validate_runtime_identity(); recipe=read_json(app/'OwnedGameRecipe.json')
+    info.update(identity,dependency_downloads=dict(schema=1,mirror_name_from_index=True,archive_relocation_recovery=True,recovery_identity='exact_reviewed_archive',bounded_discovery=True,optional_api_alias='required_only',compatibility_archive_integrity_preserved=True,femto_file_id='1838255',physical_tested=False),document_picker_imports=dict(schema=1,mode='copy',originals_modified=False,physical_tested=False),document_picker_compatibility=dict(schema=1,automatic=True,scope='standalone_document_service_host_identifier',bundle_identifier_changed=False,livecontainer_managed=True,physical_tested=False),shortcut_install=dict(revision=49,variants=['Standalone','LiveContainer'],signed_receipt_sha256=sha(shortcut_receipt),user_import_required=True),shortcut_launch=dict(schema=1,network_restore="configured_preset_for_travel",vpn_gate="travel_route_then_offline_rppairing_v19_hello",jit_gate="native_checks_after_detach",physical_tested=False),created_utc=created,xcode=XCODE,sdk='iphoneos',sdk_version=sdk_version,target=TARGET,
+        bundled_runtime_identity=runtime,bundled_runtime_identity_sha256=sha(EVEREST_OVERLAY/'RuntimeIdentity.json'),
         base_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         working_tree_dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT)),source_sha256=source_hashes,
         launcher_native_receipt_sha256=sha(output/'native-receipt.json'),managed_build_receipt_sha256=sha(paths[0]),
-        game_code_legacy_source_id=recipe['legacy_source_id'],game_code_sources=[dict(source_id=s['source_id'],kind=s['kind']) for s in recipe['sources']],game_code_recipe_sha256=sha(app/'OwnedGameRecipe.json'),
+        game_code_source_id=recipe['source_id'],game_code_recipe_sha256=sha(app/'OwnedGameRecipe.json'),
         game_fixture_sha256=sha(app/'Managed/Cabrillo.Bootstrap.dll'),game_adapter_sha256=sha(app/'Managed/CelesteJITEverest.dll'),
         game_content_manifest_sha256=sha(app/'GameContentManifest.json'),script_template_sha256=sha(app/'celeste-jit-probe.js'),
         compatibility_downloads_sha256=sha(app/'CompatibilityDownloads.json'),runtime_compatible_releases_sha256=sha(app/'RuntimeCompatibleReleases.json'),
-        private_prepared_game_il=False,owned_game_preparation=dict(schema=2,cached=True,bundled_game=False,one_time_jit_required=True),
+        private_prepared_game_il=False,owned_game_preparation=dict(schema=1,cached=True,bundled_game=False,one_time_jit_required=True),
         runtime_pin=dict(runtime_commit=native_overlay['runtime_commit'],version='8.0.28'),
         monomod_pin=dict(commit='dfc30a1506d37fb88a2c2be004f525205f46a24c'),reflection_flags=dict(abi=1),
         ios_support=dict(id='CelesteIOS',version='1.0.0',abi=1,required=True,sha256=sha(app/'Managed/CelesteIOS.dll')),
-        platforms=dict(minimum_ios='15.0',jit_routes=['livecontainer2','stikdebug','trollstore','manual'],local_memory_below_ios26=True,default_callback_fps=60,optional_callback_fps=120),
+        integrated_jit=dict(schema=1,provider='integrated',recommended=True,default_for_new_standalone_installs=True,minimum_ios='17.4',helper_extension=True,framework_in_host=False,livecontainer_supported=False,upstream_commit=stikjit['source_commit'],upstream_archive_sha256=stikjit['archive_sha256'],bundled_idevice_ffi=stikjit['bundled_idevice_ffi'],pairing_file='pairingFile.plist',automatic_run=True,ready_gate='helper_success_and_native_checks_after_detach',physical_tested=False),
+        platforms=dict(minimum_ios='15.0',jit_routes=['integrated','livecontainer2','stikdebug','trollstore','manual'],local_memory_below_ios26=True,default_callback_fps=60,optional_callback_fps=120),
         loading=dict(abi=1,scheduler='main CADisplayLink',ready_gate='first_draw_and_post_present_readback',passive_game_startup=True,non_preemptible_steps=True),
         precision_repair=dict(schema=1,original_float_sites=10,lava_float_setters=2,lava_double_constants=1,preserved_double_sites=10,changed_method_bodies=4),
         save_transfers=dict(schema=1,unchanged_file_contents=True,vanilla_slots=3,staged_profile_swap=True,retained_rollback=True,main_only_mod_choice=True),
@@ -259,6 +353,7 @@ def main():
     for name,digest in source_hashes.items():
         if sha(ROOT/name)!=digest: raise RuntimeError('Source changed during build: '+name)
     validate(args)
+    validate_stikjit(stikjit_receipt_path)
     from verify_everest6580 import macho,compiled_protocol
     binary=executable.read_bytes(); uuid=macho(binary,True)
     assert compiled_protocol(binary)==info['compiled_protocol']
@@ -271,12 +366,12 @@ def main():
     receipt=dict(status='BUILD_COMPLETE_AWAITING_PACKAGE_VERIFICATION',build=identity,actual_created_utc=created,
         ipa=ipa.name,ipa_sha256=sha(ipa),bytes=ipa.stat().st_size,executable_sha256=sha(executable),source_sha256=source_hashes,
         app_files={str(p.relative_to(app)):sha(p) for p in sorted(app.rglob('*')) if p.is_file()},
-        native_receipt_sha256=sha(output/'native-receipt.json'),managed_receipt_sha256=sha(paths[0]),commands=commands,
+        native_receipt_sha256=sha(output/'native-receipt.json'),managed_receipt_sha256=sha(paths[0]),stikjit_receipt_sha256=sha(stikjit_receipt_path),stikjit_files=stikjit['files'],commands=commands,
         payload_audit_sha256=sha(output/'payload-audit.json'),
         historical_uuid_restoration=False,original_executable_copied=False,game_files_used=False,device_tested=False,
         public_ipa_ready=approved,distribution_blockers=[] if approved else ['fmod_redistribution'])
     write_json(output/'build-receipt.json',receipt)
-    from verify_owned_game import verify
+    from verify_integrated_jit57 import verify
     verified=verify(output); write_json(output/'verification.json',verified); print(json.dumps(verified,indent=2))
 
 if __name__=='__main__': main()

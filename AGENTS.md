@@ -1,5 +1,120 @@
 # Cabrillo development
 
+## Current work: unified build58 / 0.29.0 — 20 October 2026
+
+The owner explicitly requests preserving this Mac's work and the other computer's
+published v0.26.0, merging and pushing the combined source as `hmcneill46`, then
+building an unsigned IPA for testing. This authorizes the integration commits,
+GitHub push/PR/merge and trial build. **A new version tag or public Release is not
+authorized; wait for the owner's test and separate release request.** No iLoader
+change or submission is included.
+
+Integration uses `launcher-unified58`, version0.29.0/build58. The local source was
+captured at `ee475e3` on `codex/game-input-compatibility`; the other computer's
+source is `65e45c2` on `origin/main`, following published v0.26.0. Both histories
+must remain reachable. Preserve local input/editor/game-import behavior and the
+published Files-picker repairs, Everest1.6642, dependency recovery and integrated
+StikJIT. See [the integration report](docs/ios-jit/UNIFIED_BUILD_58.md) for the
+lineage mapping and validation state. Integration tests and the new IPA are
+pending; earlier passes apply only to their recorded builds.
+
+Build numbers53–57 were allocated independently on both computers. Canonical
+`release/app53`–`app57`, `release/public53.json`–`public57.json` and numbered
+release builders retain the published versions. Their conflicting local versions
+are preserved exactly in `ee475e3`; local feature lanes and evidence remain in the
+merged tree. Historical source hashes refer to that original checkout, not to a
+substitute recipe with the same number. Use58 for combined implementation.
+
+
+## Published v0.26.0 / build57 —20 October2026
+
+The owner explicitly requests merging PR7 and publishing the new release.
+[PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7) is merged at
+`93415b48ac1c855cd94832f2921ffe7e59fea984`; annotated `v0.26.0` targets that merge.
+[Tagged run39414920270](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270)
+passes all six jobs: fresh compilation with official SDK acquisition, package
+checks, all five attestations, separate Ubuntu verification and publication.
+The [public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
+has all five assets; each independently downloads without authentication and
+passes API digests/checksums and exact tag/source/workflow/run attestations.
+
+The immutable `artifacts/cabrillo-v0.26.0-release` kit matches all 299 captured
+trial source hashes and all 153 dependency hashes. Actual 199 DLLs pass 434
+metadata checks matching the hosted audit, full NLua RSA/tamper checks and 14
+native/managed numeric comparisons. The six unsigned helper/framework files,
+licences, scripts and host/helper isolation also pass independent inspection.
+Release IPA:21,038,042 bytes; SHA256:
+`02f60ba0262ea5a76e395f8ce9088169cd9c8388bf2b24a29e4e67fef6a43f08`.
+Preserve both this release kit and the original trial kit. All 299 captured app
+inputs remain frozen; use58 for new implementation. Publication adds no physical
+Feather/helper/DDI/JIT/gameplay acceptance. No iLoader change or submission occurs.
+
+## Retained integrated StikJIT trial —20 October, build57
+
+The owner requests Built-in StikJIT as the recommended default, automatic JIT
+before Run Celeste, retained existing providers, a visible Run icon, tool-placed
+pairing files and manual pairing import. New implementation is isolated in
+`experiments/ios-jit/launcher-integrated-jit`, with `release/app57`,
+`tools/build_release57.py` and `compile_release57.py`. Read
+`docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md` for requirements and validation.
+All274 captured56 inputs and the published v0.25.1 kit remain frozen.
+
+StikJIT1.9.0 is pinned to32287268fa5824f9edce4cb359f5833ce0cf7b00.
+Its Swift framework is compiled only for a separate iOS17.4 helper; the host
+retains iOS15 and never strongly links it. The upstream prebuilt idevice FFI
+is explicitly hash-pinned/disclosed. Preserve the exact existing mailbox script,
+native execution and known-detach gates. A successful helper response alone is
+insufficient. LiveContainer cannot launch this helper; keep existing providers.
+No privileged App Group is required. Actual signing/extension registration,
+DDI/JIT and gameplay remain physical gates until separately observed.
+
+Final local115 Python controls,186 native launch/pairing controls, actual
+arm64/iOS15 host compilation and arm64/iOS17.4 helper/framework build pass.
+Actual simulator extension IPC passes with a no-JIT stub;14 iPhone/iPad UI tests
+pass with66 PNG captures. Retained119 profiles/185 native shortcut checks,
+36 branches and15 bad-URL controls pass. The57 report/ledger distinguish every
+check from actual phone signing, DDI, JIT and gameplay.
+
+Current iLoader has a hardcoded app list; app metadata cannot add Cabrillo to
+an existing iLoader release. The owner explicitly says not to change or submit
+anything to iLoader. The proposed local patch is removed from public source.
+Manual import and automatic adoption of `Documents/pairingFile.plist` provide
+independent setup paths. Never publish
+pairing contents, private files or raw helper logs. Keep credential copies out
+of backups and the package.
+
+On20 October, after local implementation/checks, the owner explicitly approves
+“Push/build Cabrillo only”: commit/push as hmcneill46, open a Cabrillo PR and run
+the existing workflow for an unsigned test IPA. They then explicitly reiterate
+that iLoader must not be changed or receive any submission. That trial approval
+does not cover a version tag or Release; the subsequent publication request is
+recorded below. No physical helper/JIT acceptance is inferred.
+
+[PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7) contains source
+`0f08fc64083d539fdba9f1b78fd79bb41e516048`, pushed as hmcneill46 to the existing
+`codex/actions-release` trial branch. [Run39406495715](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715)
+passes fresh managed/native/official-SDK packaging, audits, all five attestations
+and separate Ubuntu checksum/attestation verification; publishing is skipped.
+The independent `artifacts/cabrillo-build57-hosted` kit verifies299 source hashes,
+all274 frozen56 inputs,151 retained dependency hashes plus two disclosed StikJIT
+inputs,199 DLLs/434 metadata checks, full NLua RSA/tamper controls,14 numeric
+version comparisons, six exact unsigned helper/framework files and all five
+exact source/run attestations. IPA21,038,013bytes; SHA256
+`c45c0f5067c95ce4422e8def19c6595e078f03f8d52b1061d6d7754428a5a76f`.
+All299 captured57 inputs and the kit are frozen; use58 for new app implementation.
+Documentation-only delivery updates preserve those inputs. Actual Feather helper
+registration/DDI/JIT/gameplay remain pending. No iLoader write occurred.
+
+On20 October the owner explicitly requests merging PR7 and publishing the new
+release. This authorizes the reviewed merge, annotated `v0.26.0`, the existing
+tagged release workflow, public IPA/verification assets and change/delivery
+notes. PR7 is merged at `93415b48ac1c855cd94832f2921ffe7e59fea984`; all299 captured
+app hashes match the verified trial. Annotated tag object
+`d7aadf85461083aec4a4b28f2c51d81d6a03a111` targets that merge. Publication runs
+under [39414920270](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270).
+Preserve all299 inputs and both previous kits; use58 for implementation. iLoader
+changes/submissions remain forbidden, and publication adds no phone JIT pass.
+
 Start a fresh development chat with [HANDOFF.md](HANDOFF.md). It records the
 accepted build32 phone fallback, accepted build35 iPad base-game run, accepted build36 phone base-game/Motion Smoothing runtime gate, delivered
 build37 Everest upgrade with unexpected phone exits and a pending combined saves gate, evidence review and independent build constraints. Recheck its dated state before acting.
@@ -15,6 +130,9 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   `origin` and default branch `main`.
 - Do not commit, push, create/publish a remote, or write to GitHub without explicit
   owner approval. Local reversible edits, tests and experiments are authorized.
+- The20 October integration request authorizes merging/pushing this Mac's work
+  with published v0.26.0 as `hmcneill46` and building a test IPA. It does not
+  authorize a new tag or public Release. See the current section above.
 - The owner explicitly authorized the initial commit/push and chose a public
   repository on14 September2026. That first-publication authorization is recorded;
   it does not grant blanket approval for unrelated future GitHub writes.
@@ -43,7 +161,202 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
   dependency, not a Git source directory. Build38 uses public source receipts and
   an explicit FMOD SDK instead. Never silently fall back to a legacy checkout.
 
-## Build57 / 0.28.0 — live input preferences, 3 October
+## Published v0.25.1 / build56 —20 October2026
+
+The owner explicitly requests merging PR6 and publishing the latest release after
+confirming the phone installer. [PR6](https://github.com/hmcneill46/cabrillo-celeste/pull/6)
+is merged; annotated `v0.25.1` targets `dd4294254f3ecf7b20fa41e2c133fff5fc9b19b9`.
+[Tagged run39375179251](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39375179251)
+passes all six jobs, including fresh source/package audits, all five attestations,
+separate Ubuntu verification and publication. The
+[latest public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.25.1)
+has all five approved assets. They independently download without authentication
+and pass API digests/checksums and exact tag/source/workflow/run attestations.
+
+Release IPA bytes:18,784,694. SHA256:
+`d96522f1ef12f0cbe12beee00ed23d92218e732cf498e464850458ef57575c9c`.
+All274 app hashes and151 dependency hashes match the accepted56 trial. Actual199
+DLLs pass434 metadata checks matching the hosted audit, full NLua RSA signature
+verification/tamper controls and14 tagged/native version comparisons. Retain the
+immutable `artifacts/cabrillo-v0.25.1-release` and earlier kits; use57 for new app
+implementation. The accepted phone trial establishes ZIP copy/staging and52-mod
+installation; no separate tagged-binary gameplay/JIT/save/lifecycle pass is inferred.
+
+## General dependency download repair —19–20 October, build56
+
+The owner requests the FemtoHelper download repair and explicitly requires a
+general solution for moved downloads, plus agreement between actual Everest and
+native dependency/version checks. The completed source is in
+`launcher-dependency-downloads`, Cabrillo0.25.1/build56, retaining stable1.6642.0.
+All261 captured55 inputs stay frozen. Read
+`docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md` and its evidence ledger for current
+checks. Final100 Python,119 save/profile,321 dependency controls and actual iOS
+compilation pass. The final host installation verifies all52 Strawberry Jam
+archives and232 checks with seeded public cache, then a separate uncached real
+1776026→1838255 recovery passes14 assertions. Original fresh52-download baseline
+is retained separately. [Hosted run39371266102](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102)
+passes fresh managed/native compilation, official SDK acquisition, package audits,
+all five attestations and independent Ubuntu verification. The downloaded kit
+verifies all274 captured sources,151 exact55 dependency hashes,199 DLLs/434 metadata
+checks, full NLua strong-name signature and14 actual56/native version comparisons.
+IPA SHA256 `b9e0fa34a9163ad0024f4ff2ff02d10290716537deb6629b0e4ead33946d3fe0`.
+All274 captured56 app inputs and `artifacts/cabrillo-build56-hosted` are frozen;
+use57 for new app implementation. Physical gameplay/JIT remains untested for56.
+
+On20 October the owner confirms “Yep all works now!” The attached exact56
+diagnostics match all274 hosted source hashes on physical iOS27.0.1. Copy-mode
+game ZIP import stages875,540,825 bytes; all52 Strawberry Jam archives verify and
+install, and a52-change receipt commits successfully. FemtoHelper1.15.22 uses
+1838255 with the exact tested SHA256. No storage error is reported. This closes
+the phone downloader defect. The export contains no JIT/preparation/gameplay/
+save/Quit events, so those separate runtime gates remain. Diagnostics SHA256:
+`d8a2d67212a30d4cba221fddf829f28946370eac6836c2bf872bf2b99455eef7`. Raw evidence stays ignored in
+`.private/device-evidence/2026-10-20/build56-owner-install`.
+
+The supplied exact55 diagnostics show33/52 archives verified, then
+FemtoHelper1.15.22 oldfile1776026 fails; no mod transaction commits. The official
+archived file1838255 has identical11,103,153 bytes/SHA256
+`5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419`.
+The56 metadata relocates that link without changing tested helper contents.
+General recovery must use bounded authoritative listings and preserve the exact
+reviewed archive identity. The native overlay also carries current MirrorName
+metadata and aligns required/optional API alias handling with upstream Everest.
+Keep the original bundle ID, copy imports, save/profile paths, JIT and Shortcut49.
+
+On20 October, after the local fix/checks completed, the owner explicitly answers
+“Go for it” to committing/pushing tested56 as `hmcneill46`, updating existing
+draft PR6 and running the existing workflow for an unsigned test IPA. This
+includes the repair's source, validation/delivery notes and scoped build fixes.
+The owner then confirms the phone installer and explicitly requests on20 October:
+“merge the pr and get the latest as a release”. This authorizes merging PR6,
+annotated `v0.25.1` at the reviewed merged source, the existing tagged release
+workflow, public IPA/verification assets and release/change/delivery notes.
+Preserve published history and all274 frozen app inputs. Physical gameplay/JIT/
+save/lifecycle gates stay distinct from the accepted phone installer.
+
+## Everest stable1.6642 update —19 October, build55
+
+The owner requests the latest Everest after54 publication and asks future pushes
+to use GitHub account `hmcneill46`. Repository-local Git author/committer are now
+`hmcneill46 <57508980+hmcneill46@users.noreply.github.com>`. The authenticated
+GitHub API account and sole listed repository collaborator are `hmcneill46`;
+commit display names are separate from push authentication. Preserve published
+history and use this identity for the current source/build trial.
+
+Build55 /0.25.0 uses official stable1.6642.0, released17 October, commit
+`5abd7876821223c20711c1844a5187321d6e904c`. Its new overlay is
+`launcher-everest6642`; source recipes/manifests have55 identities. Only the
+Everest dependency pin changes. Existing platform patches and loading, all253
+captured54 inputs, Feather copy imports, native/runtime pins and signed49
+Shortcuts remain preserved. Native and managed runtime expectations change
+together. The preparation recipe automatically creates a new cache generation
+while retaining the original game identity/files, previous generations and saves.
+
+Read `docs/ios-jit/EVEREST_6642_BUILD_55.md` and its ledger for current checks.
+Local89 Python controls,119 save/profile checks and actual iOS compilation pass.
+[Hosted trial39320628794](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794)
+at `e1e78a3511df5642537a75d86ae46e98e0411f34` now passes fresh public managed/native
+compilation, official SDK acquisition, package audits, all five attestations and
+separate Ubuntu verification. Release publication is skipped. The independently
+downloaded kit in `artifacts/cabrillo-build55-hosted` verifies all261 captured
+source hashes,151 dependencies (only Everest changes), original bundle ID/copy-import metadata
+and signed49 Shortcuts. Its actual199-DLL metadata passes434 checks, with the
+independent report exactly matching the hosted audit. IPA bytes:18,765,294;
+SHA256 `abd79be029902c301778f8b11044484d00cedc07988f14b3243cf42cde8b04cd`.
+All261 captured55 inputs/kit are frozen; use56 for new app implementation.
+Draft [PR6](https://github.com/hmcneill46/cabrillo-celeste/pull/6) retains the
+source trial; no55 tag/Release or physical JIT/gameplay is claimed. Preserve
+published54 and every earlier scoped device result.
+
+## Copy-based Files imports —19 October, build54 correction
+
+The owner now confirms54 imports the game ZIP successfully. Read-only USB
+verifies exact0.24.3/build54, original ID, all253 source hashes, copy-mode game
+selection and875,540,825bytes staged on iOS27.0.1. Journal SHA256:
+`92ff72a8361d24ea7efd4dcd3b999d08aecc09e6b1a0468bd02ca3654e042985`.
+The full trial workflow and Ubuntu verification pass. This closes the reported
+game-ZIP selection/staging defect; physical mods/gameplay/JIT remain separate.
+
+On19 October the owner explicitly authorized GitHub Release publication and
+change notes. Annotated `v0.24.3` targets `46dc40678fe839b676a2a9496eb84229d0b4c331`; [tagged run39285104629](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39285104629)
+and the [public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.24.3) now complete the existing audited
+build/verify/publication workflow. All five assets independently download without
+authentication and pass checksums and exact tag/source/workflow/run attestations.
+Release IPA SHA256: `e3520bced1ff72886d2b1796ee1420f797df71a514ee9b9e0430fd933e18a583`.
+All253 app inputs and151 dependency hashes match the tested trial. Preserve both
+immutable kits; the tagged kit is `artifacts/cabrillo-v0.24.3-release`. Earlier trial-only/no-Release
+statements below describe historical stages. No separate tagged-binary device
+run or new mod/JIT/gameplay/save/lifecycle/iPad/120Hz acceptance is inferred.
+Use55 for new implementation; unrelated future GitHub writes remain outside scope.
+
+The owner reports53 still fails game selection. USB verifies exact53 source
+metadata/original ID on iOS27.0.1; entitlement lookup and hook installation pass,
+but game selection never calls the delegate. Two owner-driven backup-picker
+tests select the same game ZIP and correctly reject its backup manifest; no
+restore/rollback runs. Save/backup already request copies; game/mod request
+open-in-place. Build54 /0.24.3 changes those two selectors to copies and adds
+redacted mode diagnostics. The compatibility module remains exact53.
+
+Read `docs/ios-jit/COPY_PICKER_BUILD_54.md` and its ledger before acting. Keep
+all254 captured53 inputs/kit frozen.54 is the active corrective source recipe;
+the complete54 kit is built/independently verified; original-ID game selection
+and staging now pass as recorded above. All253 captured54 app inputs are frozen;
+use55 for new implementation. Release authorization is recorded above; unrelated
+publication remains outside scope. Do not infer additional device gates from the
+backup picker or iOS26.5 simulator. Original
+private phone evidence stays ignored; read-only USB collection changes no phone
+settings, installation, debugger or user files.
+
+## Signing-aware Files picker —19 October, build53 trial
+
+The owner confirms that matching Feather's Identifier to the supplied explicit
+Development profile repairs ZIP selection, then explicitly requests an in-app
+fix preserving Cabrillo's bundle ID and existing signing setup. Build53 /0.24.2
+adds `launcher-signing-picker` as an overlay: a new `main.m` and a narrow Documents
+UI host-identifier adapter, with the accepted50/52 base frozen and hash-pinned.
+Read `docs/ios-jit/SIGNING_PICKER_BUILD_53.md` for behavior and validation limits.
+
+The preserved53 source manifest is `release/public53.json`; its recipe is
+`tools/build_release53.py` / `compile_release53.py`. Published52 and its builders
+remain immutable. Source commit `1f2de6d` is pushed to `codex/actions-release`;
+the completed53 IPA is now independently verified. No phone acceptance, tag or
+Release is claimed. The first hosted trial
+passes source/native checks and stops SDK acquisition before sign-in on FMOD's
+changed download-page pin. The independently reviewed pin is refreshed without
+changing SDK or authentication boundaries; see the53 report. This Mac lacks the licensed FMOD SDK and
+full runtime build tools; native device compilation and simulator controls are
+separate from a complete package build. After reviewing the completed local
+checks, the owner explicitly approves committing/pushing this53 fix and running
+the existing GitHub workflow for an unsigned test IPA. This authorizes the trial
+source/build writes; it does not authorize a version tag or public Release.
+
+Retry39267829175 passes SDK acquisition, fresh build/package audit, all five
+attestations and independent Ubuntu verification at `e63f1e0`. The separately
+downloaded kit in `artifacts/cabrillo-build53-hosted` passes checksums, all254
+captured source hashes, all151 unchanged52 dependency hashes and production
+picker/bundle-ID checks. IPA SHA256:
+`cbf396e7a7b1aec7bbf0a25c19cf3cfe59ef80d26e1f47df1481ed3b7791ad55`.
+Keep53 frozen;54 continues the repair. Original-ID Feather phone testing
+subsequently fails as recorded above. No existing cloud kit, device or app data
+is changed by its delivery.
+
+The adapter reads only the running process's own `application-identifier` and
+adjusts Documents UI requests for that app's original host. It never changes the
+public bundle identifier, JIT state, entitlements, permissions or data paths.
+LiveContainer retains its own picker handling. Missing private APIs retain the
+original path and report a redacted status. Test identity injection is compiled
+only into fixtures; production objects must exclude its symbol. Preserve all
+older source lanes and scoped device gates; no new physical pass is inferred.
+
+## Historical local development records — 30 September–3 October
+
+The following **local**53–57 records describe this Mac's independently numbered
+work before integration. They are distinct from the **published**53–57 records
+above. Their former no-publication instructions, workflow selection and next-build
+numbers are historical; the current authorization and integration state are at
+the top. Reproduce colliding local release recipes from commit `ee475e3`.
+
+## Local build57 / 0.28.0 — live input preferences, 3 October
 
 The owner requests live feather controls in the touch editor, original Celeste
 grab semantics with separate input-method preferences, optional persistent toggling,
@@ -102,7 +415,7 @@ Cloud total993,871,336 bytes. Delivery receipt:
 `artifacts/cabrillo-build57-final/icloud-delivery.json`.
 
 
-## Build56 /0.27.0 — SwiftUI touch editor, 3 October
+## Local build56 /0.27.0 — SwiftUI touch editor, 3 October
 
 The owner requests Morro control parity, an optional tap/hold-to-jump and swipe-to-
 dash mode, then explicitly requires edge-to-edge placement and an actual-size
@@ -158,7 +471,7 @@ Only the superseded53 cloud IPA was removed after exact retained-copy and packag
 receipt verification. Every Results folder, local53 artifact and accepted fallback
 remains. Cloud total998,928,055 bytes.
 
-## Build55 /0.26.1 — saved-game startup repair, 3 October
+## Local build55 /0.26.1 — saved-game startup repair, 3 October
 
 The owner reports54 cannot start Celeste. The2,417,490-byte54 Results export
 matches the final54 BuildInfo exactly, SHA256:
@@ -206,7 +519,7 @@ Celeste JIT Tests → 0.26.1-build-55. Only the superseded54 cloud IPA was remov
 local-copy and receipt verification. Its Results export, every other Results
 folder, local54 artifacts and accepted fallbacks remain. Cloud total998,666,002 bytes.
 
-## Build54 /0.26.0 — optional feather touch steering, 3 October
+## Local build54 /0.26.0 — optional feather touch steering, 3 October
 
 The owner requests feather flight that follows a finger, without new speed or
 acceleration rules, and an in-app toggle. Local work is in
@@ -258,7 +571,7 @@ Only the superseded38 cloud IPA was removed after exact
 retained-local-copy and receipt verification. Every Results folder, local38
 artifact and accepted fallback remains. Local cloud total996,231,844 bytes.
 
-## Build53 /0.25.0 — game input compatibility, 30 September
+## Local build53 /0.25.0 — game input compatibility, 30 September
 
 The owner requests support for all nine supplied original itch.io, Steam and Epic
 FNA1.4.0.0 ZIPs and store acquisition instructions, using Morro as a reference.

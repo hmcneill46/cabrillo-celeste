@@ -49,6 +49,20 @@ class FmodAccessControls(unittest.TestCase):
         prompt.assert_not_called()
         self.assertEqual(client.request.call_count, 1)
 
+    def test_download_asset_change_stops_before_environment_credentials(self):
+        fixture = b"synthetic reviewed website"
+        hashes = {path: hashlib.sha256(fixture).hexdigest() for path in fmod.WEBSITE_ASSETS}
+        client = Mock()
+        client.request.side_effect = [(200, fixture), (200, b"changed download implementation")]
+        with patch.object(fmod, "WEBSITE_ASSETS", hashes), \
+                patch.object(fmod, "Client", return_value=client), \
+                patch.object(fmod, "credentials") as credentials, \
+                contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(fmod.main(["check-account", "--credentials-from-env"]), 2)
+        credentials.assert_not_called()
+        self.assertEqual([call.args for call in client.request.call_args_list],
+                         [("/bundle.js",), ("/download.chunk.js",)])
+
     def test_nonterminal_cannot_echo_or_read_credentials(self):
         with patch.object(sys.stdin, "isatty", return_value=False), \
                 patch.object(fmod.getpass, "getpass") as prompt:
