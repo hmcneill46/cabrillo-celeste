@@ -19,10 +19,11 @@ tag. Manual trial builds produce downloadable Actions artifacts without a Releas
 
 **[Download Cabrillo 0.25.1 / build 56](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.25.1/Cabrillo-0.25.1-unsigned.ipa)** ·
 [Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.25.1).
-Publication is being prepared through the tagged build/audit/attestation workflow.
-The accepted [unsigned trial](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102)
-passes fresh source compilation, package checks and independent verification of
-all five attestations. Release download verification is recorded after publication.
+The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39375179251) passes
+fresh compilation, package audits, all five attestations, separate verification
+and publication. All five Release assets independently download without sign-in
+and pass checksums/API digests and exact tag/source/workflow/run verification.
+Release assets persist beyond temporary Actions artifacts.
 
 Version0.25.1/build56 updates Everest to stable1.6642.0 and adds general recovery
 of moved mod downloads, current mirror metadata and matching dependency rules.
@@ -148,7 +149,7 @@ passes fresh compilation, package checks and independent verification of all274
 captured sources,151 dependency hashes,199 managed DLLs and all five attestations.
 It requires GitHub sign-in and expires3 November2026. Physical gameplay/JIT testing
 of56 remains pending.
-The download above targets the owner-approved0.25.1 release publication.
+The download above is the public0.25.1 Release and requires no sign-in.
 
 Use macOS, Python3.12 or later, CMake, Mono6.14.1 (including `sn`) and **Xcode26.6 /17F113**. Download your own
 **FMOD Engine1.10.09 iOS SDK** from [fmod.com](https://www.fmod.com/download), then:

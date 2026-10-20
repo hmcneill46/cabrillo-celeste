@@ -14,7 +14,28 @@ and the same native/.NET/NuGet/FMOD/Shortcut49 dependency pins as55.
 local and hosted checks. The owner approves its source/unsigned trial and then
 explicitly requests merging PR6 and publishing0.25.1 on20 October. Physical
 gameplay/JIT acceptance remains separate from the accepted installer/publication.
-Commits resolve to `hmcneill46` for both author and committer. Published v0.24.3 is below.
+Commits resolve to `hmcneill46` for both author and committer. Published v0.25.1 is recorded below; earlier releases remain available.
+
+## Published v0.25.1 / build56 —20 October2026
+
+The owner explicitly requests merging PR6 and publishing the latest release after
+confirming the phone installer. [PR6](https://github.com/hmcneill46/cabrillo-celeste/pull/6)
+is merged; annotated `v0.25.1` targets `dd4294254f3ecf7b20fa41e2c133fff5fc9b19b9`.
+[Tagged run39375179251](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39375179251)
+passes all six jobs, including fresh source/package audits, all five attestations,
+separate Ubuntu verification and publication. The
+[latest public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.25.1)
+has all five approved assets. They independently download without authentication
+and pass API digests/checksums and exact tag/source/workflow/run attestations.
+
+Release IPA bytes:18,784,694. SHA256:
+`d96522f1ef12f0cbe12beee00ed23d92218e732cf498e464850458ef57575c9c`.
+All274 app hashes and151 dependency hashes match the accepted56 trial. Actual199
+DLLs pass434 metadata checks matching the hosted audit, full NLua RSA signature
+verification/tamper controls and14 tagged/native version comparisons. Retain the
+immutable `artifacts/cabrillo-v0.25.1-release` and earlier kits; use57 for new app
+implementation. The accepted phone trial establishes ZIP copy/staging and52-mod
+installation; no separate tagged-binary gameplay/JIT/save/lifecycle pass is inferred.
 
 ## Unsigned0.25.1/build56 trial —20 October2026
 

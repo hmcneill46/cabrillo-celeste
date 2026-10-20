@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "date": "2026-10-20",
-  "recorded_utc": "2026-10-20T05:28:05.998565+00:00",
+  "recorded_utc": "2026-10-20T05:54:07.336481+00:00",
   "version": "0.25.1",
   "build_number": "56",
   "build_id": "launcher-dependency-downloads-20261019-56",
-  "status": "PASS_HOSTED56_AND_PHYSICAL_INSTALLER_GAMEPLAY_JIT_PENDING",
+  "status": "PASS_PUBLIC_V0251_AND_PHYSICAL_TRIAL_INSTALLER_GAMEPLAY_JIT_PENDING",
   "diagnosis": {
     "reported_build": "55",
     "verified_archives_before_failure": 33,
@@ -267,6 +267,82 @@
         "report_sha256": "5e24d53ff40be1fb97bde95d6b0e623316a3250b2d7a972d31fece116ae22049",
         "original_everest_assembly_loaded": false
       }
+    },
+    "tagged_release": {
+      "status": "PASS_PUBLISHED_V0251_ALL_SIX_JOBS_FIVE_PUBLIC_ASSETS_AND_INDEPENDENT_AUDITS",
+      "tag": "v0.25.1",
+      "version": "0.25.1",
+      "build_number": "56",
+      "source_commit": "dd4294254f3ecf7b20fa41e2c133fff5fc9b19b9",
+      "annotated_tag_object": "9688a50e301a72d8d4cfeda377d840e792b111e5",
+      "source_ref": "refs/tags/v0.25.1",
+      "pull_request": 6,
+      "pull_request_merged": true,
+      "workflow_run_id": "39375179251",
+      "workflow_attempt": 1,
+      "workflow_event": "push",
+      "workflow_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39375179251",
+      "all_six_jobs_pass": true,
+      "release_url": "https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.25.1",
+      "published_utc": "2026-10-20T05:50:53Z",
+      "latest_stable": true,
+      "assets": 5,
+      "all_assets_anonymously_downloaded": true,
+      "all_api_digests_and_checksums_verified": true,
+      "release_body_matches_attested_notes": true,
+      "kit_path": "artifacts/cabrillo-v0.25.1-release",
+      "ipa_bytes": 18784694,
+      "ipa_sha256": "d96522f1ef12f0cbe12beee00ed23d92218e732cf498e464850458ef57575c9c",
+      "source_hashes_verified": 274,
+      "app_hashes_exact_accepted56_trial": true,
+      "dependency_hashes_verified": 151,
+      "dependency_hashes_exact_trial": true,
+      "signed49_shortcuts_preserved": true,
+      "independent_verification": {
+        "public_downloads": {
+          "status": "PASS_ANONYMOUS_V0251_RELEASE_DOWNLOADS",
+          "path": ".build/cabrillo-v0.25.1-release/download-verification.json",
+          "sha256": "12baf206e43d5cd32c3e0e2af15a059675c7171af959b3ec10f845b2d1840911"
+        },
+        "all_five_attestations": {
+          "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS",
+          "path": ".build/cabrillo-v0.25.1-release/attestations/receipt.json",
+          "sha256": "93b284ef09678394fd30bab1ce43d1268ed3da4df117c5fa005e32a216070893"
+        },
+        "actual_managed_and_signature": {
+          "status": "PASS_TAGGED_V0251_PACKAGED_MANAGED_AND_STRONG_NAME",
+          "path": ".build/cabrillo-v0.25.1-release/managed-audit/receipt.json",
+          "sha256": "db5b394dd5a903fd7878476dba7429fc8487345453a95e0cdcbea1e2f3866d69",
+          "assemblies": 199,
+          "checks": 434,
+          "exact_hosted_report_match": true,
+          "report_sha256": "5335ca943126390f27a6e9b71560f1da04fb5aa5cdd031b675e3f3749afdba66",
+          "nlua_strong_name": {
+            "status": "PASS_CRYPTOGRAPHIC_NLUA_STRONG_NAME",
+            "assembly_sha256": "5c813bb1d0971c29ba36505d771016637612a09a230822f5de42bee58af913c6",
+            "assembly_version": "1.4.1.0",
+            "algorithm": "RSA PKCS#1 v1.5 / SHA-1 (CLI strong-name format)",
+            "rsa_bits": 1024,
+            "public_exponent": 65537,
+            "public_key_sha256": "d2f227435896f748d9e46b42c899416fc73943443abaa285658188573cceebd4",
+            "public_key_token": "6a194c04b9c89217",
+            "signing_digest_sha1": "b880feae477f6088f1f36ad771f82f13037dff67",
+            "full_rsa_encoded_message_matches": true,
+            "covered_byte_tamper_rejected": true,
+            "signature_byte_tamper_rejected": true
+          }
+        },
+        "actual_version_parity": {
+          "status": "PASS_TAGGED_V0251_ACTUAL_RUNTIME_VERSION_PARITY",
+          "path": ".build/cabrillo-v0.25.1-release/version-parity/receipt.json",
+          "sha256": "2f08c947b55ab3e6316835cca1c942c6629a5aec0a3311e7c00390297ce482ba",
+          "comparisons": 14,
+          "assertions": 156,
+          "report_sha256": "5e2f50ed13df0d9996aad9d3d31a2fa8e4dfe06f0e19fcfa68c89d308de02cfa",
+          "original_assembly_loaded": false
+        }
+      },
+      "separate_tagged_binary_device_test": false
     }
   },
   "delivery": {
@@ -275,8 +351,8 @@
     "pushed": true,
     "hosted_build": true,
     "ipa_built": true,
-    "tag_created": false,
-    "public_release_created": false,
+    "tag_created": true,
+    "public_release_created": true,
     "git_identity": "hmcneill46 <57508980+hmcneill46@users.noreply.github.com>",
     "approval_scope": [
       "Commit/push tested56 as hmcneill46",
@@ -300,7 +376,7 @@
     "dependency_hashes": 151,
     "dependency_hashes_exact55": true,
     "release_publication": {
-      "status": "EXPLICIT_OWNER_AUTHORIZATION_PREPARING",
+      "status": "PASS_PUBLISHED_V0251_ALL_SIX_JOBS_FIVE_PUBLIC_ASSETS_AND_INDEPENDENT_AUDITS",
       "date": "2026-10-20",
       "owner_request": "merge the pr and get the latest as a release",
       "pull_request": 6,
@@ -312,15 +388,88 @@
         "Existing tagged build/audit/attestation/publish workflow",
         "Public five-file Release and notes"
       ],
-      "accepted274_app_inputs_preserved": true
-    }
+      "accepted274_app_inputs_preserved": true,
+      "build_number": "56",
+      "source_commit": "dd4294254f3ecf7b20fa41e2c133fff5fc9b19b9",
+      "annotated_tag_object": "9688a50e301a72d8d4cfeda377d840e792b111e5",
+      "source_ref": "refs/tags/v0.25.1",
+      "pull_request_merged": true,
+      "workflow_run_id": "39375179251",
+      "workflow_attempt": 1,
+      "workflow_event": "push",
+      "workflow_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39375179251",
+      "all_six_jobs_pass": true,
+      "release_url": "https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.25.1",
+      "published_utc": "2026-10-20T05:50:53Z",
+      "latest_stable": true,
+      "assets": 5,
+      "all_assets_anonymously_downloaded": true,
+      "all_api_digests_and_checksums_verified": true,
+      "release_body_matches_attested_notes": true,
+      "kit_path": "artifacts/cabrillo-v0.25.1-release",
+      "ipa_bytes": 18784694,
+      "ipa_sha256": "d96522f1ef12f0cbe12beee00ed23d92218e732cf498e464850458ef57575c9c",
+      "source_hashes_verified": 274,
+      "app_hashes_exact_accepted56_trial": true,
+      "dependency_hashes_verified": 151,
+      "dependency_hashes_exact_trial": true,
+      "signed49_shortcuts_preserved": true,
+      "independent_verification": {
+        "public_downloads": {
+          "status": "PASS_ANONYMOUS_V0251_RELEASE_DOWNLOADS",
+          "path": ".build/cabrillo-v0.25.1-release/download-verification.json",
+          "sha256": "12baf206e43d5cd32c3e0e2af15a059675c7171af959b3ec10f845b2d1840911"
+        },
+        "all_five_attestations": {
+          "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS",
+          "path": ".build/cabrillo-v0.25.1-release/attestations/receipt.json",
+          "sha256": "93b284ef09678394fd30bab1ce43d1268ed3da4df117c5fa005e32a216070893"
+        },
+        "actual_managed_and_signature": {
+          "status": "PASS_TAGGED_V0251_PACKAGED_MANAGED_AND_STRONG_NAME",
+          "path": ".build/cabrillo-v0.25.1-release/managed-audit/receipt.json",
+          "sha256": "db5b394dd5a903fd7878476dba7429fc8487345453a95e0cdcbea1e2f3866d69",
+          "assemblies": 199,
+          "checks": 434,
+          "exact_hosted_report_match": true,
+          "report_sha256": "5335ca943126390f27a6e9b71560f1da04fb5aa5cdd031b675e3f3749afdba66",
+          "nlua_strong_name": {
+            "status": "PASS_CRYPTOGRAPHIC_NLUA_STRONG_NAME",
+            "assembly_sha256": "5c813bb1d0971c29ba36505d771016637612a09a230822f5de42bee58af913c6",
+            "assembly_version": "1.4.1.0",
+            "algorithm": "RSA PKCS#1 v1.5 / SHA-1 (CLI strong-name format)",
+            "rsa_bits": 1024,
+            "public_exponent": 65537,
+            "public_key_sha256": "d2f227435896f748d9e46b42c899416fc73943443abaa285658188573cceebd4",
+            "public_key_token": "6a194c04b9c89217",
+            "signing_digest_sha1": "b880feae477f6088f1f36ad771f82f13037dff67",
+            "full_rsa_encoded_message_matches": true,
+            "covered_byte_tamper_rejected": true,
+            "signature_byte_tamper_rejected": true
+          }
+        },
+        "actual_version_parity": {
+          "status": "PASS_TAGGED_V0251_ACTUAL_RUNTIME_VERSION_PARITY",
+          "path": ".build/cabrillo-v0.25.1-release/version-parity/receipt.json",
+          "sha256": "2f08c947b55ab3e6316835cca1c942c6629a5aec0a3311e7c00390297ce482ba",
+          "comparisons": 14,
+          "assertions": 156,
+          "report_sha256": "5e2f50ed13df0d9996aad9d3d31a2fa8e4dfe06f0e19fcfa68c89d308de02cfa",
+          "original_assembly_loaded": false
+        }
+      },
+      "separate_tagged_binary_device_test": false
+    },
+    "release_url": "https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.25.1",
+    "trial_fields_scope": "Unqualified source/kit fields describe the accepted unsigned trial; release_publication describes the freshly rebuilt tagged public kit."
   },
   "limitations": {
     "physical_device_tested": true,
     "gameplay_or_jit_executed": false,
     "fresh56_managed_payload_compiled": true,
     "known_tested_installer_cases_do_not_establish_all_future_mod_compatibility": true,
-    "physical_device_scope": "Game ZIP copy selection/staging and all52 Strawberry Jam archives installed; runtime/gameplay/JIT/save/Quit not established by this export"
+    "physical_device_scope": "Game ZIP copy selection/staging and all52 Strawberry Jam archives installed; runtime/gameplay/JIT/save/Quit not established by this export",
+    "separate_tagged_binary_device_test": false
   },
   "physical_installer_acceptance": {
     "status": "PASS_PHYSICAL_BUILD56_GAME_COPY_IMPORT_AND_STRAWBERRY_JAM_INSTALL",

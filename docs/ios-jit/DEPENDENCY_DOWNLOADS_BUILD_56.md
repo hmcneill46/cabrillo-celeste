@@ -5,7 +5,7 @@ The owner asks to repair the Strawberry Jam downloader and verify that the app,
 actual Everest payload and dependency resolver agree about supported versions.
 The implementation uses the retained stable1.6642.0 source. Final local native,
 live installation, actual broken-link recovery and independently verified hosted
-IPA checks pass. The owner now authorizes merging PR6 and the0.25.1 Release;
+IPA checks pass. PR6 is merged and the independently verified0.25.1 Release is live;
 physical runtime acceptance remains separate.
 
 ## Confirmed failure and exact archive relocation
@@ -203,3 +203,31 @@ an annotated `v0.25.1` on reviewed merged `main` and the existing full tagged
 build/audit/attestation/verification/publisher workflow. The public five-file kit
 will be independently downloaded and checked against that exact tag/run before
 publication is recorded as complete. Existing immutable kits and history remain.
+
+
+## Published v0.25.1 / build56 —20 October2026
+
+The owner explicitly requests merging PR6 and publishing the latest release after
+confirming the phone installer. [PR6](https://github.com/hmcneill46/cabrillo-celeste/pull/6)
+is merged; annotated `v0.25.1` targets `dd4294254f3ecf7b20fa41e2c133fff5fc9b19b9`.
+[Tagged run39375179251](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39375179251)
+passes all six jobs, including fresh source/package audits, all five attestations,
+separate Ubuntu verification and publication. The
+[latest public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.25.1)
+has all five approved assets. They independently download without authentication
+and pass API digests/checksums and exact tag/source/workflow/run attestations.
+
+Release IPA bytes:18,784,694. SHA256:
+`d96522f1ef12f0cbe12beee00ed23d92218e732cf498e464850458ef57575c9c`.
+All274 app hashes and151 dependency hashes match the accepted56 trial. Actual199
+DLLs pass434 metadata checks matching the hosted audit, full NLua RSA signature
+verification/tamper controls and14 tagged/native version comparisons. Retain the
+immutable `artifacts/cabrillo-v0.25.1-release` and earlier kits; use57 for new app
+implementation. The accepted phone trial establishes ZIP copy/staging and52-mod
+installation; no separate tagged-binary gameplay/JIT/save/lifecycle pass is inferred.
+
+The anonymous public download, attestation, actual tagged metadata/signature and
+version-parity receipts are pinned in the evidence ledger. The Release body
+exactly matches its attested RELEASE_NOTES.md. Published history, tag and all
+public assets are retained unchanged; final delivery notes are outside the274
+frozen app inputs.

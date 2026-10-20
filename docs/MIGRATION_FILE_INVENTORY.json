@@ -25,8 +25,8 @@
     },
     "AGENTS.md": {
       "reason": "Current build56 general dependency repair, frozen55 preservation, prior scoped acceptance and explicit GitHub approval boundaries",
-      "sha256": "b97ef3ae100a028ab80fd426ee7a84566f41d2a4b40b18da04fd53a3e6f01448",
-      "bytes": 49733
+      "sha256": "7086f8158119a07427ad12eb4f9436ae689eee14b58c2e168723d5b864d83fb3",
+      "bytes": 51123
     },
     "CHANGELOG.md": {
       "reason": "Owner-requested public release notes and current build56 general downloader repair notes",
@@ -35,8 +35,8 @@
     },
     "HANDOFF.md": {
       "reason": "Current build56 general dependency repair and scoped verification state, retained trial/release evidence and pending publication/device gates",
-      "sha256": "4b59063ee6dd5223535ed4be89afff1d5ae57812754fc3f2c556464b62a4d355",
-      "bytes": 113787
+      "sha256": "e3ef965aa36ba829c77fbab30984b601b7d3c9b5a7445497699107b3827f5155",
+      "bytes": 115177
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -46,8 +46,8 @@
     },
     "README.md": {
       "reason": "Current product/download overview and build53 signing-aware source recipe",
-      "sha256": "71befca381c6350c7a648ede968dc27bb7148f0d57f1dc04509406e150c0c82e",
-      "bytes": 13612
+      "sha256": "6232a474c54597113cea254cf9fdf8d2eccf34eaf4b75e926f538db21270bd77",
+      "bytes": 13671
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -90,8 +90,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Current53 source workflow and separate immutable published52 release with licensed-input boundaries",
-      "sha256": "a73362d747a4c33c6362a671e7c8a645d9c761a10bfe8e76c3df68355b7e90fd",
-      "bytes": 20974
+      "sha256": "f401f73d4ef73aa722e0c4b3d696345cf7b4308f8ed07ee04450a459f3ca8a03",
+      "bytes": 22408
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -26716,13 +26716,13 @@
     },
     "docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md": {
       "reason": "Build56 implementation, scoped local/hosted evidence and delivery approval record for general dependency download repair",
-      "sha256": "efd4ae044fafe88a421a6ff36e15775fcf233699e7b04b78b7b6fe2de2d08579",
-      "bytes": 12708
+      "sha256": "df6491cf55013744ff7d7f4df14b2856221a83c90c7024c3b45f7e067b880030",
+      "bytes": 14440
     },
     "docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56_EVIDENCE.json": {
       "reason": "Build56 implementation, scoped local/hosted evidence and delivery approval record for general dependency download repair",
-      "sha256": "6315edfa264ffb015430ccfeb5576641cb6811dced586d9aace899a9e79def08",
-      "bytes": 16795
+      "sha256": "11587e12d7d1b3999b4f3bb93261662afb1d50c21bdebb3d7331a75e6710773e",
+      "bytes": 24528
     },
     "experiments/ios-jit/launcher-dependency-downloads/BuildContract.json": {
       "reason": "Build56 general exact-archive recovery, current mirror metadata and upstream dependency alias semantics with retained tested compatibility pins",
