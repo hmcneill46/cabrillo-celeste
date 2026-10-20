@@ -1,6 +1,6 @@
 # Cabrillo development
 
-## Active local integrated StikJIT work —20 October, build57
+## Verified integrated StikJIT trial —20 October, build57
 
 The owner requests Built-in StikJIT as the recommended default, automatic JIT
 before Run Celeste, retained existing providers, a visible Run icon, tool-placed
@@ -40,6 +40,21 @@ the existing workflow for an unsigned test IPA. They then explicitly reiterate
 that iLoader must not be changed or receive any submission. This does not
 authorize a57 version tag or public Release. Record hosted delivery separately;
 no physical helper/JIT acceptance is inferred.
+
+Draft [PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7) contains source
+`0f08fc64083d539fdba9f1b78fd79bb41e516048`, pushed as hmcneill46 to the existing
+`codex/actions-release` trial branch. [Run39406495715](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715)
+passes fresh managed/native/official-SDK packaging, audits, all five attestations
+and separate Ubuntu checksum/attestation verification; publishing is skipped.
+The independent `artifacts/cabrillo-build57-hosted` kit verifies299 source hashes,
+all274 frozen56 inputs,151 retained dependency hashes plus two disclosed StikJIT
+inputs,199 DLLs/434 metadata checks, full NLua RSA/tamper controls,14 numeric
+version comparisons, six exact unsigned helper/framework files and all five
+exact source/run attestations. IPA21,038,013bytes; SHA256
+`c45c0f5067c95ce4422e8def19c6595e078f03f8d52b1061d6d7754428a5a76f`.
+All299 captured57 inputs and the kit are frozen; use58 for new app implementation.
+Documentation-only delivery updates preserve those inputs. Actual Feather helper
+registration/DDI/JIT/gameplay remain pending; no iLoader write or57 Release.
 
 Start a fresh development chat with [HANDOFF.md](HANDOFF.md). It records the
 accepted build32 phone fallback, accepted build35 iPad base-game run, accepted build36 phone base-game/Motion Smoothing runtime gate, delivered

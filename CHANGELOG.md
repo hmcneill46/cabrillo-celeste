@@ -11,8 +11,9 @@
 Built-in JIT requires a compatible signed helper, debugging permission, Developer
 Mode, pairing and LocalDevVPN or a compatible tunnel. LiveContainer keeps its
 existing providers. Cabrillo does not require iLoader recognition; manual pairing import works
-independently. This local trial is not a published
-IPA or physical JIT acceptance. See [the build57 report](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md).
+independently. The [verified unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
+is available with GitHub sign-in until3 November. Physical helper/JIT acceptance
+and a public Release remain pending. See [the build57 report](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md).
 
 ## 0.25.1 · 20 October 2026
 

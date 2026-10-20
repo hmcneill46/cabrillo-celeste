@@ -1,6 +1,6 @@
 # Building Cabrillo
 
-## Local development trial: version0.26.0 / build57
+## Verified unsigned development trial: version0.26.0 / build57
 
 The integrated StikJIT implementation uses the same Xcode26.6 /17F113, SDK26.5,
 Mono6.14.1 and developer-owned FMOD SDK as56 below:
@@ -22,7 +22,11 @@ All274 accepted56 app inputs remain frozen. Existing Everest1.6642.0, original15
 dependency hashes, game preparation, Feather imports and saves stay preserved.
 See [the57 report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) for signing/pairing
 requirements, the iLoader compatibility limitation and current device gates.
-Local implementation does not imply a published57 IPA or phone acceptance.
+The [unsigned hosted test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
+passes fresh compilation/package audits and independent downloaded-kit checks.
+It requires GitHub sign-in and expires3 November2026. All299 captured57 app
+inputs are frozen; use58 for new implementation. Phone helper/JIT acceptance
+and a public57 Release remain separate.
 
 Additional source-only checks on a Mac with the pinned Xcode:
 

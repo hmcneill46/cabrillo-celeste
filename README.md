@@ -56,8 +56,9 @@ StikJIT for supported standalone installations: connect the local VPN, import
 your pairing file and press Run Celeste. Cabrillo shows preparation progress and
 verifies JIT before launching. Existing saved JIT choices and LiveContainer
 methods remain available. Manual pairing import also works when a tool does not
-yet recognize Cabrillo. This is an unreleased local trial; the public download
-above remains0.25.1. See [building instructions](docs/BUILDING.md) and the report's
+yet recognize Cabrillo. The [verified unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
+requires GitHub sign-in and expires3 November. Phone helper/JIT acceptance is
+pending; the public Release above remains0.25.1. See [building instructions](docs/BUILDING.md) and the report's
 signing, iLoader and physical-test limits.
 
 ## Home Screen launch in development

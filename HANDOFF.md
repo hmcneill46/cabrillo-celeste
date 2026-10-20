@@ -11,7 +11,7 @@ preparation, for a fresh development chat opened in
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
 
-## Active local Built-in StikJIT work —20 October2026, build57
+## Verified Built-in StikJIT trial —20 October2026, build57
 
 The owner requests integrated StikJIT as a recommended default, automatic JIT
 before Run Celeste with progress, all existing providers preserved, the Run
@@ -36,12 +36,29 @@ framework/helper build and14 phone/iPad simulator UI tests pass. Actual simulato
 extension IPC also passes process separation,3 progress stages, a validated
 prepare reply and temporary credential cleanup using a no-JIT StikJIT stub.
 Retained119 profiles/185 native shortcut checks/36 branches/15 bad-URL controls
-pass. See the57 report/ledger for exact scopes and receipts. No57 commit/push,
-hosted IPA, upstream submission, release or physical helper/JIT acceptance is
-claimed. After these local checks, the owner explicitly approves “Push/build
+pass. See the57 report/ledger for exact scopes and receipts. After these local
+checks, the owner explicitly approves “Push/build
 Cabrillo only”: commit/push as hmcneill46, open a Cabrillo PR and run the unsigned
 trial workflow. No57 tag/Release or iLoader write is authorized. Preserve
 all274 accepted56 inputs and the immutable public v0.25.1 kit below.
+
+Source `0f08fc64083d539fdba9f1b78fd79bb41e516048` is pushed as hmcneill46 to
+`codex/actions-release` in draft [PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7).
+[Trial39406495715](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715)
+passes fresh source/native/managed/FMOD packaging, all five attestations and
+separate Ubuntu checksum/attestation verification; publishing is skipped. The
+[five-file test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
+requires GitHub sign-in and expires3 November2026 at10:37:38 UTC.
+Its independent download in `artifacts/cabrillo-build57-hosted` verifies299 source
+hashes, the274 frozen56 inputs,151 unchanged dependency hashes plus two disclosed
+StikJIT inputs,199 DLLs/434 metadata checks, full NLua RSA/tamper controls,
+14 native/managed numeric comparisons, six exact helper/framework files and all
+five exact source/run attestations. IPA21,038,013bytes; SHA256
+`c45c0f5067c95ce4422e8def19c6595e078f03f8d52b1061d6d7754428a5a76f`.
+All299 captured57 app inputs and this kit are frozen; use58 for new app changes.
+No iLoader write,57 tag/Release or actual Feather/helper/DDI/JIT/gameplay pass is
+claimed. Test with the Development profile, preserve the helper, manually import
+pairing, connect LocalDevVPN and choose Built-in StikJIT before Run Celeste.
 
 ## Published v0.25.1 / build56 —20 October2026
 

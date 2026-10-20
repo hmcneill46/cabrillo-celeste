@@ -4,7 +4,42 @@
 published0.25.1/build56 download repair. All274 captured56 app inputs remain
 frozen. This source lane is `launcher-integrated-jit`; it retains the exact
 Everest1.6642.0/runtime/dependency pins, copy imports, bundle ID and save paths.
-No57 commit/push, hosted IPA, release or physical acceptance is recorded yet.
+The source is pushed as hmcneill46 in draft
+[PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7). The unsigned hosted
+trial and independently downloaded kit pass as recorded below. No57 version tag,
+public Release or physical helper/JIT acceptance is claimed.
+
+## Verified unsigned test IPA
+
+[Download the five-file build57 test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
+(GitHub sign-in required; expires3 November2026 at10:37:38 UTC). Extract
+`Cabrillo-0.26.0-unsigned.ipa` and sign it in Feather with the Development profile,
+preserving the embedded helper extension and framework. Keep the existing bundle
+ID. In Cabrillo, select Built-in StikJIT if a previous provider remains selected,
+import a valid pairing plist under Settings → Built-in StikJIT, connect
+LocalDevVPN and press Run Celeste. No iLoader changes or recognition are needed.
+
+[Run39406495715](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715),
+attempt1, passes at source `0f08fc64083d539fdba9f1b78fd79bb41e516048` on
+`codex/actions-release`. Fresh public managed/native compilation, official FMOD
+SDK acquisition, package audits, all five attestations and separate Ubuntu
+checksum/attestation verification pass; Release publication is skipped.
+
+The retained `artifacts/cabrillo-build57-hosted` kit independently verifies
+all299 captured app source hashes, all274 frozen56 inputs and all151 prior
+dependency hashes, with only the separately disclosed StikJIT mixed archive and
+idevice binary added (153 total). Actual199 DLLs pass434 metadata checks, exactly
+matching the hosted audit; NLua's full RSA signature and two tamper controls pass.
+Fourteen guarded native/managed version comparisons pass156 assertions. Structural
+IPA checks independently confirm the six exact unsigned helper/framework files,
+host iOS15/helper iOS17.4 isolation, licences and scripts. All five attestations
+bind the exact bytes to the source, workflow, ref and hosted run.
+
+IPA bytes:21,038,013. SHA256:
+`c45c0f5067c95ce4422e8def19c6595e078f03f8d52b1061d6d7754428a5a76f`.
+All299 captured57 inputs and this kit are frozen; use58 for new implementation.
+Documentation-only delivery updates preserve those inputs. Feather installation,
+actual helper registration, real DDI/JIT and gameplay remain device gates.
 
 ## User flow
 
@@ -132,10 +167,11 @@ managed entry. Terminal native/trace verification failure now latches a restart
 error instead of later being presented as still waiting for JIT. Native tests
 and both existing debugger-detach checks remain authoritative.
 
-Full fresh managed/native/FMOD packaging, signed installation, actual helper
+Full fresh managed/native/FMOD packaging and independent downloaded-kit
+verification now pass as recorded above. Signed installation, actual helper
 registration under the owner’s Feather setup, real pairing/DDI/JIT, gameplay and
-saves/normal Quit are still pending for57. Native or simulator success does not
-close those physical gates. The existing restricted GitHub build environment
+saves/normal Quit remain pending for57. Hosted, native or simulator success does
+not close those physical gates. The existing restricted GitHub build environment
 accepts the established `codex/actions-release` trial branch, main and version
 tags; no environment access expansion is needed for a source trial. After the local checks, the owner explicitly authorizes “Push/build Cabrillo
 only”: commit/push as hmcneill46, open a Cabrillo PR and run the existing unsigned
