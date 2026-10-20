@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from verify_unified58 import verify_parts, verify_game_input_contract
+from verify_unified58 import verify_parts, verify_game_input_contract, verify_combined_notice
 import test_integrated57_package as retained
 
 
@@ -48,6 +48,22 @@ class UnifiedPackageChecks(unittest.TestCase):
         broken['game_code_sources'].pop()
         with self.assertRaisesRegex(ValueError, 'retained-game'):
             verify_game_input_contract(broken, recipe)
+
+    def test_packaged_notice_must_match_runtime_and_preserve_both_attributions(self):
+        root = Path(__file__).resolve().parents[2]
+        lane = root / 'experiments/ios-jit/launcher-unified58'
+        info = dict(version='0.29.0', build_number='58',
+                    bundled_runtime_identity=json.loads((lane/'RuntimeIdentity.json').read_text()),
+                    integrated_jit=dict(upstream_commit='32287268fa5824f9edce4cb359f5833ce0cf7b00'))
+        notice = (lane/'THIRD_PARTY_NOTICES.md').read_text()
+        verify_combined_notice(notice, info)
+        old = (root/'experiments/ios-jit/launcher-integrated-jit/THIRD_PARTY_NOTICES.md').read_text()
+        with self.assertRaisesRegex(ValueError, 'Combined app notice'):
+            verify_combined_notice(old, info)
+        for text in ['1.6642.0', 'Morro', 'prebuilt idevice FFI static library',
+                     'SDK components are not redistributed.']:
+            with self.subTest(missing=text), self.assertRaisesRegex(ValueError, 'Combined app notice'):
+                verify_combined_notice(notice.replace(text, ''), info)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "date": "2026-10-20",
+  "version": "0.29.0",
+  "build_number": 58,
+  "status": "PASS_HOST_SIMULATOR_CONTROLS_FINAL_PACKAGE_REBUILD_PENDING",
+  "source_lineages": {
+    "local_snapshot": "ee475e3",
+    "published_main": "65e45c2",
+    "integration_merge": "eaa57b0",
+    "pull_request": 8
+  },
+  "preservation": {
+    "published57_captured_sources_exact": 299,
+    "local57_captured_sources_preserved_in_parent": 291,
+    "canonical_path_collisions_preserved_in_parent": 6,
+    "published53_to57_recipe_files_exact": 30,
+    "initial_local_evidence_receipts_verified": 18
+  },
+  "checks": {
+    "python": 133,
+    "jit_pairing_policy": 186,
+    "picker_scenarios": 12,
+    "dependency_controls": 321,
+    "native_game_inputs": 14,
+    "swift_input_policy": 59,
+    "managed_policy_and_geometry": 2743,
+    "apple_ui_tests": 12,
+    "simulator_device_families": 2,
+    "managed_assemblies": 199,
+    "managed_metadata_checks": 434,
+    "original_input_zips": 9,
+    "retained_store_controls": 22,
+    "input_recovery_matrix_controls": 97,
+    "full_real_game_host_runs": 3,
+    "actual_grab_death_and_map_checks": 10,
+    "motion_smoothing_combinations": 4,
+    "strawberry_jam_runs": 2,
+    "strawberry_jam_original_mod_archives": 52,
+    "strawberry_jam_test_canary_archives": 1,
+    "compiled_launcher_swift_sources": 25,
+    "compiled_zipfoundation_swift_sources": 21,
+    "compiled_cyaml_sources": 6,
+    "compiled_objc_host_sources": 15,
+    "packaged_retained_input_checks_intermediate_b": 51
+  },
+  "scope": {
+    "everest_version": "1.6642.0",
+    "original_game_physics": true,
+    "full_display_touch_editor": true,
+    "original_grab_semantics": true,
+    "persistent_grab_across_processes": false,
+    "fmod_sdk_redistributed": false,
+    "game_assets_or_original_prepared_game_code_bundled": false,
+    "source_only_compile_includes_sdl_mono_graphics": false,
+    "source_only_compile_links_app": false,
+    "real_host_gameplay_tested": true,
+    "physical_device_tested": false,
+    "physical_dualsense_colours_tested": false,
+    "sustained_physical_120hz_tested": false,
+    "device_helper_ddi_jit_tested": false,
+    "phone_modified": false,
+    "new_tag_created": false,
+    "new_public_release_created": false
+  },
+  "intermediate_package_b": {
+    "source_commit": "6dd99918cf5171d709bce676d2ae769646356214",
+    "ipa_sha256": "2a71fd90c39008e4d2c6214d5ec52bd38f20cf74a41eb746a44b86385e0a0630",
+    "bytes": 21325971,
+    "captured_sources": 346,
+    "status": "FAIL_OBSOLETE_BUNDLED_NOTICE",
+    "final_test_kit": false
+  },
+  "resolved_before_final_packaging": [
+    "First IPA lacked native retained-game catalogue metadata; actual packaged-metadata regression reproduced rejection. Compiler and verifier now require the actual schema2 catalogue; corrected intermediate package passed51 synthetic native controls.",
+    "Second IPA notice omitted Morro and retained stale Everest6580 and FMOD-blocked text. A new58 notice and package assertions correct this; final rebuild and independent review remain pending."
+  ],
+  "evidence": {
+    "public_source_inputs": {
+      "sha256": "55a83a1d8e1b83c43befdc63d4f0a6a2bac94902f670cdad66b2fb1e23a3073b",
+      "status": "PASS_PUBLIC_SOURCE_INPUTS"
+    },
+    "fresh_managed": {
+      "sha256": "608add6c3058d8d92ad3527566999afec9de264149cf270b989b77674eb7d2c0",
+      "status": "PASS_PUBLIC_GAME_FREE_MANAGED_BUILD"
+    },
+    "managed_metadata": {
+      "sha256": "8912de91f947c356acbb650658a6f87bd8b6a77e211d75447c51edea01d587e9",
+      "status": "PASS_BUILD58_COMPILED_MANAGED_PAYLOAD"
+    },
+    "fresh_native_dependencies": {
+      "sha256": "24ed57de5e813f56f016d736af89c34a8425c79ffc1602bd4c5311b3c99f8702",
+      "status": "PASS_PUBLIC_NATIVE_DEPENDENCIES"
+    },
+    "explicit_fmod_sdk": {
+      "sha256": "12e86d9a4519d4e75bfaf21616def97a5d4c2cf6b7b9aec969998d59f390c869",
+      "status": "PASS_EXPLICIT_FMOD_SDK"
+    },
+    "stikjit_helper": {
+      "sha256": "7397b56400d5c61e056f1811278c66cdfb04b67036ed6780496baceacb34f41c",
+      "status": "PASS_PINNED_STIKJIT_HELPER_BUILD"
+    },
+    "native_policies": {
+      "sha256": "12b723bce007082c1755a2a73d31997158513a17db918c1f5ec149d97d7791d5",
+      "status": "PASS_UNIFIED58_NATIVE_CONTROLS"
+    },
+    "touch_input_policies": {
+      "sha256": "59792c75e7a37fb8fd4f651c8eebe28d22f182dd05e066efbb3acd8cbb4a3762",
+      "status": "PASS_TOUCH_GEOMETRY_AND_OWNERSHIP"
+    },
+    "nine_game_inputs": {
+      "sha256": "c44265ab9f175df7cf0a915cc60c26f373a0ff5a1499bcfd723fd57c0c22b1f4",
+      "status": "PASS_GAME_INPUTS_STORE"
+    },
+    "touch_apple_ui": {
+      "sha256": "9727e6073e8d2f459c76f1d8330ad38c61a0df3e6bcd5b2776b32675b02c205b",
+      "status": "PASS_TOUCH_EDITOR_UI_XCUITEST"
+    },
+    "combined_apple_ui": {
+      "sha256": "9ed12c82bbb9fef4c96b4293e37f254b07d6642933738142877e940913ece496",
+      "status": "PASS_TOUCH_EDITOR_UI_XCUITEST"
+    },
+    "real_game_host": {
+      "sha256": "fb4fbb33c810f0d34ef2b518bec58efa1192433278f8180baa65406ad6ebe7e1",
+      "status": "PASS_OWNED_GAME_COLD_WARM_GAMEPLAY"
+    },
+    "grab_lifecycle": {
+      "sha256": "47584986736ad769449d481c735dc73e041c58d9272217df762e8f1f37a29e7d",
+      "status": "PASS_REAL_GRAB_DEATH_AND_MAPS"
+    },
+    "motion_smoothing": {
+      "sha256": "84a3e233535c068a0000fd57f836a752fd1fe7a7d5b7e48e28fada06bcd3bb24",
+      "status": "PASS_TOUCH_EDITOR_REAL_GAME_MOTION"
+    },
+    "strawberry_jam": {
+      "sha256": "6549327c203d3d872fe2951947e8d61ec97077311d5e3a80f76dbb70785e514b",
+      "status": "PASS_OWNED_GAME_SJ_COLD_WARM"
+    },
+    "production_ios_compile_before_notice_only_rebuild": {
+      "sha256": "b9448cab386c2995ba1fb84e1d5e4e558d2f791aaada3e710d9894b72f0dd955",
+      "status": "PASS_UNIFIED58_PRODUCTION_IOS_LAUNCHER_COMPILE"
+    },
+    "packaged_retained_inputs_intermediate_b": {
+      "sha256": "9045e4a41dac4f24ab8fe31cb4265e45606be66b81193f18e758d98171fb092a",
+      "status": "PASS_PACKAGED_NATIVE_RETAINED_INPUTS"
+    },
+    "initial_package_retained_input_negative_control": {
+      "sha256": "2afc6b15db7fb6004c68f3978fd5c923a0bad830568c86ee16f20e468f7253c9",
+      "status": "PASS_NEGATIVE_RETAINED_INPUT_REGRESSION"
+    },
+    "source_preservation": {
+      "sha256": "41f3b364e5fabb1f2d9ad635f49dd90d1671561e6021930766c13e54bfd9386a"
+    },
+    "python_controls": {
+      "sha256": "5a51b48f59bc68c4cd1c24c5c6a0a1f6176f1959728cb2f57767fbf73bab2c74"
+    }
+  },
+  "remaining": [
+    "Final notice-corrected IPA rebuild and independent package review",
+    "Final source merge and CI result",
+    "Test-kit delivery",
+    "Owner physical-device acceptance",
+    "Separate owner request before a public version tag or Release"
+  ]
+}

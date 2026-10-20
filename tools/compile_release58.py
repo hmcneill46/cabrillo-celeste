@@ -147,7 +147,7 @@ def main():
         ROOT/'experiments/ios-jit/launcher-owned-game/patch_loading.py']
     sources += [ROOT/'tools'/('compile_release'+str(n)+'.py') for n in range(53,58)]
     sources += [ROOT/'release'/('app'+str(n))/'Dependencies.json' for n in range(53,58)]
-    sources += [INTEGRATED_OVERLAY/'THIRD_PARTY_NOTICES.md', *sorted((INTEGRATED_OVERLAY/'notices').glob('*'))]
+    sources += sorted((INTEGRATED_OVERLAY/'notices').glob('*'))
     preparation_base = ROOT/'experiments/ios-jit/launcher-owned-game'
     sources += [p for p in (preparation_base/'public-build').rglob('*') if p.is_file()]
     sources += [preparation_base/'native'/name for name in ['fna3d-callback.patch','fna3d-backbuffer.patch']]
@@ -256,7 +256,6 @@ def main():
     shutil.copyfile(ROOT/'modern-ios/Assets/TouchControls/NOTICE.md',app/'TOUCH_ARTWORK_NOTICE.md')
     collect_notices(inputs,paths[0].parent,app)
     shutil.copytree(INTEGRATED_OVERLAY/'notices',app/'licenses/StikJIT')
-    shutil.copyfile(INTEGRATED_OVERLAY/'THIRD_PARTY_NOTICES.md',app/'THIRD_PARTY_NOTICES.md')
     write_json(app/'licenses/StikJIT/UPSTREAM.json',read_json(ROOT/'release/stikjit57.json'))
     shutil.copyfile(paths[2].parent/'FMOD-LICENSE.TXT',app/'licenses/FMOD-LICENSE.TXT')
     assets = stage / "Assets.xcassets"

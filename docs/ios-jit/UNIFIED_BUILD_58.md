@@ -56,22 +56,85 @@ from Git. The protected FMOD download/runtime packaging boundary is retained.
   pairing-file handling and signed revision49 Home Screen Shortcuts.
 - Keep existing bundle identity, profiles, saves and rollback behavior.
 
-## Validation status
+## Integration and preservation
 
-At the start of integration, the local public-source boundary audit passes for
-5,620 files. All291 captured local57 inputs and18 referenced evidence receipts
-match their retained hashes. This verifies preservation of the local snapshot;
-it does not establish correctness of the integrated build.
+The merge at `eaa57b0` has both preserved parents, `ee475e3` and `65e45c2`.
+[PR8](https://github.com/hmcneill46/cabrillo-celeste/pull/8) contains the combined
+source; final review, merge and test-kit delivery remain in progress. No new
+version tag or public Release has been made.
 
-**Combined build58 validation and IPA delivery are pending.** Record the final
-managed/native compilation, source/package audits, regression checks and exact
-IPA identity here when complete. Relevant coverage includes cold and saved-game
-startup, touch editor save/cancel/input isolation, live preferences/death/maps,
-Motion Smoothing, picker/imports, dependency recovery and JIT helper/provider
-integration. Host/simulator checks and physical device acceptance remain separate.
+All299 captured published57 sources remain exact. All291 captured local57
+sources remain exact in its snapshot parent; the six colliding canonical paths
+remain recoverable there. All30 published53–57 identity, manifest and numbered
+builder/compiler files retain their published bytes. The initial local audit also
+verified all18 earlier evidence-receipt hashes. Both original histories and the
+dated feature reports are retained.
 
-The previous physical gates remain scoped to their original evidence. In
-particular, local57 has no physical acceptance, DualSense light colours remain
-untested on the owner's controller, and published57 package checks do not imply
-physical built-in-helper/DDI/JIT/gameplay acceptance. A combined test IPA should
-keep the data container and revision49 Shortcut and allow its own cache rebuild.
+## Completed validation
+
+The combined source passes the following local checks. The
+[evidence ledger](UNIFIED_BUILD_58_EVIDENCE.json) records receipt hashes and
+counts without copying private logs, game files, credentials or device data.
+
+| Check | Result and scope |
+| --- | --- |
+| Python release/integration controls | 133 pass, including source-catalogue, metadata and preserved-feature controls. |
+| Native policies | 186 JIT/pairing,12 picker scenarios,321 dependency controls and14 game-input controls pass against selected58 sources. Fixtures do not enable device JIT. |
+| Touch/input policies | 59 Swift and2,743 managed geometry/input controls pass. |
+| Apple UI tests | 12 tests pass across iPhone and iPad simulators, covering touch editing/live preferences and the combined launcher. |
+| Managed payload | All199 assemblies pass434 metadata/identity checks, with wrong-version and stale-tool negative controls. The actual schema2 recipe preserves all four game-source identities. |
+| Original game inputs | All nine original ZIPs pass, with22 retained-store and97 input/recovery controls. |
+| Full real-game host runs | Three pass: cold import, cached startup with the missing temporary ZIP, and rebuild from older retained originals. Each covers input preferences, touch/feather, numerical fixes, desktop saves, resume and normal Quit. |
+| Grab lifecycle | Ten real death/respawn/map-change checks pass. |
+| Motion Smoothing1.8.0 | Fast/Fancy at60/120 host draw callbacks pass with original60Hz physics. These are not sustained physical120Hz measurements. |
+| Full Strawberry Jam | Both cold and cached runs pass with52 original mod archives plus one test canary. Tests enter the real Beginner lobby and Bing map, exercise hooks, save/resume and Quit normally. |
+| Production iOS host compilation | All25 selected launcher Swift files,21 ZIPFoundation files,6 CYaml files and15 Objective-C host files compile for arm64/iOS15 with the actual generated Swift bridge. All130 captured inputs remain stable; the picker test seam is absent. |
+| Fresh dependency/helper builds | Managed/native dependencies build from the pinned public inputs with an explicit developer-owned FMOD SDK. The separate unsigned StikJIT helper/framework builds for iOS17.4; its58 identity is verified before packaging. |
+
+The final production compile receipt is
+`.build/unified58-compile-c/receipt.json`. The source-only check excludes
+SDL/Mono graphics implementation and linking; the full IPA build covers those.
+Its earlier run completed compilation but rejected its receipt because the
+compiler's metadata code changed during that run. The fresh run passes.
+
+## Defects caught before delivery
+
+The first integration IPA omitted `game_code_legacy_source_id` and
+`game_code_sources` from native `BuildInfo.json`. Its managed recipe was correct,
+but native saved-game availability could reject retained originals after the
+temporary import ZIP had been removed. A control using the actual
+`CJGameInputsAvailable` function and metadata extracted from that IPA reproduces
+the rejection. The compiler now copies the catalogue from the actual recipe;
+the package verifier compares it, and the fresh-build workflow runs the
+packaged-metadata control. The corrected package passes all51 synthetic
+retained-input checks without using proprietary game files. The first IPA stays
+retained as a failing negative control and is not a test-kit candidate.
+
+Independent review of the second package then found an outdated bundled
+third-party notice inherited from build38: it omitted Morro and still described
+Everest1.6580 and an unresolved FMOD permission gate. A new58 notice corrects
+the current dependencies and runtime permission while retaining the developer
+SDK restriction and required licences. The compiler now selects it and package validation requires its current notices
+before a fresh final package. The second IPA
+(`2a71fd90c39008e4d2c6214d5ec52bd38f20cf74a41eb746a44b86385e0a0630`,
+21,325,971 bytes, source `6dd9991`) is intermediate evidence, not the final kit.
+Its346 captured sources,199 DLLs,16 native archives, six helper files and dSYM
+passed independent checks; the notice defect blocked acceptance.
+
+## Test package and remaining gates
+
+**The final package rebuild, independent review and delivery are pending.**
+Record its exact identity here after the notice correction is verified. Source
+merge and CI status must be recorded separately from the local package evidence.
+
+Keep the existing data container, saves and revision49 Shortcut. Allow one
+prepared-code cache rebuild, then check a second fresh-process start, normal
+Quit and Export diagnostics. Review the full-display editor in portrait and
+landscape, live feather/grab choices and the controller's preferred symbols.
+For standalone Built-in StikJIT, preserve the helper during signing and use the
+documented pairing/VPN setup; LiveContainer retains its existing provider.
+
+No new physical device acceptance is inferred. Actual installed helper
+registration/DDI/JIT, physical touch comfort, DualSense light colours and
+sustained120Hz remain device gates. Earlier save-manager, lifecycle and iPad
+gates keep their original scope. No phone has been modified for this integration.

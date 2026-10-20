@@ -13,6 +13,23 @@ COMPONENT_FILES = {'Frameworks/StikJIT.framework/' + name for name in ['StikJIT'
 COMPONENT_FILES |= {'PlugIns/CabrilloJITHelper.appex/' + name for name in ['CabrilloJITHelper', 'Info.plist']}
 
 
+def verify_combined_notice(notice, info):
+    """Reject obsolete runtime/permission text or missing merged attributions."""
+    runtime = info['bundled_runtime_identity']
+    required = [
+        f'# Cabrillo {info["version"]} / build{info["build_number"]} notices',
+        'Everest stable ' + runtime['builtins']['Everest'], runtime['everestSourceCommit'],
+        'FMOD runtime distribution permission',
+        'Developers must obtain their own FMOD SDK from https://www.fmod.com',
+        'SDK components are not redistributed.', 'licenses/FMOD-LICENSE.TXT',
+        'Morro', 'licenses/MORRO-LICENSE', 'StikJIT', 'MPL-2.0',
+        info['integrated_jit']['upstream_commit'], 'licenses/StikJIT/UPSTREAM.json',
+        'prebuilt idevice FFI static library',
+    ]
+    if any(text not in notice for text in required):
+        raise ValueError('Combined app notice has stale identity or missing runtime/SDK/attribution disclosure')
+
+
 def verify_game_input_contract(info, recipe):
     """The native launcher's retained-input lookup must match the bootstrap."""
     if (info.get('game_code_legacy_source_id') != recipe['legacy_source_id']
@@ -85,6 +102,9 @@ def verify(directory):
         read = lambda name: archive.read(prefix + name)
         settings = plistlib.loads(read('Info.plist'))
         info = json.loads(read('BuildInfo.json'))
+        verify_combined_notice(read('THIRD_PARTY_NOTICES.md').decode('utf-8'), info)
+        if read('licenses/MORRO-LICENSE') != (Path(__file__).resolve().parents[1] / 'docs/licenses/MORRO-LICENSE.txt').read_bytes():
+            raise ValueError('Missing or changed Morro licence')
         from check_unified58_managed import catalogue_projection, ORIGINAL, LEGACY_ORIGINAL
         recipe = json.loads(read('OwnedGameRecipe.json'))
         verify_game_input_contract(info, recipe)

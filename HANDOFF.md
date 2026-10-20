@@ -14,9 +14,21 @@ captured at `ee475e3` on `codex/game-input-compatibility`; the other computer's
 source is `65e45c2` on `origin/main`, following published v0.26.0. Both histories
 must remain reachable. Preserve local input/editor/game-import behavior and the
 published Files-picker repairs, Everest1.6642, dependency recovery and integrated
-StikJIT. See [the integration report](docs/ios-jit/UNIFIED_BUILD_58.md) for the
-lineage mapping and validation state. Integration tests and the new IPA are
-pending; earlier passes apply only to their recorded builds.
+StikJIT. The combined source passes133 Python controls,12 Apple UI tests,
+186 JIT/pairing +12 picker +321 dependency +14 game-input controls,
+59 Swift +2,743 managed input controls,434 managed metadata checks, all nine
+original ZIPs, three full host runs, four Motion Smoothing variants, ten grab
+lifecycle checks and cold/cached full Strawberry Jam. Production58 Swift/native
+host compilation also passes. See [the integration report](docs/ios-jit/UNIFIED_BUILD_58.md)
+and its evidence ledger for exact scope.
+
+[PR8](https://github.com/hmcneill46/cabrillo-celeste/pull/8) preserves both source
+histories. The first IPA exposed missing native retained-game catalogue metadata;
+the corrected package passes51 controls using its actual packaged metadata.
+Independent review then found stale bundled third-party notices. The final
+notice-corrected package, review, merge and delivery are pending; do not deliver
+the intermediate `2a71fd90…0630` IPA. No physical58 acceptance or new public
+Release is claimed.
 
 Build numbers53–57 were allocated independently on both computers. Canonical
 `release/app53`–`app57`, `release/public53.json`–`public57.json` and numbered

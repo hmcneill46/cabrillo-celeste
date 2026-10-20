@@ -1,4 +1,4 @@
-# Cabrillo build38 notices
+# Cabrillo 0.29.0 / build58 notices
 
 This app contains no original or prepared Celeste game assembly, generated Celeste
 hook assembly, or original game assets. The user supplies their original Celeste
@@ -6,17 +6,24 @@ FNA 1.4.0.0 ZIP. Cabrillo prepares their copy in its private Documents storage.
 The stripped metadata references supplied by Everest are build-only and are not
 included in the app.
 
-The native FMOD Engine 1.10.09 / build97915 iOS libraries are an explicit,
-user-supplied proprietary SDK input. The SDK is never copied into Git. Its license
-is included at `licenses/FMOD-LICENSE.TXT`. Public IPA redistribution is blocked
-pending Firelight's permission for this launcher and an authorized way to supply
-the SDK to release builds. This private test package does not assert that permission.
+## FMOD runtime distribution permission
 
-Everest stable1.6580.0 is built from commit
-082e21b0b6dd7ff7c96d65b2ca2c632f4fd8df75 with the documented Apple embedding
+The app links the proprietary FMOD Engine 1.10.09 / build97915 iOS runtime.
+Firelight Technologies permits distribution of these runtime libraries inside
+a built application, as recorded in Cabrillo's docs/RELEASING.md. This permission
+does not make FMOD open source or grant permission to redistribute its SDK.
+Developers must obtain their own FMOD SDK from https://www.fmod.com.
+SDK components are not redistributed. The SDK stays outside Git and public build
+artifacts; the app includes its applicable licence at `licenses/FMOD-LICENSE.TXT`.
+Players downloading a built app do not need an FMOD account.
+
+## Public runtime dependencies
+
+Everest stable 1.6642.0 is built from commit
+5abd7876821223c20711c1844a5187321d6e904c with the documented Apple embedding
 and cooperative loading patches. Its MIT source, public MonoMod/Cecil/NLua
 submodules, public NuGet packages, and the .NET8.0.28 runtime are rebuilt or
-retrieved from the pinned sources in `release/owned-game-dependencies.json`.
+retrieved from the pinned sources in `release/everest55-dependencies.json`.
 All resolved NuGet package archives are pinned in `release/owned-game-nuget.json`.
 Public SDK/runtime packs are declared binary dependencies; source provenance
 is not a claim that every dependency is original Cabrillo code.
@@ -44,10 +51,10 @@ no copied game content. The app icon is generated from project-owned geometry.
 
 Mod ZIPs, catalogue images and descriptions are obtained from their authors'
 services at the user's request and retain their original identities and notices.
-No third-party mod ZIP is bundled. The optional compatibility adaptations and
-physics repairs are described in the build38 report; the original user files
-remain unchanged. Gameplay acceptance is scoped to recorded tests, not every
-map, device or network mod.
+No third-party mod ZIP is bundled. Store compatibility, precision repairs and
+optional touch controls operate on the user's separately imported game. Their
+original files remain unchanged. Gameplay acceptance is scoped to recorded tests,
+not every map, device or network mod.
 
 ## Morro game input investigation
 
@@ -63,3 +70,19 @@ Morro commit cc02b0cc697bd620c0dc864d4af3c60d79a95e85. Its MIT notice is retaine
 in licenses/MORRO-LICENSE. Cabrillo implements its own SwiftUI editor, portable
 configuration and SDL/virtual-input adapter, including the optional swipe mode.
 The existing touch artwork keeps the original attribution above.
+
+## Built-in StikJIT
+
+StikJIT is MPL-2.0, pinned to commit32287268fa5824f9edce4cb359f5833ce0cf7b00.
+The unmodified covered Swift sources and scripts are available at
+https://github.com/StikDebug/StikJIT/tree/32287268fa5824f9edce4cb359f5833ce0cf7b00
+and the exact source archive and hashes are recorded in licenses/StikJIT/UPSTREAM.json.
+MPL-2.0 and the idevice MIT notice are included in licenses/StikJIT.
+StikJIT is compiled for Cabrillo's isolated helper using the pinned Xcode compiler.
+Its upstream repository includes a prebuilt idevice FFI static library. That
+explicit binary input is hash-pinned and disclosed; it is not rebuilt from source
+by Cabrillo. Upstream does not disclose that binary's exact source revision.
+Bundled universal.js and legacy.js retain their upstream notices.
+Cabrillo uses its own fixed, per-process mailbox script.
+
+This integration is independent and does not imply StikDebug/StikJIT endorsement.

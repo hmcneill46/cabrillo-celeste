@@ -56,8 +56,10 @@ builds are byte-identical. See [how releases work and how to verify a download](
 
 The next test build, **0.29.0 / build58**, brings together the published v0.26.0
 work and this Mac's previously unpushed game-input and touch-control development.
-It is being validated before a new public release. The download above remains
-the published v0.26.0; the features below describe the combined development lane.
+Host and simulator checks now pass, including all nine original game ZIPs,
+the touch editor, cold/cached Strawberry Jam and Motion Smoothing. Final package
+review and test-kit delivery are in progress. The download above remains the
+published v0.26.0; the features below describe the combined development lane.
 See [integration status and source preservation](docs/ios-jit/UNIFIED_BUILD_58.md).
 
 ### Game files from itch.io, Steam and Epic
