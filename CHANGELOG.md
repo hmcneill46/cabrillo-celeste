@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.26.0 · unreleased development
+
+- Add recommended Built-in StikJIT for new standalone iOS17.4+ setups, keeping saved JIT provider choices and every existing method.
+- Let Run Celeste prepare and enable JIT with progress, then launch only after helper completion, native checks and verified debugger detach.
+- Show expiring Remote Pairing service readiness separately from developer-image preparation and actual JIT readiness.
+- Add protected pairing-file import and detection of files placed in Documents by compatible tools, without requiring changes to iLoader.
+- Keep the play triangle visible and center it with the Run Celeste label in enabled, pressed and disabled states.
+
+Built-in JIT requires a compatible signed helper, debugging permission, Developer
+Mode, pairing and LocalDevVPN or a compatible tunnel. LiveContainer keeps its
+existing providers. Cabrillo does not require iLoader recognition; manual pairing import works
+independently. The [verified unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
+is available with GitHub sign-in until3 November. Physical helper/JIT acceptance
+and a public Release remain pending. See [the build57 report](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md).
+
 ## 0.25.1 · 20 October 2026
 
 - Update Everest from stable1.6580.0 to1.6642.0, including TeleportTrigger and separate menu-search binding support.

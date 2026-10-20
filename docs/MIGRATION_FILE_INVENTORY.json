@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 4715,
+  "file_count": 4753,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -9,9 +9,9 @@
       "bytes": 82
     },
     ".github/workflows/ci.yml": {
-      "reason": "Public inventory, build56 dependency relocation/runtime checks, retained saves/shortcuts/picker controls and actual iOS production compilation without licensed inputs",
-      "sha256": "15a82a345c543e13a4db24befbe8052fc1923f83d987a5e8127d19511b4239ea",
-      "bytes": 3254
+      "reason": "Public source, retained save/shortcut/picker/dependency controls and new57 native/production/helper compilation without private inputs",
+      "sha256": "ae176bdf043a9f563608efd01c8c256de2c0b15ace6119d0740c9545651b7ecc",
+      "bytes": 3983
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
@@ -24,19 +24,19 @@
       "bytes": 226
     },
     "AGENTS.md": {
-      "reason": "Current build56 general dependency repair, frozen55 preservation, prior scoped acceptance and explicit GitHub approval boundaries",
-      "sha256": "7086f8158119a07427ad12eb4f9436ae689eee14b58c2e168723d5b864d83fb3",
-      "bytes": 51123
+      "reason": "Verified57 integrated JIT source/trial delivery, frozen captured inputs, scoped acceptance and explicit GitHub/iLoader boundaries",
+      "sha256": "c99301048ebe810910b120eb64096a23191897fbbbcb5715945d3f3a5b0d1134",
+      "bytes": 54790
     },
     "CHANGELOG.md": {
-      "reason": "Owner-requested public release notes and current build56 general downloader repair notes",
-      "sha256": "9540557d519481de85ef5e8e6ab313e6f6b7844a0617fc737fec6b193e78a314",
-      "bytes": 2218
+      "reason": "Owner-requested release notes and unreleased57 integrated JIT behavior and compatibility notes",
+      "sha256": "50be15780b84145d977d15b57aba962b8a10ff4030c4026618b821d86002dc0e",
+      "bytes": 3491
     },
     "HANDOFF.md": {
-      "reason": "Current build56 general dependency repair and scoped verification state, retained trial/release evidence and pending publication/device gates",
-      "sha256": "e3ef965aa36ba829c77fbab30984b601b7d3c9b5a7445497699107b3827f5155",
-      "bytes": 115177
+      "reason": "Verified57 hosted and independently downloaded kit, retained source/release evidence and pending physical helper/JIT gates",
+      "sha256": "2fc7a60ff8ce0279fa2387f84eb9f8925c88cd2fd6f8a8912c6419c8ce838d3a",
+      "bytes": 118546
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -46,8 +46,8 @@
     },
     "README.md": {
       "reason": "Current product/download overview and build53 signing-aware source recipe",
-      "sha256": "6232a474c54597113cea254cf9fdf8d2eccf34eaf4b75e926f538db21270bd77",
-      "bytes": 13671
+      "sha256": "e72656ed7960b9abac76fc1b1ded126986585602329fe9f580ced004c64be055",
+      "bytes": 14483
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -56,8 +56,8 @@
     },
     "docs/BUILDING.md": {
       "reason": "Current build53 developer SDK recipe and preserved historical reproduction instructions",
-      "sha256": "3751b8ac11ef78de0fcacbda145018f6b43c242f0261b07096c92ca7bc147a74",
-      "bytes": 38813
+      "sha256": "ed55c276ef9920143e34658b470feb19ab2a0f686c807f132963b8e853ae50c8",
+      "bytes": 41088
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -26276,8 +26276,8 @@
     },
     "tools/release_pipeline.py": {
       "reason": "Select build53 source recipe while retaining gated clean-ref IPA publishing and SDK provenance checks",
-      "sha256": "6fb27d39db4a2b1dacb8f93f38e7f4b44d6fdbd938d2e43acbb690613e72b448",
-      "bytes": 10767
+      "sha256": "4ffde4a97e726dec45bd0777aec9bfeded2b66d680377f2d92321d33c3533321",
+      "bytes": 14308
     },
     "tools/repair_player_precision.py": {
       "reason": "Independent build34 build, explicit managed repair provenance, package verification or bounded host/simulator test entry point.",
@@ -26291,8 +26291,8 @@
     },
     "tools/tests/test_copy_picker_build.py": {
       "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
-      "sha256": "c1a05979f6e34128e1c3838b9f6c9fb751e80a91b6df67655a2f511ec1d93022",
-      "bytes": 4374
+      "sha256": "0e8423405d9a0249a6c02ad3b6cba32e4e24dd7bf4b6e6b44f8e1101c95a457f",
+      "bytes": 4354
     },
     "tools/tests/test_development_build.py": {
       "reason": "Build output isolation and malformed/signed/wrong-platform Mach-O controls",
@@ -26331,8 +26331,8 @@
     },
     "tools/tests/test_signing_picker_build.py": {
       "reason": "Build53 source selection and frozen-input rejection regression controls",
-      "sha256": "bfb854f33c0852863ceeca3e889fff1cdeeecb96f325d08d523b783d88f562c4",
-      "bytes": 3215
+      "sha256": "1c2539fd08be2e87be5073d721d523f10c294caf38bc158d2de5f4ab273e239c",
+      "bytes": 3195
     },
     "tools/verify_backups.py": {
       "reason": "Independent build33 recipe, package checks or isolated profile/UI/real-game validation",
@@ -26846,8 +26846,198 @@
     },
     "tools/tests/test_dependency56_build.py": {
       "reason": "Build56 production source selection, native/runtime verification or public-source build and release controls",
-      "sha256": "dc77076e3809a2ab96205a2708279308e036ba6683603412aa09ab7411e5d8fd",
-      "bytes": 6125
+      "sha256": "220ba31d6c2a02c33a253626e39f77890e96c6481bcf2026a9d0900c65a3159a",
+      "bytes": 6208
+    },
+    "docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md": {
+      "reason": "Build57 requirements, local compiler/native/simulator evidence, exact hosted/downloaded kit checks and pending physical helper/JIT gates",
+      "sha256": "ffc207a93f614fd15e011e6243d52ac98b15ba36cdd5c3f16ed38c1a55bf3979",
+      "bytes": 12427
+    },
+    "docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57_EVIDENCE.json": {
+      "reason": "Build57 requirements, local compiler/native/simulator evidence, exact hosted/downloaded kit checks and pending physical helper/JIT gates",
+      "sha256": "632df7882c5f7e0574dc535004ba749c15705065e237554e70a58af70ce6b305",
+      "bytes": 7568
+    },
+    "experiments/ios-jit/launcher-integrated-jit/THIRD_PARTY_NOTICES.md": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "1350c42188f092b213eaa98a04abef94ed4a4656688d2a13fd3e4dbf66591f31",
+      "bytes": 4116
+    },
+    "experiments/ios-jit/launcher-integrated-jit/helper/CabrilloJITHelper.swift": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "3365fa9e5b9ef5e5f433c561250eeb49222236e25fde85cad3bdfb41c25a9806",
+      "bytes": 9586
+    },
+    "experiments/ios-jit/launcher-integrated-jit/helper/Info.plist": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "7bff0a9091cf9cbc24ae8bb9a8cb673068f4a6d078428dc3d79717369ab60190",
+      "bytes": 1539
+    },
+    "experiments/ios-jit/launcher-integrated-jit/helper/main.m": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "d7ebe52b2cedffb6d593a95a79c499bd329c44a229412a465b787307d019bd75",
+      "bytes": 340
+    },
+    "experiments/ios-jit/launcher-integrated-jit/native/IntegratedJITViews.swift": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "af22a5bd1afa93997e3c1072672f9604dae4cb3247eae5a7909fe6cba49ad782",
+      "bytes": 9561
+    },
+    "experiments/ios-jit/launcher-integrated-jit/native/LauncherUI.swift": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "2ebea589890d0e3426b0b90ab111e61e78aeadba8136544f265c604d2446361b",
+      "bytes": 33414
+    },
+    "experiments/ios-jit/launcher-integrated-jit/notices/StikJIT-MPL-2.0.txt": {
+      "reason": "Upstream StikJIT MPL-2.0 and idevice MIT notices for the isolated built-in helper runtime",
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "bytes": 16725
+    },
+    "experiments/ios-jit/launcher-integrated-jit/notices/idevice-MIT.txt": {
+      "reason": "Upstream StikJIT MPL-2.0 and idevice MIT notices for the isolated built-in helper runtime",
+      "sha256": "131488ce7e302b9f62e3236793e57c86a208d3dfaf03e6d7d03ddc0fc82392ed",
+      "bytes": 1062
+    },
+    "experiments/ios-jit/launcher-integrated-jit/src/CJIntegratedJITCoordinator.h": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "8735142f9f37bc7365d1ea450c4a9ede6babedde3a28819baee022ffd9a5d983",
+      "bytes": 1043
+    },
+    "experiments/ios-jit/launcher-integrated-jit/src/CJIntegratedJITCoordinator.m": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "6b9be0369ff9ce979cfad46b25073dec53d945167a9cb5f972a650ee29aca552",
+      "bytes": 26732
+    },
+    "experiments/ios-jit/launcher-integrated-jit/src/CJIntegratedJITLaunch.h": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "ed0764d4c1a576f698b3e2510ac20fa955c126aa2098fcae6bbf264052700a64",
+      "bytes": 1182
+    },
+    "experiments/ios-jit/launcher-integrated-jit/src/CJIntegratedJITLaunch.m": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "1bd735f9d2fced2ba14e1a14a82e0c6322736a1c44191a052a39ac080128522c",
+      "bytes": 2082
+    },
+    "experiments/ios-jit/launcher-integrated-jit/src/CJPlatformOptions.h": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "8f0b2ffc373b48c60df21c4fd2e3393ec7e2623cf8d95222fddfe29bc80b97cd",
+      "bytes": 461
+    },
+    "experiments/ios-jit/launcher-integrated-jit/src/CJPlatformOptions.m": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "65841e85fa2cfb8642fa5fcee5f4813312603b23c4f1ebdf40a60407801ed2d3",
+      "bytes": 5487
+    },
+    "experiments/ios-jit/launcher-integrated-jit/src/main.m": {
+      "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",
+      "sha256": "cdb1d73450ecd3c2c5b54ec39c33ffe92dff5cecc7dc78b2b01357f73f7b2746",
+      "bytes": 154026
+    },
+    "experiments/ios-jit/launcher-integrated-jit/tests/IntegratedJITControllerTests.m": {
+      "reason": "Build57 synthetic native, no-JIT extension IPC and actual simulator presentation regression fixtures; no credentials or game content",
+      "sha256": "083e359d7b8965002d3be0f68abab0f49abd2b5733f089a6299d529d0f70157c",
+      "bytes": 12213
+    },
+    "experiments/ios-jit/launcher-integrated-jit/tests/IntegratedJITCoordinatorTests.m": {
+      "reason": "Build57 synthetic native, no-JIT extension IPC and actual simulator presentation regression fixtures; no credentials or game content",
+      "sha256": "186c6394a3b760cef2ab99c9e393a22d71c8ab5bac1fa4e6965b53bd482841d8",
+      "bytes": 17065
+    },
+    "experiments/ios-jit/launcher-integrated-jit/tests/IntegratedJITIPCHost.m": {
+      "reason": "Build57 synthetic native, no-JIT extension IPC and actual simulator presentation regression fixtures; no credentials or game content",
+      "sha256": "9571aa25bd860393730b6253b7c059eb3ef692052af26c6470c08b49bb031185",
+      "bytes": 2732
+    },
+    "experiments/ios-jit/launcher-integrated-jit/tests/IntegratedJITIPCStub.swift": {
+      "reason": "Build57 synthetic native, no-JIT extension IPC and actual simulator presentation regression fixtures; no credentials or game content",
+      "sha256": "6f65b7a05851dd87cdde059e3adc561a51226728d7b449672a7f9ecd2acac0ee",
+      "bytes": 1925
+    },
+    "experiments/ios-jit/launcher-integrated-jit/tests/IntegratedJITPreview.swift": {
+      "reason": "Build57 synthetic native, no-JIT extension IPC and actual simulator presentation regression fixtures; no credentials or game content",
+      "sha256": "972e9eabe873c2f5ce249d99b9f5d766874e389bc2c2667f80f0b855ce4475fe",
+      "bytes": 5797
+    },
+    "experiments/ios-jit/launcher-integrated-jit/tests/IntegratedJITUITests.swift": {
+      "reason": "Build57 synthetic native, no-JIT extension IPC and actual simulator presentation regression fixtures; no credentials or game content",
+      "sha256": "94c25973812c4c07fd0330b79e1068cabe90f5c8008bf19b800144abce39da12",
+      "bytes": 7985
+    },
+    "release/app57/BuildIdentity.json": {
+      "reason": "Build57 identity, frozen56 source selection and exact mixed-source/binary StikJIT dependency disclosure",
+      "sha256": "88083fe150b86566f745f1f360fcd52e1ab8316d090eee69c468ffecdfc2920b",
+      "bytes": 308
+    },
+    "release/app57/Dependencies.json": {
+      "reason": "Build57 identity, frozen56 source selection and exact mixed-source/binary StikJIT dependency disclosure",
+      "sha256": "3e2da451b8962d5feada8f9d8b4256efae166e8256ddce1667b2e99e212f3e39",
+      "bytes": 142314
+    },
+    "release/app57/Info.plist": {
+      "reason": "Build57 identity, frozen56 source selection and exact mixed-source/binary StikJIT dependency disclosure",
+      "sha256": "fde7968eadfe2dd9c32b1cce150c1e117d65575c976996937d7d015decffb67f",
+      "bytes": 3361
+    },
+    "release/public57.json": {
+      "reason": "Build57 identity, frozen56 source selection and exact mixed-source/binary StikJIT dependency disclosure",
+      "sha256": "96ce4ecb3737d23df7f565614ba7242951d7f78bc42158227ca123f986c3828f",
+      "bytes": 583
+    },
+    "release/stikjit57.json": {
+      "reason": "Build57 identity, frozen56 source selection and exact mixed-source/binary StikJIT dependency disclosure",
+      "sha256": "5f8a594d86dc8542a0a716fd6595f711c278cd6ef8ad080d418daf6f241ac173",
+      "bytes": 3583
+    },
+    "tools/build_release57.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "ebca3117aa51ad2299a832f492c634bc617fc1e9d106b7e948041b846452d57c",
+      "bytes": 12848
+    },
+    "tools/build_stikjit57.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "6a1e6b12d6d39320327a081ce175a537023cab19530b15036568ddc97adff0b0",
+      "bytes": 17007
+    },
+    "tools/check_integrated57_compile.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "bb60f93872fa01cf8fbfaa81165754f92b437ab6ae2e6abe6df47446d0cead6d",
+      "bytes": 13335
+    },
+    "tools/check_integrated57_ipc.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "dbcd29f47680dcdc4f96bf1efe798f03e351f6839bad237a0713bccb85e69442",
+      "bytes": 9863
+    },
+    "tools/check_integrated57_native.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "26f7cba7e2856dcad8fe2b33019731b0bf3690e5c119fe867c5ef325539b6987",
+      "bytes": 4270
+    },
+    "tools/check_integrated_jit_ui.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "4a1d9a3aad3f49864b2682c1ddb6373fc06aaf1ab989ed33a53a4cf4050b1708",
+      "bytes": 10055
+    },
+    "tools/compile_release57.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "b84b88b18638047195059f9e414e0b2b1829a5dec38b2e022ff157f9f353a7f2",
+      "bytes": 32837
+    },
+    "tools/tests/test_integrated57_build.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "c5e5748ce9a659ad9478fc9c712faa891a942cfad286de926f50a370d40531be",
+      "bytes": 3568
+    },
+    "tools/tests/test_integrated57_package.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "e99fc43c052256611cbb5a7ab71c95391292e4f7444e39ada1f320d71b5fd893",
+      "bytes": 7422
+    },
+    "tools/verify_integrated_jit57.py": {
+      "reason": "Build57 fresh source compilation, strict helper packaging, failure rejection or reproducible validation controls",
+      "sha256": "bf398273102279f64a2c0305aa7eabc9bd09deb1c8c023a8b29003ad970ec160",
+      "bytes": 7565
     }
   },
   "private_manifests": [

@@ -63,6 +63,12 @@ jobs:
         run: python3 tools/check_dependency56_native.py --work .build/ci/dependency56-controls
       - name: Compile build56 production launcher for iOS15 and later
         run: python3 tools/check_dependency56_compile.py --work .build/ci/dependency56-compile
+      - name: Check integrated JIT provider, launch, pairing and failure boundaries
+        run: python3 tools/check_integrated57_native.py --work .build/ci/integrated57-native
+      - name: Compile build57 production host for iOS15 and later
+        run: python3 tools/check_integrated57_compile.py --work .build/ci/integrated57-compile
+      - name: Build pinned StikJIT and isolated helper for iOS17.4 and later
+        run: python3 tools/build_stikjit57.py --work .build/ci/integrated57-helper
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: native-profile-check-reports
@@ -75,5 +81,9 @@ jobs:
             .build/ci/dependency56-compile/receipt.json
             .build/ci/dependency56-controls/receipt.json
             .build/ci/dependency56-controls/*/results/results.json
+            .build/ci/integrated57-native/receipt.json
+            .build/ci/integrated57-native/*-results/results.json
+            .build/ci/integrated57-compile/receipt.json
+            .build/ci/integrated57-helper/receipt.json
           if-no-files-found: error
           retention-days: 14

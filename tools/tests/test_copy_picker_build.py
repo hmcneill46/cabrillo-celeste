@@ -14,11 +14,10 @@ class CopyPickerBuildTests(unittest.TestCase):
     def setUp(self):
         self.lock = json.loads((build.IDENTITY / 'Dependencies.json').read_text())
 
-    def test_current_recipe_retains_build54_picker(self):
-        config, report = readiness(build.ROOT)
-        self.assertEqual(config['public_build_script'], 'tools/build_release56.py')
-        self.assertEqual(report['build_number'], '56')
-        self.assertFalse(report['physical_device_tested'])
+    def test_preserved_build54_recipe_retains_its_picker(self):
+        config = json.loads((build.ROOT / 'release/public54.json').read_text())
+        self.assertEqual(config['public_build_script'], 'tools/build_release54.py')
+        self.assertEqual(config['build_number'], '54')
         sources = build.selected_native_sources(self.lock)
         self.assertIn(build.OVERLAY / 'src/main.m', sources)
         self.assertIn(build.OVERLAY / 'src/CJDocumentPickerCompatibility.m', sources)

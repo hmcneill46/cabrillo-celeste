@@ -49,6 +49,18 @@ FMOD, .NET/NuGet binaries and signed Shortcut resources are declared inputs;
 this is not a claim that every dependency is compiled from source or that separate
 builds are byte-identical. See [how releases work and how to verify a download](docs/RELEASING.md).
 
+## Built-in JIT in development
+
+[Build57 /0.26.0](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) adds integrated
+StikJIT for supported standalone installations: connect the local VPN, import
+your pairing file and press Run Celeste. Cabrillo shows preparation progress and
+verifies JIT before launching. Existing saved JIT choices and LiveContainer
+methods remain available. Manual pairing import also works when a tool does not
+yet recognize Cabrillo. The [verified unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
+requires GitHub sign-in and expires3 November. Phone helper/JIT acceptance is
+pending; the public Release above remains0.25.1. See [building instructions](docs/BUILDING.md) and the report's
+signing, iLoader and physical-test limits.
+
 ## Home Screen launch in development
 
 [Build50](docs/ios-jit/SHORTCUT_CELLULAR_BUILD_50.md) corrects the cellular launch

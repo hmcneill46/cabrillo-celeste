@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "build_number": "57",
+  "version": "0.26.0",
+  "updated_utc": "2026-10-20T10:41:18.975733+00:00",
+  "status": "PASS_HOSTED_AND_INDEPENDENT_DOWNLOADED_KIT_AWAITING_PHYSICAL_HELPER_JIT",
+  "preserved_build56_inputs": 274,
+  "checks": {
+    "native_controls": {
+      "status": "PASS_INTEGRATED_JIT57_NATIVE_CONTROLS",
+      "receipt": ".build/integrated57-native-final-c/receipt.json",
+      "sha256": "1cdb923e23c8d075ff11e0a496ea8cba7bfdcb50351cc9b740662ff7ecbcfc69",
+      "controller_checks": 131,
+      "coordinator_checks": 55,
+      "actual_network_or_jit": false
+    },
+    "production_ios_compile": {
+      "status": "PASS_PRODUCTION_IOS_LAUNCHER_COMPILE",
+      "receipt": ".build/integrated57-production-final-e/receipt.json",
+      "sha256": "3d104d8e5ff26d654ef1ac1f992db9861d84e160eab6049e2563ff3f808f9a90",
+      "swift_sources": 43,
+      "cyaml_c_sources": 6,
+      "objc_sources": 5,
+      "target": "arm64-apple-ios15.0",
+      "app_linked": false,
+      "ipa_built": false
+    },
+    "stikjit_helper_compile": {
+      "status": "PASS_PINNED_STIKJIT_HELPER_BUILD",
+      "receipt": ".build/stikjit57-helper-final-c/receipt.json",
+      "sha256": "3b01c3d46e290b2b538224b8156ddd102ccc3f54b8883dcc61cc403f181c203c",
+      "framework_swift_sources": 11,
+      "helper_swift_sources": 1,
+      "helper_objc_entry": 1,
+      "target": "arm64-apple-ios17.4",
+      "runtime_files": 6,
+      "upstream_ffi_prebuilt_disclosed": true
+    },
+    "simulator_ipc": {
+      "status": "PASS_PRODUCTION_COORDINATOR_SIMULATOR_HELPER_IPC",
+      "receipt": ".build/integrated57-ipc-public-a/receipt.json",
+      "sha256": "98fdadebf0a962758046e88c3822449251accd9c780cebffc3c62c8e6de125af",
+      "process_separation": true,
+      "progress_stages": 3,
+      "temporary_pairing_removed": true,
+      "stikjit_stub": true,
+      "real_ddi_or_jit": false
+    },
+    "simulator_ui": {
+      "status": "PASS_BUILD57_PRODUCTION_SWIFTUI_PRESENTATION",
+      "receipt": ".build/integrated57-ui-c/receipt.json",
+      "sha256": "2455d1b1f33ad812e495699bc6d53dcf11b5ef18dfa37266cc8bede1eec07348",
+      "apple_ui_tests": 14,
+      "devices": [
+        "iPhone17Pro",
+        "iPadPro11M5"
+      ],
+      "runtime": "iOS26.5",
+      "screenshots": 66
+    },
+    "retained_shortcuts": {
+      "status": "PASS_PUBLIC_NATIVE_SHORTCUT_CHECKS",
+      "receipt": ".build/integrated57-retained-shortcuts-b/receipt.json",
+      "sha256": "dbc01fe45aed7cd7eae24abc3dacf1c4f5201da5a9bc46b7379b505780bb73f1",
+      "native_checks": 185,
+      "generated_branches": 36,
+      "broken_url_controls": 15
+    },
+    "retained_profiles": {
+      "status": "PASS_PUBLIC_NATIVE_PROFILE_CHECKS",
+      "receipt": ".build/integrated57-retained-profiles/receipt.json",
+      "sha256": "8091a997ebbc874a0290b59edf3d6c0d6d3e9f664b3cf5261a1a312686cdfea2",
+      "checks": 119
+    },
+    "python_controls": {
+      "status": "PASS",
+      "tests": 115,
+      "log": ".build/integrated57-python-controls-final-c.log",
+      "sha256": "b2663773a2f1f3641b0bbc1e5ae2a8219b6e953f66f1f0ead45692c5d6c0cca8"
+    },
+    "hosted_native_reports": {
+      "receipt": ".build/integrated57-hosted-native-source-verification.json",
+      "sha256": "614293fa722b2634d77cbda3dcada6ce7bc931b74e9c0d55737a0f7f317f114e",
+      "status": "PASS_DOWNLOADED_HOSTED_NATIVE_RECEIPT_SOURCES"
+    },
+    "downloaded_kit_allowlist": {
+      "receipt": ".build/integrated57-downloaded-kit-allowlist.json",
+      "sha256": "6f535ef27de5c34456bc6244d19d0e3e0a9609e733a48af39f121006256c7355",
+      "status": "PASS_RELEASE_KIT_ALLOWLIST"
+    },
+    "downloaded_source_identity": {
+      "receipt": ".build/integrated57-downloaded-identity.json",
+      "sha256": "c86456cf8d730bdbca31447eeb4a44a2200fdaf40b68e2b42747a4cb41ade4df",
+      "status": "PASS_INDEPENDENT_BUILD57_SOURCE_IDENTITY_AND_BASELINE"
+    },
+    "downloaded_managed_and_components": {
+      "receipt": ".build/stikjit57-hosted-audit/managed-audit/receipt.json",
+      "sha256": "865ea792d7e1ad25b087d6d5024e68e2e3bca974669d99d89ce3260d002a9012",
+      "status": "PASS_INDEPENDENT_BUILD57_PACKAGED_MANAGED_AND_STRONG_NAME"
+    },
+    "downloaded_version_parity": {
+      "receipt": ".build/stikjit57-hosted-audit/version-parity/receipt.json",
+      "sha256": "e66736f384f6cd2bdbc7c0c6c7959c5738792acd7f58433b8ac652c2bcad620a",
+      "status": "PASS_BUILD57_ACTUAL_RUNTIME_VERSION_PARITY"
+    },
+    "downloaded_attestations": {
+      "receipt": ".build/stikjit57-hosted-audit/attestations/receipt.json",
+      "sha256": "69951992c989cce2486cca4e6514acfe216038f678a53b3e534566af3b4c55bb",
+      "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS"
+    },
+    "downloaded_consolidated": {
+      "receipt": ".build/stikjit57-hosted-audit/final-verification.json",
+      "sha256": "5d412f19bd989bffcf8af29a4d514ed5a975f17939f1997ac492ae8c713b249f",
+      "status": "PASS_INDEPENDENT_DOWNLOADED_BUILD57_AUDITS"
+    }
+  },
+  "physical_device_tested": false,
+  "real_jit_executed": false,
+  "hosted_build_run": true,
+  "github_writes_performed": true,
+  "public_release_created": false,
+  "owner_approval": {
+    "cabrillo_commit_push_pr_unsigned_trial": true,
+    "iloader_changes_or_submission": false,
+    "version_tag_or_public_release": false
+  },
+  "preserved_build57_inputs": 299,
+  "hosted_trial": {
+    "source_commit": "0f08fc64083d539fdba9f1b78fd79bb41e516048",
+    "source_ref": "refs/heads/codex/actions-release",
+    "run_id": "39406495715",
+    "run_attempt": "1",
+    "url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715",
+    "status": "success",
+    "publish": false,
+    "run_receipt": ".build/integrated57-hosted-run.json",
+    "run_receipt_sha256": "e00cbb5956dda961abb7dfc0a903adea220f8ad1de7b6ef18a1f8de254a69676",
+    "artifact_id": "12257984521",
+    "artifact_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521",
+    "artifact_expires_utc": "2026-11-03T10:37:38Z",
+    "kit": "artifacts/cabrillo-build57-hosted",
+    "ipa_bytes": 21038013,
+    "ipa_sha256": "c45c0f5067c95ce4422e8def19c6595e078f03f8d52b1061d6d7754428a5a76f",
+    "captured_sources": 299,
+    "retained56_sources": 274,
+    "retained_dependencies": 151,
+    "total_dependencies": 153,
+    "managed_dlls": 199,
+    "managed_metadata_checks": 434,
+    "guarded_numeric_comparisons": 14,
+    "guarded_numeric_assertions": 156,
+    "actual_helper_framework_files": 6,
+    "attestations_verified": 5,
+    "kit_files": {
+      "BUILD_PROVENANCE.json": {
+        "bytes": 115376,
+        "sha256": "52ae278af1333fb4899a157d427b94a853270a2d0099c1af89a826ab03816173"
+      },
+      "Cabrillo-0.26.0-unsigned.ipa": {
+        "bytes": 21038013,
+        "sha256": "c45c0f5067c95ce4422e8def19c6595e078f03f8d52b1061d6d7754428a5a76f"
+      },
+      "PACKAGE_AUDIT.json": {
+        "bytes": 680,
+        "sha256": "2777cd1908cc50be6587ae90cd6a33bf50c4a64a2c0bd0baaece409dbdb25450"
+      },
+      "RELEASE_NOTES.md": {
+        "bytes": 2404,
+        "sha256": "a5c6c698a9ccd9f55df4531b1dc0b4d7ab66912329f0986c1be045c560e2709e"
+      },
+      "SHA256SUMS": {
+        "bytes": 351,
+        "sha256": "f87d690090d92dc7c4aa317b1bec3d66cc3fc3ed397ea9d5c8cb16f98dd53690"
+      }
+    }
+  },
+  "publication": {
+    "author": "hmcneill46 <57508980+hmcneill46@users.noreply.github.com>",
+    "branch": "codex/actions-release",
+    "draft_pr": "https://github.com/hmcneill46/cabrillo-celeste/pull/7",
+    "iloader_changed": false,
+    "iloader_submission": false,
+    "tag_created": false,
+    "release_created": false
+  }
+}
