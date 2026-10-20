@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "status": "PASS_VERIFIED_UNSIGNED_BUILD59_HOSTED_TRIAL",
+  "date": "2026-10-20",
+  "version": "0.29.1",
+  "build_number": 59,
+  "source_commit": "2e0ee6c237781d62acc8adf2a714925a385e1fa2",
+  "source_ref": "refs/heads/codex/actions-release",
+  "git_author": "hmcneill46",
+  "git_committer": "hmcneill46",
+  "workflow_run_id": 39456411829,
+  "workflow_attempt": 1,
+  "workflow_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829",
+  "workflow_conclusion": "success",
+  "publication_job": "skipped",
+  "artifact_id": 12281239832,
+  "artifact_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829/artifacts/12281239832",
+  "artifact_expires_utc": "2026-11-03T16:40:28Z",
+  "retained_kit": "artifacts/cabrillo-build59-hosted",
+  "ipa_bytes": 21341458,
+  "ipa_sha256": "15f98547ccd725122ee9ad9feca1f2709763cd2a6d14f91b610aa108a70a9ebd",
+  "source_files": 779,
+  "captured_source_map_sha256": "255f0e51705877d42f91ee99474857d17f7e41c6925ed146f11f8ff3dda65b56",
+  "retained58_source_files": 345,
+  "retained57_source_files": 299,
+  "dependencies": 153,
+  "exact58_dependency_digests_preserved": true,
+  "everest_version": "1.6642.0",
+  "actual_managed_dlls": 199,
+  "metadata_checks": 434,
+  "nlua_full_rsa_and_tamper_controls": true,
+  "native_managed_numeric_comparisons": 14,
+  "actual_adapter_lifecycle_il_checks": 5,
+  "native_package_retained_input_checks": 51,
+  "python_checks": 159,
+  "all_five_attestations_exact_source_ref_workflow_run": true,
+  "assets": {
+    "BUILD_PROVENANCE.json": {
+      "bytes": 184907,
+      "sha256": "29d036c148fb523bed7bf60c77445e9347b4f39a8e5a2defd503afa53d6c3268"
+    },
+    "Cabrillo-0.29.1-unsigned.ipa": {
+      "bytes": 21341458,
+      "sha256": "15f98547ccd725122ee9ad9feca1f2709763cd2a6d14f91b610aa108a70a9ebd"
+    },
+    "PACKAGE_AUDIT.json": {
+      "bytes": 677,
+      "sha256": "e831984eb6dc4c84da6253cb5fc75379bc5ad276b366f6d3c5681f7e79c0460e"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 2043,
+      "sha256": "9fa1d76f60865f49c3f5b685b975ab2411b38f2954c6f7851d2c4f62d554d144"
+    },
+    "SHA256SUMS": {
+      "bytes": 351,
+      "sha256": "964b7b44b45bd1efc746f7e97fcb00d594b9abe86581d38780e669179edebd6a"
+    }
+  },
+  "receipts": {
+    "kit_source_dependencies": {
+      "path": ".build/input59-hosted-audit/receipt.json",
+      "sha256": "4647731d437b8c68457602b44fb60b2a31b4e491398cf0a5d8d3420e64fbc1e2",
+      "status": "PASS_INDEPENDENT_BUILD59_KIT_SOURCE_AND_DEPENDENCIES"
+    },
+    "all_five_attestations": {
+      "path": ".build/input59-hosted-attestations/receipt.json",
+      "sha256": "b65bac38219e422b0fd69ff66a33a7eda2b95d018d292c6dcab82afcb599fd6d",
+      "status": "PASS_ALL_FIVE_BUILD59_EXACT_ATTESTATIONS"
+    },
+    "managed_metadata_signatures_numeric": {
+      "path": ".build/input59-hosted-managed-audit/receipt.json",
+      "sha256": "7194e7c7dd40504669eefa5f466072d3d49d2d3dc5869b9cb54b19f3d01b65d0",
+      "status": "PASS_INPUT59_HOSTED_MANAGED_STRONG_NAME_NUMERIC_AUDIT"
+    },
+    "actual_adapter_lifecycle": {
+      "path": ".build/input59-hosted-controller/receipt.json",
+      "sha256": "cf395dca038a30537753a4e92c3110e1b3097415bef328b4c7dad2c5c4356967",
+      "status": "PASS_CONTROLLER59_RESUME_REGRESSION"
+    },
+    "actual_package_retained_input": {
+      "path": ".build/input59-hosted-retained/receipt.json",
+      "sha256": "78ffe066fb0f75ab31aa9b5e594f4221791477c58dec9f8445c3616ff21b23b4",
+      "status": "PASS_PACKAGED_NATIVE_RETAINED_INPUTS"
+    },
+    "downloaded_hosted_check_reports": {
+      "path": ".build/input59-hosted-checks/receipt.json",
+      "sha256": "7a9f04507e406860348b1299d38107f5eb29e8829cdf019447653f040f83d060",
+      "status": "PASS_DOWNLOADED_HOSTED_BUILD59_CHECK_REPORTS"
+    },
+    "workflow_selection_python": {
+      "path": ".build/input59-pipeline-a/receipt.json",
+      "sha256": "735f436dac5c4b728032a5aaebccfcbb6768b13189cd4fbdd1caa845b63a37de",
+      "status": "PASS_INPUT_FIXES59_PIPELINE_CONTROLS"
+    }
+  },
+  "scope": {
+    "owner_authorized_commit_push_test_build": true,
+    "github_writes": true,
+    "tag_created": false,
+    "release_created": false,
+    "phone_modified": false,
+    "physical_device_tested": false,
+    "physical_controller_led_tested": false,
+    "game_or_adapter_executed_by_verification": false,
+    "iloader_changed_or_submitted": false,
+    "local_preflight_evidence_remains_historical": true,
+    "next_implementation_build": 60
+  }
+}

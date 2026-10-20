@@ -1,26 +1,34 @@
 # Cabrillo development
 
-## Local input fixes59 — 20 October2026
+## Verified unsigned0.29.1 / build59 trial —20 October2026
 
-The owner requests local fixes and regression testing for both defects found
-following the rebase to `3f5c6bb61f7d47d8569e7e457272348bd5ebf236`:
-touch resizing can invalidate a small control against a screen edge, and the
-controller light replay can miss native resume when game updates are paused.
-Implementation is isolated in `launcher-input-fixes59`, **0.29.1/build59**;
-read [INPUT_FIXES_BUILD_59.md](docs/ios-jit/INPUT_FIXES_BUILD_59.md) and its evidence
-ledger for checks and limits. The final resize matrix, controller lifecycle/IL
-checks, 152 Python tests, 14 fresh iPhone/iPad UI cases and actual host/helper
-compilation pass. The tablet editor UI uses the recorded landscapeRight retry;
-no final landscapeLeft completion is inferred. All345 captured58 and299
-captured57 inputs remain frozen and explicitly pinned. After reviewing the local results, the owner
-explicitly requests committing/pushing the fixes as hmcneill46 and building an
-unsigned test IPA. This authorizes the scoped source/workflow changes, test
-branch push and existing hosted workflow with publish=false. It does not
-authorize a version tag, public Release or iLoader change. Build59 hosted
-compilation and independent kit verification are pending; no physical-controller
-or device acceptance is claimed.
-Use60 for implementation only after59 is captured in a delivered immutable kit;
-the current local59 lane may still receive corrections before delivery.
+The owner explicitly requests committing/pushing the completed touch-resize and
+controller-resume fixes as `hmcneill46`, then building an unsigned phone test IPA.
+Source `2e0ee6c237781d62acc8adf2a714925a385e1fa2` is pushed to
+`codex/actions-release`, with both GitHub author and committer `hmcneill46`.
+[Run39456411829](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829)
+passes fresh public managed/native compilation, official FMOD SDK acquisition,
+package audits, all five attestations and separate Ubuntu verification.
+Publication is skipped; no tag, public Release or iLoader change is authorized.
+
+The independent `artifacts/cabrillo-build59-hosted` kit verifies all779 captured
+source hashes, both complete345/299 frozen58/57 maps and all153 unchanged58
+dependency digests. Actual199 DLLs pass434 metadata checks matching the hosted
+report, full NLua RSA/tamper controls and14 native/managed version comparisons.
+The actual packaged adapter passes5 lifecycle IL checks; the production retained
+input function passes51 package-metadata assertions. Hosted159 Python and current
+native/resize/controller controls also pass. The14 local guarded iPhone/iPad UI
+cases retain their recorded scope, including the tablet landscapeRight retry.
+Read [the59 report](docs/ios-jit/INPUT_FIXES_BUILD_59.md) and its local/delivery ledgers.
+
+IPA21,341,458 bytes; SHA256:
+`15f98547ccd725122ee9ad9feca1f2709763cd2a6d14f91b610aa108a70a9ebd`.
+[The five-file test artifact](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829/artifacts/12281239832)
+requires GitHub sign-in and expires3 November2026 at16:40:28 UTC. Preserve the
+complete kit and all779 captured app inputs; use60 for new implementation.
+Documentation delivery updates must preserve those bytes. No physical phone,
+controller LED, helper/DDI/JIT or gameplay acceptance is inferred. Keep the
+bundle ID, existing data container and current signing setup for the owner trial.
 
 ## Published v0.29.0 / build58 — 20 October 2026
 

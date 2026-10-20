@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 6191,
+  "file_count": 6192,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -25,18 +25,18 @@
     },
     "AGENTS.md": {
       "reason": "Local build59 repair and test status; preserve published58 history and separate publication/device acceptance",
-      "sha256": "93c0224671dda9b3a27641055e875b35099fb56ae470abcb5225a7a41499ce2b",
-      "bytes": 81086
+      "sha256": "b5ba74b5f31421fc64b726b125e53f0082e2d4dfe22f1f42f0a5e6ff74b9d628",
+      "bytes": 81631
     },
     "CHANGELOG.md": {
       "reason": "Local build59 repair and test status; preserve published58 history and separate publication/device acceptance",
-      "sha256": "c5f0563e40b3e5e8e3d171e9bd489c7c500f4d519c1624dbf1f5b585cec7f991",
-      "bytes": 5483
+      "sha256": "fed64b8bd7dffe26963af9f9ca583843cce21d7aaaae1ea6edc2fac945805d7a",
+      "bytes": 5485
     },
     "HANDOFF.md": {
       "reason": "Local build59 repair and test status; preserve published58 history and separate publication/device acceptance",
-      "sha256": "fdab5e2ebd602db5266f0924d9da223509ea8a7e86ad41af6eedf303c537fb7d",
-      "bytes": 144423
+      "sha256": "5d0678ab0ed9312364bdcf0064ea60895ad7d3884f79a815c8f638a1fb443850",
+      "bytes": 144968
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -56,8 +56,8 @@
     },
     "docs/BUILDING.md": {
       "reason": "Local build59 repair and test status; preserve published58 history and separate publication/device acceptance",
-      "sha256": "022f25fb13e639995a9faa9d47606a0f7138a3c5c6bc37a1cda355575423cae9",
-      "bytes": 49100
+      "sha256": "cce2e99149550a7925f6b6668cd569183f3b22b9c087855c3b8799ee2e6817df",
+      "bytes": 49424
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -95,8 +95,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Local build59 repair and test status; preserve published58 history and separate publication/device acceptance",
-      "sha256": "4a221f82832af2c92910fce767be4874ee7d31c4db7059f0ac11c967b78b7927",
-      "bytes": 26039
+      "sha256": "cbc0e80a0a437d8e895469260e6575003c0bae1479f943d4de305cd483e222d3",
+      "bytes": 27276
     },
     "docs/TOUCH_CONTROLS.md": {
       "reason": "Build56 control customization guide or evidence summary; private logs and binaries remain ignored",
@@ -600,8 +600,13 @@
     },
     "docs/ios-jit/INPUT_FIXES_BUILD_59.md": {
       "reason": "Local build59 repair behavior, validation receipts and explicit publication/device scope",
-      "sha256": "fd8a3d4727c0bc679f671e8e6d88fce8aaa6d8f6ba725a324e53d4da8ce52dd4",
-      "bytes": 9631
+      "sha256": "671fe303530cf1ba2875b2cb2d896ba9bb07bbb5d835767c87ea79fc5d4839aa",
+      "bytes": 10754
+    },
+    "docs/ios-jit/INPUT_FIXES_BUILD_59_DELIVERY.json": {
+      "reason": "Local build59 repair evidence and delivery scope",
+      "sha256": "ee073ff2eace7d3ef156c4c898b6f23785f9ef7cf6ec078fc13eeb4601990bfd",
+      "bytes": 4467
     },
     "docs/ios-jit/INPUT_FIXES_BUILD_59_EVIDENCE.json": {
       "reason": "Local build59 repair behavior, validation receipts and explicit publication/device scope",

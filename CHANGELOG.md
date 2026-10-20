@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.29.1 · build59 · local, unreleased
+## 0.29.1 · build59 · unsigned test build
 
 - Keep small touch controls within the screen bounds when resizing at the right or bottom edge, so the layout remains valid and Save stays available.
 - Replay the cached controller light colour after Cabrillo's native suspend/resume sequence, including when game updates pause through both focus events.

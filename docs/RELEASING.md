@@ -7,6 +7,25 @@ trial workflow now selects59. The owner explicitly authorizes committing and
 pushing the fixes as hmcneill46 and running the existing workflow for a test IPA.
 Use `publish=false`; no version tag or public Release is authorized.
 
+## Verified unsigned0.29.1/build59 trial
+
+[Run39456411829](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829)
+passes at `2e0ee6c237781d62acc8adf2a714925a385e1fa2`, branch
+`codex/actions-release`, attempt1. Fresh compilation with official SDK acquisition,
+package checks, all five attestations and separate Ubuntu verification pass;
+publication is skipped. Both author and committer resolve to `hmcneill46`.
+
+[Download the five-file test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829/artifacts/12281239832)
+with GitHub sign-in before3 November2026 at16:40:28 UTC. The retained local kit is
+`artifacts/cabrillo-build59-hosted`; IPA21,341,458 bytes, SHA256
+`15f98547ccd725122ee9ad9feca1f2709763cd2a6d14f91b610aa108a70a9ebd`.
+Independent verification covers779 source hashes,153 retained dependency digests,
+199 DLLs/434 metadata checks, NLua RSA/tamper checks,14 numeric comparisons,
+5 actual-adapter lifecycle IL checks and51 native package-input assertions.
+See [the delivery ledger](ios-jit/INPUT_FIXES_BUILD_59_DELIVERY.json).
+Preserve the kit and all779 captured inputs; use60 for new implementation.
+This is a phone trial and adds no physical-device or controller LED acceptance.
+
 ## What the workflow builds
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/

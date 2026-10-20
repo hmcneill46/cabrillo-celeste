@@ -1,7 +1,8 @@
 # Build59: touch resize bounds and controller resume
 
-The local repairs pass the source compilation, focused regression and iPhone/iPad
-UI checks described below. No new IPA or physical controller result is claimed.
+The repairs now have a verified fresh hosted unsigned test IPA, in addition to
+the local regression and iPhone/iPad UI checks. Physical controller acceptance
+remains pending. See the [delivery ledger](INPUT_FIXES_BUILD_59_DELIVERY.json).
 
 20 October 2026. Local **0.29.1 / build59** implementation:
 `experiments/ios-jit/launcher-input-fixes59`.
@@ -23,8 +24,21 @@ and pushing the fixes as `hmcneill46` and building a test IPA. The trial uses
 workflow now compiles and tests59; all 159 repository/Python controls pass after
 that selection change. Strict sealed-kit controls reject old build identities,
 changed IPA bytes and unexpected helper files. The original application and
-helper sources remain exactly those tested locally. Hosted build and independent
-artifact verification are pending. No version tag or public Release is authorized.
+helper sources remain exactly those tested locally.
+
+[Run39456411829](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829)
+passes fresh compilation, official SDK acquisition, audits, all five attestations
+and separate Ubuntu verification. The independently downloaded
+[test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829/artifacts/12281239832)
+verifies779 source hashes,153 unchanged dependency digests,199 DLLs/434 metadata
+checks, NLua RSA/tamper controls,14 numeric comparisons,5 actual-adapter lifecycle
+IL checks and51 native package-input assertions. The IPA is21,341,458 bytes, SHA256
+`15f98547ccd725122ee9ad9feca1f2709763cd2a6d14f91b610aa108a70a9ebd`.
+Sign-in is required; the artifact expires3 November2026 at16:40:28 UTC. Preserve
+`artifacts/cabrillo-build59-hosted` and all779 captured inputs; use60 for new app
+implementation. No version tag or public Release is authorized. The captured lane
+README and local ledger retain their initial local-phase workflow/no-IPA notes;
+this delivery section records the subsequent hosted trial.
 
 ## Repairs
 
@@ -146,10 +160,11 @@ never be supplied to that builder as a substitute for its fresh managed receipt.
 
 ## Limits
 
-There is no new59 IPA, hosted workflow, phone installation or physical controller
-LED result. This Mac lacks the licensed FMOD SDK and complete toolchain required
-for a fresh IPA. The local compile checks omit the SDL/Mono-dependent graphics
-implementation and final app linking; the helper is compiled but not registered
-or run on a phone. Real controller LED, helper/DDI/JIT, gameplay, saves/lifecycle
+There is no new59 phone installation or physical controller LED result. This
+Mac lacks the licensed FMOD SDK and complete toolchain for a local fresh IPA;
+the successful hosted build obtains its SDK directly from FMOD and performs the
+full fresh build and final linking. The earlier local compile-only checks omit
+the SDL/Mono-dependent graphics implementation and final app linking. The helper
+is packaged and audited, but not registered or run on a phone. Real controller LED, helper/DDI/JIT, gameplay, saves/lifecycle
 and sustained 120Hz acceptance retain their previous scope. Prior build58 real-game
 results are preserved history, not new59 execution evidence.

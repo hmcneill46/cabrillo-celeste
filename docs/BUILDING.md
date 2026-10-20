@@ -7,7 +7,11 @@ and controller resume repairs. Use `tools/build_release59.py` and
 `release/public59.json` for its fresh source build, with your own FMOD SDK.
 The trial workflow selects59 on the test branch. Use the existing manual
 workflow with `publish=false`; the latest published release remains build58.
-The hosted59 IPA is pending. No version tag or Release is authorized.
+[Hosted run39456411829](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829)
+and independent package/source/attestation verification pass. The
+[test artifact](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39456411829/artifacts/12281239832)
+contains the unsigned IPA and verification assets; sign-in is required. No
+version tag or public Release is authorized.
 The separate managed compilation audit uses explicit public58 references and
 cannot replace the fresh managed payload build.
 
