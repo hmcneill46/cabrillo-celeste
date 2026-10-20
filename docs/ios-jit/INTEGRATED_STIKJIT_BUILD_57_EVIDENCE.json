@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "build_number": "57",
+  "version": "0.26.0",
+  "updated_utc": "2026-10-20T10:06:10.048285+00:00",
+  "status": "PASS_LOCAL_IMPLEMENTATION_CHECKS_AWAITING_HOSTED_AND_DEVICE_TRIAL",
+  "preserved_build56_inputs": 274,
+  "checks": {
+    "native_controls": {
+      "status": "PASS_INTEGRATED_JIT57_NATIVE_CONTROLS",
+      "receipt": ".build/integrated57-native-final-c/receipt.json",
+      "sha256": "1cdb923e23c8d075ff11e0a496ea8cba7bfdcb50351cc9b740662ff7ecbcfc69",
+      "controller_checks": 131,
+      "coordinator_checks": 55,
+      "actual_network_or_jit": false
+    },
+    "production_ios_compile": {
+      "status": "PASS_PRODUCTION_IOS_LAUNCHER_COMPILE",
+      "receipt": ".build/integrated57-production-final-e/receipt.json",
+      "sha256": "3d104d8e5ff26d654ef1ac1f992db9861d84e160eab6049e2563ff3f808f9a90",
+      "swift_sources": 43,
+      "cyaml_c_sources": 6,
+      "objc_sources": 5,
+      "target": "arm64-apple-ios15.0",
+      "app_linked": false,
+      "ipa_built": false
+    },
+    "stikjit_helper_compile": {
+      "status": "PASS_PINNED_STIKJIT_HELPER_BUILD",
+      "receipt": ".build/stikjit57-helper-final-c/receipt.json",
+      "sha256": "3b01c3d46e290b2b538224b8156ddd102ccc3f54b8883dcc61cc403f181c203c",
+      "framework_swift_sources": 11,
+      "helper_swift_sources": 1,
+      "helper_objc_entry": 1,
+      "target": "arm64-apple-ios17.4",
+      "runtime_files": 6,
+      "upstream_ffi_prebuilt_disclosed": true
+    },
+    "simulator_ipc": {
+      "status": "PASS_PRODUCTION_COORDINATOR_SIMULATOR_HELPER_IPC",
+      "receipt": ".build/integrated57-ipc-public-a/receipt.json",
+      "sha256": "98fdadebf0a962758046e88c3822449251accd9c780cebffc3c62c8e6de125af",
+      "process_separation": true,
+      "progress_stages": 3,
+      "temporary_pairing_removed": true,
+      "stikjit_stub": true,
+      "real_ddi_or_jit": false
+    },
+    "simulator_ui": {
+      "status": "PASS_BUILD57_PRODUCTION_SWIFTUI_PRESENTATION",
+      "receipt": ".build/integrated57-ui-c/receipt.json",
+      "sha256": "2455d1b1f33ad812e495699bc6d53dcf11b5ef18dfa37266cc8bede1eec07348",
+      "apple_ui_tests": 14,
+      "devices": [
+        "iPhone17Pro",
+        "iPadPro11M5"
+      ],
+      "runtime": "iOS26.5",
+      "screenshots": 66
+    },
+    "retained_shortcuts": {
+      "status": "PASS_PUBLIC_NATIVE_SHORTCUT_CHECKS",
+      "receipt": ".build/integrated57-retained-shortcuts-b/receipt.json",
+      "sha256": "dbc01fe45aed7cd7eae24abc3dacf1c4f5201da5a9bc46b7379b505780bb73f1",
+      "native_checks": 185,
+      "generated_branches": 36,
+      "broken_url_controls": 15
+    },
+    "retained_profiles": {
+      "status": "PASS_PUBLIC_NATIVE_PROFILE_CHECKS",
+      "receipt": ".build/integrated57-retained-profiles/receipt.json",
+      "sha256": "8091a997ebbc874a0290b59edf3d6c0d6d3e9f664b3cf5261a1a312686cdfea2",
+      "checks": 119
+    },
+    "python_controls": {
+      "status": "PASS",
+      "tests": 115,
+      "log": ".build/integrated57-python-controls-final-c.log",
+      "sha256": "b2663773a2f1f3641b0bbc1e5ae2a8219b6e953f66f1f0ead45692c5d6c0cca8"
+    }
+  },
+  "physical_device_tested": false,
+  "real_jit_executed": false,
+  "hosted_build_run": false,
+  "github_writes_performed": false,
+  "public_release_created": false,
+  "owner_approval": {
+    "cabrillo_commit_push_pr_unsigned_trial": true,
+    "iloader_changes_or_submission": false,
+    "version_tag_or_public_release": false
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/StikDebug/StikJIT",
+  "commit": "32287268fa5824f9edce4cb359f5833ce0cf7b00",
+  "url": "https://codeload.github.com/StikDebug/StikJIT/tar.gz/32287268fa5824f9edce4cb359f5833ce0cf7b00",
+  "archive_bytes": 8733311,
+  "archive_sha256": "ed38ff2e296b1de00b7b664f8ff10b2e10c843375b9422e5cef7fb1d6b42e3d0",
+  "license": "MPL-2.0; bundled idevice MIT and script notices retained",
+  "minimum_helper_ios": "17.4",
+  "framework_version": "1.9.0",
+  "framework_build": "10",
+  "dependency_kind": "mixed",
+  "source_files": {
+    ".gitattributes": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b",
+    ".github/workflows/build.yml": "92b6b404b62bf64d2c569ad4cbf0bf09a2580f1de3523414be0d6c90f839ff73",
+    ".gitignore": "64624b1910b2ac0bfec2c4a83160d97e1a1e4b9009beb3febe60ed9e8a8c7640",
+    "INTEGRATION.md": "e3bef9cd4c9d762631f2bacb35949d30f075bab16edb838ac8bb3cc054704839",
+    "LICENSE": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "README.md": "38e607d8fd08141944b10c1b4da7bdd70ad558b0f0313072cebeffe25d267917",
+    "Resources/legacy.js": "787df4678ca17fd100a1d002203bfac8771fae062175aa510da8d6af9f8167ec",
+    "Resources/universal.js": "753e7bba37913cd6c4e68b399735a8c9a7b8d475ba04d8b36ce1afd6678c9fbc",
+    "Sources/BundledScript.swift": "23804f426c73bacce8faeb9be2fd8355331ed4cfe4b1794fe22a79067f4cd341",
+    "Sources/DDISession.swift": "35c6eabcbb7d563a6878a3b703c1dc3792067650c91c411149b52a18fe5fd5f9",
+    "Sources/DeveloperDiskImageService.swift": "8bd5624ee1055abef3840620bf53d5e91f8a3c5d0aab8c8b9cba583c95b92bda",
+    "Sources/EndpointProbe.swift": "2e64170c2b8ac9da8a1d3adc3146c13ffadc29777edd45ccd62d9a49886bf87f",
+    "Sources/IdeviceFFI.swift": "5f71b965b6f4bc1dd1d9f010ed3d2d51a9f353391ed7157f6bddfb9ddd40c6d8",
+    "Sources/JITSession.swift": "f6c2051e75ab9b36aa21f0f3d78e48e7505120114de3fbed2a9f6fc699ce4301",
+    "Sources/ProcessInfo+TXM.swift": "8f7d7b752a3d5608e6e9198c734b3f6cdc36aa69b64737436c160341e00d8fa2",
+    "Sources/ScriptRunner.swift": "51c2df9dcc0ea7919a6215e4007fc93709997e5f6c2e93966c572493272b0d19",
+    "Sources/StikJIT.swift": "2726284b3dd8d337572356c6eec31b2ef842fcbe90700e0ed06298afe5c77c05",
+    "Sources/StikJITError.swift": "352dbdb542fdbbadfb021c31609c7fd18f6ff5d696369a71748063c05f773950",
+    "Sources/SynchronousDDIDownloader.swift": "21dc096796a052ba7679edb5e61c81f15e24e8d81f80973cfa2f43cabfb84d44",
+    "idevice/idevice.h": "696286794e8cf1c18a91d4dab5046cef4d9bae352f5e7a1ad33fbc0ba30d7ab4",
+    "idevice/libidevice_ffi.a": "4db23fe1d342927b9480bb9a8577f219994365621dc28aa0018e23ea1990ecc8",
+    "idevice/module.modulemap": "d98e25796e1135d892d81e6922a61e78e82b3d6c33322112e9eca1e089c7a300",
+    "iokit/StikJITIOKit.h": "89cfe4100638eac82e3f3a2cd4d5036ff9ce18711e9cdf70e613c8c2e4b0e48a",
+    "iokit/module.modulemap": "be5beb977faf366c6bd872b5231f1e275f753536acfbc84d68e7056576130348",
+    "project.yml": "c0f0aee7ee6608445c258a74762c593fce950f12790a4d0b63f46b4646ff70db"
+  },
+  "bundled_idevice_ffi": {
+    "path": "idevice/libidevice_ffi.a",
+    "bytes": 57017464,
+    "sha256": "4db23fe1d342927b9480bb9a8577f219994365621dc28aa0018e23ea1990ecc8",
+    "kind": "upstream_prebuilt_static_library",
+    "source_revision_disclosed_by_upstream": false
+  },
+  "idevice_license": {
+    "source_commit": "26a28f6a46b5d85a28043c2e62febfa394c8b0a6",
+    "url": "https://raw.githubusercontent.com/jkcoxson/idevice/26a28f6a46b5d85a28043c2e62febfa394c8b0a6/LICENSE.txt",
+    "sha256": "131488ce7e302b9f62e3236793e57c86a208d3dfaf03e6d7d03ddc0fc82392ed"
+  }
+}

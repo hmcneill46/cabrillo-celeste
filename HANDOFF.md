@@ -11,6 +11,38 @@ preparation, for a fresh development chat opened in
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
 
+## Active local Built-in StikJIT work —20 October2026, build57
+
+The owner requests integrated StikJIT as a recommended default, automatic JIT
+before Run Celeste with progress, all existing providers preserved, the Run
+button icon repaired, automatic pairing-file placement and manual import.
+Implementation is in `launcher-integrated-jit`, version0.26.0/build57; source
+recipes are `tools/build_release57.py` / `compile_release57.py`.
+Read [the57 report](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md).
+
+The iOS17.4 helper owns StikJIT; the iOS15 host keeps the tested mailbox/native
+checks and detach gates. Existing explicit provider choices persist; supported
+new standalone installs default to built-in. LiveContainer retains its external
+methods. Pairing bytes stay protected, are copied atomically and never bundled
+or exported in diagnostics. Root Documents tool placement is detected; current
+iLoader's hardcoded app list cannot be changed by Cabrillo metadata. The owner
+explicitly rules out iLoader changes/submissions, and the proposed patch is
+removed. Manual import works independently. The Run label has a centered,
+matching foreground for icon and text.
+
+Final local115 Python tests,186 new native launch/pairing controls, actual
+43-Swift/6-C/5-Objective-C arm64/iOS15 host compilation, actual arm64/iOS17.4
+framework/helper build and14 phone/iPad simulator UI tests pass. Actual simulator
+extension IPC also passes process separation,3 progress stages, a validated
+prepare reply and temporary credential cleanup using a no-JIT StikJIT stub.
+Retained119 profiles/185 native shortcut checks/36 branches/15 bad-URL controls
+pass. See the57 report/ledger for exact scopes and receipts. No57 commit/push,
+hosted IPA, upstream submission, release or physical helper/JIT acceptance is
+claimed. After these local checks, the owner explicitly approves “Push/build
+Cabrillo only”: commit/push as hmcneill46, open a Cabrillo PR and run the unsigned
+trial workflow. No57 tag/Release or iLoader write is authorized. Preserve
+all274 accepted56 inputs and the immutable public v0.25.1 kit below.
+
 ## Published v0.25.1 / build56 —20 October2026
 
 The owner explicitly requests merging PR6 and publishing the latest release after

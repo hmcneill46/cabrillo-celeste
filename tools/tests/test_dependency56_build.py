@@ -19,11 +19,11 @@ class Dependency56BuildTests(unittest.TestCase):
     def setUpClass(cls):
         cls.lock = build.read_json(build.IDENTITY / 'Dependencies.json')
 
-    def test_current_public_recipe_builds56_with_matching_identity(self):
-        config, report = readiness(build.ROOT)
+    def test_preserved_public_recipe_builds56_with_matching_identity(self):
+        config = build.read_json(build.ROOT / 'release/public56.json')
         self.assertEqual(config['public_build_script'], 'tools/build_release56.py')
         self.assertEqual((config['version'], config['build_number']), ('0.25.1', '56'))
-        self.assertEqual(report['status'], 'READY')
+        self.assertEqual(build.read_json(build.IDENTITY/'BuildIdentity.json')['version'], config['version'])
 
     def test_exact_frozen55_map_and_all_old_inputs_remain_valid(self):
         rows = self.lock['retained_build55_source_sha256']

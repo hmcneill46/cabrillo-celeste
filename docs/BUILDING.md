@@ -1,5 +1,43 @@
 # Building Cabrillo
 
+## Local development trial: version0.26.0 / build57
+
+The integrated StikJIT implementation uses the same Xcode26.6 /17F113, SDK26.5,
+Mono6.14.1 and developer-owned FMOD SDK as56 below:
+
+```sh
+python3 tools/build_release57.py --work .build/my-integrated-source-build \
+  --output .build/my-integrated-source-build/output \
+  --fmod-sdk '/path/to/FMOD Programmers API'
+```
+
+It additionally downloads the exact pinned StikJIT1.9.0 source archive and builds
+its Swift framework and a separate iOS17.4 helper extension. Upstream includes a
+prebuilt idevice FFI static library; its binary hash and the mixed archive are
+explicitly disclosed. No Rust toolchain, pairing file, device or signing identity
+is needed to build. The host retains iOS15 support and does not load StikJIT.
+Both helper and framework must remain in the final signed installation.
+
+All274 accepted56 app inputs remain frozen. Existing Everest1.6642.0, original151
+dependency hashes, game preparation, Feather imports and saves stay preserved.
+See [the57 report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) for signing/pairing
+requirements, the iLoader compatibility limitation and current device gates.
+Local implementation does not imply a published57 IPA or phone acceptance.
+
+Additional source-only checks on a Mac with the pinned Xcode:
+
+```sh
+python3 tools/check_integrated57_native.py --work .build/my-integrated-controls
+python3 tools/check_integrated57_compile.py --work .build/my-integrated-host
+python3 tools/build_stikjit57.py --work .build/my-integrated-helper
+```
+
+The first uses synthetic pairing data and a stubbed service boundary; the second
+compiles the actual selected host for arm64/iOS15; the third builds the actual
+framework/helper for arm64/iOS17.4. These checks do not build a full IPA, mount a
+device image, enable real JIT or run a game. Keep work directories private and
+publish only the existing allowlisted release kit after scoped owner approval.
+
 ## Current development source build: version0.25.1 / build56
 
 Use a Mac with **Xcode26.6 /17F113**, iPhoneOS SDK26.5, Python3.12 or newer,

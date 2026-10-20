@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.26.0",
+  "build_number": "57",
+  "build_id": "launcher-integrated-jit-20261020-57",
+  "scope": "Integrated StikJIT helper and automatic verified JIT-to-game launch; retained external providers and visible Run control",
+  "device_jit_tested": false
+}

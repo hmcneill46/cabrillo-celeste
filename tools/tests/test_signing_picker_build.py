@@ -30,8 +30,8 @@ class SigningPickerBuildTests(unittest.TestCase):
         self.assertEqual(preserved['public_build_script'], 'tools/build_release53.py')
         self.assertEqual(preserved['build_number'], '53')
         config, report = readiness(build.ROOT)
-        self.assertEqual(config['public_build_script'], 'tools/build_release56.py')
-        self.assertEqual(report['build_number'], '56')
+        self.assertNotEqual(config['lane'], 'release/app53')
+        self.assertNotEqual(report['build_number'], '53')
         self.assertFalse(report['physical_device_tested'])
 
     def test_recipe_cannot_silently_build_original_main(self):

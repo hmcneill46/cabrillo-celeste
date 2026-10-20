@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+    <key>CFBundleDevelopmentRegion</key><string>en</string>
+    <key>CFBundleDisplayName</key><string>Cabrillo JIT Helper</string>
+    <key>CFBundleExecutable</key><string>CabrilloJITHelper</string>
+    <key>CFBundleIdentifier</key><string>io.github.hmcneill46.celeste.everest.jit.everest.JITHelper</string>
+    <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+    <key>CFBundleName</key><string>CabrilloJITHelper</string>
+    <key>CFBundlePackageType</key><string>XPC!</string>
+    <key>CFBundleShortVersionString</key><string>0.26.0</string>
+    <key>CFBundleVersion</key><string>57</string>
+    <key>MinimumOSVersion</key><string>17.4</string>
+    <key>NSExtension</key><dict>
+        <key>NSExtensionPointIdentifier</key><string>com.apple.ar.viewer</string>
+        <key>NSExtensionPrincipalClass</key><string>CabrilloJITHelperHandler</string>
+        <key>NSExtensionContextClass</key><string>NSExtensionContext</string>
+        <key>NSExtensionContextHostClass</key><string>NSExtensionContext</string>
+        <key>NSExtensionAttributes</key><dict><key>NSExtensionActivationRule</key><string>FALSEPREDICATE</string></dict>
+    </dict>
+    <key>XPCService</key><dict>
+        <key>ServiceType</key><string>Application</string>
+        <key>_MultipleInstances</key><true/>
+        <key>_ProcessType</key><string>App</string>
+    </dict>
+</dict></plist>

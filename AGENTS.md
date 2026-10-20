@@ -1,5 +1,46 @@
 # Cabrillo development
 
+## Active local integrated StikJIT work —20 October, build57
+
+The owner requests Built-in StikJIT as the recommended default, automatic JIT
+before Run Celeste, retained existing providers, a visible Run icon, tool-placed
+pairing files and manual pairing import. New implementation is isolated in
+`experiments/ios-jit/launcher-integrated-jit`, with `release/app57`,
+`tools/build_release57.py` and `compile_release57.py`. Read
+`docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md` for requirements and validation.
+All274 captured56 inputs and the published v0.25.1 kit remain frozen.
+
+StikJIT1.9.0 is pinned to32287268fa5824f9edce4cb359f5833ce0cf7b00.
+Its Swift framework is compiled only for a separate iOS17.4 helper; the host
+retains iOS15 and never strongly links it. The upstream prebuilt idevice FFI
+is explicitly hash-pinned/disclosed. Preserve the exact existing mailbox script,
+native execution and known-detach gates. A successful helper response alone is
+insufficient. LiveContainer cannot launch this helper; keep existing providers.
+No privileged App Group is required. Actual signing/extension registration,
+DDI/JIT and gameplay remain physical gates until separately observed.
+
+Final local115 Python controls,186 native launch/pairing controls, actual
+arm64/iOS15 host compilation and arm64/iOS17.4 helper/framework build pass.
+Actual simulator extension IPC passes with a no-JIT stub;14 iPhone/iPad UI tests
+pass with66 PNG captures. Retained119 profiles/185 native shortcut checks,
+36 branches and15 bad-URL controls pass. The57 report/ledger distinguish every
+check from actual phone signing, DDI, JIT and gameplay.
+
+Current iLoader has a hardcoded app list; app metadata cannot add Cabrillo to
+an existing iLoader release. The owner explicitly says not to change or submit
+anything to iLoader. The proposed local patch is removed from public source.
+Manual import and automatic adoption of `Documents/pairingFile.plist` provide
+independent setup paths. Never publish
+pairing contents, private files or raw helper logs. Keep credential copies out
+of backups and the package.
+
+On20 October, after local implementation/checks, the owner explicitly approves
+“Push/build Cabrillo only”: commit/push as hmcneill46, open a Cabrillo PR and run
+the existing workflow for an unsigned test IPA. They then explicitly reiterate
+that iLoader must not be changed or receive any submission. This does not
+authorize a57 version tag or public Release. Record hosted delivery separately;
+no physical helper/JIT acceptance is inferred.
+
 Start a fresh development chat with [HANDOFF.md](HANDOFF.md). It records the
 accepted build32 phone fallback, accepted build35 iPad base-game run, accepted build36 phone base-game/Motion Smoothing runtime gate, delivered
 build37 Everest upgrade with unexpected phone exits and a pending combined saves gate, evidence review and independent build constraints. Recheck its dated state before acting.

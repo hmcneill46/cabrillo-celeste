@@ -13,7 +13,7 @@ import zipfile
 from release import ROOT, public_path, sha, validate_ref, verify_ipa
 from fetch_fmod_sdk import ARCHIVE_SHA256
 
-CONFIG = 'release/public56.json'
+CONFIG = 'release/public57.json'
 BUILD_BRANCHES = {'refs/heads/main', 'refs/heads/codex/actions-release'}
 
 
@@ -24,7 +24,7 @@ def readiness(root):
     identity = json.loads(public_path(root, config['lane'] + '/BuildIdentity.json').read_text())
     if any(config[k] != identity[k] for k in ['version', 'build_number']):
         raise ValueError('Release manifest differs from its app identity')
-    if config.get('public_build_script') != 'tools/build_release56.py':
+    if config.get('public_build_script') != 'tools/build_release57.py':
         raise ValueError('Only the fresh public source recipe is eligible')
     public_path(root, config['public_build_script'])
     public_path(root, config['shortcuts'])
@@ -98,6 +98,53 @@ def verify_provenance(value, revision, hosted=False):
             or shortcuts.get('signatures_verified') is not True
             or shortcuts.get('actions_match_generated_source') is not True):
         raise ValueError('Signed Shortcut content verification is missing')
+    if 'integrated_jit' in value:
+        verify_integrated_provenance(value)
+
+
+def verify_integrated_provenance(value):
+    from build_stikjit57 import lock_value
+    lock = lock_value()
+    feature = value.get('integrated_jit', {})
+    if (feature.get('upstream_commit') != lock['commit'] or feature.get('archive_sha256') != lock['archive_sha256']
+            or feature.get('bundled_idevice_ffi') != lock['bundled_idevice_ffi']
+            or feature.get('framework_linked_into_host') is not False or feature.get('helper_minimum_ios') != '17.4'
+            or feature.get('physical_device_tested') is not False or not feature.get('helper_files')):
+        raise ValueError('Missing integrated JIT helper/source/binary disclosure')
+    expected_files = {'StikJIT.framework/' + name for name in ['StikJIT', 'Info.plist', 'universal.js', 'legacy.js']}
+    expected_files |= {'CabrilloJITHelper.appex/' + name for name in ['CabrilloJITHelper', 'Info.plist']}
+    if set(feature['helper_files']) != expected_files or any(not re.fullmatch('[0-9a-f]{64}', v) for v in feature['helper_files'].values()):
+        raise ValueError('Helper disclosure must contain exactly its runtime files, without build products')
+    expected = [('StikJIT/' + lock['commit'], 'mixed', lock['archive_sha256']),
+                ('StikJIT/idevice-ffi', 'binary', lock['bundled_idevice_ffi']['sha256'])]
+    for name, kind, digest in expected:
+        row = next((d for d in value.get('dependencies', []) if d.get('name') == name), {})
+        if row.get('kind') != kind or row.get('sha256') != digest:
+            raise ValueError('StikJIT and its upstream prebuilt idevice library must be disclosed separately')
+
+
+def verify_integrated_kit(directory, version):
+    """Inspect sealed helper bytes again on the independent verification host."""
+    from verify_integrated_jit57 import verify_parts
+    import plistlib
+    provenance = json.loads((directory / 'BUILD_PROVENANCE.json').read_text())
+    verify_integrated_provenance(provenance)
+    ipa = directory / ('Cabrillo-' + version + '-unsigned.ipa')
+    verify_ipa(ipa, version, '57')
+    prefix = 'Payload/CelesteJITEverest.app/'
+    with zipfile.ZipFile(ipa) as archive:
+        read = lambda name: archive.read(prefix + name)
+        verify_parts(plistlib.loads(read('Info.plist')), json.loads(read('BuildInfo.json')), read('CelesteJITEverest'),
+                     plistlib.loads(read('PlugIns/CabrilloJITHelper.appex/Info.plist')), read('PlugIns/CabrilloJITHelper.appex/CabrilloJITHelper'),
+                     plistlib.loads(read('Frameworks/StikJIT.framework/Info.plist')), read('Frameworks/StikJIT.framework/StikJIT'),
+                     json.loads(read('licenses/StikJIT/UPSTREAM.json')))
+        for name, digest in provenance['integrated_jit']['helper_files'].items():
+            if (not isinstance(name, str) or '..' in Path(name).parts or name.startswith('/')
+                    or not name.startswith(('StikJIT.framework/', 'CabrilloJITHelper.appex/'))):
+                raise ValueError('Unsafe helper provenance path')
+            packaged = ('Frameworks/' if name.startswith('StikJIT.framework/') else 'PlugIns/') + name
+            if __import__('hashlib').sha256(read(packaged)).hexdigest() != digest:
+                raise ValueError('Sealed StikJIT helper bytes differ')
 
 
 def kit_names(version):
@@ -142,6 +189,8 @@ def build(root, ref, publish, sdk, download):
     verify_ipa(out / 'Cabrillo.ipa', config['version'], config['build_number'])
     provenance = json.loads((out / 'BUILD_PROVENANCE.json').read_text())
     verify_provenance(provenance, result['source_commit'], os.environ.get('GITHUB_ACTIONS') == 'true')
+    if config['build_number'] == '57':
+        verify_integrated_provenance(provenance)
     if subprocess.check_output(['git', 'status', '--porcelain'], cwd=root).strip():
         raise ValueError('Build changed public source')
     kit.mkdir(parents=True)
@@ -177,6 +226,8 @@ def main():
         elif args.command == 'verify-kit':
             config, _ = readiness(ROOT)
             verify_kit(args.kit.absolute(), config['version'])
+            if config['build_number'] == '57':
+                verify_integrated_kit(args.kit.absolute(), config['version'])
             result = dict(status='PASS_RELEASE_KIT_ALLOWLIST')
         else:
             if not args.fmod_sdk:
