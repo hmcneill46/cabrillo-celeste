@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased · 0.29.0 / build58 integration
+
+- Combine the separate development histories, preserving the published v0.26.0 runtime, built-in StikJIT, import and dependency-download fixes.
+- Add original itch.io, Steam and Epic game-file compatibility and store acquisition instructions; retain imported originals across cache rebuilds.
+- Add a full-display SwiftUI touch editor with actual-size landscape editing, split regions, duplicate buttons, Crouch Dash, Quick Restart and optional swipe-to-dash.
+- Add live feather steering, original Celeste grab semantics with separate input preferences, optional persistent toggling and controller symbol/light support.
+- Preserve both sets of independently numbered53–57 recipes in Git history and use a new build58 identity for the combined test IPA.
+
+This version is awaiting owner testing and a separate release request. See
+[the integration report](docs/ios-jit/UNIFIED_BUILD_58.md).
+
 ## 0.26.0 · 20 October 2026
 
 - Add recommended Built-in StikJIT for new standalone iOS17.4+ setups, keeping saved JIT provider choices and every existing method.

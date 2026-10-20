@@ -13,6 +13,14 @@ COMPONENT_FILES = {'Frameworks/StikJIT.framework/' + name for name in ['StikJIT'
 COMPONENT_FILES |= {'PlugIns/CabrilloJITHelper.appex/' + name for name in ['CabrilloJITHelper', 'Info.plist']}
 
 
+def verify_game_input_contract(info, recipe):
+    """The native launcher's retained-input lookup must match the bootstrap."""
+    if (info.get('game_code_legacy_source_id') != recipe['legacy_source_id']
+            or info.get('game_code_sources') != [
+                dict(source_id=row['source_id'], kind=row['kind']) for row in recipe['sources']]):
+        raise ValueError('Native retained-game source metadata differs from the preparation recipe')
+
+
 def verify_component_rows(rows, package_files):
     if not isinstance(rows, dict):
         raise ValueError('Missing helper/framework file receipt')
@@ -78,7 +86,9 @@ def verify(directory):
         settings = plistlib.loads(read('Info.plist'))
         info = json.loads(read('BuildInfo.json'))
         from check_unified58_managed import catalogue_projection, ORIGINAL, LEGACY_ORIGINAL
-        _, catalogue = catalogue_projection(json.loads(read('OwnedGameRecipe.json')),
+        recipe = json.loads(read('OwnedGameRecipe.json'))
+        verify_game_input_contract(info, recipe)
+        _, catalogue = catalogue_projection(recipe,
             json.loads(ORIGINAL.read_text()), json.loads(LEGACY_ORIGINAL.read_text()))
         compatibility = info.get('game_input_compatibility', {})
         if (compatibility.get('schema') != 2 or compatibility.get('originals_preserved') is not True

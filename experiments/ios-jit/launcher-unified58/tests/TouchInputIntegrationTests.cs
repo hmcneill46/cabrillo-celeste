@@ -19,7 +19,7 @@ public static class TouchInputIntegrationTests
     delegate void UpdateHook(UpdateOrig orig,Player player);
     static Hook observer;
     static bool sawCrouchDash;
-    static int stage,ticks,revision=10,checks;static ulong lastFrame=ulong.MaxValue;
+    static int stage,ticks,dashStartupFrames,revision=10,checks;static ulong lastFrame=ulong.MaxValue;
     public static bool Complete=>stage==99;
     static Level level;static Player player;static Vector2 position;
     static TouchConfiguration config;
@@ -44,7 +44,14 @@ public static class TouchInputIntegrationTests
             }));
             Save();stage=1;ticks=0;return;
         }
-        if(++ticks<5)return;ticks=0;
+        if(stage==3) {
+            // Engine.FrameCounter advances during the original global dash freeze,
+            // even when Player.Update has not run. Observe actual initialization
+            // instead of assuming five counted frames completed the dash coroutine.
+            if(++dashStartupFrames>120)throw new Exception("Touch integration: original dash did not initialize within 120 game frames");
+            if(player.DashDir==Vector2.Zero)return;
+        } else if(++ticks<5)return;
+        ticks=0;
         if(stage==1) {
             player.Dashes=1;
             Finger(101,56,436,0);Finger(102,740,320,0);stage=2;

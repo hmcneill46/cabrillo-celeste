@@ -10,8 +10,8 @@
     },
     ".github/workflows/ci.yml": {
       "reason": "Public source, retained save/shortcut/picker/dependency controls and new57 native/production/helper compilation without private inputs",
-      "sha256": "a3b681a6ecfb70bab5f576e92d4fff5431c41c7b5c9f2ff0e62d5cd06eb2dc51",
-      "bytes": 4558
+      "sha256": "d869e1c30b23721dd5aff5fffb57be6a0f172116e30ae018c5ab29dcc02e311a",
+      "bytes": 3564
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
@@ -30,8 +30,8 @@
     },
     "CHANGELOG.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "5099513cb59f7276a3beb2acdd3ce5ae5614b0ec3e4c4e715fc4797d13275f6d",
-      "bytes": 3454
+      "sha256": "5f46f691fc9997e0a40bd1bcd7dc4dde85cfc1f644b0b38b80f019c134cb5288",
+      "bytes": 4392
     },
     "HANDOFF.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
@@ -27013,9 +27013,14 @@
       "sha256": "fdffff2b0dd04130362eab6b199801f13c9dbdaf2e6cc0b4d7abdbf347e920c8",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
+    "experiments/ios-jit/launcher-unified58/tests/RetainedPackageInputTests.m": {
+      "bytes": 5010,
+      "sha256": "91d9cf6e759764d23c83e9b853740233a7ad07d0816f4f3a4dcedd3a079b61d0",
+      "reason": "Combined Cabrillo build58 implementation, regression or public-source build tooling."
+    },
     "experiments/ios-jit/launcher-unified58/tests/RuntimeUpgradeTests.cs": {
-      "bytes": 5115,
-      "sha256": "7b2ea8f55e3716f1b8fdfdde5759c620c47ac1d2257a5bc9dbdb1e024722d4ef",
+      "bytes": 5186,
+      "sha256": "1fbd90148fbb4de3e0b8ffe0251bc69a0a51abcd372234b818da3f327c3dfcd0",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "experiments/ios-jit/launcher-unified58/tests/SaveTransferIntegrationTests.cs": {
@@ -27084,8 +27089,8 @@
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "experiments/ios-jit/launcher-unified58/tests/TouchInputIntegrationTests.cs": {
-      "bytes": 6548,
-      "sha256": "63b2701671ac6f996d6e2b16a84d00a37b170464708ad0ac95b6eaae6de859c8",
+      "bytes": 7046,
+      "sha256": "df79948be11ed8357e58d622453f5c5db05fdb1454dd7ef3307806163a2e2f12",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "experiments/ios-jit/launcher-unified58/tests/TouchPolicyTests.cs": {
@@ -32034,8 +32039,8 @@
       "bytes": 12848
     },
     "tools/build_release58.py": {
-      "bytes": 13103,
-      "sha256": "d480279687a1aea2f7636567764fbad36658b8d2a61736273de4107c1d3bfddb",
+      "bytes": 13567,
+      "sha256": "fa2aac5de33d8d9c0faae5d45019848cb1b68142574d6d18a9c807752dbcd32f",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "tools/build_save_transfers.py": {
@@ -32572,6 +32577,11 @@
       "sha256": "b69cc89fb28e85a8a350066131b9afe4d7260e18dab6e45ce3b4daa3258f48ef",
       "bytes": 2684
     },
+    "tools/check_unified58_compile.py": {
+      "bytes": 10896,
+      "sha256": "ec0c4e960dcf7389d69d0c5203f0e122d1a1988aa1646595121b1a3fce8bd832",
+      "reason": "Combined Cabrillo build58 implementation, regression or public-source build tooling."
+    },
     "tools/check_unified58_host.py": {
       "bytes": 11503,
       "sha256": "11d29f32b8ca31b767eeddba843b0a4312671be6272e4acf1ee230c2bc97ecfe",
@@ -32601,6 +32611,11 @@
       "bytes": 2713,
       "sha256": "d56c15409a36f9d4c64e2d7563c8bdd3a5ad700cba3e31bcd029ad2e8895b1c3",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
+    },
+    "tools/check_unified58_retained_inputs.py": {
+      "bytes": 3954,
+      "sha256": "f9c68dc5fe0af1e1d6093574cbd12574097fb08223b97086ebd6801dc8170cfa",
+      "reason": "Combined Cabrillo build58 implementation, regression or public-source build tooling."
     },
     "tools/check_unified58_sj.py": {
       "bytes": 3818,
@@ -32718,8 +32733,8 @@
       "bytes": 32837
     },
     "tools/compile_release58.py": {
-      "bytes": 28343,
-      "sha256": "c469d1f744ae13ed40f5b5f770c76b7112fa831f28abd61272de76c46ca484c3",
+      "bytes": 28514,
+      "sha256": "e7226c3d322e12af951c44785d5d36f45d26be901ec594e629996a0c18289b6e",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "tools/compile_saved_game.py": {
@@ -32898,8 +32913,8 @@
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "tools/tests/test_unified58_package.py": {
-      "bytes": 1310,
-      "sha256": "7bf3d4e25c2dab8e18894642622ca23343a2ccc1b376d6e6387a1dadd96f0c7c",
+      "bytes": 2337,
+      "sha256": "c1cbb28c6e5c87ff65045c6aa46eed49cc785438a358993ec4312636a74d2fb5",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "tools/verify_backups.py": {
@@ -32970,8 +32985,8 @@
       "bytes": 11702
     },
     "tools/verify_unified58.py": {
-      "bytes": 8380,
-      "sha256": "e3d571e1f4704c1630adbdbc4e699b8dd30f986fdc10a2de19ba2dacf01d8b01",
+      "bytes": 8908,
+      "sha256": "8cd2f2ff687629e8591bb6f89fdb583c474c6780abbe72e7256e1054d2242122",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "tools/verify_visibility.py": {

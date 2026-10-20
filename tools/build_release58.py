@@ -92,6 +92,9 @@ def build(work, output, sdk, download=None):
         '--fmod', fmod / 'receipt.json', '--stikjit', work / 'stikjit/receipt.json', '--shortcuts', ROOT / 'release/shortcuts49/manifest.json',
         '--work', work / 'app', '--output', artifacts)
     receipt = json_read(artifacts / 'build-receipt.json')
+    run('check_unified58_retained_inputs.py', '--ipa', artifacts / receipt['ipa'],
+        '--work', work / 'retained-input-audit')
+    retained_input_audit = json_read(work / 'retained-input-audit/receipt.json')
     output.mkdir(parents=True)
     shutil.copyfile(artifacts / receipt['ipa'], output / 'Cabrillo.ipa')
     shutil.copyfile(artifacts / 'verification.json', output / 'PACKAGE_AUDIT.json')
@@ -137,6 +140,10 @@ def build(work, output, sdk, download=None):
             helper_minimum_ios='17.4', helper_files=stikjit['files'], physical_device_tested=False),
         everest_release=json_read(ROOT / 'release/everest55-dependencies.json')['everest_release'],
         managed_runtime_audit=json_read(work / 'everest-audit/receipt.json'),
+        native_retained_inputs=dict(status=retained_input_audit['status'],
+            checks=len(retained_input_audit['report']['checks']),
+            ipa_sha256=retained_input_audit['ipa_sha256'],
+            actual_production_function_used=True),
         toolchain=dict(xcode='26.6', xcode_build='17F113', iphoneos_sdk='26.5', minimum_ios='15.0',
             mono_build_tool=mono_version, strong_name_tool_sha256=sha(Path(shutil.which('sn'))),
             cmake=subprocess.check_output(['cmake', '--version'], text=True).splitlines()[0],

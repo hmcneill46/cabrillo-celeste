@@ -23,7 +23,9 @@ public static class RuntimeUpgradeTests
         Dust.Burst(Vector2.Zero, 0f, 1, null);
         Dust.BurstFG(Vector2.Zero, 0f, 1, 0f, null);
         Check(true, "both new Dust guards return safely outside a Level");
-        var mirrors=ModUpdaterHelper.GetAllMirrorUrls("https://gamebanana.com/mmdl/870370");
+        var mirrors=ModUpdaterHelper.GetAllMirrorUrls(new ModUpdateInfo {
+            URL = "https://gamebanana.com/mmdl/870370", MirrorName = "870370"
+        });
         var first=mirrors.Cast<string>().ToArray();
         Check(first.Length>0 && first.All(s=>s.Contains("870370")) && first.SequenceEqual(mirrors.Cast<string>()), "upstream mirror enumerable supports repeated enumeration");
         var scene = new Scene();

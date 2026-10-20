@@ -142,6 +142,7 @@ def main():
         ROOT/'LICENSE', ROOT/'vendor/ZIPFoundation/LICENSE', ROOT/'vendor/Yams/LICENSE',
         ROOT/'docs/licenses/MORRO-LICENSE.txt', ROOT/'modern-ios/Assets/TouchControls/NOTICE.md']
     sources += [ROOT/'tools/build_stikjit58.py', ROOT/'tools/check_unified58_managed.py',
+        ROOT/'tools/check_unified58_retained_inputs.py',
         ROOT/'experiments/ios-jit/launcher-everest6642/tests/Everest6642Audit.cs',
         ROOT/'experiments/ios-jit/launcher-owned-game/patch_loading.py']
     sources += [ROOT/'tools'/('compile_release'+str(n)+'.py') for n in range(53,58)]
@@ -277,7 +278,10 @@ def main():
         base_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         working_tree_dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT)),source_sha256=source_hashes,
         launcher_native_receipt_sha256=sha(output/'native-receipt.json'),managed_build_receipt_sha256=sha(paths[0]),
-        game_code_source_id=recipe.get('source_id', 'selected-on-import'),game_input_compatibility=dict(schema=2,source_ids=[row['source_id'] for row in recipe['sources']],originals_preserved=True),game_code_recipe_sha256=sha(app/'OwnedGameRecipe.json'),
+        game_code_legacy_source_id=recipe['legacy_source_id'],
+        game_code_sources=[dict(source_id=row['source_id'],kind=row['kind']) for row in recipe['sources']],
+        game_input_compatibility=dict(schema=2,source_ids=[row['source_id'] for row in recipe['sources']],originals_preserved=True),
+        game_code_recipe_sha256=sha(app/'OwnedGameRecipe.json'),
         game_fixture_sha256=sha(app/'Managed/Cabrillo.Bootstrap.dll'),game_adapter_sha256=sha(app/'Managed/CelesteJITEverest.dll'),
         game_content_manifest_sha256=sha(app/'GameContentManifest.json'),script_template_sha256=sha(app/'celeste-jit-probe.js'),
         compatibility_downloads_sha256=sha(app/'CompatibilityDownloads.json'),runtime_compatible_releases_sha256=sha(app/'RuntimeCompatibleReleases.json'),

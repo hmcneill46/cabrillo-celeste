@@ -1,11 +1,12 @@
 """Reject a mixed-version helper or weakened platform boundary in the merged IPA."""
 import copy
+import json
 import sys
 from pathlib import Path
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from verify_unified58 import verify_parts
+from verify_unified58 import verify_parts, verify_game_input_contract
 import test_integrated57_package as retained
 
 
@@ -31,6 +32,22 @@ class UnifiedPackageChecks(unittest.TestCase):
         parts[3]['MinimumOSVersion'] = '15.0'
         with self.assertRaisesRegex(ValueError, 'Helper extension identity'):
             verify_parts(*parts)
+
+    def test_preparation_recipe_alone_cannot_make_native_retained_inputs_available(self):
+        root = Path(__file__).resolve().parents[2]
+        recipe = json.loads((root/'experiments/ios-jit/launcher-unified58/OriginalGameIdentity.json').read_text())
+        info = dict(game_code_legacy_source_id=recipe['legacy_source_id'],
+                    game_code_sources=[dict(source_id=r['source_id'], kind=r['kind']) for r in recipe['sources']])
+        verify_game_input_contract(info, recipe)
+        for name in ['game_code_legacy_source_id', 'game_code_sources']:
+            broken = dict(info)
+            del broken[name]
+            with self.subTest(missing=name), self.assertRaisesRegex(ValueError, 'retained-game'):
+                verify_game_input_contract(broken, recipe)
+        broken = copy.deepcopy(info)
+        broken['game_code_sources'].pop()
+        with self.assertRaisesRegex(ValueError, 'retained-game'):
+            verify_game_input_contract(broken, recipe)
 
 
 if __name__ == '__main__':

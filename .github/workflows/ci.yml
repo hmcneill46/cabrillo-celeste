@@ -57,19 +57,11 @@ jobs:
         run: python3 tools/ci/check_dependency56_profiles.py
       - name: Check build50 shortcut ordering and recovery (host only)
         run: python3 tools/ci/check_native_shortcuts.py
-      - name: Check signing-aware Files picker policy and runtime hooks
-        run: python3 tools/check_document_picker_compatibility.py --work .build/ci/signing-picker-policy
-      - name: Check dependency mirror integrity and runtime-version boundaries
-        run: python3 tools/check_dependency56_native.py --work .build/ci/dependency56-controls
-      - name: Compile build56 production launcher for iOS15 and later
-        run: python3 tools/check_dependency56_compile.py --work .build/ci/dependency56-compile
-      - name: Check integrated JIT provider, launch, pairing and failure boundaries
-        run: python3 tools/check_integrated57_native.py --work .build/ci/integrated57-native
-      - name: Compile build57 production host for iOS15 and later
-        run: python3 tools/check_integrated57_compile.py --work .build/ci/integrated57-compile
+      - name: Compile combined build58 production host for iOS15 and later
+        run: python3 tools/check_unified58_compile.py --work .build/ci/unified58-compile
       - name: Build pinned StikJIT and isolated helper for iOS17.4 and later
-        run: python3 tools/build_stikjit57.py --work .build/ci/integrated57-helper
-      - name: Check combined build58 input, dependency and JIT controls
+        run: python3 tools/build_stikjit58.py --work .build/ci/unified58-helper
+      - name: Check combined build58 picker, input, dependency and JIT controls
         run: python3 tools/check_unified58_native.py --work .build/ci/unified58-native
       - name: Fetch pinned policy-test SDK
         run: python3 tools/ci/prepare_policy_sdk.py --output .build/ci/policy-sdk
@@ -83,15 +75,10 @@ jobs:
             .build/ci/native-shortcuts/receipt.json
             .build/ci/native-profiles/receipt.json
             .build/ci/native-profiles/results/results.json
-            .build/ci/signing-picker-policy/receipt.json
-            .build/ci/dependency56-compile/receipt.json
-            .build/ci/dependency56-controls/receipt.json
-            .build/ci/dependency56-controls/*/results/results.json
-            .build/ci/integrated57-native/receipt.json
-            .build/ci/integrated57-native/*-results/results.json
-            .build/ci/integrated57-compile/receipt.json
-            .build/ci/integrated57-helper/receipt.json
+            .build/ci/unified58-compile/receipt.json
+            .build/ci/unified58-helper/receipt.json
             .build/ci/unified58-native/receipt.json
+            .build/ci/unified58-native/*/receipt.json
             .build/ci/unified58-policy/receipt.json
           if-no-files-found: error
           retention-days: 14
