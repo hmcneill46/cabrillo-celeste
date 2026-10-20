@@ -13,13 +13,20 @@ stays private; its permitted runtime and applicable licence are included.
 StikJIT's upstream prebuilt idevice dependency remains explicitly disclosed.
 
 [Build58's report](ios-jit/UNIFIED_BUILD_58.md) records the combined source and
-test-kit checks. The owner authorizes source integration and an unsigned test
-IPA, **not a new version tag or public Release**. A manual workflow trial must
-use `publish=false`; publication awaits a separate request after device testing.
-The current public download remains v0.26.0/build57, whose unchanged recipe and
-[report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) remain available. Source and
-delivery commits use the GitHub account `hmcneill46`; GitHub's web merge is
-associated with that account.
+test-kit checks. The owner reports **“Yep looks good”** after testing the delivered
+build58 and explicitly requests committing to `main` and updating GitHub Releases.
+This authorizes the publication commit, annotated **`v0.29.0`** tag and existing
+tagged release workflow, including its public IPA and verification assets.
+Publication is in progress. Record the tagged run and independently downloaded
+assets only after they pass; the local test IPA is not a hosted attestation.
+
+Preserve the tested local IPA and all345 frozen app inputs from clean `5d535d8`.
+The owner's general acceptance adds no detailed helper/DDI/JIT, controller-colour,
+sustained120Hz or other granular device result. The previous public
+v0.26.0/build57 and its unchanged
+[report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) remain available while the new
+release is prepared. Source and delivery commits use `hmcneill46`. Manual
+non-publishing trials still use `publish=false`. No iLoader work is authorized.
 
 ## Published v0.26.0 / build57 —20 October2026
 

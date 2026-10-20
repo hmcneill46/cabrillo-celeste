@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased · 0.29.0 / build58 integration
+## 0.29.0 · 20 October 2026
 
 - Combine the separate development histories, preserving the published v0.26.0 runtime, built-in StikJIT, import and dependency-download fixes.
 - Add original itch.io, Steam and Epic game-file compatibility and store acquisition instructions; retain imported originals across cache rebuilds.
@@ -8,8 +8,9 @@
 - Add live feather steering, original Celeste grab semantics with separate input preferences, optional persistent toggling and controller symbol/light support.
 - Preserve both sets of independently numbered53–57 recipes in Git history and use a new build58 identity for the combined test IPA.
 
-This version is awaiting owner testing and a separate release request. See
-[the integration report](docs/ios-jit/UNIFIED_BUILD_58.md).
+The owner reports that the combined test build looks good and authorizes the
+version tag and public Release. Publication is in progress through GitHub Actions;
+[the integration report](docs/ios-jit/UNIFIED_BUILD_58.md) records its scope.
 
 ## 0.26.0 · 20 October 2026
 

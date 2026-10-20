@@ -3,7 +3,7 @@
   "date": "2026-10-20",
   "version": "0.29.0",
   "build_number": 58,
-  "status": "PASS_COMBINED58_SOURCE_PACKAGE_AND_TEST_DELIVERY",
+  "status": "OWNER_ACCEPTED_BUILD58_RELEASE_PUBLICATION_IN_PROGRESS",
   "source_lineages": {
     "local_snapshot": "ee475e3",
     "published_main": "65e45c2",
@@ -60,9 +60,11 @@
     "physical_dualsense_colours_tested": false,
     "sustained_physical_120hz_tested": false,
     "device_helper_ddi_jit_tested": false,
-    "phone_modified": false,
     "new_tag_created": false,
-    "new_public_release_created": false
+    "new_public_release_created": false,
+    "owner_reported_test_build_acceptance": true,
+    "physical_device_test_scope": "Existing automated evidence remains host/simulator-only; owner general acceptance is recorded separately without new device diagnostics.",
+    "phone_modified_by_agent": false
   },
   "intermediate_package_b": {
     "source_commit": "6dd99918cf5171d709bce676d2ae769646356214",
@@ -173,9 +175,9 @@
     }
   },
   "remaining": [
-    "Final GitHub check/merge status is recorded on PR8",
-    "Owner physical-device acceptance",
-    "Separate owner request before a public version tag or Release"
+    "Authorized publication commit/tag and tagged GitHub Actions release",
+    "Independent public asset checksum, provenance and attestation verification",
+    "Existing granular physical-device evidence gates remain separate from general owner acceptance"
   ],
   "final_package": {
     "source_commit": "5d535d85ffc2f43d60c58a7fe9bc2064dffa2522",
@@ -194,5 +196,24 @@
     "cloud_total_bytes": 996437125,
     "all_results_preserved": true,
     "retired_cloud_installer": "local build55; verified local copy retained"
+  },
+  "owner_acceptance": {
+    "date": "2026-10-20",
+    "statement": "Yep looks good",
+    "scope": "General owner acceptance of the delivered build58 test kit; no new diagnostic export or detailed per-feature result supplied.",
+    "tested_ipa_sha256": "73b5c6f2f41089abc2973e922d5a1664472b127b309713324a13078a7fdd28d5",
+    "new_device_diagnostics_received": false,
+    "granular_device_gates_unchanged": true
+  },
+  "publication": {
+    "status": "IN_PROGRESS",
+    "version_tag": "v0.29.0",
+    "owner_authorized_main_commit": true,
+    "owner_authorized_tag_and_release": true,
+    "github_account": "hmcneill46",
+    "tagged_workflow_success_confirmed": false,
+    "public_assets_independently_verified": false,
+    "tested_inputs_to_preserve": 345,
+    "app_implementation_changes_authorized_by_this_publication_request": false
   }
 }

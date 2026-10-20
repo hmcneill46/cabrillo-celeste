@@ -2,11 +2,13 @@
 
 ## Current work: unified build58 / 0.29.0 — 20 October 2026
 
-The owner explicitly requests preserving this Mac's work and the other computer's
-published v0.26.0, merging and pushing the combined source as `hmcneill46`, then
-building an unsigned IPA for testing. This authorizes the integration commits,
-GitHub push/PR/merge and trial build. **A new version tag or public Release is not
-authorized; wait for the owner's test and separate release request.** No iLoader
+The owner requested preserving and merging this Mac's work with published
+v0.26.0 as `hmcneill46`, then testing an unsigned IPA. After receiving build58,
+the owner reports **“Yep looks good”** and explicitly requests committing to
+`main` and updating GitHub Releases. This authorizes the publication commit,
+annotated **`v0.29.0`** tag, existing tagged GitHub Actions build and public
+Release assets. **Publication is in progress; do not claim the Release is
+available until the workflow and independent download checks pass.** No iLoader
 change or submission is included.
 
 Integration uses `launcher-unified58`, version0.29.0/build58. The local source was
@@ -38,8 +40,11 @@ removed only after exact retained-local-copy and receipt verification; all
 Results folders and accepted fallbacks remain. Cloud total996,437,125 bytes.
 Keep the data container and Shortcut49; allow one cache rebuild, then test
 fresh-process return, touch/controller preferences, normal Quit and diagnostics.
-No phone was modified. Physical58 acceptance and a separate release request
-remain pending; no new tag or public Release is authorized.
+The owner's acceptance applies to this delivered test build. No new diagnostic
+export or detailed device-test results accompany that reply; helper/DDI/JIT,
+DualSense colours, sustained120Hz and earlier granular gates keep their existing
+scope. No phone was modified by the agent. Preserve the tested kit and all345
+frozen sources while the authorized tagged release is built and verified.
 
 Build numbers53–57 were allocated independently on both computers. Canonical
 `release/app53`–`app57`, `release/public53.json`–`public57.json` and numbered
@@ -154,8 +159,10 @@ build37 Everest upgrade with unexpected phone exits and a pending combined saves
 - Do not commit, push, create/publish a remote, or write to GitHub without explicit
   owner approval. Local reversible edits, tests and experiments are authorized.
 - The20 October integration request authorizes merging/pushing this Mac's work
-  with published v0.26.0 as `hmcneill46` and building a test IPA. It does not
-  authorize a new tag or public Release. See the current section above.
+  with published v0.26.0 as `hmcneill46` and building a test IPA. The owner's
+  subsequent acceptance and explicit release request also authorize committing
+  to `main`, annotated `v0.29.0` and the existing tagged publication workflow.
+  Preserve the345 tested app inputs; see the current section above.
 - The owner explicitly authorized the initial commit/push and chose a public
   repository on14 September2026. That first-publication authorization is recorded;
   it does not grant blanket approval for unrelated future GitHub writes.

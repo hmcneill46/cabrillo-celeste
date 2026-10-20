@@ -4,9 +4,10 @@
 
 Build58 combines the local game-input/touch-editor work with published v0.26.0.
 Host, simulator and package checks pass; [the integration report](ios-jit/UNIFIED_BUILD_58.md)
-records the verified local test IPA and iCloud delivery. Physical acceptance
-remains pending. A public Release requires the owner's separate request after
-testing. Build58 is frozen; use59 for new app implementation.
+records the verified local test IPA and iCloud delivery. The owner accepts that
+test build and authorizes the v0.29.0 Release; tagged publication is in progress.
+Detailed device gates keep their recorded scope. Build58 is frozen; use59 for new
+app implementation.
 
 Use the same Xcode, Mono and developer-owned FMOD prerequisites below:
 

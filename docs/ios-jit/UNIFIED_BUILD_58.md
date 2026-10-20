@@ -5,10 +5,13 @@ Date:20 October2026. Target: **0.29.0 / build58**. Implementation lane:
 
 ## Scope and authorization
 
-The owner requests preserving all work from this Mac and the other computer,
-merging and pushing it as `hmcneill46`, then building an unsigned test IPA. Source
-commits, push/PR/merge and a trial build are authorized. A new version tag or
-public Release requires the owner's later request after testing. The existing
+The owner requested preserving both computers' work, merging and pushing it as
+`hmcneill46`, then testing an unsigned IPA. After the build58 delivery below, the
+owner reports **“Yep looks good”** and explicitly requests committing to `main`
+and updating GitHub Releases. This authorizes the publication commit, annotated
+**`v0.29.0`** tag and the existing tagged workflow's public IPA and verification
+assets. Publication is in progress; no completed release or hosted attestation
+is claimed here yet. The existing
 [public v0.26.0](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
 remains available. No iLoader change or submission is included.
 
@@ -62,7 +65,8 @@ The merge at `eaa57b0` has both preserved parents, `ee475e3` and `65e45c2`.
 [PR8](https://github.com/hmcneill46/cabrillo-celeste/pull/8) contains the combined
 source and records its final GitHub check and merge status. Both histories must
 be retained with a merge commit. The local test package and iCloud delivery
-are verified below. No new version tag or public Release has been made.
+are verified below. The subsequent owner-authorized v0.29.0 publication is
+in progress; its tagged run and published asset checks are recorded separately.
 
 All299 captured published57 sources remain exact. All291 captured local57
 sources remain exact in its snapshot parent; the six colliding canonical paths
@@ -148,8 +152,10 @@ GitHub's retained `6dd9991` push and PR runs
 [39424156697](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39424156697)
 and [39424166753](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39424166753)
 pass source and combined native/Swift/helper/policy jobs. PR8 records the final
-head's checks before merge. The public workflow selects58 for a future manual
-`publish=false` trial; no new Release or version tag is created by this work.
+head's checks before merge. The public workflow selects58. The owner now
+authorizes the v0.29.0 tagged release; manual non-publishing trials continue to
+use `publish=false`. The tagged build and independent public-download checks
+remain pending and will have their own package identity and evidence.
 
 All345 captured app inputs are frozen after this review; use59 for new app changes.
 
@@ -160,7 +166,11 @@ landscape, live feather/grab choices and the controller's preferred symbols.
 For standalone Built-in StikJIT, preserve the helper during signing and use the
 documented pairing/VPN setup; LiveContainer retains its existing provider.
 
-No new physical device acceptance is inferred. Actual installed helper
-registration/DDI/JIT, physical touch comfort, DualSense light colours and
-sustained120Hz remain device gates. Earlier save-manager, lifecycle and iPad
-gates keep their original scope. No phone has been modified for this integration.
+The owner accepts the delivered test build with “Yep looks good”. This is
+owner-reported acceptance of the tested build, without a new diagnostic export
+or detailed per-feature results. Actual installed helper registration/DDI/JIT,
+physical touch comfort, DualSense light colours and sustained120Hz retain their
+separate evidence requirements. Earlier save-manager, lifecycle and iPad gates
+keep their original scope. No phone was modified by the agent during integration.
+The accepted local test kit remains immutable while the authorized tagged
+release is rebuilt and independently verified.

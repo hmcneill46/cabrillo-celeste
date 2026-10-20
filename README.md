@@ -52,16 +52,16 @@ FMOD, .NET/NuGet binaries and signed Shortcut resources are declared inputs;
 this is not a claim that every dependency is compiled from source or that separate
 builds are byte-identical. See [how releases work and how to verify a download](docs/RELEASING.md).
 
-## Combined development build
+## Version0.29.0 / build58 publication
 
-The next test build, **0.29.0 / build58**, brings together the published v0.26.0
-work and this Mac's previously unpushed game-input and touch-control development.
-Host and simulator checks now pass, including all nine original game ZIPs,
-the touch editor, cold/cached Strawberry Jam and Motion Smoothing. The combined
-source and verified test kit are ready for device testing through
-[PR8](https://github.com/hmcneill46/cabrillo-celeste/pull/8). The download above remains the
-published v0.26.0; the features below describe the combined development lane.
-See [integration status and source preservation](docs/ios-jit/UNIFIED_BUILD_58.md).
+The owner has tested and approved the combined build for release. Version0.29.0
+brings together the published v0.26.0 work and this Mac's game-input and touch-control
+development. All nine original game ZIPs, the touch editor, cold/cached Strawberry
+Jam and Motion Smoothing pass host/simulator checks. Both source histories are
+preserved by [PR8](https://github.com/hmcneill46/cabrillo-celeste/pull/8).
+The tagged GitHub Actions build will compile and verify the release; the download
+above remains v0.26.0 until publication succeeds.
+See [integration and publication status](docs/ios-jit/UNIFIED_BUILD_58.md).
 
 ### Game files from itch.io, Steam and Epic
 
