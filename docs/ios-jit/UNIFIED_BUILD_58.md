@@ -60,8 +60,9 @@ from Git. The protected FMOD download/runtime packaging boundary is retained.
 
 The merge at `eaa57b0` has both preserved parents, `ee475e3` and `65e45c2`.
 [PR8](https://github.com/hmcneill46/cabrillo-celeste/pull/8) contains the combined
-source; final review, merge and test-kit delivery remain in progress. No new
-version tag or public Release has been made.
+source and records its final GitHub check and merge status. Both histories must
+be retained with a merge commit. The local test package and iCloud delivery
+are verified below. No new version tag or public Release has been made.
 
 All299 captured published57 sources remain exact. All291 captured local57
 sources remain exact in its snapshot parent; the six colliding canonical paths
@@ -92,7 +93,7 @@ counts without copying private logs, game files, credentials or device data.
 | Fresh dependency/helper builds | Managed/native dependencies build from the pinned public inputs with an explicit developer-owned FMOD SDK. The separate unsigned StikJIT helper/framework builds for iOS17.4; its58 identity is verified before packaging. |
 
 The final production compile receipt is
-`.build/unified58-compile-c/receipt.json`. The source-only check excludes
+`.build/unified58-compile-d/receipt.json`. The source-only check excludes
 SDL/Mono graphics implementation and linking; the full IPA build covers those.
 Its earlier run completed compilation but rejected its receipt because the
 compiler's metadata code changed during that run. The fresh run passes.
@@ -106,8 +107,8 @@ temporary import ZIP had been removed. A control using the actual
 `CJGameInputsAvailable` function and metadata extracted from that IPA reproduces
 the rejection. The compiler now copies the catalogue from the actual recipe;
 the package verifier compares it, and the fresh-build workflow runs the
-packaged-metadata control. The corrected package passes all51 synthetic
-retained-input checks without using proprietary game files. The first IPA stays
+packaged-metadata control. The corrected package passes15 native behavior checks plus36 fixture setup
+assertions without using proprietary game files. The first IPA stays
 retained as a failing negative control and is not a test-kit candidate.
 
 Independent review of the second package then found an outdated bundled
@@ -123,9 +124,34 @@ passed independent checks; the notice defect blocked acceptance.
 
 ## Test package and remaining gates
 
-**The final package rebuild, independent review and delivery are pending.**
-Record its exact identity here after the notice correction is verified. Source
-merge and CI status must be recorded separately from the local package evidence.
+The final unsigned **0.29.0/build58** IPA passes independent verification:
+
+- Clean source commit: `5d535d85ffc2f43d60c58a7fe9bc2064dffa2522`.
+- SHA256: `73b5c6f2f41089abc2973e922d5a1664472b127b309713324a13078a7fdd28d5`.
+- Size: **21,326,350 bytes**; all345 captured inputs match the source commit.
+- Matching executable/dSYM UUID: `a9d1992eceef3756bac0a2a38a836bc8`.
+- All199 managed assemblies,16 native archives and six helper/framework files
+  match their receipts. The schema2 retained-input catalogue and combined
+  FMOD/Morro/StikJIT notices pass. No game code/assets, SDK components, pairing
+  data or signing identities are bundled.
+
+The retained local kit is `artifacts/cabrillo-build58-final`. All nine test-kit
+files have exact readback and confirmed upload at **iCloud Drive → Celeste JIT
+Tests → 0.29.0-build-58**. Initial transient iCloud errors cleared. Only the
+superseded local55 cloud IPA was removed after its exact local copy and package
+receipts were checked; all Results folders, local artifacts and accepted
+fallbacks remain. Total cloud size is996,437,125 bytes.
+
+The package was compiled locally from fresh pinned public managed/native inputs
+and a developer-owned FMOD SDK. It is not a new hosted release/attestation claim.
+GitHub's retained `6dd9991` push and PR runs
+[39424156697](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39424156697)
+and [39424166753](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39424166753)
+pass source and combined native/Swift/helper/policy jobs. PR8 records the final
+head's checks before merge. The public workflow selects58 for a future manual
+`publish=false` trial; no new Release or version tag is created by this work.
+
+All345 captured app inputs are frozen after this review; use59 for new app changes.
 
 Keep the existing data container, saves and revision49 Shortcut. Allow one
 prepared-code cache rebuild, then check a second fresh-process start, normal

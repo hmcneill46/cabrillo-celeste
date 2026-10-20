@@ -22,13 +22,24 @@ lifecycle checks and cold/cached full Strawberry Jam. Production58 Swift/native
 host compilation also passes. See [the integration report](docs/ios-jit/UNIFIED_BUILD_58.md)
 and its evidence ledger for exact scope.
 
-[PR8](https://github.com/hmcneill46/cabrillo-celeste/pull/8) preserves both source
-histories. The first IPA exposed missing native retained-game catalogue metadata;
-the corrected package passes51 controls using its actual packaged metadata.
-Independent review then found stale bundled third-party notices. The final
-notice-corrected package, review, merge and delivery are pending; do not deliver
-the intermediate `2a71fd90…0630` IPA. No physical58 acceptance or new public
-Release is claimed.
+[PR8](https://github.com/hmcneill46/cabrillo-celeste/pull/8) records the reviewed
+integration and final GitHub check/merge status. Preserve both parents with a
+merge commit. The independently verified test IPA is built from clean `5d535d8`;
+all345 captured app inputs are frozen. Use59 for new app implementation.
+IPA SHA256: `73b5c6f2f41089abc2973e922d5a1664472b127b309713324a13078a7fdd28d5`;
+21,326,350 bytes. Matching dSYM remains in `artifacts/cabrillo-build58-final`.
+The final package passes15 native retained-input behavior checks and36 fixture
+setup assertions, exact payload/source checks and combined dependency notices.
+Earlier failed intermediate packages remain separate evidence.
+
+All nine kit files have exact readback and confirmed upload in iCloud →
+Celeste JIT Tests → 0.29.0-build-58. The superseded local55 cloud installer was
+removed only after exact retained-local-copy and receipt verification; all
+Results folders and accepted fallbacks remain. Cloud total996,437,125 bytes.
+Keep the data container and Shortcut49; allow one cache rebuild, then test
+fresh-process return, touch/controller preferences, normal Quit and diagnostics.
+No phone was modified. Physical58 acceptance and a separate release request
+remain pending; no new tag or public Release is authorized.
 
 Build numbers53–57 were allocated independently on both computers. Canonical
 `release/app53`–`app57`, `release/public53.json`–`public57.json` and numbered

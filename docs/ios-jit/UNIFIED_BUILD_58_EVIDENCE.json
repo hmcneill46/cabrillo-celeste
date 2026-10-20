@@ -3,7 +3,7 @@
   "date": "2026-10-20",
   "version": "0.29.0",
   "build_number": 58,
-  "status": "PASS_HOST_SIMULATOR_CONTROLS_FINAL_PACKAGE_REBUILD_PENDING",
+  "status": "PASS_COMBINED58_SOURCE_PACKAGE_AND_TEST_DELIVERY",
   "source_lineages": {
     "local_snapshot": "ee475e3",
     "published_main": "65e45c2",
@@ -42,7 +42,8 @@
     "compiled_zipfoundation_swift_sources": 21,
     "compiled_cyaml_sources": 6,
     "compiled_objc_host_sources": 15,
-    "packaged_retained_input_checks_intermediate_b": 51
+    "packaged_native_behavior_checks": 15,
+    "packaged_native_fixture_setup_assertions": 36
   },
   "scope": {
     "everest_version": "1.6642.0",
@@ -72,8 +73,8 @@
     "final_test_kit": false
   },
   "resolved_before_final_packaging": [
-    "First IPA lacked native retained-game catalogue metadata; actual packaged-metadata regression reproduced rejection. Compiler and verifier now require the actual schema2 catalogue; corrected intermediate package passed51 synthetic native controls.",
-    "Second IPA notice omitted Morro and retained stale Everest6580 and FMOD-blocked text. A new58 notice and package assertions correct this; final rebuild and independent review remain pending."
+    "First IPA lacked native retained-game catalogue metadata; the actual native regression reproduced rejection. Compiler and verifier now require the schema2 catalogue. Final actual-package checks pass15 behavior checks plus36 setup assertions.",
+    "Second IPA notice omitted Morro attribution and retained stale Everest6580 and FMOD-blocked text. Final58 notice, compiler selection and package assertions preserve combined attribution and current runtime/SDK distribution boundaries."
   ],
   "evidence": {
     "public_source_inputs": {
@@ -136,10 +137,6 @@
       "sha256": "6549327c203d3d872fe2951947e8d61ec97077311d5e3a80f76dbb70785e514b",
       "status": "PASS_OWNED_GAME_SJ_COLD_WARM"
     },
-    "production_ios_compile_before_notice_only_rebuild": {
-      "sha256": "b9448cab386c2995ba1fb84e1d5e4e558d2f791aaada3e710d9894b72f0dd955",
-      "status": "PASS_UNIFIED58_PRODUCTION_IOS_LAUNCHER_COMPILE"
-    },
     "packaged_retained_inputs_intermediate_b": {
       "sha256": "9045e4a41dac4f24ab8fe31cb4265e45606be66b81193f18e758d98171fb092a",
       "status": "PASS_PACKAGED_NATIVE_RETAINED_INPUTS"
@@ -153,13 +150,49 @@
     },
     "python_controls": {
       "sha256": "5a51b48f59bc68c4cd1c24c5c6a0a1f6176f1959728cb2f57767fbf73bab2c74"
+    },
+    "production_ios_compile": {
+      "sha256": "a299ba113d8a821ea00c4308c74547cef7dacc91356ef89c7ec9562887070762",
+      "status": "PASS_UNIFIED58_PRODUCTION_IOS_LAUNCHER_COMPILE"
+    },
+    "final_packaged_retained_inputs": {
+      "sha256": "402ba65c908b80e498867abd19b4b3ffdea5ece7e4ee9efc20af77c0eebcd4a8",
+      "status": "PASS_PACKAGED_NATIVE_RETAINED_INPUTS"
+    },
+    "final_independent_package_audit": {
+      "sha256": "66f88c072ffa8810660deaed1d4aabef5c23195fdfbe6186103f4fd43e5bd739",
+      "status": "PASS_INDEPENDENT_UNIFIED58_PACKAGE"
+    },
+    "final_package_verifier": {
+      "sha256": "aeb8c175574fa176a40c5b292f0892f0a134893e92f5eb6b20d71c5df8e1124d",
+      "status": "PASS_UNIFIED58_PACKAGE"
+    },
+    "final_build_receipt": {
+      "sha256": "95363f171683d37fa690fea8be5dd27dedace37a807f4bcdbd19e95ad59f31d1",
+      "status": "BUILD_COMPLETE_AWAITING_PACKAGE_VERIFICATION"
     }
   },
   "remaining": [
-    "Final notice-corrected IPA rebuild and independent package review",
-    "Final source merge and CI result",
-    "Test-kit delivery",
+    "Final GitHub check/merge status is recorded on PR8",
     "Owner physical-device acceptance",
     "Separate owner request before a public version tag or Release"
-  ]
+  ],
+  "final_package": {
+    "source_commit": "5d535d85ffc2f43d60c58a7fe9bc2064dffa2522",
+    "ipa_sha256": "73b5c6f2f41089abc2973e922d5a1664472b127b309713324a13078a7fdd28d5",
+    "bytes": 21326350,
+    "captured_sources": 345,
+    "dsym_uuid": "a9d1992eceef3756bac0a2a38a836bc8",
+    "status": "PASS_INDEPENDENT_UNIFIED58_PACKAGE",
+    "physical_device_tested": false
+  },
+  "delivery": {
+    "icloud_folder": "Celeste JIT Tests/0.29.0-build-58",
+    "files": 9,
+    "exact_readback": true,
+    "upload_confirmed": true,
+    "cloud_total_bytes": 996437125,
+    "all_results_preserved": true,
+    "retired_cloud_installer": "local build55; verified local copy retained"
+  }
 }

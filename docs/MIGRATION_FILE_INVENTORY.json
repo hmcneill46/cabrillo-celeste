@@ -25,8 +25,8 @@
     },
     "AGENTS.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "aade36be8329193656bab89e424ecb726d7b4ed6049eb34bd09657f2041fec35",
-      "bytes": 77268
+      "sha256": "7cfdc652595f060b46ffa9e64bc2086fe30bc9449f1019f1da59cc9c9b50cc57",
+      "bytes": 78067
     },
     "CHANGELOG.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
@@ -35,8 +35,8 @@
     },
     "HANDOFF.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "fd0cde1995871c52254e90467460f209c919f8180d2bfb53907d8ce4a84f1ab6",
-      "bytes": 140759
+      "sha256": "a55eac16a75e39ff386a8d979f7c0404833726b03a8b0c7f6ba6e9ec9b293a99",
+      "bytes": 141558
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -46,8 +46,8 @@
     },
     "README.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "ed73fb681c64703fea007963abd6335decfec29e665d20d92448a7970880996b",
-      "bytes": 17087
+      "sha256": "eab00a8d57ba1a5ada0bbce34148d950acab70ab9409bd590b21f0d5de621600",
+      "bytes": 17168
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -95,8 +95,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "0b9ce18f4ca9a07935306b64f39be73e20bbd522651287a9f97e182af00b324a",
-      "bytes": 23904
+      "sha256": "d6a3646bf5a8ed674e5901f0e3e7b1e123ec6d7c0b91eb9c23fd2503a78df83f",
+      "bytes": 24143
     },
     "docs/TOUCH_CONTROLS.md": {
       "reason": "Build56 control customization guide or evidence summary; private logs and binaries remain ignored",
@@ -1037,13 +1037,13 @@
       "bytes": 4294
     },
     "docs/ios-jit/UNIFIED_BUILD_58.md": {
-      "bytes": 9418,
-      "sha256": "0cd45b4ce88363f38432c8c34762b1295b7b8a0620038215ce77e78a1cc23962",
+      "bytes": 11106,
+      "sha256": "1b137c82cf0251abd40cb017a4c997fec63c2e9382f64c429425b9c8d0e6336e",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "docs/ios-jit/UNIFIED_BUILD_58_EVIDENCE.json": {
-      "bytes": 6693,
-      "sha256": "9245bf1d89e39546a47695d485fbdda72930edcfc862d1f8fd4bb3d285850590",
+      "bytes": 8042,
+      "sha256": "0208f57a0eccde46c57ddf415de6447e0fc3434298a78e529c125ca40236906e",
       "reason": "Combined Cabrillo build58 implementation, regression or public-source build tooling."
     },
     "docs/ios-jit/VISIBILITY_BUILD_36.md": {
