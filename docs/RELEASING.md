@@ -4,17 +4,41 @@
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current development recipe is [release/public56.json](../release/public56.json),
-version0.25.1/build56. It adds bounded recovery of moved mod archives, native
-`MirrorName` handling and matching required/optional dependency alias rules.
-Every recovered download must pass the original reviewed size, hash and module
-versions. It retains stable Everest1.6642.0, the build54 Feather picker repair,
-and the same native/.NET/NuGet/FMOD/Shortcut49 dependency pins as55.
-[Build56's report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) records the completed
-local and hosted checks. The owner approves its source/unsigned trial and then
-explicitly requests merging PR6 and publishing0.25.1 on20 October. Physical
-gameplay/JIT acceptance remains separate from the accepted installer/publication.
-Commits resolve to `hmcneill46` for both author and committer. Published v0.25.1 is recorded below; earlier releases remain available.
+The current recipe is [release/public57.json](../release/public57.json),
+version 0.26.0 / build 57. It adds Built-in StikJIT in an isolated iOS 17.4 helper,
+automatic verified JIT before game launch, protected pairing import and the Run
+button fix. The host retains iOS 15, stable Everest 1.6642.0, download/picker
+repairs, saves and all existing JIT providers. The original 151 dependency hashes
+remain; StikJIT's mixed archive and upstream prebuilt idevice library are separately
+disclosed, bringing the total to 153.
+[Build57's report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) records the local,
+hosted and public-download checks. The owner explicitly authorizes merging PR7
+and publishing 0.26.0 on 20 October. Publication does not establish a physical
+helper/JIT/gameplay pass. Source and delivery commits use the GitHub account
+`hmcneill46`; GitHub's web merge is associated with that account.
+
+## Published v0.26.0 / build57 —20 October2026
+
+The owner explicitly requests merging PR7 and publishing the new release.
+[PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7) is merged at
+`93415b48ac1c855cd94832f2921ffe7e59fea984`; annotated `v0.26.0` targets that merge.
+[Tagged run39414920270](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270)
+passes all six jobs: fresh compilation with official SDK acquisition, package
+checks, all five attestations, separate Ubuntu verification and publication.
+The [public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
+has all five assets; each independently downloads without authentication and
+passes API digests/checksums and exact tag/source/workflow/run attestations.
+
+The immutable `artifacts/cabrillo-v0.26.0-release` kit matches all 299 captured
+trial source hashes and all 153 dependency hashes. Actual 199 DLLs pass 434
+metadata checks matching the hosted audit, full NLua RSA/tamper checks and 14
+native/managed numeric comparisons. The six unsigned helper/framework files,
+licences, scripts and host/helper isolation also pass independent inspection.
+Release IPA:21,038,042 bytes; SHA256:
+`02f60ba0262ea5a76e395f8ce9088169cd9c8388bf2b24a29e4e67fef6a43f08`.
+Preserve both this release kit and the original trial kit. All 299 captured app
+inputs remain frozen; use58 for new implementation. Publication adds no physical
+Feather/helper/DDI/JIT/gameplay acceptance. No iLoader change or submission occurs.
 
 ## Published v0.25.1 / build56 —20 October2026
 

@@ -1,6 +1,7 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated20 October for the verified build56 general download repair,
+Written 14 September 2026; updated20 October for published v0.26.0/build57,
+the verified build56 general download repair,
 the verified Everest6642/build55 trial,
 copy-based Files imports and v0.24.3 publication,
 following30 September FMOD clarification after source publication and USB shortcut testing,
@@ -11,7 +12,30 @@ preparation, for a fresh development chat opened in
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
 
-## Verified Built-in StikJIT trial —20 October2026, build57
+## Published v0.26.0 / build57 —20 October2026
+
+The owner explicitly requests merging PR7 and publishing the new release.
+[PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7) is merged at
+`93415b48ac1c855cd94832f2921ffe7e59fea984`; annotated `v0.26.0` targets that merge.
+[Tagged run39414920270](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270)
+passes all six jobs: fresh compilation with official SDK acquisition, package
+checks, all five attestations, separate Ubuntu verification and publication.
+The [public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
+has all five assets; each independently downloads without authentication and
+passes API digests/checksums and exact tag/source/workflow/run attestations.
+
+The immutable `artifacts/cabrillo-v0.26.0-release` kit matches all 299 captured
+trial source hashes and all 153 dependency hashes. Actual 199 DLLs pass 434
+metadata checks matching the hosted audit, full NLua RSA/tamper checks and 14
+native/managed numeric comparisons. The six unsigned helper/framework files,
+licences, scripts and host/helper isolation also pass independent inspection.
+Release IPA:21,038,042 bytes; SHA256:
+`02f60ba0262ea5a76e395f8ce9088169cd9c8388bf2b24a29e4e67fef6a43f08`.
+Preserve both this release kit and the original trial kit. All 299 captured app
+inputs remain frozen; use58 for new implementation. Publication adds no physical
+Feather/helper/DDI/JIT/gameplay acceptance. No iLoader change or submission occurs.
+
+## Retained Built-in StikJIT trial —20 October2026, build57
 
 The owner requests integrated StikJIT as a recommended default, automatic JIT
 before Run Celeste with progress, all existing providers preserved, the Run
@@ -39,11 +63,12 @@ Retained119 profiles/185 native shortcut checks/36 branches/15 bad-URL controls
 pass. See the57 report/ledger for exact scopes and receipts. After these local
 checks, the owner explicitly approves “Push/build
 Cabrillo only”: commit/push as hmcneill46, open a Cabrillo PR and run the unsigned
-trial workflow. No57 tag/Release or iLoader write is authorized. Preserve
+trial workflow. The later publication request is recorded below; iLoader writes
+remain forbidden. Preserve
 all274 accepted56 inputs and the immutable public v0.25.1 kit below.
 
 Source `0f08fc64083d539fdba9f1b78fd79bb41e516048` is pushed as hmcneill46 to
-`codex/actions-release` in draft [PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7).
+`codex/actions-release` in [PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7).
 [Trial39406495715](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715)
 passes fresh source/native/managed/FMOD packaging, all five attestations and
 separate Ubuntu checksum/attestation verification; publishing is skipped. The
@@ -56,9 +81,18 @@ StikJIT inputs,199 DLLs/434 metadata checks, full NLua RSA/tamper controls,
 five exact source/run attestations. IPA21,038,013bytes; SHA256
 `c45c0f5067c95ce4422e8def19c6595e078f03f8d52b1061d6d7754428a5a76f`.
 All299 captured57 app inputs and this kit are frozen; use58 for new app changes.
-No iLoader write,57 tag/Release or actual Feather/helper/DDI/JIT/gameplay pass is
-claimed. Test with the Development profile, preserve the helper, manually import
+No iLoader write or actual Feather/helper/DDI/JIT/gameplay pass is claimed.
+Test with the Development profile, preserve the helper, manually import
 pairing, connect LocalDevVPN and choose Built-in StikJIT before Run Celeste.
+
+On20 October the owner explicitly requests: “please merge and put the new release
+out there”. This authorizes merging PR7, annotated `v0.26.0`, the existing tagged
+publication workflow and public IPA/verification/change notes. PR7 is merged at
+`93415b48ac1c855cd94832f2921ffe7e59fea984`. Its tree equals the reviewed PR head;
+all299 app hashes match the verified trial. Tag object
+`d7aadf85461083aec4a4b28f2c51d81d6a03a111` targets the merge; tagged
+[run39414920270](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270)
+handles publication. Preserve prior trial/release kits and all physical gates.
 
 ## Published v0.25.1 / build56 —20 October2026
 

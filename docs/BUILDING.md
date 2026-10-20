@@ -1,6 +1,6 @@
 # Building Cabrillo
 
-## Verified unsigned development trial: version0.26.0 / build57
+## Current published source build: version0.26.0 / build57
 
 The integrated StikJIT implementation uses the same Xcode26.6 /17F113, SDK26.5,
 Mono6.14.1 and developer-owned FMOD SDK as56 below:
@@ -22,11 +22,11 @@ All274 accepted56 app inputs remain frozen. Existing Everest1.6642.0, original15
 dependency hashes, game preparation, Feather imports and saves stay preserved.
 See [the57 report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) for signing/pairing
 requirements, the iLoader compatibility limitation and current device gates.
-The [unsigned hosted test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
-passes fresh compilation/package audits and independent downloaded-kit checks.
-It requires GitHub sign-in and expires3 November2026. All299 captured57 app
-inputs are frozen; use58 for new implementation. Phone helper/JIT acceptance
-and a public57 Release remain separate.
+The [public v0.26.0 release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
+passes fresh tagged compilation/package audits and independent downloaded-kit
+checks. Its five assets download without sign-in. All 299 captured build57 app
+inputs are frozen; use58 for new implementation. Physical helper/JIT acceptance
+remains separate. The original trial kit is retained independently.
 
 Additional source-only checks on a Mac with the pinned Xcode:
 
@@ -42,7 +42,7 @@ framework/helper for arm64/iOS17.4. These checks do not build a full IPA, mount 
 device image, enable real JIT or run a game. Keep work directories private and
 publish only the existing allowlisted release kit after scoped owner approval.
 
-## Current development source build: version0.25.1 / build56
+## Preserved build56 recipe and shared build prerequisites
 
 Use a Mac with **Xcode26.6 /17F113**, iPhoneOS SDK26.5, Python3.12 or newer,
 CMake, Git and **Mono6.14.1** with its `sn` strong-name tool. Both Intel and Apple Silicon SDK downloads are pinned in the

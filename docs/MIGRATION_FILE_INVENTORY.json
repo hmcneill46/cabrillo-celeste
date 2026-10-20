@@ -24,19 +24,19 @@
       "bytes": 226
     },
     "AGENTS.md": {
-      "reason": "Verified57 integrated JIT source/trial delivery, frozen captured inputs, scoped acceptance and explicit GitHub/iLoader boundaries",
-      "sha256": "c99301048ebe810910b120eb64096a23191897fbbbcb5715945d3f3a5b0d1134",
-      "bytes": 54790
+      "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
+      "sha256": "de3f9283a6124ad3112cdfe525567316669730c979d66ddb99f67c720b4d4bce",
+      "bytes": 57030
     },
     "CHANGELOG.md": {
-      "reason": "Owner-requested release notes and unreleased57 integrated JIT behavior and compatibility notes",
-      "sha256": "50be15780b84145d977d15b57aba962b8a10ff4030c4026618b821d86002dc0e",
-      "bytes": 3491
+      "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
+      "sha256": "5099513cb59f7276a3beb2acdd3ce5ae5614b0ec3e4c4e715fc4797d13275f6d",
+      "bytes": 3454
     },
     "HANDOFF.md": {
-      "reason": "Verified57 hosted and independently downloaded kit, retained source/release evidence and pending physical helper/JIT gates",
-      "sha256": "2fc7a60ff8ce0279fa2387f84eb9f8925c88cd2fd6f8a8912c6419c8ce838d3a",
-      "bytes": 118546
+      "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
+      "sha256": "867fd44dfead1c651cd88c0eb10c44b9881148516e0ca4f288d67cdb73775767",
+      "bytes": 120729
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -45,9 +45,9 @@
       "import_sha256": "acf5d461ffa95ebf30463e77ed4b26834ba011d430a3ef716a65ac4cb2fd05da"
     },
     "README.md": {
-      "reason": "Current product/download overview and build53 signing-aware source recipe",
-      "sha256": "e72656ed7960b9abac76fc1b1ded126986585602329fe9f580ced004c64be055",
-      "bytes": 14483
+      "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
+      "sha256": "b4ed3374219aebfdc51b26278d38c7c9eee5dd75aa4f65c463d94cbf33787a8c",
+      "bytes": 14731
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -55,9 +55,9 @@
       "bytes": 2966
     },
     "docs/BUILDING.md": {
-      "reason": "Current build53 developer SDK recipe and preserved historical reproduction instructions",
-      "sha256": "ed55c276ef9920143e34658b470feb19ab2a0f686c807f132963b8e853ae50c8",
-      "bytes": 41088
+      "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
+      "sha256": "4f44e45beefa42e63a5ecd15a1c86a5e5531975f4d908522cc8f759d6f7f5190",
+      "bytes": 41086
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -89,9 +89,9 @@
       "bytes": 2751
     },
     "docs/RELEASING.md": {
-      "reason": "Current53 source workflow and separate immutable published52 release with licensed-input boundaries",
-      "sha256": "f401f73d4ef73aa722e0c4b3d696345cf7b4308f8ed07ee04450a459f3ca8a03",
-      "bytes": 22408
+      "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
+      "sha256": "0b9ce18f4ca9a07935306b64f39be73e20bbd522651287a9f97e182af00b324a",
+      "bytes": 23904
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -26850,14 +26850,14 @@
       "bytes": 6208
     },
     "docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md": {
-      "reason": "Build57 requirements, local compiler/native/simulator evidence, exact hosted/downloaded kit checks and pending physical helper/JIT gates",
-      "sha256": "ffc207a93f614fd15e011e6243d52ac98b15ba36cdd5c3f16ed38c1a55bf3979",
-      "bytes": 12427
+      "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
+      "sha256": "92dbb493f181a05ec0f18a2ea9efdd56c9f438340bd0c3e64fe20dde2d8484a2",
+      "bytes": 14749
     },
     "docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57_EVIDENCE.json": {
-      "reason": "Build57 requirements, local compiler/native/simulator evidence, exact hosted/downloaded kit checks and pending physical helper/JIT gates",
-      "sha256": "632df7882c5f7e0574dc535004ba749c15705065e237554e70a58af70ce6b305",
-      "bytes": 7568
+      "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
+      "sha256": "442f0090986015db54994a05d70c909ad063bd1af2ed81ac4222a5d1fbf22e9c",
+      "bytes": 12204
     },
     "experiments/ios-jit/launcher-integrated-jit/THIRD_PARTY_NOTICES.md": {
       "reason": "Build57 isolated internal JIT provider, protected pairing/coordinator, helper extension and verified automatic game-launch flow preserving frozen56",

@@ -4,10 +4,46 @@
 published0.25.1/build56 download repair. All274 captured56 app inputs remain
 frozen. This source lane is `launcher-integrated-jit`; it retains the exact
 Everest1.6642.0/runtime/dependency pins, copy imports, bundle ID and save paths.
-The source is pushed as hmcneill46 in draft
+The implementation is published through merged
 [PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7). The unsigned hosted
-trial and independently downloaded kit pass as recorded below. No57 version tag,
-public Release or physical helper/JIT acceptance is claimed.
+trial and independently downloaded kit pass as recorded below. The owner now
+authorizes publication, which passes as recorded below. No physical helper/JIT
+acceptance is claimed.
+
+## Published v0.26.0 / build57 —20 October2026
+
+The owner explicitly requests merging PR7 and publishing the new release.
+[PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7) is merged at
+`93415b48ac1c855cd94832f2921ffe7e59fea984`; annotated `v0.26.0` targets that merge.
+[Tagged run39414920270](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270)
+passes all six jobs: fresh compilation with official SDK acquisition, package
+checks, all five attestations, separate Ubuntu verification and publication.
+The [public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
+has all five assets; each independently downloads without authentication and
+passes API digests/checksums and exact tag/source/workflow/run attestations.
+
+The immutable `artifacts/cabrillo-v0.26.0-release` kit matches all 299 captured
+trial source hashes and all 153 dependency hashes. Actual 199 DLLs pass 434
+metadata checks matching the hosted audit, full NLua RSA/tamper checks and 14
+native/managed numeric comparisons. The six unsigned helper/framework files,
+licences, scripts and host/helper isolation also pass independent inspection.
+Release IPA:21,038,042 bytes; SHA256:
+`02f60ba0262ea5a76e395f8ce9088169cd9c8388bf2b24a29e4e67fef6a43f08`.
+Preserve both this release kit and the original trial kit. All 299 captured app
+inputs remain frozen; use58 for new implementation. Publication adds no physical
+Feather/helper/DDI/JIT/gameplay acceptance. No iLoader change or submission occurs.
+
+## Release authorization
+
+On20 October the owner explicitly requests merging PR7 and publishing the new
+release. PR7 is merged at `93415b48ac1c855cd94832f2921ffe7e59fea984`; its tree
+equals reviewed PR head `f0233d80f7629f6b623d3a28654cc1f8d1ba5838`, and all299
+captured app hashes match the verified trial. Annotated `v0.26.0` tag object
+`d7aadf85461083aec4a4b28f2c51d81d6a03a111` targets that merge.
+[Tagged run39414920270](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270)
+uses the existing fresh build/audit/attestation/publication workflow. This request
+authorizes its public IPA, verification assets and release/change/delivery notes.
+iLoader remains unchanged, and physical helper/JIT/gameplay gates stay distinct.
 
 ## Verified unsigned test IPA
 
@@ -175,5 +211,5 @@ not close those physical gates. The existing restricted GitHub build environment
 accepts the established `codex/actions-release` trial branch, main and version
 tags; no environment access expansion is needed for a source trial. After the local checks, the owner explicitly authorizes “Push/build Cabrillo
 only”: commit/push as hmcneill46, open a Cabrillo PR and run the existing unsigned
-trial workflow. No57 version tag or public Release is authorized. The owner
+trial workflow. The subsequent merge/publication authorization is recorded above. The owner
 explicitly reiterates that nothing should be changed or submitted to iLoader.

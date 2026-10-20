@@ -1,6 +1,29 @@
 # Cabrillo development
 
-## Verified integrated StikJIT trial —20 October, build57
+## Published v0.26.0 / build57 —20 October2026
+
+The owner explicitly requests merging PR7 and publishing the new release.
+[PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7) is merged at
+`93415b48ac1c855cd94832f2921ffe7e59fea984`; annotated `v0.26.0` targets that merge.
+[Tagged run39414920270](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270)
+passes all six jobs: fresh compilation with official SDK acquisition, package
+checks, all five attestations, separate Ubuntu verification and publication.
+The [public Release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
+has all five assets; each independently downloads without authentication and
+passes API digests/checksums and exact tag/source/workflow/run attestations.
+
+The immutable `artifacts/cabrillo-v0.26.0-release` kit matches all 299 captured
+trial source hashes and all 153 dependency hashes. Actual 199 DLLs pass 434
+metadata checks matching the hosted audit, full NLua RSA/tamper checks and 14
+native/managed numeric comparisons. The six unsigned helper/framework files,
+licences, scripts and host/helper isolation also pass independent inspection.
+Release IPA:21,038,042 bytes; SHA256:
+`02f60ba0262ea5a76e395f8ce9088169cd9c8388bf2b24a29e4e67fef6a43f08`.
+Preserve both this release kit and the original trial kit. All 299 captured app
+inputs remain frozen; use58 for new implementation. Publication adds no physical
+Feather/helper/DDI/JIT/gameplay acceptance. No iLoader change or submission occurs.
+
+## Retained integrated StikJIT trial —20 October, build57
 
 The owner requests Built-in StikJIT as the recommended default, automatic JIT
 before Run Celeste, retained existing providers, a visible Run icon, tool-placed
@@ -37,11 +60,11 @@ of backups and the package.
 On20 October, after local implementation/checks, the owner explicitly approves
 “Push/build Cabrillo only”: commit/push as hmcneill46, open a Cabrillo PR and run
 the existing workflow for an unsigned test IPA. They then explicitly reiterate
-that iLoader must not be changed or receive any submission. This does not
-authorize a57 version tag or public Release. Record hosted delivery separately;
-no physical helper/JIT acceptance is inferred.
+that iLoader must not be changed or receive any submission. That trial approval
+does not cover a version tag or Release; the subsequent publication request is
+recorded below. No physical helper/JIT acceptance is inferred.
 
-Draft [PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7) contains source
+[PR7](https://github.com/hmcneill46/cabrillo-celeste/pull/7) contains source
 `0f08fc64083d539fdba9f1b78fd79bb41e516048`, pushed as hmcneill46 to the existing
 `codex/actions-release` trial branch. [Run39406495715](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715)
 passes fresh managed/native/official-SDK packaging, audits, all five attestations
@@ -54,7 +77,17 @@ exact source/run attestations. IPA21,038,013bytes; SHA256
 `c45c0f5067c95ce4422e8def19c6595e078f03f8d52b1061d6d7754428a5a76f`.
 All299 captured57 inputs and the kit are frozen; use58 for new app implementation.
 Documentation-only delivery updates preserve those inputs. Actual Feather helper
-registration/DDI/JIT/gameplay remain pending; no iLoader write or57 Release.
+registration/DDI/JIT/gameplay remain pending. No iLoader write occurred.
+
+On20 October the owner explicitly requests merging PR7 and publishing the new
+release. This authorizes the reviewed merge, annotated `v0.26.0`, the existing
+tagged release workflow, public IPA/verification assets and change/delivery
+notes. PR7 is merged at `93415b48ac1c855cd94832f2921ffe7e59fea984`; all299 captured
+app hashes match the verified trial. Annotated tag object
+`d7aadf85461083aec4a4b28f2c51d81d6a03a111` targets that merge. Publication runs
+under [39414920270](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270).
+Preserve all299 inputs and both previous kits; use58 for implementation. iLoader
+changes/submissions remain forbidden, and publication adds no phone JIT pass.
 
 Start a fresh development chat with [HANDOFF.md](HANDOFF.md). It records the
 accepted build32 phone fallback, accepted build35 iPad base-game run, accepted build36 phone base-game/Motion Smoothing runtime gate, delivered

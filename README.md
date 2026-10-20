@@ -17,22 +17,25 @@ under [Releases](https://github.com/hmcneill46/cabrillo-celeste/releases).
 Normal pushes run source checks; a maintainer chooses when to publish a version
 tag. Manual trial builds produce downloadable Actions artifacts without a Release.
 
-**[Download Cabrillo 0.25.1 / build 56](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.25.1/Cabrillo-0.25.1-unsigned.ipa)** ·
-[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.25.1).
-The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39375179251) passes
+**[Download Cabrillo 0.26.0 / build 57](https://github.com/hmcneill46/cabrillo-celeste/releases/download/v0.26.0/Cabrillo-0.26.0-unsigned.ipa)** ·
+[Release page and verification files](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0).
+The [tagged GitHub Actions run](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270) passes
 fresh compilation, package audits, all five attestations, separate verification
 and publication. All five Release assets independently download without sign-in
 and pass checksums/API digests and exact tag/source/workflow/run verification.
 Release assets persist beyond temporary Actions artifacts.
 
-Version0.25.1/build56 updates Everest to stable1.6642.0 and adds general recovery
-of moved mod downloads, current mirror metadata and matching dependency rules.
-The phone trial confirms game ZIP copying and all52 Strawberry Jam archives
-installed successfully, including the exact tested FemtoHelper archive. The
-Feather import repair, save/profile paths, JIT routes and Shortcut49 are retained.
-All274 tested app source inputs and151 dependency hashes stay frozen for the
-release rebuild. See [change notes](CHANGELOG.md) and
-[the verification report](docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md).
+Version 0.26.0 / build 57 adds recommended Built-in StikJIT for new standalone
+iOS 17.4+ installations. Run Celeste prepares and enables JIT with visible progress,
+then launches after native checks and known debugger detach. Manual pairing-file
+import, actual local-tunnel readiness and a visible, centered Run icon are included.
+Existing saved JIT choices, external methods and LiveContainer support remain.
+
+Stable Everest 1.6642.0, the dependency-download and Feather import repairs,
+save/profile paths and Shortcut49 are retained. All 299 captured trial sources
+and 153 dependency hashes match the release; StikJIT's upstream prebuilt idevice
+library is explicitly disclosed. See [change notes](CHANGELOG.md) and
+[the verification report](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md).
 
 You need **iOS15 or later, a compatible installation/JIT setup, and your own
 Celeste FNA1.4.0.0 game ZIP**. The IPA contains no original/prepared Celeste game
@@ -49,17 +52,19 @@ FMOD, .NET/NuGet binaries and signed Shortcut resources are declared inputs;
 this is not a claim that every dependency is compiled from source or that separate
 builds are byte-identical. See [how releases work and how to verify a download](docs/RELEASING.md).
 
-## Built-in JIT in development
+## Built-in JIT setup
 
 [Build57 /0.26.0](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) adds integrated
 StikJIT for supported standalone installations: connect the local VPN, import
 your pairing file and press Run Celeste. Cabrillo shows preparation progress and
 verifies JIT before launching. Existing saved JIT choices and LiveContainer
 methods remain available. Manual pairing import also works when a tool does not
-yet recognize Cabrillo. The [verified unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
-requires GitHub sign-in and expires3 November. Phone helper/JIT acceptance is
-pending; the public Release above remains0.25.1. See [building instructions](docs/BUILDING.md) and the report's
-signing, iLoader and physical-test limits.
+yet recognize Cabrillo. Sign with debugging permission, preserve the embedded
+helper extension, enable Developer Mode and use a valid pairing file. Built-in
+JIT requires standalone iOS 17.4+; LiveContainer keeps its existing methods.
+The public release passes build/package checks; physical helper/JIT acceptance
+remains separate. See [building instructions](docs/BUILDING.md) and the report's
+signing and setup details. No iLoader changes are required.
 
 ## Home Screen launch in development
 

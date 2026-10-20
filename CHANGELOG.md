@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.26.0 · unreleased development
+## 0.26.0 · 20 October 2026
 
 - Add recommended Built-in StikJIT for new standalone iOS17.4+ setups, keeping saved JIT provider choices and every existing method.
 - Let Run Celeste prepare and enable JIT with progress, then launch only after helper completion, native checks and verified debugger detach.
@@ -11,9 +11,10 @@
 Built-in JIT requires a compatible signed helper, debugging permission, Developer
 Mode, pairing and LocalDevVPN or a compatible tunnel. LiveContainer keeps its
 existing providers. Cabrillo does not require iLoader recognition; manual pairing import works
-independently. The [verified unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39406495715/artifacts/12257984521)
-is available with GitHub sign-in until3 November. Physical helper/JIT acceptance
-and a public Release remain pending. See [the build57 report](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md).
+independently. The [public release](https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0)
+includes the unsigned IPA and verification files, available without sign-in.
+Physical helper/JIT acceptance remains separate. See
+[the build57 report](docs/ios-jit/INTEGRATED_STIKJIT_BUILD_57.md).
 
 ## 0.25.1 · 20 October 2026
 

@@ -2,8 +2,8 @@
   "schema": 1,
   "build_number": "57",
   "version": "0.26.0",
-  "updated_utc": "2026-10-20T10:41:18.975733+00:00",
-  "status": "PASS_HOSTED_AND_INDEPENDENT_DOWNLOADED_KIT_AWAITING_PHYSICAL_HELPER_JIT",
+  "updated_utc": "2026-10-20T11:52:49.318809+00:00",
+  "status": "PASS_PUBLIC_V0260_RELEASE_AND_INDEPENDENT_VERIFICATION_AWAITING_PHYSICAL_HELPER_JIT",
   "preserved_build56_inputs": 274,
   "checks": {
     "native_controls": {
@@ -118,11 +118,11 @@
   "real_jit_executed": false,
   "hosted_build_run": true,
   "github_writes_performed": true,
-  "public_release_created": false,
+  "public_release_created": true,
   "owner_approval": {
     "cabrillo_commit_push_pr_unsigned_trial": true,
     "iloader_changes_or_submission": false,
-    "version_tag_or_public_release": false
+    "version_tag_or_public_release": true
   },
   "preserved_build57_inputs": 299,
   "hosted_trial": {
@@ -177,10 +177,113 @@
   "publication": {
     "author": "hmcneill46 <57508980+hmcneill46@users.noreply.github.com>",
     "branch": "codex/actions-release",
-    "draft_pr": "https://github.com/hmcneill46/cabrillo-celeste/pull/7",
+    "draft_pr": null,
     "iloader_changed": false,
     "iloader_submission": false,
-    "tag_created": false,
-    "release_created": false
+    "tag_created": true,
+    "release_created": true,
+    "merged_pr": "https://github.com/hmcneill46/cabrillo-celeste/pull/7",
+    "merge_commit": "93415b48ac1c855cd94832f2921ffe7e59fea984",
+    "tag": "v0.26.0",
+    "tag_object": "d7aadf85461083aec4a4b28f2c51d81d6a03a111",
+    "release_workflow_run": "39414920270",
+    "release_url": "https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0",
+    "latest": true,
+    "delivery_branch": "main"
+  },
+  "published_release": {
+    "source_commit": "93415b48ac1c855cd94832f2921ffe7e59fea984",
+    "source_ref": "refs/tags/v0.26.0",
+    "tag": "v0.26.0",
+    "tag_object": "d7aadf85461083aec4a4b28f2c51d81d6a03a111",
+    "run_id": "39414920270",
+    "run_attempt": "1",
+    "workflow_event": "push",
+    "run_url": "https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39414920270",
+    "workflow_status": "success",
+    "all_six_jobs_pass": true,
+    "release_url": "https://github.com/hmcneill46/cabrillo-celeste/releases/tag/v0.26.0",
+    "kit": "artifacts/cabrillo-v0.26.0-release",
+    "ipa_bytes": 21038042,
+    "ipa_sha256": "02f60ba0262ea5a76e395f8ce9088169cd9c8388bf2b24a29e4e67fef6a43f08",
+    "captured_sources": 299,
+    "exact_trial_dependency_hashes": 153,
+    "retained56_sources": 274,
+    "retained56_dependencies": 151,
+    "managed_dlls": 199,
+    "managed_metadata_checks": 434,
+    "guarded_numeric_comparisons": 14,
+    "guarded_numeric_assertions": 156,
+    "helper_framework_runtime_files": 6,
+    "attestations": 5,
+    "anonymous_public_downloads": 5,
+    "kit_files": {
+      "BUILD_PROVENANCE.json": {
+        "bytes": 115368,
+        "sha256": "ed0ab53dd942cc5ab1c4dacd9b7ade755cfefd2e2179957730b118a805f89252"
+      },
+      "Cabrillo-0.26.0-unsigned.ipa": {
+        "bytes": 21038042,
+        "sha256": "02f60ba0262ea5a76e395f8ce9088169cd9c8388bf2b24a29e4e67fef6a43f08"
+      },
+      "PACKAGE_AUDIT.json": {
+        "bytes": 680,
+        "sha256": "150f2a75b3011b89e6bb655863bc4f381b81479cf3d38f2831f452fd53f9f080"
+      },
+      "RELEASE_NOTES.md": {
+        "bytes": 2404,
+        "sha256": "a5c6c698a9ccd9f55df4531b1dc0b4d7ab66912329f0986c1be045c560e2709e"
+      },
+      "SHA256SUMS": {
+        "bytes": 351,
+        "sha256": "487f9b4a725d394083ac987bab597dbe8d955dc1c8a52b97a1e0783ffba219d0"
+      }
+    },
+    "physical_device_tested": false,
+    "real_jit_executed": false,
+    "checks": {
+      "anonymous_download": {
+        "receipt": ".build/cabrillo-v0.26.0-release/download-receipt.json",
+        "sha256": "676a1126db794fce3f6ea988a00a68460dfeb935c4c6543da288bf9d5f616f6f",
+        "status": "PASS_ANONYMOUS_PUBLIC_RELEASE_KIT_DOWNLOAD"
+      },
+      "pipeline_allowlist": {
+        "receipt": ".build/cabrillo-v0.26.0-release/pipeline-allowlist.json",
+        "sha256": "6f535ef27de5c34456bc6244d19d0e3e0a9609e733a48af39f121006256c7355",
+        "status": "PASS_RELEASE_KIT_ALLOWLIST"
+      },
+      "source_identity": {
+        "receipt": ".build/cabrillo-v0.26.0-release/source-identity.json",
+        "sha256": "cfe59c396c30032a79c9042a9c53e7b43ee8d2765886a36551157443064dcbde",
+        "status": "PASS_TAGGED_V0260_SOURCE_IDENTITY_AND_TRIAL_PARITY"
+      },
+      "anonymous_publication": {
+        "receipt": ".build/cabrillo-v0.26.0-release/anonymous-publication/receipt.json",
+        "sha256": "bd625af209aee137d0cfcad3c77058ce4c9d4de346ba23c00e0edcd7e68b6a8b",
+        "status": "PASS_TAGGED_V0260_ANONYMOUS_PUBLICATION"
+      },
+      "managed_components": {
+        "receipt": ".build/cabrillo-v0.26.0-release/managed-audit/receipt.json",
+        "sha256": "87413e9e7658f3926305983aff02f6343cfa1b8b0f9361536f1f6c0af8d88b55",
+        "status": "PASS_TAGGED_V0260_PACKAGED_MANAGED_AND_STRONG_NAME"
+      },
+      "version_parity": {
+        "receipt": ".build/cabrillo-v0.26.0-release/version-parity/receipt.json",
+        "sha256": "0d566a7ae03567f791ef752a1ea04bae4dc28795e05c33216fc5457573e389d0",
+        "status": "PASS_TAGGED_V0260_ACTUAL_RUNTIME_VERSION_PARITY"
+      },
+      "attestations": {
+        "receipt": ".build/cabrillo-v0.26.0-release/attestations/receipt.json",
+        "sha256": "985cc2adcf361d7a398306103afb9eae37177292c7be1fc25fcd874f2b3b5ace",
+        "status": "PASS_ALL_FIVE_HOSTED_ATTESTATIONS"
+      },
+      "independent_consolidated": {
+        "receipt": ".build/cabrillo-v0.26.0-release/independent-final-verification.json",
+        "sha256": "24cc1a001dd629e61805a8877a36570c7e303f94af25b79142c68000ede323b8",
+        "status": "PASS_INDEPENDENT_TAGGED_V0260_RELEASE_AUDITS"
+      }
+    },
+    "run_status_receipt": ".build/cabrillo-v0.26.0-release/run-status-final.json",
+    "run_status_receipt_sha256": "daf65f1f98c2fe09efcd25eda0fd9a023367993c6ac0e36a5ee976ea3c9417e1"
   }
 }
