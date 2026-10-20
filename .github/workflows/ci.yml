@@ -54,13 +54,15 @@ jobs:
       - name: Verify bundled signed Shortcuts against their public source
         run: python3 tools/verify_release_shortcuts.py --output .build/ci/signed-shortcuts.json
       - name: Compile current native source and run 119 checks
-        run: python3 tools/ci/check_native_profiles.py --lane launcher-owned-game
+        run: python3 tools/ci/check_dependency56_profiles.py
       - name: Check build50 shortcut ordering and recovery (host only)
         run: python3 tools/ci/check_native_shortcuts.py
       - name: Check signing-aware Files picker policy and runtime hooks
         run: python3 tools/check_document_picker_compatibility.py --work .build/ci/signing-picker-policy
-      - name: Compile build54 production launcher for iOS15 and later
-        run: python3 tools/check_copy_picker_compile.py --work .build/ci/copy-picker-compile
+      - name: Check dependency mirror integrity and runtime-version boundaries
+        run: python3 tools/check_dependency56_native.py --work .build/ci/dependency56-controls
+      - name: Compile build56 production launcher for iOS15 and later
+        run: python3 tools/check_dependency56_compile.py --work .build/ci/dependency56-compile
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: native-profile-check-reports
@@ -70,6 +72,8 @@ jobs:
             .build/ci/native-profiles/receipt.json
             .build/ci/native-profiles/results/results.json
             .build/ci/signing-picker-policy/receipt.json
-            .build/ci/copy-picker-compile/receipt.json
+            .build/ci/dependency56-compile/receipt.json
+            .build/ci/dependency56-controls/receipt.json
+            .build/ci/dependency56-controls/*/results/results.json
           if-no-files-found: error
           retention-days: 14

@@ -4,14 +4,70 @@
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current source recipe is [release/public54.json](../release/public54.json),
-version0.24.3/build54. It adds copy-based game/mod imports to the accepted build50
-launcher with exact53 signing adaptation, freshly compiled managed/native runtime
-and shortcut49. [Build54's report](ios-jit/COPY_PICKER_BUILD_54.md) distinguishes
-its checks from phone acceptance. The owner confirms54 game-ZIP import and
-explicitly requests public v0.24.3 Release publication with change notes on
-19 October2026. This authorizes the source/notes merge, version tag and existing
-tagged release workflow; the earlier trial-only restriction is superseded.
+The current development recipe is [release/public56.json](../release/public56.json),
+version0.25.1/build56. It adds bounded recovery of moved mod archives, native
+`MirrorName` handling and matching required/optional dependency alias rules.
+Every recovered download must pass the original reviewed size, hash and module
+versions. It retains stable Everest1.6642.0, the build54 Feather picker repair,
+and the same native/.NET/NuGet/FMOD/Shortcut49 dependency pins as55.
+[Build56's report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) records the completed
+local and hosted checks. The owner approves its source/unsigned trial and then
+explicitly requests merging PR6 and publishing0.25.1 on20 October. Physical
+gameplay/JIT acceptance remains separate from the accepted installer/publication.
+Commits resolve to `hmcneill46` for both author and committer. Published v0.24.3 is below.
+
+## Unsigned0.25.1/build56 trial —20 October2026
+
+[Run39371266102](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102) passes all five active jobs at
+`9e1f6cc4838e7b8aaff1ce86d57e307a5e84abee`, ref
+`refs/heads/codex/actions-release`, attempt1. Official SDK acquisition, fresh
+managed/native compilation, package audits, all five attestations and separate
+Ubuntu verification pass. Release publication is skipped.
+
+The [five-file unsigned kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102/artifacts/12241274430)
+requires GitHub sign-in and expires3 November2026 at05:04:01 UTC. Its independent
+download at `artifacts/cabrillo-build56-hosted` verifies all274 captured source
+hashes, all151 unchanged55 dependency hashes, original bundle ID/copy imports,
+exact compatibility archives and signed49 Shortcuts. The actual199 DLLs pass434
+metadata checks matching the hosted audit exactly, full NLua RSA strong-name
+verification with tamper controls, and14 numeric dependency comparisons against
+the production Swift rules. No game, adapter or original Everest initializer runs.
+
+IPA bytes:18,784,686. SHA256:
+`b9e0fa34a9163ad0024f4ff2ff02d10290716537deb6629b0e4ead33946d3fe0`.
+Freeze all274 captured56 app inputs and the kit; use57 for new app implementation.
+Physical gameplay/JIT, first/cached preparation, saves/lifecycle and earlier
+separate iPad/120Hz gates remain distinct. See
+[the56 report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) and its evidence ledger.
+
+## Unsigned0.25.0/build55 trial —19 October2026
+
+[Run39320628794](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794)
+passes all five active jobs at source `e1e78a3511df5642537a75d86ae46e98e0411f34`,
+ref `refs/heads/codex/actions-release`, attempt1. Official SDK acquisition, fresh
+managed/native compilation, package audit, all five attestations and separate
+Ubuntu verification pass. The publication job is skipped; no55 version tag or
+Release is created. Source attribution resolves to `hmcneill46` for both author
+and committer.
+
+The [five-file test artifact](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/artifacts/12221245338)
+requires GitHub sign-in and expires2 November2026 at20:48:01 UTC. The independently
+downloaded kit in `artifacts/cabrillo-build55-hosted` verifies checksums,261
+captured app source hashes,151 dependency hashes with only Everest changed,
+original bundle ID, copy imports and signed49 Shortcuts. All five attestations
+verify the exact source/ref/workflow and hosted run identity. Its199 compiled
+managed DLLs pass434 metadata checks, with a byte-identical independent/hosted
+audit report. Hosted wrong-version and stale-recipe controls pass. Original game
+input pins/source ID are identical to published54, while preparation tool hashes
+select a new cache generation.
+
+IPA bytes:18,765,294. SHA256:
+`abd79be029902c301778f8b11044484d00cedc07988f14b3243cf42cde8b04cd`.
+Freeze all261 captured app inputs and this kit; use56 for new implementation.
+These checks execute the metadata auditor, not the game or iOS JIT. First/cached
+preparation, mods and physical gameplay/save/lifecycle acceptance remain pending.
+See [the build55 report](ios-jit/EVEREST_6642_BUILD_55.md) and
+[draft PR6](https://github.com/hmcneill46/cabrillo-celeste/pull/6).
 
 ## Published release: v0.24.3 —19 October2026
 

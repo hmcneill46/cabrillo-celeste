@@ -1,6 +1,8 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated19 October for copy-based Files imports and v0.24.3 publication,
+Written 14 September 2026; updated20 October for the verified build56 general download repair,
+the verified Everest6642/build55 trial,
+copy-based Files imports and v0.24.3 publication,
 following30 September FMOD clarification after source publication and USB shortcut testing,
 iOS15/iPad support, the
 build36 Motion Smoothing correction, build37 Everest upgrade and build38 owned-game
@@ -8,6 +10,103 @@ preparation, for a fresh development chat opened in
 `/Users/harrymcneill/Projects/Cabrillo`. Read this and [AGENTS.md](AGENTS.md) first.
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
+
+## General dependency download repair —19–20 October, build56
+
+The owner requests the FemtoHelper download repair and explicitly requires a
+general solution for moved downloads, plus agreement between actual Everest and
+native dependency/version checks. The completed source is in
+`launcher-dependency-downloads`, Cabrillo0.25.1/build56, retaining stable1.6642.0.
+All261 captured55 inputs stay frozen. Read
+`docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md` and its evidence ledger for current
+checks. Final100 Python,119 save/profile,321 dependency controls and actual iOS
+compilation pass. The final host installation verifies all52 Strawberry Jam
+archives and232 checks with seeded public cache, then a separate uncached real
+1776026→1838255 recovery passes14 assertions. Original fresh52-download baseline
+is retained separately. [Hosted run39371266102](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39371266102)
+passes fresh managed/native compilation, official SDK acquisition, package audits,
+all five attestations and independent Ubuntu verification. The downloaded kit
+verifies all274 captured sources,151 exact55 dependency hashes,199 DLLs/434 metadata
+checks, full NLua strong-name signature and14 actual56/native version comparisons.
+IPA SHA256 `b9e0fa34a9163ad0024f4ff2ff02d10290716537deb6629b0e4ead33946d3fe0`.
+All274 captured56 app inputs and `artifacts/cabrillo-build56-hosted` are frozen;
+use57 for new app implementation. Physical gameplay/JIT remains untested for56.
+
+On20 October the owner confirms “Yep all works now!” The attached exact56
+diagnostics match all274 hosted source hashes on physical iOS27.0.1. Copy-mode
+game ZIP import stages875,540,825 bytes; all52 Strawberry Jam archives verify and
+install, and a52-change receipt commits successfully. FemtoHelper1.15.22 uses
+1838255 with the exact tested SHA256. No storage error is reported. This closes
+the phone downloader defect. The export contains no JIT/preparation/gameplay/
+save/Quit events, so those separate runtime gates remain. Diagnostics SHA256:
+`d8a2d67212a30d4cba221fddf829f28946370eac6836c2bf872bf2b99455eef7`. Raw evidence stays ignored in
+`.private/device-evidence/2026-10-20/build56-owner-install`.
+
+The supplied exact55 diagnostics show33/52 archives verified, then
+FemtoHelper1.15.22 oldfile1776026 fails; no mod transaction commits. The official
+archived file1838255 has identical11,103,153 bytes/SHA256
+`5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419`.
+The56 metadata relocates that link without changing tested helper contents.
+General recovery must use bounded authoritative listings and preserve the exact
+reviewed archive identity. The native overlay also carries current MirrorName
+metadata and aligns required/optional API alias handling with upstream Everest.
+Keep the original bundle ID, copy imports, save/profile paths, JIT and Shortcut49.
+
+On20 October, after the local fix/checks completed, the owner explicitly answers
+“Go for it” to committing/pushing tested56 as `hmcneill46`, updating existing
+draft PR6 and running the existing workflow for an unsigned test IPA. This
+includes the repair's source, validation/delivery notes and scoped build fixes.
+The owner then confirms the phone installer and explicitly requests on20 October:
+“merge the pr and get the latest as a release”. This authorizes merging PR6,
+annotated `v0.25.1` at the reviewed merged source, the existing tagged release
+workflow, public IPA/verification assets and release/change/delivery notes.
+Preserve published history and all274 frozen app inputs. Physical gameplay/JIT/
+save/lifecycle gates stay distinct from the accepted phone installer.
+
+## Everest stable1.6642 update —19 October, build55
+
+The owner requests latest Everest after the54 release. Official stable1.6642.0
+was released17 October2026; exact source is
+`5abd7876821223c20711c1844a5187321d6e904c` (7 commits/17 files after6580).
+The new55/v0.25.0 lane is `launcher-everest6642`, with separate source recipes,
+public dependency lock and synchronized native/managed runtime identities.
+Existing platform/loading patches apply, and all253 captured54 inputs remain
+exact. Retain the Feather import fix, original bundle ID, JIT/native pins and
+Shortcut49. Original game source identity stays unchanged; new patch-tool hashes
+select a new prepared-code generation without replacing saves or originals.
+
+Local89 Python controls,119 native save/profile checks and the actual arm64/iOS15
+production compile pass. [Hosted trial39320628794](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794)
+passes all five active jobs at `e1e78a3511df5642537a75d86ae46e98e0411f34`:
+fresh public-source managed/native compilation, official SDK acquisition, full
+package audit, all five attestations and independent Ubuntu verification. The
+publication job is skipped. The [five-file test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/artifacts/12221245338)
+requires GitHub sign-in and expires2 November2026 at20:48:01 UTC.
+
+The independent download at `artifacts/cabrillo-build55-hosted` verifies all261
+captured app inputs,151 dependencies with only the Everest source hash changed,
+original bundle ID/copy-import metadata and signed49 Shortcuts. The actual199
+packaged managed DLLs pass434 metadata checks; the local audit report exactly
+matches the fresh hosted report. Wrong compiled version and stale tool-hash
+controls pass. Actual55 and published54 recipes retain identical original input
+pins/source identity, with a new preparation generation. No game, adapter,
+native runtime or device JIT was executed by those metadata checks.
+
+IPA bytes:18,765,294; SHA256:
+`abd79be029902c301778f8b11044484d00cedc07988f14b3243cf42cde8b04cd`.
+Read `docs/ios-jit/EVEREST_6642_BUILD_55.md` and its ledger for exact receipts.
+All261 captured55 app inputs and the kit are frozen; next implementation56.
+Draft [PR6](https://github.com/hmcneill46/cabrillo-celeste/pull/6) contains the
+source upgrade. No55 tag/Release or new physical game/JIT result is claimed.
+First/cached preparation, mods, gameplay/save/resume/normal Quit/native return
+remain device gates. Keep published54 and all earlier device evidence distinct.
+
+The owner also asks pushes/commits to use `hmcneill46`. The authenticated account
+is confirmed and repository-local author/committer use
+`57508980+hmcneill46@users.noreply.github.com`. Git's prior automatic name/email
+did not grant repository access; do not rewrite published release history.
+The source commit's author and committer both resolve to `hmcneill46` in GitHub's
+API. Repository-local identity changes leave global Git settings unchanged.
 
 ## Copy-based Files imports —19 October, build54 repair
 

@@ -1,6 +1,6 @@
 # Building Cabrillo
 
-## Current source build: version0.24.1 / build52
+## Current development source build: version0.25.1 / build56
 
 Use a Mac with **Xcode26.6 /17F113**, iPhoneOS SDK26.5, Python3.12 or newer,
 CMake, Git and **Mono6.14.1** with its `sn` strong-name tool. Both Intel and Apple Silicon SDK downloads are pinned in the
@@ -8,7 +8,7 @@ public dependency lock. The NuGet host lock switches only the pinned macOS app-h
 package between Intel and Apple Silicon; the iOS target remains arm64. Set `DEVELOPER_DIR` if Xcode is installed elsewhere:
 
 ```sh
-export DEVELOPER_DIR='/Applications/Xcode-26.6.app/Contents/Developer'
+export DEVELOPER_DIR='/Applications/Xcode.app/Contents/Developer'
 ```
 
 Mono supplies NLua's required assembly-signing tool; the iOS Mono runtime is
@@ -35,7 +35,7 @@ records the distinction and the maintainer's separate CI download setup.
 From this checkout, choose fresh work and output paths:
 
 ```sh
-python3 tools/build_release54.py --work .build/my-source-build \
+python3 tools/build_release56.py --work .build/my-source-build \
   --output .build/my-source-build/output \
   --fmod-sdk '/path/to/FMOD Programmers API'
 ```
@@ -44,17 +44,20 @@ This downloads and verifies pinned public source archives, .NET SDK/runtime pack
 and NuGet inputs, rebuilds the managed/native dependencies, prepares the FMOD
 runtime link inputs, verifies the signed Shortcut resources and compiles the app.
 It consumes no Celeste game ZIP, historical compiled capsule or old checkout.
-The launcher uses the accepted build50 source plus build54's copy-based Files
-picker overlay; `release/app54` supplies the new identity and pins the frozen
-base and exact53 compatibility module. Earlier source lanes and all254 captured53
-app inputs stay frozen. See [the build54 report](ios-jit/COPY_PICKER_BUILD_54.md)
-for the confirmed53 phone failure, successful existing backup-selector comparison,
-new source checks, successful54 package/local verification and separate phone
-game-import gate. All253 captured54 app inputs are frozen; use55 for new app changes.
+The launcher retains build50's base and build54's copy-based Files picker, with
+the retained `launcher-everest6642` overlay supplying synchronized runtime identities
+and the versioned platform patch for official stable1.6642. The new
+`launcher-dependency-downloads` overlay provides bounded exact-archive relocation,
+current mirror metadata and matching required/optional dependency aliases. `release/app56` pins
+all261 captured55 inputs. The source dependency pins remain exact55;
+the native/.NET/NuGet/FMOD/Shortcut pins remain unchanged. See
+[the dependency repair report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) for checks and their scope.
+Changed preparation-tool hashes select a new code-cache generation from retained
+originals; users keep their bundle ID, profiles and saves.
 
 The `output` directory contains `Cabrillo.ipa`, `BUILD_PROVENANCE.json`,
 `PACKAGE_AUDIT.json` and `RELEASE_NOTES.md`. Internal logs, symbols and receipts
-are under `artifacts/release52-my-source-build`; dependency work stays beneath
+are under `artifacts/release56-my-source-build`; dependency work stays beneath
 `.build/my-source-build`. Do not upload whole work/SDK directories. Local builds
 do not acquire a GitHub-hosted attestation. The release workflow additionally
 requires a clean selected commit, produces an allowlisted checksummed kit and
@@ -75,9 +78,20 @@ From a public clone on macOS with Xcode26.6 /17F113:
 ```sh
 python3 tools/ci/check_public_repository.py
 python3 -m unittest discover -s tools/tests -v
-python3 tools/ci/check_native_profiles.py --lane launcher-owned-game
+python3 tools/ci/check_dependency56_profiles.py
+python3 tools/check_dependency56_native.py
+python3 tools/check_dependency56_compile.py
 python3 tools/ci/check_native_shortcuts.py
 python3 tools/verify_release_shortcuts.py
+```
+
+The separate live mod-install check downloads about1.24GB of public Strawberry
+Jam dependencies into an isolated host profile, verifies their actual ZIP
+metadata and transaction, tests cache reuse, and exercises recovery from the
+removed FemtoHelper URL. It runs no game or mod DLL and requires no game ZIP:
+
+```sh
+python3 tools/check_dependency56_live.py --work .build/my-live-dependency-check
 ```
 
 The native wrappers honor `DEVELOPER_DIR` and require fresh work directories;
