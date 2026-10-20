@@ -13,7 +13,7 @@ import zipfile
 from release import ROOT, public_path, sha, validate_ref, verify_ipa
 from fetch_fmod_sdk import ARCHIVE_SHA256
 
-CONFIG = 'release/public58.json'
+CONFIG = 'release/public59.json'
 BUILD_BRANCHES = {'refs/heads/main', 'refs/heads/codex/actions-release'}
 
 
@@ -24,7 +24,7 @@ def readiness(root):
     identity = json.loads(public_path(root, config['lane'] + '/BuildIdentity.json').read_text())
     if any(config[k] != identity[k] for k in ['version', 'build_number']):
         raise ValueError('Release manifest differs from its app identity')
-    if config.get('public_build_script') != 'tools/build_release58.py':
+    if config.get('public_build_script') != 'tools/build_release59.py':
         raise ValueError('Only the fresh public source recipe is eligible')
     public_path(root, config['public_build_script'])
     public_path(root, config['shortcuts'])
@@ -125,19 +125,31 @@ def verify_integrated_provenance(value):
 
 def verify_integrated_kit(directory, version):
     """Inspect sealed helper bytes again on the independent verification host."""
-    from verify_unified58 import verify_parts
+    from verify_input_fixes59 import verify_parts, verify_component_rows
     import plistlib
+    if version != '0.29.1':
+        raise ValueError('The active verification recipe requires build59 /0.29.1')
     provenance = json.loads((directory / 'BUILD_PROVENANCE.json').read_text())
+    if (provenance.get('version') != version or provenance.get('build_number') != '59'):
+        raise ValueError('Release kit provenance does not identify build59')
     verify_integrated_provenance(provenance)
     ipa = directory / ('Cabrillo-' + version + '-unsigned.ipa')
-    verify_ipa(ipa, version, '58')
+    if provenance.get('ipa_sha256') != sha(ipa):
+        raise ValueError('Release kit IPA differs from its provenance')
+    verify_ipa(ipa, version, '59')
     prefix = 'Payload/CelesteJITEverest.app/'
     with zipfile.ZipFile(ipa) as archive:
         read = lambda name: archive.read(prefix + name)
-        verify_parts(plistlib.loads(read('Info.plist')), json.loads(read('BuildInfo.json')), read('CelesteJITEverest'),
+        info = json.loads(read('BuildInfo.json'))
+        if info.get('version') != version or info.get('build_number') != '59':
+            raise ValueError('Packaged app metadata does not identify build59')
+        verify_parts(plistlib.loads(read('Info.plist')), info, read('CelesteJITEverest'),
                      plistlib.loads(read('PlugIns/CabrilloJITHelper.appex/Info.plist')), read('PlugIns/CabrilloJITHelper.appex/CabrilloJITHelper'),
                      plistlib.loads(read('Frameworks/StikJIT.framework/Info.plist')), read('Frameworks/StikJIT.framework/StikJIT'),
                      json.loads(read('licenses/StikJIT/UPSTREAM.json')))
+        verify_component_rows(provenance['integrated_jit']['helper_files'],
+                              [name[len(prefix):] for name in archive.namelist()
+                               if name.startswith((prefix + 'Frameworks/', prefix + 'PlugIns/'))])
         for name, digest in provenance['integrated_jit']['helper_files'].items():
             if (not isinstance(name, str) or '..' in Path(name).parts or name.startswith('/')
                     or not name.startswith(('StikJIT.framework/', 'CabrilloJITHelper.appex/'))):
@@ -189,7 +201,7 @@ def build(root, ref, publish, sdk, download):
     verify_ipa(out / 'Cabrillo.ipa', config['version'], config['build_number'])
     provenance = json.loads((out / 'BUILD_PROVENANCE.json').read_text())
     verify_provenance(provenance, result['source_commit'], os.environ.get('GITHUB_ACTIONS') == 'true')
-    if config['build_number'] == '58':
+    if config['build_number'] == '59':
         verify_integrated_provenance(provenance)
     if subprocess.check_output(['git', 'status', '--porcelain'], cwd=root).strip():
         raise ValueError('Build changed public source')
@@ -226,7 +238,7 @@ def main():
         elif args.command == 'verify-kit':
             config, _ = readiness(ROOT)
             verify_kit(args.kit.absolute(), config['version'])
-            if config['build_number'] == '58':
+            if config['build_number'] == '59':
                 verify_integrated_kit(args.kit.absolute(), config['version'])
             result = dict(status='PASS_RELEASE_KIT_ALLOWLIST')
         else:

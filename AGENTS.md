@@ -1,5 +1,27 @@
 # Cabrillo development
 
+## Local input fixes59 — 20 October2026
+
+The owner requests local fixes and regression testing for both defects found
+following the rebase to `3f5c6bb61f7d47d8569e7e457272348bd5ebf236`:
+touch resizing can invalidate a small control against a screen edge, and the
+controller light replay can miss native resume when game updates are paused.
+Implementation is isolated in `launcher-input-fixes59`, **0.29.1/build59**;
+read [INPUT_FIXES_BUILD_59.md](docs/ios-jit/INPUT_FIXES_BUILD_59.md) and its evidence
+ledger for checks and limits. The final resize matrix, controller lifecycle/IL
+checks, 152 Python tests, 14 fresh iPhone/iPad UI cases and actual host/helper
+compilation pass. The tablet editor UI uses the recorded landscapeRight retry;
+no final landscapeLeft completion is inferred. All345 captured58 and299
+captured57 inputs remain frozen and explicitly pinned. After reviewing the local results, the owner
+explicitly requests committing/pushing the fixes as hmcneill46 and building an
+unsigned test IPA. This authorizes the scoped source/workflow changes, test
+branch push and existing hosted workflow with publish=false. It does not
+authorize a version tag, public Release or iLoader change. Build59 hosted
+compilation and independent kit verification are pending; no physical-controller
+or device acceptance is claimed.
+Use60 for implementation only after59 is captured in a delivered immutable kit;
+the current local59 lane may still receive corrections before delivery.
+
 ## Published v0.29.0 / build58 — 20 October 2026
 
 The owner requested preserving and merging this Mac's work with published

@@ -1,0 +1,325 @@
+{
+  "schema": 1,
+  "date": "2026-10-20",
+  "version": "0.29.1",
+  "build_number": 59,
+  "status": "PASS_LOCAL_BUILD59_REPAIR_AND_REGRESSION_CHECKS",
+  "base_commit": "3f5c6bb61f7d47d8569e7e457272348bd5ebf236",
+  "preservation": {
+    "published58_source_inputs": 345,
+    "published57_source_inputs": 299,
+    "dependency_inputs": 153,
+    "everest_version": "1.6642.0"
+  },
+  "checks": {
+    "python": 152,
+    "resize_assertions": 779994,
+    "resize_cases": 201978,
+    "extracted58_resize_negative_controls": 3,
+    "controller59_lifecycle": 28,
+    "controller58_regression_controls": 2,
+    "compiled_adapter_il_checks": 5,
+    "old_adapter_il_rejected": true,
+    "native_managed_wiring_checks": 3,
+    "swift_policy": 59,
+    "managed_touch_policy": 2743,
+    "compiled_adapter_csharp_inputs": 20,
+    "retained58_package_metadata_compatibility": 51,
+    "resize_schema_tolerance_cases": 150,
+    "save_transfer": 119,
+    "shortcut_native": 185,
+    "shortcut_branches": 36,
+    "shortcut_broken_urls": 15,
+    "compiled_host_swift": 46,
+    "compiled_host_objc": 15,
+    "compiled_cyaml": 6,
+    "jit_pairing_native": 186,
+    "picker_native": 12,
+    "dependency_native": 321,
+    "retained_game_input_native": 14,
+    "compiled_launcher_swift": 25,
+    "compiled_zipfoundation_swift": 21,
+    "baseline_ui_cases": 8,
+    "baseline_ui_tests": 2,
+    "baseline_ui_device_families": 2,
+    "resize_wide_schema_cases": 600,
+    "independent_final_schema_round_trips": 560,
+    "phone_pad_exact_prior_behavior_cases": 350,
+    "ui_result_validator_adversarial_tests": 27,
+    "final_fresh_touch_phone_tests": 4,
+    "final_fresh_combined_phone_tests": 3,
+    "final_fresh_touch_pad_tests": 4,
+    "final_fresh_combined_pad_tests": 3,
+    "final_ui_unique_device_method_pairs": 14,
+    "final_ui_screenshots": 28,
+    "final_ui_successful_guarded_runs": 4
+  },
+  "evidence": {
+    "controller_lifecycle_and_actual_adapter_il": {
+      "path": ".build/controller59-resume-c/receipt.json",
+      "sha256": "ff07bc8ce29a8b5d57fa681fd3cfa094ef021c09a1fac151fc81911d313cfbc1",
+      "status": "PASS_CONTROLLER59_RESUME_REGRESSION"
+    },
+    "adapter_compilation_audit": {
+      "path": ".build/input59-adapter-d/receipt.json",
+      "sha256": "572e1b32e47ff6daffd947ca95c676d840f2c21375ad07af672dca2264c6d207",
+      "status": "PASS_INPUT_FIXES59_ADAPTER_COMPILATION_AUDIT"
+    },
+    "touch_policies": {
+      "path": ".build/input59-policy-a/receipt.json",
+      "sha256": "ff91eb30503e90b34d85fef508efafb1f6f1dc5c42680c403c40f8116279bcfd",
+      "status": "PASS_TOUCH_GEOMETRY_AND_OWNERSHIP"
+    },
+    "python": {
+      "path": ".build/input59-python-final.json",
+      "sha256": "72c1e992b06f5df1fbf19ac9a9ef4eca8b8bdf76c54c08470de48ff0b512db16",
+      "status": "PASS_REPOSITORY_PYTHON_TESTS"
+    },
+    "stikjit_helper_compilation": {
+      "path": ".build/input59-helper-b/receipt.json",
+      "sha256": "328730db3b4f1e336beb19ae3ec196500ec304000e34b106f0aacbeaa6fadc6b",
+      "status": "PASS_PINNED_STIKJIT_HELPER_BUILD"
+    },
+    "retained_input_metadata_compatibility": {
+      "path": ".build/input59-retained-metadata-a/receipt.json",
+      "sha256": "90ecab0aa97282c3c703837034028c876cf03b9384e06bf2f8d66f40a1cc7207",
+      "status": "PASS_PACKAGED_NATIVE_RETAINED_INPUTS"
+    },
+    "saves_and_shortcuts": {
+      "path": ".build/input59-saves-shortcuts-b/receipt.json",
+      "sha256": "10f7596a9352729b49759a21c09022c4703cd9959df06d88b0774a51eba5a39f",
+      "status": "PASS_INPUT_FIXES59_SAVES_AND_SHORTCUTS"
+    },
+    "build58_actual_ui_negative_control": {
+      "path": ".build/input59-ui-baseline-c/receipt.json",
+      "sha256": "4c30cad6bc9f2c2659804e922bb840cdc296999f1d0c8bf494cc330dcba264a2",
+      "status": "PASS_BUILD58_EXPECTED_INVALID_RESIZE_UI_CONTROL"
+    },
+    "source_preservation": {
+      "path": ".build/input59-preservation.json",
+      "sha256": "4eb7f0ec8c8c793277965877d671cf5c2d3bc4d8b7142d764280f9b169ffa679",
+      "status": "PASS_BUILD59_LOCAL_SOURCE_PRESERVATION"
+    },
+    "simulator_recovery": {
+      "path": ".build/input59-ui-recovery/receipt.json",
+      "sha256": "2d3968293a646373d0c4b41f8977df2e6770511a8da79161cb76a02801518ed6",
+      "status": "PASS_SCOPED_SIMULATOR_SERVICE_RECOVERY_AND_OWNED_CLEANUP"
+    },
+    "final_resize_matrix": {
+      "path": ".build/input59-resize-wide-b/receipt.json",
+      "sha256": "c08150a35ad9f8f30cd91213986e67c8271a4b2cee1ad2e6972249c41bded4e5",
+      "status": "PASS_BUILD59_RESIZE_AND_BUILD58_NEGATIVE_CONTROL"
+    },
+    "independent_final_resize": {
+      "path": ".build/review59-wide-resize-fixed-b/receipt.json",
+      "sha256": "78d6107d2bf06f037a446c3279f4ddd151fe14eb922eadc66d865fbbe9164c5a",
+      "status": "PASS_WIDE_SCHEMA_AND_UNCHANGED_PHONE_PAD_RANGE"
+    },
+    "strict_ui_validator_controls": {
+      "path": ".build/input59-ui-validator-final/receipt.json",
+      "sha256": "37d9fdf415fa7e1d3d30427ce7c950522f2fc2521304c9e3afac4a6a41693c96",
+      "status": "PASS_27_UI_RESULT_VALIDATOR_ADVERSARIAL_CONTROLS"
+    },
+    "independent_strict_ui_validator_controls": {
+      "path": ".build/review59-ui-validator/final-public-tests/receipt.json",
+      "sha256": "fe93b6edaba10a1735b0414cb15ca59f91da094463035cb870e19d7c3cf1eaa6",
+      "status": "PASS_27_PUBLIC_UI_RESULT_GUARD_CONTROLS"
+    },
+    "prior_wide_candidate_regression": {
+      "path": ".build/input59-wide-negative688-a/receipt.json",
+      "sha256": "0cb151f6ca61ed5141ebbca6d85264d1a8b59e6e8c442aee80e30f033d52d05b",
+      "status": "PASS_EXPECTED_OLD688_WIDE_SCHEMA_FAILURES"
+    },
+    "production_ios15_host_compilation": {
+      "path": ".build/input59-production-d/receipt.json",
+      "sha256": "0a3f8d61c38b911cde2590fe33cdffddd7efc29e091ff2471f6e58bfc909ea2e",
+      "status": "PASS_INPUT_FIXES59_PRODUCTION_IOS_LAUNCHER_COMPILE"
+    },
+    "final_phone_touch_ui": {
+      "path": ".build/input59-ui-final-phone-a/receipt.json",
+      "sha256": "78a245c3d0718b437f7be7d9beb5ae237ab8c37c7dbbdc151e7fc9093f15082c",
+      "status": "PASS_BUILD59_TOUCH_EDITOR_UI"
+    },
+    "native_controls": {
+      "path": ".build/input59-native-d/receipt.json",
+      "sha256": "a287ac8550e2c2d3c5a84ab5b860b58001744ff6721000e8d658e584dc1b161f",
+      "status": "PASS_INPUT_FIXES59_NATIVE_CONTROLS"
+    },
+    "final_phone_combined_ui": {
+      "path": ".build/input59-ui-final-unified-phone-a/receipt.json",
+      "sha256": "dffe6283c15e092ee1defc05db09698f0c857d05333438731933be1fc37bb7bf",
+      "status": "PASS_BUILD59_TOUCH_EDITOR_UI"
+    },
+    "final_pad_touch_ui": {
+      "path": ".build/input59-ui-final-pad-b/receipt.json",
+      "sha256": "209ed6359ac61e08cd6eed75fdd05e3feeee9016a585e52239d4b88378bf0b27",
+      "status": "PASS_BUILD59_TOUCH_EDITOR_UI"
+    },
+    "final_pad_combined_ui": {
+      "path": ".build/input59-ui-final-unified-pad-a/receipt.json",
+      "sha256": "2afbe50a2ba32ba2d63700b14fce3bbae749bf88398a041dcd8641bff0be7df1",
+      "status": "PASS_BUILD59_TOUCH_EDITOR_UI"
+    },
+    "final14_ui_aggregate": {
+      "path": ".build/input59-final-ui-summary-b/receipt.json",
+      "sha256": "568f145be19a14c27f587ab3024f35845cce64ecda0fd0661dac7f97c015be22",
+      "status": "PASS_FINAL_BUILD59_14_APPLE_UI_TESTS"
+    },
+    "final_simulator_cleanup": {
+      "path": ".build/input59-final-ui-summary-b/final-cleanup.json",
+      "sha256": "a039c65659ef68ac296f9bad4fc3432934f8e8a3f8e3f062ed9f1ae49274251f",
+      "status": "PASS_FINAL_OWNED_UI_PROCESS_AND_SIMULATOR_CLEANUP"
+    },
+    "final_public_source_audit": {
+      "path": ".build/input59-source-final.json",
+      "sha256": "ce00db6e0688c701661e958e22d48040cef21a4061a849f9dba158ba1dff377c",
+      "status": "PASS_PUBLIC_SOURCE_CHECKOUT"
+    }
+  },
+  "scope": {
+    "local_only": true,
+    "github_writes": false,
+    "default_release_pipeline_build": 58,
+    "ipa_built": false,
+    "fresh_dependency_managed_payload_built": false,
+    "adapter_compilation_uses_explicit_public58_references": true,
+    "game_or_adapter_executed": false,
+    "physical_device_tested": false,
+    "physical_controller_led_tested": false,
+    "helper_registered_or_executed": false,
+    "phone_modified": false,
+    "iloader_changed": false,
+    "simulator_service_recovered_with_all14_nonowned_devices_shutdown_and_unchanged": true,
+    "prior_candidate_ui14_is_superseded_by_fresh_final_runs": true,
+    "final_touch_pad_editor_orientation": "landscapeRight in ignored compiled fixture",
+    "final_touch_phone_and_both_combined_suites_orientation": "landscapeLeft",
+    "final_ui_has_portrait_transitions": true,
+    "final_tablet_touch_landscapeLeft_completion_claimed": false,
+    "final_ui_compiled_fixture_and_source_guards_completed": true,
+    "final_ui_test_owned_simulators_deleted": true,
+    "final_ui_nonowned14_devices_unchanged_shutdown": true
+  },
+  "pending": [],
+  "superseded_attempts": [
+    {
+      "path": ".build/input59-production-a",
+      "reason": "All source compilation commands completed; final source-drift guard correctly rejected concurrent build-selection changes."
+    },
+    {
+      "path": ".build/input59-production-b",
+      "reason": "Passed first policy revision; superseded by rounding-tolerance correction."
+    },
+    {
+      "path": ".build/input59-native-a",
+      "reason": "Final source-drift guard correctly rejected concurrent build-selection changes."
+    },
+    {
+      "path": ".build/input59-native-b",
+      "reason": "Swift compiler rejected TouchEditor source modification during compilation; rerun with stable corrected sources."
+    },
+    {
+      "path": ".build/input59-adapter-a",
+      "reason": "Audit-only dependency allowlist incorrectly requested an absent public DLL; corrected."
+    },
+    {
+      "path": ".build/input59-adapter-b",
+      "reason": "Audit runner accidentally included two Main methods; corrected test-tool source selection."
+    },
+    {
+      "path": ".build/input59-adapter-c",
+      "reason": "Public metadata dependency allowlist omitted Jdenticon; corrected exact public dependency list."
+    },
+    {
+      "path": ".build/input59-ui-baseline-a",
+      "reason": "Rounded edge clipped test selection before resize; test selection changed to actual editor menu."
+    },
+    {
+      "path": ".build/input59-ui-baseline-b",
+      "reason": "All four failure types reproduced, but test incorrectly required Undo after every edge gesture; baseline limitation retained."
+    },
+    {
+      "path": ".build/input59-ui-positive-a",
+      "reason": "Interrupted only owned test process after rounding-tolerance correction; final corrected-source suite rerun."
+    },
+    {
+      "path": ".build/input59-ui-positive-b",
+      "reason": "Phone4 tests passed; iPad interrupted during system UI quiescence waits. Aggregate run not counted as pass; non-edge phone3 results are source-bound separately."
+    },
+    {
+      "path": ".build/input59-ui-final-pad-a/interrupted-receipt.json",
+      "reason": "Final-source landscapeLeft attempt interrupted during repeated app animation-idle waits. No aggregate pass; individual passing cases excluded from final count."
+    }
+  ],
+  "prior_candidate_evidence": {
+    "resize_policy": {
+      "path": ".build/input59-resize-d/receipt.json",
+      "sha256": "5788ec35adda98d09449080abdc0ea325def05337ece4c711cd2e1b4c12e251f",
+      "status": "PASS_BUILD59_RESIZE_AND_BUILD58_NEGATIVE_CONTROL"
+    },
+    "independent_rounded_import_review": {
+      "path": ".build/review59-touch-tolerance-fixed/receipt.json",
+      "sha256": "db701b058be1e07b771f7bc93936dd706f4e5512664fb1e2c99174a00bcb731c",
+      "status": "PASS_INDEPENDENT_BUILD59_TOLERANCE_REGRESSION"
+    },
+    "production_ios15_host_compilation": {
+      "path": ".build/input59-production-c/receipt.json",
+      "sha256": "14685d2918c4f0f2ab0f8f1bf21dd94ceeeeb84f508d9ee96c4fd6ad4f936408",
+      "status": "PASS_INPUT_FIXES59_PRODUCTION_IOS_LAUNCHER_COMPILE"
+    },
+    "native_controls": {
+      "path": ".build/input59-native-c/receipt.json",
+      "sha256": "e3a75b38ce65e2aaa36f18481294d749b9ff3e6949809656e695b46efa2aacac",
+      "status": "PASS_INPUT_FIXES59_NATIVE_CONTROLS"
+    },
+    "critical_edge_and_same_draft_edit_ui": {
+      "path": ".build/input59-ui-edge-final-a/receipt.json",
+      "sha256": "840900fd69f414ba79756ecdee1e1447b58d58614fca91a3f6788bfb58cb83c9",
+      "status": "PASS_BUILD59_TOUCH_EDITOR_UI"
+    },
+    "partial_phone_ui_only": {
+      "path": ".build/input59-ui-positive-b/partial-receipt.json",
+      "sha256": "d30dd2bba06204e093ba3e684d7fb702fc8c4876c477b70f3fc6314cfaf5a515",
+      "status": "PARTIAL_PHONE4_PASS_PAD_INTERRUPTED_NO_AGGREGATE_PASS"
+    },
+    "unified_launcher_ui": {
+      "path": ".build/input59-ui-unified-final-a/receipt.json",
+      "sha256": "9e86ed2dbf530ff231c7a97eebb32142080e0a45fdc62eed029ac82a255c91b6",
+      "status": "PASS_BUILD59_TOUCH_EDITOR_UI"
+    },
+    "fresh_pad_editor_normals": {
+      "path": ".build/input59-ui-normal-pad-final-a/receipt.json",
+      "sha256": "f3efcff8e444486ce1a3e6b05c17fbb5cefbf9099fb34f06e7481362190b7f09",
+      "status": "PASS_BUILD59_TOUCH_EDITOR_UI"
+    },
+    "retained_phone_source_compatibility": {
+      "path": ".build/review59-ui-validator/source-compatibility.json",
+      "sha256": "b11726e2ecf302018e5000fdc7be9c3559bc82d868950c6af1917918961d6622",
+      "status": "PASS_RETAINED_PHONE_NORMAL_CASE_SOURCE_COMPATIBILITY"
+    },
+    "independent_strict14_ui_results": {
+      "path": ".build/review59-ui-validator/combined14-receipt.json",
+      "sha256": "626d198a9572912f0c75c98bd5aa59fe1094ee77bd9cc47d0c678759bd7bfc92",
+      "status": "PASS_14_UNIQUE_BUILD59_UI_CASES_FROM_SCOPED_RUNS"
+    },
+    "stikjit_helper_compilation": {
+      "path": ".build/input59-helper-a/receipt.json",
+      "sha256": "5f7d79554ab3d3bda6aeee0b293a0e6c07646cb865502054605fb97bb2e6f80b",
+      "status": "PASS_PINNED_STIKJIT_HELPER_BUILD"
+    },
+    "saves_and_shortcuts": {
+      "path": ".build/input59-saves-shortcuts-a/receipt.json",
+      "sha256": "ccb2447386d43d53151e334da9de3b9d744b20ed41e248ad3bd11aa4372ef1a3",
+      "status": "PASS_INPUT_FIXES59_SAVES_AND_SHORTCUTS"
+    }
+  },
+  "final_touch_editor_sha256": "af8c648a9b69618b368c80d2f43e09f5c74488bbf98b753c745aa3068e67333a",
+  "visual_inspection": {
+    "final_phone_and_pad": [
+      "right-edge Save enabled",
+      "circle-edge Save enabled",
+      "same-draft circle Move/Undo"
+    ],
+    "final_phone_combined": "touch and built-in StikJIT settings coexist",
+    "scope": "Representative stored screenshots inspected; no physical device or JIT result."
+  }
+}

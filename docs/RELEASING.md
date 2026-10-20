@@ -1,11 +1,19 @@
 # CI and public IPA releases
 
+Local0.29.1/build59 repairs touch edge resizing and controller light replay after
+native resume. Its recipe and regression checks are described in
+[the build59 report](ios-jit/INPUT_FIXES_BUILD_59.md). It is unpublished; the
+trial workflow now selects59. The owner explicitly authorizes committing and
+pushing the fixes as hmcneill46 and running the existing workflow for a test IPA.
+Use `publish=false`; no version tag or public Release is authorized.
+
 ## What the workflow builds
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current public release recipe is [release/public58.json](../release/public58.json),
-version 0.29.0 / build58. It combines both computers' development: game-file
+The current trial recipe is [release/public59.json](../release/public59.json),
+version 0.29.1 / build59. It fixes touch edge resizing and controller colour replay
+after native resume, while retaining both computers' development: game-file
 compatibility, full-display touch editing and live input preferences, alongside
 stable Everest1.6642, copy-based imports, dependency recovery and Built-in StikJIT.
 The host retains iOS15 and the isolated helper requires iOS17.4. The FMOD SDK

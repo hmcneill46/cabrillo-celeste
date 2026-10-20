@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import check_unified58_managed as audit
 import compile_release58 as build
 import compile_unified58 as managed
+from release_pipeline import readiness
 
 
 class UnifiedCatalogueTests(unittest.TestCase):
@@ -106,6 +107,14 @@ class UnifiedCatalogueTests(unittest.TestCase):
 class UnifiedSelectionTests(unittest.TestCase):
     def setUp(self):
         self.lock = build.read_json(build.IDENTITY / 'Dependencies.json')
+
+    def test_historical58_recipe_remains_independent_of_active59_trial(self):
+        active, _ = readiness(build.ROOT)
+        historical = build.read_json(build.ROOT / 'release/public58.json')
+        self.assertEqual((active['version'], active['build_number']), ('0.29.1', '59'))
+        self.assertEqual(active['public_build_script'], 'tools/build_release59.py')
+        self.assertEqual((historical['version'], historical['build_number']), ('0.29.0', '58'))
+        self.assertEqual(historical['public_build_script'], 'tools/build_release58.py')
 
     def test_new_identity_preserves_installed_data_container(self):
         config = build.read_json(build.ROOT / 'release/public58.json')
