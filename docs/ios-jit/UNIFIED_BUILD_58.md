@@ -35,7 +35,7 @@ Existing captured-source hashes refer to their original commit and retain their
 meaning; one build's recipe must never be substituted for the other.
 
 The new identity0.29.0/build58 is higher than both series and avoids reusing a
-frozen identity. Source changes belong in the new lane. Original game files,
+frozen identity. Integration changes were isolated in the new lane. Original game files,
 FMOD SDKs, credentials, private logs and compiled test artifacts remain excluded
 from Git. The protected FMOD download/runtime packaging boundary is retained.
 

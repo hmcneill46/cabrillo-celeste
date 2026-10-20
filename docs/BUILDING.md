@@ -3,9 +3,10 @@
 ## Combined development build: version0.29.0 / build58
 
 Build58 combines the local game-input/touch-editor work with published v0.26.0.
-Validation is in progress; [the integration report](ios-jit/UNIFIED_BUILD_58.md)
-records current results and the eventual test IPA. No new public Release is
-authorized until the owner tests it.
+Host, simulator and package checks pass; [the integration report](ios-jit/UNIFIED_BUILD_58.md)
+records the verified local test IPA and iCloud delivery. Physical acceptance
+remains pending. A public Release requires the owner's separate request after
+testing. Build58 is frozen; use59 for new app implementation.
 
 Use the same Xcode, Mono and developer-owned FMOD prerequisites below:
 

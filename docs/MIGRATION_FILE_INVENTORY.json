@@ -25,8 +25,8 @@
     },
     "AGENTS.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "7cfdc652595f060b46ffa9e64bc2086fe30bc9449f1019f1da59cc9c9b50cc57",
-      "bytes": 78067
+      "sha256": "d8a8cbf373fc60186d1325fc6648474ca6aa1ae0fd4cc00d827bf9d3b219c91b",
+      "bytes": 78081
     },
     "CHANGELOG.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
@@ -35,8 +35,8 @@
     },
     "HANDOFF.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "a55eac16a75e39ff386a8d979f7c0404833726b03a8b0c7f6ba6e9ec9b293a99",
-      "bytes": 141558
+      "sha256": "b929b7420e654a7b26f21fbe48505415afcd089a8dda0d7ce886bcb15a4f7d9e",
+      "bytes": 141572
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -56,8 +56,8 @@
     },
     "docs/BUILDING.md": {
       "reason": "Owner-authorized v0.26.0/build57 merge/publication, permanent downloads, exact hosted and independent release verification, preserved trial inputs and separate physical JIT gates",
-      "sha256": "29d16992c0a04ec3717eee5d5a4ebfebf4e8921d75597939d05892ca545d2760",
-      "bytes": 47777
+      "sha256": "052fbc5ef7b65d02bd518360fe367d795b8e3e172f00854b87ba47138d7d50ff",
+      "bytes": 47895
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -1037,8 +1037,8 @@
       "bytes": 4294
     },
     "docs/ios-jit/UNIFIED_BUILD_58.md": {
-      "bytes": 11106,
-      "sha256": "1b137c82cf0251abd40cb017a4c997fec63c2e9382f64c429425b9c8d0e6336e",
+      "bytes": 11118,
+      "sha256": "8676a83dc12e8b069f67a3a6a337f286b96e22fe5131221f2e95bd0e30aa8703",
       "reason": "Combined Cabrillo build58 source, integration tests, packaging or documentation; excludes game content, SDK components and credentials."
     },
     "docs/ios-jit/UNIFIED_BUILD_58_EVIDENCE.json": {

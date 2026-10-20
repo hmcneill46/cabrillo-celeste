@@ -46,7 +46,7 @@ Build numbers53–57 were allocated independently on both computers. Canonical
 release builders retain the published versions. Their conflicting local versions
 are preserved exactly in `ee475e3`; local feature lanes and evidence remain in the
 merged tree. Historical source hashes refer to that original checkout, not to a
-substitute recipe with the same number. Use58 for combined implementation.
+substitute recipe with the same number. Build58 is frozen; use59 for new implementation.
 
 
 ## Published v0.26.0 / build57 —20 October2026
