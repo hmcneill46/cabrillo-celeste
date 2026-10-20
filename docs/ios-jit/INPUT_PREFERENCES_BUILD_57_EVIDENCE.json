@@ -1,0 +1,158 @@
+{
+  "schema": 1,
+  "status": "PASS_HOST_SIMULATOR_PACKAGE_AWAITING_PHYSICAL_DEVICE",
+  "date": "2026-10-03",
+  "version": "0.28.0",
+  "build_number": 57,
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.28.0",
+    "build_number": "57",
+    "ipa_sha256": "7b8abb06247baa0ac1e1fa49535a50c34c5e8534dbd50ab3e5ad1368503fdf4b",
+    "bytes": 19039518,
+    "uuid": "60a957941b023b75ae9ec0c2fbb1249a",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": true,
+    "distribution_blockers": []
+  },
+  "checks": {
+    "swift": 59,
+    "managed_policy_and_geometry": 2743,
+    "ui_tests": 6,
+    "ui_devices": 2,
+    "full_host_runs": 3,
+    "input_preferences_per_run": 56,
+    "real_touch_per_run": 17,
+    "feather_gesture_per_run": 37,
+    "feather_game_per_run": 37,
+    "actual_grab_death_and_map_checks": 10,
+    "motion_combinations": 4,
+    "python": 59,
+    "prior_frozen_manifests": 18,
+    "frozen_inputs": 291
+  },
+  "scope": {
+    "coordinates": "full_display_including_outside_16_by_9",
+    "live_feather": true,
+    "original_grab_logic": true,
+    "per_input_modes": true,
+    "persistent_toggle_optional": true,
+    "persistent_latch_survives_actual_death_and_maps": true,
+    "persistent_latch_across_processes": false,
+    "controller_prompt_override": true,
+    "controller_identity": "selected_FNA_SDL_handle",
+    "virtual_controller_test": true,
+    "virtual_ps5_family_supplied_at_native_boundary": true,
+    "physical_dualsense_colours_tested": false,
+    "original_physics": true,
+    "physical_device_tested": false,
+    "earlier_device_gates_remain": true,
+    "build55_results": "empty_at_review",
+    "build56_results": "empty_at_review",
+    "new_github_write_authorized": false
+  },
+  "evidence": {
+    "managed": {
+      "path": ".build/input57-managed-c/receipt.json",
+      "sha256": "d98ee226139a67de456726084e233729349d6f5016ecea9d8995957e1f59a699"
+    },
+    "policy": {
+      "path": ".build/input57-policy-b/receipt.json",
+      "sha256": "93c0907a0defa506b589c8a65bd20637f0908ed190010b033915d1bd4bd34580"
+    },
+    "ui": {
+      "path": ".build/input57-ui-c/receipt.json",
+      "sha256": "9602130c3f62877239f32fba9ad3ea1f91aa618e5db714afdbd20e512c33951c"
+    },
+    "host": {
+      "path": ".build/input57-host-e/receipt.json",
+      "sha256": "3910346648d6acf8f301486ad97f2b274114ef7a2f93eafa88c2430f329f8750"
+    },
+    "grab_lifecycle": {
+      "path": ".build/input57-lifecycle-a/receipt.json",
+      "sha256": "6701d901c33dcd0559dfeb2613fcdccb98ac07b10deadbeaaf0a45c187c38d6e"
+    },
+    "motion_120_fancy": {
+      "path": ".build/input57-motion-d/receipt.json",
+      "sha256": "bac7aa77d65eba8356c6cc36828e15a507208e958d9e7eb5178c5340d00551fa"
+    },
+    "motion_other_three": {
+      "path": ".build/input57-motion-e/receipt.json",
+      "sha256": "687db3958386b5732ff71868e77c75dc658ea6d69db3180502c0f92da2c980e1"
+    },
+    "host_sdl": {
+      "path": ".build/input57-sdl-host/receipt.json",
+      "sha256": "04c8cc5a2a39aea5cbd416f32356851c42d154e3c35d1b1ed4a9f63081780329"
+    },
+    "native_dependencies": {
+      "path": ".build/release51-local/native/receipt.json",
+      "sha256": "c6dcf94da2ebd45154a0268f79e216c1e9f08b83b486d3332695a70debb58f62"
+    },
+    "fmod": {
+      "path": ".build/release51-local/fmod/receipt.json",
+      "sha256": "dedde2f62612477699fd2922cd73c10b9434fdcd2b9d1aa289c14a1d9f3aded5"
+    },
+    "package": {
+      "path": "artifacts/cabrillo-build57-final/verification.json",
+      "sha256": "1a36382064f38ff65ea95c7c9decafedd77567d5d72e15d82ab624869e1ccea4"
+    },
+    "independent": {
+      "path": "artifacts/cabrillo-build57-final/independent-verification.json",
+      "sha256": "823f642517e07cfe63736dd13745a5820652d92fad9a2baf88a9bf3662252690"
+    },
+    "frozen": {
+      "path": "artifacts/cabrillo-build57-final/frozen-source-manifest.json",
+      "sha256": "21e272d6af0374f6db7dd2db14ef59c0209a952e602b804fd840602d86b29835"
+    },
+    "prior_frozen": {
+      "path": "artifacts/cabrillo-build57-final/frozen-comparison.json",
+      "sha256": "951f27bd6d05f2df9c17239a753daec6481084d4b0660012885be3c61ee3949f"
+    },
+    "python": {
+      "path": "artifacts/cabrillo-build57-final/python-tests.log",
+      "sha256": "ae44be86816377cec07b0922a21643e962ad311cb1e34b63295a411656b69330"
+    },
+    "cloud": {
+      "path": "artifacts/cabrillo-build57-final/icloud-delivery.json",
+      "sha256": "58cec5970142cf16bb83cc09c71a7a93b267bcafd59b97d2cefc4516d51b6ba0"
+    },
+    "cloud_retirement": {
+      "path": "artifacts/cabrillo-build57-final/icloud-retirement.json",
+      "sha256": "ab6ae337038aa23fa9703b9b2360992b9fda9a50bfd9a225abc14b57307cca37"
+    },
+    "cloud_status": {
+      "path": "artifacts/cabrillo-build57-final/icloud-status-final.json",
+      "sha256": "ba8b58011b5db8abd08336d714c05b9c5e70ddd9e7aa3d10cc8e83e8c8a05479"
+    }
+  },
+  "retained_failed_trials": {
+    "motion_draw_timing_log": {
+      "path": ".build/input57-motion-a/120-Fast.log",
+      "sha256": "48e1b4d0184c89a8675ce6721f3e89165dc69eda31b8cd37d369f3817a306f63"
+    },
+    "dash_draw_timing_log": {
+      "path": ".build/input57-motion-repro/120-Fast.log",
+      "sha256": "f2facc96f1458fee81c7de272ac6c2116206118213030efd30a407906a290898"
+    },
+    "fancy_admission_log": {
+      "path": ".build/input57-motion-trace/120-Fancy.log",
+      "sha256": "dbd7beb8652420d7d2f6a5cd13a5a2783c0fd8d0409fdb48074e660425042fe3"
+    },
+    "resolution": "Motion Smoothing skips UpdateGrab between gameplay ticks. The final fixture runs inside an accepted original input update, follows VirtualButton lifecycle and counts original game updates. The application payload is unchanged."
+  },
+  "morro": {
+    "repository": "https://github.com/hmcneill46/morro-celeste",
+    "revision": "cc02b0cc697bd620c0dc864d4af3c60d79a95e85",
+    "license": "MIT"
+  },
+  "delivery": {
+    "files": 9,
+    "local_readback_verified": true,
+    "upload_confirmed": true,
+    "all_results_preserved": true,
+    "cloud_total_bytes": 993871336
+  }
+}

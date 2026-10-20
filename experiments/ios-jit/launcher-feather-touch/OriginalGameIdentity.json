@@ -1,0 +1,82 @@
+{
+  "legacy_source_id": "4b665aa3b550b262100dbe59512d5736379af0a5c4e0e6c0c277f10bcc50a09c",
+  "schema": 2,
+  "sources": [
+    {
+      "inputs": {
+        "Celeste.exe": {
+          "bytes": 2572800,
+          "sha256": "fd73f8a2311fa5737ded550cbad4b75c85b7686b36432f59185e940fcb65fcfe"
+        },
+        "FNA.dll": {
+          "bytes": 773632,
+          "sha256": "00349b572636c0ed4c97d4e4f74344b3450160c42d4a6b52bcf5e0f2d5193a31"
+        }
+      },
+      "kind": "empty-content",
+      "source_id": "7081d069dfe1fb7dbc4044a9c48a0cef433827e810785263fa97ff10a2be412c"
+    },
+    {
+      "inputs": {
+        "Celeste.Content.dll": {
+          "bytes": 3072,
+          "sha256": "0b8d6195992c8970e8602bf48a7bf89104b83a98e34a07dc0c18d01581711d15"
+        },
+        "Celeste.exe": {
+          "bytes": 2572800,
+          "sha256": "fd73f8a2311fa5737ded550cbad4b75c85b7686b36432f59185e940fcb65fcfe"
+        },
+        "FNA.dll": {
+          "bytes": 773632,
+          "sha256": "00349b572636c0ed4c97d4e4f74344b3450160c42d4a6b52bcf5e0f2d5193a31"
+        }
+      },
+      "kind": "standard",
+      "source_id": "4b665aa3b550b262100dbe59512d5736379af0a5c4e0e6c0c277f10bcc50a09c"
+    },
+    {
+      "inputs": {
+        "Celeste.Content.dll": {
+          "bytes": 3072,
+          "sha256": "0b8d6195992c8970e8602bf48a7bf89104b83a98e34a07dc0c18d01581711d15"
+        },
+        "Celeste.exe": {
+          "bytes": 2573824,
+          "sha256": "3ee734ec8c767f638e9a7c2cbc07109f0a0bf1eb1973dbe447e99144ca9e7dd9"
+        },
+        "FNA.dll": {
+          "bytes": 773632,
+          "sha256": "b6c7f5196fb06529329ba23f09ee7573653350f6d8210818af965d6b822cdcec"
+        },
+        "Steamworks.NET.dll": {
+          "bytes": 264704,
+          "sha256": "92c4679014e1cecd71ef90d910245f309a6297bea4f8799c814f98985487e001"
+        }
+      },
+      "kind": "steam",
+      "source_id": "0486c625a92b63f76135ae8ab6030b6d2851843297046c22ded07efe99206b67"
+    },
+    {
+      "inputs": {
+        "Celeste.Content.dll": {
+          "bytes": 3072,
+          "sha256": "0b8d6195992c8970e8602bf48a7bf89104b83a98e34a07dc0c18d01581711d15"
+        },
+        "Celeste.exe": {
+          "bytes": 2573824,
+          "sha256": "3ee734ec8c767f638e9a7c2cbc07109f0a0bf1eb1973dbe447e99144ca9e7dd9"
+        },
+        "FNA.dll": {
+          "bytes": 773632,
+          "sha256": "b6c7f5196fb06529329ba23f09ee7573653350f6d8210818af965d6b822cdcec"
+        },
+        "Steamworks.NET.dll": {
+          "bytes": 265216,
+          "sha256": "6c6b307e907294003014da3ed4610e362a9b6ee4093a20e514b0e23454da3085"
+        }
+      },
+      "kind": "steam",
+      "source_id": "7267928ef6c54cac43bc48ea794bd13a26e917d5e2e1b488956e499767ac83b0"
+    }
+  ]
+}

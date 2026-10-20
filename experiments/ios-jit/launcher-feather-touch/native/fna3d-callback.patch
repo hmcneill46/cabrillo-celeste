@@ -1,0 +1,119 @@
+--- a/src/FNA3D_Driver_Metal.c
++++ b/src/FNA3D_Driver_Metal.c
+@@ -1036,6 +1036,35 @@
+ 
+ 	METAL_INTERNAL_ResetBuffers(renderer);
+ 	METAL_INTERNAL_ResetTextures(renderer);
++}
++
++/* CJIT external-callback adaptation. A Metal frame's autorelease pool must
++ * finish before UIKit/AppKit drains the enclosing callback's pool. LoadContent,
++ * readback and suppressed draws can leave a frame open without Present().
++ * Submit that work without requesting a drawable or presenting another frame.
++ */
++static int32_t METAL_INTERNAL_EndCallback(MetalRenderer *renderer)
++{
++	if (renderer->shouldClearColor || renderer->shouldClearDepth || renderer->shouldClearStencil)
++	{
++		METAL_INTERNAL_UpdateRenderPass(renderer);
++	}
++	if (!renderer->frameInProgress)
++	{
++		return 0;
++	}
++	METAL_INTERNAL_EndPass(renderer);
++	mtlCommitCommandBuffer(renderer->commandBuffer);
++	objc_retain(renderer->commandBuffer);
++	renderer->committedCommandBuffer = renderer->commandBuffer;
++	renderer->commandBuffer = NULL;
++	objc_autoreleasePoolPop(renderer->pool);
++	renderer->pool = NULL;
++	METAL_INTERNAL_ResetBuffers(renderer);
++	METAL_INTERNAL_ResetTextures(renderer);
++	MOJOSHADER_mtlEndFrame();
++	renderer->frameInProgress = 0;
++	return 1;
+ }
+ 
+ /* Buffer Helper Functions */
+@@ -1956,8 +1985,16 @@
+ 	int32_t i;
+ 	MetalTexture *tex, *next;
+ 
+-	/* Stop rendering */
+-	METAL_INTERNAL_EndPass(renderer);
++	/* Complete callback-owned work and release the final in-flight buffer
++	 * before tearing down the renderer. This also balances error-path pools.
++	 */	
++	METAL_INTERNAL_EndCallback(renderer);
++	if (renderer->committedCommandBuffer != NULL)
++	{
++		mtlWaitUntilCompleted(renderer->committedCommandBuffer);
++		objc_release(renderer->committedCommandBuffer);
++		renderer->committedCommandBuffer = NULL;
++	}
+ 
+ 	/* Release depth stencil states */
+ 	for (i = 0; i < renderer->depthStencilStateCache.count; i += 1)
+@@ -2208,25 +2245,8 @@
+ 		);
+ 	}
+ 
+-	/* Commit the command buffer for presentation */
+ 	mtlPresentDrawable(renderer->commandBuffer, drawable);
+-	mtlCommitCommandBuffer(renderer->commandBuffer);
+-
+-	/* Track the committed command buffer */
+-	objc_retain(renderer->commandBuffer);
+-	renderer->committedCommandBuffer = renderer->commandBuffer;
+-	renderer->commandBuffer = NULL;
+-
+-	/* Release allocations from the past frame */
+-	objc_autoreleasePoolPop(renderer->pool);
+-
+-	/* Reset buffer and texture internal states */
+-	METAL_INTERNAL_ResetBuffers(renderer);
+-	METAL_INTERNAL_ResetTextures(renderer);
+-	MOJOSHADER_mtlEndFrame();
+-
+-	/* We're done here. */
+-	renderer->frameInProgress = 0;
++	METAL_INTERNAL_EndCallback(renderer);
+ }
+ 
+ /* Drawing */
+@@ -3035,6 +3055,14 @@
+ 	FNA3D_PresentationParameters *presentationParameters
+ ) {
+ 	MetalRenderer *renderer = (MetalRenderer*) driverData;
++	/* Realize clears while the old attachments are still alive. The new
++	 * framebuffer must never attempt to clear released backbuffer textures.
++	 */
++	if (renderer->shouldClearColor || renderer->shouldClearDepth || renderer->shouldClearStencil)
++	{
++		METAL_INTERNAL_UpdateRenderPass(renderer);
++	}
++	METAL_INTERNAL_EndPass(renderer);
+ 	METAL_INTERNAL_DestroyFramebuffer(renderer);
+ 	METAL_INTERNAL_CreateFramebuffer(
+ 		renderer,
+@@ -3044,6 +3072,19 @@
+ 		renderer,
+ 		presentationParameters->presentationInterval
+ 	);
++}
++
++/* Private CJIT bridge API; the upstream ABI and other drivers are unchanged.
++ * Return 1 for submitted work, 0 for an already closed frame, -1 for another
++ * backend. Call on the rendering thread before returning to the native loop.
++ */
++FNA3DAPI int32_t FNA3D_CJIT_EndCallback(FNA3D_Device *device)
++{
++	if (device == NULL || device->ResetBackbuffer != METAL_ResetBackbuffer)
++	{
++		return -1;
++	}
++	return METAL_INTERNAL_EndCallback((MetalRenderer*) device->driverData);
+ }
+ 
+ static void METAL_ReadBackbuffer(

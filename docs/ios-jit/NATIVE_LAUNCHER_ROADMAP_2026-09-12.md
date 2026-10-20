@@ -1,3 +1,15 @@
+## 3 October 2026 update — controls and input preferences
+
+Build56 delivers the SwiftUI touch editor with full-display placement, actual-size
+landscape editing, a16:9 game guide, split regions, duplicates and experimental
+swipe-to-dash. Build57 adds live feather/grab/prompt preferences, original Celeste
+grab semantics with per-input modes and optional persistent toggling, SDL controller
+recognition and light-colour replay. See [the controls guide](../TOUCH_CONTROLS.md)
+and [build57 evidence](INPUT_PREFERENCES_BUILD_57.md). Host/simulator checks and
+physical acceptance remain separate; the earlier physical save-manager/iPad and
+sustained120Hz gates are still open. Public workflows select52; no new GitHub
+publication is authorised for these local features.
+
 ## 26 September 2026 update
 
 The owner prioritized a Home Screen VPN/JIT shortcut after the game-free build38.

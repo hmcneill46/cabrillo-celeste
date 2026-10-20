@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "status": "PASS_HOST_SIMULATOR_PACKAGE_AWAITING_PHYSICAL_DEVICE",
+  "date": "2026-10-03",
+  "version": "0.27.0",
+  "build_number": 56,
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.27.0",
+    "build_number": "56",
+    "ipa_sha256": "b20ed0a6aafc40bf957f2be64411db80a71591dfd88f6206214037e6fffd9b96",
+    "bytes": 19020874,
+    "uuid": "51aa5e85c32d3b31a009555df9f88237",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": true,
+    "distribution_blockers": []
+  },
+  "checks": {
+    "swift": 45,
+    "managed_policy_and_geometry": 2740,
+    "ui_tests": 4,
+    "ui_devices": 2,
+    "full_host_runs": 3,
+    "real_input_per_run": 17,
+    "feather_gesture_per_run": 37,
+    "feather_game_per_run": 37,
+    "motion_combinations": 4,
+    "python": 59,
+    "prior_frozen_manifests": 17,
+    "frozen_inputs": 285
+  },
+  "scope": {
+    "coordinates": "full_display_including_outside_16_by_9",
+    "portrait": "detailed_editor",
+    "landscape": "actual_size_full_screen",
+    "default_swipe": false,
+    "original_physics": true,
+    "physical_device_tested": false,
+    "earlier_device_gates_remain": true,
+    "build55_results": "empty_at_review",
+    "new_github_write_authorized": false
+  },
+  "evidence": {
+    "managed": {
+      "path": ".build/touch56-managed-d/receipt.json",
+      "sha256": "0088d8502cf85fb6268c78567dd0fb82c190a9993a0f63c078475db2352e01a3"
+    },
+    "policy": {
+      "path": ".build/touch56-policy-e/receipt.json",
+      "sha256": "df641a8503b68299aed03b7a031058353671a0c036ddc1b417c8feb82bc6b90a"
+    },
+    "ui": {
+      "path": ".build/touch56-ui-h/receipt.json",
+      "sha256": "68d68a636e3cc702288a9da5c6956ccfdfdeb4621267dab99e0159649f0ede2b"
+    },
+    "host": {
+      "path": ".build/touch56-host-i/receipt.json",
+      "sha256": "79357155c33292999328c8c99c7476226aa3980f0741cd11707c6ca227c6c35e"
+    },
+    "motion": {
+      "path": ".build/touch56-motion-c/receipt.json",
+      "sha256": "26c98f64e28ec7543d63927036ba04e72166247b3cdc6bb5b02ac6dea2a5e8c3"
+    },
+    "native_dependencies": {
+      "path": ".build/release51-local/native/receipt.json",
+      "sha256": "c6dcf94da2ebd45154a0268f79e216c1e9f08b83b486d3332695a70debb58f62"
+    },
+    "fmod": {
+      "path": ".build/release51-local/fmod/receipt.json",
+      "sha256": "dedde2f62612477699fd2922cd73c10b9434fdcd2b9d1aa289c14a1d9f3aded5"
+    },
+    "package": {
+      "path": "artifacts/cabrillo-build56-final/verification.json",
+      "sha256": "60c9dae573a38f7873245120f9c3a9913fecc8d552ecb781f5db23d02a85e8d6"
+    },
+    "independent": {
+      "path": "artifacts/cabrillo-build56-final/independent-verification.json",
+      "sha256": "91e2b8db02cc684f82b3e8be1a6c28ea84747b13a52c27d584f2d6bb10712cba"
+    },
+    "frozen": {
+      "path": "artifacts/cabrillo-build56-final/frozen-source-manifest.json",
+      "sha256": "35f52fa04bae30f4f0d62ccd862aab7f9e5bc3c2faf7409e474bc227b7b66658"
+    },
+    "prior_frozen": {
+      "path": "artifacts/cabrillo-build56-final/frozen-comparison.json",
+      "sha256": "21aed1a6fc21602e6c052c0cfdaf812e4bea3e0eccefe52a6c3336578914cc77"
+    },
+    "python": {
+      "path": "artifacts/cabrillo-build56-final/python-tests.log",
+      "sha256": "e1ee202f4fac9fa267000463744873497b556b2bc3e6e3ab91378615688c96bb"
+    },
+    "cloud": {
+      "path": "artifacts/cabrillo-build56-final/icloud-delivery.json",
+      "sha256": "3e44f4bc360fa60bebf729c101e3c0ee21c2fd279a33142f07481beaef9f5430"
+    },
+    "cloud_retirement": {
+      "path": "artifacts/cabrillo-build56-final/icloud-retirement.json",
+      "sha256": "c5ee68f2a8ad567e4d818edbf6c0e0956abd72d44542ab105eacb5b3dec791bc"
+    },
+    "cloud_status": {
+      "path": "artifacts/cabrillo-build56-final/icloud-status-final.json",
+      "sha256": "c089070f3e748174191295ed575f3aa30d4a5d2041a2192a7a090a085b0e9e02"
+    }
+  },
+  "morro": {
+    "repository": "https://github.com/hmcneill46/morro-celeste",
+    "revision": "cc02b0cc697bd620c0dc864d4af3c60d79a95e85",
+    "license": "MIT"
+  },
+  "delivery": {
+    "files": 9,
+    "local_readback_verified": true,
+    "upload_confirmed": true,
+    "all_results_preserved": true,
+    "cloud_total_bytes": 998928055
+  }
+}

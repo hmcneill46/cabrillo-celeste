@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "status": "PASS_HOST_AND_PACKAGE_AWAITING_PHYSICAL_DEVICE",
+  "date": "2026-09-30",
+  "version": "0.25.0",
+  "build_number": 53,
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.25.0",
+    "build_number": "53",
+    "ipa_sha256": "3a0e4ec5b72e1e13d6a6f00db7bac0f7a7aa7bf8450ed28d9c3aaaecaec16f31",
+    "bytes": 18782511,
+    "uuid": "e5b972cc5ac736e2a391d9e8da7cf61a",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": true,
+    "distribution_blockers": []
+  },
+  "original_packages_verified": 9,
+  "input_combinations": 4,
+  "checks": {
+    "code_store": 19,
+    "input_matrix": 97,
+    "native_availability": 14,
+    "python": 59,
+    "cold_and_cached_gameplay_runs": 8,
+    "motion_callback_scenarios": 4,
+    "strawberry_jam_mod_cache_runs": 2
+  },
+  "evidence": {
+    "managed": {
+      "path": ".build/game-input53-managed-b/receipt.json",
+      "sha256": "4f6bbb5ba85ad2c816690a6837f7a5c741069e8c431b50aeef22c9a089ce9fec"
+    },
+    "native_dependencies": {
+      "path": ".build/release51-local/native/receipt.json",
+      "sha256": "c6dcf94da2ebd45154a0268f79e216c1e9f08b83b486d3332695a70debb58f62"
+    },
+    "fmod": {
+      "path": ".build/release51-local/fmod/receipt.json",
+      "sha256": "dedde2f62612477699fd2922cd73c10b9434fdcd2b9d1aa289c14a1d9f3aded5"
+    },
+    "store": {
+      "path": ".build/game-input53-store-d/receipt.json",
+      "sha256": "8ebf9282e17c1bbc304bc73cba40791681e15a77f57ee5d6dc82664bd99b0685"
+    },
+    "matrix": {
+      "path": ".build/game-input53-store-d/matrix.json",
+      "sha256": "309cc23b80c5e635f21c3adec2393682789e521636245d1f207d7e067ea9598e"
+    },
+    "native_availability": {
+      "path": ".build/game-input53-native-state-a/receipt.json",
+      "sha256": "70046e070e7a0e1f1565745644f6f75a4486eb5ffc063a897b16176d5a2f49b1"
+    },
+    "motion": {
+      "path": ".build/game-input53-motion-steam-a/receipt.json",
+      "sha256": "dbe12b5c7035930cc1ced20aabbdf02b8e6ff40c2f8e3ffad17b9012f3e778f4"
+    },
+    "strawberry_jam": {
+      "path": ".build/game-input53-sj-steam-a/receipt.json",
+      "sha256": "9ea01d1befa9d46da017dba951d9d7109ba1643cf452d4fe75ac77c7014bd688"
+    },
+    "package": {
+      "path": "artifacts/cabrillo-build53-final/verification.json",
+      "sha256": "196f233b001724dcbda6b6c2453881fc22bf9f492aa192dc9861d742d92a4f78"
+    },
+    "source_archive": {
+      "path": "artifacts/cabrillo-build53-final/frozen-source.tar.gz",
+      "sha256": "45eba51ebee2fb9dcf27a561b7789195c9e076bcc4823111fac65dec7c789599"
+    },
+    "source_manifest": {
+      "path": "artifacts/cabrillo-build53-final/frozen-source-manifest.json",
+      "sha256": "f867687156d018e6a86962becc09bbed4ac87eb3762c4ab4860266ffcbf86229"
+    },
+    "prior_frozen_comparison": {
+      "path": "artifacts/cabrillo-build53-final/frozen-comparison.json",
+      "sha256": "3ce1d280657abeb911678c40d34ff581de04a3ba25a56bc0c5a37a67c2502ac3"
+    },
+    "python_controls": {
+      "path": "artifacts/cabrillo-build53-final/python-tests.log",
+      "sha256": "08489484e1af75462f1d2c518f2f04307cb9ce5d19616f4f83c86ed6457d6e9d"
+    },
+    "cloud_delivery": {
+      "path": "artifacts/cabrillo-build53-final/icloud-delivery.json",
+      "sha256": "f78146e2e6563f2239796a61557b2411f3bcd2e7b2b0aed147f1a3d0e9437d71"
+    },
+    "host_standard-a": {
+      "path": ".build/game-input53-host-standard-a/receipt.json",
+      "sha256": "b0cc87c98a37c03d868e5034a4b79ae57e11ab859a93f6cc81c63e74d44fb428"
+    },
+    "host_epic-a": {
+      "path": ".build/game-input53-host-epic-a/receipt.json",
+      "sha256": "3430226656f071c1ac6deeea21b120e0211f1acc52de767396451529d512f12e"
+    },
+    "host_steam-b": {
+      "path": ".build/game-input53-host-steam-b/receipt.json",
+      "sha256": "c7bf9f588c7c3c4dd16470a2e9a51b7fb455272320502a4b124c16673531ffb6"
+    },
+    "host_steam-windows-a": {
+      "path": ".build/game-input53-host-steam-windows-a/receipt.json",
+      "sha256": "b4e30f0867d5432b66951b6d0550b70f950298f74e48f226d31afa72993a49d3"
+    },
+    "cloud_status": {
+      "path": "artifacts/cabrillo-build53-final/icloud-status-final.json",
+      "sha256": "179c5c8be321813656cf3c598e444fa0b7c6d787385a81f40b63fb098671f63b"
+    }
+  },
+  "game_files_used_in_app_build": false,
+  "game_files_used_only_in_private_tests": true,
+  "physical_device_tested": false,
+  "public_tag_or_release_created": false,
+  "source_commit_or_push_performed": false,
+  "cloud_upload_confirmed": true,
+  "notes": [
+    "Nine exact FNA1.4.0.0 distributions; not all Celeste versions ever sold.",
+    "Mac host native runtime is separate from iOS device acceptance.",
+    "Final IPA uses fresh public managed/app compilation with explicitly pinned previously built public native/FMOD dependency receipts."
+  ]
+}

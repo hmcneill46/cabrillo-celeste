@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "status": "PHONE_STARTUP_REJECTED_BEFORE_GAMEPLAY",
+  "date": "2026-10-03",
+  "version": "0.26.0",
+  "build_number": 54,
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.26.0",
+    "build_number": "54",
+    "ipa_sha256": "b298b217e20a4e6585c19fe365c077c6215434fe462ef69cf64cc2efa88dc437",
+    "bytes": 18787093,
+    "uuid": "2f1a7c5496d033f287b292c864d0fb75",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": true,
+    "distribution_blockers": []
+  },
+  "checks": {
+    "gesture_policy": 37,
+    "real_game_controls_per_run": 37,
+    "cold_off_and_cached_on_runs": 2,
+    "motion_callback_scenarios": 4,
+    "native_ui_simulators": 2,
+    "python": 59,
+    "frozen_prior_manifests": 15
+  },
+  "feature": {
+    "default_enabled": false,
+    "native_preference": "cabrillo.featherTouch",
+    "setting": "Settings \u2192 Cabrillo extras \u2192 Feather follows finger",
+    "direction": "normalized world-space target",
+    "release": "original neutral input",
+    "near_target": "original neutral input with 16/22 point hysteresis",
+    "game_physics_modified": false,
+    "optional_mod_import_required": false
+  },
+  "evidence": {
+    "managed": {
+      "path": ".build/feather54-managed-e/receipt.json",
+      "sha256": "e6620d10bdf2d78b2fa07f64265dce4a83714b18347680b53b8ef01103e756c2"
+    },
+    "native_dependencies": {
+      "path": ".build/release51-local/native/receipt.json",
+      "sha256": "c6dcf94da2ebd45154a0268f79e216c1e9f08b83b486d3332695a70debb58f62"
+    },
+    "fmod": {
+      "path": ".build/release51-local/fmod/receipt.json",
+      "sha256": "dedde2f62612477699fd2922cd73c10b9434fdcd2b9d1aa289c14a1d9f3aded5"
+    },
+    "host": {
+      "path": ".build/feather54-host-e/receipt.json",
+      "sha256": "7e5d31e69b11d5e64a62b49a70b9dff2e748c0a11340910cc72333e86cfc8a11"
+    },
+    "motion60": {
+      "path": ".build/feather54-motion-e60/receipt.json",
+      "sha256": "0741095286a9084f7674a5f2ceac8ec2139636474bb0ed114413e334e68d5938"
+    },
+    "motion120": {
+      "path": ".build/feather54-motion-e120/receipt.json",
+      "sha256": "6ce5a8189f1b36879efc6eb69b20991d8e029733ea8abcec47ab91f53c3c567e"
+    },
+    "native_ui": {
+      "path": ".build/feather54-ui-b/receipt.json",
+      "sha256": "34a2d9da6729418f5a39f51cbb82557b2a3b6d1748da7dc7b6b0e1a2f8b4749d"
+    },
+    "package": {
+      "path": "artifacts/cabrillo-build54-final/verification.json",
+      "sha256": "1ae05cb97a0af1dc1a5f6231f6569d2b8e1ca2fd3b90cc12b43d7b03ddd57bc2"
+    },
+    "independent_package": {
+      "path": "artifacts/cabrillo-build54-final/independent-verification.json",
+      "sha256": "5ed955c59522d626e34f33c68169e73e1c3b2ccd4f3334497375ba9c30d229d5"
+    },
+    "source_archive": {
+      "path": "artifacts/cabrillo-build54-final/frozen-source.tar.gz",
+      "sha256": "7272f4b1c423f15e290d250f8e13f804935a459f896a398aaed4a471ddb8c9bd"
+    },
+    "source_manifest": {
+      "path": "artifacts/cabrillo-build54-final/frozen-source-manifest.json",
+      "sha256": "4e42356d9d88c50c7e9c1c5b7d9ab96a109cbc7ad6cbbb9ae18bb2d6daf2ec5e"
+    },
+    "prior_frozen_comparison": {
+      "path": "artifacts/cabrillo-build54-final/frozen-comparison.json",
+      "sha256": "591f284545cff07c3a11f787e8d6a8574da1e6a53fca331edf6aa93e230c46af"
+    },
+    "source_difference": {
+      "path": "artifacts/cabrillo-build54-final/source-diff.json",
+      "sha256": "8c5bdbd55b568e37e2e8d29668124f91cf2e83382b9955cef99e2b5dd00383c4"
+    },
+    "managed_difference": {
+      "path": "artifacts/cabrillo-build54-final/managed-diff.json",
+      "sha256": "a9fbd8bcaaff1943ba531a94f80434bb6ad2ae1cf127c3f42d64242cae5eeb30"
+    },
+    "python_controls": {
+      "path": "artifacts/cabrillo-build54-final/python-tests.log",
+      "sha256": "049d573b62248313b98f9af879dc980f298490ca0dea9e69df9c8b1f348fc937"
+    },
+    "cloud_delivery": {
+      "path": "artifacts/cabrillo-build54-final/icloud-delivery.json",
+      "sha256": "483c67de5878f4ddaa125a8a8f68070787e09183c3e236060ba677be858f442e"
+    },
+    "cloud_retirement": {
+      "path": "artifacts/cabrillo-build54-final/icloud-retirement.json",
+      "sha256": "79187b085624fb26ba84cd5bcc690021985bdaa541e5c38aff4edefdd8e5b429"
+    },
+    "cloud_initial_status": {
+      "path": "artifacts/cabrillo-build54-final/icloud-status-initial.json",
+      "sha256": "ec89980538842d53f2373e9f015de196c0d015a5c52b53691b5d2d0da741cc0e"
+    },
+    "cloud_status": {
+      "path": "artifacts/cabrillo-build54-final/icloud-status-final.json",
+      "sha256": "20a051e31120040bbc1572d6ee57aad295ce413bccd6401fe57933a3856ce732"
+    },
+    "phone_export": {
+      "path": ".private/device-evidence/2026-10-03/build54-export/CelesteJIT-bdd454ca-2c05-47fd-a73e-98fff69bc34d.diagnostics.json",
+      "bytes": 2417490,
+      "sha256": "e18e57478734e79fdb40d3cd18d047a4d31fbd148ca1999ec55dc3fd379e6331"
+    },
+    "phone_review": {
+      "path": ".private/device-evidence/2026-10-03/build54-review.json",
+      "sha256": "cef93b3135666df05ddad341deb27e9950bc37973b66ad0494a4e7b7c30cd632"
+    }
+  },
+  "source_inputs_frozen": 272,
+  "managed_assemblies_identical_to53": 191,
+  "native_dependency_archives_identical": 16,
+  "shortcut_revision": 49,
+  "game_files_used_in_app_build": false,
+  "game_files_used_only_in_private_tests": true,
+  "physical_device_tested": true,
+  "sustained_120hz_display_tested": false,
+  "source_commit_or_push_performed": false,
+  "public_tag_or_release_created": false,
+  "cloud_upload_confirmed": true,
+  "notes": [
+    "The final managed E receipt is used in both host runs, all four Motion Smoothing scenarios and the final IPA.",
+    "The local native/FMOD archives are explicitly retained verified dependencies; the app and managed payload are freshly compiled.",
+    "Bootstrap and compatibility sources remain exact53. Rebuilt tool hashes change the preparation cache key.",
+    "Earlier prototype camera mismatch and test-fixture failures remain privately retained; they are not counted as passes.",
+    "Motion counters span probe-entity replacement after death; original fixed physics steps are still asserted.",
+    "Earlier nine-input/full-Strawberry-Jam acceptance is host evidence for53, not a new54 physical test."
+  ],
+  "phone_review": {
+    "status": "CONFIRMED_BUILD54_STARTUP_REJECTION_BEFORE_GAME_CODE",
+    "reviewed_date": "2026-10-03",
+    "exact_build_info_matches_ipa": true,
+    "build_number": 54,
+    "device": "iPhone15ProMax",
+    "os": "26.5",
+    "native_jit_checks": 26,
+    "native_jit_failures": 0,
+    "shortcut_ready": true,
+    "storage_error": false,
+    "game_start_attempts": 2,
+    "verified_content_files": 1216,
+    "verified_content_bytes": 1158665183,
+    "game_preparation_ready": false,
+    "gameplay_started": false,
+    "feather_control_exercised": false,
+    "archive_staged": false,
+    "rejection": "InvalidDataException: Import a complete original Celeste FNA 1.4.0.0 ZIP. See the game files guide.",
+    "previous52_prepared_game_reused": true,
+    "cause": "Native keeps a nonempty staging pathname after deleting the consumed import ZIP. The53/54 GameCodeStore checks only nonempty instead of file existence before selecting an archive.",
+    "code_reference": "experiments/ios-jit/launcher-feather-touch/preparation/GameCodeStore.cs:284",
+    "source_fix_lane": "launcher-saved-game",
+    "phone_modified": false
+  }
+}

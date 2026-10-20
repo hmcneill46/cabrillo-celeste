@@ -1,0 +1,104 @@
+[
+  {
+    "url": "https://gamebanana.com/mmdl/1785260",
+    "bytes": 498461,
+    "hashes": [
+      "aeb29173386318dd"
+    ],
+    "pinnedSHA256": "4019b362d9ad1b2d3a6a670f833ef6324d735d5791a0bf21b62cf5cfbc0d639d",
+    "modules": [
+      {
+        "name": "ExtendedVariantMode",
+        "version": "0.50.5",
+        "dll": null,
+        "dependencies": [
+          {
+            "name": "Everest",
+            "version": "1.6458.0"
+          }
+        ],
+        "optionalDependencies": [
+          {
+            "name": "BetterRefillGems",
+            "version": "1.0.1"
+          },
+          {
+            "name": "DJMapHelper",
+            "version": "1.13.2"
+          },
+          {
+            "name": "IsaGrabBag",
+            "version": "1.6.12"
+          },
+          {
+            "name": "JungleHelper",
+            "version": "1.1.5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://gamebanana.com/mmdl/1778093",
+    "bytes": 963880,
+    "hashes": [
+      "519f4bdf5467f383"
+    ],
+    "pinnedSHA256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee",
+    "modules": [
+      {
+        "name": "MaxHelpingHand",
+        "version": "1.40.9",
+        "dll": null,
+        "dependencies": [
+          {
+            "name": "Everest",
+            "version": "1.6418.0"
+          }
+        ],
+        "optionalDependencies": [
+          {
+            "name": "BounceHelper",
+            "version": "1.12.0"
+          },
+          {
+            "name": "CommunalHelper",
+            "version": "1.24.0"
+          },
+          {
+            "name": "EeveeHelper",
+            "version": "1.12.2"
+          },
+          {
+            "name": "ExtendedCameraDynamics",
+            "version": "1.0.3"
+          },
+          {
+            "name": "ExtendedVariantMode",
+            "version": "0.47.1"
+          },
+          {
+            "name": "FlaglinesAndSuch",
+            "version": "1.6.8"
+          },
+          {
+            "name": "FrostHelper",
+            "version": "1.46.0"
+          },
+          {
+            "name": "LuaCutscenes",
+            "version": "0.2.8"
+          },
+          {
+            "name": "LunaticHelper",
+            "version": "1.1.1"
+          },
+          {
+            "name": "OutbackHelper",
+            "version": "1.7.2"
+          }
+        ]
+      }
+    ]
+  }
+]

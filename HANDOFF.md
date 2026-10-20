@@ -1,12 +1,276 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated30 September for FMOD clarification after source publication and USB shortcut testing,
+Written14 September2026; updated3 October for live input preferences and the full-display SwiftUI touch editor, saved-game startup repair and optional feather touch steering,
+game-file compatibility, public source builds and USB shortcut testing,
 iOS15/iPad support, the
 build36 Motion Smoothing correction, build37 Everest upgrade and build38 owned-game
 preparation, for a fresh development chat opened in
 `/Users/harrymcneill/Projects/Cabrillo`. Read this and [AGENTS.md](AGENTS.md) first.
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
+
+## Build57 / 0.28.0 — live input preferences, 3 October
+
+The owner requests live feather controls in the touch editor, original Celeste
+grab semantics with separate input-method preferences, optional persistent toggling,
+controller symbol selection and investigation of DualSense recognition/colours.
+Work is local in `launcher-input-preferences`; no new GitHub write is authorised.
+Public workflows still select52. Read `docs/TOUCH_CONTROLS.md` and
+`docs/ios-jit/INPUT_PREFERENCES_BUILD_57.md` with its evidence ledger.
+
+Pause → Touch controls… → Details → Behavior exposes the live options. Save applies
+changes without restarting; Cancel retains saved preferences. Feather uses the
+existing preference and original physics. Grab feeds original virtual input and
+uses Celeste's own GrabMode/UpdateGrab/GrabCheck. Changing its ordinary Options
+setting remembers the mode for the active touch/controller/keyboard source.
+Default resets normally. Until untoggled preserves the original latch across
+actual death and map changes, separately for each source; changing mode/behaviour
+or ending the game clears it. No held state is stored across app launches.
+
+Automatic symbols use the selected FNA/SDL controller type, recognising DualSense
+where Everest's older GUID list does not. Manual Xbox/PlayStation/Switch/Stadia
+symbols retain bindings and explicit mod overrides. Original light colours pass
+through FNA/SDL and replay after late connection, reconnect, player change and
+foreground return. Physical DualSense colours remain a device gate. Native editor
+dismissal now also clears isolation after discarding an iPad confirmation dialog.
+The full-display placement and actual-size landscape editor remain unchanged.
+
+Final managed payload: `.build/input57-managed-c/receipt.json`. 191 of199 DLLs
+match56; the adapter changes and seven pinned public MonoMod/NLua dependencies
+rebuild. Bootstrap/preparation/FNA/support module and16 native dependency archives
+remain exact56. Native/FMOD receipts: `.build/release51-local/{native,fmod}`.
+Both signed49 Shortcuts are unchanged. `tools/build_release57.py` provides the
+separate fresh public-source build with a developer-owned FMOD SDK. No original
+or prepared game code/assets, SDK components or signing material are bundled.
+
+59 Swift and2,743 managed policy/geometry controls, six actual Apple UI tests,
+three complete real-game runs with56 new input checks each, and a separate10-check
+actual death/respawn/cross-map run pass. Original Motion Smoothing1.8.0 is checked
+at60/120 Fast/Fancy. Receipts are `.build/input57-{policy-b,ui-c,host-e,lifecycle-a,motion-d,motion-e}/receipt.json`.
+The pinned Mac SDL virtual backend tests real input/LED callbacks; PS5 type is
+supplied at the native query boundary because its virtual bus hides VID/PID.
+These are host/simulator checks, not physical57 acceptance or sustained120Hz.
+55/56 Results remain empty at review; prior device gates remain distinct.
+
+The independently checked57 IPA and matching dSYM are in
+`artifacts/cabrillo-build57-final`. IPA SHA256
+`7b8abb06247baa0ac1e1fa49535a50c34c5e8534dbd50ab3e5ad1368503fdf4b`;
+19,039,518 bytes. All291 captured inputs are frozen after final verification;
+use58 for new implementation. Keep the data container and shortcut49; allow a
+cache rebuild, test another fresh-process return, normal Quit and diagnostics.
+No phone has been modified. All18 earlier checked source manifests still match.
+
+All nine57 kit files have exact local readback and confirmed upload in iCloud →
+Celeste JIT Tests → 0.28.0-build-57. Initial transient iCloud errors cleared.
+Only the superseded37 cloud IPA was removed after exact local-copy and receipt
+verification. Every Results folder, local37 artifact and accepted fallback remains.
+Cloud total993,871,336 bytes. Delivery receipt:
+`artifacts/cabrillo-build57-final/icloud-delivery.json`.
+
+
+## Build56 /0.27.0 — SwiftUI touch editor, 3 October
+
+The owner requests Morro control parity, an optional tap/hold-to-jump and swipe-to-
+dash mode, then explicitly requires edge-to-edge placement and an actual-size
+landscape editor with a16:9 game guide. Work is local in `launcher-touch-editor`
+on `codex/game-input-compatibility`; no new GitHub write is authorized. Public
+workflows still select52. Read `docs/TOUCH_CONTROLS.md` and
+`docs/ios-jit/TOUCH_EDITOR_BUILD_56.md` with its evidence ledger.
+
+Settings → Controls → Customize touch controls and Pause → Touch controls… open
+the same SwiftUI editor. It supports fixed/floating movement, circle/rectangle
+buttons, all four split Jump/Dash orientations and swapping/sliding, duplicates,
+24 total controls, Crouch Dash/Quick Restart, per-source Hold/Toggle/Inverse Grab,
+opacity/haptics/visibility, Undo/Mirror/Reset, Files export/import preview and Morro
+D3 v2 conversion. Portrait retains detailed choices; landscape fills the display
+at actual size, with a16:9 guide and movable/hideable toolbar. Coordinates cover
+the full display, including outside the game image and safe insets. Defaults
+avoid the hardware edges. Keep this full-display contract in future changes.
+
+The optional experimental gesture region holds Jump on contact and triggers one
+eight-way Dash after its threshold, independently of joystick movement. Lift for
+the next swipe. A swipe begins with Jump; use buttons/split for a dash without it.
+Menus confirm on tap release and cancel on swipe; feather steering takes priority
+in flight. All game physics stay original. Native editing isolates gameplay input.
+
+Final `.build/touch56-managed-d/receipt.json` passes45 Swift and2,740 managed
+policy/geometry controls, four actual Apple UI tests across iPhone/iPad simulators,
+three full real-game host runs and original Motion Smoothing1.8.0 at60/120 Fast/
+Fancy. Each full run includes17 new input checks,37 gesture/37 feather checks,
+hair, desktop saves, save/resume and normal Quit.59 Python controls pass. Final
+receipts: `.build/touch56-{policy-e,ui-h,host-i,motion-c}/receipt.json`.
+These are host/simulator checks, not physical56 acceptance or sustained120Hz.
+55 Results remain empty; its physical gate and earlier granular gates stay pending.
+
+191 of199 managed DLLs match55; the adapter changes and seven pinned public
+MonoMod/NLua dependencies rebuild. Bootstrap/preparation and feather sources stay
+exact55. All16 native dependency archives and both signed49 Shortcuts are unchanged.
+Local native/FMOD receipts remain `.build/release51-local/{native,fmod}/receipt.json`.
+`tools/build_release56.py` provides the separate fresh public-source builder with
+a developer-owned FMOD SDK. No original/prepared game code, original assets,
+SDK components or signing material is bundled. No phone was modified.
+
+The independently verified unsigned56 IPA and matching dSYM are retained in
+`artifacts/cabrillo-build56-final`. IPA SHA256
+`b20ed0a6aafc40bf957f2be64411db80a71591dfd88f6206214037e6fffd9b96`;
+19,020,874 bytes. All285 captured inputs are frozen; use57 for new implementation.
+All17 earlier checked source manifests still match. Keep the existing data
+container and shortcut49; allow a cache rebuild and also test a fresh-process
+return, editor comfort/input, normal Quit and Export diagnostics.
+
+All nine56 kit files have exact local readback and confirmed upload in iCloud →
+Celeste JIT Tests → 0.27.0-build-56. Initial transient upload errors cleared.
+Only the superseded53 cloud IPA was removed after exact retained-copy and package
+receipt verification. Every Results folder, local53 artifact and accepted fallback
+remains. Cloud total998,928,055 bytes.
+
+## Build55 /0.26.1 — saved-game startup repair, 3 October
+
+The owner reports54 cannot start Celeste. The2,417,490-byte54 Results export
+matches the final54 BuildInfo exactly, SHA256:
+`e18e57478734e79fdb40d3cd18d047a4d31fbd148ca1999ec55dc3fd379e6331`.
+Its session passes26 native JIT checks and Shortcut readiness. Both game attempts
+verify all1,216 saved assets, then reject game-code preparation. No game or
+feather execution occurs. Earlier52 history records prepared-code reuse/startup.
+Keep this failed54 evidence separate from the prior host/simulator passes.
+
+The53/54 store mistook native's nonempty staging pathname for an existing ZIP,
+even after a previous successful import removed the temporary file.55 in
+`launcher-saved-game` requires an actual file before selecting a new import;
+otherwise it verifies retained originals and reuses/rebuilds their cache. This
+restores the native caller's existing contract. A present invalid ZIP still fails,
+and corrupt/missing originals still require import. Read
+`docs/ios-jit/SAVED_GAME_BUILD_55.md` and its ledger. No new GitHub write is authorized.
+
+The original54 source reproduces the exact rejection. The repair passes22 store
+controls and97 checks across all nine input ZIPs. Three full host runs pass:
+first import, cached launch with the missing native ZIP path, and a pre-53 storage
+contract with retained originals but no selection pointer/current generation.
+They pass gameplay,37 gesture/37 feather controls, hair, desktop saves, resume and
+normal Quit. Original bytes survive the rebuild.59 Python controls pass.
+These are host checks; physical55 acceptance and earlier granular gates are pending.
+
+`.build/saved55-managed-a/receipt.json` is the final managed payload.191 of199 DLLs
+match54; Bootstrap and seven pinned public dependencies rebuild. Only
+GameCodeStore.Prepare changes among372 Bootstrap method bodies. The feather game
+adapter, native/SwiftUI sources,16 native dependency archives and both signed49
+Shortcuts remain exact54. Local native/FMOD receipts are
+`.build/release51-local/{native,fmod}/receipt.json`. `tools/build_release55.py`
+provides the separate fresh public-source build using a developer-owned FMOD SDK.
+Public workflows still select52; no original game code/assets or SDK components
+are bundled. Preserve all earlier frozen inputs and test kits.
+
+The verified55 IPA and matching dSYM are in `artifacts/cabrillo-build55-final`.
+IPA SHA256 `e257b92175657c1d1374700c58bd93036795d499407c3a2c5bb43f42d42b3645`;
+18,787,140 bytes. All273 captured app inputs are frozen; use56 for new implementation.
+All16 checked earlier source manifests still match. No phone was modified.
+Keep the existing data container and shortcut49, allow one cache rebuild and test
+another fresh-process start, then normal Quit and Export diagnostics.
+
+All eight55 kit files have exact local readback and confirmed upload in iCloud →
+Celeste JIT Tests → 0.26.1-build-55. Only the superseded54 cloud IPA was removed after exact
+local-copy and receipt verification. Its Results export, every other Results
+folder, local54 artifacts and accepted fallbacks remain. Cloud total998,666,002 bytes.
+
+## Build54 /0.26.0 — optional feather touch steering, 3 October
+
+The owner requests feather flight that follows a finger, without new speed or
+acceleration rules, and an in-app toggle. Local work is in
+`launcher-feather-touch` on `codex/game-input-compatibility`; no new commit, push
+or public release is authorized. Read `docs/ios-jit/FEATHER_TOUCH_BUILD_54.md` and
+its evidence ledger. Public release workflows continue to select52.
+
+Settings → Cabrillo extras → Feather follows finger defaults off. It is built
+into the game adapter; no optional mod import is needed. A fresh eligible touch
+in feather flight supplies a normalized direction toward the finger. Release,
+or the small circle around Madeline, supplies original neutral input. The16/22
+point hysteresis avoids rapid heading reversal near the target. Original Celeste
+still controls all speeds, acceleration and turning. Action buttons and ordinary
+movement retain their controls. Pause/death/transition/source changes require a
+fresh touch. The preference is sampled for each start attempt, including a retry
+after cancelled preparation, and is locked during gameplay.
+
+The final `.build/feather54-managed-e/receipt.json` passes cold/off and cached/on
+real-game host runs:37 gesture controls,37 integration checks, original feather
+speed controls, hair, desktop saves, save/resume and normal Quit. Original Motion
+Smoothing1.8.0 passes60/120 Fast/Fancy with the same final managed payload. Forward
+and inverse input conversion share the rendered camera, including its smoothing
+offset. iPhone/iPad simulator tests pass default/persistence/session locking.
+All59 Python controls pass. These are host/simulator checks, not phone acceptance
+or sustained120Hz display measurements.
+
+191 of199 managed DLLs match53; the adapter changes and seven pinned public
+MonoMod/NLua dependencies are rebuilt. Bootstrap, content manifest and game input
+compatibility sources remain exact53. Rebuilt tool hashes change the preparation
+recipe, requiring a fresh cache from retained originals on the first run. All16
+native dependency archives and signed49 Shortcuts remain unchanged. Explicit
+native/FMOD receipts are `.build/release51-local/{native,fmod}/receipt.json`.
+`tools/build_release54.py` provides a separate fresh-source build with an explicit
+developer-owned FMOD SDK. No original/prepared game code, original assets, SDK
+archives or signing material is bundled.
+
+The verified unsigned54 IPA and matching dSYM are retained in
+`artifacts/cabrillo-build54-final`. SHA256:
+`b298b217e20a4e6585c19fe365c077c6215434fe462ef69cf64cc2efa88dc437`;
+18,787,093 bytes. All272 captured inputs are frozen; use55 for new implementation.
+All15 retained earlier source manifests still match. Keep shortcut49 and the
+existing data container. No phone was modified; feather feel, physical gameplay/
+Quit and all older granular gates remain pending. Earlier nine-input and full
+Strawberry Jam evidence remains scoped to53.
+
+All eight kit files have exact local readback and confirmed upload in iCloud →
+Celeste JIT Tests → 0.26.0-build-54. Initial transient iCloud errors cleared.
+Only the superseded38 cloud IPA was removed after exact
+retained-local-copy and receipt verification. Every Results folder, local38
+artifact and accepted fallback remains. Local cloud total996,231,844 bytes.
+
+## Build53 /0.25.0 — game input compatibility, 30 September
+
+The owner requests support for all nine supplied original itch.io, Steam and Epic
+FNA1.4.0.0 ZIPs and store acquisition instructions, using Morro as a reference.
+Work is local on `codex/game-input-compatibility`; no new GitHub publication was
+requested. Read `docs/CELESTE_INPUTS.md` and
+`docs/ios-jit/GAME_INPUTS_BUILD_53.md` before continuing this feature.
+
+`launcher-game-inputs` adds four exact input combinations, local creation of the
+empty companion missing from Epic Windows, and a bounded pre-Everest Steam IL
+adaptation. It changes exactly11 desktop-service method bodies, preserves the
+other game methods and original IL, and removes desktop Steam client dependencies.
+Schema2 caches key by recipe and source; a selected-source pointer commits only
+after preparation. Existing standard originals migrate without a new ZIP. The
+native availability hint recognizes the selected source. Play includes a game
+files guide; the docs give Steam depot and optional Epic/Legendary instructions.
+Morro's MIT attribution is retained. Its AOT/device results are separate evidence.
+
+All nine full ZIP imports and97 compatibility/recovery controls pass, plus the19
+retained code-store checks and14 native availability controls. All four distinct
+input combinations pass cold/cached real-game host gameplay, hair, desktop save
+transfers, save/resume and normal Quit. Original Motion Smoothing passes Fast/Fancy
+at60/120 host callbacks. Full Strawberry Jam cold/cached mod runs on the Steam
+game also pass maps, hooks, saves/resume and normal Quit.59 Python release controls
+and Actionlint pass. These are
+host checks, not physical53 acceptance or sustained120Hz display evidence.
+
+The final managed receipt is `.build/game-input53-managed-b/receipt.json`;
+explicit unchanged native/FMOD dependency receipts are in
+`.build/release51-local/{native,fmod}`. `tools/build_release53.py` is the separate
+fresh public-source build recipe with a developer-owned FMOD SDK. Existing public
+release workflows still select52. All earlier frozen35–50 and hosted/tagged52 app
+inputs remain exact.
+
+The verified unsigned53 IPA and matching dSYM are in
+`artifacts/cabrillo-build53-final`. IPA SHA256:
+`3a0e4ec5b72e1e13d6a6f00db7bac0f7a7aa7bf8450ed28d9c3aaaecaec16f31`;
+18,782,511 bytes;259 captured app inputs are frozen. Use54 for new implementation.
+The independent audits confirm199 managed assemblies and no original/prepared
+game code, original assets, SDK archives or signing material. Keep shortcut49.
+Phone installation/import/gameplay/Quit and the older granular device gates remain
+pending; no phone was modified during this work.
+
+All eight kit files have exact local readback and confirmed upload in iCloud →
+Celeste JIT Tests → 0.25.0-build-53. Initial transient iCloud errors cleared. Only the superseded49 cloud IPA
+was removed after exact retained-local-copy and receipt checks. Every Results
+folder and fallback remains. Local cloud total996,088,256 bytes.
 
 ## Published v0.24.1 / build52 —30 September
 

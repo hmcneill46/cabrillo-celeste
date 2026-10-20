@@ -1,0 +1,20 @@
+--- a/src/loslib.c
++++ b/src/loslib.c
+@@ -140,6 +140,9 @@
+ 
+ 
+ static int os_execute (lua_State *L) {
++#if defined(CJIT_IOS)
++  return luaL_error(L, "External processes are unavailable in the iOS host");
++#else
+   const char *cmd = luaL_optstring(L, 1, NULL);
+   int stat;
+   errno = 0;
+@@ -150,6 +153,7 @@
+     lua_pushboolean(L, stat);  /* true if there is a shell */
+     return 1;
+   }
++#endif
+ }
+ 
+ 

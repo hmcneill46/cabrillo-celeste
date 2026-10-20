@@ -38,6 +38,46 @@ FMOD, .NET/NuGet binaries and signed Shortcut resources are declared inputs;
 this is not a claim that every dependency is compiled from source or that separate
 builds are byte-identical. See [how releases work and how to verify a download](docs/RELEASING.md).
 
+## Game files from itch.io, Steam and Epic
+
+Build53 /0.25.0 development adds the nine original FNA1.4.0.0 distributions
+provided for compatibility testing, including Steam and Epic Windows.
+[Get the correct game ZIP](docs/CELESTE_INPUTS.md), with Steam depot and Epic
+download instructions. The published build52 still uses the earlier importer.
+
+## Custom touch controls in development
+
+Build57 /0.28.0 includes a SwiftUI editor in **Settings → Controls** and
+**Pause → Touch controls**. Arrange and resize circles or rectangles, duplicate
+buttons, split Jump/Dash regions, add Crouch Dash/Quick Restart, and choose
+Hold/Toggle/Inverse Grab. Layouts can be saved to Files and shared.
+The Behavior page uses Celeste’s own grab logic, remembers each input method’s
+mode, and offers optional persistent toggling. Feather steering and controller
+prompts can also be changed during play. Automatic prompts recognise DualSense;
+the game’s light colour is replayed after controller reconnection. Physical
+DualSense light behaviour still needs device verification.
+
+Controls can use the entire display, edge to edge. Portrait provides the detailed
+editor; landscape becomes an actual-size layout with a 16:9 game-image guide.
+An optional experimental preset uses touch/hold for Jump and an eight-direction
+swipe for Dash, independently of the movement joystick. It keeps Celeste's physics.
+See the [touch controls guide](docs/TOUCH_CONTROLS.md) and
+[build57 evidence](docs/ios-jit/INPUT_PREFERENCES_BUILD_57.md).
+This development feature is not in the published build52 release.
+
+## Optional feather touch control in development
+
+Build54 /0.26.0 adds **Settings → Cabrillo extras → Feather follows finger**.
+During feather flight, drag in the game area to steer toward your finger. Lifting
+it, or bringing it into the small neutral zone around Madeline, uses Celeste's
+normal slow coast. The game retains its original speed and turning rules.
+The option defaults off and needs no imported mod; turning it off restores the
+usual feather joystick. [Behavior and testing](docs/ios-jit/FEATHER_TOUCH_BUILD_54.md).
+Build57 includes the55 development repair for existing installations, which fixes
+53/54 rejecting startup after the temporary game ZIP has been removed.
+[Startup repair](docs/ios-jit/SAVED_GAME_BUILD_55.md).
+This development feature is not in the published build52 release.
+
 ## Home Screen launch in development
 
 [Build50](docs/ios-jit/SHORTCUT_CELLULAR_BUILD_50.md) corrects the cellular launch
@@ -57,8 +97,7 @@ retain this functionality; their device acceptance is recorded separately.
 
 ## Related project
 
-**Morro** is the planned name of the separate fully AOT Celeste project,
-[currently hosted as celeste-ios](https://github.com/hmcneill46/celeste-ios).
+**[Morro](https://github.com/hmcneill46/morro-celeste)** is the separate fully AOT Celeste project.
 The projects share ideas and selected platform policies, but have independent
 builds, runtime strategies and release decisions. This checkout contains no AOT
 application, Xcode project, generated game source, or AOT build cache.
@@ -119,7 +158,8 @@ runs. Its loading UI pauses and delayed game reveal are addressed in
 [build32](docs/ios-jit/FIRST_FRAME_BUILD_32.md): always-visible startup details and
 handoff after the first rendered game frame. The verified kit is uploaded to
 iCloud; [its phone gate is accepted](docs/ios-jit/BUILD_32_ACCEPTANCE.md).
-Build32 is the current fallback. The full touch editor follows the34 phone gate.
+Build32 remains an accepted fallback. The owner-prioritized build56 editor is
+tracked separately from the earlier pending save-manager device gate.
 Build32 reuses31's exact managed payload. Original28/29/30/31 artifacts remain frozen.
 
 For development, start with [the current handoff](HANDOFF.md),

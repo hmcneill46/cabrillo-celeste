@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.26.1",
+  "build_number": "55",
+  "build_id": "launcher-saved-game-20261003-55",
+  "scope": "Reuse verified original game files when the native staging path has no ZIP",
+  "device_jit_tested": false
+}

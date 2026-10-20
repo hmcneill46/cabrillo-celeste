@@ -1,0 +1,170 @@
+{
+  "source_patches": {
+    "Everest": {
+      "Celeste.Mod.mm/Mod/Everest/Everest.DiscordSDK.cs": {
+        "original_sha256": "79a76367d8f5634c21ab47c0cd3b8ab08e090509eecd4ba4394210ea7d921324",
+        "patched_sha256": "9c63ea3179ecfe8984074ad4bd8b4d75b091459afacd13527d63bd15f337b2c3"
+      },
+      "Celeste.Mod.mm/Mod/Everest/Everest.Loader.cs": {
+        "original_sha256": "9be11ff16f56fd667856085c082ac695cfe4b918c913acb2c7c6ff7429ba2035",
+        "patched_sha256": "6c197289462ecf9694baf09caf3ac18e2c3c74eecd90349f8fcbc93a12eeff60"
+      },
+      "Celeste.Mod.mm/Mod/Everest/Everest.cs": {
+        "original_sha256": "ac191f1eee1bffdd1770ac4c882aecaefe31812b764969de66a5fc88c1e0f285",
+        "patched_sha256": "e9857144f76a8bc0145a03b3e8550f47aacba80e79e4bfb120d3ea096bcca565"
+      },
+      "Celeste.Mod.mm/Mod/Helpers/WorkerThreadTaskScheduler.cs": {
+        "original_sha256": "693fff2cd99a2c1581445b1945a91e761ba14e86e80077b1c1d8cd33f3f7ac40",
+        "patched_sha256": "ab36936805767b03831c26e639767dddcd630732b4bc6c85e07586eec48efa43"
+      },
+      "NETCoreifier/Coreifier.cs": {
+        "original_sha256": "38669471d867b4fea17dc246fa2db6fca46a1fb46b4d4c3ac4610a3d9e5a44a8",
+        "patched_sha256": "ea04aee0ea0dd37a4d4a1bc8b20e3c62e2fcdb226418cf60dbcf21f80d17f31b"
+      }
+    },
+    "MonoMod": {
+      "external/packages.lock.json": {
+        "original_sha256": "57b1c4105ee74911dfb1451572aa700ea75d31add2c0deec75cbbfa08ea82019",
+        "patched_sha256": "76c6451de8c21335c5f888740fac22375c40614c350ed5003b687d9bc4459140"
+      },
+      "src/MonoMod.Core/Directory.Build.props": {
+        "original_sha256": "8a187517769d1128dcd9764ebbc2c162dbe3d37d8424372a762f2f6f177d25d9",
+        "patched_sha256": "947c63bc980b6c3c28c92f3f457363d400ee4c72e287694ec47747ac8d981daa"
+      },
+      "src/MonoMod.Core/Directory.Build.targets": {
+        "original_sha256": "bf73a7ccbd498e719dc026bd5f0d3b82988be04b0485ce3246818b44199298db",
+        "patched_sha256": "9665f0edd9fef4e90f48843a9dd59ff63f4e8464175651ba4d071ce192dce409"
+      },
+      "src/MonoMod.Core/Platforms/PlatformTriple.cs": {
+        "original_sha256": "60425d8ca5e1df3dd98ac7bc7de6f7479432fb5f8aee7255ea7239960c5283fb",
+        "patched_sha256": "0efe6f3bcddae53566fb3f4d432198af8046edeb6194d0523722360f67e1bbdc"
+      },
+      "src/MonoMod.Core/Platforms/Runtimes/MonoRuntime.cs": {
+        "original_sha256": "34880adf608f476c850d2e1dc90ad1512c7b0ca0079a3a6240b56daa34b661f0",
+        "patched_sha256": "74909e49d3edcbebaebac956ec8ae4bc6dd92030637b2795d0844368935a59d9"
+      },
+      "src/MonoMod.Core/packages.lock.json": {
+        "original_sha256": "9fdcad7bd150002e847fe0378952dd4fb969d3bd1eb2fa1b749fe059fd65b988",
+        "patched_sha256": "44eb952b7ac5112436d5a7ab413c5dd4855bacd26c5c69f151d620aeec3b98ea"
+      },
+      "src/MonoMod.Patcher/packages.lock.json": {
+        "original_sha256": "51df3d344c77ae9115bee4ee4428d550801e19b79f363f35f041199054f054ee",
+        "patched_sha256": "7c42c61a0b40feb219722e48a546c9e8d21b5dcca65ebe5c062e870cfb8373a2"
+      },
+      "src/MonoMod.RuntimeDetour.HookGen/packages.lock.json": {
+        "original_sha256": "10c04f5a3a5681694b0d80c5ef1258292e69f704d86a3ef18c0495c14374e156",
+        "patched_sha256": "ecaa97124ed3a590cbb4c268f8e15e2975c41992b01483f80cbb205a7026a0f9"
+      },
+      "src/MonoMod.RuntimeDetour/packages.lock.json": {
+        "original_sha256": "a2862f5c3430efd81303fc01fdfa0b3415b45c2011eae9a7424d461a113bc14c",
+        "patched_sha256": "b24ee8bed3c09e97d606ae6e5bccc01df995b441c5412dea618b9847315a2863"
+      },
+      "src/MonoMod.Utils/PlatformDetection.cs": {
+        "original_sha256": "9f5f2b236bf78111aa6ee3a2bb4345df975a2fae927bea9ebdaecee500b19490",
+        "patched_sha256": "46cf6e77c4b69f071508e353d13198cfd7363e79d2e7913a1483bad4847f19d7"
+      },
+      "src/MonoMod.Utils/packages.lock.json": {
+        "original_sha256": "7fa14fbeaeb77784e37b468b1a2cb8b05150409b74c43302fd2d2ff701cca882",
+        "patched_sha256": "3383af38fc7104e881ac6d215f14a718aca6c3fc753fcf1b1874ef0f54fcfe04"
+      },
+      "tools/Common.props": {
+        "original_sha256": "88f0bfccd3faf967781e860748959becff2ec11d4adca667b412e9f5848e1a34",
+        "patched_sha256": "677e97edf80ba83dd36ef77ef82fba070cc0f04530f0fe74cdccd88cc19d5ec3"
+      }
+    },
+    "runtime": {
+      "src/mono/mono/arch/arm64/arm64-codegen.h": {
+        "original_sha256": "b043d694f07f55e74e51cebcdcfeb19476fdb5e6b4988252456f69576e9aafcd",
+        "patched_sha256": "da08f9d9d4c243153a5769a43783169d50c357d330c45d9627e5dad89816b6ca"
+      },
+      "src/mono/mono/metadata/class.c": {
+        "original_sha256": "d9fcfdb3420cfba298bbe954cc69199da0f270fd9890f3ae1210d8ae7aec4bfd",
+        "patched_sha256": "c7630e2d48e3b2b3231b53777ff8667a52a798cec72f6f9e7d9e978a1e1841b0"
+      },
+      "src/mono/mono/mini/method-to-ir.c": {
+        "original_sha256": "f8ec15ac0017102d668aea194a833a66d1bed1fd198035249d3235cc8f019bfb",
+        "patched_sha256": "9f311c2f36b56f5f3689f7fcc471c19501fd517da0b448163417da968c91b0f7"
+      },
+      "src/mono/mono/mini/mini-arm64.c": {
+        "original_sha256": "d89bb64f5164febe59babaa21eeec8f9c60ccf03a977c3f3807a01430c7d6e44",
+        "patched_sha256": "d090e24d1fb412b2797d2cbd6bcbc39e869cb1f25b65d76320942d7b00dd53ac"
+      },
+      "src/mono/mono/mini/mini-runtime.c": {
+        "original_sha256": "f40f707107281864c922840ec6e4634afdfa6544137e5aca0eb4fe6906269b96",
+        "patched_sha256": "2a44ca115a26256eb154067d933b6f64b88a3b7ace3de7963a8bf0eec8fe2919"
+      },
+      "src/mono/mono/mini/mini.c": {
+        "original_sha256": "9e6391e4761c731813ca0a75f46251561d03d695781caba0e07964942a12a391",
+        "patched_sha256": "cae0f31709b7d1f147869925eae921660e58c7560b550e7b87729ef4cfeedb75"
+      },
+      "src/mono/mono/mini/tramp-arm64.c": {
+        "original_sha256": "1ee958c4e4c2b79feeb387eaf9cb2726a6ca1850303a0aea96887ad0f0dbe883",
+        "patched_sha256": "1f77c4415b10cbcaef56c4380518e688f957978143e136d4de54e88a90bf1c7e"
+      },
+      "src/mono/mono/utils/mono-codeman.c": {
+        "original_sha256": "81f60ee4b6038c9a46540423632798bef8f629b96dd008e7b55cd545db1f5031",
+        "patched_sha256": "10b82ff138b4df5d65d5c8577cc215f1c4f495e8c848fbdf4b70092b07087bc0"
+      },
+      "src/mono/mono/utils/mono-mmap.c": {
+        "original_sha256": "a04ecfd76a9c8d33834d8fa3073e4a7403f1023faeeaa8bd09bd96b66d3b34e6",
+        "patched_sha256": "f8ab74b51bceb92150a159ee5bb9f8720c1f641c3acc1f354b7db94efbd720e4"
+      }
+    }
+  },
+  "explicit_read_only_imports": {
+    "experiments/ios-jit/launcher-owned-game/public-build/StableTouchSlotPolicy.cs": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/modern-ios/FNA.iOS/StableTouchSlotPolicy.cs",
+      "sha256": "2dce4df62ea005a035ad83e73f73b722fdeb545e071ceeab5fc0ec19115f9928"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/fna-touch.patch": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/modern-ios/patches/FNA/0001-preserve-stable-touch-finger-ids.patch",
+      "sha256": "0bde5b22de259ca58db6153f2b64897b1b58b44f32afbd4e7efa143115278707"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/fna-imports.patch": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/patches/FNA/0001-map-apple-static-imports-to-internal.patch",
+      "sha256": "4b35585c90ad4347501bbb2752ba7a40649a0f179cada45643345d744740ed7b"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/fna-dispatcher.patch": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/tvos/patches/FNA/0002-disambiguate-mediaplayer-alias.patch",
+      "sha256": "a66e7a2cd36334bd95d1720e25f827a1ccb436473c0307628b4490c12f88fe43"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/ApplePlatformStubs.c": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/apple-platform-stubs/ApplePlatformStubs.c",
+      "sha256": "922a576c76f67d4dee10d9023125da2d5ad0ce8b77d3be66a5fdd35b57bb422a"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/ApplePlatformStubs.h": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/apple-platform-stubs/ApplePlatformStubs.h",
+      "sha256": "5b2bd749a80de3fe9e340fd1bf4264e6b19efa79cc878160ee92d70be55da387"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/native/SDL2/0001-tvos-use-pregenerated-metal-shaders.patch": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/patches/SDL2/0001-tvos-use-pregenerated-metal-shaders.patch",
+      "sha256": "a306fe373bb857c763a9ad5a0d5f1e82967f476b377ec4bd20f2f2789b58ee65"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/native/SDL2/0003-ios-use-pregenerated-metal-shaders.patch": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/patches/SDL2/0003-ios-use-pregenerated-metal-shaders.patch",
+      "sha256": "9c05ce74256c8b1f968441dcf0c72b3914dda7c9806f2cc79bfe178c0e0780da"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/native/SDL2/0002-ios-modern-scene-host.patch": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/patches/SDL2/0002-ios-modern-scene-host.patch",
+      "sha256": "9b045b6c83438ef50c1f8fd82dfa0bf5940035e5962231bb748e4717d536f1f8"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/native/FNA3D/0001-add-sysrenderer-header-to-xcode-project.patch": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/patches/FNA3D/0001-add-sysrenderer-header-to-xcode-project.patch",
+      "sha256": "9320e46c56d15877fec454a74dabca1ac8353d5837cb8955870c97e82208a54a"
+    },
+    "experiments/ios-jit/launcher-owned-game/public-build/native/FAudio/0001-align-static-distance-curves-for-ld64.patch": {
+      "source": "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/patches/FAudio/0001-align-static-distance-curves-for-ld64.patch",
+      "sha256": "2231c1918d0fb82ffb5caad296022a4d0982cfc8bfa998dc6164f8807d04ecd1"
+    }
+  },
+  "fmod_policy_imports": {
+    "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/fmod-ios-dependencies.lock.json": {
+      "destination": "experiments/ios-jit/launcher-owned-game/public-build/fmod-inputs.json",
+      "sha256": "c444f7b84f4f3988a4d231432e4272eb1a0384d80656b6da63bceaf83253e1ab"
+    },
+    "/Users/harrymcneill/Projects/Celeste-Everest-JIT-Apple-Platforms/native/fmod-tvos/localized-symbols.txt": {
+      "destination": "experiments/ios-jit/launcher-owned-game/public-build/fmod-localized-symbols.txt",
+      "sha256": "8d27be3910fc4503c0498657cc4283d888556c038e97699a3eb0fdae88432004"
+    }
+  }
+}

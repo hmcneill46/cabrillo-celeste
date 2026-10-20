@@ -1,0 +1,103 @@
+--- a/Celeste.Mod.mm/Mod/Everest/Everest.DiscordSDK.cs
++++ b/Celeste.Mod.mm/Mod/Everest/Everest.DiscordSDK.cs
+@@ -1,4 +1,4 @@
+-﻿using Celeste.Mod.Core;
++using Celeste.Mod.Core;
+ using Celeste.Mod.Helpers;
+ using Microsoft.Xna.Framework;
+ using Newtonsoft.Json;
+@@ -47,6 +47,7 @@
+             }
+ 
+             public static DiscordSDK CreateInstance() {
++                if (Environment.GetEnvironmentVariable("CJIT_EMBEDDED") == "1") return null;
+                 if (Instance != null) {
+                     return Instance;
+                 }
+--- a/Celeste.Mod.mm/Mod/Everest/Everest.Loader.cs
++++ b/Celeste.Mod.mm/Mod/Everest/Everest.Loader.cs
+@@ -211,6 +211,11 @@
+                 Logger.Verbose("loader", $"ALL MODS LOADED IN {watch.ElapsedMilliseconds}ms");
+                 Logger.Info("loader", $"Loaded {Everest._Modules.Count} modules");
+ 
++                if (Environment.GetEnvironmentVariable("CJIT_EMBEDDED") == "1") {
++                    AutoLoadNewMods = false;
++                    return;
++                }
++
+                 try {
+                     Watcher = new FileSystemWatcher {
+                         Path = PathMods,
+--- a/Celeste.Mod.mm/Mod/Everest/Everest.cs
++++ b/Celeste.Mod.mm/Mod/Everest/Everest.cs
+@@ -1,4 +1,4 @@
+-﻿using Celeste.Mod.Core;
++using Celeste.Mod.Core;
+ using Celeste.Mod.Helpers;
+ using Celeste.Mod.Helpers.LegacyMonoMod;
+ using Celeste.Mod.Registry;
+@@ -31,7 +31,7 @@
+         // NOTE: THIS MUST BE THE FIRST THING SET UP BY THE CLASS CONSTRUCTOR.
+         // OTHERWISE OLYMPUS WON'T BE ABLE TO FIND THIS!
+         // The following line gets replaced by the buildbot automatically.
+-        public readonly static string VersionString = "0.0.0-dev";
++        public readonly static string VersionString = "1.6580.0-cjit-082e21b";
+         /// <summary>
+         /// The currently installed Everest build in string form.
+         /// </summary>
+@@ -469,13 +469,15 @@
+             }
+ 
+             // Start requesting the version list ASAP.
+-            Updater._VersionListRequestTask = Updater.RequestAll();
++            if (Environment.GetEnvironmentVariable("CJIT_EMBEDDED") != "1")
++                Updater._VersionListRequestTask = Updater.RequestAll();
+ 
+             // Check if an update failed
+             Updater.CheckForUpdateFailure();
+ 
+             // Request the mod update list as well.
+-            ModUpdaterHelper.RunAsyncCheckForModUpdates(excludeBlacklist: true);
++            if (Environment.GetEnvironmentVariable("CJIT_EMBEDDED") != "1")
++                ModUpdaterHelper.RunAsyncCheckForModUpdates(excludeBlacklist: true);
+ 
+             // Cleanup mod ALCs
+             EverestModuleAssemblyContext._AllContextsLock.EnterReadLock();
+@@ -486,7 +488,8 @@
+                 EverestModuleAssemblyContext._AllContextsLock.ExitReadLock();
+             }
+ 
+-            DiscordSDK.LoadRichPresenceIcons();
++            if (Environment.GetEnvironmentVariable("CJIT_EMBEDDED") != "1")
++                DiscordSDK.LoadRichPresenceIcons();
+         }
+ 
+         internal static bool _Initialized;
+--- a/Celeste.Mod.mm/Mod/Helpers/WorkerThreadTaskScheduler.cs
++++ b/Celeste.Mod.mm/Mod/Helpers/WorkerThreadTaskScheduler.cs
+@@ -25,7 +25,7 @@
+         }
+ 
+         public void Dispose() {
+-            if (!isDisposed)
++            if (isDisposed)
+                 return;
+ 
+             // Wait for the worker thread to exit
+--- a/NETCoreifier/Coreifier.cs
++++ b/NETCoreifier/Coreifier.cs
+@@ -1,4 +1,4 @@
+-﻿using Mono.Cecil;
++using Mono.Cecil;
+ using Mono.Cecil.Cil;
+ using MonoMod;
+ using System;
+@@ -66,7 +66,7 @@
+             if (isFrameworkModule) {
+                 // Patch debuggable attribute
+                 // We can't get the attribute from our own assembly (because it's a temporary MonoMod one), so get it from the entry assembly (which is MiniInstaller)
+-                DebuggableAttribute everestAttr = Assembly.GetEntryAssembly().GetCustomAttribute<DebuggableAttribute>();
++                DebuggableAttribute everestAttr = (Assembly.GetEntryAssembly() ?? Assembly.GetExecutingAssembly()).GetCustomAttribute<DebuggableAttribute>();
+                 CustomAttribute celesteAttr = module.Assembly.CustomAttributes.FirstOrDefault(a => a.AttributeType.FullName == typeof(DebuggableAttribute).FullName);
+                 if (celesteAttr != null && everestAttr != null) {
+                     celesteAttr.ConstructorArguments[0] = new CustomAttributeArgument(module.ImportReference(typeof(DebuggableAttribute.DebuggingModes)), everestAttr.DebuggingFlags);
