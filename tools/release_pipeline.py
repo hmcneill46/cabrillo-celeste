@@ -13,7 +13,7 @@ import zipfile
 from release import ROOT, public_path, sha, validate_ref, verify_ipa
 from fetch_fmod_sdk import ARCHIVE_SHA256
 
-CONFIG = 'release/public57.json'
+CONFIG = 'release/public58.json'
 BUILD_BRANCHES = {'refs/heads/main', 'refs/heads/codex/actions-release'}
 
 
@@ -24,7 +24,7 @@ def readiness(root):
     identity = json.loads(public_path(root, config['lane'] + '/BuildIdentity.json').read_text())
     if any(config[k] != identity[k] for k in ['version', 'build_number']):
         raise ValueError('Release manifest differs from its app identity')
-    if config.get('public_build_script') != 'tools/build_release57.py':
+    if config.get('public_build_script') != 'tools/build_release58.py':
         raise ValueError('Only the fresh public source recipe is eligible')
     public_path(root, config['public_build_script'])
     public_path(root, config['shortcuts'])
@@ -125,12 +125,12 @@ def verify_integrated_provenance(value):
 
 def verify_integrated_kit(directory, version):
     """Inspect sealed helper bytes again on the independent verification host."""
-    from verify_integrated_jit57 import verify_parts
+    from verify_unified58 import verify_parts
     import plistlib
     provenance = json.loads((directory / 'BUILD_PROVENANCE.json').read_text())
     verify_integrated_provenance(provenance)
     ipa = directory / ('Cabrillo-' + version + '-unsigned.ipa')
-    verify_ipa(ipa, version, '57')
+    verify_ipa(ipa, version, '58')
     prefix = 'Payload/CelesteJITEverest.app/'
     with zipfile.ZipFile(ipa) as archive:
         read = lambda name: archive.read(prefix + name)
@@ -189,7 +189,7 @@ def build(root, ref, publish, sdk, download):
     verify_ipa(out / 'Cabrillo.ipa', config['version'], config['build_number'])
     provenance = json.loads((out / 'BUILD_PROVENANCE.json').read_text())
     verify_provenance(provenance, result['source_commit'], os.environ.get('GITHUB_ACTIONS') == 'true')
-    if config['build_number'] == '57':
+    if config['build_number'] == '58':
         verify_integrated_provenance(provenance)
     if subprocess.check_output(['git', 'status', '--porcelain'], cwd=root).strip():
         raise ValueError('Build changed public source')
@@ -226,7 +226,7 @@ def main():
         elif args.command == 'verify-kit':
             config, _ = readiness(ROOT)
             verify_kit(args.kit.absolute(), config['version'])
-            if config['build_number'] == '57':
+            if config['build_number'] == '58':
                 verify_integrated_kit(args.kit.absolute(), config['version'])
             result = dict(status='PASS_RELEASE_KIT_ALLOWLIST')
         else:

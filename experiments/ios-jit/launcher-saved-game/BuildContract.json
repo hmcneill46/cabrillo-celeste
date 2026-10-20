@@ -1,0 +1,279 @@
+{
+  "protocol": "CJIT mailbox 1",
+  "compiled_protocol": {
+    "protocol": 1,
+    "bytes_per_arena": 268435456,
+    "arena_count": 2,
+    "mailbox_bytes": 96,
+    "response_offset": 48,
+    "error_offset": 88
+  },
+  "bytes_per_arena": 268435456,
+  "game_content_aggregate_sha256": "30a1c147d1a3ab0aa45762094e393ed7fd69951dd66e5af063447641e0699c46",
+  "game_content_bytes": 1158665183,
+  "mod_download_manifest": {
+    "AdventureHelper-v1.6.0.zip": {
+      "bytes": 88955,
+      "sha256": "cf0facab708f25958c560ddf58831e02f7d2b0c9f81571e090e034ce9dc927e7",
+      "url": "https://gamebanana.com/mmdl/1274886"
+    },
+    "Anonhelper-v1.1.1.zip": {
+      "bytes": 322423,
+      "sha256": "6417a5591a7039218c68f61869a20100ce67287d4024645e8b97cac5486e74ae",
+      "url": "https://gamebanana.com/mmdl/1274894"
+    },
+    "BGswitch-v1.2.2.zip": {
+      "bytes": 29096,
+      "sha256": "c85b83155269d7b5fce6ab10b0aed6b7ffd30d62d0b09345df8e67040076fadb",
+      "url": "https://gamebanana.com/mmdl/868929"
+    },
+    "Batteries-v1.1.4.zip": {
+      "bytes": 94600,
+      "sha256": "088d46393db29a72cabddef670d84183bcb4696f3d9e0e91321e67fe2837d047",
+      "url": "https://gamebanana.com/mmdl/1148461"
+    },
+    "BounceHelper-v1.14.1.zip": {
+      "bytes": 430162,
+      "sha256": "91eca27c7453031fcce4234fe4051801f908d8f71f4a01a7f5e988c6ada470b2",
+      "url": "https://gamebanana.com/mmdl/1795363"
+    },
+    "BrokemiaHelper-v1.8.5.zip": {
+      "bytes": 386366,
+      "sha256": "c80d7d71cdccef7c9b418e05d53debd197b59717d3cdeade72910ace33d4fbeb",
+      "url": "https://gamebanana.com/mmdl/1562484"
+    },
+    "CanyonHelper-v1.1.6.zip": {
+      "bytes": 4454892,
+      "sha256": "20f3affc4005d8177099776fbb350c258344d08c10bf4601c74763e4c26e4851",
+      "url": "https://gamebanana.com/mmdl/1652821"
+    },
+    "CavernHelper-v1.3.7.zip": {
+      "bytes": 133823,
+      "sha256": "9e699b141e1f2336a6aab795161498c09f986f6ff7b8fa426a3b9d53f2490041",
+      "url": "https://gamebanana.com/mmdl/1115585"
+    },
+    "CherryHelper-v1.8.2.zip": {
+      "bytes": 1344762,
+      "sha256": "8ca640f9e14f844507e0bbedc2afcb99ef61bec6957a7558cee90e9fabd2fba7",
+      "url": "https://gamebanana.com/mmdl/1471329"
+    },
+    "CollabUtils2-v1.13.4.zip": {
+      "bytes": 5406848,
+      "sha256": "4bcea8a9011edb8b7d27b433c47f1f4a871b8f7a4dd7f2bffac67bb99c7f6ad5",
+      "url": "https://gamebanana.com/mmdl/1721882"
+    },
+    "ColoredLights-v1.2.0.zip": {
+      "bytes": 200,
+      "sha256": "042dce422374bb2c5d7a9355ac814daa13f582bc4b123a8b239a4e33bfcdad2f",
+      "url": "https://gamebanana.com/mmdl/1286483"
+    },
+    "CommunalHelper-v1.25.5.zip": {
+      "bytes": 20214604,
+      "sha256": "44f4fb0b277a4900fd2a555e1a73e661140aa7b2455d3c7776cf420193349e3c",
+      "url": "https://gamebanana.com/mmdl/1775162"
+    },
+    "ContortHelper-v1.5.5.zip": {
+      "bytes": 140727,
+      "sha256": "d8b42128a808e68d30329baa9299fdb41bf7d24743635dec3137c36bcc87956a",
+      "url": "https://gamebanana.com/mmdl/544071"
+    },
+    "CrystallineHelper-v1.17.2.zip": {
+      "bytes": 659877,
+      "sha256": "4573f5e45dce0905142cd2b119f4a9a744bdce8ef3199319d1e46b6d1d342747",
+      "url": "https://gamebanana.com/mmdl/1744902"
+    },
+    "DJMapHelper-v1.13.4.zip": {
+      "bytes": 433079,
+      "sha256": "95ab02d657213031b70c3079738b21be399e567ca8a32b1fe8e8effc0778eedb",
+      "url": "https://gamebanana.com/mmdl/1036311"
+    },
+    "DisposableTheo-v1.0.6.zip": {
+      "bytes": 12901,
+      "sha256": "df291c0175df46682791fb6373c47eb557c47483eca3db96895eba9b5bbe85b5",
+      "url": "https://gamebanana.com/mmdl/929736"
+    },
+    "EeveeHelper-v1.12.5.zip": {
+      "bytes": 218619,
+      "sha256": "de8eb463083e7298827d6c1ba4f5a4b69cc6cdd9b4be31fec78e272fce3a3839",
+      "url": "https://gamebanana.com/mmdl/1657000"
+    },
+    "EmHelper-v1.3.0.zip": {
+      "bytes": 186110,
+      "sha256": "bdd31089c9163d2111aaaff6bfaf7c828674566d5ab8c23e08d3f4806bee31b3",
+      "url": "https://gamebanana.com/mmdl/1276766"
+    },
+    "ExtendedVariantMode-v0.50.5.zip": {
+      "bytes": 498461,
+      "sha256": "4019b362d9ad1b2d3a6a670f833ef6324d735d5791a0bf21b62cf5cfbc0d639d",
+      "url": "https://gamebanana.com/mmdl/1785260"
+    },
+    "FactoryHelper-v1.4.1.zip": {
+      "bytes": 8175682,
+      "sha256": "7db9a9d063884beb4f714b9c3fafa7bf06084572e97a4da36d5926050ab7d18e",
+      "url": "https://gamebanana.com/mmdl/1663903"
+    },
+    "FancyTileEntities-v1.6.2.zip": {
+      "bytes": 64653,
+      "sha256": "c37806dc7e7db4a392c8ab79030701f4cf2046109cc19435b607fca7fe41c8d8",
+      "url": "https://gamebanana.com/mmdl/1569312"
+    },
+    "FemtoHelper-v1.15.22.zip": {
+      "bytes": 11103153,
+      "sha256": "5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419",
+      "url": "https://gamebanana.com/mmdl/1776026"
+    },
+    "FlaglinesAndSuch-v1.6.80.zip": {
+      "bytes": 700428,
+      "sha256": "fb0fd300f95d77539eb9079aed445c81f263557c1a1715187bd509d39c1eb794",
+      "url": "https://gamebanana.com/mmdl/1792428"
+    },
+    "FrostHelper-v1.80.1.zip": {
+      "bytes": 1204743,
+      "sha256": "ba6aee8f596eff0f595fd90cb7f136ea13b1e9c2d664fc38f389608b0f9e2c81",
+      "url": "https://gamebanana.com/mmdl/1802188"
+    },
+    "FurryHelper-v1.0.6.zip": {
+      "bytes": 15131,
+      "sha256": "5f60b2d9c18f6234405137ddc282fd34c6002315fb005412e0d3ab5a58d3afb1",
+      "url": "https://gamebanana.com/mmdl/865739"
+    },
+    "GravityHelper-v1.2.28.zip": {
+      "bytes": 747044,
+      "sha256": "d4a40744f4c155d655973754422643980321b6660027bc01b660a71b0d00649b",
+      "url": "https://gamebanana.com/mmdl/1715006"
+    },
+    "HonlyHelper-v1.7.5.zip": {
+      "bytes": 1042358,
+      "sha256": "6a2d0f04a5be3a9c9c3bf66ec7e93701398a64d5a0e72add5df682e860e7d08d",
+      "url": "https://gamebanana.com/mmdl/1274211"
+    },
+    "IsaGrabBag-v1.7.3.zip": {
+      "bytes": 165166,
+      "sha256": "557af62a5c932439d906b4a1838ad19dfabc28c97ee57de6490c2b905549f007",
+      "url": "https://gamebanana.com/mmdl/1440334"
+    },
+    "JackalHelper-v1.7.7.1.zip": {
+      "bytes": 9984914,
+      "sha256": "ee1d9b01accfc06e4d42357c99b3d0fb4163fa160acc6f06401106d36643c2f5",
+      "url": "https://gamebanana.com/mmdl/1793572"
+    },
+    "JungleHelper-v1.4.10.zip": {
+      "bytes": 7584200,
+      "sha256": "a140e21cbb5fd2dcaac70d4d5e36d49476e414861455ae25dedc0678164406cc",
+      "url": "https://gamebanana.com/mmdl/1721879"
+    },
+    "LuaCutscenes-v0.2.13.zip": {
+      "bytes": 43788,
+      "sha256": "c57913d16596b129275a5dc288bc44fc31a9a67d6f47d7e855efe479dacaaac8",
+      "url": "https://gamebanana.com/mmdl/1305773"
+    },
+    "LunaticHelper-v1.1.1.zip": {
+      "bytes": 931124,
+      "sha256": "b10e044b1dfa412605bee3ba6bfdd4263591099d331d6c1aab1e9ba65bf6a3e5",
+      "url": "https://gamebanana.com/mmdl/466257"
+    },
+    "MaxHelpingHand-v1.40.9.zip": {
+      "bytes": 963880,
+      "sha256": "abfc5d167936410e9b6665018335ee654455e30710caffe01540b232da468fee",
+      "url": "https://gamebanana.com/mmdl/1778093"
+    },
+    "MoreDasheline-v1.7.1.zip": {
+      "bytes": 21459,
+      "sha256": "f29173e525f9c660503aaf36d6c509d07e8ed048d4b060fb4da70f7e2d735a01",
+      "url": "https://gamebanana.com/mmdl/1329041"
+    },
+    "OutbackHelper-v1.7.3.zip": {
+      "bytes": 46206,
+      "sha256": "0005f588824ccfc1c593551c8b166c306d7161e1d04cd4ec6524ce51403680dd",
+      "url": "https://gamebanana.com/mmdl/1115940"
+    },
+    "PandorasBox-v1.0.49.zip": {
+      "bytes": 245309,
+      "sha256": "25f9c7d6792983ac697e3780667fb0963233c0c08f6e528f5c6d9fe732cded05",
+      "url": "https://gamebanana.com/mmdl/1194329"
+    },
+    "SafeRespawnCrumble-v1.2.1.zip": {
+      "bytes": 19664,
+      "sha256": "33d24b09e08647fb72dd238f197b7b2caaa92073f8b29c15ddbf07b0b5fe5e29",
+      "url": "https://gamebanana.com/mmdl/1691056"
+    },
+    "Sardine7-v1.2.0.zip": {
+      "bytes": 228761,
+      "sha256": "af9b613ef7c3eecf19502aa5256eee47c148e05b15e490dd2f34bc6c85329562",
+      "url": "https://gamebanana.com/mmdl/1276221"
+    },
+    "ShroomHelper-v1.2.10.zip": {
+      "bytes": 1824703,
+      "sha256": "6a2c3eacc68353c0f8bb69bb9b59ca62128e6d3f54ff38a8ff1f282f0cdd97d7",
+      "url": "https://gamebanana.com/mmdl/1361856"
+    },
+    "SorbetHelper-v1.9.2.zip": {
+      "bytes": 387824,
+      "sha256": "992ddebc35b86d584c73d45a7e81424927740f0d1ae3980cd618be1782c274d6",
+      "url": "https://gamebanana.com/mmdl/1697291"
+    },
+    "SpirialisHelper-v1.0.8.zip": {
+      "bytes": 116013,
+      "sha256": "207daf679c760d99202323c5c4bcc6a67b0578873c2cb230d94c245ee55c4cc2",
+      "url": "https://gamebanana.com/mmdl/965693"
+    },
+    "StrawberryJam2021-v1.0.12.zip": {
+      "bytes": 95650820,
+      "sha256": "4e1a2fc12baa3db27da433b93bf26b59f34b3e6b7f760c41d8d127636d020655",
+      "url": "https://gamebanana.com/mmdl/1414214"
+    },
+    "StrawberryJam2021Assets-v1.0.1.zip": {
+      "bytes": 91062907,
+      "sha256": "26fab85f20fff89d1adcba2ef926c3447d9996057c7dfc78e5d97f9d96ed7e45",
+      "url": "https://gamebanana.com/mmdl/941090"
+    },
+    "StrawberryJam2021AudioA-v1.0.4.zip": {
+      "bytes": 318011755,
+      "sha256": "81e9cbc39b3a5525c93dfc5b24b675a833a8fb616e8a01cfc0838296f5e37e1d",
+      "url": "https://gamebanana.com/mmdl/1060720"
+    },
+    "StrawberryJam2021AudioB-v1.0.0.zip": {
+      "bytes": 318382262,
+      "sha256": "70b90f45709956a4d18bfbb5941836c534344a1cf0ab859a50430daa3b76ef42",
+      "url": "https://gamebanana.com/mmdl/937262"
+    },
+    "StrawberryJam2021AudioC-v1.0.1.zip": {
+      "bytes": 317738998,
+      "sha256": "298e20ba83fd086c6a747c786475f1753e008016bfa18551e49ffb56dd271c79",
+      "url": "https://gamebanana.com/mmdl/1060721"
+    },
+    "TwigHelper-v1.6.0.zip": {
+      "bytes": 293,
+      "sha256": "cc23c5b5c85769e2fe5dbe047091028c3affa3145fadee47c51ec569e3e721e3",
+      "url": "https://gamebanana.com/mmdl/1294578"
+    },
+    "VivHelper-v1.14.10.zip": {
+      "bytes": 6543567,
+      "sha256": "9a95f51659ccfcb78404f9610307918d6114fc824298fbb8493651ec7c80215a",
+      "url": "https://gamebanana.com/mmdl/1374906"
+    },
+    "VortexHelper-v1.2.19.zip": {
+      "bytes": 2195976,
+      "sha256": "b6280fe2e3c05d355c32a51049854137c41be72d24ec4aec9d997cc7c4394db2",
+      "url": "https://gamebanana.com/mmdl/1368600"
+    },
+    "XaphanHelper-v1.0.79.zip": {
+      "bytes": 6957784,
+      "sha256": "ca868d06eb05f0c5de55126090e5019210e9d83c3dae9394cbcd155acf8eb16f",
+      "url": "https://gamebanana.com/mmdl/1716933"
+    },
+    "YetAnotherHelper-v1.2.5.zip": {
+      "bytes": 53525,
+      "sha256": "73d64e1b3457e2461d3368a01de9f5f31a58bf24e130f3e35ec7280b24814c2d",
+      "url": "https://gamebanana.com/mmdl/1182393"
+    },
+    "memorialHelper-v1.0.4.zip": {
+      "bytes": 13965,
+      "sha256": "ea66a574e5e1639c580974828b201633aadbd25b6699529c89fbd86db501fda4",
+      "url": "https://gamebanana.com/mmdl/870370"
+    }
+  },
+  "aot_disabled": true,
+  "interpreter_disabled": true,
+  "provenance": "Public runtime constants and pinned mod download metadata retained from build28; no binary or device evidence is inherited."
+}

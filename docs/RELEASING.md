@@ -4,18 +4,22 @@
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current recipe is [release/public57.json](../release/public57.json),
-version 0.26.0 / build 57. It adds Built-in StikJIT in an isolated iOS 17.4 helper,
-automatic verified JIT before game launch, protected pairing import and the Run
-button fix. The host retains iOS 15, stable Everest 1.6642.0, download/picker
-repairs, saves and all existing JIT providers. The original 151 dependency hashes
-remain; StikJIT's mixed archive and upstream prebuilt idevice library are separately
-disclosed, bringing the total to 153.
-[Build57's report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) records the local,
-hosted and public-download checks. The owner explicitly authorizes merging PR7
-and publishing 0.26.0 on 20 October. Publication does not establish a physical
-helper/JIT/gameplay pass. Source and delivery commits use the GitHub account
-`hmcneill46`; GitHub's web merge is associated with that account.
+The current development recipe is [release/public58.json](../release/public58.json),
+version 0.29.0 / build58. It combines both computers' development: game-file
+compatibility, full-display touch editing and live input preferences, alongside
+stable Everest1.6642, copy-based imports, dependency recovery and Built-in StikJIT.
+The host retains iOS15 and the isolated helper requires iOS17.4. The FMOD SDK
+stays private; its permitted runtime and applicable licence are included.
+StikJIT's upstream prebuilt idevice dependency remains explicitly disclosed.
+
+[Build58's report](ios-jit/UNIFIED_BUILD_58.md) records the combined source and
+test-kit checks. The owner authorizes source integration and an unsigned test
+IPA, **not a new version tag or public Release**. A manual workflow trial must
+use `publish=false`; publication awaits a separate request after device testing.
+The current public download remains v0.26.0/build57, whose unchanged recipe and
+[report](ios-jit/INTEGRATED_STIKJIT_BUILD_57.md) remain available. Source and
+delivery commits use the GitHub account `hmcneill46`; GitHub's web merge is
+associated with that account.
 
 ## Published v0.26.0 / build57 —20 October2026
 

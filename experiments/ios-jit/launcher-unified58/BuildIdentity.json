@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.29.0",
+  "build_number": "58",
+  "build_id": "launcher-unified-20261020-58",
+  "scope": "Merged touch controls, game input compatibility and live preferences with Everest1.6642, protected imports, dependency recovery and built-in StikJIT",
+  "device_jit_tested": false
+}

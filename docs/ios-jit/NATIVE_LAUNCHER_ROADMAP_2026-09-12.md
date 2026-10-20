@@ -1,3 +1,19 @@
+## 20 October2026 integration — build58 / 0.29.0
+
+The owner requests merging the two computers' work, pushing the combined source
+as `hmcneill46` and delivering a test IPA before a later release decision.
+`launcher-unified58` combines the local full-display touch editor, live input
+preferences and game-import compatibility with published v0.26.0's copy picker,
+Everest1.6642, dependency download recovery and integrated StikJIT. Preserve both
+histories and test the combined behavior. See [the integration report](UNIFIED_BUILD_58.md).
+A new version tag or public Release is not authorized by this request.
+
+Build numbers53–57 below belong to two independent histories. The **published**
+series owns the current numbered release paths; exact conflicting **local**
+recipes remain in commit `ee475e3`. Earlier workflow/no-publication/next-build
+statements are dated records. Integration checks are pending; neither lineage's
+prior results establish build58 physical acceptance.
+
 ## 19 October2026 copy-import correction
 
 The owner reports53 fails and USB verifies the exact installed source/signature
@@ -22,6 +38,18 @@ accepted runtime/JIT behavior and frozen50/52 source. See
 fallback and successful hosted IPA. Its unchanged-ID phone gate subsequently
 failed, leading to the54 copy-import repair above. That53 trial created no
 Release or physical acceptance; older save/lifecycle/iPad/120Hz gates remain.
+
+## Historical local3 October2026 update — controls and input preferences
+
+Build56 delivers the SwiftUI touch editor with full-display placement, actual-size
+landscape editing, a16:9 game guide, split regions, duplicates and experimental
+swipe-to-dash. Build57 adds live feather/grab/prompt preferences, original Celeste
+grab semantics with per-input modes and optional persistent toggling, SDL controller
+recognition and light-colour replay. See [the controls guide](../TOUCH_CONTROLS.md)
+and [build57 evidence](INPUT_PREFERENCES_BUILD_57.md). Host/simulator checks and
+physical acceptance remain separate; the earlier physical save-manager/iPad and
+sustained120Hz gates are still open. Public workflows select52; no new GitHub
+publication is authorised for these local features.
 
 ## 26 September 2026 update
 

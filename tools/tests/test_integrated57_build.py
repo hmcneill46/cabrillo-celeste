@@ -1,4 +1,4 @@
-"""Current57 source selection and immutable56 preservation boundaries."""
+"""Retained published57 source selection and immutable56 preservation boundaries."""
 import copy
 import json
 from pathlib import Path
@@ -8,18 +8,17 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import compile_release57 as build
-from release_pipeline import readiness
 
 
 class IntegratedBuildChecks(unittest.TestCase):
     def setUp(self):
         self.lock = build.read_json(build.IDENTITY/'Dependencies.json')
 
-    def test_current_recipe_and_identity(self):
-        config, report = readiness(build.ROOT)
+    def test_retained_recipe_and_identity(self):
+        config = build.read_json(build.ROOT/'release/public57.json')
         self.assertEqual(config['public_build_script'], 'tools/build_release57.py')
-        self.assertEqual((config['version'], report['build_number']), ('0.26.0', '57'))
-        self.assertFalse(report['physical_device_tested'])
+        self.assertEqual((config['version'], config['build_number']), ('0.26.0', '57'))
+        self.assertFalse(config['physical_device_tested'])
         settings = plistlib.loads((build.IDENTITY/'Info.plist').read_bytes())
         previous = plistlib.loads((build.ROOT/'release/app56/Info.plist').read_bytes())
         self.assertEqual(settings['CFBundleIdentifier'], previous['CFBundleIdentifier'])

@@ -1,0 +1,158 @@
+{
+  "schema": 1,
+  "status": "PASS_HOST_AND_PACKAGE_AWAITING_PHYSICAL_DEVICE",
+  "date": "2026-10-03",
+  "version": "0.26.1",
+  "build_number": 55,
+  "package": {
+    "status": "PASS_OWNED_GAME_PACKAGE",
+    "version": "0.26.1",
+    "build_number": "55",
+    "ipa_sha256": "e257b92175657c1d1374700c58bd93036795d499407c3a2c5bb43f42d42b3645",
+    "bytes": 18787140,
+    "uuid": "464a3e1172b03c3991e7e6f8d26ebad5",
+    "managed_assemblies": 199,
+    "bundled_game_assemblies": 0,
+    "game_assets_bundled": false,
+    "physical_device_tested": false,
+    "public_ipa_ready": true,
+    "distribution_blockers": []
+  },
+  "issue": {
+    "affected_builds": [
+      53,
+      54
+    ],
+    "observed_phone_build": 54,
+    "jit_checks_passed": 26,
+    "game_attempts_rejected": 2,
+    "assets_verified": 1216,
+    "assets_bytes": 1158665183,
+    "game_started": false,
+    "cause": "A nonempty native staging path was treated as an existing ZIP after its file had been removed.",
+    "fix": "Require file existence for archive selection; otherwise verify and use the saved original source."
+  },
+  "checks": {
+    "original54_reproduction": 1,
+    "store": 22,
+    "input_matrix": 97,
+    "original_packages": 9,
+    "distinct_input_sets": 4,
+    "full_host_runs": 3,
+    "gesture_controls_per_run": 37,
+    "feather_controls_per_run": 37,
+    "python": 59,
+    "bootstrap_methods_compared": 372,
+    "bootstrap_method_bodies_changed": 1,
+    "prior_source_manifests": 16
+  },
+  "evidence": {
+    "phone_export": {
+      "path": ".private/device-evidence/2026-10-03/build54-export/CelesteJIT-bdd454ca-2c05-47fd-a73e-98fff69bc34d.diagnostics.json",
+      "sha256": "e18e57478734e79fdb40d3cd18d047a4d31fbd148ca1999ec55dc3fd379e6331"
+    },
+    "phone_review": {
+      "path": ".private/device-evidence/2026-10-03/build54-review.json",
+      "sha256": "cef93b3135666df05ddad341deb27e9950bc37973b66ad0494a4e7b7c30cd632"
+    },
+    "managed": {
+      "path": ".build/saved55-managed-a/receipt.json",
+      "sha256": "f3315010de7cd68bd263f6a554230a0d37ff37eb48c19a0c66bb94107684a1ad"
+    },
+    "native_dependencies": {
+      "path": ".build/release51-local/native/receipt.json",
+      "sha256": "c6dcf94da2ebd45154a0268f79e216c1e9f08b83b486d3332695a70debb58f62"
+    },
+    "fmod": {
+      "path": ".build/release51-local/fmod/receipt.json",
+      "sha256": "dedde2f62612477699fd2922cd73c10b9434fdcd2b9d1aa289c14a1d9f3aded5"
+    },
+    "original54_failure_control": {
+      "path": ".build/saved55-original-control-b/receipt.json",
+      "sha256": "c7d2d35a561e77e7ae8bfd3cd3572b68f3bb316042ba9fd0f8bffab6832dc417"
+    },
+    "store": {
+      "path": ".build/saved55-store-a/receipt.json",
+      "sha256": "ae12821331a2cf6d3a93b35433ad3f3542842501ad617193af662267e391210b"
+    },
+    "matrix": {
+      "path": ".build/saved55-store-a/matrix.json",
+      "sha256": "dbba862f4446e925c378589d09163a16be1d9e50eb1e80853d203b76acab36c3"
+    },
+    "host": {
+      "path": ".build/saved55-host-a/receipt.json",
+      "sha256": "fba7dbbeb270d34f8801a62d90de5b8716e9ee44968345f392ca6bcf2e98067d"
+    },
+    "package": {
+      "path": "artifacts/cabrillo-build55-final/verification.json",
+      "sha256": "0b567fe03e2237584411ea469199dcfd89439fc8c86541df56fd494c3a47f275"
+    },
+    "independent_package": {
+      "path": "artifacts/cabrillo-build55-final/independent-verification.json",
+      "sha256": "05f9702d394bfa5823557021b440c8c8ab7e106a9dd319655c12c9356cce0ff3"
+    },
+    "source_manifest": {
+      "path": "artifacts/cabrillo-build55-final/frozen-source-manifest.json",
+      "sha256": "cd84af3c42fde487b43d909c539260289dc1a99e51440289de3914fccb54e01c"
+    },
+    "source_archive": {
+      "path": "artifacts/cabrillo-build55-final/frozen-source.tar.gz",
+      "sha256": "397a885e35f80e5778de32633e4b4b5af83b65d6a2e5b92c67a1d321a96e62ab"
+    },
+    "prior_frozen_comparison": {
+      "path": "artifacts/cabrillo-build55-final/frozen-comparison.json",
+      "sha256": "eadf2a7c8acc27399c12b5888d0b6e88d8c57103800057e563f31cccce87f09f"
+    },
+    "bootstrap_method_difference": {
+      "path": "artifacts/cabrillo-build55-final/bootstrap-method-diff.json",
+      "sha256": "b1ae1681eecb81593b20dbfda226d6d6de39a915872363c7d4e773b1e6170aad"
+    },
+    "source_difference": {
+      "path": "artifacts/cabrillo-build55-final/source-diff.json",
+      "sha256": "e10fff0db10e39915bfaf9329b194be0fa7f97e5c456c7474990274279b4f392"
+    },
+    "managed_difference": {
+      "path": "artifacts/cabrillo-build55-final/managed-diff.json",
+      "sha256": "69466669722cf8b0c8c18f7a1cf5509e5bd9b6df967bd16c0a01964471d88d01"
+    },
+    "python_controls": {
+      "path": "artifacts/cabrillo-build55-final/python-tests.log",
+      "sha256": "257e85ed0e2f8d9e216398548c22e36c35235a0105c4d65c51c399a7ace23616"
+    },
+    "cloud_delivery": {
+      "path": "artifacts/cabrillo-build55-final/icloud-delivery.json",
+      "sha256": "6452bf8f693043ee26e9e564124f9f1ab61ef70b16af69fe92118bd327f9f16b"
+    },
+    "cloud_retirement": {
+      "path": "artifacts/cabrillo-build55-final/icloud-retirement.json",
+      "sha256": "2f4571c2d559b1b3e863c4206dec18f36080db0341410a6abec52318fbab90ef"
+    },
+    "cloud_initial_status": {
+      "path": "artifacts/cabrillo-build55-final/icloud-status-initial.json",
+      "sha256": "df7bc04a2e0cc942671b5df39ba9eebd9599e73bad61d061762735c453fa75dc"
+    },
+    "cloud_status": {
+      "path": "artifacts/cabrillo-build55-final/icloud-status-final.json",
+      "sha256": "9f938211f26a926ac929d08c6e2f24549bd19375cef1dd38a51a25bf25044789"
+    }
+  },
+  "source_inputs_frozen": 273,
+  "managed_assemblies_identical_to54": 191,
+  "feather_adapter_identical_to54": true,
+  "native_and_swiftui_sources_identical_to54": true,
+  "native_dependency_archives_identical": 16,
+  "shortcut_revision": 49,
+  "game_files_used_in_app_build": false,
+  "game_files_used_only_in_private_tests": true,
+  "physical_device_tested": false,
+  "source_commit_or_push_performed": false,
+  "public_tag_or_release_created": false,
+  "cloud_upload_confirmed": true,
+  "notes": [
+    "The final public managed payload is used in cold, cached missing-ZIP and legacy rebuild real-game host runs and the final IPA.",
+    "The legacy fixture uses exact standard originals with no selection pointer/current cache; it is a host reconstruction of the pre-53 storage contract, not a copied phone data container.",
+    "Old54 failure control compiles frozen preparation source; it is a source-level reproduction with test instrumentation, not the original IPA running on a Mac.",
+    "The actual game adapter and all native/SwiftUI sources remain byte-identical to54. Earlier Motion Smoothing/UI tests stay scoped to54.",
+    "The verified54 phone failure remains retained. Physical55 startup and feather acceptance require new evidence."
+  ]
+}

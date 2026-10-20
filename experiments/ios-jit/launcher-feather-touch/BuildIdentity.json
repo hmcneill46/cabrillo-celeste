@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "product": "Cabrillo",
+  "version": "0.26.0",
+  "build_number": "54",
+  "build_id": "launcher-feather-touch-20261002-54",
+  "scope": "Optional built-in finger-follow feather steering with neutral coasting",
+  "device_jit_tested": false
+}
