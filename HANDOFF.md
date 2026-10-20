@@ -1,6 +1,7 @@
 # Cabrillo development handoff
 
-Written 14 September 2026; updated19 October for the verified Everest6642/build55 trial,
+Written 14 September 2026; updated20 October for the local general download repair,
+the verified Everest6642/build55 trial,
 copy-based Files imports and v0.24.3 publication,
 following30 September FMOD clarification after source publication and USB shortcut testing,
 iOS15/iPad support, the
@@ -9,6 +10,38 @@ preparation, for a fresh development chat opened in
 `/Users/harrymcneill/Projects/Cabrillo`. Read this and [AGENTS.md](AGENTS.md) first.
 This file is the entry point; linked reports contain deeper source and evidence.
 Recheck current files and owner messages before treating this dated state as live.
+
+## General dependency download repair —19–20 October, build56
+
+The owner requests the FemtoHelper download repair and explicitly requires a
+general solution for moved downloads, plus agreement between actual Everest and
+native dependency/version checks. Work is local in
+`launcher-dependency-downloads`, Cabrillo0.25.1/build56, retaining stable1.6642.0.
+All261 captured55 inputs stay frozen. Read
+`docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md` and its evidence ledger for current
+checks. Final100 Python,119 save/profile,321 dependency controls and actual iOS
+compilation pass. The final host installation verifies all52 Strawberry Jam
+archives and232 checks with seeded public cache, then a separate uncached real
+1776026→1838255 recovery passes14 assertions. Original fresh52-download baseline
+is retained separately. No56 package or physical pass is claimed until its own
+receipt exists.
+
+The supplied exact55 diagnostics show33/52 archives verified, then
+FemtoHelper1.15.22 oldfile1776026 fails; no mod transaction commits. The official
+archived file1838255 has identical11,103,153 bytes/SHA256
+`5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419`.
+The56 metadata relocates that link without changing tested helper contents.
+General recovery must use bounded authoritative listings and preserve the exact
+reviewed archive identity. The native overlay also carries current MirrorName
+metadata and aligns required/optional API alias handling with upstream Everest.
+Keep the original bundle ID, copy imports, save/profile paths, JIT and Shortcut49.
+
+On20 October, after the local fix/checks completed, the owner explicitly answers
+“Go for it” to committing/pushing tested56 as `hmcneill46`, updating existing
+draft PR6 and running the existing workflow for an unsigned test IPA. This
+includes the repair's source, validation/delivery notes and scoped build fixes.
+Preserve published history. No new public tag or Release is authorized.
+Physical gameplay/JIT/save/lifecycle gates stay distinct.
 
 ## Everest stable1.6642 update —19 October, build55
 

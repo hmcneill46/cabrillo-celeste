@@ -1,0 +1,230 @@
+{
+  "schema": 1,
+  "date": "2026-10-20",
+  "recorded_utc": "2026-10-20T04:44:29.598178+00:00",
+  "version": "0.25.1",
+  "build_number": "56",
+  "build_id": "launcher-dependency-downloads-20261019-56",
+  "status": "PASS_FINAL_LOCAL_SOURCE_NATIVE_LIVE_INSTALL_AND_EXACT_ARCHIVE_RECOVERY_HOSTED_AND_DEVICE_PENDING",
+  "diagnosis": {
+    "reported_build": "55",
+    "verified_archives_before_failure": 33,
+    "planned_archives": 52,
+    "failed_module": "FemtoHelper",
+    "requested_version": "1.15.22",
+    "old_file_id": "1776026",
+    "relocated_file_id": "1838255",
+    "archive_bytes": 11103153,
+    "archive_sha256": "5a845805bae30490ed7c9da84410fbe672628b8fe927a830f5f2eb148eb88419",
+    "replacement_bytes_identical": true,
+    "prior_mod_commit_started": false,
+    "prior_application_state": "unchanged",
+    "authoritative_page": "https://gamebanana.com/mods/53722"
+  },
+  "implementation": {
+    "overlay": "experiments/ios-jit/launcher-dependency-downloads",
+    "public_build_script": "tools/build_release56.py",
+    "release_manifest": "release/public56.json",
+    "production_source_sha256": {
+      "experiments/ios-jit/launcher-dependency-downloads/native/DependencyInstaller.swift": "65bb3fbdea3514b9601131378e6ea7eaee8f5b10a46960d2ef0ff79ce7a3fe81",
+      "experiments/ios-jit/launcher-dependency-downloads/native/DependencyPlan.swift": "905cb18366fb5a7bdfbb144ec1a5b285ef64c2abb4cb1d5b7ab642d211c30a32",
+      "experiments/ios-jit/launcher-dependency-downloads/native/ModLibrary.swift": "54e93f6766a02e40848153da3560b5af5a4f4397d2d124bf5cb3b9254bfad694"
+    },
+    "recovery": {
+      "trigger": "All ordinary/mirror attempts fail transport or full reviewed archive verification",
+      "page_identity": "Canonical explicit page or catalogue page joined by current published index file ID",
+      "metadata_hosts": [
+        "gamebanana.com",
+        "maddie480.ovh"
+      ],
+      "metadata_max_bytes": 4194304,
+      "maximum_search_queries": 6,
+      "maximum_pages": 3,
+      "maximum_archive_candidates": 8,
+      "original_reviewed_version_hash_size_and_modules_preserved": true,
+      "changed_or_newer_archive_substitution": false,
+      "per_attempt_integrity_verification": true,
+      "verified_cache_identity_preserved": true,
+      "atomic_commit_retained": true,
+      "cancellation_and_partial_cleanup_retained": true
+    },
+    "mirror_name_from_index": true,
+    "required_api_alias": "Everest",
+    "optional_api_name": "API",
+    "runtime_identity": {
+      "schema": 1,
+      "everestSourceCommit": "5abd7876821223c20711c1844a5187321d6e904c",
+      "compatibilityPolicy": 1,
+      "builtins": {
+        "Celeste": "1.4.0.0",
+        "CelesteIOS": "1.0.0",
+        "Everest": "1.6642.0",
+        "EverestCore": "1.6642.0"
+      }
+    },
+    "runtime_pins_changed_since55": false,
+    "retained_build55_app_input_count": 261,
+    "retained_build55_source_pin_map_sha256": "051c1612715137f78e7355a96ad45364c8132edacf1b6b29300752bfc11a5b1f",
+    "frozen_prior_app_inputs_mutated": false,
+    "original_bundle_id_retained": true,
+    "copy_imports_retained": true,
+    "signed_shortcut_revision": 49
+  },
+  "checks": {
+    "python": {
+      "status": "PASS",
+      "count": 100,
+      "path": ".build/dependency56-python-final.log",
+      "sha256": "ea9790a4945ae47f30c2df5db1e473a7a8ce98cd21dbb790893b721271adf14f"
+    },
+    "production_ios_compilation": {
+      "status": "PASS_PRODUCTION_IOS_LAUNCHER_COMPILE",
+      "path": ".build/dependency56-production-compile-c/receipt.json",
+      "sha256": "f0382ab4928a66021d43328c9dcd7ddd38e8d5f44030fec1c9dcbd8fa9a2ebb2",
+      "scope": "42 selected production/vendor Swift sources, six CYaml C sources and retained54 Objective-C main/helper; broader native sources hash-checked, no app link",
+      "target": "arm64-apple-ios15.0",
+      "sdk_version": "26.5",
+      "current_source_hashes_rechecked": true
+    },
+    "native_profiles": {
+      "status": "PASS_PUBLIC_NATIVE_PROFILE_CHECKS",
+      "path": ".build/dependency56-profiles-c/receipt.json",
+      "sha256": "c423a39170a1d16a94eceba166ccb6324505ac71f118fa38de200b7dcbb86700",
+      "checks": 119,
+      "network_denied": true,
+      "current_source_hashes_rechecked": true
+    },
+    "retained_shortcuts": {
+      "status": "PASS_PUBLIC_NATIVE_SHORTCUT_CHECKS",
+      "path": ".build/dependency56-shortcuts-a/receipt.json",
+      "sha256": "dbc01fe45aed7cd7eae24abc3dacf1c4f5201da5a9bc46b7379b505780bb73f1",
+      "native_checks": 132,
+      "cellular_checks": 53,
+      "branches": 36,
+      "bad_url_controls": 15,
+      "current_source_hashes_rechecked": true
+    },
+    "retained_picker": {
+      "status": "PASS_HOST_DOCUMENT_PICKER_COMPATIBILITY_CONTROLS",
+      "path": ".build/dependency56-picker-policy-a/receipt.json",
+      "sha256": "d22ff2450f6c169599322920b36b06b22bc080da28d54f7a1a7fce91832fe50c",
+      "current_source_hashes_rechecked": true,
+      "production_device_and_simulator_objects_compiled": true
+    },
+    "baseline_live_downloads": {
+      "status": "PASS_PRE_EXPANSION_BASELINE_LIVE_DOWNLOADS_AND_CACHE_CONTROL",
+      "path": ".build/dependency56-live-a/baseline-pre-expansion.json",
+      "sha256": "210594cc6cd7aef7f181bdb6d33ee3fcc40120d407e73baab871f2411b21965c",
+      "scope": "Earlier compiled draft; all52 public archives downloaded and verified,128 checks and warm reuse; explicitly not final general-recovery source acceptance"
+    },
+    "final_live_installation": {
+      "status": "PASS_LIVE_BUILD56_STRAWBERRY_JAM_DEPENDENCY_INSTALL",
+      "path": ".build/dependency56-live-final-b/receipt.json",
+      "sha256": "4bfacd1219b37a60cc54ed33f1da83ed9c59a9cc05cabc9f89a14d886e1bffb2",
+      "checks": 232,
+      "planned_and_installed_archives": 52,
+      "total_verified_archive_bytes": 1235908245,
+      "seeded_public_cache": true,
+      "seeded_public_cache_archives": 52,
+      "fresh_network_archive_verifications": 0,
+      "live_index_and_graph": true,
+      "accepted_explicit_host_reviews": 1,
+      "installed_zip_metadata_and_hashes_reverified": true,
+      "final_library_preflight_can_run": true,
+      "warm_cache_download_attempts": 0,
+      "current_source_hashes_rechecked": true,
+      "scope": "Final production source revalidates earlier real downloaded public archives from seeded cache; actual transaction, final resolver/library preflight and warm installation pass; no mod DLL or game executes",
+      "results_path": ".build/dependency56-live-final-b/results/result.json",
+      "results_sha256": "1dc3f1f266c85d3ab38a74f1dcd689cedaa8750a829553a8bbab61230f8e963d",
+      "all52_verified_records_path": ".build/dependency56-live-final-b/results/downloaded-archives.json",
+      "all52_verified_records_sha256": "e1777bc57ebf9bd907234aa0c07dd5f8c92b553d4e15a0b92301653186efdc8b"
+    },
+    "mirror_controls": {
+      "status": "PASS_DEPENDENCY56_MIRRORS",
+      "path": ".build/dependency56-mirrors-final-c/receipt.json",
+      "sha256": "e6ce94900dd45d049b56aa3a9157b2fe347cdd50516d84451ed1aeac004fb22e",
+      "checks": 76,
+      "original_numeric_mirror_failure_reproduced": true,
+      "current_source_hashes_rechecked": true
+    },
+    "general_relocation_controls": {
+      "status": "PASS_DEPENDENCY56_NATIVE_CONTROLS",
+      "path": ".build/dependency56-relocation-c/receipt.json",
+      "sha256": "4b8335febf8ac65f225596812e194167f6bfd67bd6a4977dfb1cc1c190647af0",
+      "checks": 78,
+      "current_source_hashes_rechecked": true
+    },
+    "runtime_dependency_controls": {
+      "status": "PASS_DEPENDENCY56_NATIVE_CONTROLS",
+      "path": ".build/dependency56-runtime-d/receipt.json",
+      "sha256": "df021e4c76719d7ff6819c11ae6c8580a6fc2d40aa68824497053267969e059f",
+      "checks": 167,
+      "current_source_hashes_rechecked": true
+    },
+    "actual_compiled_everest_numeric_version_parity": {
+      "status": "PASS_DEPENDENCY56_ACTUAL_COMPILED_VERSION_PARITY",
+      "path": ".build/dependency56-version-parity-e/receipt.json",
+      "sha256": "c0213f2f2b2b6038a7749cac2018d70322f3f90dcdbaeb32e1f883546680d14e",
+      "comparisons": 14,
+      "assertions": 156,
+      "payload": "Actual independently verified public build55 patch DLL; same6642 source retained for56",
+      "original_assembly_loaded": false,
+      "game_or_adapter_executed": false,
+      "scope": "Strictly audited numeric System.Version comparator IL is isolated into a core-library-only fixture; original Everest initializer never runs"
+    },
+    "independent_source_review": {
+      "status": "NO_BLOCKING_FINDINGS",
+      "scope": "General transport/identity/transaction semantics, upstream required-only API aliases, actual56 selectors and fresh builder/manifest/CI integration",
+      "all261_prior55_and253_prior54_inputs_exact": true
+    },
+    "real_stale_archive_network_recovery": {
+      "status": "PASS_REAL_BUILD56_STALE_FEMTO_RELOCATION",
+      "path": ".build/dependency56-live-final-b/relocation/relocation-result.json",
+      "sha256": "eda7f46684bc42dcafbf90231681b8a2e54814ec0838ea2890e47d81ecda7aa9",
+      "checks": 14,
+      "providers_overridden": false,
+      "seeded_recovery_cache": false,
+      "old_source_url": "https://gamebanana.com/mmdl/1776026",
+      "both_old_numeric_mirrors_tried": true,
+      "recovered_url": "https://gamebanana.com/mmdl/1838255",
+      "official_page_metadata_recovery": true,
+      "exact_original_size_sha256_and_zip_version_reverified": true,
+      "original_candidate_cache_key_retained": true,
+      "atomic_transaction_completed": true,
+      "synthetic_original_root_and_save_sentinels_preserved": true
+    },
+    "public_source_inventory": {
+      "status": "PASS_PUBLIC_SOURCE_CHECKOUT",
+      "public_files": 4715,
+      "private_dependencies_used": false,
+      "scope": "Current Git candidate names, content hashes, reasons, public syntax and ignored boundaries; no IPA or device claim"
+    }
+  },
+  "delivery": {
+    "github_write_approval": "EXPLICIT_OWNER_APPROVAL_2026_10_20",
+    "committed": false,
+    "pushed": false,
+    "hosted_build": false,
+    "ipa_built": false,
+    "tag_created": false,
+    "public_release_created": false,
+    "git_identity": "hmcneill46 <57508980+hmcneill46@users.noreply.github.com>",
+    "approval_scope": [
+      "Commit/push tested56 as hmcneill46",
+      "Update existing draft PR6",
+      "Run existing workflow for unsigned test IPA",
+      "Repair validation and delivery notes"
+    ],
+    "approval_excludes": [
+      "New version tag",
+      "Public Release",
+      "Unrelated future changes"
+    ]
+  },
+  "limitations": {
+    "physical_device_tested": false,
+    "gameplay_or_jit_executed": false,
+    "fresh56_managed_payload_compiled": false,
+    "known_tested_installer_cases_do_not_establish_all_future_mod_compatibility": true
+  }
+}

@@ -16,8 +16,8 @@ class CopyPickerBuildTests(unittest.TestCase):
 
     def test_current_recipe_retains_build54_picker(self):
         config, report = readiness(build.ROOT)
-        self.assertEqual(config['public_build_script'], 'tools/build_release55.py')
-        self.assertEqual(report['build_number'], '55')
+        self.assertEqual(config['public_build_script'], 'tools/build_release56.py')
+        self.assertEqual(report['build_number'], '56')
         self.assertFalse(report['physical_device_tested'])
         sources = build.selected_native_sources(self.lock)
         self.assertIn(build.OVERLAY / 'src/main.m', sources)

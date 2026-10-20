@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "file_count": 4688,
+  "file_count": 4715,
   "description": "All current Git candidates. Generated/private files have separate ignored manifests. Update current hashes deliberately when editing; import_sha256 preserves extraction provenance.",
   "files": {
     ".gitattributes": {
@@ -9,9 +9,9 @@
       "bytes": 82
     },
     ".github/workflows/ci.yml": {
-      "reason": "Public source, native profile/shortcut and build53 signing-picker policy/device-compilation checks without licensed inputs",
-      "sha256": "b948fa43dcf9a052e57c7a0a6723637353d58122a01313597dfbf93b32c3976c",
-      "bytes": 2946
+      "reason": "Public inventory, build56 dependency relocation/runtime checks, retained saves/shortcuts/picker controls and actual iOS production compilation without licensed inputs",
+      "sha256": "15a82a345c543e13a4db24befbe8052fc1923f83d987a5e8127d19511b4239ea",
+      "bytes": 3254
     },
     ".github/workflows/release.yml": {
       "reason": "Gated tagged IPA build and attestation workflow with explicit source toolchain",
@@ -24,19 +24,19 @@
       "bytes": 226
     },
     "AGENTS.md": {
-      "reason": "Build55 Everest trial and Git identity scope, frozen source preservation, prior acceptance and owner approval boundaries",
-      "sha256": "905c20192e2725c7380e1a87f129332223bfc38d13e3a220a8fb6c7f749a214f",
-      "bytes": 46056
+      "reason": "Current build56 general dependency repair, frozen55 preservation, prior scoped acceptance and explicit GitHub approval boundaries",
+      "sha256": "4a6950196bef8c0ef0ac58abfa7c7da149e82ce6edb3331ad64958b995d4d130",
+      "bytes": 48077
     },
     "CHANGELOG.md": {
-      "reason": "Public release change notes requested by owner for v0.24.3",
-      "sha256": "b8acc287c2c8aa465a614e19aa50fbfe872a4e1e783afa290add817ca4824534",
-      "bytes": 1545
+      "reason": "Owner-requested public release notes and current build56 general downloader repair notes",
+      "sha256": "2f0e5123e54940f19576f2f1d218eb3fbf714929eca0aca577854a2f9e7cfeaf",
+      "bytes": 2078
     },
     "HANDOFF.md": {
-      "reason": "Build53 repair evidence, current build recipe, missing full package inputs and pending unchanged-ID phone gate",
-      "sha256": "d10a01d740ade627dea4e2f36d2efb45c98cec8a9b6bf8a6bf92b15956ca71c7",
-      "bytes": 110064
+      "reason": "Current build56 general dependency repair and scoped verification state, retained trial/release evidence and pending publication/device gates",
+      "sha256": "640061e0948b40d0bbe5be17aec63f7195e77b9f827f8559befb0cd274d331af",
+      "bytes": 112120
     },
     "LICENSE": {
       "reason": "Inherited project source license",
@@ -46,8 +46,8 @@
     },
     "README.md": {
       "reason": "Current product/download overview and build53 signing-aware source recipe",
-      "sha256": "2c5306b16cbd3d56434362569939d69ac7167e0bf7e21836988d4ce74b745aba",
-      "bytes": 13184
+      "sha256": "b3b141cbe72187253d4e1f01e51ee082453ca0c45afdf7b065fc415dd837cccc",
+      "bytes": 13381
     },
     "docs/APPLE_PLATFORMS.md": {
       "reason": "iPhone evidence, intended iPad support and separate Apple platform acceptance gates",
@@ -56,8 +56,8 @@
     },
     "docs/BUILDING.md": {
       "reason": "Current build53 developer SDK recipe and preserved historical reproduction instructions",
-      "sha256": "cf033b39b5b658a3f0b1a714a3bffcc40894ed74898fd1f5bfb36f8c82c1fac4",
-      "bytes": 38139
+      "sha256": "3751b8ac11ef78de0fcacbda145018f6b43c242f0261b07096c92ca7bc147a74",
+      "bytes": 38813
     },
     "docs/CABRILLO_MIGRATION.md": {
       "reason": "Repository extraction decisions, verification results and remaining boundaries",
@@ -90,8 +90,8 @@
     },
     "docs/RELEASING.md": {
       "reason": "Current53 source workflow and separate immutable published52 release with licensed-input boundaries",
-      "sha256": "7bd9fd3b793bc54dde08e19a736bf33f5f42f5d471296f96adae73a879c45d39",
-      "bytes": 19159
+      "sha256": "045cd4ec0423c608d645c3e772d81098133fb38fe3dc76aa6b30ac65103297e0",
+      "bytes": 19388
     },
     "docs/history/LEGACY_AGENTS_BUILD28.md": {
       "reason": "Historical development constraints and accepted-build evidence",
@@ -26276,7 +26276,7 @@
     },
     "tools/release_pipeline.py": {
       "reason": "Select build53 source recipe while retaining gated clean-ref IPA publishing and SDK provenance checks",
-      "sha256": "b73412180dcf7e5a35e234dba58f742dd085c7535dee128a5d4107461848938f",
+      "sha256": "6fb27d39db4a2b1dacb8f93f38e7f4b44d6fdbd938d2e43acbb690613e72b448",
       "bytes": 10767
     },
     "tools/repair_player_precision.py": {
@@ -26291,7 +26291,7 @@
     },
     "tools/tests/test_copy_picker_build.py": {
       "reason": "Build54 copy-based Files picker correction, source recipe, verification or sanitized evidence",
-      "sha256": "2f3a316866091fadf9f4c2a4a384b0516a6121c8727e0fe91db363f2981ac027",
+      "sha256": "c1a05979f6e34128e1c3838b9f6c9fb751e80a91b6df67655a2f511ec1d93022",
       "bytes": 4374
     },
     "tools/tests/test_development_build.py": {
@@ -26331,7 +26331,7 @@
     },
     "tools/tests/test_signing_picker_build.py": {
       "reason": "Build53 source selection and frozen-input rejection regression controls",
-      "sha256": "687a53d5444264ade602a23253779e9cb07685df56384222d650518d96806a0e",
+      "sha256": "bfb854f33c0852863ceeca3e889fff1cdeeecb96f325d08d523b783d88f562c4",
       "bytes": 3215
     },
     "tools/verify_backups.py": {
@@ -26713,6 +26713,141 @@
       "reason": "Build55 Everest stable1.6642 source, versioned build recipe, verification or sanitized evidence",
       "sha256": "a018ef759ff6da7445b0e6eda634bc24ef115d48884d2457b1d7cd5bba937665",
       "bytes": 7344
+    },
+    "docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md": {
+      "reason": "Build56 implementation, scoped local/hosted evidence and delivery approval record for general dependency download repair",
+      "sha256": "881a53c7604b1f89142c9beff570f4db48addf38c47bc0811c0c05f8b844c3de",
+      "bytes": 8637
+    },
+    "docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56_EVIDENCE.json": {
+      "reason": "Build56 implementation, scoped local/hosted evidence and delivery approval record for general dependency download repair",
+      "sha256": "ef45f5ca3794cb52ae31882dca366f0908ef584a04b817f77079ec47038ab42b",
+      "bytes": 10752
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/BuildContract.json": {
+      "reason": "Build56 general exact-archive recovery, current mirror metadata and upstream dependency alias semantics with retained tested compatibility pins",
+      "sha256": "b91d2660108b3bf09059d5476db1af35624c911fb2184b75ef7a093bdd3960f5",
+      "bytes": 11012
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/CompatibilityDownloads.json": {
+      "reason": "Build56 general exact-archive recovery, current mirror metadata and upstream dependency alias semantics with retained tested compatibility pins",
+      "sha256": "31e4f4f016fad6afb6d6178f00caac514e7cad0ed1a69794c1d5cb9fcb805097",
+      "bytes": 3202
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/README.md": {
+      "reason": "Build56 general exact-archive recovery, current mirror metadata and upstream dependency alias semantics with retained tested compatibility pins",
+      "sha256": "b34f06d453e5f8529897ff7fbd0d8b19cb6c119e361bef3b11ce7e65f5f5765c",
+      "bytes": 1615
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/native/DependencyInstaller.swift": {
+      "reason": "Build56 general exact-archive recovery, current mirror metadata and upstream dependency alias semantics with retained tested compatibility pins",
+      "sha256": "65bb3fbdea3514b9601131378e6ea7eaee8f5b10a46960d2ef0ff79ce7a3fe81",
+      "bytes": 54207
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/native/DependencyPlan.swift": {
+      "reason": "Build56 general exact-archive recovery, current mirror metadata and upstream dependency alias semantics with retained tested compatibility pins",
+      "sha256": "905cb18366fb5a7bdfbb144ec1a5b285ef64c2abb4cb1d5b7ab642d211c30a32",
+      "bytes": 24847
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/native/ModLibrary.swift": {
+      "reason": "Build56 general exact-archive recovery, current mirror metadata and upstream dependency alias semantics with retained tested compatibility pins",
+      "sha256": "54e93f6766a02e40848153da3560b5af5a4f4397d2d124bf5cb3b9254bfad694",
+      "bytes": 25645
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/tests/DependencyMirrorOriginalControl.swift": {
+      "reason": "Build56 public production dependency transport, relocation, runtime-version and isolated live-install regression controls; no bundled mod archives",
+      "sha256": "af9d3e24606f5df07aa304134a405b6bbc1180d481c8435d9854a488bba6c16f",
+      "bytes": 2123
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/tests/DependencyMirrorTests.swift": {
+      "reason": "Build56 public production dependency transport, relocation, runtime-version and isolated live-install regression controls; no bundled mod archives",
+      "sha256": "3950ec8851150f89c13cc4d31d437df4243adf00c36e0b4310cddeee4eb4d19d",
+      "bytes": 20448
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/tests/DependencyRelocationTests.swift": {
+      "reason": "Build56 public production dependency transport, relocation, runtime-version and isolated live-install regression controls; no bundled mod archives",
+      "sha256": "7a9c6af8b033c0dfcfaac54af6e1c13d55fddb057b9a2c034c81bf53e9ba3c99",
+      "bytes": 20405
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/tests/DependencyRuntimeTests.swift": {
+      "reason": "Build56 public production dependency transport, relocation, runtime-version and isolated live-install regression controls; no bundled mod archives",
+      "sha256": "9d233acf2bb597415887b439f031d7488ee8c4511968f901ce5cae8df5469f04",
+      "bytes": 22610
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/tests/LiveDependencyInstall.swift": {
+      "reason": "Build56 public production dependency transport, relocation, runtime-version and isolated live-install regression controls; no bundled mod archives",
+      "sha256": "53b9cd4b0218c48f1adecb801c465505089f870b857637427be94ea74da40890",
+      "bytes": 25013
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/tests/RuntimeVersionAudit.cs": {
+      "reason": "Build56 public production dependency transport, relocation, runtime-version and isolated live-install regression controls; no bundled mod archives",
+      "sha256": "5e62ec370ac3844a695a1dc181c5ab798f7fdd325a85b2cd2d08b89bef8d7134",
+      "bytes": 12771
+    },
+    "experiments/ios-jit/launcher-dependency-downloads/tests/run_dependency_mirrors.py": {
+      "reason": "Build56 public production dependency transport, relocation, runtime-version and isolated live-install regression controls; no bundled mod archives",
+      "sha256": "dbee9094277e4919f1fc2ebc71c4c53eb22b65885f19ba43d88e31edf19a68b3",
+      "bytes": 5691
+    },
+    "release/app56/BuildIdentity.json": {
+      "reason": "Versioned build56 identity, exact prior source locks, selected overlay and gated fresh public-source recipe",
+      "sha256": "897e29a6770f927d4e9e619d71f05d25c11405a0dd8d6d22d67ab3dbd289c498",
+      "bytes": 329
+    },
+    "release/app56/Dependencies.json": {
+      "reason": "Versioned build56 identity, exact prior source locks, selected overlay and gated fresh public-source recipe",
+      "sha256": "3440d336debc6dcab201e70f56787cca435fd0558ae08ed8c5339c89d8e1167e",
+      "bytes": 103516
+    },
+    "release/app56/Info.plist": {
+      "reason": "Versioned build56 identity, exact prior source locks, selected overlay and gated fresh public-source recipe",
+      "sha256": "22aee84df96141637367085de72ee49f680b683724473cb9b97355142504a17b",
+      "bytes": 3361
+    },
+    "release/public56.json": {
+      "reason": "Versioned build56 identity, exact prior source locks, selected overlay and gated fresh public-source recipe",
+      "sha256": "34bad23a95a6fc061217b50ffe2e257f8c1dafb8a2eaf70a15a705e3c05bda3e",
+      "bytes": 583
+    },
+    "tools/build_release56.py": {
+      "reason": "Build56 production source selection, native/runtime verification or public-source build and release controls",
+      "sha256": "a9a9549613607cf4e81a01e61a2a0a461c03d1959dd9d3e16aae5c9451c40906",
+      "bytes": 10997
+    },
+    "tools/check_dependency56_compile.py": {
+      "reason": "Build56 production source selection, native/runtime verification or public-source build and release controls",
+      "sha256": "d84f5c78f3210b68c1d9b3770e9274b256704fe540d279c9ee2db30357ace66b",
+      "bytes": 13688
+    },
+    "tools/check_dependency56_live.py": {
+      "reason": "Build56 production source selection, native/runtime verification or public-source build and release controls",
+      "sha256": "f3e1dc05ed27075486a007be24da6abac1fb6fce474b45f5d02880214080494b",
+      "bytes": 11924
+    },
+    "tools/check_dependency56_managed.py": {
+      "reason": "Build56 production source selection, native/runtime verification or public-source build and release controls",
+      "sha256": "512db698371d684217ac0616ad1652c780be942344f1b3360e1fc9bdc5bf2567",
+      "bytes": 12658
+    },
+    "tools/check_dependency56_native.py": {
+      "reason": "Build56 production source selection, native/runtime verification or public-source build and release controls",
+      "sha256": "036ca0f8cb22b06f7f3f7b1e60ef4b5745abe321f6b82003dc3e91839c228b6e",
+      "bytes": 6460
+    },
+    "tools/ci/check_dependency56_profiles.py": {
+      "reason": "Build56 production source selection, native/runtime verification or public-source build and release controls",
+      "sha256": "81e652a95c75ded128b7a69e060d7d26471656b6f45c86c556f897e4596bf6ec",
+      "bytes": 4723
+    },
+    "tools/compile_release56.py": {
+      "reason": "Build56 production source selection, native/runtime verification or public-source build and release controls",
+      "sha256": "058a06f0a47b79504312bf62171c46eefe6593ae324cc6c33cd2d1585292c8ef",
+      "bytes": 32080
+    },
+    "tools/tests/test_dependency56_build.py": {
+      "reason": "Build56 production source selection, native/runtime verification or public-source build and release controls",
+      "sha256": "dc77076e3809a2ab96205a2708279308e036ba6683603412aa09ab7411e5d8fd",
+      "bytes": 6125
     }
   },
   "private_manifests": [

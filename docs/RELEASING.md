@@ -4,13 +4,16 @@
 
 [Build and publish IPA](../.github/workflows/release.yml) builds an unsigned iPhone/
 iPad app from the selected Git commit on a fresh GitHub-hosted macOS runner.
-The current development recipe is [release/public55.json](../release/public55.json),
-version0.25.0/build55. It updates actual Everest source to stable1.6642, retains
-the accepted build50 launcher and build54 Feather picker repair, and uses the
-same native/.NET/NuGet/FMOD/Shortcut49 pins. [Build55's report](ios-jit/EVEREST_6642_BUILD_55.md)
-distinguishes source/build checks from physical acceptance. The owner requests
-the upgrade and future pushes as `hmcneill46`; the new unsigned trial remains
-separate from choosing a public55 tag/Release. Published v0.24.3 is below.
+The current development recipe is [release/public56.json](../release/public56.json),
+version0.25.1/build56. It adds bounded recovery of moved mod archives, native
+`MirrorName` handling and matching required/optional dependency alias rules.
+Every recovered download must pass the original reviewed size, hash and module
+versions. It retains stable Everest1.6642.0, the build54 Feather picker repair,
+and the same native/.NET/NuGet/FMOD/Shortcut49 dependency pins as55.
+[Build56's report](ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md) records local checks;
+the owner explicitly approves its source/unsigned hosted trial on20 October. No56 hosted IPA, tag,
+Release or physical gameplay/JIT acceptance is claimed at this preparation stage.
+Future authorized pushes use `hmcneill46`. Published v0.24.3 is below.
 
 ## Unsigned0.25.0/build55 trial —19 October2026
 

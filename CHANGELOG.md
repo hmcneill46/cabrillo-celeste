@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.25.1 — development
+
+- Recover moved mod downloads through bounded official current/archive listings, retaining the exact reviewed version and integrity checks.
+- Repair the removed FemtoHelper1.15.22 link used by Strawberry Jam without changing the tested archive.
+- Read Everest MirrorName metadata for backup downloads and validate each archive before accepting a source.
+- Keep stable Everest1.6642.0 consistent across the actual payload, launcher and dependency resolver; align optional API alias handling with upstream.
+
 ## 0.25.0 · development
 
 Updates Everest from1.6580.0 to stable1.6642.0, including updated GameBanana mirror

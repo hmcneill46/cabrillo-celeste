@@ -136,10 +136,11 @@ For development, start with [the current handoff](HANDOFF.md),
 
 ## Developers: build locally
 
-The current development source updates Everest to stable1.6642.0 in
-0.25.0/build55 while retaining build54's Feather import fix. Its validation and
-delivery are recorded in [the upgrade report](docs/ios-jit/EVEREST_6642_BUILD_55.md).
-The [unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/artifacts/12221245338)
+The current development source uses stable Everest1.6642.0 in
+0.25.1/build56, with general dependency download recovery and build54's Feather
+import fix. Its validation and
+delivery are recorded in [the dependency repair report](docs/ios-jit/DEPENDENCY_DOWNLOADS_BUILD_56.md).
+The earlier55 [unsigned test kit](https://github.com/hmcneill46/cabrillo-celeste/actions/runs/39320628794/artifacts/12221245338)
 passes fresh compilation, package checks and independent verification of all five
 attestations. It requires GitHub sign-in and expires2 November2026. Phone testing
 of the new Everest version remains pending.
@@ -149,7 +150,7 @@ Use macOS, Python3.12 or later, CMake, Mono6.14.1 (including `sn`) and **Xcode26
 **FMOD Engine1.10.09 iOS SDK** from [fmod.com](https://www.fmod.com/download), then:
 
 ```sh
-    python3 tools/build_release55.py --work .build/my-source-build \
+python3 tools/build_release56.py --work .build/my-source-build \
   --output .build/my-source-build/output --fmod-sdk '/path/to/FMOD Programmers API'
 ```
 
@@ -168,6 +169,7 @@ reproduction commands remain documented separately.
 
 | Location | Reason it is here |
 | --- | --- |
+| `experiments/ios-jit/launcher-dependency-downloads` | Build56 general archive relocation, current mirror metadata and runtime/dependency parity |
 | `experiments/ios-jit/launcher-everest6642` | Build55 stable1.6642 source patch, synchronized runtime identities and compiled metadata audit |
 | `experiments/ios-jit/launcher-copy-picker` | Build54 copy-based game/mod imports with retained build53 signing adaptation |
 | `experiments/ios-jit/launcher-owned-game` | Build38 source-built bootstrap and preparation of the user's original game |
@@ -187,7 +189,7 @@ reproduction commands remain documented separately.
 | `.build`, `artifacts` | Ignored fresh build output, symbols, receipts and unsigned IPAs |
 
 Historical experiment builders retain their original paths as documentation.
-Use `tools/build_release55.py` for the current recipe and `tools/build.py` for
+Use `tools/build_release56.py` for the current recipe and `tools/build.py` for
 accepted28 reproduction. Historical tools are not a promise
 that every historical failed prototype can be rebuilt from the current capsule.
 The [file inventory](docs/MIGRATION_FILE_INVENTORY.json) records a reason and hash
